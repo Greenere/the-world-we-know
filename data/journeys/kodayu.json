@@ -1,0 +1,26 @@
+{
+  "id": "kodayu",
+  "name": "Daikokuya Kōdayū across Russia",
+  "traveler": "Daikokuya Kōdayū",
+  "years": "1782–1792",
+  "kind": "traveler",
+  "viewpoint": "japan",
+  "summary": "A merchant captain's ship drifts for eight months to the Aleutians. Kōdayū and his surviving crew spend ten years crossing Siberia to St Petersburg, where Catherine the Great receives him and lets him go home. Questioned in Edo, his account becomes Japan's first detailed knowledge of Russia.",
+  "source": "hokusa-bunryaku",
+  "confidence": "high",
+  "stops": [
+    {"year": 1782, "place": "Shiroko, Ise", "lat": 34.82, "lon": 136.6, "note": "The Shinshō-maru sails for Edo with rice.", "date": "December 1782"},
+    {"year": 1783, "place": "Amchitka", "lat": 51.5, "lon": 179.0, "note": "Wrecked in the Aleutians after drifting for eight months.", "date": "July 1783"},
+    {"year": 1787, "place": "Kamchatka", "lat": 56.3, "lon": 162.0, "note": "Taken to Kamchatka; many of the crew die of scurvy.", "by": "sea"},
+    {"year": 1788, "place": "Okhotsk", "lat": 59.36, "lon": 143.24, "note": "Across the Sea of Okhotsk.", "city": "okhotsk", "by": "sea"},
+    {"year": 1789, "place": "Irkutsk", "lat": 52.29, "lon": 104.28, "note": "Meets the naturalist Erik Laxman.", "city": "irkutsk", "by": "land"},
+    {"year": 1791, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "note": "Received by Catherine the Great at Tsarskoye Selo.", "city": "st-petersburg", "by": "land", "date": "June 1791"},
+    {"year": 1792, "place": "Okhotsk", "lat": 59.36, "lon": 143.24, "note": "Back across Siberia.", "city": "okhotsk", "by": "land"},
+    {"year": 1792, "place": "Nemuro, Ezo", "lat": 43.33, "lon": 145.58, "note": "Brought home by Adam Laxman's embassy.", "by": "sea", "date": "October 1792"}
+  ],
+  "informs": [
+    {"region": "siberia-east", "level": 3, "homeKnows": 1794, "confidence": "high"},
+    {"region": "kamchatka", "level": 3, "homeKnows": 1794, "confidence": "high"},
+    {"region": "rus", "level": 3, "homeKnows": 1794, "confidence": "high"}
+  ]
+}

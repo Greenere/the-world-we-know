@@ -1,0 +1,22 @@
+{
+  "id": "ino",
+  "name": "Inō Tadataka surveys Japan",
+  "traveler": "Inō Tadataka",
+  "years": "1800–1816",
+  "kind": "scientific",
+  "viewpoint": "japan",
+  "summary": "A retired sake brewer who took up astronomy at fifty spends seventeen years walking Japan's coasts with his survey team, measuring distances with ropes and wheels and fixing latitude by the stars. His maps, finished after his death in 1821, are accurate to within a fraction of a degree.",
+  "source": "ino",
+  "confidence": "high",
+  "stops": [
+    {"year": 1800, "place": "Edo", "lat": 35.68, "lon": 139.77, "note": "The first survey sets out for Ezo.", "city": "edo"},
+    {"year": 1800, "place": "Ezo (Hokkaido)", "lat": 42.98, "lon": 141.35, "note": "The south coast of Ezo.", "by": "land"},
+    {"year": 1802, "place": "Northern Honshu", "lat": 40.8, "lon": 140.5, "note": "The coasts of Mutsu and Dewa.", "by": "land"},
+    {"year": 1805, "place": "Kii and the Inland Sea", "lat": 34.2, "lon": 135.2, "note": "The western coasts.", "by": "land"},
+    {"year": 1809, "place": "Kyushu", "lat": 33.0, "lon": 130.5, "note": "Kyushu and its islands.", "by": "land"},
+    {"year": 1816, "place": "Edo", "lat": 35.68, "lon": 139.77, "note": "The last survey ends; the great map is completed in 1821.", "city": "edo", "by": "land"}
+  ],
+  "informs": [
+    {"region": "japan", "level": 5, "homeKnows": 1821, "confidence": "high", "note": "Inō's map of the whole country"}
+  ]
+}

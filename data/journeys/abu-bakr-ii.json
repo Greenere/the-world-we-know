@@ -1,0 +1,20 @@
+{
+  "id": "abu-bakr-ii",
+  "name": "Abu Bakr II sails into the Atlantic",
+  "traveler": "Mansa Abu Bakr II of Mali",
+  "years": "c. 1311",
+  "kind": "fleet",
+  "viewpoint": "sahel",
+  "summary": "Mansa Musa told the scholars of Cairo that his predecessor, wanting to know whether the ocean had another shore, sent 200 ships into the Atlantic. One came back, its captain telling of a great river in the sea that carried the others away; the king then sailed himself with 2,000 ships and never returned. Whether any reached land is unknown.",
+  "source": "al-umari",
+  "confidence": "low",
+  "stops": [
+    {"year": 1311, "place": "Niani", "lat": 11.38, "lon": -8.38, "note": "The king prepares the fleet."},
+    {"year": 1311, "place": "Senegambia coast", "lat": 14.6, "lon": -17.2, "note": "The ships leave the coast of the empire.", "by": "land"},
+    {"year": 1311, "place": "The open Atlantic", "lat": 13.0, "lon": -30.0, "note": "A great current carries the ships west, the returning captain reports."},
+    {"year": 1312, "place": "Niani", "lat": 11.38, "lon": -8.38, "note": "One ship returns; the king sets out himself and is not seen again.", "by": "land"}
+  ],
+  "informs": [
+    {"region": "north-atlantic-east", "level": 1, "homeKnows": 1312, "confidence": "low", "note": "A river in the sea, says the one captain who returned"}
+  ]
+}

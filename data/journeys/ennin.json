@@ -1,0 +1,23 @@
+{
+  "id": "ennin",
+  "name": "Ennin's pilgrimage to Tang China",
+  "traveler": "Ennin",
+  "years": "838–847",
+  "kind": "pilgrim",
+  "viewpoint": "japan",
+  "summary": "A Tendai monk sails with the last Japanese embassy to Tang China and stays nine years. His diary, the fullest account of Tang China by any foreigner, records travel passes, Korean merchant communities, the holy mountain of Wutai, and the great persecution of Buddhism in 845 that drives him home.",
+  "source": "ennin",
+  "confidence": "high",
+  "stops": [
+    {"year": 838, "place": "Hakata", "lat": 33.59, "lon": 130.4, "note": "The embassy's ships sail for the Tang.", "city": "hakata"},
+    {"year": 838, "place": "Yangzhou", "lat": 32.39, "lon": 119.42, "note": "Wrecked near the coast; the embassy goes to Chang'an without him.", "city": "yangzhou", "date": "August 838"},
+    {"year": 839, "place": "Mount Chi, Shandong", "lat": 37.15, "lon": 122.45, "note": "He stays behind among Silla Korean merchants.", "by": "sea"},
+    {"year": 840, "place": "Wutaishan", "lat": 39.0, "lon": 113.6, "note": "Pilgrimage to the mountain of Mañjuśrī.", "by": "land"},
+    {"year": 840, "place": "Chang'an", "lat": 34.27, "lon": 108.95, "note": "Five years of study in the capital.", "city": "changan"},
+    {"year": 845, "place": "Chang'an", "lat": 34.27, "lon": 108.95, "note": "The Huichang persecution: monks are laicized and he is expelled.", "city": "changan"},
+    {"year": 847, "place": "Hakata", "lat": 33.59, "lon": 130.4, "note": "Home on a Korean ship.", "city": "hakata", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "china-north", "level": 4, "homeKnows": 848, "confidence": "high", "note": "Ennin's diary"}
+  ]
+}

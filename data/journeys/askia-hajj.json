@@ -1,0 +1,23 @@
+{
+  "id": "askia-hajj",
+  "name": "Askia Muhammad's pilgrimage",
+  "traveler": "Askia Muhammad I of Songhay",
+  "years": "1496–1498",
+  "kind": "pilgrim",
+  "viewpoint": "sahel",
+  "summary": "The new ruler of Songhay crosses the Sahara with 1,500 men and 300,000 pieces of gold, endows a hostel for West African pilgrims in Mecca, and is named the Abbasid caliph's deputy for the lands of the Sudan. He comes home with scholars and the title of caliph.",
+  "source": "tarikh-al-fattash",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1496, "place": "Gao", "lat": 16.27, "lon": -0.04, "note": "The pilgrimage sets out.", "city": "gao"},
+    {"year": 1496, "place": "Agadez", "lat": 16.97, "lon": 7.99, "note": "Through Aïr, by the central Saharan road."},
+    {"year": 1497, "place": "Fezzan", "lat": 25.9, "lon": 13.9, "note": "The oases of the Fezzan."},
+    {"year": 1497, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "Meets the scholar al-Suyuti and the Abbasid caliph.", "city": "cairo"},
+    {"year": 1497, "place": "Mecca", "lat": 21.42, "lon": 39.83, "note": "Endows a hostel for pilgrims from the Sudan.", "city": "mecca", "by": "land"},
+    {"year": 1498, "place": "Gao", "lat": 16.27, "lon": -0.04, "note": "Home as the caliph's deputy for the Sudan.", "city": "gao", "by": "land"}
+  ],
+  "informs": [
+    {"region": "central-sahel", "level": 4, "homeKnows": 1498, "confidence": "high", "note": "Aïr and the Hausa roads"},
+    {"region": "libya", "level": 3, "homeKnows": 1498, "confidence": "high", "note": "The Fezzan road"}
+  ]
+}

@@ -7,26 +7,104 @@
     "color": "#34588f",
     "seal": "europe",
     "homes": [
-      {"from": -500, "place": "Athens", "lat": 37.97, "lon": 23.73},
-      {"from": -146, "place": "Rome", "lat": 41.89, "lon": 12.49},
-      {"from": 330, "place": "Constantinople", "lat": 41.01, "lon": 28.98},
-      {"from": 1204, "place": "Venice", "lat": 45.44, "lon": 12.33},
-      {"from": 1415, "place": "Lisbon", "lat": 38.71, "lon": -9.14},
-      {"from": 1600, "place": "London", "lat": 51.51, "lon": -0.12}
+      {
+        "from": -500,
+        "place": "Athens",
+        "lat": 37.97,
+        "lon": 23.73
+      },
+      {
+        "from": -146,
+        "place": "Rome",
+        "lat": 41.89,
+        "lon": 12.49
+      },
+      {
+        "from": 330,
+        "place": "Constantinople",
+        "lat": 41.01,
+        "lon": 28.98
+      },
+      {
+        "from": 1204,
+        "place": "Venice",
+        "lat": 45.44,
+        "lon": 12.33
+      },
+      {
+        "from": 1415,
+        "place": "Lisbon",
+        "lat": 38.71,
+        "lon": -9.14
+      },
+      {
+        "from": 1600,
+        "place": "London",
+        "lat": 51.51,
+        "lon": -0.12
+      }
     ],
     "moments": [
-      {"year": -430, "label": "Herodotus writes the Histories", "source": "herodotus"},
-      {"year": -326, "label": "Alexander reaches the Indus", "source": "arrian"},
-      {"year": -320, "label": "Pytheas returns from the North Atlantic", "source": "pytheas-strabo"},
-      {"year": 150, "label": "Ptolemy's Geography", "source": "ptolemy"},
-      {"year": 550, "label": "The western world contracts", "source": "cosmas"},
-      {"year": 1037, "label": "Vinland reaches the record, then fades", "source": "adam-bremen"},
-      {"year": 1300, "label": "Marco Polo's book", "source": "polo"},
-      {"year": 1434, "label": "The Portuguese pass Cape Bojador", "source": "zurara"},
-      {"year": 1493, "label": "Columbus returns from the Caribbean", "source": "columbus"},
-      {"year": 1499, "label": "Da Gama returns from India", "source": "velho-roteiro"},
-      {"year": 1522, "label": "The Victoria completes the first circumnavigation", "source": "pigafetta"},
-      {"year": 1771, "label": "Cook's Endeavour returns with Tupaia's chart", "source": "cook-journals"}
+      {
+        "year": -430,
+        "label": "Herodotus writes the Histories",
+        "source": "herodotus"
+      },
+      {
+        "year": -326,
+        "label": "Alexander reaches the Indus",
+        "source": "arrian"
+      },
+      {
+        "year": -320,
+        "label": "Pytheas returns from the North Atlantic",
+        "source": "pytheas-strabo"
+      },
+      {
+        "year": 150,
+        "label": "Ptolemy's Geography",
+        "source": "ptolemy"
+      },
+      {
+        "year": 550,
+        "label": "The western world contracts",
+        "source": "cosmas"
+      },
+      {
+        "year": 1037,
+        "label": "Vinland reaches the record, then fades",
+        "source": "adam-bremen"
+      },
+      {
+        "year": 1300,
+        "label": "Marco Polo's book",
+        "source": "polo"
+      },
+      {
+        "year": 1434,
+        "label": "The Portuguese pass Cape Bojador",
+        "source": "zurara"
+      },
+      {
+        "year": 1493,
+        "label": "Columbus returns from the Caribbean",
+        "source": "columbus"
+      },
+      {
+        "year": 1499,
+        "label": "Da Gama returns from India",
+        "source": "velho-roteiro"
+      },
+      {
+        "year": 1522,
+        "label": "The Victoria completes the first circumnavigation",
+        "source": "pigafetta"
+      },
+      {
+        "year": 1771,
+        "label": "Cook's Endeavour returns with Tupaia's chart",
+        "source": "cook-journals"
+      }
     ]
   },
   {
@@ -37,29 +115,122 @@
     "color": "#b4432c",
     "seal": "china",
     "homes": [
-      {"from": -500, "place": "Luoyang", "lat": 34.62, "lon": 112.45},
-      {"from": -202, "place": "Chang'an", "lat": 34.26, "lon": 108.94},
-      {"from": 25, "place": "Luoyang", "lat": 34.62, "lon": 112.45},
-      {"from": 581, "place": "Chang'an", "lat": 34.26, "lon": 108.94},
-      {"from": 907, "place": "Kaifeng", "lat": 34.80, "lon": 114.31},
-      {"from": 1127, "place": "Hangzhou", "lat": 30.27, "lon": 120.15},
-      {"from": 1276, "place": "Dadu (Beijing)", "lat": 39.90, "lon": 116.40},
-      {"from": 1368, "place": "Nanjing", "lat": 32.06, "lon": 118.78},
-      {"from": 1421, "place": "Beijing", "lat": 39.90, "lon": 116.40}
+      {
+        "from": -500,
+        "place": "Luoyang",
+        "lat": 34.62,
+        "lon": 112.45
+      },
+      {
+        "from": -202,
+        "place": "Chang'an",
+        "lat": 34.26,
+        "lon": 108.94
+      },
+      {
+        "from": 25,
+        "place": "Luoyang",
+        "lat": 34.62,
+        "lon": 112.45
+      },
+      {
+        "from": 581,
+        "place": "Chang'an",
+        "lat": 34.26,
+        "lon": 108.94
+      },
+      {
+        "from": 907,
+        "place": "Kaifeng",
+        "lat": 34.8,
+        "lon": 114.31
+      },
+      {
+        "from": 1127,
+        "place": "Hangzhou",
+        "lat": 30.27,
+        "lon": 120.15
+      },
+      {
+        "from": 1276,
+        "place": "Dadu (Beijing)",
+        "lat": 39.9,
+        "lon": 116.4
+      },
+      {
+        "from": 1368,
+        "place": "Nanjing",
+        "lat": 32.06,
+        "lon": 118.78
+      },
+      {
+        "from": 1421,
+        "place": "Beijing",
+        "lat": 39.9,
+        "lon": 116.4
+      }
     ],
     "moments": [
-      {"year": -126, "label": "Zhang Qian returns from the west", "source": "shiji"},
-      {"year": 97, "label": "Gan Ying reaches the Persian Gulf", "source": "houhanshu"},
-      {"year": 166, "label": "Envoys from Daqin arrive by sea", "source": "houhanshu"},
-      {"year": 414, "label": "Faxian returns from India by sea", "source": "faxian"},
-      {"year": 645, "label": "Xuanzang returns from India", "source": "xuanzang"},
-      {"year": 762, "label": "Du Huan returns from the Abbasid lands", "source": "du-huan"},
-      {"year": 1225, "label": "Zhao Rugua's Description of Foreign Peoples", "source": "zhao-rugua"},
-      {"year": 1405, "label": "Zheng He's first voyage sets out", "source": "ming-shilu"},
-      {"year": 1475, "label": "The treasure fleets are not sent again", "source": "ming-shilu"},
-      {"year": 1602, "label": "Ricci's world map", "source": "ricci-map"},
-      {"year": 1718, "label": "The Kangxi atlas is completed", "source": "kangxi-atlas"},
-      {"year": 1843, "label": "Wei Yuan's Illustrated Treatise on the Sea Kingdoms", "source": "haiguo-tuzhi"}
+      {
+        "year": -126,
+        "label": "Zhang Qian returns from the west",
+        "source": "shiji"
+      },
+      {
+        "year": 97,
+        "label": "Gan Ying reaches the Persian Gulf",
+        "source": "houhanshu"
+      },
+      {
+        "year": 166,
+        "label": "Envoys from Daqin arrive by sea",
+        "source": "houhanshu"
+      },
+      {
+        "year": 414,
+        "label": "Faxian returns from India by sea",
+        "source": "faxian"
+      },
+      {
+        "year": 645,
+        "label": "Xuanzang returns from India",
+        "source": "xuanzang"
+      },
+      {
+        "year": 762,
+        "label": "Du Huan returns from the Abbasid lands",
+        "source": "du-huan"
+      },
+      {
+        "year": 1225,
+        "label": "Zhao Rugua's Description of Foreign Peoples",
+        "source": "zhao-rugua"
+      },
+      {
+        "year": 1405,
+        "label": "Zheng He's first voyage sets out",
+        "source": "ming-shilu"
+      },
+      {
+        "year": 1475,
+        "label": "The treasure fleets are not sent again",
+        "source": "ming-shilu"
+      },
+      {
+        "year": 1602,
+        "label": "Ricci's world map",
+        "source": "ricci-map"
+      },
+      {
+        "year": 1718,
+        "label": "The Kangxi atlas is completed",
+        "source": "kangxi-atlas"
+      },
+      {
+        "year": 1843,
+        "label": "Wei Yuan's Illustrated Treatise on the Sea Kingdoms",
+        "source": "haiguo-tuzhi"
+      }
     ]
   },
   {
@@ -71,25 +242,101 @@
     "seal": "islam",
     "startNote": "Before 622 this view shows the Arabian trading world that Islam grew from.",
     "homes": [
-      {"from": -500, "place": "Mecca", "lat": 21.42, "lon": 39.83, "note": "pre-Islamic"},
-      {"from": 622, "place": "Medina", "lat": 24.47, "lon": 39.61},
-      {"from": 661, "place": "Damascus", "lat": 33.51, "lon": 36.29},
-      {"from": 762, "place": "Baghdad", "lat": 33.31, "lon": 44.36},
-      {"from": 1258, "place": "Cairo", "lat": 30.04, "lon": 31.24},
-      {"from": 1350, "place": "Fez", "lat": 34.03, "lon": -4.98},
-      {"from": 1450, "place": "Cairo", "lat": 30.04, "lon": 31.24}
+      {
+        "from": -500,
+        "place": "Mecca",
+        "lat": 21.42,
+        "lon": 39.83,
+        "note": "pre-Islamic"
+      },
+      {
+        "from": 622,
+        "place": "Medina",
+        "lat": 24.47,
+        "lon": 39.61
+      },
+      {
+        "from": 661,
+        "place": "Damascus",
+        "lat": 33.51,
+        "lon": 36.29
+      },
+      {
+        "from": 762,
+        "place": "Baghdad",
+        "lat": 33.31,
+        "lon": 44.36
+      },
+      {
+        "from": 1258,
+        "place": "Cairo",
+        "lat": 30.04,
+        "lon": 31.24
+      },
+      {
+        "from": 1350,
+        "place": "Fez",
+        "lat": 34.03,
+        "lon": -4.98
+      },
+      {
+        "from": 1450,
+        "place": "Cairo",
+        "lat": 30.04,
+        "lon": 31.24
+      }
     ],
     "moments": [
-      {"year": 641, "label": "The first conquests: Syria, Iraq, Egypt", "source": "al-baladhuri"},
-      {"year": 711, "label": "Al-Andalus and Sind enter the map", "source": "al-baladhuri"},
-      {"year": 851, "label": "Accounts of China and India", "source": "akhbar-sin"},
-      {"year": 922, "label": "Ibn Fadlan on the Volga", "source": "ibn-fadlan"},
-      {"year": 1030, "label": "Al-Biruni's India", "source": "al-biruni"},
-      {"year": 1068, "label": "Al-Bakri describes Ghana", "source": "al-bakri"},
-      {"year": 1154, "label": "Al-Idrisi's world map", "source": "al-idrisi"},
-      {"year": 1324, "label": "Mansa Musa passes through Cairo", "source": "al-umari"},
-      {"year": 1355, "label": "Ibn Battuta's Rihla is written down", "source": "ibn-battuta"},
-      {"year": 1513, "label": "Piri Reis's world map", "source": "piri-reis"}
+      {
+        "year": 641,
+        "label": "The first conquests: Syria, Iraq, Egypt",
+        "source": "al-baladhuri"
+      },
+      {
+        "year": 711,
+        "label": "Al-Andalus and Sind enter the map",
+        "source": "al-baladhuri"
+      },
+      {
+        "year": 851,
+        "label": "Accounts of China and India",
+        "source": "akhbar-sin"
+      },
+      {
+        "year": 922,
+        "label": "Ibn Fadlan on the Volga",
+        "source": "ibn-fadlan"
+      },
+      {
+        "year": 1030,
+        "label": "Al-Biruni's India",
+        "source": "al-biruni"
+      },
+      {
+        "year": 1068,
+        "label": "Al-Bakri describes Ghana",
+        "source": "al-bakri"
+      },
+      {
+        "year": 1154,
+        "label": "Al-Idrisi's world map",
+        "source": "al-idrisi"
+      },
+      {
+        "year": 1324,
+        "label": "Mansa Musa passes through Cairo",
+        "source": "al-umari"
+      },
+      {
+        "year": 1355,
+        "label": "Ibn Battuta's Rihla is written down",
+        "source": "ibn-battuta"
+      },
+      {
+        "year": 1513,
+        "label": "Piri Reis's world map",
+        "source": "piri-reis"
+      }
     ]
   },
   {
@@ -102,20 +349,526 @@
     "oral": true,
     "startNote": "Polynesian knowledge lived in navigation lore and oral tradition, not on written maps. Its dates come from archaeology and genetics, so its edges are wide.",
     "homes": [
-      {"from": -500, "place": "Tonga and Samoa", "lat": -13.8, "lon": -171.8},
-      {"from": 1000, "place": "Marquesas", "lat": -8.9, "lon": -140.1},
-      {"from": 1150, "place": "Ra'iātea, Society Islands", "lat": -16.83, "lon": -151.43}
+      {
+        "from": -500,
+        "place": "Tonga and Samoa",
+        "lat": -13.8,
+        "lon": -171.8
+      },
+      {
+        "from": 1000,
+        "place": "Marquesas",
+        "lat": -8.9,
+        "lon": -140.1
+      },
+      {
+        "from": 1150,
+        "place": "Ra'iātea, Society Islands",
+        "lat": -16.83,
+        "lon": -151.43
+      }
     ],
     "moments": [
-      {"year": -850, "label": "Lapita settlers already in Tonga and Samoa", "source": "kirch"},
-      {"year": 0, "label": "The long pause in West Polynesia", "source": "kirch"},
-      {"year": 1025, "label": "East Polynesia is settled", "source": "wilmshurst-2011"},
-      {"year": 1190, "label": "Contact with South America", "source": "ioannidis-2020"},
-      {"year": 1200, "label": "Hawaiʻi and Rapa Nui are reached", "source": "wilmshurst-2011"},
-      {"year": 1270, "label": "Aotearoa is reached", "source": "wilmshurst-2011"},
-      {"year": 1450, "label": "The longest voyages cease", "source": "kirch"},
-      {"year": 1769, "label": "Tupaia draws his chart", "source": "tupaia-chart"},
-      {"year": 1777, "label": "Mai comes home from England", "source": "cook-journals"}
+      {
+        "year": -850,
+        "label": "Lapita settlers already in Tonga and Samoa",
+        "source": "kirch"
+      },
+      {
+        "year": 0,
+        "label": "The long pause in West Polynesia",
+        "source": "kirch"
+      },
+      {
+        "year": 1025,
+        "label": "East Polynesia is settled",
+        "source": "wilmshurst-2011"
+      },
+      {
+        "year": 1190,
+        "label": "Contact with South America",
+        "source": "ioannidis-2020"
+      },
+      {
+        "year": 1200,
+        "label": "Hawaiʻi and Rapa Nui are reached",
+        "source": "wilmshurst-2011"
+      },
+      {
+        "year": 1270,
+        "label": "Aotearoa is reached",
+        "source": "wilmshurst-2011"
+      },
+      {
+        "year": 1450,
+        "label": "The longest voyages cease",
+        "source": "kirch"
+      },
+      {
+        "year": 1769,
+        "label": "Tupaia draws his chart",
+        "source": "tupaia-chart"
+      },
+      {
+        "year": 1777,
+        "label": "Mai comes home from England",
+        "source": "cook-journals"
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "name": "India",
+    "longName": "India",
+    "adjective": "Indian",
+    "color": "#a3466a",
+    "seal": "india",
+    "homes": [
+      {
+        "from": -500,
+        "place": "Pataliputra",
+        "lat": 25.61,
+        "lon": 85.14
+      },
+      {
+        "from": 606,
+        "place": "Kannauj",
+        "lat": 27.06,
+        "lon": 79.92
+      },
+      {
+        "from": 1206,
+        "place": "Delhi",
+        "lat": 28.65,
+        "lon": 77.23
+      },
+      {
+        "from": 1556,
+        "place": "Agra",
+        "lat": 27.18,
+        "lon": 78.01
+      },
+      {
+        "from": 1648,
+        "place": "Delhi",
+        "lat": 28.65,
+        "lon": 77.23
+      }
+    ],
+    "moments": [
+      {
+        "year": -260,
+        "label": "Ashoka's missions go to Sri Lanka and the Greek kings",
+        "source": "ashoka-edicts"
+      },
+      {
+        "year": 50,
+        "label": "Yavana ships reach the ports of the south",
+        "source": "periplus"
+      },
+      {
+        "year": 431,
+        "label": "Gunavarman sails from Java to China",
+        "source": "hoc"
+      },
+      {
+        "year": 1025,
+        "label": "The Chola fleet raids Srivijaya",
+        "source": "chola-inscriptions"
+      },
+      {
+        "year": 1042,
+        "label": "Atiśa crosses the Himalaya to Tibet",
+        "source": "atisha-bio"
+      },
+      {
+        "year": 1498,
+        "label": "Portuguese ships arrive at Calicut",
+        "source": "hoc"
+      },
+      {
+        "year": 1590,
+        "label": "Abu'l-Fazl's Ain-i-Akbari describes the empire",
+        "source": "ain-i-akbari"
+      },
+      {
+        "year": 1852,
+        "label": "Radhanath Sikdar computes the height of Peak XV",
+        "source": "national-surveys"
+      },
+      {
+        "year": 1866,
+        "label": "Nain Singh's secret survey reaches Lhasa",
+        "source": "nain-singh"
+      }
+    ]
+  },
+  {
+    "id": "japan",
+    "name": "Japan",
+    "longName": "Japan",
+    "adjective": "Japanese",
+    "color": "#4f5b78",
+    "seal": "japan",
+    "startNote": "Before about 300 CE this view follows the Yayoi peoples of Kyushu and the Inland Sea, known mainly from archaeology and Chinese records.",
+    "homes": [
+      {
+        "from": -500,
+        "place": "Northern Kyushu",
+        "lat": 33.32,
+        "lon": 130.38
+      },
+      {
+        "from": 300,
+        "place": "Yamato (Nara basin)",
+        "lat": 34.5,
+        "lon": 135.8
+      },
+      {
+        "from": 710,
+        "place": "Nara",
+        "lat": 34.69,
+        "lon": 135.8
+      },
+      {
+        "from": 794,
+        "place": "Heian-kyō",
+        "lat": 35.01,
+        "lon": 135.77
+      },
+      {
+        "from": 1192,
+        "place": "Kamakura",
+        "lat": 35.32,
+        "lon": 139.55
+      },
+      {
+        "from": 1338,
+        "place": "Kyoto",
+        "lat": 35.01,
+        "lon": 135.77
+      },
+      {
+        "from": 1603,
+        "place": "Edo",
+        "lat": 35.68,
+        "lon": 139.77
+      }
+    ],
+    "moments": [
+      {
+        "year": 57,
+        "label": "The king of Na receives a gold seal from the Han",
+        "source": "houhanshu"
+      },
+      {
+        "year": 607,
+        "label": "Ono no Imoko's embassy to the Sui court",
+        "source": "kojiki"
+      },
+      {
+        "year": 838,
+        "label": "The last embassy to Tang China; Ennin goes with it",
+        "source": "ennin"
+      },
+      {
+        "year": 1281,
+        "label": "The second Mongol invasion fleet is wrecked",
+        "source": "yuanshi"
+      },
+      {
+        "year": 1543,
+        "label": "Portuguese traders land on Tanegashima",
+        "source": "hoc"
+      },
+      {
+        "year": 1614,
+        "label": "Hasekura's embassy crosses Mexico to Spain",
+        "source": "amati"
+      },
+      {
+        "year": 1639,
+        "label": "The country is closed to all but Dutch and Chinese ships",
+        "source": "hoc"
+      },
+      {
+        "year": 1713,
+        "label": "Arai Hakuseki's world geography, from questioning a Jesuit",
+        "source": "sairan-igen"
+      },
+      {
+        "year": 1809,
+        "label": "Mamiya Rinzō proves Sakhalin is an island",
+        "source": "mamiya"
+      },
+      {
+        "year": 1821,
+        "label": "Inō Tadataka's survey maps every coast of Japan",
+        "source": "ino"
+      }
+    ]
+  },
+  {
+    "id": "sahel",
+    "name": "Sahel",
+    "longName": "West African Sahel (Ghana, Mali, Songhay)",
+    "adjective": "Sahelian",
+    "color": "#7a5230",
+    "seal": "sahel",
+    "startNote": "Before the rise of Ghana this view follows the towns of the middle Niger, such as Jenné-jeno, known from archaeology.",
+    "homes": [
+      {
+        "from": -500,
+        "place": "Jenné-jeno",
+        "lat": 13.89,
+        "lon": -4.55
+      },
+      {
+        "from": 300,
+        "place": "Koumbi Saleh (Ghana)",
+        "lat": 15.77,
+        "lon": -7.97
+      },
+      {
+        "from": 1235,
+        "place": "Niani (Mali)",
+        "lat": 11.38,
+        "lon": -8.38
+      },
+      {
+        "from": 1464,
+        "place": "Gao (Songhay)",
+        "lat": 16.27,
+        "lon": -0.04
+      },
+      {
+        "from": 1591,
+        "place": "Timbuktu",
+        "lat": 16.77,
+        "lon": -3.0
+      },
+      {
+        "from": 1712,
+        "place": "Ségou",
+        "lat": 13.43,
+        "lon": -6.26
+      }
+    ],
+    "moments": [
+      {
+        "year": -250,
+        "label": "Jenné-jeno trades along the middle Niger",
+        "source": "mcintosh"
+      },
+      {
+        "year": 800,
+        "label": "Camel caravans bring the Sahara road to Ghana",
+        "source": "levtzion-hopkins"
+      },
+      {
+        "year": 1068,
+        "label": "Al-Bakri describes Ghana and its capital",
+        "source": "al-bakri"
+      },
+      {
+        "year": 1235,
+        "label": "Sundiata founds the empire of Mali",
+        "source": "sundiata"
+      },
+      {
+        "year": 1311,
+        "label": "Abu Bakr II's fleet sails into the Atlantic",
+        "source": "al-umari"
+      },
+      {
+        "year": 1324,
+        "label": "Mansa Musa's pilgrimage to Mecca",
+        "source": "al-umari"
+      },
+      {
+        "year": 1445,
+        "label": "Portuguese caravels reach the Senegal",
+        "source": "zurara"
+      },
+      {
+        "year": 1497,
+        "label": "Askia Muhammad's pilgrimage",
+        "source": "tarikh-al-fattash"
+      },
+      {
+        "year": 1591,
+        "label": "A Moroccan army crosses the Sahara and takes Gao",
+        "source": "tarikh-al-sudan"
+      },
+      {
+        "year": 1655,
+        "label": "Al-Saʿdi writes the Tarikh al-Sudan in Timbuktu",
+        "source": "tarikh-al-sudan"
+      }
+    ]
+  },
+  {
+    "id": "mexica",
+    "name": "Mexica",
+    "longName": "Mexica (Central Mexico)",
+    "adjective": "Mexica",
+    "color": "#1d8a8f",
+    "seal": "mexica",
+    "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule.",
+    "homes": [
+      {
+        "from": -500,
+        "place": "Cuicuilco",
+        "lat": 19.3,
+        "lon": -99.18
+      },
+      {
+        "from": -100,
+        "place": "Teotihuacan",
+        "lat": 19.69,
+        "lon": -98.84
+      },
+      {
+        "from": 900,
+        "place": "Tula",
+        "lat": 20.06,
+        "lon": -99.34
+      },
+      {
+        "from": 1325,
+        "place": "Tenochtitlan",
+        "lat": 19.43,
+        "lon": -99.13
+      }
+    ],
+    "moments": [
+      {
+        "year": 378,
+        "label": "Teotihuacan's envoys arrive at Tikal",
+        "source": "stuart-entrada"
+      },
+      {
+        "year": 1000,
+        "label": "Tula trades turquoise from the far north",
+        "source": "hoc"
+      },
+      {
+        "year": 1325,
+        "label": "Tenochtitlan is founded on the lake",
+        "source": "codex-mendoza"
+      },
+      {
+        "year": 1428,
+        "label": "The Triple Alliance is formed",
+        "source": "duran"
+      },
+      {
+        "year": 1500,
+        "label": "Ahuitzotl's armies reach Xoconochco",
+        "source": "codex-mendoza"
+      },
+      {
+        "year": 1518,
+        "label": "Messengers bring word of strangers' ships on the coast",
+        "source": "sahagun"
+      },
+      {
+        "year": 1521,
+        "label": "Tenochtitlan falls",
+        "source": "sahagun"
+      },
+      {
+        "year": 1577,
+        "label": "Nahua scholars complete the Florentine Codex",
+        "source": "sahagun"
+      },
+      {
+        "year": 1614,
+        "label": "Chimalpahin records a Japanese embassy in Mexico City",
+        "source": "chimalpahin"
+      }
+    ]
+  },
+  {
+    "id": "inca",
+    "name": "Inca",
+    "longName": "Inca (Andes)",
+    "adjective": "Andean",
+    "color": "#c4652a",
+    "seal": "inca",
+    "startNote": "Before the Inca, this view follows the Andean states they inherited from: Chavín, Tiwanaku and Wari. After 1533 it follows Andean chroniclers under Spanish rule.",
+    "homes": [
+      {
+        "from": -500,
+        "place": "Chavín de Huántar",
+        "lat": -9.59,
+        "lon": -77.18
+      },
+      {
+        "from": 500,
+        "place": "Tiwanaku",
+        "lat": -16.55,
+        "lon": -68.67
+      },
+      {
+        "from": 700,
+        "place": "Huari",
+        "lat": -12.97,
+        "lon": -74.2
+      },
+      {
+        "from": 1200,
+        "place": "Cusco",
+        "lat": -13.53,
+        "lon": -71.97
+      }
+    ],
+    "moments": [
+      {
+        "year": -500,
+        "label": "Chavín's shrine draws pilgrims from coast and jungle",
+        "source": "moseley"
+      },
+      {
+        "year": 700,
+        "label": "Wari builds roads across the central Andes",
+        "source": "moseley"
+      },
+      {
+        "year": 1438,
+        "label": "Pachacuti begins Tawantinsuyu, the empire of four quarters",
+        "source": "sarmiento"
+      },
+      {
+        "year": 1463,
+        "label": "Tupac Yupanqui's armies march north to Quito",
+        "source": "sarmiento"
+      },
+      {
+        "year": 1480,
+        "label": "Tupac Yupanqui's raft fleet sails into the Pacific",
+        "source": "sarmiento"
+      },
+      {
+        "year": 1490,
+        "label": "The empire reaches the Maule in Chile",
+        "source": "cieza"
+      },
+      {
+        "year": 1528,
+        "label": "Strange men in a ship are seen at Tumbes",
+        "source": "cieza"
+      },
+      {
+        "year": 1532,
+        "label": "Atahualpa is seized at Cajamarca",
+        "source": "guaman-poma"
+      },
+      {
+        "year": 1609,
+        "label": "Garcilaso de la Vega's Royal Commentaries",
+        "source": "garcilaso"
+      }
     ]
   },
   {
@@ -128,25 +881,94 @@
     "special": true,
     "startNote": "When modern humans (Homo sapiens) first arrived. Earlier humans, among them Neanderthals, Denisovans and Homo erectus, lived across much of Eurasia long before.",
     "homes": [
-      {"from": -70000, "place": "Eastern Africa", "lat": 5.4, "lon": 35.9}
+      {
+        "from": -70000,
+        "place": "Eastern Africa",
+        "lat": 5.4,
+        "lon": 35.9
+      }
     ],
     "moments": [
-      {"year": -65000, "label": "Out of Africa", "source": "bae-2017"},
-      {"year": -55000, "label": "Sahul: Australia and New Guinea", "source": "clarkson-2017"},
-      {"year": -45000, "label": "Europe and western Siberia", "source": "hublin-2020"},
-      {"year": -38000, "label": "Japan", "source": "bae-2017"},
-      {"year": -32000, "label": "Arctic Siberia", "source": "pitulko-2004"},
-      {"year": -18500, "label": "The Americas", "source": "bennett-2021"},
-      {"year": -2500, "label": "The High Arctic and Greenland", "source": "raghavan-2014"},
-      {"year": -1050, "label": "Remote Oceania", "source": "kirch"},
-      {"year": 550, "label": "Madagascar", "source": "dewar-wright"},
-      {"year": 874, "label": "Iceland", "source": "landnamabok"},
-      {"year": 1270, "label": "Aotearoa New Zealand", "source": "wilmshurst-2011"},
-      {"year": 1911, "label": "The South Pole", "source": "amundsen"},
-      {"year": 1953, "label": "The summit of Everest", "source": "hunt-everest"},
-      {"year": 1960, "label": "The Challenger Deep", "source": "piccard-dietz"},
-      {"year": 1961, "label": "Orbit", "source": "vostok1"},
-      {"year": 1969, "label": "The Moon", "source": "nasa-apollo11"}
+      {
+        "year": -65000,
+        "label": "Out of Africa",
+        "source": "bae-2017"
+      },
+      {
+        "year": -55000,
+        "label": "Sahul: Australia and New Guinea",
+        "source": "clarkson-2017"
+      },
+      {
+        "year": -45000,
+        "label": "Europe and western Siberia",
+        "source": "hublin-2020"
+      },
+      {
+        "year": -38000,
+        "label": "Japan",
+        "source": "bae-2017"
+      },
+      {
+        "year": -32000,
+        "label": "Arctic Siberia",
+        "source": "pitulko-2004"
+      },
+      {
+        "year": -18500,
+        "label": "The Americas",
+        "source": "bennett-2021"
+      },
+      {
+        "year": -2500,
+        "label": "The High Arctic and Greenland",
+        "source": "raghavan-2014"
+      },
+      {
+        "year": -1050,
+        "label": "Remote Oceania",
+        "source": "kirch"
+      },
+      {
+        "year": 550,
+        "label": "Madagascar",
+        "source": "dewar-wright"
+      },
+      {
+        "year": 874,
+        "label": "Iceland",
+        "source": "landnamabok"
+      },
+      {
+        "year": 1270,
+        "label": "Aotearoa New Zealand",
+        "source": "wilmshurst-2011"
+      },
+      {
+        "year": 1911,
+        "label": "The South Pole",
+        "source": "amundsen"
+      },
+      {
+        "year": 1953,
+        "label": "The summit of Everest",
+        "source": "hunt-everest"
+      },
+      {
+        "year": 1960,
+        "label": "The Challenger Deep",
+        "source": "piccard-dietz"
+      },
+      {
+        "year": 1961,
+        "label": "Orbit",
+        "source": "vostok1"
+      },
+      {
+        "year": 1969,
+        "label": "The Moon",
+        "source": "nasa-apollo11"
+      }
     ]
   }
 ]

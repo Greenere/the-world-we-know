@@ -1,0 +1,21 @@
+{
+  "id": "ahuitzotl",
+  "name": "Ahuitzotl's campaigns to Xoconochco",
+  "traveler": "Ahuitzotl, tlatoani of Tenochtitlan",
+  "years": "1486–1500",
+  "kind": "military",
+  "viewpoint": "mexica",
+  "summary": "The eighth Mexica ruler drives the Triple Alliance's armies south along the Pacific slope to Xoconochco, the cacao country on the border of Guatemala, opening the road for the pochteca, the long-distance merchants who bring back quetzal feathers, jade and news from as far as Cuauhtēmallān.",
+  "source": "codex-mendoza",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1486, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "note": "Ahuitzotl becomes tlatoani.", "city": "tenochtitlan"},
+    {"year": 1487, "place": "Oaxaca", "lat": 17.06, "lon": -96.72, "note": "Huaxyacac, a garrison in the Zapotec valley."},
+    {"year": 1494, "place": "Tehuantepec", "lat": 16.32, "lon": -95.24, "note": "The isthmus and its Zapotec kingdom."},
+    {"year": 1500, "place": "Xoconochco", "lat": 14.9, "lon": -92.26, "note": "The cacao country is conquered; the pochteca's road reaches Guatemala."},
+    {"year": 1500, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "note": "Tribute of cacao, feathers and jaguar skins flows north.", "city": "tenochtitlan"}
+  ],
+  "informs": [
+    {"region": "central-america", "level": 3, "homeKnows": 1501, "confidence": "high", "note": "Xoconochco and the road to Cuauhtēmallān"}
+  ]
+}

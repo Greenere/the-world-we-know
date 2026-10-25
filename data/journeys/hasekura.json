@@ -1,0 +1,28 @@
+{
+  "id": "hasekura",
+  "name": "Hasekura's embassy to Spain and Rome",
+  "traveler": "Hasekura Tsunenaga and Luis Sotelo",
+  "years": "1613–1620",
+  "kind": "envoy",
+  "viewpoint": "japan",
+  "summary": "The lord of Sendai sends a samurai in a Japanese-built galleon across the Pacific to seek trade with New Spain. Hasekura crosses Mexico, sails to Spain, is baptised before Philip III and received by Pope Paul V in Rome. He comes home seven years later to find Christianity banned.",
+  "source": "amati",
+  "confidence": "high",
+  "stops": [
+    {"year": 1613, "place": "Tsukinoura, Sendai", "lat": 38.4, "lon": 141.4, "note": "The San Juan Bautista sails with 180 men.", "date": "October 1613"},
+    {"year": 1614, "place": "Acapulco", "lat": 16.85, "lon": -99.88, "note": "Across the Pacific in three months.", "city": "acapulco", "date": "January 1614"},
+    {"year": 1614, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "note": "Received by the viceroy; some of his men are baptised.", "city": "tenochtitlan", "by": "land"},
+    {"year": 1614, "place": "Veracruz", "lat": 19.18, "lon": -96.13, "note": "On to the Atlantic.", "city": "veracruz", "by": "land"},
+    {"year": 1614, "place": "Havana", "lat": 23.13, "lon": -82.38, "note": "With the treasure fleet.", "city": "havana"},
+    {"year": 1614, "place": "Seville", "lat": 37.39, "lon": -5.99, "note": "Up the Guadalquivir; stays at Coria del Río, where Japón is still a surname.", "city": "seville", "date": "October 1614"},
+    {"year": 1615, "place": "Madrid", "lat": 40.42, "lon": -3.7, "note": "Baptised before King Philip III.", "city": "madrid", "by": "land"},
+    {"year": 1615, "place": "Rome", "lat": 41.9, "lon": 12.5, "note": "Received by Pope Paul V and made a Roman citizen.", "city": "rome", "date": "November 1615"},
+    {"year": 1618, "place": "Manila", "lat": 14.6, "lon": 120.98, "note": "Two years waiting in the Philippines.", "city": "manila"},
+    {"year": 1620, "place": "Sendai", "lat": 38.27, "lon": 140.87, "note": "Home, to a country that has banned Christianity.", "date": "September 1620"}
+  ],
+  "informs": [
+    {"region": "mexico", "level": 3, "homeKnows": 1620, "confidence": "high"},
+    {"region": "italy", "level": 3, "homeKnows": 1620, "confidence": "high"},
+    {"region": "caribbean", "level": 2, "homeKnows": 1620, "confidence": "high"}
+  ]
+}

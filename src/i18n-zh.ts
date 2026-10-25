@@ -50,8 +50,10 @@ export const zhUi: Record<string, string> = {
     '选择任意年份与任意视角，这幅地图会显示一种文化对世界知道多少，它不知道的地方则笼罩在迷雾中。跟随那些把知识向外推展的旅人，看他们的消息传回故乡时迷雾散去；知识失传时，迷雾又会重新聚拢。',
   'Reading the fog': '如何看迷雾',
   Viewpoints: '视角',
-  'A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the four viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.':
-    '视角是一种文化共有的知识，而不是某一个人的见闻。知识要传回故乡才算数：通过归来的使节、商人的报告、一本书或一幅地图。大约1900年以后，四个视角共用同一幅地图，迷雾只标出最后无人到达的地方：两极、最高的山峰、最深的海沟，以及太空。',
+  'A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the cultural viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.':
+    '视角是一种文化共有的知识，而不是某一个人的见闻。知识要传回故乡才算数：通过归来的使节、商人的报告、一本书或一幅地图。大约1900年以后，各文化视角共用同一幅地图，迷雾只标出最后无人到达的地方：两极、最高的山峰、最深的海沟，以及太空。',
+  'Nine cultural viewpoints: Europe, China, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. None of them ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.':
+    '九个文化视角：欧洲、中国、伊斯兰世界、波利尼西亚、印度、日本、西非萨赫勒、墨西加与印加。它们都不会终结：在被征服或殖民统治之后，一个视角仍跟随它自己人民的知识，由《佛罗伦萨手抄本》的纳瓦作者或安第斯编年史家瓜曼·波马这样的学者写下。',
   'The Humanity layer is different: it shows when modern humans first arrived. We say “first known to” a viewpoint, never “discovered”. Someone was usually already there.':
     '“人类”一层与众不同：它显示现代人类最早抵达各地的时间。我们说某地“最早为某个视角所知”，从不说“被发现”——那里通常早已有人居住。',
   Keys: '快捷键',
@@ -219,6 +221,17 @@ export const zhUi: Record<string, string> = {
   'Click to follow': '点击跟随',
   'Where people began': '人类的起源之地',
   'Home of {vp}': '{vp}的故乡',
+
+  // Viewpoint picker
+  'All viewpoints': '全部视角',
+  'More viewpoints': '更多视角',
+  More: '更多',
+  'Europe and the Mediterranean': '欧洲与地中海',
+  Asia: '亚洲',
+  Africa: '非洲',
+  'The Americas': '美洲',
+  Oceania: '大洋洲',
+  Everyone: '全人类',
 
   // Journeys list tools
   'Find a journey, a traveller or a place…': '查找旅程、旅人或地点……',

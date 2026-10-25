@@ -2,7 +2,7 @@
 
 A browser atlas of how much of the world a civilization knew in any year, and of the travellers who pushed that knowledge outward. Fog covers what a viewpoint did not know; it lifts when a traveller's news reaches home, and it comes back when knowledge is lost.
 
-This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): four cultural viewpoints (Mediterranean / Europe, China, the Islamic world, Polynesia) plus Humanity, 500 BCE to today (Humanity back to 70,000 years ago), 78 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 23 inventions that changed how people saw the world, 386 cities and 221 regions.
+This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): nine cultural viewpoints (Mediterranean / Europe, China, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca) plus Humanity, 500 BCE to today (Humanity back to 70,000 years ago), 90 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 23 inventions that changed how people saw the world, 386 cities and 221 regions.
 
 ## Run it
 
@@ -54,7 +54,7 @@ Conventions in `knowledge.csv`:
 - `year` is a year (negative is BCE) or a range `1000..1100`; the map uses the midpoint and the card shows the range.
 - A cell takes the **highest** level of all regions that contain it, so broad regions set floors and small ones add detail.
 - `=n` means **exactly** n: it holds a frontier back (the Greenland ice sheet, the summit of Everest) until the region's next row.
-- Viewpoint `*` applies to all four cultural viewpoints; it is how the shared modern map after ~1900 is written.
+- Viewpoint `*` applies to all the cultural viewpoints; it is how the shared modern map after ~1900 is written.
 - Lines starting with `#` are comments.
 
 The build fails if any event, journey stop, city or invention lacks a source or confidence, if a source id is unknown, if a viewpoint has fewer than 8 key moments, or if a journey does not lift fog for at least one region. It routes every journey leg on a ~22 km H3 grid (sea legs keep to water, with straits carved open and the Suez and Panama canals opening in 1869 and 1914; land legs follow valleys and passes using ETOPO5 elevation; river legs follow Natural Earth rivers), treats the high Arctic as pack ice, snaps inland stops to the coast facing their next stop, warns about legs that detour absurdly or cross water by land (or land by sea), gives every stop a fractional year from its date or by distance within its year, and finds where journeys crossed paths. It also rasterizes regions onto an H3 grid (resolution 3, 41,162 cells, oceans included), turns everything into per-cell change points per viewpoint, and keeps the fog data under 5 MB (it is about 0.8 MB).

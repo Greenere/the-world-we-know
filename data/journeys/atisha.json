@@ -1,0 +1,25 @@
+{
+  "id": "atisha",
+  "name": "Atiśa: Suvarṇadvīpa and Tibet",
+  "traveler": "Atiśa Dīpaṃkara Śrījñāna",
+  "years": "1013–1054",
+  "kind": "pilgrim",
+  "viewpoint": "india",
+  "summary": "A Bengali scholar sails to Suvarṇadvīpa (Sumatra) to study for twelve years with the master Dharmakīrti, returns to teach at Vikramaśīla, and in old age crosses the Himalaya at the invitation of the kings of western Tibet. He never returns; his teaching reshapes Tibetan Buddhism.",
+  "source": "atisha-bio",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1013, "place": "Vikramaśīla", "lat": 25.32, "lon": 87.29, "note": "Atiśa sets out for the island of gold."},
+    {"year": 1013, "place": "Tamralipti", "lat": 22.3, "lon": 87.92, "note": "Takes ship across the Bay of Bengal."},
+    {"year": 1013, "place": "Suvarṇadvīpa (Sumatra)", "lat": -1.6, "lon": 103.6, "note": "Twelve years with Dharmakīrti at Srivijaya.", "by": "sea"},
+    {"year": 1025, "place": "Vikramaśīla", "lat": 25.32, "lon": 87.29, "note": "Returns to become the monastery's leading teacher.", "by": "sea"},
+    {"year": 1040, "place": "Nepal", "lat": 27.7, "lon": 85.32, "note": "Sets out for Tibet at sixty.", "city": "kathmandu"},
+    {"year": 1042, "place": "Tholing", "lat": 31.48, "lon": 79.8, "note": "Received by the king of Guge in western Tibet."},
+    {"year": 1050, "place": "Lhasa", "lat": 29.65, "lon": 91.13, "note": "Teaches in central Tibet.", "city": "lhasa"},
+    {"year": 1054, "place": "Nyethang", "lat": 29.48, "lon": 90.85, "note": "Dies here, never having gone home."}
+  ],
+  "informs": [
+    {"region": "tibet", "level": 3, "homeKnows": 1045, "confidence": "high", "note": "Atiśa's letters from Tibet"},
+    {"region": "sumatra", "level": 3, "homeKnows": 1026, "confidence": "medium"}
+  ]
+}

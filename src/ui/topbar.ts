@@ -8,6 +8,19 @@ import {ALL_VPS} from '../types';
 import {h, setIcon} from './dom';
 import {icons, sealSvg} from './icons';
 
+/** The viewpoints always in the bar; the others are a tap away in the picker, and join the bar while chosen. */
+const FEATURED: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'humanity'];
+
+/** The picker's groups, by where each viewpoint's home was. */
+const GROUPS: [string, VpId[]][] = [
+  ['Europe and the Mediterranean', ['europe']],
+  ['Asia', ['china', 'islam', 'india', 'japan']],
+  ['Africa', ['sahel']],
+  ['The Americas', ['mexica', 'inca']],
+  ['Oceania', ['polynesia']],
+  ['Everyone', ['humanity']],
+];
+
 export class TopBar {
   el: HTMLElement;
   private chips = new Map<VpId, HTMLButtonElement>();
@@ -15,6 +28,9 @@ export class TopBar {
   private globeBtn: HTMLButtonElement;
   private subtitle: HTMLElement;
   private note: HTMLElement;
+  private moreBtn: HTMLButtonElement;
+  private picker: HTMLElement;
+  private pickerItems = new Map<VpId, HTMLButtonElement>();
 
   constructor(
     private data: AppData,
@@ -38,6 +54,50 @@ export class TopBar {
       this.chips.set(id, b);
       return b;
     });
+    this.picker = h(
+      'div.vp-picker.panel',
+      {role: 'dialog', 'aria-label': t('All viewpoints')},
+      GROUPS.map(([title, ids]) =>
+        h(
+          'section.vp-picker-group',
+          h('h3.card-h', t(title)),
+          ids.map(id => {
+            const vp = data.vp[id];
+            const b = h(
+              'button.vp-picker-item',
+              {type: 'button', style: `--chip:${vp.color}`, onclick: () => {
+                this.pick(id);
+                this.closePicker();
+              }},
+              h('span.vp-seal', {html: sealSvg(vp.seal, vp.color, 22)}),
+              h('span.vp-picker-text', h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)), h('span.vp-picker-long', tx.viewpoint(id, 'longName', vp.longName))),
+            );
+            this.pickerItems.set(id, b);
+            return b;
+          }),
+        ),
+      ),
+    );
+    this.picker.hidden = true;
+    this.moreBtn = h(
+      'button.vp-chip.vp-more',
+      {type: 'button', title: t('More viewpoints'), 'aria-haspopup': 'dialog', 'aria-expanded': 'false', onclick: (e: Event) => {
+        e.stopPropagation();
+        if (this.picker.hidden) this.openPicker();
+        else this.closePicker();
+      }},
+      h('span.vp-seal', {html: icons.more}),
+      h('span.vp-name', t('More')),
+    );
+    document.addEventListener('click', e => {
+      if (!this.picker.hidden && !this.picker.contains(e.target as Node)) this.closePicker();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !this.picker.hidden) {
+        e.stopPropagation();
+        this.closePicker();
+      }
+    }, true);
     this.compareBtn = h(
       'button.vp-chip.vp-compare',
       {type: 'button', title: t('Compare two viewpoints'), onclick: () => this.toggleCompare()},
@@ -60,7 +120,7 @@ export class TopBar {
         this.subtitle,
         this.note,
       ),
-      h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips), h('span.switcher-rule'), this.compareBtn),
+      h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips, this.moreBtn), h('span.switcher-rule'), this.compareBtn, this.picker),
       h(
         'div.tools',
         h('button.tool.tool-wide', {type: 'button', title: t('Journeys and inventions'), onclick: () => this.togglePanel('journeys')}, h('span.tool-icon', {html: icons.compass}), h('span.tool-label', t('Journeys'))),
@@ -74,6 +134,18 @@ export class TopBar {
         h('button.tool', {type: 'button', title: t('About this atlas'), 'aria-label': t('About'), onclick: () => this.togglePanel('about'), html: icons.info}),
       ),
     );
+  }
+
+  private openPicker() {
+    this.picker.hidden = false;
+    this.moreBtn.setAttribute('aria-expanded', 'true');
+    this.moreBtn.classList.add('open');
+  }
+
+  private closePicker() {
+    this.picker.hidden = true;
+    this.moreBtn.setAttribute('aria-expanded', 'false');
+    this.moreBtn.classList.remove('open');
   }
 
   private togglePanel(p: 'journeys' | 'about') {
@@ -106,7 +178,9 @@ export class TopBar {
     for (const [id, b] of this.chips) {
       b.classList.toggle('active', s.vps.includes(id));
       b.setAttribute('aria-pressed', String(s.vps.includes(id)));
+      b.hidden = !FEATURED.includes(id) && !s.vps.includes(id);
     }
+    for (const [id, b] of this.pickerItems) b.classList.toggle('active', s.vps.includes(id));
     this.compareBtn.classList.toggle('active', s.compare);
     setIcon(this.globeBtn, s.globe ? icons.flat : icons.globe);
     this.globeBtn.title = s.globe ? t('Flat map') : t('Globe view');

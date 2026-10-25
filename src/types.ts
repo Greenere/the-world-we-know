@@ -1,7 +1,7 @@
 // Shapes of the files written by scripts/build_data.py.
 
-export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'humanity';
-export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia'];
+export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'india' | 'japan' | 'sahel' | 'mexica' | 'inca' | 'humanity';
+export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'india', 'japan', 'sahel', 'mexica', 'inca'];
 export const ALL_VPS: VpId[] = [...MAIN_VPS, 'humanity'];
 
 export interface Home {

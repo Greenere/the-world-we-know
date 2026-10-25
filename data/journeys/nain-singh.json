@@ -1,0 +1,23 @@
+{
+  "id": "nain-singh",
+  "name": "Nain Singh's secret survey to Lhasa",
+  "traveler": "Nain Singh Rawat",
+  "years": "1865–1866",
+  "kind": "scientific",
+  "viewpoint": "india",
+  "summary": "Trained by the Survey of India and disguised as a Ladakhi trader, a schoolmaster from Kumaon walks to Lhasa counting every step on a 100-bead rosary and hiding his compass in a prayer wheel. He fixes the latitude and height of Lhasa and maps the Tsangpo for 800 km.",
+  "source": "nain-singh",
+  "confidence": "high",
+  "stops": [
+    {"year": 1865, "place": "Dehradun", "lat": 30.32, "lon": 78.03, "note": "Trained at the Survey's headquarters: 2,000 paces to the mile."},
+    {"year": 1865, "place": "Kathmandu", "lat": 27.7, "lon": 85.32, "note": "Sets out as a trader.", "city": "kathmandu"},
+    {"year": 1865, "place": "Tradün", "lat": 29.5, "lon": 84.0, "note": "Joins a caravan along the Tsangpo."},
+    {"year": 1866, "place": "Shigatse", "lat": 29.27, "lon": 88.88, "note": "The Panchen Lama's seat."},
+    {"year": 1866, "place": "Lhasa", "lat": 29.65, "lon": 91.13, "note": "Three months in Lhasa; fixes its latitude by the stars from his lodgings.", "city": "lhasa", "date": "January 1866"},
+    {"year": 1866, "place": "Lake Manasarovar", "lat": 30.67, "lon": 81.47, "note": "West along the Tsangpo to its source."},
+    {"year": 1866, "place": "Dehradun", "lat": 30.32, "lon": 78.03, "note": "Home with 1,200 miles of route survey.", "date": "October 1866"}
+  ],
+  "informs": [
+    {"region": "tibet", "level": 4, "homeKnows": 1868, "confidence": "high", "note": "The pundits' survey"}
+  ]
+}

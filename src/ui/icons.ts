@@ -24,6 +24,7 @@ export const icons = {
   follow: wrap('<circle cx="10" cy="10" r="5.2"/><circle cx="10" cy="10" r="1.6" fill="currentColor" stroke="none"/><path d="M10 2.5v2.6M10 14.9v2.6M2.5 10h2.6M14.9 10h2.6"/>'),
   route: wrap('<circle cx="4.5" cy="14.5" r="1.8"/><circle cx="15.5" cy="5.5" r="1.8"/><path d="M6.2 13.6c3-1 1.6-4.6 4.6-5.4 1.4-.4 2.4-1 3.2-1.6" stroke-dasharray="1.6 2"/>'),
   sketch: wrap('<rect x="3" y="4.5" width="14" height="11" rx=".8"/><path d="M3.6 13.6l3.8-3.6 2.8 2.6 2.2-1.9 3.9 3.1"/><circle cx="12.9" cy="8" r="1.1"/>'),
+  more: wrap('<circle cx="5" cy="5" r="1.6"/><circle cx="10" cy="5" r="1.6"/><circle cx="15" cy="5" r="1.6"/><circle cx="5" cy="10" r="1.6"/><circle cx="10" cy="10" r="1.6"/><circle cx="15" cy="10" r="1.6"/><circle cx="5" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/>'),
   list: wrap('<path d="M7 5.5h9.5M7 10h9.5M7 14.5h9.5"/><circle cx="4" cy="5.5" r=".9" fill="currentColor" stroke="none"/><circle cx="4" cy="10" r=".9" fill="currentColor" stroke="none"/><circle cx="4" cy="14.5" r=".9" fill="currentColor" stroke="none"/>'),
   timeline: wrap('<path d="M3 4v12M3 16h14"/><path d="M5.5 6.5h5M8 9.5h7M6 12.5h4" stroke-width="2.2"/>'),
   invention: wrap('<circle cx="10" cy="10" r="7"/><path d="M10 4.6l1.3 4.1 4.1 1.3-4.1 1.3L10 15.4l-1.3-4.1L4.6 10l4.1-1.3z"/>'),
@@ -78,6 +79,31 @@ export function sealSvg(id: string, color: string, size = 18) {
     case 'humanity':
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M10.2 17.8c-1.6-.2-2.3-1.6-2-3.4.4-2.4 1-4.6 2.7-4.4 1.6.2 1.9 2 1.5 4.2-.4 2.2-.8 3.8-2.2 3.6z" fill="#f6f0e2"/><g fill="#f6f0e2"><circle cx="10.4" cy="7.6" r="1"/><circle cx="12.4" cy="7.2" r=".9"/><circle cx="14" cy="8.1" r=".8"/><circle cx="14.9" cy="9.6" r=".7"/><circle cx="8.7" cy="8.5" r=".8"/></g>`,
+      );
+    case 'india':
+      // A dharma wheel.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><circle cx="12" cy="12" r="6.6" fill="none" stroke="#f6f0e2" stroke-width="1.3"/><circle cx="12" cy="12" r="1.6" fill="#f6f0e2"/><g stroke="#f6f0e2" stroke-width="1">${[0, 1, 2, 3, 4, 5, 6, 7].map(k => { const a = (k * Math.PI) / 4; return `<line x1="${12 + Math.cos(a) * 1.6}" y1="${12 + Math.sin(a) * 1.6}" x2="${12 + Math.cos(a) * 6.6}" y2="${12 + Math.sin(a) * 6.6}"/>`; }).join('')}</g>`,
+      );
+    case 'japan':
+      // A five-petalled blossom, like a family crest (mon).
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2">${[0, 1, 2, 3, 4].map(k => `<ellipse cx="12" cy="7.4" rx="2.5" ry="3.4" transform="rotate(${k * 72} 12 12)"/>`).join('')}</g><circle cx="12" cy="12" r="1.5" fill="${color}"/>`,
+      );
+    case 'sahel':
+      // The mud-brick towers of a Sahel mosque.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M6 17.5V11l1.2-1.6L8.4 11v-1.5l1.4-2.2 1.4 2.2V11h1.6V8.4l1.6-2.6 1.6 2.6V11l1.2-1.6L18 11v6.5z" fill="#f6f0e2"/><path d="M8 12.2v1.6M11.2 12.2v1.6M14.4 12.2v1.6M10.6 17.5v-2.4h2.8v2.4" stroke="${color}" stroke-width=".9" fill="none"/>`,
+      );
+    case 'mexica':
+      // A stepped temple-pyramid with its twin shrines.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M5.5 17.5h13l-1.5-2.6h-10zM7.2 14.9h9.6L15.6 12.4H8.4zM8.6 12.4h6.8L14.4 10H9.6z" fill="#f6f0e2"/><path d="M9.8 10V7.6h1.8V10M12.4 10V7.6h1.8V10" fill="#f6f0e2"/>`,
+      );
+    case 'inca':
+      // Inti, the sun.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(k => `<path d="M12 3.2l1 2.6h-2z" transform="rotate(${k * 30} 12 12)"/>`).join('')}</g><circle cx="12" cy="12" r="4.4" fill="#f6f0e2"/><path d="M10.4 11.4h.1M13.5 11.4h.1M10.6 13.4q1.4 1 2.8 0" stroke="${color}" stroke-width="1" stroke-linecap="round" fill="none"/>`,
       );
     default:
       return s(

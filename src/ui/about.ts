@@ -46,7 +46,11 @@ export class About {
         h('h3.card-h', t('Viewpoints')),
         h(
           'p',
-          t('A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the four viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.'),
+          t('A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the cultural viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.'),
+        ),
+        h(
+          'p',
+          t('Nine cultural viewpoints: Europe, China, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. None of them ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
         ),
         h(
           'p',

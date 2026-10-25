@@ -1,0 +1,24 @@
+{
+  "id": "chola-srivijaya",
+  "name": "The Chola fleet against Srivijaya",
+  "traveler": "Rajendra Chola I",
+  "years": "1025",
+  "kind": "fleet",
+  "viewpoint": "india",
+  "summary": "The Chola emperor of south India sends a fleet across the Bay of Bengal to break the hold of Srivijaya on the straits. His Tanjore inscription lists the ports it sacked, from Kadaram (Kedah) to Sumatra: the furthest overseas campaign of any Indian state.",
+  "source": "chola-inscriptions",
+  "confidence": "high",
+  "stops": [
+    {"year": 1025, "place": "Nagapattinam", "lat": 10.77, "lon": 79.84, "note": "The fleet leaves the Chola port on the Coromandel coast."},
+    {"year": 1025, "place": "Nicobar Islands", "lat": 8.0, "lon": 93.5, "note": "Nakkavaram, the naked islands, on the way east."},
+    {"year": 1025, "place": "Kadaram (Kedah)", "lat": 5.65, "lon": 100.35, "note": "Kadaram, Srivijaya's port on the peninsula, is taken."},
+    {"year": 1025, "place": "Palembang", "lat": -2.99, "lon": 104.75, "note": "The Srivijayan capital is sacked and its king captured.", "city": "palembang"},
+    {"year": 1025, "place": "Malaiyur (Jambi)", "lat": -1.6, "lon": 103.6, "note": "The inscription lists port after port along Sumatra's east coast."},
+    {"year": 1026, "place": "Gangaikonda Cholapuram", "lat": 11.21, "lon": 79.45, "note": "Home to the new capital; the conquests are carved on the temple walls."}
+  ],
+  "informs": [
+    {"region": "sumatra", "level": 4, "homeKnows": 1030, "confidence": "high"},
+    {"region": "malay-peninsula", "level": 4, "homeKnows": 1030, "confidence": "high"},
+    {"region": "bay-of-bengal", "level": 5, "homeKnows": 1030, "confidence": "medium", "note": "Crossed by a war fleet"}
+  ]
+}

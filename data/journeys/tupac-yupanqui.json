@@ -1,0 +1,23 @@
+{
+  "id": "tupac-yupanqui",
+  "name": "Tupac Yupanqui: north to Quito and out to sea",
+  "traveler": "Tupac Inca Yupanqui",
+  "years": "1463–1480",
+  "kind": "military",
+  "viewpoint": "inca",
+  "summary": "Pachacuti's son leads the Inca armies north through the Chimú kingdom to Quito. On the coast, the chroniclers say, he heard of islands to the west, built a fleet of balsa rafts and sailed for nearly a year, returning with dark-skinned captives, gold and a horse-like skin. The islands may have been the Galápagos; the story may be legend.",
+  "source": "sarmiento",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1463, "place": "Cusco", "lat": -13.53, "lon": -71.97, "note": "The campaigns north begin.", "city": "cuzco"},
+    {"year": 1465, "place": "Chan Chan", "lat": -8.11, "lon": -79.07, "note": "The Chimú kingdom is conquered.", "city": "chan-chan"},
+    {"year": 1470, "place": "Quito", "lat": -0.22, "lon": -78.51, "note": "The northern frontier of Tawantinsuyu.", "city": "quito"},
+    {"year": 1478, "place": "Manta", "lat": -0.95, "lon": -80.72, "note": "Raft fleets at the Pacific coast."},
+    {"year": 1479, "place": "Islands of Ninachumbi and Auachumbi", "lat": -0.7, "lon": -90.5, "note": "Islands to the west, perhaps the Galápagos.", "confidence": "low", "by": "sea"},
+    {"year": 1480, "place": "Cusco", "lat": -13.53, "lon": -71.97, "note": "Home after almost a year at sea, the chroniclers say.", "city": "cuzco", "by": "land", "confidence": "low"}
+  ],
+  "informs": [
+    {"region": "andes-north", "level": 4, "homeKnows": 1471, "confidence": "high", "note": "Chinchaysuyu reaches Quito"},
+    {"region": "galapagos", "level": 1, "homeKnows": 1481, "confidence": "low", "note": "Ninachumbi and Auachumbi"}
+  ]
+}

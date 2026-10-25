@@ -1,0 +1,22 @@
+{
+  "id": "mamiya",
+  "name": "Mamiya Rinzō to Sakhalin and the Amur",
+  "traveler": "Mamiya Rinzō",
+  "years": "1808–1809",
+  "kind": "scientific",
+  "viewpoint": "japan",
+  "summary": "Sent by the shogunate to find whether Karafuto (Sakhalin) is an island, Mamiya travels north with Ainu and Nivkh guides, finds the narrow strait that separates it from the mainland, and crosses to the Amur to visit the Qing trading post at Deren.",
+  "source": "mamiya",
+  "confidence": "high",
+  "stops": [
+    {"year": 1808, "place": "Sōya, Ezo", "lat": 45.52, "lon": 141.94, "note": "Crosses from the northern tip of Ezo.", "date": "April 1808"},
+    {"year": 1808, "place": "Shiranushi, Karafuto", "lat": 46.05, "lon": 141.95, "note": "South Sakhalin, among the Ainu.", "by": "sea"},
+    {"year": 1809, "place": "Nanio", "lat": 52.0, "lon": 141.6, "note": "Reaches the narrows: Karafuto is an island.", "by": "sea", "date": "May 1809"},
+    {"year": 1809, "place": "Deren, on the Amur", "lat": 51.4, "lon": 139.4, "note": "The Qing trading post where Nivkh and Ainu bring furs.", "by": "sea"},
+    {"year": 1809, "place": "Sōya, Ezo", "lat": 45.52, "lon": 141.94, "note": "Home; his maps name the strait that Europeans later call Tatar.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "sea-of-okhotsk", "level": 4, "homeKnows": 1811, "confidence": "high", "note": "Sakhalin is an island"},
+    {"region": "manchuria", "level": 3, "homeKnows": 1811, "confidence": "high", "note": "The Qing post at Deren"}
+  ]
+}

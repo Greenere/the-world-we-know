@@ -4,7 +4,7 @@
   "traveler": "Mansa Musa of Mali",
   "years": "1324–1325",
   "kind": "pilgrim",
-  "viewpoint": "islam",
+  "viewpoint": "sahel",
   "summary": "The king of Mali crosses the Sahara to Mecca with a caravan of thousands and so much gold that its price in Cairo stays low for years. Cairo's chroniclers write Mali into the Islamic world's geography, and within fifteen years a crowned African king appears on Mediterranean charts.",
   "source": "al-umari",
   "confidence": "medium",
@@ -27,8 +27,10 @@
     {"year": 1325, "place": "Niani", "lat": 11.4, "lon": -8.4, "note": "Home.", "confidence": "low"}
   ],
   "informs": [
-    {"region": "bilad-al-sudan", "level": 4, "homeKnows": 1324, "confidence": "high", "note": "Mali described in Cairo"},
-    {"region": "sahara", "level": 4, "homeKnows": 1324, "confidence": "medium"},
+    {"viewpoint": "islam", "region": "bilad-al-sudan", "level": 4, "homeKnows": 1324, "confidence": "high", "note": "Mali described in Cairo"},
+    {"viewpoint": "islam", "region": "sahara", "level": 4, "homeKnows": 1324, "confidence": "medium"},
+    {"region": "egypt", "level": 4, "homeKnows": 1325, "confidence": "high", "note": "Cairo, as Mali's court came to know it"},
+    {"region": "arabia-hejaz", "level": 4, "homeKnows": 1325, "confidence": "high"},
     {"viewpoint": "europe", "region": "bilad-al-sudan", "level": 2, "homeKnows": 1339, "confidence": "medium", "source": "dulcert", "note": "'Rex Melly' appears on Dulcert's chart; the Catalan Atlas of 1375 shows Musa holding a gold nugget"}
   ]
 }
