@@ -38,9 +38,10 @@ from shapely.ops import unary_union
 RES = 4
 ETOPO_URL = "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO5/TOPO/ETOPO5/ETOPO5.DAT"
 # Bump VERSION when the routing changes (it keys the route cache); GRID_VERSION only when the grid does.
-VERSION = "routes-5"
+VERSION = "routes-8"
 GRID_VERSION = "routes-3"
 
+ARCTIC_ICE_LAT = 69.0  # sea north of this is pack ice for routing (the Bering Strait, at 66°, stays open)
 SEA_KINDS = {"sailor", "fleet", "merchant route", "group voyage", "deep dive"}
 DIRECT_KINDS = {"spaceflight", "mountaineering"}
 MODES = ("sea", "land", "river", "direct")
@@ -298,7 +299,10 @@ class Router:
             return self._graphs[key]
         land = self.is_land({0: 1800, 1: 1900, 2: 2000}[epoch])
         if mode == "sea":
-            cost = np.where(land, 2000.0, np.where(self.shore, 1.3, 1.0))
+            # The Arctic pack: no ship got through the Northwest or Northeast passage before 1878–1906, and
+            # none of these voyages tried, so the high Arctic is as closed as land.
+            ice = self.lat > ARCTIC_ICE_LAT
+            cost = np.where(land | ice, 2000.0, np.where(self.shore, 1.3, 1.0))
         else:
             altitude = 1 + np.maximum(0, self.elev - 1800) / 1000 * 0.6
             base = np.where(self.river, 0.22 if mode == "river" else 0.75, 1.0) * altitude
@@ -333,7 +337,8 @@ class Router:
         g = self.graph(mode, year)
         s, t = self.cell(*a), self.cell(*b)
         if mode == "sea":
-            s, t = self.nearest_water(s, year), self.nearest_water(t, year)
+            # An inland stop (Mexico City) joins the sea on the coast that faces where the leg is going.
+            s, t = self.nearest_water(s, year, toward=b), self.nearest_water(t, year, toward=a)
         straight = km(a, b)
         limit = straight * (6 if mode == "sea" else 4) + 1500
         path = None
@@ -369,7 +374,10 @@ class Router:
         open_water = cost.min()
 
         def clear(i: int, j: int) -> bool:
-            cmax = c[i:j + 1].max() * 1.001
+            # Judge by the cells between, not the ends: a coastal stop's own cell may count as sea, and must
+            # not license a land route to cut straight across the water.
+            inner = c[i + 1:j] if j > i + 1 else np.minimum(c[i:i + 1], c[j:j + 1])
+            cmax = inner.max() * 1.001
             emax = e[i:j + 1].max() + 150
             (x0, y0), (x1, y1) = lon[i], lon[j]
             d = km(lon[i], lon[j])
@@ -404,17 +412,27 @@ class Router:
             i = lo
         return [path[k] for k in keep]
 
-    def nearest_water(self, i: int, year: float) -> int:
+    def nearest_water(self, i: int, year: float, toward=None) -> int:
+        """The sea cell nearest an inland point; among the nearby coasts, the one facing `toward`."""
         land = self.is_land(year)
         if not land[i]:
             return i
         c = self.cells[i]
-        for k in range(1, 12):
+        found, first = [], None
+        for k in range(1, 30):
             ring = [self.index[x] for x in h3.grid_ring(c, k)]
-            water = [j for j in ring if not land[j]]
-            if water:
-                return water[0]
-        return i
+            water = [j for j in ring if not land[j] and self.lat[j] <= ARCTIC_ICE_LAT]
+            if water and first is None:
+                first = k
+            found += water
+            # Only coasts a little further than the nearest one (about 150 km) are considered.
+            if first is not None and (toward is None or k >= first + 4):
+                break
+        if not found:
+            return i
+        if toward is None:
+            return found[0]
+        return min(found, key=lambda j: km((float(self.lon[j]), float(self.lat[j])), toward))
 
     def save(self):
         if self.dirty:

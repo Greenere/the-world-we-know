@@ -578,6 +578,39 @@ def encode_fog(vp: str, tls) -> tuple[dict, list]:
 
 # ── Journeys, cities, names ────────────────────────────────────────────────
 
+def check_route_sanity(router, j):
+    """Flag legs that look wrong: a sea leg far longer than an open-water straight line (a bad snap or a
+    passage through ice), or a land/river leg that runs over open sea. Legs shaped by waypoints are the
+    author's choice and are not checked."""
+    real = [st for st in j["stops"] if not st.get("waypoint")]
+    has_waypoints, pending = set(), False
+    idx = -1
+    for st in j["stops"]:
+        if st.get("waypoint"):
+            pending = True
+            continue
+        idx += 1
+        if pending:
+            has_waypoints.add(idx)
+        pending = False
+    for i, (r, mode) in enumerate(zip(j["_routes"], j["_modes"])):
+        if not r or mode in (None, "direct") or i in has_waypoints:
+            continue
+        L = sum(haversine_km(a[1], a[0], b[1], b[0]) for a, b in zip(r, r[1:]))
+        straight = haversine_km(r[0][1], r[0][0], r[-1][1], r[-1][0])
+        where = f"journeys/{j['id']}.json stop {i} ({real[i].get('place')})"
+        year = real[i].get("year", 0)
+        if mode == "sea" and L > 1.6 * straight + 600 and router.water_fraction(r[0], r[-1], year) > 0.7:
+            warn(f"{where}: sea route is {L:.0f} km for {straight:.0f} km of open water; check its mode or add waypoints")
+        if mode == "sea" and L > 2.5 * straight + 800 and router.water_fraction(r[0], r[-1], year) < 0.3:
+            warn(f"{where}: sea route is {L:.0f} km between places {straight:.0f} km apart over land; should it be by land or river?")
+        if mode in ("land", "river"):
+            land = router.is_land(year)
+            wet = sum(not land[router.cell(x, y)] for x, y in r) / len(r)
+            if wet > 0.5 and straight > 150:
+                warn(f"{where}: {mode} route runs {wet:.0%} over water; should it be by sea?")
+
+
 def load_journeys(sources: dict, vp_ids: set[str]) -> list[dict]:
     journeys = []
     for path in sorted((DATA / "journeys").glob("*.json")):
@@ -1157,6 +1190,7 @@ def main() -> int:
     for j in journeys:
         j["_routes"], lengths, j["_modes"] = route_journey(router, j)
         j["_times"] = stop_times(j, lengths)
+        check_route_sanity(router, j)
     router.save()
     met = crossings(journeys)
     journey_docs = []

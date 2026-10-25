@@ -17,6 +17,9 @@
     {"year": 1799, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "Desaix's column, with the artist Vivant Denon, reaches the temples of Upper Egypt.", "city": "thebes", "from": "Cairo"},
     {"year": 1799, "place": "Philae", "lat": 24.02, "lon": 32.88, "note": "The southern limit of the survey."},
     {"year": 1799, "place": "Rosetta", "lat": 31.4, "lon": 30.42, "note": "Soldiers find a stone inscribed in hieroglyphs, Demotic and Greek; it will unlock the hieroglyphs in 1822.", "date": "July 1799"},
+    {"waypoint": true, "lat": 31.13, "lon": 33.8},
+    {"waypoint": true, "lat": 31.5, "lon": 34.47},
+    {"waypoint": true, "lat": 32.05, "lon": 34.76},
     {"year": 1799, "place": "Acre", "by": "land", "lat": 32.92, "lon": 35.07, "note": "The Syrian campaign stalls at Acre; Bonaparte slips back to France in August.", "date": "May 1799"},
     {"year": 1801, "place": "Alexandria", "by": "land", "lat": 31.2, "lon": 29.92, "note": "The French surrender to the British; the Rosetta Stone goes to London, the notes to Paris.", "city": "alexandria"}
   ],

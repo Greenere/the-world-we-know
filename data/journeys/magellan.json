@@ -36,6 +36,8 @@
     {"waypoint": true, "lat": 8.0, "lon": 168.0},
     {"year": 1521, "place": "Guam", "lat": 13.44, "lon": 144.69, "note": "Food and water from the Chamorro people, then a violent clash.", "date": "6 March 1521"},
     {"year": 1521, "place": "Homonhon", "lat": 10.73, "lon": 125.72, "note": "The Philippines.", "date": "16 March 1521"},
+    {"waypoint": true, "lat": 9.93, "lon": 125.07},
+    {"waypoint": true, "lat": 10.1, "lon": 124.4},
     {"year": 1521, "place": "Cebu", "lat": 10.32, "lon": 123.9, "note": "Rajah Humabon and hundreds of his people are baptized.", "city": "cebu"},
     {"year": 1521, "place": "Mactan", "lat": 10.3, "lon": 123.98, "note": "Magellan is killed fighting the warriors of Lapulapu.", "date": "27 April 1521"},
     {"waypoint": true, "lat": 9.0, "lon": 121.5},

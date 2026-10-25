@@ -10,8 +10,8 @@
   "confidence": "medium",
   "stops": [
     {"year": 50, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "Goods leave the capital of Roman Egypt up the Nile.", "city": "alexandria"},
-    {"year": 50, "place": "Coptos", "lat": 26.0, "lon": 32.82, "note": "From the Nile, caravans cross the desert to the Red Sea ports."},
-    {"year": 50, "place": "Berenike", "lat": 23.91, "lon": 35.47, "note": "Ships bound for India leave in July to catch the monsoon."},
+    {"year": 50, "place": "Coptos", "by": "river", "lat": 26.0, "lon": 32.82, "note": "From the Nile, caravans cross the desert to the Red Sea ports."},
+    {"year": 50, "place": "Berenike", "by": "land", "lat": 23.91, "lon": 35.47, "note": "Ships bound for India leave in July to catch the monsoon."},
     {"waypoint": true, "lat": 20.0, "lon": 38.0},
     {"year": 50, "place": "Adulis", "lat": 15.27, "lon": 39.65, "note": "The port of Aksum: ivory and tortoiseshell.", "city": "adulis"},
     {"year": 50, "place": "Muza", "lat": 13.32, "lon": 43.25, "note": "An Arab market town near the straits."},

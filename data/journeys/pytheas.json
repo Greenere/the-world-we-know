@@ -37,7 +37,7 @@
     {"year": -324, "place": "The amber coast", "lat": 54.5, "lon": 8.4, "note": "An island he calls Abalus, where amber washes up in spring: perhaps Heligoland or the Jutland shore."},
     {"waypoint": true, "lat": 50.3, "lon": 7.4},
     {"waypoint": true, "lat": 47.2, "lon": 5.1},
-    {"year": -320, "place": "Massalia", "lat": 43.3, "lon": 5.37, "note": "Home, perhaps overland by the rivers of Gaul. He writes On the Ocean, which survives only in the quotations of sceptics.", "city": "massalia"}
+    {"year": -320, "place": "Massalia", "by": "river", "lat": 43.3, "lon": 5.37, "note": "Home, perhaps overland by the rivers of Gaul. He writes On the Ocean, which survives only in the quotations of sceptics.", "city": "massalia"}
   ],
   "informs": [
     {"region": "britain", "level": 3, "homeKnows": -320, "confidence": "medium", "note": "Britain's coasts and size"},
