@@ -3,8 +3,9 @@ import {loadPictures, shortCitation} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
-import {formatRange, formatYear} from '../time';
-import type {Journey} from '../types';
+import {formatRange, formatYear, mainScale} from '../time';
+import type {Journey, VpId} from '../types';
+import {MAIN_VPS} from '../types';
 import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
@@ -31,6 +32,13 @@ export class JourneyPanel {
   private epilogueEl: HTMLElement | null = null;
   private tab: 'journeys' | 'inventions' = 'journeys';
   private filter = 'all';
+  /** Viewpoint filter: null for all; undefined until the list first opens (then the current viewpoint). */
+  private vpFilter: VpId | null | undefined = undefined;
+  private query = '';
+  private view: 'list' | 'timeline' = 'list';
+  private openEras = new Set<string>();
+  private resultsEl: HTMLElement | null = null;
+  private haystack = new Map<string, string>();
   private listEl: HTMLElement | null = null;
   private meanwhileEl: HTMLElement | null = null;
   private meanwhileKey = '';
@@ -105,64 +113,304 @@ export class JourneyPanel {
     ];
   }
 
-  private journeyList(): Node[] {
-    const groups: [string, (j: Journey) => boolean][] = [
-      ['Antiquity', j => firstYear(j) < 500],
-      ['500 – 1400', j => firstYear(j) >= 500 && firstYear(j) < 1400],
-      ['1400 – 1800', j => firstYear(j) >= 1400 && firstYear(j) < 1800],
-      ['The last frontiers', j => firstYear(j) >= 1800],
-    ];
+  // ── The journeys list: search, filters, series, and a list or timeline view ──
+
+  /** Journeys as list entries: a series of voyages is one entry. */
+  private entries(): Entry[] {
+    const inSeries = new Map<string, string>();
+    for (const sr of this.data.series) for (const id of sr.journeys) inSeries.set(id, sr.id);
+    const out: Entry[] = [];
+    for (const sr of this.data.series) {
+      const members = sr.journeys.map(id => this.data.journeyById.get(id)).filter(Boolean) as Journey[];
+      if (members.length) out.push(entryOf(sr.id, tx.series(sr.id, sr.name), members));
+    }
+    for (const j of this.data.journeys) if (!inSeries.has(j.id)) out.push(entryOf(j.id, tx.journey(j.id, 'name', j.name), [j]));
+    return out.sort((a, b) => a.t0 - b.t0);
+  }
+
+  /** Everything a search can match for a journey: its name, traveller, years and every stop, in both languages. */
+  private searchText(j: Journey): string {
+    let s = this.haystack.get(j.id);
+    if (s === undefined) {
+      const real = j.stops.filter(x => !x.waypoint);
+      s = fold(
+        [j.name, tx.journey(j.id, 'name', j.name), j.traveler ?? '', tx.journey(j.id, 'traveler', j.traveler ?? ''), j.years,
+         ...real.flatMap((x, i) => [x.place ?? '', tx.stop(j.id, i, 'place', x.place ?? '')])].join(' | '),
+      );
+      this.haystack.set(j.id, s);
+    }
+    return s;
+  }
+
+  /** Which of an entry's journeys pass the filters and the search (empty: the entry is hidden). */
+  private matching(e: Entry): Journey[] {
     const f = FILTERS.find(x => x.id === this.filter) ?? FILTERS[0];
-    const fits = (j: Journey) => f.id === 'all' || f.kinds.includes(j.kind);
-    const sorted = [...this.data.journeys].sort((a, b) => firstYear(a) - firstYear(b));
-    const filters = h(
-      'div.jp-filters',
-      {role: 'group', 'aria-label': t('Kind of journey')},
-      FILTERS.map(x => {
-        const n = x.id === 'all' ? sorted.length : sorted.filter(j => x.kinds.includes(j.kind)).length;
-        if (!n) return null;
-        return h(
-          'button.jp-filter',
-          {
-            type: 'button',
-            'aria-pressed': String(x.id === f.id),
-            class: x.id === f.id ? 'active' : '',
-            onclick: () => {
-              this.filter = x.id;
-              this.listEl?.replaceChildren(...this.journeyList());
-            },
-          },
-          t(x.label),
-          h('span.jp-filter-n', String(n)),
-        );
-      }),
+    const q = fold(this.query.trim());
+    return e.members.filter(
+      j => (f.id === 'all' || f.kinds.includes(j.kind)) && (!this.vpFilter || j.viewpoint === this.vpFilter) && (!q || this.searchText(j).includes(q)),
     );
-    return [
-      h('p.jp-intro', t('The trail shows what the traveller saw. The fog lifts only when the news reaches home.')),
-      filters,
-      ...groups.map(([title, g]) => {
-        const js = sorted.filter(j => g(j) && fits(j));
-        if (!js.length) return null;
-        return h(
-          'section.jp-group',
-          h('h3.card-h', t(title)),
-          h(
-            'ul.jp-list',
-            js.map(j =>
-              h(
-                'li',
-                h(
-                  'button.jp-item',
-                  {type: 'button', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.start(j.id)},
-                  h('span.jp-item-icon', {html: kindIcons[j.kind] ?? kindIcons.traveler}),
-                  h('span.jp-item-text', h('span.jp-item-name', tx.journey(j.id, 'name', j.name)), h('span.jp-item-meta', `${tx.journey(j.id, 'years', j.years)} · ${t(j.kind)}`)),
-                ),
-              ),
+  }
+
+  private journeyList(): Node[] {
+    if (this.vpFilter === undefined) {
+      const vp = this.store.state.vps[0];
+      this.vpFilter = (MAIN_VPS as VpId[]).includes(vp) && this.data.journeys.some(j => j.viewpoint === vp) ? vp : null;
+    }
+    const all = this.data.journeys;
+    const chips = (cls: string, label: string, items: {id: string | null; label: string; n: number; color?: string}[], current: string | null, set: (id: string | null) => void) =>
+      h(
+        `div.jp-filters.${cls}`,
+        {role: 'group', 'aria-label': label},
+        items
+          .filter(x => x.n)
+          .map(x =>
+            h(
+              'button.jp-filter',
+              {
+                type: 'button',
+                'aria-pressed': String(x.id === current),
+                class: x.id === current ? 'active' : '',
+                style: x.color ? `--chip:${x.color}` : '',
+                onclick: (e: Event) => {
+                  set(x.id);
+                  const group = (e.currentTarget as HTMLElement).parentElement!;
+                  for (const b of group.children) {
+                    b.classList.toggle('active', b === e.currentTarget);
+                    b.setAttribute('aria-pressed', String(b === e.currentTarget));
+                  }
+                  this.renderResults();
+                },
+              },
+              x.color ? h('span.jp-filter-dot') : null,
+              x.label,
+              h('span.jp-filter-n', String(x.n)),
             ),
           ),
-        );
-      }),
-    ].filter(Boolean) as Node[];
+      );
+    const vpChips = chips(
+      'jp-vps',
+      t('Viewpoint'),
+      [{id: null, label: t('All'), n: all.length}, ...MAIN_VPS.map(v => ({id: v, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => j.viewpoint === v).length, color: this.data.vp[v].color}))],
+      this.vpFilter ?? null,
+      id => (this.vpFilter = id as VpId | null),
+    );
+    const kindChips = chips(
+      'jp-kinds',
+      t('Kind of journey'),
+      FILTERS.map(x => ({id: x.id, label: t(x.label), n: x.id === 'all' ? all.length : all.filter(j => x.kinds.includes(j.kind)).length})),
+      this.filter,
+      id => (this.filter = id ?? 'all'),
+    );
+    const search = h('input.jp-search', {
+      type: 'search',
+      placeholder: t('Find a journey, a traveller or a place…'),
+      'aria-label': t('Find a journey'),
+      value: this.query,
+      autocomplete: 'off',
+      spellcheck: 'false',
+    });
+    search.addEventListener('input', () => {
+      this.query = search.value;
+      this.renderResults();
+    });
+    search.addEventListener('keydown', e => e.stopPropagation());
+    const viewBtn = (v: 'list' | 'timeline', label: string, icon: string) =>
+      h(
+        'button.jp-view-btn',
+        {
+          type: 'button',
+          class: this.view === v ? 'active' : '',
+          'aria-pressed': String(this.view === v),
+          onclick: (e: Event) => {
+            this.view = v;
+            for (const b of (e.currentTarget as HTMLElement).parentElement!.children) b.classList.toggle('active', b === e.currentTarget);
+            this.renderResults();
+          },
+        },
+        h('span', {html: icon}),
+        h('span.jp-view-label', t(label)),
+      );
+    this.resultsEl = h('div.jp-results');
+    this.renderResults();
+    return [
+      h('div.jp-tools', h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search), h('div.jp-view.jp-list-view', {role: 'group'}, viewBtn('list', 'List', icons.list), viewBtn('timeline', 'Timeline', icons.timeline))),
+      vpChips,
+      kindChips,
+      this.resultsEl,
+    ];
+  }
+
+  private renderResults() {
+    const el = this.resultsEl;
+    if (!el) return;
+    const entries = this.entries()
+      .map(e => ({e, hits: this.matching(e)}))
+      .filter(x => x.hits.length);
+    if (!entries.length) {
+      el.replaceChildren(h('p.jp-empty', t('No journey matches.')));
+      return;
+    }
+    const timeline = this.view === 'timeline' && innerWidth >= 760;
+    el.replaceChildren(...(timeline ? [this.timelineView(entries)] : this.listView(entries)));
+  }
+
+  private listView(entries: {e: Entry; hits: Journey[]}[]): Node[] {
+    const searching = !!this.query.trim();
+    const total = entries.reduce((n, x) => n + x.hits.length, 0);
+    const openAll = searching || total <= 12;
+    const out: Node[] = [];
+    const year = this.store.state.year;
+    if (!searching && year >= -500) {
+      // A century either side in antiquity, a generation or two in the crowded centuries since; the nearest eight.
+      const span = year > 1500 ? 40 : 100;
+      const near = entries
+        .filter(({e}) => e.t0 <= year + span && e.t1 >= year - span)
+        .sort((a, b) => Math.abs((a.e.t0 + a.e.t1) / 2 - year) - Math.abs((b.e.t0 + b.e.t1) / 2 - year))
+        .slice(0, 8);
+      if (near.length) {
+        out.push(h('section.jp-group.jp-near', h('h3.card-h', t('Under way around {year}', {year: formatYear(year)})), h('ul.jp-list', near.map(x => this.row(x.e, x.hits)))));
+      }
+    }
+    const eras: [string, number, number][] = [
+      ['Antiquity', -Infinity, 500],
+      ['500 – 1400', 500, 1400],
+      ['1400 – 1800', 1400, 1800],
+      ['The last frontiers', 1800, Infinity],
+    ];
+    for (const [title, a, b] of eras) {
+      const list = entries.filter(({e}) => e.t0 >= a && e.t0 < b);
+      if (!list.length) continue;
+      const n = list.reduce((k, x) => k + x.hits.length, 0);
+      const open = openAll || this.openEras.has(title);
+      const body = h('ul.jp-list', {hidden: !open}, open ? list.map(x => this.row(x.e, x.hits)) : []);
+      const head = h(
+        'button.jp-era',
+        {
+          type: 'button',
+          'aria-expanded': String(open),
+          onclick: () => {
+            const now = body.hidden;
+            if (now && !body.childElementCount) body.append(...list.map(x => this.row(x.e, x.hits)));
+            body.hidden = !now;
+            head.setAttribute('aria-expanded', String(now));
+            if (now) this.openEras.add(title);
+            else this.openEras.delete(title);
+          },
+        },
+        h('span.jp-era-title', t(title)),
+        h('span.jp-era-n', String(n)),
+        h('span.jp-era-caret', {html: icons.next}),
+      );
+      out.push(h('section.jp-group', head, body));
+    }
+    return out;
+  }
+
+  /** One row: a journey, or a series with a numbered chip for each voyage. */
+  private row(e: Entry, hits: Journey[]): HTMLElement {
+    const first = e.members[0];
+    const color = this.data.vp[first.viewpoint].color;
+    const main = h(
+      'button.jp-item',
+      {type: 'button', style: `--chip:${color}`, onclick: () => this.actions.start((hits[0] ?? first).id)},
+      h('span.jp-item-icon', {html: kindIcons[first.kind] ?? kindIcons.traveler}),
+      h(
+        'span.jp-item-text',
+        h('span.jp-item-name', e.name),
+        h(
+          'span.jp-item-meta',
+          e.members.length > 1
+            ? `${formatRange([Math.round(e.t0), Math.round(e.t1)]).replace(/^(c\. |约)/, '')} · ${t('{n} voyages', {n: e.members.length})}`
+            : `${tx.journey(first.id, 'years', first.years)} · ${t(first.kind)}`,
+        ),
+      ),
+    );
+    if (e.members.length === 1) return h('li', main);
+    const searching = !!this.query.trim();
+    return h(
+      'li.jp-series',
+      main,
+      h(
+        'div.jp-series-chips',
+        {style: `--chip:${color}`},
+        e.members.map((j, i) =>
+          h(
+            'button.jp-series-chip',
+            {
+              type: 'button',
+              class: searching && hits.includes(j) ? 'hit' : !hits.includes(j) ? 'dim' : '',
+              title: `${tx.journey(j.id, 'name', j.name)} · ${tx.journey(j.id, 'years', j.years)}`,
+              'aria-label': tx.journey(j.id, 'name', j.name),
+              onclick: () => this.actions.start(j.id),
+            },
+            String(i + 1),
+          ),
+        ),
+      ),
+    );
+  }
+
+  /** Every journey as a bar on the time axis, packed into lanes, a series as linked bars. */
+  private timelineView(entries: {e: Entry; hits: Journey[]}[]): Node {
+    const W = Math.max(280, (this.el.clientWidth || 380) - 40);
+    const X = (y: number) => 4 + mainScale.toX(y) * (W - 8);
+    const lanes: number[] = [];
+    const LH = 21;
+    const placed = entries.map(({e, hits}) => {
+      const x0 = X(e.t0);
+      const x1 = Math.max(x0 + 3, X(e.t1));
+      const label = e.name;
+      const lw = [...label].reduce((a, ch) => a + (ch.charCodeAt(0) > 0x2e80 ? 11.5 : 5.6), 0);
+      const right = x1 + 5 + lw <= W;
+      const from = right ? x0 : Math.max(0, x0 - 5 - lw);
+      const to = right ? x1 + 5 + lw : x1;
+      let lane = lanes.findIndex(end => end + 6 <= from);
+      if (lane < 0) lane = lanes.push(-Infinity) - 1;
+      lanes[lane] = to;
+      return {e, hits, x0, x1, lane, right, lw};
+    });
+    const H = lanes.length * LH + 26;
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('width', String(W));
+    svg.setAttribute('height', String(H));
+    svg.setAttribute('class', 'jp-gantt');
+    const parts: string[] = [];
+    for (const [y, label] of [[-500, formatYear(-500)], [0, formatYear(1)], [500, '500'], [1000, '1000'], [1500, '1500'], [1800, '1800'], [1900, '1900']] as [number, string][]) {
+      const x = X(y);
+      parts.push(`<line x1="${x}" x2="${x}" y1="14" y2="${H}" class="g-grid"/><text x="${x}" y="10" class="g-axis" text-anchor="middle">${label}</text>`);
+    }
+    const now = this.store.state.year;
+    if (now >= -500) parts.push(`<line x1="${X(now)}" x2="${X(now)}" y1="12" y2="${H}" class="g-now"/>`);
+    svg.innerHTML = parts.join('');
+    const NS = 'http://www.w3.org/2000/svg';
+    const mk = (tag: string, attrs: Record<string, string | number>) => {
+      const n = document.createElementNS(NS, tag);
+      for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v));
+      return n;
+    };
+    for (const p of placed) {
+      const y = 24 + p.lane * LH;
+      const color = this.data.vp[p.e.members[0].viewpoint].color;
+      const g = mk('g', {class: 'g-row', style: `--c:${color}`});
+      if (p.e.members.length > 1) g.append(mk('line', {x1: p.x0, x2: p.x1, y1: y, y2: y, class: 'g-link'}));
+      for (const j of p.e.members) {
+        const a = X(j.t[0]);
+        const b = Math.max(a + 3, X(j.t[j.t.length - 1]));
+        const bar = mk('rect', {x: a, y: y - 3.5, width: b - a, height: 7, rx: 2, class: p.hits.includes(j) ? 'g-bar' : 'g-bar dim'});
+        const title = mk('title', {});
+        title.textContent = `${tx.journey(j.id, 'name', j.name)} · ${tx.journey(j.id, 'years', j.years)}`;
+        bar.append(title);
+        bar.addEventListener('click', () => this.actions.start(j.id));
+        g.append(bar);
+      }
+      const text = mk('text', {x: p.right ? p.x1 + 5 : p.x0 - 5, y: y + 4, class: 'g-label', 'text-anchor': p.right ? 'start' : 'end'});
+      text.textContent = p.e.name;
+      text.addEventListener('click', () => this.actions.start((p.hits[0] ?? p.e.members[0]).id));
+      g.append(text);
+      svg.append(g);
+    }
+    return h('div.jp-gantt-wrap', svg);
   }
 
   private inventionList(): Node[] {
@@ -462,6 +710,17 @@ export class JourneyPanel {
   }
 }
 
-function firstYear(j: Journey) {
-  return j.stops.find(s => !s.waypoint)?.year ?? 0;
+interface Entry {
+  id: string;
+  name: string;
+  members: Journey[];
+  t0: number;
+  t1: number;
 }
+
+function entryOf(id: string, name: string, members: Journey[]): Entry {
+  return {id, name, members, t0: Math.min(...members.map(j => j.t[0])), t1: Math.max(...members.map(j => j.t[j.t.length - 1]))};
+}
+
+/** Lower case, accents and ʻokina dropped, so "ibn battuta" finds "Ibn Baṭṭūṭa". */
+const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f'ʻʼ’]/g, '').toLowerCase();

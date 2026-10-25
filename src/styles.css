@@ -2513,3 +2513,242 @@ kbd {
   right: 20px;
   background: color-mix(in srgb, var(--paper) 85%, transparent);
 }
+
+/* Journeys list: search, filters, era sections, series and the timeline view */
+
+.jp-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 2px;
+}
+
+.jp-search-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--paper) 70%, #fff);
+  box-shadow: inset 0 0 0 1px var(--rule-2);
+}
+
+.jp-search-row:focus-within {
+  box-shadow: inset 0 0 0 1.5px var(--ink-3);
+}
+
+.jp-search-icon {
+  display: inline-flex;
+  color: var(--ink-3);
+}
+
+.jp-search-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.jp-search {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.jp-search::placeholder {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.jp-list-view {
+  flex: none;
+  margin-left: 0;
+}
+
+.jp-list-view .jp-view-btn.active {
+  background: color-mix(in srgb, var(--ink) 9%, var(--paper));
+  box-shadow: inset 0 0 0 1px var(--rule-2);
+}
+
+.jp-vps .jp-filter.active {
+  background: var(--chip, var(--ink-2));
+}
+
+.jp-filter-dot {
+  align-self: center;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--chip);
+}
+
+.jp-filter.active .jp-filter-dot {
+  background: var(--paper);
+}
+
+.jp-era {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 4px;
+  padding: 4px 2px;
+  font-family: var(--font-sc);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--rule);
+}
+
+.jp-era:hover {
+  color: var(--ink);
+}
+
+.jp-era-n {
+  font-family: var(--font-text);
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--ink-3);
+}
+
+.jp-era-caret {
+  margin-left: auto;
+  display: inline-flex;
+  transition: transform 0.2s;
+}
+
+.jp-era-caret svg {
+  width: 14px;
+  height: 14px;
+}
+
+.jp-era[aria-expanded='true'] .jp-era-caret {
+  transform: rotate(90deg);
+}
+
+.jp-near .card-h {
+  color: var(--vp);
+}
+
+.jp-series .jp-item {
+  padding-bottom: 2px;
+}
+
+.jp-series-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0 8px 7px 49px;
+}
+
+.jp-series-chip {
+  min-width: 24px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-variant-numeric: lining-nums;
+  color: var(--chip);
+  background: color-mix(in srgb, var(--chip) 8%, var(--paper));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--chip) 40%, transparent);
+  transition: background 0.15s, color 0.15s;
+}
+
+.jp-series-chip:hover,
+.jp-series-chip.hit {
+  color: var(--paper);
+  background: var(--chip);
+}
+
+.jp-series-chip.dim {
+  opacity: 0.35;
+}
+
+.jp-empty {
+  margin: 18px 0;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+.jp-gantt-wrap {
+  margin: 10px 0 0;
+  overflow-x: hidden;
+}
+
+.jp-gantt {
+  display: block;
+  overflow: visible;
+}
+
+.jp-gantt .g-grid {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.jp-gantt .g-axis {
+  font-family: var(--font-sc);
+  font-size: 10.5px;
+  fill: var(--ink-3);
+}
+
+.jp-gantt .g-now {
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.jp-gantt .g-link {
+  stroke: var(--c);
+  stroke-width: 1;
+  stroke-opacity: 0.55;
+}
+
+.jp-gantt .g-bar {
+  fill: var(--c);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.jp-gantt .g-bar.dim {
+  opacity: 0.25;
+}
+
+.jp-gantt .g-label {
+  font-family: var(--font-text);
+  font-size: 11.5px;
+  fill: var(--ink-2);
+  cursor: pointer;
+}
+
+.jp-gantt .g-row:hover .g-label {
+  fill: var(--c);
+}
+
+.jp-gantt .g-row:hover .g-bar {
+  stroke: var(--ink);
+  stroke-width: 0.8;
+}
+
+@media (max-width: 760px) {
+  .jp-list-view {
+    display: none;
+  }
+}
+
+.jp-vps,
+.jp-kinds {
+  gap: 4px;
+  margin: 6px 0 0;
+}
+
+.jp-vps .jp-filter,
+.jp-kinds .jp-filter {
+  padding: 1px 8px 2px;
+  font-size: 13px;
+}

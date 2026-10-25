@@ -1065,7 +1065,8 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
     label_text = list(names.values()) + list(regions.values()) + [x.get("name", "") for x in inv.values()] + [x.get("name", "") for x in jz.values()]
     chars = "".join(sorted({ch for t in label_text for ch in t if ord(ch) > 0x2e80}))
     print("    中文: " + " · ".join(f"{k} {a}/{b}" for k, (a, b) in stats.items()))
-    return {"names": names, "regions": regions, "journeys": jz, "inventions": inv, "viewpoints": vps, "moments": moments,
+    series = rd("series.json")
+    return {"series": series, "names": names, "regions": regions, "journeys": jz, "inventions": inv, "viewpoints": vps, "moments": moments,
             "depictions": dep, "stories": stories, "notes": notes, "chars": chars}
 
 
@@ -1312,6 +1313,17 @@ def main() -> int:
     sizes["regions.json"] = write_json("regions.json", region_docs)
     sizes["cities.json"] = write_json("cities.json", city_docs)
     sizes["journeys.json"] = write_json("journeys.json", journey_docs)
+    # Series: a traveller's several journeys, shown as one row in the list.
+    series = json.loads((DATA / "series.json").read_text(encoding="utf-8")) if (DATA / "series.json").exists() else []
+    jids, in_series = {j["id"] for j in journey_docs}, set()
+    for sr in series:
+        for jid in sr.get("journeys", []):
+            if jid not in jids:
+                fail(f"series.json: {sr.get('id')!r} names unknown journey {jid!r}")
+            if jid in in_series:
+                fail(f"series.json: journey {jid!r} is in two series")
+            in_series.add(jid)
+    sizes["series.json"] = write_json("series.json", series)
     sizes["inventions.json"] = write_json("inventions.json", inventions)
     sizes["beyond.json"] = write_json("beyond.json", beyond)
     sizes["sources.json"] = write_json("sources.json", sources)

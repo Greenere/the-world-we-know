@@ -8,6 +8,7 @@ export const LANGS: Lang[] = ['en', 'zh'];
 
 /** The Chinese data bundle (see scripts/build_data.py, load_translations). */
 export interface ZhContent {
+  series: Record<string, string>;
   names: Record<string, string>;
   regions: Record<string, string>;
   journeys: Record<string, {name?: string; traveler?: string; years?: string; summary?: string; stops?: Record<string, {place?: string; note?: string; date?: string}>}>;
@@ -94,6 +95,9 @@ export const tx = {
   },
   viewpoint(id: string, field: 'name' | 'longName' | 'adjective' | 'startNote', en: string): string {
     return (lang === 'zh' && zh?.viewpoints[id]?.[field]) || en;
+  },
+  series(id: string, en: string): string {
+    return (lang === 'zh' && zh?.series?.[id]) || en;
   },
   moment(en: string): string {
     return (lang === 'zh' && zh?.moments[en]) || en;

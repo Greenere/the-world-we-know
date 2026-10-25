@@ -220,6 +220,15 @@ export const zhUi: Record<string, string> = {
   'Where people began': '人类的起源之地',
   'Home of {vp}': '{vp}的故乡',
 
+  // Journeys list tools
+  'Find a journey, a traveller or a place…': '查找旅程、旅人或地点……',
+  'Find a journey': '查找旅程',
+  List: '列表',
+  Timeline: '时间轴',
+  'Under way around {year}': '{year}前后进行中的旅程',
+  '{n} voyages': '{n}次航行',
+  'No journey matches.': '没有符合的旅程。',
+
   // Legend
   Legend: '图例',
   'Known to': '为谁所知',

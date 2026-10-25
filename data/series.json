@@ -1,0 +1,7 @@
+[
+  {"id": "zhenghe", "name": "Zheng He's seven voyages", "journeys": ["zhenghe", "zhenghe-2", "zhenghe-3", "zhenghe-4", "zhenghe-5", "zhenghe-6", "zhenghe-7"]},
+  {"id": "columbus", "name": "Columbus's four voyages", "journeys": ["columbus", "columbus-2", "columbus-3", "columbus-4"]},
+  {"id": "cook", "name": "Cook's three voyages", "journeys": ["cook", "cook-2", "cook-3"]},
+  {"id": "hudson", "name": "Henry Hudson's voyages", "journeys": ["hudson-1609", "hudson-1610"]},
+  {"id": "bering", "name": "Bering's expeditions", "journeys": ["bering-1", "bering-2"]}
+]

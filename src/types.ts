@@ -183,6 +183,13 @@ export interface Crossing {
   otherPlace: string;
 }
 
+/** A traveller's several journeys, listed as one row. */
+export interface Series {
+  id: string;
+  name: string;
+  journeys: string[];
+}
+
 export interface FogDoc {
   vp: VpId;
   /** One flat [year, level, confidence, year, level, confidence, …] list per distinct cell history. */

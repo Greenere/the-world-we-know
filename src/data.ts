@@ -10,6 +10,7 @@ import type {
   NameEntry,
   Region,
   SearchEntry,
+  Series,
   Source,
   Viewpoint,
   VpId,
@@ -28,6 +29,7 @@ export interface AppData {
   cityById: Map<string, City>;
   journeys: Journey[];
   journeyById: Map<string, Journey>;
+  series: Series[];
   inventions: Invention[];
   inventionById: Map<string, Invention>;
   sources: Record<string, Source>;
@@ -52,11 +54,12 @@ export function dataUrl(path: string): string {
 export async function loadData(): Promise<AppData> {
   const manifest = await get<{version: string}>('manifest.json', String(Date.now()));
   const v = manifest.version;
-  const [viewpoints, regions, cities, journeys, inventions, sources, search, grid, beyond, ...fogs] = await Promise.all([
+  const [viewpoints, regions, cities, journeys, series, inventions, sources, search, grid, beyond, ...fogs] = await Promise.all([
     get<Viewpoint[]>('viewpoints.json', v),
     get<Region[]>('regions.json', v),
     get<City[]>('cities.json', v),
     get<Journey[]>('journeys.json', v),
+    get<Series[]>('series.json', v),
     get<Invention[]>('inventions.json', v),
     get<Record<string, Source>>('sources.json', v),
     get<SearchEntry[]>('search.json', v),
@@ -76,6 +79,7 @@ export async function loadData(): Promise<AppData> {
     cityById: new Map(cities.map(c => [c.id, c])),
     journeys,
     journeyById: new Map(journeys.map(j => [j.id, j])),
+    series,
     inventions,
     inventionById: new Map(inventions.map(x => [x.id, x])),
     sources,
