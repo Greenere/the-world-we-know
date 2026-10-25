@@ -2168,6 +2168,69 @@ kbd {
   }
 }
 
+/* Phones: a journey's sketch can't be a second bottom sheet over the journey panel, so it becomes a small
+   picture docked in the map's corner above the sheet. It still cross-fades as the traveller moves; tapping
+   it opens the full sketch with its caption. */
+@media (max-width: 760px) {
+  .card.scene-card {
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: calc(56vh + 10px);
+    width: min(190px, 46vw);
+    max-height: none;
+    border-radius: 3px;
+    animation: rise 0.32s ease both;
+  }
+  .card.scene-card::before,
+  .card.scene-card .card-kicker,
+  .card.scene-card .card-title,
+  .card.scene-card .plate-text,
+  .card.scene-card .plate-eras,
+  .card.scene-card .plate-src,
+  .card.scene-card .plate-range,
+  .card.scene-card .scene-meta {
+    display: none;
+  }
+  .card.scene-card .card-scroll {
+    padding: 5px 5px 4px;
+    overflow: hidden;
+  }
+  .card.scene-card .plate {
+    margin: 0;
+  }
+  .card.scene-card .plate-img {
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+    cursor: zoom-in;
+  }
+  .card.scene-card .plate-layer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .card.scene-card .plate-cap {
+    margin: 4px 2px 0;
+  }
+  .card.scene-card .plate-era {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .card.scene-card > .card-close {
+    top: 2px;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    background: color-mix(in srgb, var(--paper) 85%, transparent);
+  }
+  .card.scene-card > .card-close svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

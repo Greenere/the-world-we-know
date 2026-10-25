@@ -114,6 +114,7 @@ export class Cards {
       if (scene && scene !== this.dismissed) subject = `scene:${s.journey}`;
     }
     this.el.hidden = !subject;
+    this.el.classList.toggle('scene-card', subject.startsWith('scene:'));
     document.body.classList.toggle('has-card', !!subject);
     if (!subject) {
       this.key = '';
