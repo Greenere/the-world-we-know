@@ -42,6 +42,7 @@ Everything the map shows is authored as plain text in `data/` and compiled by `s
 | `knowledge.csv` | One row per change: `viewpoint, region, year, level, confidence, source, note` |
 | `journeys/<id>.json` | Stops (with optional waypoints to force a historical course) and the `informs` events: what each viewpoint learned, at what level, and when the news reached home. A stop's optional `by` (`sea`, `land`, `river`, `direct`) says how its leg was travelled, and a journey-level `by` sets the default; otherwise it is guessed from the journey's kind and the terrain. Routes are pulled taut and drawn as smooth curves that run on through waypoints and through stops the traveller passes on from |
 | `cities.csv` | Founded, peak, abandoned, forgotten and rediscovered dates, tier, source, confidence, story |
+| `depictions.json` + `depictions/` | Imagined sketches of a city through its eras, with a sourced caption per era (and per viewpoint). Generated with an image API: see [docs/image-api-guide.md](docs/image-api-guide.md) |
 | `inventions.json` | Instruments and ideas (compass, printing, chronometer, satellites…): year, place of origin, `culture` (a viewpoint id or a plain name), `category`, what it changed, source, confidence |
 | `names.csv` | What each viewpoint called a region or city, with years (`*` is the default name) |
 | `sources.csv` | Every source id used anywhere, with its citation |

@@ -7,6 +7,7 @@ dependencies = [
   "h3>=4.1",
   "shapely>=2.0",
   "scipy>=1.11",
+  "pillow>=10.0",
 ]
 
 [tool.uv]

@@ -67,6 +67,21 @@ export interface Region {
 
 export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'rediscovered';
 
+/** An imagined sketch of a city in one era, with what that era was like (and how each viewpoint saw it). */
+export interface Depiction {
+  id: string;
+  from: number;
+  to?: number;
+  title: string;
+  caption: string;
+  captions?: Partial<Record<VpId, string>>;
+  sources: string[];
+  confidence: string;
+  image: string;
+  placeholder?: boolean;
+  made?: {provider?: string; model?: string; date?: string};
+}
+
 export interface City {
   id: string;
   lat: number;
@@ -80,6 +95,7 @@ export interface City {
   names: NameEntry[];
   journeys: string[];
   region: number | null;
+  depictions?: Depiction[];
 }
 
 export type Body = 'orbit' | 'moon' | 'moon-orbit';

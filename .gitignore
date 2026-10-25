@@ -7,3 +7,5 @@ public/data/
 # Natural Earth downloads (fetched by the build)
 data/basemap/
 __pycache__/
+# Image generation candidates and raw downloads (scripts/generate_images.py)
+data/depictions/_candidates/

@@ -1,10 +1,10 @@
 import type {AppData} from '../data';
-import {nameFor, shortCitation} from '../data';
+import {dataUrl, nameFor, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale} from '../time';
-import type {City, Invention, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {City, Depiction, Invention, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
@@ -19,10 +19,14 @@ export class Cards {
   el: HTMLElement;
   private body: HTMLElement;
   private key = '';
+  /** The picture plate is kept between redraws so playing through an era doesn't reload the image. */
+  private plateEl: HTMLElement | null = null;
+  private plateKey = '';
+  private lightbox: HTMLElement | null = null;
 
   constructor(
     private data: AppData,
-    store: Store,
+    private store: Store,
     private field: FogField,
     private actions: {
       openRegion(id: string): void;
@@ -47,6 +51,10 @@ export class Cards {
     if (key === this.key) return;
     this.key = key;
     this.el.hidden = !s.city && !s.region && !s.invention;
+    if (!s.city) {
+      this.plateEl = null;
+      this.plateKey = '';
+    }
     if (this.el.hidden) return;
     this.body.replaceChildren();
     if (s.invention) {
@@ -221,6 +229,8 @@ export class Cards {
       h('div.card-kicker', statusText[status]),
       h('h2.card-title', name.name, name.native && name.native !== name.name ? h('span.native', ` ${name.native}`) : null),
     ];
+    const plate = this.plate(c, s);
+    if (plate) out.push(plate);
     if (c.story) out.push(h('p.card-story', c.story));
     const labels: Record<string, string> = {
       founded: 'Founded',
@@ -248,6 +258,94 @@ export class Cards {
       h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `Source: ${shortCitation(this.data.sources, c.source)} · ${c.confidence} confidence`),
     );
     return out;
+  }
+
+  // ── Pictures ─────────────────────────────────────────────────────────────
+
+  /** The sketch for the current era, its caption as the current viewpoint saw it, and the other eras. */
+  private plate(c: City, s: State): HTMLElement | null {
+    const all = c.depictions;
+    if (!all?.length) return null;
+    const vp = s.vps[0];
+    const d = [...all].reverse().find(x => s.year >= x.from && (x.to === undefined || s.year <= x.to + 0.999));
+    if (!d) return null;
+    const key = `${c.id}|${d.id}|${vp}`;
+    if (key === this.plateKey && this.plateEl) return this.plateEl;
+    const fresh = this.plateKey.startsWith(`${c.id}|`);
+    this.plateKey = key;
+    const caption = d.captions?.[vp] ?? d.caption;
+    const range = `${formatYear(d.from)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
+    const el = h(
+      'figure.plate',
+      {class: fresh ? 'plate-enter' : ''},
+      h(
+        'button.plate-img',
+        {type: 'button', title: 'Enlarge', 'aria-label': `Enlarge: ${d.title}`, onclick: () => this.openLightbox(d, caption, range)},
+        h('img', {src: dataUrl(d.image), alt: `${d.title}, ${range}: imagined sketch`, decoding: 'async'}),
+        d.placeholder ? h('span.plate-tag', 'Placeholder') : null,
+      ),
+      h('figcaption.plate-cap', h('span.plate-era', d.title), h('span.plate-range', range)),
+      h('p.plate-text', caption),
+      all.length > 1
+        ? h(
+            'div.plate-eras',
+            {role: 'group', 'aria-label': 'Other eras'},
+            all.map(x =>
+              h(
+                'button.plate-era-btn',
+                {
+                  type: 'button',
+                  class: x === d ? 'active' : '',
+                  'aria-pressed': String(x === d),
+                  title: `${x.title} (${formatYear(x.from)})`,
+                  onclick: () => this.store.set({year: x.from, playing: false}),
+                },
+                h('img', {src: dataUrl(x.image), alt: '', loading: 'lazy', decoding: 'async'}),
+                h('span', formatYear(x.from)),
+              ),
+            ),
+          )
+        : null,
+      h(
+        'p.plate-src',
+        {title: d.sources.map(id => this.data.sources[id]?.citation ?? id).join('\n')},
+        `Imagined sketch${d.made?.model ? ` (${d.made.model})` : ''} · after ${d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')}`,
+      ),
+    );
+    this.plateEl = el;
+    return el;
+  }
+
+  private openLightbox(d: Depiction, caption: string, range: string) {
+    this.lightbox?.remove();
+    const close = () => {
+      box.remove();
+      document.removeEventListener('keydown', onKey, true);
+      this.lightbox = null;
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        close();
+      }
+    };
+    const box = h(
+      'div.lightbox',
+      {role: 'dialog', 'aria-modal': 'true', 'aria-label': d.title, onclick: (e: Event) => e.target === box && close()},
+      h(
+        'figure.lightbox-plate',
+        h('img', {src: dataUrl(d.image), alt: `${d.title}, ${range}: imagined sketch`}),
+        h(
+          'figcaption',
+          h('div.lightbox-head', h('span.plate-era', d.title), h('span.plate-range', range), d.placeholder ? h('span.plate-tag.inline', 'Placeholder') : null),
+          h('p', caption),
+        ),
+        h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: close, html: icons.close}),
+      ),
+    );
+    document.addEventListener('keydown', onKey, true);
+    document.body.append(box);
+    this.lightbox = box;
   }
 
   // ── Invention ────────────────────────────────────────────────────────────

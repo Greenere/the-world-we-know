@@ -1,0 +1,111 @@
+{
+  "style": "A traveller's field sketch from an expedition notebook: sepia iron-gall ink on cream laid paper, confident pen lines with fine parallel and cross-hatching for shade, a light, sparing watercolour wash in muted ochre, grey-green and faded blue. Loose and observed, as if drawn on the spot by an explorer, not a finished painting. No text, no lettering, no captions, no border or frame, no signature. Nothing anachronistic for the year given.",
+  "views": {
+    "constantinople": "A wide panoramic view of the peninsula of the city seen from the Asian shore across the mouth of the Bosporus, looking west in early morning light. The Sea of Marmara opens on the left; the point of the peninsula (Seraglio Point) sits left of centre with the sea walls along its shore; the city climbs over low hills to the right; the inlet of the Golden Horn opens on the right with the hill of Galata beyond it at the far right edge. Calm water with boats fills the foreground third of the picture."
+  },
+  "depictions": [
+    {
+      "id": "constantinople-byzantion",
+      "city": "constantinople",
+      "from": -657,
+      "to": 329,
+      "title": "Byzantion",
+      "caption": "A Greek colony from Megara on the point between the Golden Horn and the Bosporus, living off the grain ships out of the Black Sea and the tunny that crowd into its harbour. A modest walled town, its acropolis where Topkapı Palace now stands.",
+      "sources": ["strabo", "herodotus"],
+      "confidence": "medium",
+      "prompt": "Around 300 BCE. A small Greek walled town on the point only: a modest stone wall with square towers, a temple with columns and a low pediment on the acropolis hill at the point, flat-roofed houses packed below it, a few fishing boats and one Greek trireme with a square sail in the foreground. The rest of the peninsula is open hillside with olive trees, scrub and a few farmsteads. The far Galata hill is wild and wooded. No domes, no tall towers, no minarets."
+    },
+    {
+      "id": "constantinople-new-rome",
+      "city": "constantinople",
+      "from": 330,
+      "to": 536,
+      "title": "New Rome",
+      "caption": "Constantine refounds the city as his capital in 330, with a forum, a hippodrome and a porphyry column bearing his statue. The land walls of Theodosius II (413) and the aqueduct of Valens close it in a ring of stone and water; an inventory of about 425 counts 4,388 great houses.",
+      "sources": ["notitia-urbis"],
+      "confidence": "medium",
+      "prompt": "Around 450 CE. A large late-Roman city covering the whole peninsula: long sea walls with towers along the shore, the curved end of the Hippodrome with its arcades near the point, a tall column with a statue on top rising above the forum, early Christian basilicas with long pitched roofs (no great domes yet), the arches of an aqueduct striding between two hills, dense houses with tiled roofs, Roman galleys and merchant ships in the foreground. A small walled suburb on the Galata hill."
+    },
+    {
+      "id": "constantinople-justinian",
+      "city": "constantinople",
+      "from": 537,
+      "to": 1203,
+      "title": "The City of Justinian",
+      "caption": "Justinian's Hagia Sophia (537) lifts a dome that seems, Procopius writes, to hang from heaven by a golden chain. For six centuries this is the greatest city of Christendom, perhaps half a million people, its harbour closed in war by a chain across the Golden Horn.",
+      "captions": {
+        "china": "Tang records call it Fulin 拂菻, the city of the western king whose envoys reach Chang'an in 643. Du Huan, a prisoner taken at Talas, hears of its high walls and its skilled physicians.",
+        "islam": "To the caliphs it is al-Qustantiniyya, besieged by Arab fleets in 674–678 and again in 717–718 and never taken. Al-Mas'udi describes its walls, its harbour chain and the emperor's palace."
+      },
+      "sources": ["procopius", "jiu-tangshu", "du-huan", "al-masudi"],
+      "confidence": "medium",
+      "base": "constantinople-new-rome",
+      "prompt": "Around 1100 CE. The same view, now dominated by the vast shallow dome of Hagia Sophia with its heavy buttresses on the hill near the point, the smaller domes of Hagia Irene and many other domed churches across the hills, the terraces and arcades of the Great Palace stepping down to the sea walls, the aqueduct still standing, Byzantine dromon galleys with lateen sails in the foreground, a great iron chain on floats across the mouth of the Golden Horn. No minarets anywhere."
+    },
+    {
+      "id": "constantinople-palaiologan",
+      "city": "constantinople",
+      "from": 1204,
+      "to": 1452,
+      "title": "The Shrunken Empire",
+      "caption": "Crusaders sack the city in 1204 and hold it for 57 years. The restored empire is a shadow: villages, orchards and ruins inside the walls, while Genoese Galata across the Golden Horn grows rich, crowned by its tower of 1348.",
+      "captions": {
+        "islam": "Ibn Battuta comes in 1332 in the train of a Byzantine princess married to the Uzbek khan, and describes the emperor's city on one side of the water and the Frankish merchants of Galata on the other."
+      },
+      "sources": ["villehardouin", "ibn-battuta"],
+      "confidence": "medium",
+      "base": "constantinople-justinian",
+      "prompt": "Around 1400 CE. The same view, but the city has shrunk: Hagia Sophia still dominates, some church domes are roofless or ruined, open fields, orchards and gardens show between the houses inside the walls, the Great Palace is a ruin. Across the Golden Horn on the right, a walled Genoese town climbs the Galata hill, topped by a tall round stone tower with a conical roof. Genoese and Venetian sailing ships and galleys in the foreground. No minarets anywhere."
+    },
+    {
+      "id": "constantinople-ottoman",
+      "city": "constantinople",
+      "from": 1453,
+      "to": 1615,
+      "title": "Ottoman Istanbul",
+      "caption": "Mehmed II takes the city in 1453. Hagia Sophia becomes a mosque and gains minarets; Topkapı Palace rises on the old acropolis among cypresses; Sinan's Süleymaniye (1557) crowns the third hill of the new Ottoman capital.",
+      "captions": {
+        "europe": "The city falls to the Ottomans in 1453, a shock across Latin Christendom. Europe's first printed views of it, like the Nuremberg Chronicle woodcut of 1493, are drawn largely from hearsay."
+      },
+      "sources": ["kritovoulos", "schedel"],
+      "confidence": "high",
+      "base": "constantinople-palaiologan",
+      "prompt": "Around 1580 CE. The same view: Hagia Sophia now has slender pencil-shaped Ottoman minarets at its corners; on the point, the low walls, towers, kiosks and courtyards of Topkapı Palace among tall dark cypress trees; on the hill to the right the great domed Süleymaniye mosque with four minarets; other domed mosques with minarets across the skyline; houses rebuilt and dense again. The Genoese tower still stands on Galata. Ottoman galleys with lateen sails and small rowing boats in the foreground."
+    },
+    {
+      "id": "constantinople-blue-mosque",
+      "city": "constantinople",
+      "from": 1616,
+      "to": 1849,
+      "title": "City of Minarets",
+      "caption": "The Blue Mosque (1616), with its six minarets, faces Hagia Sophia across the old Hippodrome. Evliya Çelebi, born here in 1611, walks every quarter and counts its mosques, baths and guilds; caïques by the thousand ferry people across the water.",
+      "sources": ["evliya-celebi"],
+      "confidence": "high",
+      "base": "constantinople-ottoman",
+      "prompt": "Around 1780 CE. The same view: beside Hagia Sophia, the Sultan Ahmed (Blue) Mosque with its cascade of domes and six minarets; the New Mosque by the waterfront at the mouth of the Golden Horn; Topkapı Palace among cypresses on the point; the Galata tower now with a tall pointed wooden roof. Many long slender caïques rowed by oarsmen, and a few square-rigged sailing ships, in the foreground."
+    },
+    {
+      "id": "constantinople-steam",
+      "city": "constantinople",
+      "from": 1850,
+      "to": 1972,
+      "title": "Steam and the Republic",
+      "caption": "Steamers, a pontoon bridge across the Golden Horn and, from 1888, the railway from Europe. In 1923 the Republic moves the capital to Ankara; from 1930 the city is officially Istanbul to everyone.",
+      "sources": ["draft"],
+      "confidence": "high",
+      "base": "constantinople-blue-mosque",
+      "prompt": "Around 1900 CE. The same view: the historic skyline of mosques and minarets unchanged, but now with a long floating bridge across the mouth of the Golden Horn, several steamships with tall funnels trailing smoke, the railway along the shore below the point, a few European-style stone buildings among the wooden houses, telegraph poles along the quay."
+    },
+    {
+      "id": "constantinople-bridge",
+      "city": "constantinople",
+      "from": 1973,
+      "title": "Istanbul across Two Continents",
+      "caption": "The first bridge across the Bosporus (1973) joins Europe and Asia, and the city spreads along both shores to more than fifteen million people. The old peninsula keeps its skyline of domes and minarets.",
+      "sources": ["draft"],
+      "confidence": "high",
+      "base": "constantinople-steam",
+      "prompt": "Around 2000 CE. The same view: the historic skyline of Hagia Sophia, the Blue Mosque, Topkapı and the Süleymaniye unchanged; behind and beyond them, distant clusters of modern towers; at the far right edge, the long span of a suspension bridge across the Bosporus; modern ferries and a cargo ship in the foreground."
+    }
+  ]
+}

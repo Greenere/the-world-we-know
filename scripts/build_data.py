@@ -15,6 +15,7 @@ import base64
 import bisect
 import csv
 import hashlib
+import shutil
 import json
 import math
 import sys
@@ -694,6 +695,70 @@ def load_cities(sources, grid: Grid):
     return cities
 
 
+DEPICTION_FORMATS = (".webp", ".png", ".jpg", ".jpeg")
+
+
+def load_depictions(sources, vp_ids, city_ids) -> dict[str, list[dict]]:
+    """Imagined sketches of a city through its eras (data/depictions.json). The image for each is the
+    first of data/depictions/<id>.webp|png|jpg, else <id>.placeholder.svg; an optional <id>.json beside it
+    records how it was made. Images are copied to public/data/depictions/."""
+    path = DATA / "depictions.json"
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    src_dir = DATA / "depictions"
+    out_dir = OUT / "depictions"
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
+    out_dir.mkdir(parents=True)
+    by_city: dict[str, list[dict]] = defaultdict(list)
+    seen = set()
+    for k, d in enumerate(doc.get("depictions", [])):
+        where = f"depictions.json[{k}] {d.get('id')!r}"
+        for key in ("id", "city", "from", "title", "caption", "sources", "confidence", "prompt"):
+            if key not in d:
+                fail(f"{where}: missing {key}")
+        if d.get("id") in seen:
+            fail(f"{where}: duplicate id")
+        seen.add(d.get("id"))
+        if d.get("city") not in city_ids:
+            fail(f"{where}: unknown city {d.get('city')!r}")
+        if d.get("city") not in doc.get("views", {}):
+            fail(f"{where}: no view described for {d.get('city')!r} in 'views'")
+        if "to" in d and d["to"] < d["from"]:
+            fail(f"{where}: 'to' is before 'from'")
+        for vp in d.get("captions", {}):
+            if vp not in vp_ids:
+                fail(f"{where}: caption for unknown viewpoint {vp!r}")
+        for sid in d.get("sources") or [None]:
+            check_ref(where, sid, d.get("confidence"), sources)
+        if d.get("base") and d["base"] not in {x.get("id") for x in doc["depictions"]}:
+            fail(f"{where}: base {d['base']!r} is not a depiction")
+        image = next((src_dir / f"{d['id']}{ext}" for ext in DEPICTION_FORMATS if (src_dir / f"{d['id']}{ext}").exists()), None)
+        placeholder = image is None
+        if placeholder:
+            image = src_dir / f"{d['id']}.placeholder.svg"
+            if not image.exists():
+                fail(f"{where}: no image (looked for {d['id']}.webp/.png/.jpg or .placeholder.svg in data/depictions/)")
+                continue
+        shutil.copyfile(image, out_dir / image.name)
+        rec = {k: d[k] for k in ("id", "from", "to", "title", "caption", "captions", "sources", "confidence") if k in d}
+        rec["image"] = f"depictions/{image.name}"
+        if placeholder:
+            rec["placeholder"] = True
+        made = src_dir / f"{d['id']}.json"
+        if made.exists() and not placeholder:
+            m = json.loads(made.read_text(encoding="utf-8"))
+            rec["made"] = {k: m[k] for k in ("provider", "model", "date") if k in m}
+        by_city[d["city"]].append(rec)
+    for city, lst in by_city.items():
+        lst.sort(key=lambda r: r["from"])
+        for a, b in zip(lst, lst[1:]):
+            if a.get("to", math.inf) >= b["from"]:
+                fail(f"depictions.json: {a['id']} and {b['id']} overlap in time")
+    return by_city
+
+
 INVENTION_CATEGORIES = ("navigation", "measurement", "mapping", "communication", "transport", "imaging")
 
 
@@ -871,9 +936,12 @@ def main() -> int:
             doc["hidden"] = True
         region_docs.append(doc)
 
+    depictions = load_depictions(sources, vp_ids, {c["id"] for c in cities})
     city_docs = []
     for c in cities:
         doc = {k: v for k, v in c.items() if k != "mid"}
+        if c["id"] in depictions:
+            doc["depictions"] = depictions[c["id"]]
         doc["names"] = names.get(("city", c["id"]), [])
         doc["journeys"] = sorted(city_journeys.get(c["id"], []))
         doc["region"] = int(primary[c["cell"]]) if primary[c["cell"]] != 0xFFFF else None
