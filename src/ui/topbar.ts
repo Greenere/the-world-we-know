@@ -1,6 +1,7 @@
 import type {AppData} from '../data';
 import {homeAt} from '../data';
 import type {State, Store} from '../state';
+import {getLang, t, tx} from '../i18n';
 import {formatYear} from '../time';
 import type {VpId} from '../types';
 import {ALL_VPS} from '../types';
@@ -18,6 +19,7 @@ export class TopBar {
   constructor(
     private data: AppData,
     private store: Store,
+    private onLang: () => void,
   ) {
     const chips = ALL_VPS.map(id => {
       const vp = data.vp[id];
@@ -27,25 +29,25 @@ export class TopBar {
           type: 'button',
           'data-vp': id,
           style: `--chip:${vp.color}`,
-          title: vp.special ? 'Humanity: when people first arrived' : `What ${vp.longName} knew`,
+          title: vp.special ? t('Humanity: when people first arrived') : t('What {vp} knew', {vp: tx.viewpoint(id, 'longName', vp.longName)}),
           onclick: () => this.pick(id),
         },
         h('span.vp-seal', {html: sealSvg(vp.seal, vp.color, 16)}),
-        h('span.vp-name', vp.name),
+        h('span.vp-name', tx.viewpoint(id, 'name', vp.name)),
       );
       this.chips.set(id, b);
       return b;
     });
     this.compareBtn = h(
       'button.vp-chip.vp-compare',
-      {type: 'button', title: 'Compare two viewpoints', onclick: () => this.toggleCompare()},
+      {type: 'button', title: t('Compare two viewpoints'), onclick: () => this.toggleCompare()},
       h('span.vp-seal', {html: icons.compare}),
-      h('span.vp-name', 'Compare'),
+      h('span.vp-name', t('Compare')),
     );
     this.globeBtn = h('button.tool', {
       type: 'button',
-      title: 'Globe view',
-      'aria-label': 'Toggle globe view',
+      title: t('Globe view'),
+      'aria-label': t('Toggle globe view'),
       onclick: () => store.set({globe: !store.state.globe}),
     });
     this.subtitle = h('div.cartouche-sub');
@@ -54,17 +56,22 @@ export class TopBar {
       'header.topbar',
       h(
         'div.cartouche.panel',
-        h('h1.cartouche-title', 'The World We Know'),
+        h('h1.cartouche-title', t('The World We Know')),
         this.subtitle,
         this.note,
       ),
-      h('nav.switcher.panel', {'aria-label': 'Viewpoint'}, h('div.switcher-chips', chips), h('span.switcher-rule'), this.compareBtn),
+      h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips), h('span.switcher-rule'), this.compareBtn),
       h(
         'div.tools',
-        h('button.tool.tool-wide', {type: 'button', title: 'Journeys and inventions', onclick: () => this.togglePanel('journeys')}, h('span.tool-icon', {html: icons.compass}), h('span.tool-label', 'Journeys')),
-        h('button.tool', {type: 'button', title: 'Search  /', 'aria-label': 'Search', onclick: () => store.set({search: true}), html: icons.search}),
+        h('button.tool.tool-wide', {type: 'button', title: t('Journeys and inventions'), onclick: () => this.togglePanel('journeys')}, h('span.tool-icon', {html: icons.compass}), h('span.tool-label', t('Journeys'))),
+        h('button.tool', {type: 'button', title: t('Search  /'), 'aria-label': t('Search'), onclick: () => store.set({search: true}), html: icons.search}),
         this.globeBtn,
-        h('button.tool', {type: 'button', title: 'About this atlas', 'aria-label': 'About', onclick: () => this.togglePanel('about'), html: icons.info}),
+        h(
+          'button.tool.tool-lang',
+          {type: 'button', title: getLang() === 'zh' ? 'English' : '中文', 'aria-label': getLang() === 'zh' ? 'Switch to English' : '切换到中文', onclick: () => this.onLang()},
+          getLang() === 'zh' ? 'EN' : '中',
+        ),
+        h('button.tool', {type: 'button', title: t('About this atlas'), 'aria-label': t('About'), onclick: () => this.togglePanel('about'), html: icons.info}),
       ),
     );
   }
@@ -102,15 +109,15 @@ export class TopBar {
     }
     this.compareBtn.classList.toggle('active', s.compare);
     setIcon(this.globeBtn, s.globe ? icons.flat : icons.globe);
-    this.globeBtn.title = s.globe ? 'Flat map' : 'Globe view';
+    this.globeBtn.title = s.globe ? t('Flat map') : t('Globe view');
     const vps = s.vps.map(v => this.data.vp[v]);
     const year = formatYear(s.year);
     if (s.compare && vps.length === 2) {
       this.subtitle.innerHTML = '';
       this.subtitle.append(
-        h('span.sub-vp', {style: `color:${vps[0].color}`}, vps[0].name),
-        h('span.sub-amp', ' & '),
-        h('span.sub-vp', {style: `color:${vps[1].color}`}, vps[1].name),
+        h('span.sub-vp', {style: `color:${vps[0].color}`}, tx.viewpoint(vps[0].id, 'name', vps[0].name)),
+        h('span.sub-amp', getLang() === 'zh' ? ' 与 ' : ' & '),
+        h('span.sub-vp', {style: `color:${vps[1].color}`}, tx.viewpoint(vps[1].id, 'name', vps[1].name)),
         h('span.sub-dot', ' · '),
         year,
       );
@@ -118,20 +125,17 @@ export class TopBar {
       const vp = vps[0];
       const home = homeAt(vp, s.year);
       this.subtitle.innerHTML = '';
-      this.subtitle.append(
-        vp.special ? 'as reached by ' : 'as known to ',
-        h('span.sub-vp', {style: `color:${vp.color}`}, vp.special ? 'people' : vp.longName),
-        h('span.sub-dot', ' · '),
-        vp.special ? '' : `${home.place}, `,
-        year,
-      );
+      const who = h('span.sub-vp', {style: `color:${vp.color}`}, vp.special ? t('people') : tx.viewpoint(vp.id, 'longName', vp.longName));
+      const place = vp.special ? '' : `${tx.name(home.place)}${getLang() === 'zh' ? '，' : ', '}`;
+      if (getLang() === 'zh') this.subtitle.append(who, vp.special ? '所及' : '所知', h('span.sub-dot', ' · '), place, year);
+      else this.subtitle.append(vp.special ? 'as reached by ' : 'as known to ', who, h('span.sub-dot', ' · '), place, year);
     }
     const vp = vps[0];
     const showNote =
       !s.compare &&
       vp.startNote &&
       ((vp.id === 'islam' && s.year < 622) || vp.id === 'polynesia' || (vp.id === 'humanity' && s.year < 1500));
-    this.note.textContent = showNote ? vp.startNote! : '';
+    this.note.textContent = showNote ? tx.viewpoint(vp.id, 'startNote', vp.startNote!) : '';
     this.note.hidden = !showNote;
   }
 }

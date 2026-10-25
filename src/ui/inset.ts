@@ -3,6 +3,7 @@ import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
 import type {State} from '../state';
 import type {VpId} from '../types';
+import {t} from '../i18n';
 import {h} from './dom';
 
 const levelAt = (changes: [number, number, number][] | undefined, year: number) => {
@@ -26,7 +27,7 @@ export class Inset {
     this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.svg.setAttribute('viewBox', '0 0 236 112');
     this.svg.setAttribute('role', 'img');
-    this.el = h('div.inset.panel', h('div.inset-title', 'Beyond Earth'), this.svg);
+    this.el = h('div.inset.panel', h('div.inset-title', t('Beyond Earth')), this.svg);
     this.el.hidden = true;
   }
 
@@ -51,8 +52,8 @@ export class Inset {
     const ey = 56;
     const mx = 196;
     const my = 50;
-    const t = (now / 6000) * Math.PI * 2;
-    const craft = orbiting ? `<circle cx="${ex + Math.cos(t) * 30}" cy="${ey + Math.sin(t) * 12}" r="2.4" class="in-craft"/>` : '';
+    const ang = (now / 6000) * Math.PI * 2;
+    const craft = orbiting ? `<circle cx="${ex + Math.cos(ang) * 30}" cy="${ey + Math.sin(ang) * 12}" r="2.4" class="in-craft"/>` : '';
     const moonFog = FOG[moon];
     const leoFog = FOG[leo];
     const apolloPath = `M ${ex + 26} ${ey - 6} C 110 ${ey - 44}, 160 ${my - 40}, ${mx + 2} ${my - 15} C ${mx + 20} ${my - 6}, ${mx + 18} ${my + 14}, ${mx} ${my + 15} C 160 ${my + 40}, 110 ${ey + 44}, ${ex + 26} ${ey + 8}`;
@@ -80,9 +81,9 @@ export class Inset {
       <circle cx="${mx}" cy="${my}" r="13.5" class="in-fog" style="opacity:${moonFog}"/>
       ${moon >= 5 ? `<path d="M ${mx - 3} ${my + 2} v -7 l 4 1.5 -4 1.5" class="in-flag"/>` : ''}
       ${craft}${phaseDot}
-      <text x="${ex}" y="${ey + 31}" class="in-label" text-anchor="middle">Earth</text>
-      <text x="${ex + 34}" y="${ey - 16}" class="in-label small">${leo >= 5 ? 'orbit · people' : leo >= 2 ? 'orbit · machines' : 'orbit'}</text>
-      <text x="${mx}" y="${my + 27}" class="in-label" text-anchor="middle">${moon >= 5 ? 'Moon · walked on' : moon >= 3 ? 'Moon · landed on' : moon >= 2 ? 'Moon · reached' : 'Moon'}</text>
+      <text x="${ex}" y="${ey + 31}" class="in-label" text-anchor="middle">${t('Earth')}</text>
+      <text x="${ex + 34}" y="${ey - 16}" class="in-label small">${t(leo >= 5 ? 'orbit · people' : leo >= 2 ? 'orbit · machines' : 'orbit')}</text>
+      <text x="${mx}" y="${my + 27}" class="in-label" text-anchor="middle">${t(moon >= 5 ? 'Moon · walked on' : moon >= 3 ? 'Moon · landed on' : moon >= 2 ? 'Moon · reached' : 'Moon')}</text>
     `;
   }
 }

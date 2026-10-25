@@ -3,6 +3,7 @@ import type {State, Store} from '../state';
 import type {SearchEntry} from '../types';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
+import {t, tx} from '../i18n';
 import {formatRange} from '../time';
 
 const fold = (s: string) =>
@@ -13,6 +14,8 @@ const fold = (s: string) =>
 
 interface Indexed {
   entry: SearchEntry;
+  /** The displayed name first, then every other name it is known by. */
+  names: string[];
   keys: string[];
 }
 
@@ -30,11 +33,14 @@ export class Search {
     private store: Store,
     private choose: (e: SearchEntry) => void,
   ) {
-    this.index = data.search.map(entry => ({entry, keys: [entry.label, ...entry.alt].filter(Boolean).map(fold)}));
+    this.index = data.search.map(entry => {
+      const names = [...new Set([this.label(entry), entry.label, ...entry.alt].filter(Boolean))];
+      return {entry, names, keys: names.map(fold)};
+    });
     this.input = h('input.search-input', {
       type: 'search',
-      placeholder: 'A place, a city, a traveller, an invention, or what someone called it…',
-      'aria-label': 'Search',
+      placeholder: t('A place, a city, a traveller, an invention, or what someone called it…'),
+      'aria-label': t('Search'),
       autocomplete: 'off',
       spellcheck: 'false',
     });
@@ -90,7 +96,7 @@ export class Search {
     if (!q) {
       hits = this.data.journeys.map(j => ({entry: this.index.find(x => x.entry.t === 'journey' && x.entry.id === j.id)!.entry, score: 0}));
     } else {
-      for (const {entry, keys} of this.index) {
+      for (const {entry, names, keys} of this.index) {
         let best = Infinity;
         let via: string | undefined;
         keys.forEach((k, i) => {
@@ -100,7 +106,7 @@ export class Search {
           const score = (pos === 0 ? 0 : word ? 1 : 3) + (i === 0 ? 0 : 0.5) + k.length / 100;
           if (score < best) {
             best = score;
-            via = i === 0 ? undefined : [entry.label, ...entry.alt].filter(Boolean)[i];
+            via = i === 0 ? undefined : names[i];
           }
         });
         if (best < Infinity) hits.push({entry, score: best + (entry.t === 'journey' ? -0.2 : entry.t === 'city' ? 0 : 0.1), via});
@@ -117,24 +123,30 @@ export class Search {
         const icon = j ? kindIcons[j.kind] ?? '' : inv ? inventionIcons[inv.category] ?? icons.invention : entry.t === 'city' ? '<svg viewBox="0 0 20 20" width="20" height="20"><circle cx="10" cy="10" r="3.4" fill="currentColor"/><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>' : '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 6.5l4-2 4 2 4-2v9l-4 2-4-2-4 2z"/><path d="M8 4.5v9M12 6.5v9"/></svg>';
         const meta =
           entry.t === 'journey'
-            ? `Journey · ${entry.alt.filter(Boolean).join(' · ')}`
+            ? `${t('Journey')} · ${j ? [tx.journey(j.id, 'traveler', j.traveler ?? ''), tx.journey(j.id, 'years', j.years)].filter(Boolean).join(' · ') : ''}`
             : inv
-              ? `Invention · ${formatRange(inv.year)} · ${inv.place}`
-              : entry.t === 'city'
-                ? 'City'
-                : 'Region';
+              ? `${t('Invention')} · ${formatRange(inv.year)} · ${tx.invention(inv.id, 'place', inv.place)}`
+              : t(entry.t === 'city' ? 'City' : 'Region');
         const el = h(
           'li.search-item',
           {role: 'option', onclick: () => this.pick(entry), onmousemove: () => this.setActive(i)},
           h('span.search-item-icon', {html: icon}),
-          h('span.search-item-text', h('span.search-item-label', entry.label), h('span.search-item-meta', hit.via ? `${meta} · also “${hit.via}”` : meta)),
+          h('span.search-item-text', h('span.search-item-label', this.label(entry)), h('span.search-item-meta', hit.via ? `${meta} · ${t('also “{name}”', {name: hit.via})}` : meta)),
         );
         if (i === 0) el.classList.add('active');
         this.items.push({entry, el});
         return el;
       }),
     );
-    if (q && !hits.length) this.results.append(h('li.search-empty', 'Nothing by that name in this atlas yet.'));
+    if (q && !hits.length) this.results.append(h('li.search-empty', t('Nothing by that name in this atlas yet.')));
+  }
+
+  /** The entry's name in the current language. */
+  private label(e: SearchEntry): string {
+    if (e.t === 'journey') return tx.journey(e.id, 'name', e.label);
+    if (e.t === 'invention') return tx.invention(e.id, 'name', e.label);
+    if (e.t === 'region') return tx.region(e.id, e.label);
+    return tx.name(e.label);
   }
 
   private setActive(i: number) {

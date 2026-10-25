@@ -1,12 +1,22 @@
 // Year formatting and the two timeline scales.
 
+import {isZh} from './i18n';
+
 export const PRESENT = 2026;
 
 const grouped = (n: number) => n.toLocaleString('en-US');
 
-/** "126 BCE", "97 CE", "1420", "45,000 years ago". Negative years are BCE. */
+/** Chinese: 4.5万年前 rather than 45,000. */
+const wan = (n: number) => (n >= 10000 ? `${+(n / 10000).toFixed(1)}万` : String(n));
+
+/** "126 BCE", "97 CE", "1420", "45,000 years ago" (公元前126年, 97年, 1420年, 4.5万年前). Negative years are BCE. */
 export function formatYear(y: number): string {
   const r = Math.round(y);
+  if (isZh()) {
+    if (r <= -10000) return `${wan(Math.round((PRESENT - r) / 1000) * 1000)}年前`;
+    if (r < 0) return `公元前${-r}年`;
+    return `${r === 0 ? 1 : r}年`;
+  }
   if (r <= -10000) return `${grouped(Math.round((PRESENT - r) / 1000) * 1000)} years ago`;
   if (r < 0) return `${grouped(-r)} BCE`;
   if (r === 0) return '1 CE';
@@ -14,8 +24,14 @@ export function formatYear(y: number): string {
   return String(r);
 }
 
-export function yearParts(y: number): {num: string; era: string} {
+/** The year in two parts for the big display. In Chinese the era comes first (`pre`): 公元前 325. */
+export function yearParts(y: number): {num: string; era: string; pre?: boolean} {
   const r = Math.round(y);
+  if (isZh()) {
+    if (r <= -10000) return {num: wan(Math.round((PRESENT - r) / 1000) * 1000), era: '年前'};
+    if (r < 0) return {num: String(-r), era: '公元前', pre: true};
+    return {num: String(r === 0 ? 1 : r), era: r < 1000 ? '公元' : '', pre: true};
+  }
   if (r <= -10000) return {num: grouped(Math.round((PRESENT - r) / 1000) * 1000), era: 'years ago'};
   if (r < 0) return {num: grouped(-r), era: 'BCE'};
   if (r === 0) return {num: '1', era: 'CE'};
@@ -25,6 +41,11 @@ export function yearParts(y: number): {num: string; era: string} {
 export function formatRange(y: number | [number, number]): string {
   if (typeof y === 'number') return formatYear(y);
   const [a, b] = y;
+  if (isZh()) {
+    if (a < 0 && b < 0) return `约公元前${-a}–前${-b}年`;
+    if (a < 0) return `约公元前${-a}年–公元${b}年`;
+    return `约${a}–${b}年`;
+  }
   if (a < 0 && b < 0) return `c. ${grouped(-a)}–${grouped(-b)} BCE`;
   if (a < 0) return `c. ${grouped(-a)} BCE – ${b} CE`;
   return `c. ${a}–${b}`;
@@ -88,9 +109,10 @@ export const mainScale: TimeScale = {
     for (let y = -500; y < 1800; y += 100) t.push({year: y, major: y % 500 === 0});
     for (let y = 1800; y < 1900; y += 25) t.push({year: y, major: y === 1800});
     for (let y = 1900; y <= 2020; y += 10) t.push({year: y, major: y % 50 === 0});
+    const zh = isZh();
     const labels: Record<number, string> = {
-      [-500]: '500 BCE',
-      0: '1 CE',
+      [-500]: zh ? '前500' : '500 BCE',
+      0: zh ? '公元1' : '1 CE',
       500: '500',
       1000: '1000',
       1500: '1500',
@@ -129,12 +151,13 @@ export const deepScale: TimeScale = {
     return PRESENT - (Math.exp(l) - C);
   },
   ticks() {
+    const zh = isZh();
     const labelled: [number, string][] = [
-      [-70000, '70,000 years ago'],
-      [-20000, '20,000'],
-      [-8000, '10,000'],
-      [-3000, '3000 BCE'],
-      [0, '1 CE'],
+      [-70000, zh ? '7万年前' : '70,000 years ago'],
+      [-20000, zh ? '2万' : '20,000'],
+      [-8000, zh ? '1万' : '10,000'],
+      [-3000, zh ? '前3000' : '3000 BCE'],
+      [0, zh ? '公元1' : '1 CE'],
       [1000, '1000'],
       [1500, '1500'],
       [1800, '1800'],

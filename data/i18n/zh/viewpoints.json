@@ -1,0 +1,30 @@
+{
+ "europe": {
+  "name": "欧洲",
+  "longName": "地中海／欧洲",
+  "adjective": "欧洲的"
+ },
+ "china": {
+  "name": "中国",
+  "longName": "中国",
+  "adjective": "中国的"
+ },
+ "islam": {
+  "name": "伊斯兰世界",
+  "longName": "伊斯兰世界",
+  "adjective": "伊斯兰的",
+  "startNote": "622年之前，这个视角显示的是伊斯兰教兴起之前的阿拉伯商贸世界。"
+ },
+ "polynesia": {
+  "name": "波利尼西亚",
+  "longName": "波利尼西亚",
+  "adjective": "波利尼西亚的",
+  "startNote": "波利尼西亚的知识存在于航海传统与口述传承之中，而不是写成的地图。它的年代来自考古学与遗传学，因此边界很宽。"
+ },
+ "humanity": {
+  "name": "人类",
+  "longName": "人类",
+  "adjective": "人类的",
+  "startNote": "现代人类（智人）最早抵达的时间。更早的人类，包括尼安德特人、丹尼索瓦人和直立人，早已在欧亚大陆的大部分地方生活过。"
+ }
+}

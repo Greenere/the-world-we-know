@@ -6,13 +6,23 @@ import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale} from '../time';
 import type {City, Depiction, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
+import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
 
 export function levelName(vp: VpId, level: number) {
-  return (vp === 'humanity' ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES)[level] ?? '';
+  return t((vp === 'humanity' ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES)[level] ?? '');
+}
+
+const vpName = (data: AppData, vp: VpId) => tx.viewpoint(vp, 'name', data.vp[vp].name);
+
+/** A name in the current language, with the original beside it when that adds something. */
+function shownName(n: NameEntry): {name: string; native: string | null} {
+  const name = tx.name(n.name);
+  const native = n.native && n.native !== name ? n.native : isZh() && name !== n.name ? n.name : null;
+  return {name, native: native && native !== name ? native : null};
 }
 
 type Child = Node | string | null | undefined | false;
@@ -68,7 +78,7 @@ export class Cards {
     this.el = h(
       'aside.card.panel',
       this.scroller,
-      h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => this.close(), html: icons.close}),
+      h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: () => this.close(), html: icons.close}),
     );
     this.el.hidden = true;
     // Once scrolled, the text fades out under the top edge and the close button gets a backing.
@@ -164,30 +174,30 @@ export class Cards {
     const year = h('span');
     const conf = h('span.conf');
     const out: Node[] = [
-      h('div.card-kicker', r.surface === 'sea' ? 'Sea' : r.body ? 'Beyond Earth' : 'Region'),
-      h('h2.card-title', r.name),
+      h('div.card-kicker', t(r.surface === 'sea' ? 'Sea' : r.body ? 'Beyond Earth' : 'Region')),
+      h('h2.card-title', tx.region(r.id, r.name)),
       called,
-      h('div.card-status', swatch, h('span', level, vpData.special ? '' : ` to ${vpData.name}`, ' in ', year), conf),
+      h('div.card-status', swatch, h('span', level, vpData.special ? '' : t(' to {vp}', {vp: vpName(this.data, vp)}), t(' in '), year), conf),
     ];
     let ribbons: SVGElement | null = null;
-    if (cell >= 0) out.push(h('h3.card-h', 'Who knew it, and when'), (ribbons = this.ribbons(cell)));
+    if (cell >= 0) out.push(h('h3.card-h', t('Who knew it, and when')), (ribbons = this.ribbons(cell)));
     const names = r.names.filter(n => n.vp !== '*');
-    if (names.length) out.push(h('h3.card-h', 'What they called it'), namesList(this.data, names));
+    if (names.length) out.push(h('h3.card-h', t('What they called it')), namesList(this.data, names));
     const evs = this.events(r, vp);
-    if (evs.length) out.push(h('h3.card-h', `How ${vpData.special ? 'people' : vpData.name} came to know it`), h('ol.events', evs));
+    if (evs.length) out.push(h('h3.card-h', t('How {vp} came to know it', {vp: vpData.special ? t('people') : vpName(this.data, vp)})), h('ol.events', evs));
     if (vp === 'polynesia') {
       out.push(
-        h('p.card-note', 'Polynesian knowledge was carried in navigation lore and oral tradition. These dates come from archaeology and genetics and carry wide ranges.'),
+        h('p.card-note', t('Polynesian knowledge was carried in navigation lore and oral tradition. These dates come from archaeology and genetics and carry wide ranges.')),
       );
     }
-    if (r.journeys.length) out.push(h('h3.card-h', 'Journeys that passed through'), this.journeyChips(r.journeys));
+    if (r.journeys.length) out.push(h('h3.card-h', t('Journeys that passed through')), this.journeyChips(r.journeys));
     const parents = r.parents.map(id => this.data.regionById.get(id)).filter(Boolean) as Region[];
     if (parents.length) {
       out.push(
         h(
           'p.card-part',
-          'Part of ',
-          parents.map((p, i) => [i ? ' and ' : '', h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(p.id)}, p.name)]),
+          t('Part of '),
+          parents.map((p, i) => [i ? t(' and ') : '', h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(p.id)}, tx.region(p.id, p.name))]),
         ),
       );
     }
@@ -198,11 +208,12 @@ export class Cards {
       const name = r.names.find(n => n.vp === vp && (n.from === undefined || y >= n.from) && (n.to === undefined || y <= n.to));
       called.hidden = !name;
       if (name) {
+        const shown = shownName(name);
         swap(called, `${name.name}|${name.native ?? ''}`, () => [
-          'Called ',
-          h('em', name.name),
-          name.native ? h('span.native', ` ${name.native}`) : null,
-          ` by ${vpData.special ? 'people' : vpData.name} in `,
+          t('Called '),
+          h('em', shown.name),
+          shown.native ? h('span.native', ` ${shown.native}`) : null,
+          t(' by {vp} in ', {vp: vpData.special ? t('people') : vpName(this.data, vp)}),
           calledYear,
         ]);
       }
@@ -212,7 +223,7 @@ export class Cards {
       swap(level, String(state.level), () => [levelName(vp, state.level)]);
       year.textContent = formatYear(y);
       conf.hidden = state.level === 0;
-      swap(conf, String(state.conf), () => [`${CONFIDENCE_NAMES[state.conf]} confidence`]);
+      swap(conf, String(state.conf), () => [t('{level} confidence', {level: t(CONFIDENCE_NAMES[state.conf])})]);
       if (now) {
         const x = ribbonX(Math.max(-500, y));
         now.setAttribute('x1', String(x));
@@ -235,10 +246,10 @@ export class Cards {
         h('span.event-year', formatRange(e.y)),
         h(
           'div.event-body',
-          h('div.event-level', h('span.level-dot', {style: `--a:${LEVEL_ALPHA[e.level]}`}), e.cap ? `held at ${levelName(vp, e.level).toLowerCase()}` : levelName(vp, e.level), shared ? h('span.shared', ' · shared modern map') : null),
-          e.note ? h('div.event-note', e.note) : null,
-          j ? h('button.linkish.event-journey', {type: 'button', onclick: () => this.actions.openJourney(j.id)}, j.name) : null,
-          h('div.event-src', {title: this.data.sources[e.source]?.citation ?? e.source}, shortCitation(this.data.sources, e.source), ` · ${CONFIDENCE_NAMES[e.conf]}`),
+          h('div.event-level', h('span.level-dot', {style: `--a:${LEVEL_ALPHA[e.level]}`}), e.cap ? t('held at {level}', {level: isZh() ? levelName(vp, e.level) : levelName(vp, e.level).toLowerCase()}) : levelName(vp, e.level), shared ? h('span.shared', t(' · shared modern map')) : null),
+          e.note ? h('div.event-note', tx.note(e.note)) : null,
+          j ? h('button.linkish.event-journey', {type: 'button', onclick: () => this.actions.openJourney(j.id)}, tx.journey(j.id, 'name', j.name)) : null,
+          h('div.event-src', {title: this.data.sources[e.source]?.citation ?? e.source}, shortCitation(this.data.sources, e.source), ` · ${t(CONFIDENCE_NAMES[e.conf])}`),
         ),
       );
     });
@@ -253,7 +264,7 @@ export class Cards {
       const vpd = this.data.vp[vp];
       const y0 = 4 + i * row;
       const hist = this.field.cellHistory(vp, cell);
-      parts.push(`<text x="0" y="${y0 + 10}" class="rb-label">${vpd.name}</text>`);
+      parts.push(`<text x="0" y="${y0 + 10}" class="rb-label">${vpName(this.data, vp)}</text>`);
       parts.push(`<line x1="${L}" x2="${W - 4}" y1="${y0 + 6}" y2="${y0 + 6}" class="rb-base"/>`);
       for (let k = 0; k < hist.length; k++) {
         const [yy, lvl] = hist[k];
@@ -266,8 +277,8 @@ export class Cards {
       }
       const first = hist.find(([, l]) => l > 0);
       if (first) {
-        const t = first[0] < -500 ? `since ${formatYear(first[0])}` : `first known ${formatYear(first[0])}`;
-        parts.push(`<title>${vpd.name}: ${t}</title>`);
+        const when = t(first[0] < -500 ? 'since {year}' : 'first known {year}', {year: formatYear(first[0])});
+        parts.push(`<title>${vpName(this.data, vp)}: ${when}</title>`);
       }
     });
     parts.push(`<line x1="${L}" x2="${L}" y1="0" y2="${H - 14}" class="rb-now"/>`);
@@ -283,7 +294,7 @@ export class Cards {
     el.setAttribute('viewBox', `0 0 ${W} ${H}`);
     el.setAttribute('class', 'ribbons');
     el.setAttribute('role', 'img');
-    el.setAttribute('aria-label', 'When each viewpoint knew this place');
+    el.setAttribute('aria-label', t('When each viewpoint knew this place'));
     el.innerHTML = parts.join('');
     return el;
   }
@@ -298,7 +309,7 @@ export class Cards {
           'button.chip',
           {type: 'button', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.openJourney(id)},
           h('span.chip-icon', {html: kindIcons[j.kind] ?? kindIcons.traveler}),
-          j.name,
+          tx.journey(j.id, 'name', j.name),
         );
       }),
     );
@@ -311,11 +322,11 @@ export class Cards {
     const kicker = h('div.card-kicker');
     const title = h('h2.card-title');
     const statusText: Record<string, string> = {
-      unborn: 'Not yet founded',
-      living: c.tier === 1 ? 'Great city' : c.tier === 2 ? 'City' : 'Town',
-      ruin: 'Ruin',
-      lost: 'Lost',
-      rediscovered: 'Rediscovered ruin',
+      unborn: t('Not yet founded'),
+      living: t(c.tier === 1 ? 'Great city' : c.tier === 2 ? 'City' : 'Town'),
+      ruin: t('Ruin'),
+      lost: t('Lost'),
+      rediscovered: t('Rediscovered ruin'),
     };
     const out: Node[] = [kicker, title];
     const plate = c.pictures
@@ -330,47 +341,48 @@ export class Cards {
             jump: d => this.store.set({year: d.from ?? 0, playing: false}),
           },
           vp,
-          (d, caption, range) => this.openLightbox(d, caption, range),
+          (d, title, caption, range) => this.openLightbox(d, title, caption, range),
         )
       : null;
     if (plate) out.push(plate.el);
-    if (c.story) out.push(h('p.card-story', c.story));
+    if (c.story) out.push(h('p.card-story', tx.story(c.id, c.story)));
     const labels: Record<string, string> = {
-      founded: 'Founded',
-      peak: 'At its height',
-      abandoned: 'Abandoned',
-      forgotten: 'Forgotten',
-      rediscovered: 'Rediscovered',
+      founded: t('Founded'),
+      peak: t('At its height'),
+      abandoned: t('Abandoned'),
+      forgotten: t('Forgotten'),
+      rediscovered: t('Rediscovered'),
     };
     const dl = h('dl.dates');
     for (const k of ['founded', 'peak', 'abandoned', 'forgotten', 'rediscovered'] as const) {
       const d = c.dates[k];
       if (d === undefined) continue;
-      const v = k === 'founded' && typeof d === 'number' && d < -2000 ? `by ${formatYear(d)}` : formatRange(d);
+      const v = k === 'founded' && typeof d === 'number' && d < -2000 ? t('by {year}', {year: formatYear(d)}) : formatRange(d);
       dl.append(h('dt', labels[k]), h('dd', v));
     }
-    out.push(h('h3.card-h', 'Dates'), dl);
+    out.push(h('h3.card-h', t('Dates')), dl);
     const names = c.names;
-    if (names.length > 1) out.push(h('h3.card-h', 'Names over time'), namesList(this.data, names));
-    if (c.journeys.length) out.push(h('h3.card-h', 'Journeys that stopped here'), this.journeyChips(c.journeys));
+    if (names.length > 1) out.push(h('h3.card-h', t('Names over time')), namesList(this.data, names));
+    if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys));
     if (c.region !== null) {
       const r = this.data.regions[c.region];
-      out.push(h('p.card-part', 'In ', h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(r.id)}, r.name)));
+      out.push(h('p.card-part', t('In '), h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(r.id)}, tx.region(r.id, r.name))));
     }
     out.push(
-      h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `Source: ${shortCitation(this.data.sources, c.source)} · ${c.confidence} confidence`),
+      h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `${t('Source:')} ${shortCitation(this.data.sources, c.source)} · ${t('{level} confidence', {level: t(c.confidence)})}`),
     );
     this.live = st => {
       const status = cityStatus(c, st.year);
       swap(kicker, status, () => [statusText[status]]);
       const name = nameFor(c.names, vp, st.year, c.id)!;
-      swap(title, `${name.name}|${name.native ?? ''}`, () => [name.name, name.native && name.native !== name.name ? h('span.native', ` ${name.native}`) : null]);
+      const shown = shownName(name);
+      swap(title, `${name.name}|${name.native ?? ''}`, () => [shown.name, shown.native ? h('span.native', ` ${shown.native}`) : null]);
       plate?.show(st.year);
     };
     return out;
   }
 
-  private openLightbox(d: Depiction, caption: string, range: string) {
+  private openLightbox(d: Depiction, title: string, caption: string, range: string) {
     this.lightbox?.remove();
     const close = () => {
       box.remove();
@@ -385,16 +397,16 @@ export class Cards {
     };
     const box = h(
       'div.lightbox',
-      {role: 'dialog', 'aria-modal': 'true', 'aria-label': d.title, onclick: (e: Event) => e.target === box && close()},
+      {role: 'dialog', 'aria-modal': 'true', 'aria-label': title, onclick: (e: Event) => e.target === box && close()},
       h(
         'figure.lightbox-plate',
-        h('img', {src: dataUrl(d.img.full), alt: `${d.title}, ${range}: imagined sketch`}),
+        h('img', {src: dataUrl(d.img.full), alt: `${title}, ${range}: ${t('imagined sketch')}`}),
         h(
           'figcaption',
-          h('div.lightbox-head', h('span.plate-era', d.title), h('span.plate-range', range), d.placeholder ? h('span.plate-tag.inline', 'Placeholder') : null),
+          h('div.lightbox-head', h('span.plate-era', title), h('span.plate-range', range), d.placeholder ? h('span.plate-tag.inline', t('Placeholder')) : null),
           h('p', caption),
         ),
-        h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: close, html: icons.close}),
+        h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: close, html: icons.close}),
       ),
     );
     document.addEventListener('keydown', onKey, true);
@@ -410,7 +422,8 @@ export class Cards {
     const real = j.stops.filter(x => !x.waypoint);
     const stopLabel = (d: Depiction) => {
       const st = real[d.stop ?? 0];
-      return `${(d.place ?? '').replace(/\s*\(.*\)$/, '')} · ${st?.date ?? formatYear(st?.year ?? 0)}`;
+      const k = d.stop ?? 0;
+      return `${shortPlace(tx.stop(j.id, k, 'place', d.place ?? ''))} · ${st?.date ? tx.stop(j.id, k, 'date', st.date) : formatYear(st?.year ?? 0)}`;
     };
     const counter = h('span.scene-stop');
     const plate = new Plate(
@@ -424,22 +437,22 @@ export class Cards {
           for (const x of items) if ((x.stop ?? 0) <= k) best = x;
           return best;
         },
-        label: d => (d.place ?? '').replace(/\s*\(.*\)$/, ''),
+        label: d => shortPlace(tx.stop(j.id, d.stop ?? 0, 'place', d.place ?? '')),
         range: stopLabel,
         jump: d => this.store.set({progress: d.stop ?? 0, playing: false}),
         shown: (d, at) => {
           const here = Math.floor(at + 1e-6) === d?.stop;
-          counter.textContent = d ? `${here ? 'At' : 'Last sketch at'} stop ${(d.stop ?? 0) + 1} of ${real.length}` : '';
+          counter.textContent = d ? t(here ? 'At stop {n} of {total}' : 'Last sketch at stop {n} of {total}', {n: (d.stop ?? 0) + 1, total: real.length}) : '';
         },
       },
       s.vps[0],
-      (d, caption, range) => this.openLightbox(d, caption, range),
+      (d, title, caption, range) => this.openLightbox(d, title, caption, range),
     );
     plate.el.classList.add('scene');
     this.live = st => plate.show(st.progress);
     return [
-      h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), 'From the sketchbook'),
-      h('h2.card-title', j.name),
+      h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), t('From the sketchbook')),
+      h('h2.card-title', tx.journey(j.id, 'name', j.name)),
       plate.el,
       h('p.scene-meta', counter),
     ];
@@ -449,12 +462,12 @@ export class Cards {
 
   private invention(x: Invention): Node[] {
     const CATEGORY: Record<string, string> = {
-      navigation: 'Finding the way',
-      measurement: 'Measuring the world',
-      mapping: 'Drawing the map',
-      communication: 'Carrying the news',
-      transport: 'Going further',
-      imaging: 'Seeing from afar',
+      navigation: t('Finding the way'),
+      measurement: t('Measuring the world'),
+      mapping: t('Drawing the map'),
+      communication: t('Carrying the news'),
+      transport: t('Going further'),
+      imaging: t('Seeing from afar'),
     };
     const vp = x.vp ? this.data.vp[x.vp] : null;
     const all = this.data.inventions;
@@ -463,27 +476,27 @@ export class Cards {
       other
         ? h(
             'button.inv-nav-btn',
-            {type: 'button', title: other.name, onclick: () => this.actions.openInvention(other.id)},
+            {type: 'button', title: tx.invention(other.id, 'name', other.name), onclick: () => this.actions.openInvention(other.id)},
             dir === 'prev' ? h('span', {html: icons.prev}) : null,
-            h('span.inv-nav-text', h('span.inv-nav-when', formatRange(other.year)), h('span.inv-nav-name', other.name)),
+            h('span.inv-nav-text', h('span.inv-nav-when', formatRange(other.year)), h('span.inv-nav-name', tx.invention(other.id, 'name', other.name))),
             dir === 'next' ? h('span', {html: icons.next}) : null,
           )
         : h('span');
     return [
-      h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: inventionIcons[x.category] ?? icons.invention}), `Invention · ${CATEGORY[x.category] ?? x.category}`),
-      h('h2.card-title', x.name, x.native ? h('span.native', ` ${x.native}`) : null),
+      h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: inventionIcons[x.category] ?? icons.invention}), `${t('Invention')} · ${CATEGORY[x.category] ?? x.category}`),
+      h('h2.card-title', tx.invention(x.id, 'name', x.name), x.native && x.native !== tx.invention(x.id, 'name', x.name) ? h('span.native', ` ${x.native}`) : null),
       h(
         'p.inv-meta',
         h('strong', formatRange(x.year)),
         ' · ',
-        h('button.linkish', {type: 'button', title: 'Show on the map', onclick: () => this.actions.flyTo(x.lon, x.lat, 4)}, x.place),
+        h('button.linkish', {type: 'button', title: t('Show on the map'), onclick: () => this.actions.flyTo(x.lon, x.lat, 4)}, tx.invention(x.id, 'place', x.place)),
         ' · ',
-        vp ? h('span', {style: `color:${vp.color}`}, vp.longName) : x.culture ?? '',
+        vp ? h('span', {style: `color:${vp.color}`}, tx.viewpoint(vp.id, 'longName', vp.longName)) : tx.invention(x.id, 'culture', x.culture ?? ''),
       ),
-      h('p.card-story', x.summary),
-      h('h3.card-h', 'What it changed'),
-      h('p.inv-changed', x.changed),
-      h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `Source: ${shortCitation(this.data.sources, x.source)} · ${x.confidence} confidence`),
+      h('p.card-story', tx.invention(x.id, 'summary', x.summary)),
+      h('h3.card-h', t('What it changed')),
+      h('p.inv-changed', tx.invention(x.id, 'changed', x.changed)),
+      h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `${t('Source:')} ${shortCitation(this.data.sources, x.source)} · ${t('{level} confidence', {level: t(x.confidence)})}`),
       h('div.inv-nav', nav(all[i - 1], 'prev'), nav(all[i + 1], 'next')),
     ];
   }
@@ -491,6 +504,9 @@ export class Cards {
 
 const RIBBON = {W: 320, L: 74, row: 17};
 const ribbonX = (y: number) => RIBBON.L + mainScale.toX(y) * (RIBBON.W - RIBBON.L - 4);
+
+/** A stop's place without its gloss: "Belerion (Cornwall)" → "Belerion". */
+const shortPlace = (p: string) => p.replace(/\s*[(（].*[)）]$/, '');
 
 function sceneStopAt(stops: number[], progress: number) {
   const k = Math.floor(progress + 1e-6);
@@ -500,7 +516,7 @@ function sceneStopAt(stops: number[], progress: number) {
 }
 
 function eraRange(d: Depiction) {
-  return `${formatYear(d.from ?? 0)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
+  return `${formatYear(d.from ?? 0)} – ${d.to === undefined ? t('today') : formatYear(d.to)}`;
 }
 
 function eraAt(eras: Depiction[], year: number): Depiction | null {
@@ -546,16 +562,16 @@ class Plate {
     private data: AppData,
     private order: PlateOrder,
     private vp: VpId,
-    private enlarge: (d: Depiction, caption: string, range: string) => void,
+    private enlarge: (d: Depiction, title: string, caption: string, range: string) => void,
   ) {
     this.frame = h('button.plate-img', {
       type: 'button',
-      title: 'Enlarge',
-      onclick: () => this.shown && this.enlarge(this.shown, this.caption(this.shown), this.order.range(this.shown)),
+      title: t('Enlarge'),
+      onclick: () => this.shown && this.enlarge(this.shown, this.title(this.shown), this.caption(this.shown), this.order.range(this.shown)),
     });
     this.cap = h('figcaption.plate-cap');
     this.text = h('p.plate-text');
-    this.strip = h('div.plate-eras', {role: 'group', 'aria-label': order.kind === 'city' ? 'Other eras' : 'Other scenes'});
+    this.strip = h('div.plate-eras', {role: 'group', 'aria-label': t(order.kind === 'city' ? 'Other eras' : 'Other scenes')});
     this.src = h('p.plate-src');
     this.el = h('figure.plate.loading', this.frame, this.cap, this.text, this.strip, this.src);
     loadPictures(data, order.kind, order.id).then(doc => {
@@ -571,7 +587,7 @@ class Plate {
         ...items.map(x =>
           h(
             'button.plate-era-btn',
-            {type: 'button', 'data-id': x.id, title: `${x.title} (${order.label(x)})`, onclick: () => order.jump(x)},
+            {type: 'button', 'data-id': x.id, title: `${this.title(x)} (${order.label(x)})`, onclick: () => order.jump(x)},
             h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async'}),
             h('span', order.label(x)),
           ),
@@ -581,8 +597,16 @@ class Plate {
     });
   }
 
+  private get subject() {
+    return `${this.order.kind}/${this.order.id}`;
+  }
+
+  private title(d: Depiction) {
+    return tx.depiction(this.subject, d.id, 'title', d.title);
+  }
+
   private caption(d: Depiction) {
-    return d.captions?.[this.vp] ?? d.caption;
+    return tx.depiction(this.subject, d.id, 'caption', d.captions?.[this.vp] ?? d.caption, this.vp);
   }
 
   show(at: number) {
@@ -596,11 +620,11 @@ class Plate {
     this.shown = d;
     const range = this.order.range(d);
     const caption = this.caption(d);
-    this.frame.setAttribute('aria-label', `Enlarge: ${d.title}`);
-    swap(this.cap, d.id, () => [h('span.plate-era', d.title), h('span.plate-range', range)]);
+    this.frame.setAttribute('aria-label', t('Enlarge: {title}', {title: this.title(d)}));
+    swap(this.cap, d.id, () => [h('span.plate-era', this.title(d)), h('span.plate-range', range)]);
     swap(this.text, `${d.id}|${this.vp}`, () => [caption]);
     swap(this.src, d.id, () => [
-      `Imagined sketch${d.made?.model ? ` (${d.made.model})` : ''} · after ${d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')}`,
+      `${t('Imagined sketch')}${d.made?.model ? ` (${d.made.model})` : ''} · ${t('after {sources}', {sources: d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')})}`,
     ]);
     this.src.title = d.sources.map(id => this.data.sources[id]?.citation ?? id).join('\n');
     for (const b of this.strip.querySelectorAll<HTMLElement>('.plate-era-btn')) {
@@ -616,8 +640,8 @@ class Plate {
 
   private crossfade(d: Depiction, first: boolean) {
     const token = ++this.token;
-    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${d.title}, ${this.order.range(d)}: imagined sketch`, decoding: 'async'});
-    const tag = d.placeholder ? h('span.plate-tag', 'Placeholder') : null;
+    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${this.title(d)}, ${this.order.range(d)}: ${t('imagined sketch')}`, decoding: 'async'});
+    const tag = d.placeholder ? h('span.plate-tag', t('Placeholder')) : null;
     const reveal = () => {
       if (token !== this.token) return;
       for (const old of this.frame.querySelectorAll('.plate-tag')) old.remove();

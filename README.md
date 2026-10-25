@@ -27,6 +27,7 @@ Every view is a link:
 | `?city=loulan` | The city card |
 | `?invention=magnetic-compass` | The invention card, at its year |
 | `&globe=1` | The globe instead of the flat map |
+| `&lang=zh` | The atlas in Chinese (also the 中/EN button in the top bar; remembered per browser) |
 | `?year=1519&journeys=all` | Timeline playback with every journey under way drawn on the map |
 
 Keys: ← → key moments (or journey stops), Shift ← → one year, Space play, `/` search, Esc close.
@@ -44,6 +45,7 @@ Everything the map shows is authored as plain text in `data/` and compiled by `s
 | `cities.csv` | Founded, peak, abandoned, forgotten and rediscovered dates, tier, source, confidence, story |
 | `depictions/<kind>/<id>/` | Imagined sketches of a subject (a city, for now) through its eras: `subject.json` gives the fixed view and a sourced caption per era (and per viewpoint), beside the accepted pictures. Generated with an image API: see [docs/image-api-guide.md](docs/image-api-guide.md) |
 | `inventions.json` | Instruments and ideas (compass, printing, chronometer, satellites…): year, place of origin, `culture` (a viewpoint id or a plain name), `category`, what it changed, source, confidence |
+| `i18n/zh/` | Chinese for the data: place names, region names, journeys (with every stop), inventions, viewpoints and key moments, sketch captions, city stories and event notes. The build checks every key against what it translates, fills in Chinese dates, reports coverage, and bundles it into `public/data/i18n/zh.json`. Interface text is in `src/i18n-zh.ts`, keyed by the English it replaces |
 | `names.csv` | What each viewpoint called a region or city, with years (`*` is the default name) |
 | `sources.csv` | Every source id used anywhere, with its citation |
 

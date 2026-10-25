@@ -5,6 +5,7 @@ import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
 import {formatRange, formatYear} from '../time';
 import type {Journey} from '../types';
+import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
 
@@ -88,7 +89,7 @@ export class JourneyPanel {
             this.update(this.store.state, null);
           },
         },
-        label,
+        t(label),
       );
     this.listEl = h('div.jp-list-body');
     this.invItems.clear();
@@ -98,7 +99,7 @@ export class JourneyPanel {
       h(
         'div.jp-head',
         h('div.jp-tabs', {role: 'tablist'}, tab('journeys', 'Journeys'), tab('inventions', 'Inventions')),
-        h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => this.store.set({panel: 'none'}), html: icons.close}),
+        h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: () => this.store.set({panel: 'none'}), html: icons.close}),
       ),
       this.listEl,
     ];
@@ -116,7 +117,7 @@ export class JourneyPanel {
     const sorted = [...this.data.journeys].sort((a, b) => firstYear(a) - firstYear(b));
     const filters = h(
       'div.jp-filters',
-      {role: 'group', 'aria-label': 'Kind of journey'},
+      {role: 'group', 'aria-label': t('Kind of journey')},
       FILTERS.map(x => {
         const n = x.id === 'all' ? sorted.length : sorted.filter(j => x.kinds.includes(j.kind)).length;
         if (!n) return null;
@@ -131,20 +132,20 @@ export class JourneyPanel {
               this.listEl?.replaceChildren(...this.journeyList());
             },
           },
-          x.label,
+          t(x.label),
           h('span.jp-filter-n', String(n)),
         );
       }),
     );
     return [
-      h('p.jp-intro', 'The trail shows what the traveller saw. The fog lifts only when the news reaches home.'),
+      h('p.jp-intro', t('The trail shows what the traveller saw. The fog lifts only when the news reaches home.')),
       filters,
       ...groups.map(([title, g]) => {
         const js = sorted.filter(j => g(j) && fits(j));
         if (!js.length) return null;
         return h(
           'section.jp-group',
-          h('h3.card-h', title),
+          h('h3.card-h', t(title)),
           h(
             'ul.jp-list',
             js.map(j =>
@@ -154,7 +155,7 @@ export class JourneyPanel {
                   'button.jp-item',
                   {type: 'button', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.start(j.id)},
                   h('span.jp-item-icon', {html: kindIcons[j.kind] ?? kindIcons.traveler}),
-                  h('span.jp-item-text', h('span.jp-item-name', j.name), h('span.jp-item-meta', `${j.years} · ${j.kind}`)),
+                  h('span.jp-item-text', h('span.jp-item-name', tx.journey(j.id, 'name', j.name)), h('span.jp-item-meta', `${tx.journey(j.id, 'years', j.years)} · ${t(j.kind)}`)),
                 ),
               ),
             ),
@@ -172,13 +173,13 @@ export class JourneyPanel {
       ['Machines and satellites', 1800, Infinity],
     ];
     return [
-      h('p.jp-intro', 'Instruments and ideas that let people see, reach or record more of the world. Each marks its place of origin on the map for a century.'),
+      h('p.jp-intro', t('Instruments and ideas that let people see, reach or record more of the world. Each marks its place of origin on the map for a century.')),
       ...groups.map(([title, a, b]) => {
         const list = this.data.inventions.filter(x => x.mid >= a && x.mid < b);
         if (!list.length) return null;
         return h(
           'section.jp-group',
-          h('h3.card-h', title),
+          h('h3.card-h', t(title)),
           h(
             'ul.jp-list',
             list.map(x => {
@@ -187,7 +188,7 @@ export class JourneyPanel {
                 'button.jp-item.inv-item',
                 {type: 'button', style: vp ? `--chip:${vp.color}` : '', onclick: () => this.actions.openInvention(x.id)},
                 h('span.jp-item-icon', {html: inventionIcons[x.category] ?? icons.invention}),
-                h('span.jp-item-text', h('span.jp-item-name', x.name), h('span.jp-item-meta', `${formatRange(x.year)} · ${x.place}`)),
+                h('span.jp-item-text', h('span.jp-item-name', tx.invention(x.id, 'name', x.name)), h('span.jp-item-meta', `${formatRange(x.year)} · ${tx.invention(x.id, 'place', x.place)}`)),
               );
               this.invItems.set(x.id, btn);
               return h('li', btn);
@@ -221,10 +222,10 @@ export class JourneyPanel {
           h('span.jp-stop-dot'),
           h(
             'div.jp-stop-text',
-            h('div.jp-stop-when', s.date ?? formatYear(st.year)),
-            h('div.jp-stop-place', s.place ?? ''),
-            s.note ? h('p.jp-stop-note', s.note) : null,
-            h('div.jp-stop-src', {title: this.data.sources[src]?.citation ?? src}, shortCitation(this.data.sources, src), s.confidence && s.confidence !== j.confidence ? ` · ${s.confidence} confidence` : ''),
+            h('div.jp-stop-when', s.date ? tx.stop(j.id, i, 'date', s.date) : formatYear(st.year)),
+            h('div.jp-stop-place', tx.stop(j.id, i, 'place', s.place ?? '')),
+            s.note ? h('p.jp-stop-note', tx.stop(j.id, i, 'note', s.note)) : null,
+            h('div.jp-stop-src', {title: this.data.sources[src]?.citation ?? src}, shortCitation(this.data.sources, src), s.confidence && s.confidence !== j.confidence ? ` · ${t('{level} confidence', {level: t(s.confidence)})}` : ''),
           ),
         );
         this.stopEls.push(li);
@@ -240,8 +241,8 @@ export class JourneyPanel {
           li.querySelector('.jp-stop-place')?.append(
             h('button.jp-stop-sketch', {
               type: 'button',
-              title: `Sketch: ${sc.title}`,
-              'aria-label': `Show the sketch: ${sc.title}`,
+              title: t('Sketch: {title}', {title: tx.depiction(`journey/${j.id}`, sc.id, 'title', sc.title)}),
+              'aria-label': t('Show the sketch: {title}', {title: tx.depiction(`journey/${j.id}`, sc.id, 'title', sc.title)}),
               html: icons.sketch,
               onclick: (e: Event) => {
                 e.stopPropagation();
@@ -257,7 +258,7 @@ export class JourneyPanel {
         'li.jp-stop.epilogue',
         {onclick: () => this.store.set({progress: geo.stops.length, playing: false})},
         h('span.jp-stop-dot'),
-        h('div.jp-stop-text', h('div.jp-stop-when', formatYear(geo.homeKnows)), h('div.jp-stop-place', 'The news reaches home'), h('p.jp-stop-note', 'Only now does the fog lift.')),
+        h('div.jp-stop-text', h('div.jp-stop-when', formatYear(geo.homeKnows)), h('div.jp-stop-place', t('The news reaches home')), h('p.jp-stop-note', t('Only now does the fog lift.'))),
       );
       stopsList.append(this.epilogueEl);
     } else {
@@ -268,31 +269,31 @@ export class JourneyPanel {
         'div.jp-sticky',
         h(
           'div.jp-head',
-          h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), `${j.kind} · ${j.years}`),
-          h('button.card-close', {type: 'button', 'aria-label': 'Close journey', onclick: () => this.actions.close(), html: icons.close}),
+          h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), `${t(j.kind)} · ${tx.journey(j.id, 'years', j.years)}`),
+          h('button.card-close', {type: 'button', 'aria-label': t('Close journey'), onclick: () => this.actions.close(), html: icons.close}),
         ),
-        h('h2.card-title', j.name),
+        h('h2.card-title', tx.journey(j.id, 'name', j.name)),
         h(
           'div.jp-controls',
-          h('button.jp-step', {type: 'button', 'aria-label': 'Previous stop', onclick: () => this.actions.step(-1), html: icons.prev}),
+          h('button.jp-step', {type: 'button', 'aria-label': t('Previous stop'), onclick: () => this.actions.step(-1), html: icons.prev}),
           this.playBtn,
-          h('button.jp-step', {type: 'button', 'aria-label': 'Next stop', onclick: () => this.actions.step(1), html: icons.next}),
+          h('button.jp-step', {type: 'button', 'aria-label': t('Next stop'), onclick: () => this.actions.step(1), html: icons.next}),
           this.counter,
           this.viewToggle(),
         ),
       ),
-      j.traveler ? h('p.jp-traveller', j.traveler) : null,
-      h('p.jp-summary', j.summary),
+      j.traveler ? h('p.jp-traveller', tx.journey(j.id, 'traveler', j.traveler)) : null,
+      h('p.jp-summary', tx.journey(j.id, 'summary', j.summary)),
       h(
         'div.jp-lifts',
-        h('h3.card-h', 'Lifts the fog'),
+        h('h3.card-h', t('Lifts the fog')),
         h(
           'ul',
           [...informed].map(([v, list]) => {
             const SHOW = 6;
             const item = (x: {region: string; year: number}, i: number) => [
               i ? ', ' : '',
-              h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(x.region)}, this.data.regionById.get(x.region)?.name ?? x.region),
+              h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(x.region)}, tx.region(x.region, this.data.regionById.get(x.region)?.name ?? x.region)),
               h('span.jp-lift-year', ` ${formatYear(x.year)}`),
             ];
             const rest = list.length > SHOW + 1 ? h('span.jp-lift-rest', {hidden: true}, list.slice(SHOW).map((x, i) => item(x, i + SHOW))) : null;
@@ -306,12 +307,12 @@ export class JourneyPanel {
                       (e.currentTarget as HTMLElement).remove();
                     },
                   },
-                  `and ${list.length - SHOW} more`,
+                  t('and {n} more', {n: list.length - SHOW}),
                 )
               : null;
             return h(
               'li',
-              h('span.jp-lift-vp', {style: `color:${this.data.vp[v as keyof AppData['vp']].color}`}, this.data.vp[v as keyof AppData['vp']].name),
+              h('span.jp-lift-vp', {style: `color:${this.data.vp[v as keyof AppData['vp']].color}`}, tx.viewpoint(v, 'name', this.data.vp[v as keyof AppData['vp']].name)),
               ' ',
               (rest ? list.slice(0, SHOW) : list).map(item),
               more ? ' ' : null,
@@ -332,27 +333,30 @@ export class JourneyPanel {
     if (!j.crossings.length) return null;
     return h(
       'div.jp-crossings',
-      h('h3.card-h', 'Crossed paths'),
+      h('h3.card-h', t('Crossed paths')),
       h(
         'ul.jp-cross-list',
         j.crossings.map(c => {
           const other = this.data.journeyById.get(c.journey);
           if (!other) return null;
           const color = this.data.vp[other.viewpoint].color;
+          const otherName = tx.journey(other.id, 'name', other.name);
+          const otherPlace = tx.name(c.otherPlace);
+          const place = tx.name(c.place);
           const text =
             c.kind === 'meanwhile'
-              ? [h('em', other.name), ` was at ${c.otherPlace}, ${Math.round(c.km / 10) * 10} km from ${c.place}.`]
-              : [h('em', other.name), ` ${c.otherT < c.t ? 'had passed through' : 'would pass through'} ${c.otherPlace} in ${formatYear(c.otherT)}.`];
+              ? [h('em', otherName), t(' was at {other}, {km} km from {place}.', {other: otherPlace, km: Math.round(c.km / 10) * 10, place})]
+              : [h('em', otherName), t(c.otherT < c.t ? ' had passed through {other} in {year}.' : ' would pass through {other} in {year}.', {other: otherPlace, year: formatYear(c.otherT)})];
           return h(
             'li.jp-cross',
             {style: `--chip:${color}`},
             h(
               'button.jp-cross-main',
-              {type: 'button', title: 'Go to this moment', onclick: () => this.actions.jumpTo(c.t)},
-              h('span.jp-cross-when', `${formatYear(c.t)} · ${c.place}`),
+              {type: 'button', title: t('Go to this moment'), onclick: () => this.actions.jumpTo(c.t)},
+              h('span.jp-cross-when', `${formatYear(c.t)} · ${place}`),
               h('span.jp-cross-text', text),
             ),
-            h('button.jp-cross-follow', {type: 'button', title: `Follow ${other.name} from here`, 'aria-label': `Follow ${other.name}`, onclick: () => this.actions.switchTo(other.id, c.otherT), html: kindIcons[other.kind] ?? icons.arrow}),
+            h('button.jp-cross-follow', {type: 'button', title: t('Follow {name} from here', {name: otherName}), 'aria-label': t('Follow {name}', {name: otherName}), onclick: () => this.actions.switchTo(other.id, c.otherT), html: kindIcons[other.kind] ?? icons.arrow}),
           );
         }),
       ),
@@ -370,7 +374,7 @@ export class JourneyPanel {
     if (!others.length) return;
     const year = this.store.state.year;
     el.replaceChildren(
-      h('h3.card-h', 'Meanwhile'),
+      h('h3.card-h', t('Meanwhile')),
       h(
         'ul.jp-cross-list',
         others.map(o =>
@@ -379,9 +383,9 @@ export class JourneyPanel {
             {style: `--chip:rgb(${o.color.join(',')})`},
             h(
               'button.jp-cross-main',
-              {type: 'button', title: `Follow ${o.name} instead`, onclick: () => this.actions.switchTo(o.id, year)},
+              {type: 'button', title: t('Follow {name} instead', {name: o.name}), onclick: () => this.actions.switchTo(o.id, year)},
               h('span.jp-cross-text', h('em', o.name), ` ${o.where}`),
-              h('span.jp-cross-when', o.km < 50 ? 'right here' : `${Math.round(o.km / 10) * 10 >= 1000 ? (Math.round(o.km / 100) * 100).toLocaleString('en') : Math.round(o.km / 10) * 10} km away`),
+              h('span.jp-cross-when', o.km < 50 ? t('right here') : t('{km} km away', {km: (o.km >= 1000 ? Math.round(o.km / 100) * 100 : Math.round(o.km / 10) * 10).toLocaleString('en')})),
             ),
           ),
         ),
@@ -405,12 +409,12 @@ export class JourneyPanel {
           },
         },
         h('span', {html: icon}),
-        h('span.jp-view-label', follow ? 'Follow' : 'Route'),
+        h('span.jp-view-label', t(follow ? 'Follow' : 'Route')),
       );
-    const follow = btn(true, 'Follow the traveller', icons.follow);
-    const route = btn(false, 'Show the whole route', icons.route);
+    const follow = btn(true, t('Follow the traveller'), icons.follow);
+    const route = btn(false, t('Show the whole route'), icons.route);
     this.viewBtns = {follow, route};
-    return h('div.jp-view', {role: 'group', 'aria-label': 'Camera'}, follow, route);
+    return h('div.jp-view', {role: 'group', 'aria-label': t('Camera')}, follow, route);
   }
 
   /** Scroll a stop into view below the pinned header. */
@@ -436,8 +440,8 @@ export class JourneyPanel {
     });
     this.epilogueEl?.classList.toggle('current', inEpilogue);
     if (this.counter) {
-      this.counter.textContent = inEpilogue ? 'At home' : `${cur + 1} of ${geo.stops.length}`;
-      this.counter.title = inEpilogue ? 'The news reaches home' : `Stop ${cur + 1} of ${geo.stops.length}`;
+      this.counter.textContent = inEpilogue ? t('At home') : t('{n} of {total}', {n: cur + 1, total: geo.stops.length});
+      this.counter.title = inEpilogue ? t('The news reaches home') : t('Stop {n} of {total}', {n: cur + 1, total: geo.stops.length});
     }
     if (this.viewBtns) {
       this.viewBtns.follow.classList.toggle('active', s.follow);
@@ -447,7 +451,7 @@ export class JourneyPanel {
     }
     if (this.playBtn) {
       setIcon(this.playBtn, s.playing ? icons.pause : icons.play);
-      this.playBtn.setAttribute('aria-label', s.playing ? 'Pause journey' : 'Play journey');
+      this.playBtn.setAttribute('aria-label', t(s.playing ? 'Pause journey' : 'Play journey'));
     }
   }
 }

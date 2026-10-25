@@ -4,6 +4,7 @@ import {stepCount} from '../journey-geo';
 import type {State, Store} from '../state';
 import {deepScale, formatYear, mainScale, type TimeScale, yearParts} from '../time';
 import type {Moment, VpId} from '../types';
+import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
 import {icons, inventionIcons} from './icons';
 
@@ -55,10 +56,10 @@ export class Timeline {
     onStep: (dir: -1 | 1) => void,
     private onInvention: (id: string) => void,
   ) {
-    this.playBtn = h('button.tl-play', {type: 'button', 'aria-label': 'Play', onclick: () => store.set({playing: !store.state.playing})});
+    this.playBtn = h('button.tl-play', {type: 'button', 'aria-label': t('Play'), onclick: () => store.set({playing: !store.state.playing})});
     this.speedBtn = h('button.tl-speed', {
       type: 'button',
-      title: 'Playback speed',
+      title: t('Playback speed'),
       onclick: () => {
         // While a journey is under way the button sets the journey pace; otherwise the normal speed.
         if (this.journeyPace) {
@@ -72,8 +73,8 @@ export class Timeline {
     });
     this.allBtn = h('button.tl-all', {
       type: 'button',
-      title: 'Show every journey as the timeline plays',
-      'aria-label': 'Show every journey as the timeline plays',
+      title: t('Show every journey as the timeline plays'),
+      'aria-label': t('Show every journey as the timeline plays'),
       html: icons.route,
       onclick: () => store.set({allJourneys: !store.state.allJourneys}),
     });
@@ -81,7 +82,7 @@ export class Timeline {
     this.svgEl.classList.add('tl-svg');
     this.handle = h('div.tl-handle', h('div.tl-handle-knob'));
     this.tip = h('div.tl-tip');
-    this.track = h('div.tl-track', {role: 'slider', tabindex: '0', 'aria-label': 'Year'}, this.svgEl, this.handle, this.tip);
+    this.track = h('div.tl-track', {role: 'slider', tabindex: '0', 'aria-label': t('Year')}, this.svgEl, this.handle, this.tip);
     this.yearNum = h('span.tl-year-num');
     this.yearEra = h('span.tl-year-era');
     this.caption = h('div.tl-caption');
@@ -89,9 +90,9 @@ export class Timeline {
       'footer.timeline.panel',
       h(
         'div.tl-controls',
-        h('button.tl-step', {type: 'button', 'aria-label': 'Previous key moment', title: 'Previous  ←', onclick: () => onStep(-1), html: icons.prev}),
+        h('button.tl-step', {type: 'button', 'aria-label': t('Previous key moment'), title: t('Previous  ←'), onclick: () => onStep(-1), html: icons.prev}),
         this.playBtn,
-        h('button.tl-step', {type: 'button', 'aria-label': 'Next key moment', title: 'Next  →', onclick: () => onStep(1), html: icons.next}),
+        h('button.tl-step', {type: 'button', 'aria-label': t('Next key moment'), title: t('Next  →'), onclick: () => onStep(1), html: icons.next}),
         this.speedBtn,
         this.allBtn,
       ),
@@ -115,7 +116,8 @@ export class Timeline {
     const tipAt = (x: number) => {
       if (!this.geo) return formatYear(this.scale.fromX(x));
       const st = this.geo.stops[Math.min(this.geo.stops.length - 1, Math.round(x * (stepCount(this.geo) - 1)))];
-      return `${st.stop.place ?? ''} · ${st.stop.date ?? formatYear(st.year)}`;
+      const k = this.geo.stops.indexOf(st);
+      return `${tx.stop(this.geo.journey.id, k, 'place', st.stop.place ?? '')} · ${st.stop.date ? tx.stop(this.geo.journey.id, k, 'date', st.stop.date) : formatYear(st.year)}`;
     };
     let dragging = false;
     this.track.addEventListener('pointerdown', e => {
@@ -155,7 +157,7 @@ export class Timeline {
     this.journeyPace = on && s.allJourneys && !s.journey;
     this.speedBtn.textContent = speedLabel(this.journeyPace ? s.journeySpeed : s.speed);
     this.speedBtn.classList.toggle('journey-pace', this.journeyPace);
-    this.speedBtn.title = this.journeyPace ? 'Journey pace: playback slows while a journey is under way' : 'Playback speed';
+    this.speedBtn.title = t(this.journeyPace ? 'Journey pace: playback slows while a journey is under way' : 'Playback speed');
   }
 
   showCaption(text: string, color: string) {
@@ -183,8 +185,11 @@ export class Timeline {
     const p = yearParts(s.year);
     this.yearNum.textContent = p.num;
     this.yearEra.textContent = p.era;
+    // Chinese puts the era first: 公元前 325.
+    if (p.pre && this.yearEra.nextSibling !== this.yearNum) this.yearEra.after(this.yearNum);
+    if (!p.pre && this.yearNum.nextSibling !== this.yearEra) this.yearNum.after(this.yearEra);
     setIcon(this.playBtn, s.playing ? icons.pause : icons.play);
-    this.playBtn.setAttribute('aria-label', s.playing ? 'Pause' : 'Play');
+    this.playBtn.setAttribute('aria-label', t(s.playing ? 'Pause' : 'Play'));
     this.playBtn.classList.toggle('playing', s.playing);
     this.setPace(this.journeyPace, s);
     this.allBtn.hidden = !!s.journey;
@@ -216,7 +221,8 @@ export class Timeline {
     // Labels never overlap: each must start past the previous one's right edge.
     let lastRight = -Infinity;
     const label = (x: number, text: string, cls = 'tl-label') => {
-      const w = text.length * 6.1;
+      // Chinese characters are about twice as wide as Latin ones.
+      const w = [...text].reduce((a, ch) => a + (ch.charCodeAt(0) > 0x2e80 ? 12 : 6.1), 0);
       const anchor = x - w / 2 < 0 ? 'start' : x + w / 2 > W ? 'end' : 'middle';
       const left = anchor === 'start' ? x : anchor === 'end' ? x - w : x - w / 2;
       if (left < lastRight + 8) return;
@@ -251,8 +257,8 @@ export class Timeline {
           h('button.tl-invention', {
             type: 'button',
             style: `left:${x * 100}%`,
-            title: `${formatYear(inv.mid)} · ${inv.name}`,
-            'aria-label': `Invention, ${formatYear(inv.mid)}: ${inv.name}`,
+            title: `${formatYear(inv.mid)} · ${tx.invention(inv.id, 'name', inv.name)}`,
+            'aria-label': `${t('Invention')}, ${formatYear(inv.mid)}: ${tx.invention(inv.id, 'name', inv.name)}`,
             'data-id': inv.id,
             html: inventionIcons[inv.category] ?? icons.invention,
             onclick: (e: Event) => {
@@ -266,10 +272,10 @@ export class Timeline {
     const color = geo ? this.data.vp[geo.journey.viewpoint].color : '';
     const marks = geo
       ? [
-          ...geo.stops.map((st, i) => ({year: st.year, label: st.stop.place ?? '', color, i, x: i / Math.max(1, steps)})),
-          ...(geo.epilogue ? [{year: geo.homeKnows, label: 'The news reaches home', color, i: steps, x: 1}] : []),
+          ...geo.stops.map((st, i) => ({year: st.year, label: tx.stop(geo.journey.id, i, 'place', st.stop.place ?? ''), color, i, x: i / Math.max(1, steps)})),
+          ...(geo.epilogue ? [{year: geo.homeKnows, label: t('The news reaches home'), color, i: steps, x: 1}] : []),
         ]
-      : this.moments.map(m => ({year: m.year, label: m.label, color: this.data.vp[m.vp].color, i: -1, x: sc.toX(m.year)}));
+      : this.moments.map(m => ({year: m.year, label: tx.moment(m.label), color: this.data.vp[m.vp].color, i: -1, x: sc.toX(m.year)}));
     for (const m of marks) {
       const x = Math.max(0, Math.min(1, m.x));
       const b = h('button.tl-moment', {

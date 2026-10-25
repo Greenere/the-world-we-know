@@ -834,6 +834,133 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
     return counts
 
 
+MONTHS_EN = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+
+def zh_date(text: str) -> str | None:
+    """'27 December 1831' → 1831年12月27日; 'May 1854' → 1854年5月."""
+    import re
+    m = re.fullmatch(r"(?:(\d{1,2}) )?([A-Za-z]+) (-?\d+)", text.strip())
+    if not m or m.group(2).lower() not in MONTHS_EN:
+        return None
+    y, mo = int(m.group(3)), MONTHS_EN.index(m.group(2).lower()) + 1
+    year = f"公元前{-y}年" if y < 0 else f"{y}年"
+    return f"{year}{mo}月{int(m.group(1))}日" if m.group(1) else f"{year}{mo}月"
+
+
+def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, city_ids, events) -> dict | None:
+    """Chinese for the data (data/i18n/zh/): checked against what it translates, bundled into one file the
+    app fetches when the reader switches to Chinese. Anything missing stays English in the app."""
+    root = DATA / "i18n" / "zh"
+    if not root.exists():
+        return None
+    rd = lambda name: json.loads((root / name).read_text(encoding="utf-8")) if (root / name).exists() else {}
+    cjk = lambda t: any("㐀" <= ch <= "鿿" for ch in t)
+    stats = {}
+
+    # Names: what anyone called a place, plus stop and home places. Viewpoints that wrote in Chinese
+    # characters already give their own.
+    names = rd("names.json")
+    known = set()
+    for row in read_csv(DATA / "names.csv"):
+        known.add(row["name"])
+        if row["name"] not in names and row.get("native") and cjk(row["native"]):
+            names[row["name"]] = row["native"]
+    for v in viewpoints:
+        for hm in v["homes"]:
+            known.add(hm["place"])
+    for j in journeys:
+        for st in j["stops"]:
+            if st.get("place"):
+                known.add(st["place"])
+    for k in names:
+        if k not in known:
+            warn(f"i18n/zh/names.json: {k!r} is not a name used anywhere")
+    listed = {row["name"] for row in read_csv(DATA / "names.csv")} | {hm["place"] for v in viewpoints for hm in v["homes"]}
+    stats["names"] = (sum(1 for k in listed if k in names), len(listed))
+
+    regions = rd("regions.json")
+    for k in regions:
+        if k not in regions_by_id:
+            fail(f"i18n/zh/regions.json: unknown region {k!r}")
+    stats["regions"] = (len(regions), len([r for r in regions_by_id.values()]))
+
+    jz = {}
+    jby = {j["id"]: j for j in journeys}
+    stop_total = stop_done = 0
+    for f in sorted((root / "journeys").glob("*.json")):
+        jid = f.stem
+        if jid not in jby:
+            fail(f"i18n/zh/journeys/{f.name}: unknown journey")
+            continue
+        d = json.loads(f.read_text(encoding="utf-8"))
+        real = [st for st in jby[jid]["stops"] if not st.get("waypoint")]
+        stops = d.get("stops", {})
+        for k in stops:
+            if not (k.isdigit() and int(k) < len(real)):
+                fail(f"i18n/zh/journeys/{f.name}: stop {k} out of range (the journey has {len(real)} stops)")
+        for i, st in enumerate(real):
+            if st.get("date"):
+                z = zh_date(st["date"])
+                if z:
+                    stops.setdefault(str(i), {})["date"] = z
+        stop_done += sum(1 for v in stops.values() if v.get("note"))
+        d["stops"] = stops
+        jz[jid] = d
+    stop_total = sum(len([st for st in j["stops"] if not st.get("waypoint")]) for j in journeys)
+    stats["journeys"] = (len(jz), len(journeys))
+    stats["stop notes"] = (stop_done, stop_total)
+
+    inv = rd("inventions.json")
+    inv_ids = {x["id"] for x in inventions}
+    for k in inv:
+        if k not in inv_ids:
+            fail(f"i18n/zh/inventions.json: unknown invention {k!r}")
+    stats["inventions"] = (len(inv), len(inv_ids))
+
+    vps = rd("viewpoints.json")
+    for k in vps:
+        if k not in vp_ids:
+            fail(f"i18n/zh/viewpoints.json: unknown viewpoint {k!r}")
+    moments = rd("moments.json")
+    all_moments = {m["label"] for v in viewpoints for m in v.get("moments", [])}
+    for k in moments:
+        if k not in all_moments:
+            warn(f"i18n/zh/moments.json: {k!r} is not a key moment")
+    stats["moments"] = (len(moments), len(all_moments))
+
+    dep = rd("depictions.json")
+    for subj, items in dep.items():
+        sf = DATA / "depictions" / subj / "subject.json"
+        if not sf.exists():
+            fail(f"i18n/zh/depictions.json: unknown subject {subj!r}")
+            continue
+        doc = json.loads(sf.read_text(encoding="utf-8"))
+        ids = {e["id"] for e in doc.get("eras", []) + doc.get("scenes", [])}
+        for k in items:
+            if k not in ids:
+                fail(f"i18n/zh/depictions.json: {subj} has no {k!r}")
+
+    stories = rd("stories.json")
+    for k in stories:
+        if k not in city_ids:
+            fail(f"i18n/zh/stories.json: unknown city {k!r}")
+
+    notes = rd("notes.json")
+    all_notes = {e.note for d in events.values() for lst in d.values() for e in lst if e.note}
+    for k in notes:
+        if k not in all_notes:
+            warn(f"i18n/zh/notes.json: {k!r} is not a note on any event")
+    stats["event notes"] = (sum(1 for n in all_notes if n in notes), len(all_notes))
+
+    # Characters the map's labels can show, for its font atlas.
+    label_text = list(names.values()) + list(regions.values()) + [x.get("name", "") for x in inv.values()] + [x.get("name", "") for x in jz.values()]
+    chars = "".join(sorted({ch for t in label_text for ch in t if ord(ch) > 0x2e80}))
+    print("    中文: " + " · ".join(f"{k} {a}/{b}" for k, (a, b) in stats.items()))
+    return {"names": names, "regions": regions, "journeys": jz, "inventions": inv, "viewpoints": vps, "moments": moments,
+            "depictions": dep, "stories": stories, "notes": notes, "chars": chars}
+
+
 INVENTION_CATEGORIES = ("navigation", "measurement", "mapping", "communication", "transport", "imaging")
 
 
@@ -1077,6 +1204,9 @@ def main() -> int:
     sizes["sources.json"] = write_json("sources.json", sources)
     sizes["viewpoints.json"] = write_json("viewpoints.json", viewpoints)
     sizes["search.json"] = write_json("search.json", search)
+    zh = load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, {c["id"] for c in cities}, events)
+    if zh:
+        sizes["i18n/zh.json"] = write_json("i18n/zh.json", zh)
 
     if errors:
         print(f"\n✗ {len(errors)} problem(s):", file=sys.stderr)

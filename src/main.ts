@@ -5,13 +5,16 @@ import '@fontsource/eb-garamond/600.css';
 import '@fontsource/im-fell-english/400.css';
 import '@fontsource/im-fell-english/400-italic.css';
 import '@fontsource/im-fell-english-sc/400.css';
+import '@fontsource/noto-serif-sc/400.css';
+import '@fontsource/noto-serif-sc/600.css';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './styles.css';
 
 import {MapboxOverlay} from '@deck.gl/mapbox';
 import {type IControl, type Map as MlMap, type MapLayerMouseEvent, Marker} from 'maplibre-gl';
 import type {AppData} from './data';
-import {homeAt, loadData} from './data';
+import {homeAt, loadData, loadZh} from './data';
+import {getLang, initialLang, isZh, type Lang, rememberLang, setLang, t, tx} from './i18n';
 import {FogField} from './fog/field';
 import {buildGrid, cellAt, type Grid} from './fog/grid';
 import type {FogLayerUniforms} from './fog/layer';
@@ -47,6 +50,18 @@ const YEARS_PER_SECOND = 2526 / PLAY_SECONDS;
 const FADE_YEARS = 0.4;
 /** Contemporaries closer than this to the followed traveller are named on the map. */
 const NEAR_KM = 1500;
+
+/**
+ * The Chinese font comes in many small slices, fetched only for characters in use. The map's labels are drawn
+ * into a texture once, so every character they can show must be loaded first, or it would be drawn blank.
+ */
+async function zhFontsReady(chars: string) {
+  const sample = `我们所知的世界欧洲中国伊斯兰波利尼西亚人类地图旅程发明年公元前${chars}`;
+  await Promise.race([
+    Promise.all(['16px "Noto Serif SC"', '600 16px "Noto Serif SC"'].map(f => document.fonts.load(f, sample))),
+    new Promise(r => setTimeout(r, 6000)),
+  ]);
+}
 
 async function fontsReady() {
   const wanted = ['16px "IM Fell English"', 'italic 16px "IM Fell English"', '16px "IM Fell English SC"', '16px "EB Garamond"'];
@@ -85,6 +100,7 @@ class App {
   /** Until when our own camera flight runs; per-frame following waits for it. */
   private flightUntil = 0;
   private urlTimer = 0;
+  private uiNodes: HTMLElement[] = [];
 
   constructor(
     private data: AppData,
@@ -99,14 +115,32 @@ class App {
     this.map.addControl(this.overlay as unknown as IControl);
     this.model = new OverlayModel({data, grid, field: this.field, map: this.map});
 
+    this.ui = this.buildUi();
+    this.tip = h('div.hover-tip');
+    this.labelCanvas = h('canvas.label-canvas', {'aria-hidden': 'true'});
+    document.getElementById('map')!.after(this.labelCanvas);
+    document.getElementById('app')!.append(this.tip);
+
+    this.store.subscribe((n, p) => this.onChange(n, p));
+    this.bindMap();
+    this.bindKeys();
+    this.onChange(this.store.state, {...this.store.state, vps: [], year: NaN});
+    this.field.snap();
+    this.applyStartLinks();
+    requestAnimationFrame(t => this.frame(t));
+  }
+
+  /** The panels around the map. Built again when the language changes; the map itself stays. */
+  private buildUi(): App['ui'] {
+    const data = this.data;
     const actions = {
       openRegion: (id: string) => this.openRegion(id, true),
       openJourney: (id: string) => this.startJourney(id),
       openInvention: (id: string) => this.openInvention(id),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),
     };
-    this.ui = {
-      top: new TopBar(data, this.store),
+    const ui = {
+      top: new TopBar(data, this.store, () => this.setLanguage(isZh() ? 'en' : 'zh')),
       timeline: new Timeline(data, this.store, d => this.step(d), id => this.openInvention(id)),
       cards: new Cards(data, this.store, this.field, actions),
       journey: new JourneyPanel(data, this.store, {
@@ -119,7 +153,7 @@ class App {
         showSketch: i => {
           this.travelTarget = null;
           this.store.set({progress: i, playing: false, city: null, region: null, regionCell: null, invention: null});
-          this.ui.cards.reopenScene();
+          ui.cards.reopenScene();
         },
         jumpTo: year => {
           const g = this.geo(this.store.state.journey);
@@ -138,29 +172,34 @@ class App {
       inset: new Inset(data),
       about: new About(data, this.store),
     };
-    this.tip = h('div.hover-tip');
-    this.labelCanvas = h('canvas.label-canvas', {'aria-hidden': 'true'});
-    document.getElementById('map')!.after(this.labelCanvas);
-    const app = document.getElementById('app')!;
-    app.append(
-      this.ui.top.el,
-      this.ui.journey.el,
-      this.ui.cards.el,
-      h('div.bottom-left', this.ui.legend.el),
-      h('div.bottom-right', this.ui.inset.el),
-      this.ui.timeline.el,
-      this.ui.search.el,
-      this.ui.about.el,
-      this.tip,
-    );
+    this.uiNodes = [
+      ui.top.el,
+      ui.journey.el,
+      ui.cards.el,
+      h('div.bottom-left', ui.legend.el),
+      h('div.bottom-right', ui.inset.el),
+      ui.timeline.el,
+      ui.search.el,
+      ui.about.el,
+    ];
+    document.getElementById('app')!.prepend(...this.uiNodes);
+    return ui;
+  }
 
-    this.store.subscribe((n, p) => this.onChange(n, p));
-    this.bindMap();
-    this.bindKeys();
-    this.onChange(this.store.state, {...this.store.state, vps: [], year: NaN});
-    this.field.snap();
-    this.applyStartLinks();
-    requestAnimationFrame(t => this.frame(t));
+  /** Switch the interface and the map's labels between English and Chinese, keeping everything else. */
+  async setLanguage(l: Lang) {
+    if (l === getLang()) return;
+    const content = l === 'zh' ? await loadZh(this.data) : null;
+    if (l === 'zh' && !content) return;
+    if (l === 'zh') await zhFontsReady(content!.chars);
+    setLang(l, content);
+    rememberLang(l);
+    for (const n of this.uiNodes) n.remove();
+    this.ui = this.buildUi();
+    this.model.relabel();
+    const s = this.store.state;
+    this.onChange(s, {...s, vps: [], year: NaN});
+    this.needsLayers = true;
   }
 
   // ── State ────────────────────────────────────────────────────────────────
@@ -337,7 +376,7 @@ class App {
           const t0 = j.t[0];
           if (t0 > s.year - 1e-9 && t0 <= year && t0 !== this.announced) {
             this.announced = t0;
-            this.ui.timeline.showCaption(`${j.name} sets out`, this.data.vp[j.viewpoint].color);
+            this.ui.timeline.showCaption(t('{name} sets out', {name: tx.journey(j.id, 'name', j.name)}), this.data.vp[j.viewpoint].color);
           }
         }
       }
@@ -395,7 +434,7 @@ class App {
       const d = me ? km(me, pos) : 0;
       out.push({
         id: j.id,
-        name: j.name,
+        name: tx.journey(j.id, 'name', j.name),
         pos,
         trail: shift ? at.trail.map(t => t.map(([x, y]) => [x + shift, y] as [number, number])) : at.trail,
         color: hexToRgb(this.data.vp[j.viewpoint].color),
@@ -411,10 +450,10 @@ class App {
 
   private announceMoments(s: State, from: number, to: number) {
     for (const m of momentsFor(this.data, s)) {
-      if (m.year > from && m.year <= to) this.ui.timeline.showCaption(m.label, this.data.vp[m.vp].color);
+      if (m.year > from && m.year <= to) this.ui.timeline.showCaption(tx.moment(m.label), this.data.vp[m.vp].color);
     }
     for (const x of this.data.inventions) {
-      if (x.mid > from && x.mid <= to) this.ui.timeline.showCaption(`Invented: ${x.name.charAt(0).toLowerCase()}${x.name.slice(1)}`, '#8a6628');
+      if (x.mid > from && x.mid <= to) this.ui.timeline.showCaption(isZh() ? `${t('Invented: ')}${tx.invention(x.id, 'name', x.name)}` : `Invented: ${x.name.charAt(0).toLowerCase()}${x.name.slice(1)}`, '#8a6628');
     }
   }
 
@@ -562,7 +601,7 @@ class App {
     const m = dir > 0 ? ms.find(x => x.year > s.year + 0.5) : [...ms].reverse().find(x => x.year < s.year - 0.5);
     if (m) {
       this.store.set({year: m.year, playing: false});
-      this.ui.timeline.showCaption(m.label, this.data.vp[m.vp].color);
+      this.ui.timeline.showCaption(tx.moment(m.label), this.data.vp[m.vp].color);
     }
   }
 
@@ -657,7 +696,7 @@ class App {
       const home = homeAt(vp, s.year);
       const el = h(
         'div.seal',
-        {title: `${vp.special ? 'Where people began' : `Home of ${vp.longName}`}: ${home.place}`},
+        {title: `${vp.special ? t('Where people began') : t('Home of {vp}', {vp: tx.viewpoint(vp.id, 'longName', vp.longName)})}: ${tx.name(home.place)}`},
         h('div.seal-inner', {html: sealSvg(vp.seal, vp.color, 26)}),
       );
       return new Marker({element: el, anchor: 'bottom-right', offset: [-2, -2]}).setLngLat([home.lon, home.lat]).addTo(this.map);
@@ -731,21 +770,22 @@ class App {
     let text: HTMLElement | null = null;
     if (pick?.layer?.id === 'others') {
       const o = pick.object as Traveller & {where: string};
-      text = h('div', h('strong', o.name), h('span.tip-sub', ` · ${o.where}`), h('div.tip-level', s.journey ? 'Click to follow instead' : 'Click to follow'));
+      text = h('div', h('strong', o.name), h('span.tip-sub', ` · ${o.where}`), h('div.tip-level', t(s.journey ? 'Click to follow instead' : 'Click to follow')));
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id.startsWith('inventions')) {
       const x = (pick.object as InventionView).inv;
-      text = h('div', h('strong', x.name), h('span.tip-sub', ` · ${formatRange(x.year)}, ${x.place}`));
+      text = h('div', h('strong', tx.invention(x.id, 'name', x.name)), h('span.tip-sub', ` · ${formatRange(x.year)}, ${tx.invention(x.id, 'place', x.place)}`));
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id.startsWith('cities')) {
       const v = pick.object as CityView;
       const status = cityStatus(v.city, s.year);
-      text = h('div', h('strong', v.label), status === 'living' ? null : h('span.tip-sub', ` · ${status === 'rediscovered' ? 'rediscovered ruin' : status}`));
+      text = h('div', h('strong', v.label), status === 'living' ? null : h('span.tip-sub', ` · ${t(status === 'rediscovered' ? 'rediscovered ruin' : status)}`));
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id === 'journey-stops') {
       const g = this.geo(s.journey)!;
       const st = g.stops[(pick.object as {i: number}).i];
-      text = h('div', h('strong', st.stop.place ?? ''), h('span.tip-sub', ` · ${st.stop.date ?? formatYear(st.year)}`));
+      const k = g.stops.indexOf(st);
+      text = h('div', h('strong', tx.stop(g.journey.id, k, 'place', st.stop.place ?? '')), h('span.tip-sub', ` · ${st.stop.date ? tx.stop(g.journey.id, k, 'date', st.stop.date) : formatYear(st.year)}`));
       canvas.style.cursor = 'pointer';
     } else {
       canvas.style.cursor = '';
@@ -758,8 +798,8 @@ class App {
         const called = r.names.find(n => n.vp === vp && (n.from === undefined || s.year >= n.from) && (n.to === undefined || s.year <= n.to));
         text = h(
           'div',
-          h('strong', called ? called.name : r.name),
-          called ? h('span.tip-sub', ` · ${r.name}`) : null,
+          h('strong', called ? tx.name(called.name) : tx.region(r.id, r.name)),
+          called ? h('span.tip-sub', ` · ${tx.region(r.id, r.name)}`) : null,
           h('div.tip-level', levelName(vp, st.level)),
         );
       }
@@ -808,7 +848,11 @@ function initialZoom() {
 async function main() {
   const loading = document.getElementById('loading')!;
   try {
+    const lang = initialLang();
     const [data] = await Promise.all([loadData(), fontsReady()]);
+    const zh = lang === 'zh' ? await loadZh(data) : null;
+    if (zh) await zhFontsReady(zh.chars);
+    setLang(zh ? 'zh' : 'en', zh);
     const grid = buildGrid(data.grid);
     const app = new App(data, grid);
     (window as unknown as {atlas: App}).atlas = app;

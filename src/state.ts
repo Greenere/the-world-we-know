@@ -1,4 +1,5 @@
 import type {VpId} from './types';
+import {getLang} from './i18n';
 import {ALL_VPS} from './types';
 
 export type Panel = 'none' | 'journeys' | 'about';
@@ -130,6 +131,7 @@ export function writeUrl(s: State, currentStop: number | null) {
   if (s.invention) q.set('invention', s.invention);
   if (s.globe) q.set('globe', '1');
   if (s.allJourneys && !s.journey) q.set('journeys', 'all');
+  if (getLang() === 'zh') q.set('lang', 'zh');
   const url = `${location.pathname}?${q.toString().replace(/%2C/g, ',')}`;
   if (url !== location.pathname + location.search) history.replaceState(null, '', url);
 }

@@ -1,6 +1,7 @@
 import type {AppData} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import type {State} from '../state';
+import {t, tx} from '../i18n';
 import {HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {mixHex} from './color';
 import {h} from './dom';
@@ -12,7 +13,7 @@ export class Legend {
   private key = '';
 
   constructor(private data: AppData) {
-    this.el = h('div.legend.panel', {'aria-label': 'Legend'});
+    this.el = h('div.legend.panel', {'aria-label': t('Legend')});
   }
 
   update(s: State, geo: JourneyGeo | null) {
@@ -24,14 +25,14 @@ export class Legend {
       const [a, b] = s.vps.map(v => this.data.vp[v]);
       const both = mixHex(a.color, b.color, 0.5, 0.08);
       this.el.append(
-        h('div.legend-title', 'Known to'),
+        h('div.legend-title', t('Known to')),
         h(
           'ul.legend-tints',
           [
-            [a.color, `${a.name} only`],
-            [b.color, `${b.name} only`],
-            [both, 'Both'],
-            ['', 'Neither'],
+            [a.color, t('{vp} only', {vp: tx.viewpoint(a.id, 'name', a.name)})],
+            [b.color, t('{vp} only', {vp: tx.viewpoint(b.id, 'name', b.name)})],
+            [both, t('Both')],
+            ['', t('Neither')],
           ].map(([c, label]) => h('li', h('span.tint', {style: c ? `--c:${c}` : '', class: c ? '' : 'none'}), label)),
         ),
       );
@@ -40,10 +41,10 @@ export class Legend {
     const names = s.vps[0] === 'humanity' ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES;
     const levels = s.vps[0] === 'humanity' ? [0, 3, 5] : [0, 1, 2, 3, 4, 5];
     this.el.append(
-      h('div.legend-title', s.vps[0] === 'humanity' ? 'People' : 'What was known'),
+      h('div.legend-title', t(s.vps[0] === 'humanity' ? 'People' : 'What was known')),
       h(
         'ul.legend-levels',
-        levels.map(l => h('li', {title: names[l]}, h('span.fog-swatch', {style: `--a:${fogAlphaFor(l)}`}), h('span.legend-name', names[l]))),
+        levels.map(l => h('li', {title: t(names[l])}, h('span.fog-swatch', {style: `--a:${fogAlphaFor(l)}`}), h('span.legend-name', t(names[l])))),
       ),
     );
     if (geo) {
@@ -52,7 +53,7 @@ export class Legend {
         h(
           'div.legend-seen',
           h('span.seen-swatch', {style: `--c:${color}`}),
-          h('span', 'Seen on the journey, ', h('em', 'not yet known at home')),
+          h('span', t('Seen on the journey, '), h('em', t('not yet known at home'))),
         ),
       );
     }

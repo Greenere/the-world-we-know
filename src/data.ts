@@ -14,6 +14,7 @@ import type {
   Viewpoint,
   VpId,
 } from './types';
+import type {ZhContent} from './i18n';
 import {ALL_VPS} from './types';
 
 export interface AppData {
@@ -83,6 +84,18 @@ export async function loadData(): Promise<AppData> {
     fog,
     beyond,
   };
+}
+
+let zhDoc: Promise<ZhContent | null> | null = null;
+
+/** The Chinese text for the data (names, journeys, inventions…), fetched the first time it is needed. */
+export function loadZh(data: AppData): Promise<ZhContent | null> {
+  zhDoc ??= get<ZhContent>('i18n/zh.json', data.version).catch(err => {
+    console.warn(err);
+    zhDoc = null;
+    return null;
+  });
+  return zhDoc;
 }
 
 const pictureDocs = new Map<string, Promise<DepictionDoc | null>>();

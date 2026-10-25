@@ -14,9 +14,9 @@
   --sea: #c6cfbf;
   --land: #e9dcbb;
   --vp: #b4432c;
-  --font-display: 'IM Fell English', 'EB Garamond', Georgia, serif;
-  --font-sc: 'IM Fell English SC', 'IM Fell English', Georgia, serif;
-  --font-text: 'EB Garamond', Garamond, Georgia, serif;
+  --font-display: 'IM Fell English', 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+  --font-sc: 'IM Fell English SC', 'IM Fell English', 'Noto Serif SC', Georgia, serif;
+  --font-text: 'EB Garamond', Garamond, 'Noto Serif SC', Georgia, serif;
   --shadow: 0 1px 0 rgba(255, 252, 244, 0.7) inset, 0 10px 30px -14px rgba(52, 34, 12, 0.5), 0 2px 6px -2px rgba(52, 34, 12, 0.22);
   --frame: inset 0 0 0 3px var(--paper), inset 0 0 0 3.6px var(--rule);
   --noise: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .12  0 0 0 .6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");

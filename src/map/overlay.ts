@@ -11,6 +11,7 @@ import type {JourneyGeo, LngLat} from '../journey-geo';
 import {currentStopIndex, travelled} from '../journey-geo';
 import type {State} from '../state';
 import type {City, Invention, VpId} from '../types';
+import {tx} from '../i18n';
 import {hexToRgb} from '../ui/color';
 import {horizonCull, SURFACE_PARAMETERS} from './horizon';
 
@@ -38,8 +39,9 @@ const PAPER: [number, number, number] = [244, 237, 220];
 const SEPIA: [number, number, number] = [104, 80, 52];
 const BRASS: [number, number, number] = [138, 102, 40];
 const RUBRIC: [number, number, number] = [155, 47, 32];
-const FONT_TEXT = '"IM Fell English", "EB Garamond", Georgia, serif';
-const FONT_SC = '"IM Fell English SC", "IM Fell English", Georgia, serif';
+// Chinese labels fall through to Noto Serif SC glyph by glyph.
+const FONT_TEXT = '"IM Fell English", "EB Garamond", "Noto Serif SC", Georgia, serif';
+const FONT_SC = '"IM Fell English SC", "IM Fell English", "Noto Serif SC", Georgia, serif';
 
 // ── Icon atlas, drawn once at runtime ──────────────────────────────────────
 
@@ -200,6 +202,7 @@ export class OverlayModel {
   private declutteredAt = 0;
 
   private charset: string;
+  private baseCharset: string;
 
   constructor(private ctx: OverlayContext) {
     const chars = new Set<string>(' \u200A0123456789-–’\'.,()ʻ');
@@ -207,13 +210,21 @@ export class OverlayModel {
     for (const r of ctx.data.regions) for (const n of r.names) for (const ch of n.name) chars.add(ch);
     for (const x of ctx.data.inventions) for (const ch of x.name) chars.add(ch);
     for (const j of ctx.data.journeys) for (const ch of j.name) chars.add(ch);
-    this.charset = [...chars].join('');
+    this.baseCharset = [...chars].join('');
+    this.charset = this.baseCharset + tx.chars();
   }
 
   /**
    * Which cities show for these viewpoints in this year: they need Contact (level 2) at home,
    * or to have been seen by the traveller on the open journey.
    */
+  /** After a language change: rebuild the label font atlas and the labels themselves. */
+  relabel() {
+    this.charset = this.baseCharset + tx.chars();
+    this.visibleKey = '';
+    this.labels = {cities: [], regions: []};
+  }
+
   updateVisibility(state: State, now: number, seen: Float32Array | null) {
     const year = Math.round(state.year);
     const key = `${state.vps.join(',')}|${year}|${state.journey}|${seen ? Math.round(state.progress * 4) : 0}`;
@@ -241,7 +252,7 @@ export class OverlayModel {
         appearedAt = now;
         this.appeared.set(c.id, now);
       }
-      views.push({city: c, status, tier: tierAt(c, year), label: name.name, pos: [c.lon, c.lat], appearedAt});
+      views.push({city: c, status, tier: tierAt(c, year), label: tx.name(name.name), pos: [c.lon, c.lat], appearedAt});
     }
     const shown = new Set(views.map(v => v.city.id));
     for (const id of [...this.appeared.keys()]) if (!shown.has(id)) this.appeared.delete(id);
@@ -259,7 +270,7 @@ export class OverlayModel {
         const cell = labelCell(this.ctx.grid, r.id, r.label);
         if (cell >= 0 && lvl[cell] < 1) continue;
         const size = r.cells > 900 ? 15 : r.cells > 250 ? 13.5 : r.cells > 60 ? 12 : 11;
-        rl.push({id: r.id, text: spaced(n.name), pos: r.label, size, cells: r.cells});
+        rl.push({id: r.id, text: spaced(tx.name(n.name)), pos: r.label, size, cells: r.cells});
       }
     }
     this.regionLabels = rl;
@@ -314,7 +325,7 @@ export class OverlayModel {
       const p = screen.get(v);
       if (!p) continue;
       const size = citySize(v.tier);
-      const w = v.label.length * size * 0.48 + 4;
+      const w = ems(v.label) * size + 4;
       const b: Box = [p.x + 6, p.y - size * 0.6, p.x + 8 + w, p.y + size * 0.6];
       if (hit(b, v.tier)) continue;
       boxes.push({b, tier: 0});
@@ -326,7 +337,7 @@ export class OverlayModel {
       if (hidden(r.pos[0], r.pos[1])) continue;
       const p = map.project([r.pos[0], clampLat(r.pos[1], state.globe)]);
       if (p.x < 0 || p.y < 0 || p.x > W || p.y > H) continue;
-      const w = r.text.length * r.size * 0.42;
+      const w = ems(r.text) * r.size * 0.875;
       const regionPx = Math.sqrt(r.cells) * cellPx * 1.1;
       if (regionPx < w * 0.55 && zoom < 5) continue;
       const b: Box = [p.x - w / 2, p.y - r.size * 0.7, p.x + w / 2, p.y + r.size * 0.7];
@@ -658,7 +669,7 @@ export class OverlayModel {
           parameters: SURFACE_PARAMETERS,
           extensions: [horizonCull],
           data: labelled,
-          getText: d => d.inv.name,
+          getText: d => tx.invention(d.inv.id, 'name', d.inv.name),
           getPosition: d => P([d.inv.lon, d.inv.lat]),
           getSize: 13,
           getColor: d => (d.selected ? [...RUBRIC, 255] : [...BRASS, 235]),
@@ -820,6 +831,9 @@ export function clampLat(lat: number, globe: boolean) {
 }
 
 /** Letter-spaced small caps for region names, the way engravers set them. */
+/** Rough label width in ems: Latin letters about half an em, Chinese characters a full one. */
+const ems = (text: string) => [...text].reduce((a, ch) => a + (ch.charCodeAt(0) > 0x2e80 ? 1 : 0.48), 0);
+
 function spaced(text: string) {
   return [...text].join(' ');
 }

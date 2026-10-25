@@ -1,3 +1,4 @@
+import {t, tx} from './i18n';
 import type {Journey, Stop} from './types';
 
 export type LngLat = [number, number];
@@ -193,9 +194,10 @@ export function atYear(g: JourneyGeo, year: number) {
 /** Where the traveller is: at a stop, or on the way to the next one. */
 export function placeAt(g: JourneyGeo, progress: number): string {
   const k = currentStopIndex(g, progress);
-  const at = g.stops[k].stop.place ?? '';
+  const id = g.journey.id;
+  const at = tx.stop(id, k, 'place', g.stops[k].stop.place ?? '');
   const next = g.stops[k + 1]?.stop.place;
-  return progress - k > 0.15 && next ? `bound for ${next}` : `at ${at}`;
+  return progress - k > 0.15 && next ? t('bound for {place}', {place: tx.stop(id, k + 1, 'place', next)}) : t('at {place}', {place: at});
 }
 
 function along(leg: Leg, f: number): {point: LngLat; idx: number} {
