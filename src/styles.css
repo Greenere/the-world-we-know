@@ -2354,6 +2354,42 @@ kbd {
   box-shadow: 0 0 0 1.5px var(--ink-2);
 }
 
+.plate.scene .plate-era-btn span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jp-stop-sketch {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+  vertical-align: -4px;
+  border-radius: 3px;
+  color: var(--vp);
+}
+
+.jp-stop-sketch:hover {
+  background: color-mix(in srgb, var(--vp) 12%, transparent);
+}
+
+.jp-stop-sketch svg {
+  width: 16px;
+  height: 16px;
+}
+
+.scene-meta {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-sc);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+}
+
 .plate-src {
   margin: 6px 0 0;
   font-size: 12.5px;

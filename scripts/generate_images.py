@@ -58,12 +58,26 @@ def load_dotenv():
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
-def prompt_for(style: str, subject: dict, era: dict, edit: bool) -> str:
-    parts = [style, "View: " + subject["view"], "This picture: " + era["prompt"]]
-    if edit:
+LISTS = {"city": "eras", "journey": "scenes"}
+
+
+def prompt_for(style: str, kind: str, subject: dict, item: dict, mode: str | None) -> str:
+    """mode: None (drawn from text), "base" (redraw the attached picture as a later era), or "ref" (a new
+    scene in the attached picture's style, with the same traveller)."""
+    parts = [style]
+    if kind == "city":
+        parts.append("View: " + subject["view"])
+    else:
+        parts.append("The traveller: " + subject["traveller"])
+    parts.append("This picture: " + item["prompt"])
+    if mode == "base":
         parts.insert(0, "Redraw the attached sketch from exactly the same viewpoint, framing and drawing style. "
                         "Change only what the description below says has changed in this era; keep the land, "
                         "the shoreline and the composition as they are.")
+    elif mode == "ref":
+        parts.insert(0, "The attached page is from the same journal. Draw a new, different scene as described below, "
+                        "matching its drawing style, paper and palette, and drawing the traveller with the same face, "
+                        "build and clothing. Do not copy its composition.")
     return "\n\n".join(parts)
 
 
@@ -157,13 +171,13 @@ def accept(path: Path):
 
 
 def eras_to_draw(only: str | None) -> list[tuple[str, dict, dict]]:
-    """(subject path, subject, era) for each era asked for, or for every era without an accepted picture."""
+    """(subject path, subject, item) for each era or scene asked for, or for every one without an accepted picture."""
     wanted = {w.strip("/") for w in only.split(",")} if only else None
     out, seen = [], set()
     for f in sorted(IMAGES.glob("*/*/subject.json")):
         path = f"{f.parent.parent.name}/{f.parent.name}"
         subject = json.loads(f.read_text(encoding="utf-8"))
-        for era in subject["eras"]:
+        for era in subject[LISTS[f.parent.parent.name]]:
             full = f"{path}/{era['id']}"
             if wanted is None:
                 if not (f.parent / f"{era['id']}.webp").exists():
@@ -190,7 +204,7 @@ def main():
         accept(args.accept)
         return
 
-    style = json.loads((IMAGES / "style.json").read_text(encoding="utf-8"))["style"]
+    styles = json.loads((IMAGES / "style.json").read_text(encoding="utf-8"))["styles"]
     items = eras_to_draw(args.only)
 
     load_dotenv()
@@ -203,13 +217,15 @@ def main():
 
     for path, subject, era in items:
         name = f"{path}/{era['id']}"
-        base_path = IMAGES / path / f"{era['base']}.webp" if era.get("base") else None
+        kind = path.split("/")[0]
+        mode = "base" if era.get("base") else "ref" if era.get("ref") else None
+        base_path = IMAGES / path / f"{era[mode]}.webp" if mode else None
         if base_path and not base_path.exists():
-            print(f"skip {name}: its base {era['base']} has no accepted picture yet")
+            print(f"skip {name}: its {mode} {era[mode]} has no accepted picture yet")
             continue
-        prompt = prompt_for(style, subject, era, edit=base_path is not None)
+        prompt = prompt_for(styles[kind], kind, subject, era, mode)
         if args.dry_run:
-            print(f"── {name}{f'  (edit of {base_path.name})' if base_path else ''}\n{prompt}\n")
+            print(f"── {name}{f'  ({mode}: {base_path.name})' if base_path else ''}\n{prompt}\n")
             continue
         base = to_png(base_path) if base_path else None
         for _ in range(args.count):
@@ -222,7 +238,7 @@ def main():
             out.with_suffix(".json").write_text(json.dumps({
                 "subject": path, "era": era["id"], "provider": args.provider, "model": model,
                 "date": datetime.now(timezone.utc).date().isoformat(),
-                "base": era.get("base"), "prompt": prompt,
+                "base": era.get("base"), "ref": era.get("ref"), "prompt": prompt,
             }, ensure_ascii=False, indent=2))
             print(f"  → {out.relative_to(ROOT)}")
 

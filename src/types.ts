@@ -71,8 +71,12 @@ export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'redi
  * viewpoint saw it. Fetched per subject when its card opens. */
 export interface Depiction {
   id: string;
-  from: number;
+  /** A city's era: the years it covers. */
+  from?: number;
   to?: number;
+  /** A journey's scene: the stop it shows (index among the non-waypoint stops) and its place. */
+  stop?: number;
+  place?: string;
   title: string;
   caption: string;
   captions?: Partial<Record<VpId, string>>;
@@ -83,10 +87,14 @@ export interface Depiction {
   made?: {provider?: string; model?: string; date?: string};
 }
 
+export type DepictionKind = 'city' | 'journey';
+
 export interface DepictionDoc {
-  kind: 'city';
+  kind: DepictionKind;
   id: string;
-  eras: Depiction[];
+  /** A city's eras, or a journey's scenes, in order. */
+  eras?: Depiction[];
+  scenes?: Depiction[];
 }
 
 export interface City {
@@ -154,6 +162,8 @@ export interface Journey {
   focus?: [number, number];
   /** Routed path into each (non-waypoint) stop from where its leg starts; null for the first stop and off-map legs. */
   route: ([number, number][] | null)[];
+  /** Number of scene pictures in depictions/journey/<id>.json. */
+  pictures?: number;
   /** Fractional year of each (non-waypoint) stop: the clock every journey shares. */
   t: number[];
   crossings: Crossing[];

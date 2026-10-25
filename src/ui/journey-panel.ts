@@ -1,5 +1,5 @@
 import type {AppData} from '../data';
-import {shortCitation} from '../data';
+import {loadPictures, shortCitation} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
@@ -45,6 +45,7 @@ export class JourneyPanel {
       openRegion(id: string): void;
       openInvention(id: string): void;
       switchTo(id: string, year: number): void;
+      showSketch(stop: number): void;
       jumpTo(year: number): void;
       recenter(): void;
     },
@@ -230,6 +231,27 @@ export class JourneyPanel {
         return li;
       }),
     );
+    // Stops with a sketch get a small mark that opens it.
+    if (j.pictures) {
+      loadPictures(this.data, 'journey', j.id).then(doc => {
+        for (const sc of doc?.scenes ?? []) {
+          const li = this.stopEls[sc.stop ?? -1];
+          if (!li || li.querySelector('.jp-stop-sketch')) continue;
+          li.querySelector('.jp-stop-place')?.append(
+            h('button.jp-stop-sketch', {
+              type: 'button',
+              title: `Sketch: ${sc.title}`,
+              'aria-label': `Show the sketch: ${sc.title}`,
+              html: icons.sketch,
+              onclick: (e: Event) => {
+                e.stopPropagation();
+                this.actions.showSketch(sc.stop ?? 0);
+              },
+            }),
+          );
+        }
+      });
+    }
     if (geo.epilogue) {
       this.epilogueEl = h(
         'li.jp-stop.epilogue',

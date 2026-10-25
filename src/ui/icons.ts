@@ -23,6 +23,7 @@ export const icons = {
   arrow: wrap('<path d="M4 10h11M11 6l4 4-4 4"/>'),
   follow: wrap('<circle cx="10" cy="10" r="5.2"/><circle cx="10" cy="10" r="1.6" fill="currentColor" stroke="none"/><path d="M10 2.5v2.6M10 14.9v2.6M2.5 10h2.6M14.9 10h2.6"/>'),
   route: wrap('<circle cx="4.5" cy="14.5" r="1.8"/><circle cx="15.5" cy="5.5" r="1.8"/><path d="M6.2 13.6c3-1 1.6-4.6 4.6-5.4 1.4-.4 2.4-1 3.2-1.6" stroke-dasharray="1.6 2"/>'),
+  sketch: wrap('<rect x="3" y="4.5" width="14" height="11" rx=".8"/><path d="M3.6 13.6l3.8-3.6 2.8 2.6 2.2-1.9 3.9 3.1"/><circle cx="12.9" cy="8" r="1.1"/>'),
   invention: wrap('<circle cx="10" cy="10" r="7"/><path d="M10 4.6l1.3 4.1 4.1 1.3-4.1 1.3L10 15.4l-1.3-4.1L4.6 10l4.1-1.3z"/>'),
   link: wrap('<path d="M8.5 11.5l3-3M7 9.5l-1.8 1.8a2.5 2.5 0 0 0 3.5 3.5L10.5 13M13 10.5l1.8-1.8a2.5 2.5 0 0 0-3.5-3.5L9.5 7"/>'),
 };

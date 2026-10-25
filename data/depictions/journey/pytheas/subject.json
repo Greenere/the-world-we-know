@@ -1,0 +1,71 @@
+{
+  "traveller": "Pytheas of Massalia, a Greek scholar and navigator of about forty-five, from the Greek colony at Marseille: lean, a short dark beard flecked with grey, a weathered face; a plain undyed wool chiton under a heavy brown himation cloak (in the north, wool leggings and wrapped leather boots under it); he carries a wooden wax tablet and a stylus.",
+  "scenes": [
+    {
+      "id": "gnomon",
+      "stop": 0,
+      "place": "Massalia",
+      "title": "The shadow at noon",
+      "caption": "Before he sails, Pytheas sets up a gnomon at midsummer noon and measures its shadow: 120 parts of pole to 41⅘ of shadow. Hipparchus still used the figure two centuries later to fix Massalia's latitude, one of the earliest such measurements on record.",
+      "sources": [
+        "pytheas-strabo"
+      ],
+      "confidence": "medium",
+      "prompt": "Massalia, around 330 BCE, at noon on midsummer day. Pytheas kneels on a sunlit stone terrace above the harbour beside a tall bronze gnomon (a straight vertical rod set in a flat stone base), stretching a knotted cord along its short noon shadow and marking his wax tablet; a young assistant holds the end of the cord. Behind, a glimpse of the harbour with Greek merchant ships and a temple roof. A small separate study on the page shows the gnomon and its shadow from the side, as a plain diagram with no numbers or letters."
+    },
+    {
+      "id": "tin",
+      "stop": 3,
+      "place": "Belerion (Cornwall)",
+      "title": "The tin road at low tide",
+      "caption": "The people of Belerion, used to foreign merchants and friendly to strangers, dig and smelt tin, beat it into ingots shaped like knucklebones and cart them over the sand at low tide to an island called Ictis, where the traders buy it. The account in Diodorus probably goes back to Pytheas.",
+      "sources": [
+        "diodorus"
+      ],
+      "confidence": "medium",
+      "ref": "gnomon",
+      "prompt": "Belerion (Cornwall), around 325 BCE, at low tide. Local Britons in wool tunics and checked cloaks lead a two-wheeled cart pulled by a small ox across wet sand towards a rocky tidal island that is bare rock, grass and a few huts, with no castle, tower or stone buildings on it, the cart loaded with grey tin ingots shaped like large knucklebones (astragali). In the foreground a Briton and Pytheas stand face to face, the Briton holding out one ingot for him to weigh in his hand. A small separate study on the page shows one knucklebone-shaped tin ingot close up."
+    },
+    {
+      "id": "thule",
+      "stop": 5,
+      "place": "Thule",
+      "title": "Where the sun goes to rest",
+      "caption": "'The barbarians showed us where the sun goes to rest,' Pytheas wrote, for near Thule the summer night lasts only two or three hours. Beyond, he said, was neither land nor sea nor air but a mixture of them, like a 'sea-lung', that could be neither walked on nor sailed.",
+      "sources": [
+        "geminus",
+        "pytheas-strabo"
+      ],
+      "confidence": "low",
+      "ref": "gnomon",
+      "prompt": "Thule, the far north, around 325 BCE, near midnight in midsummer. On a low grassy headland, a local guide in a skin cloak points towards the sun resting low on the northern horizon; Pytheas stands beside him, cloak pulled close, looking. The sky is pale and bright although it is night. Out at sea, a band of grey slush, ice and fog where water and air seem to merge. A small separate study on the page shows a pale translucent jellyfish, the 'sea-lung' he compared it to."
+    },
+    {
+      "id": "amber",
+      "stop": 7,
+      "place": "The amber coast",
+      "title": "The amber island",
+      "caption": "On an island he calls Abalus, a day's sail from the coast, Pytheas says the spring tides wash up amber, which the islanders burn as fuel and sell to their neighbours the Teutones. Pliny preserves the report; the island may be Heligoland or the Jutland shore.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "low",
+      "ref": "gnomon",
+      "prompt": "A flat northern shore with dunes and a turf-roofed hut, around 324 BCE, in spring. Islanders in wool and fur gather lumps of golden amber from the seaweed along the tideline into baskets; beside the hut a small fire burns with pieces of amber among the driftwood. Pytheas, kneeling, holds a piece of amber up to the light. A small separate study on the page shows several lumps of amber of different sizes and colours."
+    },
+    {
+      "id": "on-the-ocean",
+      "stop": 8,
+      "place": "Massalia",
+      "title": "On the Ocean",
+      "caption": "Home in Massalia, Pytheas writes On the Ocean. Eratosthenes and Hipparchus build on its latitudes; Polybius and Strabo call its author a liar. The book is lost, and survives only in the quotations of those who doubted it.",
+      "sources": [
+        "pytheas-strabo",
+        "strabo"
+      ],
+      "confidence": "medium",
+      "ref": "gnomon",
+      "prompt": "Massalia, around 320 BCE, evening. Indoors by a window over the harbour, Pytheas, a little older and greyer, writes on a papyrus scroll at a wooden table by an oil lamp; around him lie wax tablets, the same simple gnomon as before (a straight upright bronze rod in a small square stone base, not a sundial dial and not a triangular blade), a lump of amber, a knucklebone-shaped tin ingot, and a rough chart of coastlines drawn on a hide (only lines, no writing). The writing on the scroll is illegible marks. In the harbour outside, only ancient Greek ships with a single mast and a square sail."
+    }
+  ]
+}

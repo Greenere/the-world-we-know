@@ -116,6 +116,11 @@ class App {
         openRegion: id => this.openRegion(id, true),
         openInvention: id => this.openInvention(id),
         switchTo: (id, year) => this.startJourney(id, year),
+        showSketch: i => {
+          this.travelTarget = null;
+          this.store.set({progress: i, playing: false, city: null, region: null, regionCell: null, invention: null});
+          this.ui.cards.reopenScene();
+        },
         jumpTo: year => {
           const g = this.geo(this.store.state.journey);
           if (!g) return;
@@ -229,7 +234,6 @@ class App {
     this.ui.inset.update(s, geo, performance.now());
     document.documentElement.style.setProperty('--vp', this.data.vp[s.vps[0]].color);
     document.body.classList.toggle('has-journey', !!s.journey || s.panel === 'journeys');
-    document.body.classList.toggle('has-card', !!(s.city || s.region || s.invention));
 
     if (s.vps.join() !== p.vps.join()) {
       this.tau = 0.5;

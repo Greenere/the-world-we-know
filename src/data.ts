@@ -2,6 +2,7 @@ import type {
   Beyond,
   City,
   DepictionDoc,
+  DepictionKind,
   FogDoc,
   GridDoc,
   Invention,
@@ -87,7 +88,7 @@ export async function loadData(): Promise<AppData> {
 const pictureDocs = new Map<string, Promise<DepictionDoc | null>>();
 
 /** The era pictures for one subject, fetched once and shared. */
-export function loadPictures(data: AppData, kind: 'city', id: string): Promise<DepictionDoc | null> {
+export function loadPictures(data: AppData, kind: DepictionKind, id: string): Promise<DepictionDoc | null> {
   const key = `${kind}/${id}`;
   let p = pictureDocs.get(key);
   if (!p) {

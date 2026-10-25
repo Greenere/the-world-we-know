@@ -4,7 +4,7 @@ import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale} from '../time';
-import type {City, Depiction, DepictionDoc, Invention, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {City, Depiction, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
@@ -47,6 +47,10 @@ export class Cards {
   /** Updates the year-dependent parts of the current card. */
   private live: ((s: State) => void) | null = null;
   private lightbox: HTMLElement | null = null;
+  /** For each journey with pictures, the stops that have a scene (once loaded). */
+  private sceneStops = new Map<string, number[]>();
+  /** The scene the reader closed (`journey:stop`); the card stays away until the traveller reaches another. */
+  private dismissed: string | null = null;
 
   constructor(
     private data: AppData,
@@ -64,16 +68,53 @@ export class Cards {
     this.el = h(
       'aside.card.panel',
       this.scroller,
-      h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => store.set({region: null, regionCell: null, city: null, invention: null}), html: icons.close}),
+      h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => this.close(), html: icons.close}),
     );
     this.el.hidden = true;
     // Once scrolled, the text fades out under the top edge and the close button gets a backing.
     this.scroller.addEventListener('scroll', () => this.el.classList.toggle('scrolled', this.scroller.scrollTop > 4), {passive: true});
   }
 
+  private close() {
+    const s = this.store.state;
+    if (s.invention || s.city || s.region) this.store.set({region: null, regionCell: null, city: null, invention: null});
+    else {
+      this.dismissed = this.sceneKey(s);
+      this.update(s);
+    }
+  }
+
+  /** Show the followed journey's sketch again after the reader closed it. */
+  reopenScene() {
+    this.dismissed = null;
+    this.update(this.store.state);
+  }
+
+  /** `journey:stop` of the scene for where the traveller is now, or null when the journey has no pictures. */
+  private sceneKey(s: State): string | null {
+    const j = s.journey ? this.data.journeyById.get(s.journey) : null;
+    if (!j?.pictures) return null;
+    const stops = this.sceneStops.get(j.id);
+    if (!stops) {
+      loadPictures(this.data, 'journey', j.id).then(doc => {
+        this.sceneStops.set(j.id, (doc?.scenes ?? []).map(x => x.stop ?? 0));
+        this.update(this.store.state);
+      });
+      return `${j.id}:?`;
+    }
+    if (!stops.length) return null;
+    return `${j.id}:${sceneStopAt(stops, s.progress)}`;
+  }
+
   update(s: State) {
-    const subject = s.invention ? `invention:${s.invention}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
+    let subject = s.invention ? `invention:${s.invention}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
+    if (!s.journey) this.dismissed = null;
+    if (!subject) {
+      const scene = this.sceneKey(s);
+      if (scene && scene !== this.dismissed) subject = `scene:${s.journey}`;
+    }
     this.el.hidden = !subject;
+    document.body.classList.toggle('has-card', !!subject);
     if (!subject) {
       this.key = '';
       this.live = null;
@@ -85,7 +126,9 @@ export class Cards {
       this.key = key;
       this.live = null;
       let nodes: Node[] = [];
-      if (s.invention) {
+      if (subject.startsWith('scene:')) {
+        nodes = this.scenes(this.data.journeyById.get(s.journey!)!, s);
+      } else if (s.invention) {
         const x = this.data.inventionById.get(s.invention);
         if (x) nodes = this.invention(x);
       } else if (s.city) {
@@ -274,7 +317,21 @@ export class Cards {
       rediscovered: 'Rediscovered ruin',
     };
     const out: Node[] = [kicker, title];
-    const plate = c.pictures ? new Plate(this.data, this.store, c, vp, (d, caption) => this.openLightbox(d, caption)) : null;
+    const plate = c.pictures
+      ? new Plate(
+          this.data,
+          {
+            kind: 'city',
+            id: c.id,
+            pick: eraAt,
+            label: d => formatYear(d.from ?? 0),
+            range: eraRange,
+            jump: d => this.store.set({year: d.from ?? 0, playing: false}),
+          },
+          vp,
+          (d, caption, range) => this.openLightbox(d, caption, range),
+        )
+      : null;
     if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', c.story));
     const labels: Record<string, string> = {
@@ -312,9 +369,8 @@ export class Cards {
     return out;
   }
 
-  private openLightbox(d: Depiction, caption: string) {
+  private openLightbox(d: Depiction, caption: string, range: string) {
     this.lightbox?.remove();
-    const range = eraRange(d);
     const close = () => {
       box.remove();
       document.removeEventListener('keydown', onKey, true);
@@ -343,6 +399,49 @@ export class Cards {
     document.addEventListener('keydown', onKey, true);
     document.body.append(box);
     this.lightbox = box;
+  }
+
+  // ── Journey sketchbook ───────────────────────────────────────────────────
+
+  /** The followed journey's sketch for the traveller's current stop, as the journey plays. */
+  private scenes(j: Journey, s: State): Node[] {
+    const vp = this.data.vp[j.viewpoint];
+    const real = j.stops.filter(x => !x.waypoint);
+    const stopLabel = (d: Depiction) => {
+      const st = real[d.stop ?? 0];
+      return `${(d.place ?? '').replace(/\s*\(.*\)$/, '')} · ${st?.date ?? formatYear(st?.year ?? 0)}`;
+    };
+    const counter = h('span.scene-stop');
+    const plate = new Plate(
+      this.data,
+      {
+        kind: 'journey',
+        id: j.id,
+        pick: (items, at) => {
+          const k = Math.floor(at + 1e-6);
+          let best = items[0];
+          for (const x of items) if ((x.stop ?? 0) <= k) best = x;
+          return best;
+        },
+        label: d => (d.place ?? '').replace(/\s*\(.*\)$/, ''),
+        range: stopLabel,
+        jump: d => this.store.set({progress: d.stop ?? 0, playing: false}),
+        shown: (d, at) => {
+          const here = Math.floor(at + 1e-6) === d?.stop;
+          counter.textContent = d ? `${here ? 'At' : 'Last sketch at'} stop ${(d.stop ?? 0) + 1} of ${real.length}` : '';
+        },
+      },
+      s.vps[0],
+      (d, caption, range) => this.openLightbox(d, caption, range),
+    );
+    plate.el.classList.add('scene');
+    this.live = st => plate.show(st.progress);
+    return [
+      h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), 'From the sketchbook'),
+      h('h2.card-title', j.name),
+      plate.el,
+      h('p.scene-meta', counter),
+    ];
   }
 
   // ── Invention ────────────────────────────────────────────────────────────
@@ -392,21 +491,43 @@ export class Cards {
 const RIBBON = {W: 320, L: 74, row: 17};
 const ribbonX = (y: number) => RIBBON.L + mainScale.toX(y) * (RIBBON.W - RIBBON.L - 4);
 
+function sceneStopAt(stops: number[], progress: number) {
+  const k = Math.floor(progress + 1e-6);
+  let best = stops[0];
+  for (const x of stops) if (x <= k) best = x;
+  return best;
+}
+
 function eraRange(d: Depiction) {
-  return `${formatYear(d.from)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
+  return `${formatYear(d.from ?? 0)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
 }
 
 function eraAt(eras: Depiction[], year: number): Depiction | null {
   for (let i = eras.length - 1; i >= 0; i--) {
     const e = eras[i];
-    if (year >= e.from && (e.to === undefined || year < e.to + 1)) return e;
+    if (year >= (e.from ?? -Infinity) && (e.to === undefined || year < e.to + 1)) return e;
   }
   return null;
 }
 
+/** How a plate walks its pictures: by year through a city's eras, or by stop along a journey. */
+interface PlateOrder {
+  kind: 'city' | 'journey';
+  id: string;
+  /** The picture for a position (a year, or journey progress). */
+  pick(items: Depiction[], at: number): Depiction | null;
+  /** The small label under a thumbnail, and the right-hand label beside the title. */
+  label(d: Depiction): string;
+  range(d: Depiction): string;
+  /** Go to a picture's moment (from its thumbnail). */
+  jump(d: Depiction): void;
+  /** Told whenever the position is updated, once the pictures have loaded. */
+  shown?(d: Depiction | null, at: number): void;
+}
+
 /**
- * A city's picture for the current era. The pictures load when the card opens; when the era changes the
- * new sketch cross-fades over the old one once it has decoded, and the caption fades with it.
+ * A subject's picture for the current moment. The pictures load when the card opens; when the moment
+ * changes the new sketch cross-fades over the old one once it has decoded, and the caption fades with it.
  */
 class Plate {
   el: HTMLElement;
@@ -415,47 +536,47 @@ class Plate {
   private text: HTMLElement;
   private src: HTMLElement;
   private strip: HTMLElement;
-  private doc: DepictionDoc | null = null;
+  private items: Depiction[] | null = null;
   private shown: Depiction | null = null;
-  private year = NaN;
+  private at = NaN;
   private token = 0;
 
   constructor(
     private data: AppData,
-    private store: Store,
-    city: City,
+    private order: PlateOrder,
     private vp: VpId,
-    private enlarge: (d: Depiction, caption: string) => void,
+    private enlarge: (d: Depiction, caption: string, range: string) => void,
   ) {
     this.frame = h('button.plate-img', {
       type: 'button',
       title: 'Enlarge',
-      onclick: () => this.shown && this.enlarge(this.shown, this.caption(this.shown)),
+      onclick: () => this.shown && this.enlarge(this.shown, this.caption(this.shown), this.order.range(this.shown)),
     });
     this.cap = h('figcaption.plate-cap');
     this.text = h('p.plate-text');
-    this.strip = h('div.plate-eras', {role: 'group', 'aria-label': 'Other eras'});
+    this.strip = h('div.plate-eras', {role: 'group', 'aria-label': order.kind === 'city' ? 'Other eras' : 'Other scenes'});
     this.src = h('p.plate-src');
     this.el = h('figure.plate.loading', this.frame, this.cap, this.text, this.strip, this.src);
-    loadPictures(data, 'city', city.id).then(doc => {
-      if (!doc) {
+    loadPictures(data, order.kind, order.id).then(doc => {
+      const items = doc?.eras ?? doc?.scenes;
+      if (!items?.length) {
         this.el.remove();
         return;
       }
-      this.doc = doc;
+      this.items = items;
       this.el.classList.remove('loading');
-      this.strip.hidden = doc.eras.length < 2;
+      this.strip.hidden = items.length < 2;
       this.strip.replaceChildren(
-        ...doc.eras.map(x =>
+        ...items.map(x =>
           h(
             'button.plate-era-btn',
-            {type: 'button', 'data-id': x.id, title: `${x.title} (${formatYear(x.from)})`, onclick: () => this.store.set({year: x.from, playing: false})},
+            {type: 'button', 'data-id': x.id, title: `${x.title} (${order.label(x)})`, onclick: () => order.jump(x)},
             h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async'}),
-            h('span', formatYear(x.from)),
+            h('span', order.label(x)),
           ),
         ),
       );
-      if (Number.isFinite(this.year)) this.show(this.year);
+      if (Number.isFinite(this.at)) this.show(this.at);
     });
   }
 
@@ -463,15 +584,16 @@ class Plate {
     return d.captions?.[this.vp] ?? d.caption;
   }
 
-  show(year: number) {
-    this.year = year;
-    if (!this.doc) return;
-    const d = eraAt(this.doc.eras, year);
+  show(at: number) {
+    this.at = at;
+    if (!this.items) return;
+    const d = this.order.pick(this.items, at);
     this.el.hidden = !d;
+    this.order.shown?.(d, at);
     if (!d || d === this.shown) return;
     const first = !this.shown;
     this.shown = d;
-    const range = eraRange(d);
+    const range = this.order.range(d);
     const caption = this.caption(d);
     this.frame.setAttribute('aria-label', `Enlarge: ${d.title}`);
     swap(this.cap, d.id, () => [h('span.plate-era', d.title), h('span.plate-range', range)]);
@@ -486,14 +608,14 @@ class Plate {
       b.setAttribute('aria-pressed', String(on));
     }
     this.crossfade(d, first);
-    // Warm the neighbours so playing on into the next era doesn't wait for the network.
-    const i = this.doc.eras.indexOf(d);
-    for (const n of [this.doc.eras[i + 1], this.doc.eras[i - 1]]) if (n) new Image().src = dataUrl(n.img.card);
+    // Warm the neighbours so playing on into the next picture doesn't wait for the network.
+    const i = this.items.indexOf(d);
+    for (const n of [this.items[i + 1], this.items[i - 1]]) if (n) new Image().src = dataUrl(n.img.card);
   }
 
   private crossfade(d: Depiction, first: boolean) {
     const token = ++this.token;
-    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${d.title}, ${eraRange(d)}: imagined sketch`, decoding: 'async'});
+    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${d.title}, ${this.order.range(d)}: imagined sketch`, decoding: 'async'});
     const tag = d.placeholder ? h('span.plate-tag', 'Placeholder') : null;
     const reveal = () => {
       if (token !== this.token) return;

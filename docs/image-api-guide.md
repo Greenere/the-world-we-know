@@ -42,11 +42,20 @@ The script reads only `OPENAI_API_KEY` or `GEMINI_API_KEY`. It sends nothing els
 
 ## 3. How the data fits together
 
-Pictures are organised **by subject**: one folder for each thing that has pictures. Today the only kind is a city; journey stops, regions and inventions can become kinds later, with no change to the layout.
+Pictures are organised **by subject**: one folder for each thing that has pictures. There are two kinds:
+
+- **A city** has **eras**: the same view redrawn as the city changes over time.
+- **A journey** has **scenes**: illustrative moments at particular stops, drawn close enough to show people, tools and what was traded, measured or found. The traveller is the same person throughout; the view is not.
+
+Regions and inventions can become kinds later with no change to the layout.
 
 ```
 data/depictions/
-  style.json                     the drawing style every picture shares
+  style.json                     the drawing style for each kind ({"styles": {"city": …, "journey": …}})
+  journey/
+    pytheas/
+      subject.json               the traveller, and one entry per scene
+      gnomon.webp, gnomon.json   …
   city/
     constantinople/
       subject.json               the fixed view, and one entry per era
@@ -57,7 +66,7 @@ data/depictions/
   _candidates/                   generated candidates awaiting review (git-ignored)
 ```
 
-**`style.json`** holds one paragraph shared by every picture: an explorer's field-sketchbook page, with pencil underdrawing, quick ink, uneven washes, edges fading into paper, and no writing. Keep it fixed so the whole atlas looks like one notebook.
+**`style.json`** holds one style per kind. Both describe an explorer's field-sketchbook page: pencil underdrawing, quick ink, uneven washes, edges fading into paper, and no writing. The city style is a landscape from one view. The journey style is a close, illustrated scene of one moment, with room for small separate studies of an object, a tool or a creature. Keep the styles fixed so the atlas looks like one set of notebooks.
 
 **`subject.json`** has two parts:
 - **`view`** says where the artist stands and what is where in the frame. Every era of the subject is drawn from this one view, so the pictures line up when you step through time.
@@ -84,7 +93,18 @@ data/depictions/
 | `<era>.card.webp` | 720 px | 60 KB | the picture on the card |
 | `<era>.full.webp` | 1280 px | 200 KB | the enlarged view, loaded only when opened |
 
-The city index only records how many pictures a city has, so `cities.json` doesn't grow as pictures are added. Sizes are regenerated only when a source picture changes.
+**A journey's `subject.json`** has a `traveller` paragraph (face, build, clothing, what they carry), repeated in every scene's prompt so the person stays recognisable, and `scenes`:
+
+| Field | Meaning |
+|---|---|
+| `id` | Short scene id (`gnomon`), unique within the journey |
+| `stop`, `place` | The stop the scene shows: its index among the journey's stops, counting from 0 and skipping waypoints, and its `place`, which the build checks against the journey file |
+| `title`, `caption`, `captions`, `sources`, `confidence`, `prompt` | As for a city |
+| `ref` | Optional: another scene whose accepted picture is attached as a reference for style and for the traveller's face, without copying its composition. Usually every scene refers to the first one |
+
+While a journey with scenes is followed, the right-hand card shows the scene for the traveller's latest sketched stop, crossfading as they move on. Stops with a scene get a small picture mark in the journey panel. The card can be closed, and it reappears at the next scene.
+
+The city and journey indexes only record how many pictures a subject has, so `cities.json` doesn't grow as pictures are added. Sizes are regenerated only when a source picture changes.
 
 ## 4. Workflow for one subject
 
@@ -116,6 +136,15 @@ npm run deploy      # when happy
 Commit `<era>.webp` and `<era>.json` in the subject's folder. Each is about 200–300 KB at 1536 px.
 
 **The pilot.** Constantinople's eight eras were drawn with `gpt-image-2.5-flare` (OpenAI), two candidates per era, each era an edit of the one before. It took 18 calls in all, including the comparison runs. OpenAI sometimes answers "no access to model" for a request that works seconds later; the script retries that, along with rate limits and server errors.
+
+**The journey pilot.** Pytheas of Massalia has five scenes:
+1. measuring the noon shadow at Massalia;
+2. the tin trade at Belerion;
+3. the midnight sun and the "sea-lung" at Thule;
+4. the amber island;
+5. writing *On the Ocean*.
+
+They took 14 calls in all. Two eras needed a sharper prompt: the tidal island first came with a medieval castle on it (St Michael's Mount), and the gnomon became a later sundial with a triangular blade.
 
 ## 5. Reviewing a picture
 
