@@ -1,0 +1,23 @@
+{
+  "id": "hudson-1610",
+  "name": "Hudson's last voyage",
+  "traveler": "Henry Hudson",
+  "years": "1610–1611",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "In the Discovery, Hudson finds the strait and the vast inland sea of Hudson Bay, sure it leads to the Pacific. After a winter frozen in James Bay, his crew mutinies and sets him adrift in a small boat with his son and seven others; they are never seen again.",
+  "source": "purchas",
+  "confidence": "high",
+  "stops": [
+    {"year": 1610, "place": "London", "lat": 51.5, "lon": -0.1, "note": "The Discovery sails with 23 men.", "city": "london", "date": "April 1610"},
+    {"year": 1610, "place": "Resolution Island", "lat": 61.5, "lon": -64.9, "note": "The entrance to the strait."},
+    {"year": 1610, "place": "Hudson Strait", "lat": 62.5, "lon": -71.0, "note": "Through the strait into an open sea.", "date": "July 1610"},
+    {"year": 1610, "place": "Hudson Bay", "lat": 58.0, "lon": -84.0, "note": "South along the east coast of the bay."},
+    {"year": 1611, "place": "James Bay", "lat": 52.0, "lon": -80.0, "note": "Frozen in for the winter; starvation and quarrels.", "date": "November 1610"},
+    {"year": 1611, "place": "James Bay", "lat": 52.5, "lon": -79.5, "note": "The mutineers set Hudson adrift.", "date": "June 1611"},
+    {"year": 1611, "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "Eight survivors bring the Discovery home.", "date": "October 1611"}
+  ],
+  "informs": [
+    {"region": "hudson-bay", "level": 3, "homeKnows": 1612, "confidence": "high"}
+  ]
+}

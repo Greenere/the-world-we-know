@@ -1,0 +1,24 @@
+{
+  "id": "gao-xianzhi",
+  "name": "Gao Xianzhi over the Pamirs",
+  "traveler": "Gao Xianzhi",
+  "years": "747–751",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "A Korean-born Tang general leads 10,000 men across the Pamirs and the Darkot Pass into Gilgit to cut the Tibetan empire off from its allies, one of the hardest mountain campaigns in history. Four years later his army is defeated by the Abbasids at Talas, and the prisoners taken there include Du Huan.",
+  "source": "jiu-tangshu",
+  "confidence": "high",
+  "stops": [
+    {"year": 747, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "The army leaves the Anxi Protectorate.", "city": "kucha"},
+    {"year": 747, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "West to the mountains.", "city": "kashgar"},
+    {"year": 747, "place": "Wakhan", "lat": 37.0, "lon": 73.5, "note": "Takes the Tibetan fort at Lianyun on the Wakhan river."},
+    {"year": 747, "place": "Darkot Pass", "lat": 36.72, "lon": 73.25, "note": "Over a glacier pass at 4,700 metres."},
+    {"year": 747, "place": "Gilgit (Little Balur)", "lat": 35.92, "lon": 74.31, "note": "The pro-Tibetan king is captured.", "city": "gilgit"},
+    {"year": 751, "place": "Talas", "lat": 42.52, "lon": 72.24, "note": "Defeated by the Abbasids and their Karluk allies.", "date": "July 751"},
+    {"year": 751, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "The remnants retreat.", "city": "kucha"}
+  ],
+  "informs": [
+    {"region": "himalaya", "level": 4, "homeKnows": 752, "confidence": "medium"},
+    {"region": "bactria", "level": 3, "homeKnows": 752, "confidence": "medium"}
+  ]
+}

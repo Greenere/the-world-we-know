@@ -1,0 +1,23 @@
+{
+  "id": "qing-dzungar",
+  "name": "The Qing conquest of Dzungaria",
+  "traveler": "Zhaohui and the Qianlong emperor's armies",
+  "years": "1755–1759",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "The Qianlong emperor sends armies into Dzungaria and the Tarim basin, destroying the last steppe empire; most of the Dzungar people die in the war and the epidemics that follow. The new territory is called Xinjiang, 'new frontier', and surveyed by Jesuit and Chinese mapmakers.",
+  "source": "qing-shilu",
+  "confidence": "high",
+  "stops": [
+    {"year": 1755, "place": "Barkol", "lat": 43.6, "lon": 93.0, "note": "The Qing armies assemble in the north-west."},
+    {"year": 1755, "place": "Ili (Ghulja)", "lat": 43.9, "lon": 81.3, "note": "The Dzungar capital falls without a fight.", "city": "ghulja"},
+    {"year": 1757, "place": "Bortala", "lat": 44.9, "lon": 82.07, "note": "The rebel Amursana flees to Russia; the Dzungars are destroyed."},
+    {"year": 1758, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "The Tarim oases, under the Khoja brothers, resist.", "city": "kucha"},
+    {"year": 1759, "place": "Yarkand", "lat": 38.42, "lon": 77.24, "note": "Zhaohui is besieged at the 'Black Water camp' before relief arrives.", "city": "yarkand"},
+    {"year": 1759, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "Kashgar is taken; the Khojas flee to Badakhshan.", "city": "kashgar"}
+  ],
+  "informs": [
+    {"region": "tarim", "level": 5, "homeKnows": 1760, "confidence": "high", "note": "The Qing take Xinjiang"},
+    {"region": "zhetysu", "level": 4, "homeKnows": 1760, "confidence": "high"}
+  ]
+}

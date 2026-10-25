@@ -1,0 +1,23 @@
+{
+  "id": "almagro",
+  "name": "Almagro to Chile",
+  "traveler": "Diego de Almagro",
+  "years": "1535–1537",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "Pizarro's partner leads 500 Spaniards and thousands of conscripted Andean porters south along the Inca roads in search of another Peru. Many porters die crossing the high Andes and the Atacama; Almagro finds no gold and returns to fight Pizarro for Cuzco.",
+  "source": "oviedo",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1535, "place": "Cuzco", "lat": -13.53, "lon": -71.97, "note": "Almagro marches south with the Inca prince Paullu as guide.", "city": "cuzco", "date": "July 1535"},
+    {"year": 1535, "place": "Lake Titicaca", "lat": -15.84, "lon": -69.34, "note": "Along the Qhapaq Ñan by the lake."},
+    {"year": 1536, "place": "Paso de San Francisco", "lat": -26.87, "lon": -68.3, "note": "Over the Andes in winter; hundreds of porters freeze to death."},
+    {"year": 1536, "place": "Copiapó", "lat": -27.37, "lon": -70.33, "note": "Down into the valleys of Chile."},
+    {"year": 1536, "place": "Aconcagua valley", "lat": -32.8, "lon": -70.6, "note": "A party pushes as far south as the Maule River; the land is poor in gold."},
+    {"year": 1537, "place": "Atacama Desert", "lat": -23.0, "lon": -69.0, "note": "Back north along the coast through the desert."},
+    {"year": 1537, "place": "Cuzco", "lat": -13.53, "lon": -71.97, "note": "Seizes Cuzco from the Pizarros, which leads to civil war and his execution.", "city": "cuzco", "date": "April 1537"}
+  ],
+  "informs": [
+    {"region": "atacama-chile", "level": 3, "homeKnows": 1538, "confidence": "high"}
+  ]
+}

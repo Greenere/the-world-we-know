@@ -1,0 +1,24 @@
+{
+  "id": "zhenghe-3",
+  "name": "Zheng He's third voyage",
+  "traveler": "Zheng He",
+  "years": "1409–1411",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "On the third voyage the fleet fights its way out of Ceylon: the Sinhala king Alakeshvara is captured and taken to Nanjing. The trilingual stone at Galle, in Chinese, Tamil and Persian, dates from this voyage.",
+  "source": "ming-shilu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1409, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The third fleet sets out.", "city": "nanjing"},
+    {"year": 1410, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Waiting for the monsoon.", "source": "liujiagang"},
+    {"year": 1410, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "A walled depot and warehouses are built at Malacca.", "city": "malacca", "source": "ma-huan"},
+    {"year": 1410, "place": "Semudera", "lat": 5.2, "lon": 97.1, "note": "Northern Sumatra.", "source": "ma-huan"},
+    {"year": 1410, "place": "Galle, Ceylon", "lat": 6.03, "lon": 80.22, "note": "Leaves a stone in Chinese, Tamil and Persian giving offerings to the Buddha, to a Hindu god and to Allah."},
+    {"year": 1410, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "Calicut and the pepper ports.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1411, "place": "Kotte, Ceylon", "lat": 6.89, "lon": 79.9, "note": "Ambushed on the way home, the fleet storms the capital and captures King Alakeshvara."},
+    {"year": 1411, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The captive king is brought before the emperor, then sent home.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "sri-lanka", "level": 4, "homeKnows": 1411, "confidence": "high"}
+  ]
+}

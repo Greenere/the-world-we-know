@@ -1,0 +1,25 @@
+{
+  "id": "zhenghe-2",
+  "name": "Zheng He's second voyage",
+  "traveler": "Zheng He",
+  "years": "1407–1409",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "Back out almost at once to take the envoys home and to invest the new king of Calicut, the fleet also calls at Siam and Cochin. At Calicut a stone is set up to record the Ming emperor's gifts.",
+  "source": "ming-shilu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1407, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The fleet sails again within months.", "city": "nanjing"},
+    {"year": 1408, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Waiting for the monsoon.", "source": "liujiagang"},
+    {"year": 1408, "place": "Champa", "lat": 13.77, "lon": 109.22, "note": "A familiar first call.", "source": "ma-huan"},
+    {"year": 1408, "place": "Ayutthaya, Siam", "lat": 14.35, "lon": 100.57, "note": "Envoys to the king of Siam.", "city": "ayutthaya", "by": "river"},
+    {"year": 1408, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "Ming envoys recognize Malacca's ruler.", "city": "malacca", "source": "ma-huan"},
+    {"year": 1408, "place": "Cochin", "lat": 9.97, "lon": 76.24, "note": "The pepper kingdom south of Calicut.", "city": "kochi"},
+    {"year": 1408, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "A stone is set up to record the investiture of the new king.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1409, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "Home in the summer.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "malay-peninsula", "level": 4, "homeKnows": 1409, "confidence": "high"},
+    {"region": "khmer", "level": 4, "homeKnows": 1409, "confidence": "medium", "note": "Siam"}
+  ]
+}

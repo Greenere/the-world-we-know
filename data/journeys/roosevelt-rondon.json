@@ -1,0 +1,21 @@
+{
+  "id": "roosevelt-rondon",
+  "name": "Roosevelt and Rondon on the River of Doubt",
+  "traveler": "Cândido Rondon and Theodore Roosevelt",
+  "years": "1913–1914",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "The Brazilian engineer Rondon, who had strung telegraph lines across Mato Grosso, and the former U.S. president descend an unmapped river of a thousand kilometres. Rapids wreck the canoes, one man drowns, another is murdered, and Roosevelt nearly dies of fever; the river is renamed the Rio Roosevelt.",
+  "source": "roosevelt-brazil",
+  "confidence": "high",
+  "stops": [
+    {"year": 1913, "place": "Cáceres, Mato Grosso", "lat": -16.07, "lon": -57.68, "note": "The expedition sets out north across the plateau.", "date": "December 1913"},
+    {"year": 1914, "place": "Rio da Dúvida", "lat": -12.0, "lon": -60.7, "note": "Seven canoes launch on the River of Doubt.", "date": "27 February 1914"},
+    {"year": 1914, "place": "The rapids", "lat": -10.5, "lon": -60.5, "note": "Weeks of portages; a canoe and the paddler Simplício are lost.", "by": "river"},
+    {"year": 1914, "place": "Confluence with the Aripuanã", "lat": -7.3, "lon": -60.6, "note": "Roosevelt, feverish, is carried on.", "by": "river", "date": "April 1914"},
+    {"year": 1914, "place": "Manaus", "lat": -3.12, "lon": -60.02, "note": "Down the Madeira to the Amazon.", "by": "river", "date": "April 1914", "city": "manaus"}
+  ],
+  "informs": [
+    {"region": "rondonia", "level": 3, "homeKnows": 1914, "confidence": "high", "note": "The River of Doubt is mapped"}
+  ]
+}

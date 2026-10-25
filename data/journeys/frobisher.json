@@ -1,0 +1,22 @@
+{
+  "id": "frobisher",
+  "name": "Frobisher's search for the Northwest Passage",
+  "traveler": "Martin Frobisher",
+  "years": "1576–1578",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Looking for a northern way to Cathay, Frobisher sails into a deep bay in Baffin Island he takes for a strait between Asia and America. He brings back an Inuk captive and black rock thought to hold gold; two more voyages mine 1,350 tons of worthless ore.",
+  "source": "hakluyt",
+  "confidence": "high",
+  "stops": [
+    {"year": 1576, "place": "London", "lat": 51.5, "lon": -0.1, "note": "Two small barks sail.", "city": "london", "date": "June 1576"},
+    {"year": 1576, "place": "Shetland", "lat": 60.3, "lon": -1.3, "note": "North around Scotland."},
+    {"year": 1576, "place": "Cape Farewell", "lat": 59.8, "lon": -43.9, "note": "Sights the tip of Greenland, which he takes for Friesland."},
+    {"year": 1576, "place": "Frobisher Bay", "lat": 63.0, "lon": -66.0, "note": "Thinks the bay a strait to Asia; five men are lost ashore among the Inuit.", "date": "August 1576"},
+    {"year": 1577, "place": "Kodlunarn Island", "lat": 62.8, "lon": -65.4, "note": "Second and third voyages dig 'gold' ore here.", "date": "1577–1578"},
+    {"year": 1578, "place": "London", "lat": 51.5, "lon": -0.1, "note": "The ore proves worthless; it ends as road metal.", "city": "london"}
+  ],
+  "informs": [
+    {"region": "helluland-markland", "level": 3, "homeKnows": 1577, "confidence": "high", "note": "Frobisher"}
+  ]
+}

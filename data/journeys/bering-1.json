@@ -1,0 +1,24 @@
+{
+  "id": "bering-1",
+  "name": "Bering's first Kamchatka expedition",
+  "traveler": "Vitus Bering and Aleksei Chirikov",
+  "years": "1725–1730",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Peter the Great sends a Danish officer across Siberia to find whether Asia and America are joined. After three years hauling supplies overland, Bering builds a ship on Kamchatka and sails north through the strait that bears his name, but fog hides America and he turns back without proof.",
+  "source": "mills-polar",
+  "confidence": "high",
+  "stops": [
+    {"year": 1725, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "note": "Sets out overland across Siberia.", "city": "st-petersburg", "date": "February 1725"},
+    {"year": 1726, "place": "Yakutsk", "by": "land", "lat": 62.03, "lon": 129.73, "note": "Supplies are dragged across rivers and mountains.", "city": "yakutsk"},
+    {"year": 1727, "place": "Okhotsk", "by": "land", "lat": 59.36, "lon": 143.24, "note": "A ship is built to cross to Kamchatka.", "city": "okhotsk"},
+    {"year": 1728, "place": "Nizhnekamchatsk", "lat": 56.3, "lon": 162.0, "note": "The St Gabriel is built.", "by": "land"},
+    {"year": 1728, "place": "Bering Strait", "by": "sea", "lat": 67.3, "lon": -168.8, "note": "At 67°18′N with no land in sight, Bering turns back.", "date": "August 1728"},
+    {"year": 1729, "place": "Okhotsk", "by": "sea", "lat": 59.36, "lon": 143.24, "note": "Back across the Sea of Okhotsk.", "city": "okhotsk"},
+    {"year": 1730, "place": "St Petersburg", "by": "land", "lat": 59.94, "lon": 30.31, "note": "Home overland; the question remains open.", "city": "st-petersburg", "date": "March 1730"}
+  ],
+  "informs": [
+    {"region": "bering-sea", "level": 3, "homeKnows": 1730, "confidence": "high", "note": "Bering's first voyage"},
+    {"region": "kamchatka", "level": 3, "homeKnows": 1730, "confidence": "high"}
+  ]
+}

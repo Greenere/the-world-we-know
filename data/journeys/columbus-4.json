@@ -1,0 +1,23 @@
+{
+  "id": "columbus-4",
+  "name": "Columbus, fourth voyage",
+  "traveler": "Christopher Columbus and his son Fernando",
+  "years": "1502–1504",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Old and ill, Columbus searches for a strait through to the Indian Ocean along the coast of Central America. He finds gold in Veragua and a Maya trading canoe, but worm-eaten ships strand him on Jamaica for a year.",
+  "source": "colon-hernando",
+  "confidence": "high",
+  "stops": [
+    {"year": 1502, "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Four old ships.", "city": "gades", "date": "11 May 1502"},
+    {"year": 1502, "place": "Guanaja, Bay Islands", "lat": 16.47, "lon": -85.9, "note": "A great Maya trading canoe laden with cloth, copper and cacao.", "date": "July 1502"},
+    {"year": 1502, "place": "Cape Gracias a Dios", "lat": 15.0, "lon": -83.15, "note": "'Thanks be to God': clear of a month of storms."},
+    {"year": 1502, "place": "Veragua", "lat": 9.0, "lon": -81.0, "note": "Gold, and tales of another sea nine days' march away.", "date": "October 1502"},
+    {"year": 1503, "place": "Belén river", "lat": 8.9, "lon": -80.6, "note": "The first settlement on the mainland is driven out by the Ngäbe."},
+    {"year": 1503, "place": "St Ann's Bay, Jamaica", "lat": 18.44, "lon": -77.2, "note": "The ships are beached, rotten; a year marooned.", "date": "June 1503"},
+    {"year": 1504, "place": "Sanlúcar de Barrameda", "lat": 36.78, "lon": -6.35, "note": "Home. He dies in 1506, still sure he reached Asia.", "date": "November 1504"}
+  ],
+  "informs": [
+    {"region": "central-america", "level": 3, "homeKnows": 1504, "confidence": "high", "note": "Columbus's fourth voyage"}
+  ]
+}

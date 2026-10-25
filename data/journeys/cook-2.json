@@ -1,0 +1,33 @@
+{
+  "id": "cook-2",
+  "name": "Cook's second voyage",
+  "traveler": "James Cook, with the Resolution and the Adventure",
+  "years": "1772–1775",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Sent to find the great southern continent, Cook crosses the Antarctic Circle three times and sails further south than anyone before, proving that any southern land must lie under the ice. Between the summers he charts Tonga, Rapa Nui, the Marquesas, Vanuatu and New Caledonia, keeping time with a copy of Harrison's chronometer.",
+  "source": "cook-journals",
+  "confidence": "high",
+  "stops": [
+    {"year": 1772, "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "The Resolution and the Adventure sail, with Larcum Kendall's copy of Harrison's chronometer.", "date": "13 July 1772"},
+    {"year": 1772, "place": "Cape Town", "lat": -33.92, "lon": 18.42, "note": "Last port before the southern ice.", "city": "cape-town"},
+    {"year": 1773, "place": "Antarctic Circle", "lat": -66.6, "lon": 39.6, "note": "The first ship known to cross the Antarctic Circle.", "date": "17 January 1773"},
+    {"year": 1773, "place": "Dusky Sound, Aotearoa", "lat": -45.75, "lon": 166.6, "note": "Rest and repairs in the fiords after four months without sight of land."},
+    {"year": 1773, "place": "Tonga", "lat": -21.14, "lon": -175.2, "note": "Cook calls them the Friendly Islands.", "city": "nukualofa"},
+    {"year": 1774, "place": "Furthest south", "lat": -71.17, "lon": -106.9, "note": "71°10′S, stopped by pack ice: 'I will not say it was impossible anywhere to get farther to the south.'", "date": "30 January 1774"},
+    {"year": 1774, "place": "Rapa Nui", "lat": -27.15, "lon": -109.4, "note": "The great statues, many already toppled."},
+    {"year": 1774, "place": "Marquesas", "lat": -9.0, "lon": -139.5, "note": "First European visit since Mendaña in 1595."},
+    {"year": 1774, "place": "Vanuatu", "lat": -15.4, "lon": 167.2, "note": "Charts the islands he names the New Hebrides."},
+    {"year": 1774, "place": "New Caledonia", "lat": -20.7, "lon": 164.8, "note": "A large island no European had seen."},
+    {"year": 1775, "place": "South Georgia", "lat": -54.3, "lon": -36.5, "note": "Claims the icy island for Britain: 'savage and horrible'.", "date": "January 1775"},
+    {"year": 1775, "place": "Spithead", "lat": 50.77, "lon": -1.1, "note": "Home after three years and 110,000 km; the chronometer has kept time.", "date": "30 July 1775"}
+  ],
+  "informs": [
+    {"region": "southern-ocean", "level": 3, "homeKnows": "1775..1777", "confidence": "high", "note": "Cook circles the far south"},
+    {"region": "tonga", "level": 4, "homeKnows": "1775..1777", "confidence": "high"},
+    {"region": "rapa-nui", "level": 3, "homeKnows": 1775, "confidence": "high"},
+    {"region": "marquesas", "level": 3, "homeKnows": 1775, "confidence": "high"},
+    {"region": "remote-melanesia", "level": 4, "homeKnows": 1775, "confidence": "high"},
+    {"region": "pacific-south", "level": 4, "homeKnows": 1775, "confidence": "high"}
+  ]
+}

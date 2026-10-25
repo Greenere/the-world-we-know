@@ -1,0 +1,26 @@
+{
+  "id": "zhenghe-7",
+  "name": "Zheng He's seventh voyage",
+  "traveler": "Zheng He, Ma Huan and Fei Xin",
+  "years": "1431–1433",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "Called back by the Xuande emperor for one last voyage, the fleet sails to Hormuz; a squadron reaches East Africa, and seven men including Ma Huan travel from Calicut to Mecca. Zheng He dies on the way home. After this the fleets are never sent again, and the ships rot at their moorings.",
+  "source": "ma-huan",
+  "confidence": "high",
+  "stops": [
+    {"year": 1431, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The last great fleet is assembled.", "city": "nanjing"},
+    {"year": 1432, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Zheng He sets up the Changle inscription recording all seven voyages.", "source": "liujiagang"},
+    {"year": 1432, "place": "Champa", "lat": 13.77, "lon": 109.22, "note": "Champa.", "source": "ma-huan"},
+    {"year": 1432, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "Malacca.", "city": "malacca", "source": "ma-huan"},
+    {"year": 1432, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "The fleet divides at Calicut.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1432, "place": "Hormuz", "lat": 27.1, "lon": 56.45, "note": "The main fleet at Hormuz.", "city": "hormuz"},
+    {"year": 1432, "place": "Mecca", "lat": 21.42, "lon": 39.83, "note": "Seven men including the interpreter Ma Huan travel from Calicut to Mecca.", "source": "ma-huan", "city": "mecca", "from": "Calicut"},
+    {"year": 1433, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "Zheng He dies, probably at sea off this coast.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1433, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The last fleet comes home. No fleet like it is sent again.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "arabia-hejaz", "level": 3, "homeKnows": 1433, "confidence": "medium"},
+    {"region": "red-sea", "level": 3, "homeKnows": 1433, "confidence": "medium"}
+  ]
+}

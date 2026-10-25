@@ -1,0 +1,26 @@
+{
+  "id": "subutai-jebe",
+  "name": "Jebe and Subutai's great raid",
+  "traveler": "Jebe and Subutai, generals of Genghis Khan",
+  "years": "1220–1223",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "Sent after the fleeing Khwarazm-shah, two Mongol generals with about 20,000 horsemen ride around the Caspian Sea, through Persia and the Caucasus onto the steppe north of the Black Sea, crush the Rus princes at the Kalka and return east: a reconnaissance in force of some 8,000 km.",
+  "source": "secret-history",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1220, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "Genghis Khan sends Jebe and Subutai after Shah Muhammad.", "city": "samarkand", "date": "May 1220"},
+    {"year": 1220, "place": "Nishapur", "lat": 36.21, "lon": 58.8, "note": "Through Khorasan.", "city": "nishapur"},
+    {"year": 1221, "place": "Rayy", "lat": 35.59, "lon": 51.43, "note": "The city is sacked.", "city": "rayy"},
+    {"year": 1221, "place": "Tabriz", "lat": 38.08, "lon": 46.29, "note": "Bought off with tribute.", "city": "tabriz"},
+    {"year": 1222, "place": "Derbent", "lat": 42.06, "lon": 48.29, "note": "Through the Caspian Gates into the steppe.", "city": "derbent"},
+    {"year": 1223, "place": "Kalka River", "lat": 47.5, "lon": 37.6, "note": "The Rus princes and Cumans are routed.", "date": "31 May 1223"},
+    {"year": 1223, "place": "Bulghar", "lat": 54.98, "lon": 49.04, "note": "Turned back by the Volga Bulghars.", "city": "bulghar"},
+    {"year": 1224, "place": "Mongolia", "lat": 47.9, "lon": 106.9, "note": "They rejoin Genghis Khan with knowledge of the West."}
+  ],
+  "informs": [
+    {"region": "pontic-steppe", "level": 2, "homeKnows": 1227, "confidence": "medium"},
+    {"region": "caucasus", "level": 3, "homeKnows": 1227, "confidence": "medium"},
+    {"region": "rus", "level": 1, "homeKnows": 1227, "confidence": "low"}
+  ]
+}

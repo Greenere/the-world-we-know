@@ -1,0 +1,23 @@
+{
+  "id": "trajan-parthia",
+  "name": "Trajan to the Persian Gulf",
+  "traveler": "The emperor Trajan",
+  "years": "114–117 CE",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "Trajan takes Armenia and Mesopotamia from Parthia, captures its capital Ctesiphon and sails down the Tigris to the Persian Gulf. Seeing a ship leave for India, he is said to have wished he were young enough to follow Alexander. Revolts force him back and he dies on the way home.",
+  "source": "cassius-dio",
+  "confidence": "high",
+  "stops": [
+    {"year": 114, "place": "Antioch", "lat": 36.2, "lon": 36.16, "note": "The army gathers in Syria.", "city": "antioch"},
+    {"year": 114, "place": "Armenia", "lat": 39.9, "lon": 44.5, "note": "Armenia is annexed."},
+    {"year": 115, "place": "Nisibis", "lat": 37.07, "lon": 41.21, "note": "Northern Mesopotamia is taken."},
+    {"year": 116, "place": "Ctesiphon", "lat": 33.09, "lon": 44.58, "note": "The Parthian capital falls.", "city": "ctesiphon"},
+    {"year": 116, "place": "Charax Spasinou", "lat": 30.5, "lon": 47.8, "note": "At the head of the Gulf he watches a ship sail for India.", "by": "river", "city": "basra"},
+    {"year": 117, "place": "Selinus, Cilicia", "lat": 36.22, "lon": 32.32, "note": "Turning back to crush revolts, Trajan dies."}
+  ],
+  "informs": [
+    {"region": "persian-gulf", "level": 4, "homeKnows": 117, "confidence": "medium"},
+    {"region": "mesopotamia", "level": 4, "homeKnows": 117, "confidence": "high"}
+  ]
+}

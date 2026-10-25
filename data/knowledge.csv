@@ -60,12 +60,10 @@ europe,ifriqiya,-146,4,high,appian,Carthage destroyed; the province of Africa
 europe,iberia,-133,4,high,strabo,
 europe,gaul,-121,3,high,strabo,Gallia Narbonensis
 europe,maghreb,-105,2,medium,strabo,The Jugurthine war
-europe,gaul,-51,4,high,strabo,Caesar's Gallic war
 europe,china-north,-30,1,low,strabo,The Seres: a people of silk
 europe,maghreb,-25,3,medium,pliny,Juba II's Mauretania
 europe,canaries,-25,2,medium,pliny,Juba II's expedition to the Fortunate Isles
 europe,madeira,-25,1,low,pliny,The Purple Islands may be Madeira
-europe,arabia-felix,-25,3,medium,strabo,Aelius Gallus marches into Arabia
 europe,arabia-hejaz,-25,2,medium,strabo,
 europe,sahara,-19,3,medium,pliny,Balbus campaigns against the Garamantes
 europe,alps-danube,-15,3,high,strabo,Raetia and Noricum
@@ -73,8 +71,6 @@ europe,germania,-12,2,medium,tacitus,Drusus reaches the Elbe
 europe,china-north,1,2,medium,pliny,Silk reaches Rome in quantity; the Seres known through trade
 europe,tarim,1,1,low,pliny,
 europe,alps-danube,10,4,high,strabo,Pannonia
-europe,upper-nile,61,3,medium,pliny,Nero's centurions reach the Sudd
-europe,britain,84,4,high,tacitus,Agricola's fleet sails around Britain
 europe,northern-isles,84,3,medium,tacitus,The Orkneys
 europe,ireland,84,2,medium,tacitus,
 europe,central-sahel,90,1,low,ptolemy,Julius Maternus reaches Agisymba
@@ -229,18 +225,15 @@ europe,africa,1500,1,high,hoc,The outline of Africa is known after Dias and da G
 europe,asia,1550,2,high,hoc,
 europe,southern-africa,1488,2,medium,hoc,
 # The Atlantic world opens
-europe,vinland,1497,3,high,hoc,John Cabot
 europe,canada-east,1497,2,medium,hoc,
 europe,north-atlantic-west,1497,3,high,hoc,
-europe,andes-north,1498..1500,3,high,hoc,Columbus at the Gulf of Paria; Ojeda and Vespucci
 europe,brazil-coast,1500,3,high,hoc,Cabral
 europe,north-atlantic-east,1500,4,high,hoc,
 europe,pampas,1502,1,low,waldseemuller,
-europe,central-america,1502..1504,3,high,hoc,Columbus's fourth voyage
 europe,south-america,1507,2,high,waldseemuller,A new continent named America
 europe,north-america,1507,1,medium,waldseemuller,
 europe,caribbean,1510,4,high,hoc,
-europe,eastern-woodlands,1513..1524,2,high,hoc,Ponce de León in Florida; Verrazzano
+europe,eastern-woodlands,1524,2,high,hoc,Verrazzano
 europe,peru,1532..1535,4,high,hoc,
 europe,canada-east,1534..1535,3,high,hoc,Cartier on the St Lawrence
 europe,atacama-chile,1536..1541,3,high,hoc,
@@ -248,10 +241,6 @@ europe,pampas,1536..1580,3,medium,hoc,
 europe,andes-north,1538,4,high,hoc,
 europe,north-america-west,1540,2,medium,hoc,
 europe,mississippi,1541,2,medium,hoc,De Soto
-europe,great-plains,1541,2,medium,hoc,Coronado
-europe,amazon,1542,2,high,hoc,Orellana descends the Amazon
-europe,california,1542,2,medium,hoc,Cabrillo
-europe,south-america,1550,3,high,hoc,
 europe,north-america,1550,2,medium,hoc,
 europe,north-atlantic-west,1550,4,high,hoc,
 europe,south-atlantic,1550,4,high,hoc,
@@ -309,13 +298,10 @@ europe,aotearoa,1642,2,high,tasman,Staten Landt
 europe,tasman-sea,1642,2,high,tasman,
 europe,fiji,1643,2,high,tasman,
 # The north
-europe,helluland-markland,1576..1587,3,high,hoc,Frobisher and Davis
+europe,helluland-markland,1585..1587,3,high,hoc,Davis
 europe,greenland,1585,2,high,hoc,
-europe,svalbard,1596,3,high,hoc,Barentsz
 europe,barents-sea,1596,3,high,hoc,
-europe,eastern-woodlands,1600,3,high,hoc,
 europe,canada-east,1608,4,high,hoc,
-europe,hudson-bay,1610..1612,3,high,hoc,
 europe,baffin-bay,1616,2,high,hoc,
 europe,siberia-east,1648,2,medium,hoc,Dezhnev rounds the tip of Asia
 europe,tibet,1661..1716,2,medium,hoc,Grueber and d'Orville; Desideri
@@ -325,8 +311,6 @@ europe,siberia-east,1687..1701,3,medium,hoc,Witsen and Remezov
 europe,kamchatka,1697,3,medium,hoc,
 europe,mongolia,1700,3,medium,hoc,
 europe,greenland,1721,3,high,hoc,Hans Egede
-europe,bering-sea,1728,3,high,hoc,Bering's first voyage
-europe,alaska,1741,2,high,hoc,
 europe,eastern-woodlands,1750,4,high,hoc,
 europe,canadian-shield,1770..1795,3,medium,hoc,Hearne and Mackenzie
 europe,arctic-canada,1789,2,medium,hoc,
@@ -341,17 +325,7 @@ europe,galapagos,1535,2,high,hoc,Tomás de Berlanga's ship drifts there
 europe,society-islands,1767..1768,3,high,cook-journals,Wallis and Bougainville
 europe,mangareva-pitcairn,1767,2,high,hoc,Carteret
 europe,samoa,1768,2,high,hoc,Bougainville
-europe,tonga,1773..1777,4,high,cook-journals,
 europe,cook-islands,1773..1777,3,high,cook-journals,
-europe,southern-ocean,1773..1775,3,high,cook-journals,Cook circles the far south
-europe,remote-melanesia,1774,4,high,cook-journals,
-europe,rapa-nui,1774,3,high,cook-journals,
-europe,marquesas,1774,3,high,cook-journals,
-europe,pacific-south,1775,4,high,cook-journals,
-europe,hawaii,1778..1779,4,high,cook-journals,
-europe,pacific-northwest,1778,3,high,cook-journals,
-europe,alaska,1778,3,high,cook-journals,
-europe,pacific-north,1779,4,high,cook-journals,
 europe,samoa,1787,3,high,hoc,La Pérouse
 europe,kermadecs,1788..1793,3,high,hoc,
 europe,chatham,1791,3,high,hoc,
@@ -366,7 +340,6 @@ europe,tibet,1735,2,high,du-halde,
 europe,arabia-interior,1762,2,medium,hoc,Niebuhr's expedition
 europe,california,1769..1850,4,high,hoc,
 europe,ethiopia,1770,4,medium,hoc,Bruce at the source of the Blue Nile
-europe,pacific-northwest,1792..1805,4,high,hoc,Vancouver; Lewis and Clark
 europe,bilad-al-sudan,1796,3,high,hoc,Mungo Park reaches the Niger
 europe,australia-east,1800,5,medium,hoc,
 europe,north-america-west,1842..1846,4,high,hoc,Frémont's surveys of the West
@@ -405,7 +378,6 @@ europe,scandinavia,1820..1880,5,medium,national-surveys,
 europe,iberia,1850..1880,5,medium,national-surveys,
 europe,europe,1850,4,medium,national-surveys,
 europe,north-america,1850,3,medium,hoc,
-europe,south-america,1850,3,medium,hoc,
 europe,africa,1850,2,medium,hoc,
 europe,asia,1850,3,medium,hoc,
 
@@ -435,7 +407,6 @@ china,annam,-111,3,high,hanshu,Jiaozhi commandery
 china,south-china-sea,-111,3,medium,hanshu,
 china,korea,-108,3,high,hanshu,Lelang commandery
 china,manchuria,-108,2,medium,hanshu,
-china,transoxiana,-101,4,high,hanshu,The war of the Heavenly Horses against Dayuan
 china,tarim,-60,4,high,hanshu,The Protectorate of the Western Regions
 china,zhetysu,-60,3,high,hanshu,The Wusun
 china,bay-of-bengal,-1..1,2,low,hanshu,The Hanshu's sea route to Huangzhi
@@ -600,7 +571,6 @@ china,manchuria,1708..1718,4,high,kangxi-atlas,
 china,mongolia,1708..1718,4,high,kangxi-atlas,
 china,tibet,1717,3,high,kangxi-atlas,Lama surveyors map Tibet
 china,korea,1718,3,high,kangxi-atlas,
-china,tarim,1759..1760,4,high,hoc,The Qing take Xinjiang
 china,zhetysu,1759..1760,4,high,hoc,
 china,britain,1820,3,medium,hoc,Xie Qinggao's Records of the Seas
 china,europe,1843..1852,4,high,haiguo-tuzhi,
@@ -1007,9 +977,9 @@ humanity,moon,1966,3,high,luna-surveyor,Luna 9 and Surveyor 1 land softly
 *,new-guinea,1900,=3,medium,hoc,The coasts are charted; the highlands are unknown to outsiders
 *,new-guinea,1933..1938,=4,medium,hoc,Outsiders first enter the populous highland valleys
 *,new-guinea,1960,5,medium,hoc,
-*,amazon,1900,=3,medium,hoc,
-*,amazon,1950,=4,medium,hoc,
-*,amazon,1970..1980,5,medium,hoc,Radar survey of the Amazon
+*,amazon-forest,1900,=3,medium,hoc,
+*,amazon-forest,1950,=4,medium,hoc,
+*,amazon-forest,1970..1980,5,medium,hoc,Radar survey of the Amazon
 *,arabia-interior,1900,=3,medium,hoc,
 *,arabia-interior,1931..1932,=4,high,hoc,Thomas and Philby cross the Empty Quarter
 *,arabia-interior,1950,5,medium,hoc,
@@ -1129,3 +1099,17 @@ europe,dronning-maud-land,1929..1931,3,high,headland,Norwegian flights chart the
 *,dronning-maud-land,1957,4,high,headland,
 humanity,dronning-maud-land,1895,=0,high,headland,
 humanity,dronning-maud-land,1949..1952,4,high,headland,The Norwegian–British–Swedish expedition winters at Maudheim
+# North American Southwest, the Amazon and the Orinoco, finer
+europe,rio-grande-pueblos,-500,=0,high,castaneda,
+europe,colorado-plateau,-500,=0,high,castaneda,
+europe,colorado-plateau,1540,=1,high,castaneda,Cárdenas looks into the Grand Canyon from the rim
+europe,great-basin,-500,=0,high,escalante-diario,
+europe,great-basin,1826..1827,=3,medium,hoc,Jedediah Smith crosses the Great Basin
+europe,great-basin,1843..1846,4,high,hoc,Frémont's surveys name and map the Great Basin
+europe,orinoco,-500,=0,high,hoc,
+europe,orinoco,1531..1532,=2,medium,oviedo,Diego de Ordaz sails up the Orinoco
+europe,rondonia,-500,=0,high,roosevelt-brazil,
+europe,rondonia,1907..1909,=2,high,roosevelt-brazil,Rondon's telegraph commission crosses the plateau
+*,rondonia,1900,=1,high,roosevelt-brazil,
+*,rondonia,1907..1909,=2,high,roosevelt-brazil,
+*,rondonia,1914,3,high,roosevelt-brazil,

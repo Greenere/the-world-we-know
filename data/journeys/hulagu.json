@@ -1,0 +1,24 @@
+{
+  "id": "hulagu",
+  "name": "Hulagu and the fall of Baghdad",
+  "traveler": "Hulagu Khan",
+  "years": "1253–1260",
+  "kind": "military",
+  "viewpoint": "islam",
+  "summary": "Möngke's brother leads a Mongol army west to subdue the Ismaili fortresses and the Abbasid caliphate. Baghdad falls in 1258 and the last caliph is killed; the advance is stopped by the Mamluks at ʿAyn Jālūt. The Ilkhanate he founds becomes a meeting place of Persian, Chinese and European learning.",
+  "source": "rashid-al-din",
+  "confidence": "high",
+  "stops": [
+    {"year": 1253, "place": "Karakorum", "lat": 47.2, "lon": 102.8, "note": "Hulagu sets out with siege engineers from China.", "city": "karakorum"},
+    {"year": 1255, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "Through Transoxiana.", "city": "samarkand"},
+    {"year": 1256, "place": "Alamut", "lat": 36.44, "lon": 50.59, "note": "The Ismaili castles surrender.", "city": "alamut"},
+    {"year": 1258, "place": "Baghdad", "lat": 33.31, "lon": 44.36, "note": "The city is sacked and the caliph al-Mustaʿsim put to death.", "city": "baghdad", "date": "February 1258"},
+    {"year": 1259, "place": "Maragha", "lat": 37.39, "lon": 46.24, "note": "Nasir al-Din al-Tusi's observatory is founded under Mongol patronage.", "city": "maragha"},
+    {"year": 1260, "place": "Aleppo", "lat": 36.2, "lon": 37.16, "note": "Syria is overrun.", "city": "aleppo"},
+    {"year": 1260, "place": "ʿAyn Jālūt", "lat": 32.55, "lon": 35.36, "note": "The Mamluks of Egypt defeat the Mongol rearguard.", "date": "3 September 1260"}
+  ],
+  "informs": [
+    {"region": "mongolia", "level": 3, "homeKnows": 1262, "confidence": "medium", "note": "The Mongol world seen from the Ilkhanate"},
+    {"region": "tarim", "level": 3, "homeKnows": 1262, "confidence": "medium"}
+  ]
+}

@@ -341,8 +341,8 @@ export class JourneyPanel {
           if (!other) return null;
           const color = this.data.vp[other.viewpoint].color;
           const otherName = tx.journey(other.id, 'name', other.name);
-          const otherPlace = tx.name(c.otherPlace);
-          const place = tx.name(c.place);
+          const otherPlace = this.stopName(other, c.otherPlace);
+          const place = this.stopName(j, c.place);
           const text =
             c.kind === 'meanwhile'
               ? [h('em', otherName), t(' was at {other}, {km} km from {place}.', {other: otherPlace, km: Math.round(c.km / 10) * 10, place})]
@@ -361,6 +361,12 @@ export class JourneyPanel {
         }),
       ),
     );
+  }
+
+  /** A stop's place in the current language, looked up by its English name among the journey's stops. */
+  private stopName(j: Journey, en: string): string {
+    const i = j.stops.filter(x => !x.waypoint).findIndex(x => x.place === en);
+    return i >= 0 ? tx.stop(j.id, i, 'place', en) : tx.name(en);
   }
 
   /** Who else is travelling right now, nearest first. Called by the app as the traveller moves. */

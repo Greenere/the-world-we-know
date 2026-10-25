@@ -1,0 +1,24 @@
+{
+  "id": "zhenghe-6",
+  "name": "Zheng He's sixth voyage",
+  "traveler": "Zheng He and his lieutenants",
+  "years": "1421–1422",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "Another fleet takes sixteen countries' envoys home. Squadrons under Zheng He's lieutenants reach the Arabian coast and East Africa again. Soon after, the Yongle emperor dies and his successor orders the voyages stopped.",
+  "source": "ming-shilu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1421, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "Envoys of sixteen countries are taken home.", "city": "nanjing"},
+    {"year": 1421, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Waiting for the monsoon.", "source": "liujiagang"},
+    {"year": 1421, "place": "Semudera", "lat": 5.2, "lon": 97.1, "note": "Sumatra.", "source": "ma-huan"},
+    {"year": 1421, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "The squadrons part at Calicut.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1422, "place": "Zafar (Dhofar)", "lat": 17.0, "lon": 54.1, "note": "Frankincense and dragon's blood.", "source": "ma-huan"},
+    {"year": 1422, "place": "Brava", "lat": 1.1, "lon": 44.03, "note": "Bulawa, on the Somali coast.", "source": "fei-xin", "from": "Calicut"},
+    {"year": 1422, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "Home. The new emperor halts the voyages in 1424.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "arabia-felix", "level": 4, "homeKnows": 1423, "confidence": "medium", "note": "The incense coast of Dhofar"},
+    {"region": "east-africa-coast", "level": 4, "homeKnows": 1423, "confidence": "low"}
+  ]
+}

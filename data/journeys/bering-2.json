@@ -1,0 +1,22 @@
+{
+  "id": "bering-2",
+  "name": "Bering's Great Northern Expedition to America",
+  "traveler": "Vitus Bering, Aleksei Chirikov and Georg Steller",
+  "years": "1741–1742",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "From Kamchatka the St Peter and the St Paul sail east and find Alaska. The naturalist Steller has ten hours ashore on Kayak Island. On the way home the St Peter is wrecked on an island where Bering and half the crew die of scurvy; the survivors build a boat from the wreck and bring home sea-otter furs that start the Russian fur trade.",
+  "source": "steller",
+  "confidence": "high",
+  "stops": [
+    {"year": 1741, "place": "Petropavlovsk", "lat": 53.02, "lon": 158.65, "note": "The St Peter and the St Paul sail together, then lose each other in a storm.", "date": "June 1741", "city": "petropavlovsk"},
+    {"year": 1741, "place": "Kayak Island", "lat": 59.9, "lon": -144.5, "note": "Steller lands for ten hours and collects the first Alaskan specimens.", "date": "20 July 1741"},
+    {"year": 1741, "place": "Shumagin Islands", "lat": 55.1, "lon": -160.0, "note": "Meetings with Unangan people; scurvy spreads."},
+    {"year": 1741, "place": "Bering Island", "lat": 55.0, "lon": 166.2, "note": "Wrecked; Bering dies here in December.", "date": "November 1741"},
+    {"year": 1742, "place": "Petropavlovsk", "lat": 53.02, "lon": 158.65, "note": "46 survivors return in a boat built from the wreck, with otter skins.", "date": "August 1742", "city": "petropavlovsk"}
+  ],
+  "informs": [
+    {"region": "alaska", "level": 2, "homeKnows": 1742, "confidence": "high", "note": "Bering and Chirikov reach Alaska"},
+    {"region": "pacific-north", "level": 3, "homeKnows": 1743, "confidence": "high"}
+  ]
+}

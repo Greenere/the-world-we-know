@@ -1,0 +1,22 @@
+{
+  "id": "vizcaino",
+  "name": "Vizcaíno charts the California coast",
+  "traveler": "Sebastián Vizcaíno and Antonio de la Ascensión",
+  "years": "1602–1603",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Sixty years after Cabrillo, Vizcaíno is sent to find harbours for the Manila galleons on their way home. His charts and the names he gives (San Diego, Monterey, Santa Barbara) stay on Spanish maps for a century and a half.",
+  "source": "vizcaino-ascension",
+  "confidence": "high",
+  "stops": [
+    {"year": 1602, "place": "Acapulco", "lat": 16.85, "lon": -99.88, "note": "Three ships sail north.", "city": "acapulco", "date": "May 1602"},
+    {"year": 1602, "place": "San Diego Bay", "lat": 32.7, "lon": -117.2, "note": "Renames Cabrillo's San Miguel after San Diego.", "date": "November 1602", "city": "san-diego"},
+    {"year": 1602, "place": "Santa Barbara Channel", "lat": 34.3, "lon": -119.7, "note": "Names the channel for Saint Barbara."},
+    {"year": 1602, "place": "Monterey Bay", "lat": 36.6, "lon": -121.9, "note": "Praises the bay, too generously, as a fine harbour for the galleons.", "date": "December 1602", "city": "monterey"},
+    {"year": 1603, "place": "Cape Mendocino", "lat": 40.44, "lon": -124.4, "note": "Scurvy cripples the crews; one ship reaches about 43°N.", "date": "January 1603"},
+    {"year": 1603, "place": "Acapulco", "lat": 16.85, "lon": -99.88, "note": "Home with charts that later Spaniards rely on.", "city": "acapulco", "date": "March 1603"}
+  ],
+  "informs": [
+    {"region": "california", "level": 4, "homeKnows": 1603, "confidence": "high", "note": "Vizcaíno's charts"}
+  ]
+}

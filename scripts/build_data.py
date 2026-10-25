@@ -523,14 +523,17 @@ def load_events(regions_by_id: dict[str, Region], sources: dict, journeys: list[
             if y is None:
                 fail(f"{where}: missing homeKnows")
                 continue
-            level = inf.get("level")
+            # A journey can also set an exact level ("=2"): what it saw of a sub-region, held below the parent's.
+            level, exact = inf.get("level"), False
+            if isinstance(level, str) and level.startswith("=") and level[1:].isdigit():
+                level, exact = int(level[1:]), True
             if not isinstance(level, int) or not 0 <= level <= 5:
-                fail(f"{where}: level must be an integer 0–5")
+                fail(f"{where}: level must be 0–5 or \"=0\"–\"=5\"")
                 continue
             src = inf.get("source", j.get("source"))
             conf = check_ref(where, src, inf.get("confidence"), sources)
             seq += 1
-            events[vp][rid].append(Event(y.mid, seq, level, False, conf, y.lo, y.hi, src, inf.get("note", ""), j["id"]))
+            events[vp][rid].append(Event(y.mid, seq, level, exact, conf, y.lo, y.hi, src, inf.get("note", ""), j["id"]))
     for vp in events:
         for rid in events[vp]:
             events[vp][rid].sort()
@@ -1277,6 +1280,8 @@ def main() -> int:
         if j["id"] in pictured["journey"]:
             doc["pictures"] = pictured["journey"][j["id"]]
         for inf in doc["informs"]:
+            if isinstance(inf["level"], str):
+                inf["level"] = int(inf["level"].lstrip("="))
             y = parse_year(inf["homeKnows"], j["id"])
             inf["homeKnowsMid"] = y.mid
             inf.setdefault("viewpoint", j["viewpoint"])

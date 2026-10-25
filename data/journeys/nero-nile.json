@@ -1,0 +1,21 @@
+{
+  "id": "nero-nile",
+  "name": "Nero's centurions up the Nile",
+  "traveler": "Two praetorian centurions sent by Nero",
+  "years": "c. 61–63 CE",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "Nero sends a small party up the Nile to look for its source. Helped by the king of Meroë, they pass far beyond Egypt and reach immense marshes, the Sudd, where the river is choked with vegetation that no boat can pass.",
+  "source": "seneca-nq",
+  "confidence": "medium",
+  "stops": [
+    {"year": 61, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "The party sets out up the Nile.", "city": "alexandria"},
+    {"year": 61, "place": "Syene (Aswan)", "lat": 24.09, "lon": 32.9, "note": "The edge of Roman Egypt.", "by": "river"},
+    {"year": 62, "place": "Meroë", "lat": 16.94, "lon": 33.75, "note": "The Kushite king provides guides and letters to the rulers beyond.", "city": "meroe", "by": "river"},
+    {"year": 62, "place": "The Sudd", "lat": 8.0, "lon": 30.5, "note": "Endless marshes where 'the plants are so entangled that the water cannot be crossed on foot or by boat.'", "by": "river"},
+    {"year": 63, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "They report to Nero.", "city": "alexandria", "by": "river"}
+  ],
+  "informs": [
+    {"region": "upper-nile", "level": 3, "homeKnows": 63, "confidence": "medium", "note": "Nero's centurions reach the Sudd"}
+  ]
+}

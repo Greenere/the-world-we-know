@@ -1,0 +1,27 @@
+{
+  "id": "caesar-gaul",
+  "name": "Caesar's Gallic War",
+  "traveler": "Gaius Julius Caesar",
+  "years": "58–50 BCE",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "In eight years of campaigns Caesar conquers Gaul from the Pyrenees to the Rhine, bridges the Rhine twice and crosses twice to Britain. His own Commentaries, written for Rome, give the first detailed account of the lands and peoples of the north.",
+  "source": "caesar-bg",
+  "confidence": "high",
+  "stops": [
+    {"year": -58, "place": "Geneva", "lat": 46.2, "lon": 6.15, "note": "Blocks the Helvetii from migrating west."},
+    {"year": -58, "place": "Bibracte", "lat": 46.92, "lon": 4.04, "note": "Defeats the Helvetii."},
+    {"year": -57, "place": "The Sambre", "lat": 50.4, "lon": 4.3, "note": "War with the Belgae."},
+    {"year": -56, "place": "Morbihan", "lat": 47.6, "lon": -2.8, "note": "Defeats the seafaring Veneti in a battle at sea."},
+    {"year": -55, "place": "The Rhine", "lat": 50.4, "lon": 7.5, "note": "Bridges the river in ten days and raids into Germania."},
+    {"year": -55, "place": "Kent", "lat": 51.2, "lon": 1.3, "note": "The first crossing to Britain.", "by": "sea"},
+    {"year": -54, "place": "The Thames", "lat": 51.5, "lon": -0.4, "note": "A second, larger invasion; Cassivellaunus submits.", "city": "london"},
+    {"year": -52, "place": "Alesia", "lat": 47.54, "lon": 4.5, "note": "The siege that ends Vercingetorix's revolt.", "city": "alesia"},
+    {"year": -50, "place": "Rome", "lat": 41.9, "lon": 12.5, "note": "Gaul is a province; the Commentaries are published.", "city": "rome"}
+  ],
+  "informs": [
+    {"region": "gaul", "level": 4, "homeKnows": -51, "confidence": "high", "note": "Caesar's Gallic war"},
+    {"region": "britain", "level": 3, "homeKnows": -50, "confidence": "high"},
+    {"region": "germania", "level": 2, "homeKnows": -50, "confidence": "high"}
+  ]
+}

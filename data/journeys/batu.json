@@ -1,0 +1,26 @@
+{
+  "id": "batu",
+  "name": "Batu's western campaign",
+  "traveler": "Batu and Subutai",
+  "years": "1236–1242",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "A Mongol army of perhaps 120,000 conquers the Volga Bulghars, the Cumans and the Rus principalities, sacks Kyiv, and drives into Poland and Hungary, destroying two European armies within days of each other in 1241. News of the Great Khan's death turns them back; the Golden Horde rules the Rus for two centuries.",
+  "source": "juvaini",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1236, "place": "Bulghar", "lat": 54.98, "lon": 49.04, "note": "The Volga Bulghar capital is destroyed.", "city": "bulghar"},
+    {"year": 1237, "place": "Ryazan", "lat": 54.63, "lon": 39.74, "note": "The first Rus city to fall.", "date": "December 1237", "city": "ryazan"},
+    {"year": 1238, "place": "Vladimir", "lat": 56.13, "lon": 40.4, "note": "The grand prince's capital is burned.", "city": "vladimir"},
+    {"year": 1240, "place": "Kyiv", "lat": 50.45, "lon": 30.52, "note": "The mother of Rus cities is sacked.", "city": "kyiv", "date": "December 1240"},
+    {"year": 1241, "place": "Legnica", "lat": 51.21, "lon": 16.16, "note": "A Polish and German army is destroyed.", "date": "9 April 1241", "city": "legnica"},
+    {"year": 1241, "place": "Mohi", "lat": 47.98, "lon": 20.95, "note": "King Béla's Hungarian army is destroyed.", "date": "11 April 1241", "from": "Kyiv"},
+    {"year": 1242, "place": "Dalmatian coast", "lat": 43.5, "lon": 16.4, "note": "The pursuit of Béla reaches the Adriatic."},
+    {"year": 1242, "place": "Sarai", "lat": 47.9, "lon": 46.5, "note": "News of Ögedei's death; Batu withdraws and founds his capital on the Volga."}
+  ],
+  "informs": [
+    {"region": "rus", "level": 3, "homeKnows": 1243, "confidence": "medium"},
+    {"region": "alps-danube", "level": 2, "homeKnows": 1243, "confidence": "medium", "note": "Hungary"},
+    {"region": "pontic-steppe", "level": 4, "homeKnows": 1243, "confidence": "medium"}
+  ]
+}

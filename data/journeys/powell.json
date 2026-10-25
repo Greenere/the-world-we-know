@@ -1,0 +1,23 @@
+{
+  "id": "powell",
+  "name": "Powell down the Colorado",
+  "traveler": "John Wesley Powell and nine men",
+  "years": "1869",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "A one-armed Civil War veteran leads four boats down the Green and Colorado rivers through the last blank on the map of the United States, the canyons of the Colorado Plateau. Three men who leave the river near the end are killed; the rest emerge after 99 days.",
+  "source": "powell",
+  "confidence": "high",
+  "stops": [
+    {"year": 1869, "place": "Green River Station, Wyoming", "lat": 41.53, "lon": -109.47, "note": "Four wooden boats and ten men launch.", "date": "24 May 1869"},
+    {"year": 1869, "place": "Canyon of Lodore", "lat": 40.7, "lon": -108.9, "note": "The No Name is smashed; a third of the food is lost.", "by": "river"},
+    {"year": 1869, "place": "Confluence of the Green and Grand", "lat": 38.19, "lon": -109.89, "note": "Where the Green meets the Grand to form the Colorado.", "by": "river"},
+    {"year": 1869, "place": "Glen Canyon", "lat": 37.0, "lon": -111.48, "note": "Calm water between sculpted walls.", "by": "river"},
+    {"year": 1869, "place": "Grand Canyon (inner gorge)", "lat": 36.1, "lon": -112.1, "note": "'We are now ready to start on our way down the Great Unknown.'", "by": "river", "date": "13 August 1869"},
+    {"year": 1869, "place": "Separation Rapid", "lat": 35.86, "lon": -113.6, "note": "Three men climb out rather than run the rapid; they are killed on the plateau.", "by": "river", "date": "28 August 1869"},
+    {"year": 1869, "place": "Mouth of the Virgin River", "lat": 36.12, "lon": -114.3, "note": "The six who stayed on the river reach the settlements.", "by": "river", "date": "30 August 1869"}
+  ],
+  "informs": [
+    {"region": "colorado-plateau", "level": 4, "homeKnows": 1869, "confidence": "high", "note": "The last blank: the Colorado canyons"}
+  ]
+}

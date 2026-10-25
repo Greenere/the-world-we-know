@@ -1,0 +1,23 @@
+{
+  "id": "agricola",
+  "name": "Agricola in Caledonia",
+  "traveler": "Gnaeus Julius Agricola",
+  "years": "77–84 CE",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "As governor of Britain, Agricola pushes Roman power into Scotland, defeats the Caledonians at Mons Graupius and sends his fleet around the north of Britain, proving it an island and sighting Orkney and perhaps Thule. His son-in-law Tacitus tells the story.",
+  "source": "tacitus",
+  "confidence": "high",
+  "stops": [
+    {"year": 77, "place": "Deva (Chester)", "lat": 53.19, "lon": -2.89, "note": "Agricola arrives as governor."},
+    {"year": 78, "place": "Mona (Anglesey)", "lat": 53.27, "lon": -4.4, "note": "The druids' island is taken."},
+    {"year": 80, "place": "The Tay", "lat": 56.4, "lon": -3.4, "note": "The army reaches the Tay.", "city": "inchtuthil"},
+    {"year": 83, "place": "Mons Graupius", "lat": 57.3, "lon": -2.6, "note": "The Caledonians under Calgacus are defeated: 'they make a desert and call it peace.'"},
+    {"year": 84, "place": "Orkney", "lat": 59.0, "lon": -3.0, "note": "The fleet sails around the north and subdues the Orkneys.", "by": "sea"},
+    {"year": 84, "place": "Trucculensis portus", "lat": 55.9, "lon": -2.5, "note": "The fleet completes the circuit: Britain is an island.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 4, "homeKnows": 85, "confidence": "high", "note": "Agricola's fleet sails around Britain"},
+    {"region": "northern-isles", "level": 3, "homeKnows": 85, "confidence": "high", "note": "The Orkneys"}
+  ]
+}

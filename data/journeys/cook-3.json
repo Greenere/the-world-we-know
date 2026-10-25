@@ -1,0 +1,33 @@
+{
+  "id": "cook-3",
+  "name": "Cook's third voyage",
+  "traveler": "James Cook, Charles Clerke and Mai",
+  "years": "1776–1780",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Cook takes Mai home to Huahine, then sails north to look for a passage from the Pacific to the Atlantic. On the way he reaches Hawaiʻi, charts the coast from Oregon to Alaska and through the Bering Strait until the ice stops him. Back in Hawaiʻi he is killed at Kealakekua Bay; Clerke tries the Arctic again and dies off Kamchatka.",
+  "source": "cook-journals",
+  "confidence": "high",
+  "stops": [
+    {"year": 1776, "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "The Resolution sails; the Discovery under Clerke follows.", "date": "12 July 1776"},
+    {"year": 1776, "place": "Cape Town", "lat": -33.92, "lon": 18.42, "note": "Livestock taken on board for the islands.", "city": "cape-town"},
+    {"year": 1777, "place": "Tasmania", "lat": -43.3, "lon": 147.3, "note": "Adventure Bay, Van Diemen's Land."},
+    {"year": 1777, "place": "Tonga", "lat": -21.14, "lon": -175.2, "note": "Three months in Tonga.", "city": "nukualofa"},
+    {"year": 1777, "place": "Huahine", "lat": -16.73, "lon": -151.0, "note": "Mai is brought home and settled with a house, horses and a musket."},
+    {"year": 1778, "place": "Kauaʻi, Hawaiʻi", "lat": 21.96, "lon": -159.67, "note": "The first Europeans known to reach Hawaiʻi.", "date": "January 1778"},
+    {"year": 1778, "place": "Nootka Sound", "lat": 49.6, "lon": -126.6, "note": "A month among the Mowachaht; sea-otter furs bought for trinkets.", "date": "March 1778"},
+    {"year": 1778, "place": "Prince William Sound", "lat": 60.6, "lon": -146.8, "note": "Following the coast north-west, hoping for a passage."},
+    {"year": 1778, "place": "Icy Cape", "lat": 70.33, "lon": -161.86, "note": "A wall of ice ends the search at 70°44′N.", "date": "18 August 1778"},
+    {"year": 1779, "place": "Kealakekua Bay, Hawaiʻi", "lat": 19.48, "lon": -155.93, "note": "Cook is killed in a fight on the shore.", "date": "14 February 1779"},
+    {"year": 1779, "place": "Petropavlovsk, Kamchatka", "lat": 53.02, "lon": 158.65, "note": "Clerke dies of tuberculosis after a second try at the ice.", "date": "August 1779", "city": "petropavlovsk"},
+    {"year": 1779, "place": "Macau", "lat": 22.19, "lon": 113.54, "note": "Sea-otter furs fetch huge prices in China: the start of a fur trade.", "city": "macau"},
+    {"year": 1780, "place": "The Nore", "lat": 51.48, "lon": 0.8, "note": "Home after four years and three months.", "date": "October 1780"}
+  ],
+  "informs": [
+    {"region": "hawaii", "level": 4, "homeKnows": "1779..1780", "confidence": "high"},
+    {"region": "pacific-northwest", "level": 3, "homeKnows": 1780, "confidence": "high"},
+    {"region": "alaska", "level": 3, "homeKnows": 1780, "confidence": "high"},
+    {"region": "pacific-north", "level": 4, "homeKnows": 1780, "confidence": "high"},
+    {"region": "bering-sea", "level": 4, "homeKnows": 1780, "confidence": "high"}
+  ]
+}

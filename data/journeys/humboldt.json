@@ -28,7 +28,7 @@
     {"year": 1804, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "Home with 60,000 specimens; publishing takes thirty years.", "date": "August 1804", "city": "paris"}
   ],
   "informs": [
-    {"region": "amazon", "level": 3, "homeKnows": "1805..1810", "confidence": "high"},
+    {"region": "orinoco", "level": 4, "homeKnows": "1805..1810", "confidence": "high", "note": "The Orinoco and the Casiquiare"},
     {"region": "andes-north", "level": 4, "homeKnows": "1805..1810", "confidence": "high"}
   ]
 }

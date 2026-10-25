@@ -1,0 +1,24 @@
+{
+  "id": "dominguez-escalante",
+  "name": "Domínguez and Escalante in the Great Basin",
+  "traveler": "Francisco Atanasio Domínguez and Silvestre Vélez de Escalante",
+  "years": "1776",
+  "kind": "traveler",
+  "viewpoint": "europe",
+  "summary": "Two Franciscan friars and eight companions set out from Santa Fe to find a road to the new missions of California. Guided by Ute people, they cross the Colorado Plateau and reach Utah Lake before snow turns them back; their map is the first of the Great Basin.",
+  "source": "escalante-diario",
+  "confidence": "high",
+  "stops": [
+    {"year": 1776, "place": "Santa Fe", "lat": 35.69, "lon": -105.94, "note": "Ten men set out, the same summer the thirteen colonies declare independence.", "city": "santa-fe", "date": "29 July 1776"},
+    {"year": 1776, "place": "Dolores River", "lat": 37.47, "lon": -108.5, "note": "Through the San Juan Mountains."},
+    {"year": 1776, "place": "Utah Lake", "lat": 40.2, "lon": -111.8, "note": "Guided by the Ute (Timpanogos), they reach a fertile valley and promise a mission.", "date": "September 1776"},
+    {"year": 1776, "place": "Sevier Desert", "lat": 39.0, "lon": -112.5, "note": "Snow; they cast lots and decide to turn back."},
+    {"year": 1776, "place": "Crossing of the Fathers", "lat": 37.0, "lon": -111.4, "note": "A ford of the Colorado River they cut steps down to.", "date": "November 1776"},
+    {"year": 1777, "place": "Zuni Pueblo", "lat": 35.07, "lon": -108.85, "note": "A welcome rest.", "city": "hawikuh"},
+    {"year": 1777, "place": "Santa Fe", "lat": 35.69, "lon": -105.94, "note": "Home after five months and 2,800 km.", "city": "santa-fe", "date": "2 January 1777"}
+  ],
+  "informs": [
+    {"region": "colorado-plateau", "level": "=3", "homeKnows": 1777, "confidence": "high", "note": "The first map of the Colorado Plateau"},
+    {"region": "great-basin", "level": "=1", "homeKnows": 1777, "confidence": "medium", "note": "Utah Lake and word of the lands beyond"}
+  ]
+}

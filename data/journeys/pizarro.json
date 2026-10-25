@@ -1,0 +1,25 @@
+{
+  "id": "pizarro",
+  "name": "Pizarro and the fall of the Inca",
+  "traveler": "Francisco Pizarro and his brothers",
+  "years": "1531–1533",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "With 168 men, Pizarro lands in an Inca empire torn by civil war and smallpox. At Cajamarca he seizes the emperor Atahualpa, takes a room full of gold as ransom, executes him anyway and marches on to Cuzco. The news, and the gold, reach Seville in 1534.",
+  "source": "xerez",
+  "confidence": "high",
+  "stops": [
+    {"year": 1531, "place": "Panama", "lat": 8.95, "lon": -79.53, "note": "Three ships and about 180 men sail south.", "city": "panama-viejo", "date": "January 1531"},
+    {"year": 1532, "place": "Tumbes", "lat": -3.57, "lon": -80.45, "note": "The Inca town they saw in 1528 is in ruins from the civil war.", "city": "tumbes"},
+    {"year": 1532, "place": "San Miguel de Piura", "lat": -5.2, "lon": -80.63, "note": "The first Spanish town in Peru."},
+    {"year": 1532, "place": "Cajamarca", "lat": -7.16, "lon": -78.51, "note": "Atahualpa is ambushed and seized in the square; thousands of his attendants are killed.", "city": "cajamarca", "date": "16 November 1532"},
+    {"year": 1533, "place": "Pachacamac", "lat": -12.26, "lon": -76.9, "note": "Hernando Pizarro loots the great oracle shrine.", "from": "Cajamarca"},
+    {"year": 1533, "place": "Cajamarca", "lat": -7.16, "lon": -78.51, "note": "Atahualpa, his ransom paid, is garrotted.", "city": "cajamarca", "date": "26 July 1533"},
+    {"year": 1533, "place": "Jauja", "lat": -11.78, "lon": -75.5, "note": "Along the Inca royal road, the Qhapaq Ñan."},
+    {"year": 1533, "place": "Cuzco", "lat": -13.53, "lon": -71.97, "note": "The Inca capital is entered and stripped of its gold.", "city": "cuzco", "date": "15 November 1533"}
+  ],
+  "informs": [
+    {"region": "peru", "level": 4, "homeKnows": 1534, "confidence": "high"},
+    {"region": "andes-north", "level": 4, "homeKnows": 1534, "confidence": "medium"}
+  ]
+}

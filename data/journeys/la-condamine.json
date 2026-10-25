@@ -1,0 +1,22 @@
+{
+  "id": "la-condamine",
+  "name": "La Condamine down the Amazon",
+  "traveler": "Charles-Marie de La Condamine",
+  "years": "1743",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "After eight years measuring a degree of latitude near Quito to settle the shape of the Earth, La Condamine goes home the long way: down the Amazon on a raft and canoes, mapping the river with compass and astronomy. He brings rubber and curare to the notice of European science.",
+  "source": "la-condamine",
+  "confidence": "high",
+  "stops": [
+    {"year": 1743, "place": "Quito", "lat": -0.22, "lon": -78.51, "note": "The French geodesic mission has measured an arc of the meridian.", "city": "quito", "date": "May 1743"},
+    {"year": 1743, "place": "Pongo de Manseriche", "lat": -4.47, "lon": -77.57, "note": "Shoots the gorge of the Marañón on a raft.", "by": "river"},
+    {"year": 1743, "place": "Napo–Amazon confluence", "lat": -3.32, "lon": -72.6, "note": "Fixes positions by the stars as he goes.", "by": "river"},
+    {"year": 1743, "place": "Mouth of the Rio Negro", "lat": -3.14, "lon": -59.9, "note": "Hears of a channel linking the Amazon to the Orinoco.", "by": "river", "city": "manaus"},
+    {"year": 1743, "place": "Belém", "lat": -1.45, "lon": -48.5, "note": "Measures the tides at the mouth.", "by": "river", "date": "September 1743", "city": "belem"},
+    {"year": 1744, "place": "Cayenne", "lat": 4.93, "lon": -52.33, "note": "On to French Guiana and home to Paris in 1745."}
+  ],
+  "informs": [
+    {"region": "amazon-river", "level": 4, "homeKnows": 1745, "confidence": "high", "note": "La Condamine's map of the river"}
+  ]
+}

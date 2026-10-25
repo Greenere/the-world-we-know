@@ -1,0 +1,25 @@
+{
+  "id": "cabeza-de-vaca",
+  "name": "Cabeza de Vaca across the continent",
+  "traveler": "Álvar Núñez Cabeza de Vaca, Estevanico, Dorantes and Castillo",
+  "years": "1528–1536",
+  "kind": "traveler",
+  "viewpoint": "europe",
+  "summary": "Of the 300 men of the Narváez expedition stranded in Florida, four survive eight years as castaways, traders and healers among the peoples of the Gulf coast and the Southwest, and walk to Mexico. Their stories of rich cities to the north send Coronado out to look for them.",
+  "source": "cabeza-de-vaca",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1528, "place": "Tampa Bay", "lat": 27.8, "lon": -82.6, "note": "Narváez lands 300 men and sends the ships away.", "date": "April 1528"},
+    {"year": 1528, "place": "Apalachee Bay", "lat": 30.1, "lon": -84.2, "note": "Starving, they build rafts of horsehide and sail west along the coast.", "by": "sea"},
+    {"year": 1528, "place": "Galveston Island", "lat": 29.25, "lon": -94.9, "note": "The rafts are wrecked; the Karankawa take in the survivors.", "by": "sea", "date": "November 1528"},
+    {"year": 1534, "place": "Rio Grande", "lat": 26.4, "lon": -98.6, "note": "After six years as slaves and traders, four men escape inland."},
+    {"year": 1535, "place": "La Junta de los Ríos", "lat": 29.56, "lon": -104.4, "note": "Famous as healers, they are passed from village to village."},
+    {"year": 1536, "place": "Sonora valley", "lat": 29.5, "lon": -110.4, "note": "Villagers tell of great towns to the north and give them turquoise and emeralds."},
+    {"year": 1536, "place": "Culiacán", "lat": 24.8, "lon": -107.4, "note": "They meet Spanish slavers, to the soldiers' astonishment.", "date": "April 1536"},
+    {"year": 1536, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "note": "Received by the viceroy; their report sets off the search for Cíbola.", "city": "tenochtitlan", "date": "July 1536"}
+  ],
+  "informs": [
+    {"region": "gulf-of-mexico", "level": 4, "homeKnows": "1537..1542", "confidence": "medium"},
+    {"region": "north-america-west", "level": 1, "homeKnows": "1537..1542", "confidence": "medium", "note": "Rumours of rich towns to the north"}
+  ]
+}

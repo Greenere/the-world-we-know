@@ -2,7 +2,7 @@
 
 A browser atlas of how much of the world a civilization knew in any year, and of the travellers who pushed that knowledge outward. Fog covers what a viewpoint did not know; it lifts when a traveller's news reaches home, and it comes back when knowledge is lost.
 
-This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): four cultural viewpoints (Mediterranean / Europe, China, the Islamic world, Polynesia) plus Humanity, 500 BCE to today (Humanity back to 70,000 years ago), 31 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 23 inventions that changed how people saw the world, 339 cities and 196 regions.
+This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): four cultural viewpoints (Mediterranean / Europe, China, the Islamic world, Polynesia) plus Humanity, 500 BCE to today (Humanity back to 70,000 years ago), 78 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 23 inventions that changed how people saw the world, 386 cities and 221 regions.
 
 ## Run it
 
@@ -41,7 +41,7 @@ Everything the map shows is authored as plain text in `data/` and compiled by `s
 | `viewpoints.json` | Names, colours, homes over time, and the key moments on the timeline |
 | `regions.geojson` | ~190 named regions. Coarse polygons are fine: the grid is ~110 km per cell. `surface` is `land`, `sea` or `any` |
 | `knowledge.csv` | One row per change: `viewpoint, region, year, level, confidence, source, note` |
-| `journeys/<id>.json` | Stops (with optional waypoints to force a historical course) and the `informs` events: what each viewpoint learned, at what level, and when the news reached home. A stop's optional `by` (`sea`, `land`, `river`, `direct`) says how its leg was travelled, and a journey-level `by` sets the default; otherwise it is guessed from the journey's kind and the terrain. Routes are pulled taut and drawn as smooth curves that run on through waypoints and through stops the traveller passes on from |
+| `journeys/<id>.json` | Stops (with optional waypoints to force a historical course) and the `informs` events: what each viewpoint learned, at what level (or exactly what level, `"=2"`, for a sub-region held below its parent), and when the news reached home. A stop's optional `by` (`sea`, `land`, `river`, `direct`) says how its leg was travelled, and a journey-level `by` sets the default; otherwise it is guessed from the journey's kind and the terrain. Routes are pulled taut and drawn as smooth curves that run on through waypoints and through stops the traveller passes on from |
 | `cities.csv` | Founded, peak, abandoned, forgotten and rediscovered dates, tier, source, confidence, story |
 | `depictions/<kind>/<id>/` | Imagined sketches of a subject (a city, for now) through its eras: `subject.json` gives the fixed view and a sourced caption per era (and per viewpoint), beside the accepted pictures. Generated with an image API: see [docs/image-api-guide.md](docs/image-api-guide.md) |
 | `inventions.json` | Instruments and ideas (compass, printing, chronometer, satellites…): year, place of origin, `culture` (a viewpoint id or a plain name), `category`, what it changed, source, confidence |

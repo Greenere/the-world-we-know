@@ -1,0 +1,24 @@
+{
+  "id": "barentsz",
+  "name": "Barentsz in the Arctic",
+  "traveler": "Willem Barentsz and Jacob van Heemskerck",
+  "years": "1596–1597",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Seeking a north-east passage to China, a Dutch crew discovers Bear Island and Spitsbergen, then rounds the north of Novaya Zemlya and is frozen in. They are the first Europeans known to winter in the high Arctic, in a house built from driftwood; Barentsz dies on the way back in open boats.",
+  "source": "de-veer",
+  "confidence": "high",
+  "stops": [
+    {"year": 1596, "place": "Amsterdam", "lat": 52.37, "lon": 4.9, "note": "Two ships sail north.", "city": "amsterdam", "date": "May 1596"},
+    {"year": 1596, "place": "Bear Island", "lat": 74.4, "lon": 19.0, "note": "A polar bear is killed; the island is named for it."},
+    {"year": 1596, "place": "Spitsbergen", "lat": 79.8, "lon": 11.0, "note": "'Pointed mountains': the first known sighting of Svalbard.", "date": "June 1596"},
+    {"year": 1596, "place": "Ice Haven, Novaya Zemlya", "lat": 76.2, "lon": 68.3, "note": "The ship is crushed in the ice; they build a hut of driftwood.", "date": "August 1596"},
+    {"year": 1597, "place": "Novaya Zemlya", "lat": 74.5, "lon": 56.5, "note": "In June they set out in two open boats; Barentsz dies within a week.", "date": "June 1597"},
+    {"year": 1597, "place": "Kola", "lat": 68.88, "lon": 33.02, "note": "Twelve survivors reach a Dutch ship.", "date": "September 1597", "city": "kola"},
+    {"year": 1597, "place": "Amsterdam", "lat": 52.37, "lon": 4.9, "note": "Home.", "city": "amsterdam", "date": "November 1597"}
+  ],
+  "informs": [
+    {"region": "svalbard", "level": 3, "homeKnows": 1597, "confidence": "high", "note": "Barentsz"},
+    {"region": "barents-sea", "level": 3, "homeKnows": 1598, "confidence": "high"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "kublai-java",
+  "name": "The Yuan fleet to Java",
+  "traveler": "Shi Bi, Ike Mese and Gao Xing",
+  "years": "1292–1293",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "Kublai Khan sends a fleet of perhaps 1,000 ships and 20,000 men to punish the king of Singhasari, who had branded the Khan's envoy. They arrive to find him dead, are drawn into a local war, and are driven out by Raden Wijaya, who goes on to found Majapahit.",
+  "source": "yuanshi",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1292, "place": "Quanzhou", "lat": 24.87, "lon": 118.68, "note": "The fleet sails from Zaitun.", "city": "quanzhou", "date": "December 1292"},
+    {"year": 1293, "place": "Champa", "lat": 13.77, "lon": 109.22, "note": "Along the coast of Champa."},
+    {"year": 1293, "place": "Belitung", "lat": -2.87, "lon": 107.9, "note": "The fleet gathers off Belitung."},
+    {"year": 1293, "place": "Tuban, Java", "lat": -6.9, "lon": 112.05, "note": "The army lands on Java's north coast.", "date": "March 1293", "city": "tuban"},
+    {"year": 1293, "place": "Kediri", "by": "land", "lat": -7.82, "lon": 112.0, "note": "Allied with Raden Wijaya, they defeat the king of Kediri.", "city": "kediri"},
+    {"year": 1293, "place": "Trowulan (Majapahit)", "by": "land", "lat": -7.56, "lon": 112.38, "note": "Wijaya turns on them; they fight their way back to the ships.", "city": "trowulan"},
+    {"year": 1293, "place": "Quanzhou", "lat": 24.87, "lon": 118.68, "note": "Home with a third of the army lost.", "city": "quanzhou", "date": "August 1293"}
+  ],
+  "informs": [
+    {"region": "java", "level": 4, "homeKnows": 1294, "confidence": "medium"}
+  ]
+}

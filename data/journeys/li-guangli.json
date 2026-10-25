@@ -1,0 +1,23 @@
+{
+  "id": "li-guangli",
+  "name": "Li Guangli's war against Dayuan",
+  "traveler": "Li Guangli, the Ershi general",
+  "years": "104–101 BCE",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "To get the 'heavenly horses' of Ferghana, Emperor Wu sends an army 4,000 km west. The first campaign fails in the desert; the second, with 60,000 men, besieges the capital of Dayuan until its nobles kill their king and hand over the horses. Han power reaches the edge of Central Asia.",
+  "source": "hanshu",
+  "confidence": "high",
+  "stops": [
+    {"year": -104, "place": "Chang'an", "lat": 34.27, "lon": 108.95, "note": "Emperor Wu names Li Guangli 'Ershi general' after the city of Ershi, where the horses are kept.", "city": "changan"},
+    {"year": -104, "place": "Dunhuang", "lat": 40.14, "lon": 94.66, "note": "The gateway to the west.", "city": "dunhuang"},
+    {"year": -103, "place": "Yucheng", "lat": 40.3, "lon": 72.0, "note": "The first army, starved by the oasis states, turns back."},
+    {"year": -102, "place": "Dunhuang", "lat": 40.14, "lon": 94.66, "note": "A second army of 60,000 sets out.", "city": "dunhuang"},
+    {"year": -101, "place": "Ershi (Dayuan)", "lat": 40.6, "lon": 71.6, "note": "After a 40-day siege the nobles kill their king and hand over 3,000 horses."},
+    {"year": -101, "place": "Chang'an", "lat": 34.27, "lon": 108.95, "note": "The 'heavenly horses' reach the capital.", "city": "changan"}
+  ],
+  "informs": [
+    {"region": "transoxiana", "level": 4, "homeKnows": -101, "confidence": "high", "note": "The war of the Heavenly Horses against Dayuan"},
+    {"region": "zhetysu", "level": 3, "homeKnows": -101, "confidence": "medium"}
+  ]
+}

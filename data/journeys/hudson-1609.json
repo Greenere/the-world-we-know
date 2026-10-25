@@ -1,0 +1,23 @@
+{
+  "id": "hudson-1609",
+  "name": "Hudson and the Half Moon",
+  "traveler": "Henry Hudson and Robert Juet",
+  "years": "1609",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Hired by the Dutch East India Company to find a north-east passage, Hudson is turned back by ice off Norway and, against orders, sails west instead. He explores the coast from Maine to Chesapeake Bay and the river that now bears his name, opening the way to New Netherland.",
+  "source": "purchas",
+  "confidence": "high",
+  "stops": [
+    {"year": 1609, "place": "Amsterdam", "lat": 52.37, "lon": 4.9, "note": "The Half Moon sails for the North Cape.", "city": "amsterdam", "date": "April 1609"},
+    {"year": 1609, "place": "North Cape", "lat": 71.17, "lon": 25.78, "note": "Ice and a near-mutiny end the attempt to go east."},
+    {"year": 1609, "place": "Penobscot Bay", "lat": 44.2, "lon": -68.9, "note": "Across the Atlantic to the coast of Maine.", "date": "July 1609"},
+    {"year": 1609, "place": "Chesapeake Bay", "lat": 37.0, "lon": -76.0, "note": "South to the English colony's bay, without entering."},
+    {"year": 1609, "place": "Manhattan", "lat": 40.7, "lon": -74.0, "note": "Enters the great river and meets the Lenape.", "date": "September 1609", "city": "new-york"},
+    {"year": 1609, "place": "Albany", "lat": 42.65, "lon": -73.75, "note": "Upriver until the water grows shallow: no passage.", "by": "river", "city": "albany-ny"},
+    {"year": 1609, "place": "Dartmouth", "lat": 50.35, "lon": -3.58, "note": "Detained in England with his news.", "date": "November 1609"}
+  ],
+  "informs": [
+    {"region": "eastern-woodlands", "level": 3, "homeKnows": 1610, "confidence": "high", "note": "The Hudson River, with Jamestown's Virginia"}
+  ]
+}

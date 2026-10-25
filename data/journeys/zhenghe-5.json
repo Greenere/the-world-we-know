@@ -1,0 +1,26 @@
+{
+  "id": "zhenghe-5",
+  "name": "Zheng He's fifth voyage",
+  "traveler": "Zheng He",
+  "years": "1417–1419",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "Taking home the envoys of nineteen countries, the fleet sails on to Aden and down the coast of East Africa, to Mogadishu, Brava and Malindi. It comes back with lions, leopards, ostriches, zebras and giraffes.",
+  "source": "ming-shilu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1417, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The fifth fleet carries the foreign envoys home.", "city": "nanjing"},
+    {"year": 1417, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Waiting for the monsoon.", "source": "liujiagang"},
+    {"year": 1418, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "Through Calicut.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1418, "place": "Hormuz", "lat": 27.1, "lon": 56.45, "note": "Hormuz again.", "city": "hormuz"},
+    {"year": 1418, "place": "Aden", "lat": 12.78, "lon": 45.03, "note": "Adan: the king buys a giraffe and zebras to send to the emperor.", "source": "ma-huan", "city": "aden"},
+    {"year": 1418, "place": "Mogadishu", "lat": 2.04, "lon": 45.34, "note": "Mugudushu: houses of stone four or five storeys high, Fei Xin writes.", "source": "fei-xin", "city": "mogadishu"},
+    {"year": 1418, "place": "Malindi", "lat": -3.22, "lon": 40.12, "note": "Malindi's envoys had brought a giraffe to Nanjing in 1415.", "source": "ming-shilu", "city": "malindi"},
+    {"year": 1419, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The fleet returns with envoys from seventeen countries and a menagerie.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "horn", "level": 3, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "east-africa-coast", "level": 3, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "maldives", "level": 3, "homeKnows": 1419, "confidence": "medium"}
+  ]
+}

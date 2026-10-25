@@ -1,0 +1,22 @@
+{
+  "id": "onate",
+  "name": "Oñate settles New Mexico",
+  "traveler": "Juan de Oñate",
+  "years": "1598–1601",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "Oñate leads some 500 settlers, soldiers and friars with 7,000 head of livestock up the Camino Real to found the colony of New Mexico. He destroys Acoma Pueblo after a revolt and sends parties east to the plains and west to the Gulf of California.",
+  "source": "villagra",
+  "confidence": "high",
+  "stops": [
+    {"year": 1598, "place": "Santa Bárbara, Chihuahua", "lat": 26.8, "lon": -105.82, "note": "The colonists gather on the northern frontier.", "date": "January 1598"},
+    {"year": 1598, "place": "El Paso del Norte", "lat": 31.76, "lon": -106.49, "note": "Crosses the Rio Grande and claims New Mexico for Spain.", "date": "April 1598", "city": "el-paso"},
+    {"year": 1598, "place": "Ohkay Owingeh (San Juan)", "lat": 36.05, "lon": -106.07, "note": "The first Spanish capital, in a Tewa pueblo."},
+    {"year": 1599, "place": "Acoma Pueblo", "lat": 34.9, "lon": -107.58, "note": "After Acoma resists, Oñate's men storm the mesa; hundreds are killed or enslaved.", "date": "January 1599", "city": "acoma"},
+    {"year": 1601, "place": "Quivira", "lat": 38.3, "lon": -98.2, "note": "An expedition east to the Wichita villages Coronado saw."}
+  ],
+  "informs": [
+    {"region": "rio-grande-pueblos", "level": 4, "homeKnows": "1601..1605", "confidence": "high"},
+    {"region": "north-america-west", "level": 3, "homeKnows": "1601..1605", "confidence": "medium"}
+  ]
+}

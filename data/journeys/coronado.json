@@ -1,0 +1,27 @@
+{
+  "id": "coronado",
+  "name": "Coronado and the search for Cíbola",
+  "traveler": "Francisco Vázquez de Coronado",
+  "years": "1540–1542",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "An army of some 350 Spaniards and over 1,000 Indigenous allies from Mexico goes north to find the Seven Cities of Cíbola. They find the Zuni pueblos, made of adobe, not gold; a detachment is led to the rim of the Grand Canyon by Hopi guides; and the main army crosses the Great Plains to Quivira in Kansas before turning back empty-handed.",
+  "source": "castaneda",
+  "confidence": "high",
+  "stops": [
+    {"year": 1540, "place": "Compostela, New Spain", "lat": 21.23, "lon": -104.9, "note": "The army musters.", "date": "February 1540"},
+    {"year": 1540, "place": "Culiacán", "lat": 24.8, "lon": -107.4, "note": "The last Spanish town."},
+    {"year": 1540, "place": "Hawikuh (Cíbola)", "lat": 34.96, "lon": -108.87, "note": "The first Zuni town is stormed. 'Such were the curses that some hurled at Fray Marcos.'", "date": "July 1540", "city": "hawikuh"},
+    {"year": 1540, "place": "Grand Canyon", "lat": 36.06, "lon": -112.14, "note": "Hopi guides lead García López de Cárdenas to the rim; his men cannot reach the river.", "from": "Hawikuh (Cíbola)"},
+    {"year": 1540, "place": "Tiguex", "lat": 35.3, "lon": -106.55, "note": "The army winters in the Rio Grande pueblos and wages war on them.", "from": "Hawikuh (Cíbola)"},
+    {"year": 1541, "place": "Pecos Pueblo", "lat": 35.55, "lon": -105.68, "note": "A captive the Spaniards call 'the Turk' promises gold to the east.", "city": "pecos"},
+    {"year": 1541, "place": "Palo Duro Canyon", "lat": 34.95, "lon": -101.67, "note": "Out on the plains, among herds of bison and the Querecho people."},
+    {"year": 1541, "place": "Quivira", "lat": 38.3, "lon": -98.2, "note": "Grass-house villages of the Wichita, with no gold. The Turk is executed.", "date": "July 1541"},
+    {"year": 1542, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "note": "The broken expedition returns.", "city": "tenochtitlan"}
+  ],
+  "informs": [
+    {"region": "north-america-west", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
+    {"region": "great-plains", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
+    {"region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"}
+  ]
+}

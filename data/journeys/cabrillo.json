@@ -1,0 +1,23 @@
+{
+  "id": "cabrillo",
+  "name": "Cabrillo up the coast of California",
+  "traveler": "Juan Rodríguez Cabrillo and Bartolomé Ferrer",
+  "years": "1542–1543",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Three small ships from New Spain sail up an unknown coast looking for wealth and a passage to Asia. Cabrillo is the first European to enter San Diego Bay and see the coast of California; he dies of an infected wound on the Channel Islands, and his pilot Ferrer pushes on north to about Oregon.",
+  "source": "cabrillo-relacion",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1542, "place": "Navidad, New Spain", "lat": 19.2, "lon": -104.68, "note": "Three ships leave the Pacific port of Navidad.", "date": "June 1542"},
+    {"year": 1542, "place": "San Diego Bay", "lat": 32.7, "lon": -117.2, "note": "'A very good enclosed port.' The Kumeyaay meet them.", "date": "September 1542", "city": "san-diego"},
+    {"year": 1542, "place": "Channel Islands", "lat": 34.0, "lon": -119.7, "note": "Chumash towns along the coast, with plank canoes."},
+    {"year": 1542, "place": "Monterey Bay", "lat": 36.8, "lon": -121.95, "note": "Storms drive them past without seeing the bay's shelter.", "city": "monterey"},
+    {"year": 1543, "place": "San Miguel Island", "lat": 34.04, "lon": -120.4, "note": "Cabrillo dies of gangrene after a fall.", "date": "3 January 1543"},
+    {"year": 1543, "place": "Cape Blanco (Oregon)", "lat": 42.84, "lon": -124.56, "note": "Ferrer, now in command, reaches perhaps 42°N before turning back.", "confidence": "low"},
+    {"year": 1543, "place": "Navidad, New Spain", "lat": 19.2, "lon": -104.68, "note": "Home, with no gold and no passage.", "date": "April 1543"}
+  ],
+  "informs": [
+    {"region": "california", "level": 3, "homeKnows": 1543, "confidence": "high", "note": "Cabrillo"}
+  ]
+}

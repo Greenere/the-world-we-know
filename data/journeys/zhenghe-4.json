@@ -1,0 +1,28 @@
+{
+  "id": "zhenghe-4",
+  "name": "Zheng He's fourth voyage",
+  "traveler": "Zheng He",
+  "years": "1413–1415",
+  "kind": "fleet",
+  "viewpoint": "china",
+  "summary": "The fleet goes beyond India for the first time, to Hormuz at the mouth of the Persian Gulf, the great market of the western Indian Ocean. Squadrons visit the Maldives and Bengal; the interpreter Ma Huan sails on this voyage and starts the notes that become his book.",
+  "source": "ma-huan",
+  "confidence": "high",
+  "stops": [
+    {"year": 1413, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The fourth fleet sets out; Ma Huan sails as interpreter.", "city": "nanjing"},
+    {"year": 1414, "place": "Changle, Fujian", "lat": 25.96, "lon": 119.52, "note": "Waiting for the monsoon.", "source": "liujiagang"},
+    {"year": 1414, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "Through the depot at Malacca.", "city": "malacca", "source": "ma-huan"},
+    {"year": 1414, "place": "Semudera", "lat": 5.2, "lon": 97.1, "note": "Ships are detached for Bengal.", "source": "ma-huan"},
+    {"year": 1414, "place": "Galle, Ceylon", "lat": 6.03, "lon": 80.22, "note": "Ceylon again."},
+    {"year": 1414, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "Calicut, the turning point of earlier voyages.", "city": "calicut", "source": "ma-huan"},
+    {"year": 1414, "place": "Hormuz", "lat": 27.1, "lon": 56.45, "note": "The great market at the mouth of the Gulf: pearls, horses and every good of the West.", "city": "hormuz"},
+    {"year": 1414, "place": "Bengal", "lat": 22.3, "lon": 91.8, "note": "A squadron reaches Bengal, whose king sends a giraffe to the emperor.", "from": "Semudera"},
+    {"year": 1414, "place": "Maldives", "lat": 4.17, "lon": 73.51, "note": "Liushan, the 'Weak Water' islands.", "from": "Calicut"},
+    {"year": 1415, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "Home with envoys from nineteen countries.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "persian-gulf", "level": 4, "homeKnows": 1415, "confidence": "high"},
+    {"region": "arabian-sea", "level": 4, "homeKnows": 1415, "confidence": "high"},
+    {"region": "bengal", "level": 3, "homeKnows": 1415, "confidence": "medium"}
+  ]
+}

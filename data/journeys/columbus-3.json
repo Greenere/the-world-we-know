@@ -1,0 +1,22 @@
+{
+  "id": "columbus-3",
+  "name": "Columbus, third voyage",
+  "traveler": "Christopher Columbus",
+  "years": "1498–1500",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Sailing further south, Columbus reaches Trinidad and the Gulf of Paria, where the flood of fresh water from the Orinoco tells him he has found 'a very great continent'. He goes on to Hispaniola, where a royal inquiry sends him home in chains.",
+  "source": "colon-hernando",
+  "confidence": "high",
+  "stops": [
+    {"year": 1498, "place": "Sanlúcar de Barrameda", "lat": 36.78, "lon": -6.35, "note": "Six ships; three go straight to Hispaniola.", "date": "30 May 1498"},
+    {"year": 1498, "place": "Cape Verde Islands", "lat": 15.0, "lon": -23.6, "note": "South to find the equator's lands."},
+    {"year": 1498, "place": "Trinidad", "lat": 10.1, "lon": -61.0, "note": "Three hills on the horizon; he names the island for the Trinity.", "date": "31 July 1498"},
+    {"year": 1498, "place": "Gulf of Paria", "lat": 10.3, "lon": -62.0, "note": "The Orinoco's fresh water: 'I believe this is a very great continent which until today has been unknown.'", "date": "August 1498"},
+    {"year": 1498, "place": "Santo Domingo", "lat": 18.47, "lon": -69.9, "note": "The colony is in revolt.", "city": "santo-domingo"},
+    {"year": 1500, "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Arrested by Francisco de Bobadilla and shipped home in chains.", "city": "gades", "date": "November 1500"}
+  ],
+  "informs": [
+    {"region": "andes-north", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "Columbus at the Gulf of Paria; Ojeda and Vespucci"}
+  ]
+}

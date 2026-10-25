@@ -1,0 +1,22 @@
+{
+  "id": "cabot",
+  "name": "John Cabot to Newfoundland",
+  "traveler": "John Cabot (Giovanni Caboto)",
+  "years": "1497",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "A Venetian sailing for Henry VII crosses the North Atlantic in the small Matthew and lands on a coast he takes for north-east Asia, five centuries after the Norse. The cod he reports, so thick 'they could be taken with baskets', draws fishermen for centuries. He vanishes on a second voyage in 1498.",
+  "source": "hakluyt",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1497, "place": "Bristol", "lat": 51.45, "lon": -2.6, "note": "The Matthew sails with about 18 men.", "date": "May 1497"},
+    {"year": 1497, "place": "Dursey Head, Ireland", "lat": 51.6, "lon": -10.2, "note": "The last land before the crossing."},
+    {"year": 1497, "place": "Cape Bonavista, Newfoundland", "lat": 48.7, "lon": -53.1, "note": "Landfall: Cabot plants the banners of England and Venice.", "date": "24 June 1497", "confidence": "low"},
+    {"year": 1497, "place": "Grand Banks", "lat": 46.0, "lon": -51.0, "note": "Seas so full of cod they could be taken with baskets."},
+    {"year": 1497, "place": "Bristol", "lat": 51.45, "lon": -2.6, "note": "Home in 15 days; Henry VII gives him £10.", "date": "August 1497"}
+  ],
+  "informs": [
+    {"region": "vinland", "level": 3, "homeKnows": 1497, "confidence": "high", "note": "John Cabot"},
+    {"region": "north-atlantic-west", "level": 3, "homeKnows": 1498, "confidence": "high"}
+  ]
+}
