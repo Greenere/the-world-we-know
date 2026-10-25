@@ -33,6 +33,16 @@ function append(el: Node, children: Child[]) {
   }
 }
 
+/**
+ * Set an element's icon markup only when it changes. UI that updates every frame during playback must not
+ * rebuild a button's contents: a click whose press and release land on different nodes never fires.
+ */
+export function setIcon(el: HTMLElement, html: string) {
+  if (el.dataset.icon === html) return;
+  el.dataset.icon = html;
+  el.innerHTML = html;
+}
+
 export function svg(markup: string): SVGElement {
   const t = document.createElement('template');
   t.innerHTML = markup.trim();

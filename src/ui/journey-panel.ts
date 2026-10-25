@@ -5,7 +5,7 @@ import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
 import {formatRange, formatYear} from '../time';
 import type {Journey} from '../types';
-import {h} from './dom';
+import {h, setIcon} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
 
 /** Journey kinds grouped into the list's filters. */
@@ -424,7 +424,7 @@ export class JourneyPanel {
       this.viewBtns.route.setAttribute('aria-pressed', String(!s.follow));
     }
     if (this.playBtn) {
-      this.playBtn.innerHTML = s.playing ? icons.pause : icons.play;
+      setIcon(this.playBtn, s.playing ? icons.pause : icons.play);
       this.playBtn.setAttribute('aria-label', s.playing ? 'Pause journey' : 'Play journey');
     }
   }

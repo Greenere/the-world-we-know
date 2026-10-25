@@ -4,7 +4,7 @@ import {stepCount} from '../journey-geo';
 import type {State, Store} from '../state';
 import {deepScale, formatYear, mainScale, type TimeScale, yearParts} from '../time';
 import type {Moment, VpId} from '../types';
-import {h} from './dom';
+import {h, setIcon} from './dom';
 import {icons, inventionIcons} from './icons';
 
 export const SPEEDS = [0.5, 1, 2, 4];
@@ -183,7 +183,7 @@ export class Timeline {
     const p = yearParts(s.year);
     this.yearNum.textContent = p.num;
     this.yearEra.textContent = p.era;
-    this.playBtn.innerHTML = s.playing ? icons.pause : icons.play;
+    setIcon(this.playBtn, s.playing ? icons.pause : icons.play);
     this.playBtn.setAttribute('aria-label', s.playing ? 'Pause' : 'Play');
     this.playBtn.classList.toggle('playing', s.playing);
     this.setPace(this.journeyPace, s);

@@ -39,6 +39,8 @@ function swap(el: HTMLElement, key: string, content: () => Child[]) {
  */
 export class Cards {
   el: HTMLElement;
+  /** The card is a fixed frame (holding the close button) around this scrolling area. */
+  private scroller: HTMLElement;
   private body: HTMLElement;
   /** What the card shows, and through whose eyes: `kind:id|viewpoints`. */
   private key = '';
@@ -58,12 +60,15 @@ export class Cards {
     },
   ) {
     this.body = h('div.card-body');
+    this.scroller = h('div.card-scroll', this.body);
     this.el = h(
       'aside.card.panel',
+      this.scroller,
       h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => store.set({region: null, regionCell: null, city: null, invention: null}), html: icons.close}),
-      this.body,
     );
     this.el.hidden = true;
+    // Once scrolled, the text fades out under the top edge and the close button gets a backing.
+    this.scroller.addEventListener('scroll', () => this.el.classList.toggle('scrolled', this.scroller.scrollTop > 4), {passive: true});
   }
 
   update(s: State) {
@@ -92,7 +97,10 @@ export class Cards {
       }
       this.body.replaceChildren(...nodes);
       // A new subject starts at the top; a new viewpoint on the same one keeps the reader's place.
-      if (!sameSubject) this.el.scrollTop = 0;
+      if (!sameSubject) {
+        this.scroller.scrollTop = 0;
+        this.el.classList.remove('scrolled');
+      }
       this.body.classList.remove('card-enter');
       void this.body.offsetWidth;
       this.body.classList.add('card-enter');

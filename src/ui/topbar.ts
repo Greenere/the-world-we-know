@@ -4,7 +4,7 @@ import type {State, Store} from '../state';
 import {formatYear} from '../time';
 import type {VpId} from '../types';
 import {ALL_VPS} from '../types';
-import {h} from './dom';
+import {h, setIcon} from './dom';
 import {icons, sealSvg} from './icons';
 
 export class TopBar {
@@ -101,7 +101,7 @@ export class TopBar {
       b.setAttribute('aria-pressed', String(s.vps.includes(id)));
     }
     this.compareBtn.classList.toggle('active', s.compare);
-    this.globeBtn.innerHTML = s.globe ? icons.flat : icons.globe;
+    setIcon(this.globeBtn, s.globe ? icons.flat : icons.globe);
     this.globeBtn.title = s.globe ? 'Flat map' : 'Globe view';
     const vps = s.vps.map(v => this.data.vp[v]);
     const year = formatYear(s.year);
