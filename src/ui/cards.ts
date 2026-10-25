@@ -1,10 +1,10 @@
 import type {AppData} from '../data';
-import {dataUrl, nameFor, shortCitation} from '../data';
+import {dataUrl, loadPictures, nameFor, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale} from '../time';
-import type {City, Depiction, Invention, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {City, Depiction, DepictionDoc, Invention, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
@@ -15,13 +15,35 @@ export function levelName(vp: VpId, level: number) {
   return (vp === 'humanity' ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES)[level] ?? '';
 }
 
+type Child = Node | string | null | undefined | false;
+
+/**
+ * Replace an element's content only when `key` changes, and let the new content fade in. Text that changes
+ * every year (the year itself) is written directly instead, so nothing flickers while the timeline plays.
+ */
+function swap(el: HTMLElement, key: string, content: () => Child[]) {
+  if (el.dataset.k === key) return;
+  const first = el.dataset.k === undefined;
+  el.dataset.k = key;
+  el.replaceChildren(...(content().filter(Boolean) as Node[]));
+  if (first) return;
+  el.classList.remove('swap');
+  void el.offsetWidth;
+  el.classList.add('swap');
+}
+
+/**
+ * The right-hand card: a region, a city or an invention. A card is built once per subject and viewpoint;
+ * as the year changes only its year-dependent parts update in place, so it can be read and scrolled while
+ * the timeline plays.
+ */
 export class Cards {
   el: HTMLElement;
   private body: HTMLElement;
+  /** What the card shows, and through whose eyes: `kind:id|viewpoints`. */
   private key = '';
-  /** The picture plate is kept between redraws so playing through an era doesn't reload the image. */
-  private plateEl: HTMLElement | null = null;
-  private plateKey = '';
+  /** Updates the year-dependent parts of the current card. */
+  private live: ((s: State) => void) | null = null;
   private lightbox: HTMLElement | null = null;
 
   constructor(
@@ -38,7 +60,6 @@ export class Cards {
     this.body = h('div.card-body');
     this.el = h(
       'aside.card.panel',
-      {'aria-live': 'polite'},
       h('button.card-close', {type: 'button', 'aria-label': 'Close', onclick: () => store.set({region: null, regionCell: null, city: null, invention: null}), html: icons.close}),
       this.body,
     );
@@ -46,63 +67,58 @@ export class Cards {
   }
 
   update(s: State) {
-    const year = Math.round(s.year);
-    const key = `${s.city}|${s.region}|${s.regionCell}|${s.invention}|${s.vps.join()}|${s.invention ? '' : year}`;
-    if (key === this.key) return;
-    this.key = key;
-    this.el.hidden = !s.city && !s.region && !s.invention;
-    if (!s.city) {
-      this.plateEl = null;
-      this.plateKey = '';
+    const subject = s.invention ? `invention:${s.invention}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
+    this.el.hidden = !subject;
+    if (!subject) {
+      this.key = '';
+      this.live = null;
+      return;
     }
-    if (this.el.hidden) return;
-    this.body.replaceChildren();
-    if (s.invention) {
-      const x = this.data.inventionById.get(s.invention);
-      if (x) this.body.append(...this.invention(x));
-    } else if (s.city) {
-      const c = this.data.cityById.get(s.city);
-      if (c) this.body.append(...this.city(c, s));
-    } else if (s.region) {
-      const r = this.data.regionById.get(s.region);
-      if (r) this.body.append(...this.region(r, s));
+    const key = `${subject}|${s.vps.join()}`;
+    if (key !== this.key) {
+      const sameSubject = this.key.split('|')[0] === subject;
+      this.key = key;
+      this.live = null;
+      let nodes: Node[] = [];
+      if (s.invention) {
+        const x = this.data.inventionById.get(s.invention);
+        if (x) nodes = this.invention(x);
+      } else if (s.city) {
+        const c = this.data.cityById.get(s.city);
+        if (c) nodes = this.city(c, s);
+      } else if (s.region) {
+        const r = this.data.regionById.get(s.region);
+        if (r) nodes = this.region(r, s);
+      }
+      this.body.replaceChildren(...nodes);
+      // A new subject starts at the top; a new viewpoint on the same one keeps the reader's place.
+      if (!sameSubject) this.el.scrollTop = 0;
+      this.body.classList.remove('card-enter');
+      void this.body.offsetWidth;
+      this.body.classList.add('card-enter');
     }
-    this.el.scrollTop = 0;
+    this.live?.(s);
   }
 
   // ── Region ───────────────────────────────────────────────────────────────
 
   private region(r: Region, s: State): Node[] {
     const vp = s.vps[0];
-    const year = s.year;
     const cell = s.regionCell ?? -1;
-    const st = cell >= 0 ? this.field.cellState(vp, cell, year) : {level: 0, conf: 0};
-    const called = r.names.find(n => n.vp === vp && (n.from === undefined || year >= n.from) && (n.to === undefined || year <= n.to));
     const vpData = this.data.vp[vp];
+    const called = h('p.card-called');
+    const swatch = h('span.fog-swatch');
+    const level = h('strong');
+    const year = h('span');
+    const conf = h('span.conf');
     const out: Node[] = [
       h('div.card-kicker', r.surface === 'sea' ? 'Sea' : r.body ? 'Beyond Earth' : 'Region'),
       h('h2.card-title', r.name),
+      called,
+      h('div.card-status', swatch, h('span', level, vpData.special ? '' : ` to ${vpData.name}`, ' in ', year), conf),
     ];
-    if (called) {
-      out.push(
-        h(
-          'p.card-called',
-          'Called ',
-          h('em', called.name),
-          called.native ? h('span.native', ` ${called.native}`) : null,
-          ` by ${vpData.special ? 'people' : vpData.name} in ${formatYear(year)}`,
-        ),
-      );
-    }
-    out.push(
-      h(
-        'div.card-status',
-        h('span.fog-swatch', {style: `--a:${fogAlphaFor(st.level)}`}),
-        h('span', h('strong', levelName(vp, st.level)), vpData.special ? '' : ` to ${vpData.name}`, ` in ${formatYear(year)}`),
-        st.level > 0 ? h('span.conf', `${CONFIDENCE_NAMES[st.conf]} confidence`) : null,
-      ),
-    );
-    if (cell >= 0) out.push(h('h3.card-h', 'Who knew it, and when'), this.ribbons(cell, year));
+    let ribbons: SVGElement | null = null;
+    if (cell >= 0) out.push(h('h3.card-h', 'Who knew it, and when'), (ribbons = this.ribbons(cell)));
     const names = r.names.filter(n => n.vp !== '*');
     if (names.length) out.push(h('h3.card-h', 'What they called it'), namesList(this.data, names));
     const evs = this.events(r, vp);
@@ -123,6 +139,34 @@ export class Cards {
         ),
       );
     }
+    const now = ribbons?.querySelector('.rb-now') ?? null;
+    const calledYear = h('span');
+    this.live = st => {
+      const y = st.year;
+      const name = r.names.find(n => n.vp === vp && (n.from === undefined || y >= n.from) && (n.to === undefined || y <= n.to));
+      called.hidden = !name;
+      if (name) {
+        swap(called, `${name.name}|${name.native ?? ''}`, () => [
+          'Called ',
+          h('em', name.name),
+          name.native ? h('span.native', ` ${name.native}`) : null,
+          ` by ${vpData.special ? 'people' : vpData.name} in `,
+          calledYear,
+        ]);
+      }
+      calledYear.textContent = formatYear(y);
+      const state = cell >= 0 ? this.field.cellState(vp, cell, y) : {level: 0, conf: 0};
+      swatch.style.setProperty('--a', String(fogAlphaFor(state.level)));
+      swap(level, String(state.level), () => [levelName(vp, state.level)]);
+      year.textContent = formatYear(y);
+      conf.hidden = state.level === 0;
+      swap(conf, String(state.conf), () => [`${CONFIDENCE_NAMES[state.conf]} confidence`]);
+      if (now) {
+        const x = ribbonX(Math.max(-500, y));
+        now.setAttribute('x1', String(x));
+        now.setAttribute('x2', String(x));
+      }
+    };
     return out;
   }
 
@@ -148,12 +192,10 @@ export class Cards {
     });
   }
 
-  private ribbons(cell: number, year: number): SVGElement {
-    const W = 320;
-    const L = 74;
-    const row = 17;
+  private ribbons(cell: number): SVGElement {
+    const {W, L, row} = RIBBON;
     const H = ALL_VPS.length * row + 18;
-    const X = (y: number) => L + mainScale.toX(y) * (W - L - 4);
+    const X = ribbonX;
     const parts: string[] = [];
     ALL_VPS.forEach((vp, i) => {
       const vpd = this.data.vp[vp];
@@ -176,8 +218,7 @@ export class Cards {
         parts.push(`<title>${vpd.name}: ${t}</title>`);
       }
     });
-    const cx = X(Math.max(-500, year));
-    parts.push(`<line x1="${cx}" x2="${cx}" y1="0" y2="${H - 14}" class="rb-now"/>`);
+    parts.push(`<line x1="${L}" x2="${L}" y1="0" y2="${H - 14}" class="rb-now"/>`);
     for (const [y, label] of [
       [-500, '500 BCE'],
       [1000, '1000'],
@@ -215,9 +256,8 @@ export class Cards {
 
   private city(c: City, s: State): Node[] {
     const vp = s.vps[0];
-    const year = s.year;
-    const name = nameFor(c.names, vp, year, c.id)!;
-    const status = cityStatus(c, year);
+    const kicker = h('div.card-kicker');
+    const title = h('h2.card-title');
     const statusText: Record<string, string> = {
       unborn: 'Not yet founded',
       living: c.tier === 1 ? 'Great city' : c.tier === 2 ? 'City' : 'Town',
@@ -225,12 +265,9 @@ export class Cards {
       lost: 'Lost',
       rediscovered: 'Rediscovered ruin',
     };
-    const out: Node[] = [
-      h('div.card-kicker', statusText[status]),
-      h('h2.card-title', name.name, name.native && name.native !== name.name ? h('span.native', ` ${name.native}`) : null),
-    ];
-    const plate = this.plate(c, s);
-    if (plate) out.push(plate);
+    const out: Node[] = [kicker, title];
+    const plate = c.pictures ? new Plate(this.data, this.store, c, vp, (d, caption) => this.openLightbox(d, caption)) : null;
+    if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', c.story));
     const labels: Record<string, string> = {
       founded: 'Founded',
@@ -257,67 +294,19 @@ export class Cards {
     out.push(
       h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `Source: ${shortCitation(this.data.sources, c.source)} · ${c.confidence} confidence`),
     );
+    this.live = st => {
+      const status = cityStatus(c, st.year);
+      swap(kicker, status, () => [statusText[status]]);
+      const name = nameFor(c.names, vp, st.year, c.id)!;
+      swap(title, `${name.name}|${name.native ?? ''}`, () => [name.name, name.native && name.native !== name.name ? h('span.native', ` ${name.native}`) : null]);
+      plate?.show(st.year);
+    };
     return out;
   }
 
-  // ── Pictures ─────────────────────────────────────────────────────────────
-
-  /** The sketch for the current era, its caption as the current viewpoint saw it, and the other eras. */
-  private plate(c: City, s: State): HTMLElement | null {
-    const all = c.depictions;
-    if (!all?.length) return null;
-    const vp = s.vps[0];
-    const d = [...all].reverse().find(x => s.year >= x.from && (x.to === undefined || s.year <= x.to + 0.999));
-    if (!d) return null;
-    const key = `${c.id}|${d.id}|${vp}`;
-    if (key === this.plateKey && this.plateEl) return this.plateEl;
-    const fresh = this.plateKey.startsWith(`${c.id}|`);
-    this.plateKey = key;
-    const caption = d.captions?.[vp] ?? d.caption;
-    const range = `${formatYear(d.from)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
-    const el = h(
-      'figure.plate',
-      {class: fresh ? 'plate-enter' : ''},
-      h(
-        'button.plate-img',
-        {type: 'button', title: 'Enlarge', 'aria-label': `Enlarge: ${d.title}`, onclick: () => this.openLightbox(d, caption, range)},
-        h('img', {src: dataUrl(d.image), alt: `${d.title}, ${range}: imagined sketch`, decoding: 'async'}),
-        d.placeholder ? h('span.plate-tag', 'Placeholder') : null,
-      ),
-      h('figcaption.plate-cap', h('span.plate-era', d.title), h('span.plate-range', range)),
-      h('p.plate-text', caption),
-      all.length > 1
-        ? h(
-            'div.plate-eras',
-            {role: 'group', 'aria-label': 'Other eras'},
-            all.map(x =>
-              h(
-                'button.plate-era-btn',
-                {
-                  type: 'button',
-                  class: x === d ? 'active' : '',
-                  'aria-pressed': String(x === d),
-                  title: `${x.title} (${formatYear(x.from)})`,
-                  onclick: () => this.store.set({year: x.from, playing: false}),
-                },
-                h('img', {src: dataUrl(x.image), alt: '', loading: 'lazy', decoding: 'async'}),
-                h('span', formatYear(x.from)),
-              ),
-            ),
-          )
-        : null,
-      h(
-        'p.plate-src',
-        {title: d.sources.map(id => this.data.sources[id]?.citation ?? id).join('\n')},
-        `Imagined sketch${d.made?.model ? ` (${d.made.model})` : ''} · after ${d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')}`,
-      ),
-    );
-    this.plateEl = el;
-    return el;
-  }
-
-  private openLightbox(d: Depiction, caption: string, range: string) {
+  private openLightbox(d: Depiction, caption: string) {
     this.lightbox?.remove();
+    const range = eraRange(d);
     const close = () => {
       box.remove();
       document.removeEventListener('keydown', onKey, true);
@@ -334,7 +323,7 @@ export class Cards {
       {role: 'dialog', 'aria-modal': 'true', 'aria-label': d.title, onclick: (e: Event) => e.target === box && close()},
       h(
         'figure.lightbox-plate',
-        h('img', {src: dataUrl(d.image), alt: `${d.title}, ${range}: imagined sketch`}),
+        h('img', {src: dataUrl(d.img.full), alt: `${d.title}, ${range}: imagined sketch`}),
         h(
           'figcaption',
           h('div.lightbox-head', h('span.plate-era', d.title), h('span.plate-range', range), d.placeholder ? h('span.plate-tag.inline', 'Placeholder') : null),
@@ -389,6 +378,135 @@ export class Cards {
       h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `Source: ${shortCitation(this.data.sources, x.source)} · ${x.confidence} confidence`),
       h('div.inv-nav', nav(all[i - 1], 'prev'), nav(all[i + 1], 'next')),
     ];
+  }
+}
+
+const RIBBON = {W: 320, L: 74, row: 17};
+const ribbonX = (y: number) => RIBBON.L + mainScale.toX(y) * (RIBBON.W - RIBBON.L - 4);
+
+function eraRange(d: Depiction) {
+  return `${formatYear(d.from)} – ${d.to === undefined ? 'today' : formatYear(d.to)}`;
+}
+
+function eraAt(eras: Depiction[], year: number): Depiction | null {
+  for (let i = eras.length - 1; i >= 0; i--) {
+    const e = eras[i];
+    if (year >= e.from && (e.to === undefined || year < e.to + 1)) return e;
+  }
+  return null;
+}
+
+/**
+ * A city's picture for the current era. The pictures load when the card opens; when the era changes the
+ * new sketch cross-fades over the old one once it has decoded, and the caption fades with it.
+ */
+class Plate {
+  el: HTMLElement;
+  private frame: HTMLElement;
+  private cap: HTMLElement;
+  private text: HTMLElement;
+  private src: HTMLElement;
+  private strip: HTMLElement;
+  private doc: DepictionDoc | null = null;
+  private shown: Depiction | null = null;
+  private year = NaN;
+  private token = 0;
+
+  constructor(
+    private data: AppData,
+    private store: Store,
+    city: City,
+    private vp: VpId,
+    private enlarge: (d: Depiction, caption: string) => void,
+  ) {
+    this.frame = h('button.plate-img', {
+      type: 'button',
+      title: 'Enlarge',
+      onclick: () => this.shown && this.enlarge(this.shown, this.caption(this.shown)),
+    });
+    this.cap = h('figcaption.plate-cap');
+    this.text = h('p.plate-text');
+    this.strip = h('div.plate-eras', {role: 'group', 'aria-label': 'Other eras'});
+    this.src = h('p.plate-src');
+    this.el = h('figure.plate.loading', this.frame, this.cap, this.text, this.strip, this.src);
+    loadPictures(data, 'city', city.id).then(doc => {
+      if (!doc) {
+        this.el.remove();
+        return;
+      }
+      this.doc = doc;
+      this.el.classList.remove('loading');
+      this.strip.hidden = doc.eras.length < 2;
+      this.strip.replaceChildren(
+        ...doc.eras.map(x =>
+          h(
+            'button.plate-era-btn',
+            {type: 'button', 'data-id': x.id, title: `${x.title} (${formatYear(x.from)})`, onclick: () => this.store.set({year: x.from, playing: false})},
+            h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async'}),
+            h('span', formatYear(x.from)),
+          ),
+        ),
+      );
+      if (Number.isFinite(this.year)) this.show(this.year);
+    });
+  }
+
+  private caption(d: Depiction) {
+    return d.captions?.[this.vp] ?? d.caption;
+  }
+
+  show(year: number) {
+    this.year = year;
+    if (!this.doc) return;
+    const d = eraAt(this.doc.eras, year);
+    this.el.hidden = !d;
+    if (!d || d === this.shown) return;
+    const first = !this.shown;
+    this.shown = d;
+    const range = eraRange(d);
+    const caption = this.caption(d);
+    this.frame.setAttribute('aria-label', `Enlarge: ${d.title}`);
+    swap(this.cap, d.id, () => [h('span.plate-era', d.title), h('span.plate-range', range)]);
+    swap(this.text, `${d.id}|${this.vp}`, () => [caption]);
+    swap(this.src, d.id, () => [
+      `Imagined sketch${d.made?.model ? ` (${d.made.model})` : ''} · after ${d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')}`,
+    ]);
+    this.src.title = d.sources.map(id => this.data.sources[id]?.citation ?? id).join('\n');
+    for (const b of this.strip.querySelectorAll<HTMLElement>('.plate-era-btn')) {
+      const on = b.dataset.id === d.id;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    }
+    this.crossfade(d, first);
+    // Warm the neighbours so playing on into the next era doesn't wait for the network.
+    const i = this.doc.eras.indexOf(d);
+    for (const n of [this.doc.eras[i + 1], this.doc.eras[i - 1]]) if (n) new Image().src = dataUrl(n.img.card);
+  }
+
+  private crossfade(d: Depiction, first: boolean) {
+    const token = ++this.token;
+    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${d.title}, ${eraRange(d)}: imagined sketch`, decoding: 'async'});
+    const tag = d.placeholder ? h('span.plate-tag', 'Placeholder') : null;
+    const reveal = () => {
+      if (token !== this.token) return;
+      for (const old of this.frame.querySelectorAll('.plate-tag')) old.remove();
+      if (tag) this.frame.append(tag);
+      // Fade over the picture currently on top; anything older is already hidden beneath it.
+      const olds = [...this.frame.querySelectorAll<HTMLElement>('.plate-layer')].filter(x => x !== img);
+      const under = olds.pop();
+      olds.forEach(o => o.remove());
+      if (first || !under) {
+        img.classList.add('in', 'instant');
+        under?.remove();
+        return;
+      }
+      requestAnimationFrame(() => img.classList.add('in'));
+      const done = () => under.remove();
+      img.addEventListener('transitionend', done, {once: true});
+      setTimeout(done, 1600);
+    };
+    this.frame.append(img);
+    img.decode().then(reveal, reveal);
   }
 }
 

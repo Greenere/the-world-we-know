@@ -67,7 +67,8 @@ export interface Region {
 
 export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'rediscovered';
 
-/** An imagined sketch of a city in one era, with what that era was like (and how each viewpoint saw it). */
+/** An imagined sketch of a subject (a city, for now) in one era, with what that era was like and how each
+ * viewpoint saw it. Fetched per subject when its card opens. */
 export interface Depiction {
   id: string;
   from: number;
@@ -77,9 +78,15 @@ export interface Depiction {
   captions?: Partial<Record<VpId, string>>;
   sources: string[];
   confidence: string;
-  image: string;
+  img: {thumb: string; card: string; full: string};
   placeholder?: boolean;
   made?: {provider?: string; model?: string; date?: string};
+}
+
+export interface DepictionDoc {
+  kind: 'city';
+  id: string;
+  eras: Depiction[];
 }
 
 export interface City {
@@ -95,7 +102,8 @@ export interface City {
   names: NameEntry[];
   journeys: string[];
   region: number | null;
-  depictions?: Depiction[];
+  /** Number of era pictures in depictions/city/<id>.json. */
+  pictures?: number;
 }
 
 export type Body = 'orbit' | 'moon' | 'moon-orbit';

@@ -2154,10 +2154,6 @@ kbd {
   margin: 10px 0 4px;
 }
 
-.plate-enter {
-  animation: plate-in 0.5s ease both;
-}
-
 @keyframes plate-in {
   from {
     opacity: 0.25;
@@ -2167,21 +2163,65 @@ kbd {
 .plate-img {
   position: relative;
   display: block;
-  width: 100%;
+  /* Content-box sizing so the 3:2 picture sits inside the 5px mount. */
+  box-sizing: content-box;
+  width: calc(100% - 10px);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   padding: 5px;
   border-radius: 1px;
-  background: var(--paper-2);
-  box-shadow: inset 0 0 0 1px var(--rule-2), inset 0 0 0 4px var(--paper-2), inset 0 0 0 4.6px var(--rule);
+  background: #fbf8f0;
+  box-shadow: inset 0 0 0 1px var(--rule-2), inset 0 0 0 4px #fbf8f0, inset 0 0 0 4.6px var(--rule);
   cursor: zoom-in;
 }
 
-.plate-img img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
+/* Sketches stack in the frame; a new era fades in over the old one, which is removed once it is covered. */
+.plate-layer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  /* A positioned <img> keeps its own size unless told; fill the mount. */
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   object-fit: cover;
+  /* The sketches carry their own paper; multiplying onto a near-white mount keeps it from darkening. */
   mix-blend-mode: multiply;
-  filter: sepia(0.18) contrast(1.02);
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.plate-layer.in {
+  opacity: 1;
+}
+
+.plate-layer.instant {
+  transition: none;
+}
+
+.plate.loading .plate-img {
+  background: linear-gradient(100deg, #fbf8f0 40%, #f4eedf 50%, #fbf8f0 60%) 0 0 / 300% 100%;
+  animation: plate-wait 1.6s linear infinite;
+}
+
+@keyframes plate-wait {
+  to {
+    background-position: -300% 0;
+  }
+}
+
+/* Text that changes with the year fades in place rather than blinking. */
+.swap {
+  animation: swap-in 0.7s ease both;
+}
+
+@keyframes swap-in {
+  from {
+    opacity: 0.2;
+  }
+}
+
+.card-enter {
+  animation: swap-in 0.35s ease both;
 }
 
 .plate-tag {
@@ -2312,8 +2352,6 @@ kbd {
   width: 100%;
   max-height: calc(100vh - 220px);
   object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: sepia(0.18) contrast(1.02);
 }
 
 .lightbox-plate figcaption {

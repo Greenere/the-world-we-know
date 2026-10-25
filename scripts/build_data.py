@@ -696,67 +696,118 @@ def load_cities(sources, grid: Grid):
 
 
 DEPICTION_FORMATS = (".webp", ".png", ".jpg", ".jpeg")
+# The sizes the site serves: the strip of eras, the card, and the enlarged view.
+DEPICTION_SIZES = {"thumb": 200, "card": 720, "full": 1280}
+DEPICTION_KINDS = ("city",)  # later: "stop", "region", "invention"
 
 
-def load_depictions(sources, vp_ids, city_ids) -> dict[str, list[dict]]:
-    """Imagined sketches of a city through its eras (data/depictions.json). The image for each is the
-    first of data/depictions/<id>.webp|png|jpg, else <id>.placeholder.svg; an optional <id>.json beside it
-    records how it was made. Images are copied to public/data/depictions/."""
-    path = DATA / "depictions.json"
-    if not path.exists():
-        return {}
-    doc = json.loads(path.read_text(encoding="utf-8"))
-    src_dir = DATA / "depictions"
-    out_dir = OUT / "depictions"
-    if out_dir.exists():
-        shutil.rmtree(out_dir)
-    out_dir.mkdir(parents=True)
-    by_city: dict[str, list[dict]] = defaultdict(list)
-    seen = set()
-    for k, d in enumerate(doc.get("depictions", [])):
-        where = f"depictions.json[{k}] {d.get('id')!r}"
-        for key in ("id", "city", "from", "title", "caption", "sources", "confidence", "prompt"):
-            if key not in d:
-                fail(f"{where}: missing {key}")
-        if d.get("id") in seen:
-            fail(f"{where}: duplicate id")
-        seen.add(d.get("id"))
-        if d.get("city") not in city_ids:
-            fail(f"{where}: unknown city {d.get('city')!r}")
-        if d.get("city") not in doc.get("views", {}):
-            fail(f"{where}: no view described for {d.get('city')!r} in 'views'")
-        if "to" in d and d["to"] < d["from"]:
-            fail(f"{where}: 'to' is before 'from'")
-        for vp in d.get("captions", {}):
-            if vp not in vp_ids:
-                fail(f"{where}: caption for unknown viewpoint {vp!r}")
-        for sid in d.get("sources") or [None]:
-            check_ref(where, sid, d.get("confidence"), sources)
-        if d.get("base") and d["base"] not in {x.get("id") for x in doc["depictions"]}:
-            fail(f"{where}: base {d['base']!r} is not a depiction")
-        image = next((src_dir / f"{d['id']}{ext}" for ext in DEPICTION_FORMATS if (src_dir / f"{d['id']}{ext}").exists()), None)
-        placeholder = image is None
-        if placeholder:
-            image = src_dir / f"{d['id']}.placeholder.svg"
-            if not image.exists():
-                fail(f"{where}: no image (looked for {d['id']}.webp/.png/.jpg or .placeholder.svg in data/depictions/)")
-                continue
-        shutil.copyfile(image, out_dir / image.name)
-        rec = {k: d[k] for k in ("id", "from", "to", "title", "caption", "captions", "sources", "confidence") if k in d}
-        rec["image"] = f"depictions/{image.name}"
-        if placeholder:
-            rec["placeholder"] = True
-        made = src_dir / f"{d['id']}.json"
-        if made.exists() and not placeholder:
-            m = json.loads(made.read_text(encoding="utf-8"))
-            rec["made"] = {k: m[k] for k in ("provider", "model", "date") if k in m}
-        by_city[d["city"]].append(rec)
-    for city, lst in by_city.items():
-        lst.sort(key=lambda r: r["from"])
-        for a, b in zip(lst, lst[1:]):
+def depiction_image(src: Path, out_dir: Path, era: str) -> dict[str, str]:
+    """Write the three served sizes of one picture (skipping those already newer than the source)."""
+    from PIL import Image
+
+    out = {}
+    if src.suffix == ".svg":
+        dst = out_dir / f"{era}.svg"
+        shutil.copyfile(src, dst)
+        return {k: dst.name for k in DEPICTION_SIZES}
+    img = None
+    for size, width in DEPICTION_SIZES.items():
+        dst = out_dir / f"{era}.{size}.webp"
+        out[size] = dst.name
+        if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
+            continue
+        if img is None:
+            img = Image.open(src).convert("RGB")
+        im = img if img.width <= width else img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
+        im.save(dst, "WEBP", quality=72 if size == "thumb" else 80, method=6)
+    return out
+
+
+def load_depictions(sources, vp_ids, subjects: dict[str, set]) -> dict[str, dict[str, int]]:
+    """Imagined sketches of a subject (a city, for now) through its eras.
+
+    data/depictions/style.json            the drawing style every picture shares
+    data/depictions/<kind>/<id>/subject.json
+                                          the fixed view, and one entry per era (caption, sources, prompt)
+    data/depictions/<kind>/<id>/<era>.webp|png|jpg  the accepted picture (or <era>.placeholder.svg)
+    data/depictions/<kind>/<id>/<era>.json          how it was made
+
+    Writes public/data/depictions/<kind>/<id>.json (fetched when the card opens) and the pictures in three
+    sizes under public/data/depictions/<kind>/<id>/. Returns {kind: {id: number of eras}} for the indexes.
+    """
+    root = DATA / "depictions"
+    out_root = OUT / "depictions"
+    counts: dict[str, dict[str, int]] = defaultdict(dict)
+    if not (root / "style.json").exists():
+        fail("data/depictions/style.json is missing")
+    written = set()
+    for subject_file in sorted(root.glob("*/*/subject.json")):
+        kind, sid = subject_file.parent.parent.name, subject_file.parent.name
+        where = f"depictions/{kind}/{sid}"
+        if kind not in DEPICTION_KINDS:
+            fail(f"{where}: unknown kind {kind!r} (supported: {', '.join(DEPICTION_KINDS)})")
+            continue
+        if sid not in subjects[kind]:
+            fail(f"{where}: unknown {kind} {sid!r}")
+            continue
+        doc = json.loads(subject_file.read_text(encoding="utf-8"))
+        if not doc.get("view"):
+            fail(f"{where}: describe the fixed 'view' every era is drawn from")
+        out_dir = out_root / kind / sid
+        out_dir.mkdir(parents=True, exist_ok=True)
+        eras = []
+        ids = [e.get("id") for e in doc.get("eras", [])]
+        for k, e in enumerate(doc.get("eras", [])):
+            w = f"{where} eras[{k}] {e.get('id')!r}"
+            for key in ("id", "from", "title", "caption", "sources", "confidence", "prompt"):
+                if key not in e:
+                    fail(f"{w}: missing {key}")
+            if ids.count(e.get("id")) > 1:
+                fail(f"{w}: duplicate id")
+            if "to" in e and e["to"] < e["from"]:
+                fail(f"{w}: 'to' is before 'from'")
+            if e.get("base") and e["base"] not in ids:
+                fail(f"{w}: base {e['base']!r} is not an era of {sid}")
+            for vp in e.get("captions", {}):
+                if vp not in vp_ids:
+                    fail(f"{w}: caption for unknown viewpoint {vp!r}")
+            for src_id in e.get("sources") or [None]:
+                check_ref(w, src_id, e.get("confidence"), sources)
+            folder = subject_file.parent
+            image = next((folder / f"{e['id']}{x}" for x in DEPICTION_FORMATS if (folder / f"{e['id']}{x}").exists()), None)
+            placeholder = image is None
+            if placeholder:
+                image = folder / f"{e['id']}.placeholder.svg"
+                if not image.exists():
+                    fail(f"{w}: no picture (looked for {e['id']}.webp/.png/.jpg or .placeholder.svg)")
+                    continue
+            files = depiction_image(image, out_dir, e["id"])
+            written.update(out_dir / f for f in files.values())
+            rec = {k: e[k] for k in ("id", "from", "to", "title", "caption", "captions", "sources", "confidence") if k in e}
+            rec["img"] = {size: f"depictions/{kind}/{sid}/{name}" for size, name in files.items()}
+            if placeholder:
+                rec["placeholder"] = True
+            made = folder / f"{e['id']}.json"
+            if made.exists() and not placeholder:
+                m = json.loads(made.read_text(encoding="utf-8"))
+                rec["made"] = {k: m[k] for k in ("provider", "model", "date") if k in m}
+            eras.append(rec)
+        eras.sort(key=lambda r: r["from"])
+        for a, b in zip(eras, eras[1:]):
             if a.get("to", math.inf) >= b["from"]:
-                fail(f"depictions.json: {a['id']} and {b['id']} overlap in time")
-    return by_city
+                fail(f"{where}: eras {a['id']} and {b['id']} overlap in time")
+        if eras:
+            write_json(f"depictions/{kind}/{sid}.json", {"kind": kind, "id": sid, "eras": eras})
+            written.add(out_root / kind / f"{sid}.json")
+            counts[kind][sid] = len(eras)
+    # Drop anything left from subjects or eras that no longer exist.
+    if out_root.exists():
+        for f in sorted(out_root.rglob("*"), reverse=True):
+            if f.is_file() and f not in written:
+                f.unlink()
+            elif f.is_dir() and not any(f.iterdir()):
+                f.rmdir()
+    return counts
 
 
 INVENTION_CATEGORIES = ("navigation", "measurement", "mapping", "communication", "transport", "imaging")
@@ -936,12 +987,12 @@ def main() -> int:
             doc["hidden"] = True
         region_docs.append(doc)
 
-    depictions = load_depictions(sources, vp_ids, {c["id"] for c in cities})
+    pictured = load_depictions(sources, vp_ids, {"city": {c["id"] for c in cities}})
     city_docs = []
     for c in cities:
         doc = {k: v for k, v in c.items() if k != "mid"}
-        if c["id"] in depictions:
-            doc["depictions"] = depictions[c["id"]]
+        if c["id"] in pictured["city"]:
+            doc["pictures"] = pictured["city"][c["id"]]
         doc["names"] = names.get(("city", c["id"]), [])
         doc["journeys"] = sorted(city_journeys.get(c["id"], []))
         doc["region"] = int(primary[c["cell"]]) if primary[c["cell"]] != 0xFFFF else None

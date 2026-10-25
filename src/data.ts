@@ -1,6 +1,7 @@
 import type {
   Beyond,
   City,
+  DepictionDoc,
   FogDoc,
   GridDoc,
   Invention,
@@ -15,6 +16,7 @@ import type {
 import {ALL_VPS} from './types';
 
 export interface AppData {
+  version: string;
   viewpoints: Viewpoint[];
   vp: Record<VpId, Viewpoint>;
   regions: Region[];
@@ -62,6 +64,7 @@ export async function loadData(): Promise<AppData> {
   ]);
   const fog = Object.fromEntries(fogs.map(f => [f.vp, f])) as Record<VpId, FogDoc>;
   return {
+    version: v,
     viewpoints,
     vp: Object.fromEntries(viewpoints.map(x => [x.id, x])) as Record<VpId, Viewpoint>,
     regions,
@@ -79,6 +82,23 @@ export async function loadData(): Promise<AppData> {
     fog,
     beyond,
   };
+}
+
+const pictureDocs = new Map<string, Promise<DepictionDoc | null>>();
+
+/** The era pictures for one subject, fetched once and shared. */
+export function loadPictures(data: AppData, kind: 'city', id: string): Promise<DepictionDoc | null> {
+  const key = `${kind}/${id}`;
+  let p = pictureDocs.get(key);
+  if (!p) {
+    p = get<DepictionDoc>(`depictions/${key}.json`, data.version).catch(err => {
+      console.warn(err);
+      pictureDocs.delete(key);
+      return null;
+    });
+    pictureDocs.set(key, p);
+  }
+  return p;
 }
 
 export function decodeBase64(text: string): Uint8Array {

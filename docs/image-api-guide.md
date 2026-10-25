@@ -36,64 +36,86 @@ Snapshot from October 2026. Prices change often, so check the provider's own pag
 
 3. Open a new terminal (or `source ~/.zshrc`), and restart Claude Code so it sees the variable.
 
+   Or put the same lines (without `export`) in a `.env` file at the repo root. It is git-ignored, and the script reads it when the variable isn't already set, so no restart is needed.
+
 The script reads only `OPENAI_API_KEY` or `GEMINI_API_KEY`. It sends nothing else.
 
 ## 3. How the data fits together
 
-`data/depictions.json` has three parts.
+Pictures are organised **by subject**: one folder for each thing that has pictures. Today the only kind is a city; journey stops, regions and inventions can become kinds later, with no change to the layout.
 
-**`style`.** One paragraph shared by every picture: ink on laid paper, hatching, a sparing wash, no text. Keep it fixed, so the whole atlas looks like one notebook.
+```
+data/depictions/
+  style.json                     the drawing style every picture shares
+  city/
+    constantinople/
+      subject.json               the fixed view, and one entry per era
+      byzantion.webp             the accepted picture for an era (1536 px)
+      byzantion.json             how it was made: provider, model, date, prompt
+      new-rome.webp
+      …
+  _candidates/                   generated candidates awaiting review (git-ignored)
+```
 
-**`views`.** For each city, where the artist stands and what is where in the frame. Every era of that city is drawn from this one view, so the pictures line up when you step through time.
+**`style.json`** holds one paragraph shared by every picture: an explorer's field-sketchbook page, with pencil underdrawing, quick ink, uneven washes, edges fading into paper, and no writing. Keep it fixed so the whole atlas looks like one notebook.
 
-**`depictions`.** One entry per era:
+**`subject.json`** has two parts:
+- **`view`** says where the artist stands and what is where in the frame. Every era of the subject is drawn from this one view, so the pictures line up when you step through time.
+- **`eras`** has one entry per era:
 
 | Field | Meaning |
 |---|---|
-| `id` | `<city>-<era>`, for example `constantinople-ottoman`. It also names the image file |
-| `city` | City id from `cities.csv` |
-| `from`, `to` | Years the era covers. Leave out `to` for an era that runs to today. Eras of one city must not overlap |
+| `id` | Short era id, unique within the subject (`ottoman`). It also names the picture file |
+| `from`, `to` | Years the era covers. Leave out `to` for an era that runs to today. Eras must not overlap |
 | `title` | Short name of the era ("Ottoman Istanbul") |
-| `caption` | 1–3 sentences on the city in that era, for everyone |
+| `caption` | 1–3 sentences on the subject in that era, for everyone |
 | `captions` | Optional, per viewpoint: how `china`, `islam`, … knew it (Fulin 拂菻, al-Qustantiniyya) |
 | `sources`, `confidence` | Source ids from `sources.csv`. The build checks them like every other fact |
 | `prompt` | What to draw for this era: the year, what stands, what is gone, the boats on the water |
-| `base` | Optional: the earlier era to redraw from. The model edits that image, which keeps the same view |
+| `base` | Optional: the earlier era to redraw from. The model edits that picture, which keeps the same view |
 
-**Images** go in `data/depictions/`. For each depiction, the build takes the first file it finds:
-1. `<id>.webp`, `.png` or `.jpg`: an accepted image;
-2. otherwise `<id>.placeholder.svg`: shown with a "Placeholder" tag.
+**Pictures.** For each era, the build takes the first of `<era>.webp`, `.png` or `.jpg`. If none exists, it falls back to `<era>.placeholder.svg`, shown with a "Placeholder" tag. The optional `<era>.json` note supplies the model name the card shows.
 
-An optional `<id>.json` beside the image records the provider, model and date. The card shows the model name.
+**What the site gets.** `npm run data` writes `public/data/depictions/<kind>/<id>.json`, which the card fetches only when it opens. It also writes each picture in three sizes beside it:
 
-## 4. Workflow for one city
+| Size | Width | About | Used for |
+|---|---|---|---|
+| `<era>.thumb.webp` | 200 px | 3 KB | the strip of eras |
+| `<era>.card.webp` | 720 px | 60 KB | the picture on the card |
+| `<era>.full.webp` | 1280 px | 200 KB | the enlarged view, loaded only when opened |
+
+The city index only records how many pictures a city has, so `cities.json` doesn't grow as pictures are added. Sizes are regenerated only when a source picture changes.
+
+## 4. Workflow for one subject
 
 ```sh
 # See exactly what will be sent
-uv run --project scripts python scripts/generate_images.py --only constantinople-byzantion --dry-run
+uv run --project scripts python scripts/generate_images.py --only city/constantinople/byzantion --dry-run
 
-# Generate 3 candidates for the first era (no base: drawn from text alone)
-uv run --project scripts python scripts/generate_images.py --provider openai --only constantinople-byzantion --count 3
-uv run --project scripts python scripts/generate_images.py --provider gemini --only constantinople-byzantion --count 3
+# Generate candidates for the first era (no base: drawn from text alone)
+uv run --project scripts python scripts/generate_images.py --model gpt-image-2.5-flare --only city/constantinople/byzantion --count 2
+uv run --project scripts python scripts/generate_images.py --provider gemini --only city/constantinople/byzantion --count 2
 ```
 
-Candidates land in `data/depictions/_candidates/`, which is never committed. Each `.webp` has a full-size `.png` and a `.json` note beside it. Open them, check them against the list in §5, and accept the best:
+`--only` takes a subject (`city/constantinople`) or single eras (`city/constantinople/ottoman`), comma-separated. Candidates land in `data/depictions/_candidates/`, each `.webp` with a full-size `.png` and a `.json` note beside it. Open them, check them against the list in §5, and accept the best:
 
 ```sh
-uv run --project scripts python scripts/generate_images.py --accept data/depictions/_candidates/constantinople-byzantion__openai__20261025T120000-1.webp
+uv run --project scripts python scripts/generate_images.py --accept data/depictions/_candidates/city__constantinople__byzantion__gpt-image-2.5-flare__20261025T181134-ab12.webp
 ```
 
-Then the next era. An era with a `base` is drawn as an edit of the accepted base image, so accept the eras **in order**: Byzantion, then New Rome, Justinian, and so on. Running without `--only` generates every era that has no accepted image yet but whose base has one.
+Then the next era. An era with a `base` is drawn as an edit of the accepted base picture, so accept the eras **in order**. Running without `--only` generates every era that has no accepted picture yet but whose base has one.
 
-When the city is done:
+When the subject is done:
 
 ```sh
-npm run data        # picks up the new images (placeholders drop out)
+npm run data        # makes the served sizes (placeholders drop out)
 npm run dev         # open ?city=constantinople and step through the eras
 npm run deploy      # when happy
 ```
 
-Commit `data/depictions/<id>.webp` and `<id>.json`. Each image is about 100–250 KB at 1536 px wide.
+Commit `<era>.webp` and `<era>.json` in the subject's folder. Each is about 200–300 KB at 1536 px.
+
+**The pilot.** Constantinople's eight eras were drawn with `gpt-image-2.5-flare` (OpenAI), two candidates per era, each era an edit of the one before. It took 18 calls in all, including the comparison runs. OpenAI sometimes answers "no access to model" for a request that works seconds later; the script retries that, along with rate limits and server errors.
 
 ## 5. Reviewing a picture
 
@@ -111,13 +133,15 @@ Reject a candidate if any of these fail:
 
 When an era keeps failing, fix the `prompt` (say what to leave out, name the landmark and where it stands) rather than accepting a near miss.
 
-## 6. Adding another city
+## 6. Adding another subject
 
-1. Add a `views.<city>` paragraph: where the artist stands, what is left, centre and right, and the foreground.
-2. Add one depiction per era, with real turning points as era boundaries (a founding, a conquest, a great building, a fire, a railway). Most cities need 3–6.
-3. Write the captions first and source them. Then write the prompts from the captions.
-4. Optionally add placeholder SVGs so the card works before generation. Otherwise the build fails on a missing image.
+1. Create `data/depictions/city/<city-id>/subject.json`. The id must match `cities.csv`.
+2. Write the `view`: where the artist stands, what is left, centre and right, and the foreground. If the light matters, say where the sun is.
+3. Add one era per turning point (a founding, a conquest, a great building, a fire, a railway). Most cities need 3–6. Write the captions first and source them; then write the prompts from the captions. Give every era after the first a `base`.
+4. Optionally add `<era>.placeholder.svg` files so the card works before generation. Otherwise the build fails on a missing picture.
 5. Generate, review and accept in order, as in §4.
+
+Other kinds (journey stops, regions) need a few lines in the build (`DEPICTION_KINDS` in `scripts/build_data.py`) and a place on their card. The folder layout and the generator already work for them.
 
 ## 7. Troubleshooting
 
