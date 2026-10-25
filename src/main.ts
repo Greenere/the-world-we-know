@@ -101,6 +101,17 @@ class App {
   private flightUntil = 0;
   private urlTimer = 0;
   private uiNodes: HTMLElement[] = [];
+  private highlightFor: number | null = null;
+  private highlightMask: Uint8Array | null = null;
+
+  /** A region and every region inside it, by index: so Africa outlines the whole continent. */
+  private regionMask(id: string): Uint8Array {
+    const mask = new Uint8Array(this.data.regions.length);
+    this.data.regions.forEach((r, i) => {
+      if (r.id === id || r.within?.includes(id)) mask[i] = 1;
+    });
+    return mask;
+  }
 
   constructor(
     private data: AppData,
@@ -331,13 +342,17 @@ class App {
 
     const st = this.store.state;
     const highlight = st.region ? this.data.regionIndex.get(st.region) ?? null : null;
+    if (highlight !== this.highlightFor) {
+      this.highlightFor = highlight;
+      this.highlightMask = highlight === null ? null : this.regionMask(st.region!);
+    }
     const sight = geo ? this.sight(geo) : null;
     const fogKey = `${st.vps.join()}|${Math.round(st.year * 2)}|${highlight}|${st.journey}|${geo ? Math.round(st.progress * 40) : 0}`;
     let seen: Float32Array | null = null;
     if (fogKey !== this.fogKey) {
       this.fogKey = fogKey;
       seen = sight ? sight.at(st.progress) : null;
-      this.field.setView(st.vps, st.year, highlight, new Set(this.data.viewpoints.filter(v => v.oral).map(v => v.id)), seen);
+      this.field.setView(st.vps, st.year, this.highlightMask, new Set(this.data.viewpoints.filter(v => v.oral).map(v => v.id)), seen);
     }
     const fogChanged = this.field.step(dt, this.tau);
     const visChanged = this.model.updateVisibility(st, now, sight ? sight.seen : null);

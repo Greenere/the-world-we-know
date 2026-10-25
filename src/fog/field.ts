@@ -99,7 +99,8 @@ export class FogField {
   }
 
   /** `seen` is how clearly the traveller on the open journey has seen each cell so far (0–1), or null. */
-  setView(vps: VpId[], year: number, highlightRegion: number | null, oral: Set<VpId>, seen: Float32Array | null) {
+  /** `highlight` marks, by region index, the regions to outline (a region and every region inside it). */
+  setView(vps: VpId[], year: number, highlight: Uint8Array | null, oral: Set<VpId>, seen: Float32Array | null) {
     const {grid, target} = this;
     const a = this.levelsFor(vps[0], year);
     const b = vps[1] ? this.levelsFor(vps[1], year) : a;
@@ -112,7 +113,8 @@ export class FogField {
       target[o] = fogAmount(a.level[c], land, coastal);
       target[o + 1] = fogAmount(b.level[c], land, coastal);
       target[o + 2] = Math.max(uncertainty(a.conf[c], oralA), uncertainty(b.conf[c], oralB));
-      target[o + 3] = highlightRegion !== null && grid.region[c] === highlightRegion ? 1 : 0;
+      const r = grid.region[c];
+      target[o + 3] = highlight && r !== 0xffff && highlight[r] ? 1 : 0;
       target[o + SEEN] = seen ? seen[c] : 0;
     }
     this.settled = false;

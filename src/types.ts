@@ -58,6 +58,8 @@ export interface Region {
   label: [number, number] | null;
   cells: number;
   parents: string[];
+  /** Every larger region holding most of this one's cells (Sahara → Africa; ice sheet → Greenland). */
+  within: string[];
   names: NameEntry[];
   events: Partial<Record<VpId | '*', RegionEvent[]>>;
   journeys: string[];

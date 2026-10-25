@@ -357,6 +357,7 @@ def assign_cells(grid: Grid, regions: list[Region]):
             if r.geom.distance(pt) <= (4.0 if kind_land else 3.0):
                 member[c].append(r.idx)
                 r.cells = np.append(r.cells, c)
+    fill_container_gaps(grid, regions, member)
     primary = np.full(n, 0xFFFF, dtype=np.uint16)
     for c in range(n):
         vis = [i for i in member[c] if not regions[i].hidden]
@@ -366,6 +367,77 @@ def assign_cells(grid: Grid, regions: list[Region]):
     if uncovered:
         warn(f"{uncovered} cells lie outside every named region (open ocean or remote islands)")
     return member, primary
+
+
+def containment(regions: list[Region], share: float = 0.8) -> dict[int, list[int]]:
+    """For each visible region, the larger visible regions that hold at least `share` of its cells."""
+    sets = {r.idx: set(int(c) for c in r.cells) for r in regions if not r.hidden and r.body is None and len(r.cells)}
+    out: dict[int, list[int]] = defaultdict(list)
+    for i, a in sets.items():
+        for k, b in sets.items():
+            if i != k and len(b) > len(a) and len(a & b) >= share * len(a):
+                out[i].append(k)
+    return out
+
+
+def fill_container_gaps(grid: Grid, regions: list[Region], member: list[list[int]]):
+    """Land a continent holds but none of its regions covers (the gaps between the Sahara and the Sahel, say)
+    would otherwise stand alone as scattered pieces of "Africa", with only the continent's broad knowledge.
+    Such cells join the region most of their neighbours belong to, spreading inward until no gap is left."""
+    within = containment(regions)
+    held: dict[int, int] = defaultdict(int)
+    for i, outs in within.items():
+        for k in outs:
+            held[k] += 1
+    containers = {k for k, cnt in held.items() if cnt >= 3}
+    def smallest(c):
+        vis = [i for i in member[c] if not regions[i].hidden and regions[i].body is None]
+        return min(vis, key=lambda i: regions[i].area) if vis else None
+    total = 0
+    for _ in range(60):
+        adds = []
+        for c in range(len(member)):
+            if not grid.land[c]:
+                continue
+            s = smallest(c)
+            if s is None or s not in containers:
+                continue
+            votes: dict[int, int] = defaultdict(int)
+            for j in grid.neighbors[c]:
+                t = smallest(j)
+                # A neighbour's region qualifies if it sits inside the same container and takes land.
+                if t is not None and t not in containers and s in within.get(t, []) and regions[t].surface != "sea":
+                    votes[t] += 1
+            if votes:
+                adds.append((c, max(votes, key=lambda i: (votes[i], -regions[i].area))))
+        if not adds:
+            break
+        for c, i in adds:
+            member[c].append(i)
+            regions[i].cells = np.append(regions[i].cells, c)
+        total += len(adds)
+    # Islands off a continent's regions (no land neighbours) join the nearest one, looking a few rings out.
+    for c in range(len(member)):
+        if not grid.land[c]:
+            continue
+        s = smallest(c)
+        if s is None or s not in containers:
+            continue
+        seen, frontier = {c}, [c]
+        for _ in range(6):
+            nxt = [j for f in frontier for j in grid.neighbors[f] if j not in seen]
+            seen.update(nxt)
+            hits = [t for j in nxt if (t := smallest(j)) is not None and t not in containers
+                    and s in within.get(t, []) and regions[t].surface != "sea"]
+            if hits:
+                t = max(set(hits), key=hits.count)
+                member[c].append(t)
+                regions[t].cells = np.append(regions[t].cells, c)
+                total += 1
+                break
+            frontier = nxt
+    if total:
+        print(f"    {total} land cells between regions joined their neighbours")
 
 
 # ── Knowledge ──────────────────────────────────────────────────────────────
@@ -1140,6 +1212,7 @@ def main() -> int:
             if s.get("city") and s["city"] not in known_cities:
                 fail(f"journeys/{j['id']}.json: stop {s.get('place')!r} names unknown city {s['city']!r}")
 
+    within_all = containment(regions)
     region_docs = []
     for r in regions:
         evs = {}
@@ -1162,6 +1235,7 @@ def main() -> int:
             "id": r.id, "name": r.name, "surface": r.surface,
             "label": [round(r.label[0], 2), round(r.label[1], 2)] if r.label else None,
             "cells": int(len(r.cells)), "parents": parents,
+            "within": [regions[k].id for k in within_all.get(r.idx, [])],
             "names": names.get(("region", r.id), []),
             "events": evs, "journeys": sorted(region_journeys.get(r.id, [])),
         }
