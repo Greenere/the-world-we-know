@@ -152,6 +152,7 @@ export class JourneyPanel {
   }
 
   private journeyList(): Node[] {
+    this.vpFilter = null; // always open on every viewpoint's journeys
     const all = this.data.journeys;
     const chips = (cls: string, label: string, items: {id: string | null; label: string; n: number; color?: string}[], current: string | null, set: (id: string | null) => void) =>
       h(
