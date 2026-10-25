@@ -1025,3 +1025,107 @@ humanity,moon,1966,3,high,luna-surveyor,Luna 9 and Surveyor 1 land softly
 *,moon,1959,2,high,luna-surveyor,
 *,moon,1966,3,high,luna-surveyor,
 *,moon,1969,5,high,nasa-apollo11,
+# ── Finer regions: parts of a coarse region reached much later than the rest ──
+# Each child region sits inside its parent. "=n" rows hold it at its true level while the parent's
+# earlier rows describe only the part already known; a plain row releases it once it was reached.
+# Where that happened after 1900, "*" rows also hold back the shared modern map.
+# Greenland
+europe,greenland-northwest,-500,=0,high,vinland-sagas,
+europe,greenland-northwest,1000..1100,=2,low,vinland-sagas,Norse hunters in the Norðrseta around Disko Bay
+europe,greenland-northwest,1408..1500,=1,low,hoc,The Norse colonies fall silent after 1408
+europe,greenland-northwest,1585..1587,=2,high,hoc,Davis sails up the west coast to 72°N
+europe,greenland-northwest,1616,3,high,mills-polar,Baffin charts the coast to Smith Sound
+europe,greenland-north,-500,=0,high,mills-polar,
+europe,greenland-north,1616,=1,high,mills-polar,Baffin sights the entrance to Smith Sound
+europe,greenland-north,1818,=2,high,mills-polar,John Ross meets the Inughuit (the 'Arctic Highlanders')
+europe,greenland-north,1853..1876,=3,high,mills-polar,"Kane, Hall and Nares chart the coasts of Smith Sound and Kane Basin"
+europe,greenland-north,1892..1900,4,high,mills-polar,Peary crosses the ice cap and rounds Greenland's northern tip
+europe,greenland-northeast,-500,=0,high,mills-polar,
+europe,greenland-northeast,1607,=1,medium,mills-polar,Henry Hudson sights the coast near 73°N
+europe,greenland-northeast,1822..1823,=3,high,mills-polar,"Scoresby, then Clavering and Sabine, chart the coast"
+europe,greenland-northeast,1906..1908,4,high,mills-polar,The Danmark Expedition maps the last unknown coast
+*,greenland-northeast,1900,=3,high,mills-polar,
+*,greenland-northeast,1906..1908,4,high,mills-polar,
+europe,greenland-southeast,-500,=0,high,vinland-sagas,
+europe,greenland-southeast,985..986,=1,medium,vinland-sagas,The Norse sail past the ice-choked east coast
+europe,greenland-southeast,1829..1830,3,high,mills-polar,Graah's umiak voyage charts the south-east coast
+# Arctic Canada
+europe,sverdrup-islands,-500,=0,high,mills-polar,
+europe,sverdrup-islands,1852..1853,=1,high,mills-polar,Belcher and Inglefield glimpse the northern channels
+europe,sverdrup-islands,1875..1876,=2,high,mills-polar,Nares charts the north coast of Ellesmere Island
+europe,sverdrup-islands,1898..1902,3,high,mills-polar,Sverdrup's Fram expedition finds and charts the islands
+*,sverdrup-islands,1900,=2,high,mills-polar,
+*,sverdrup-islands,1902,=3,high,mills-polar,
+*,sverdrup-islands,1950,5,medium,hoc,
+# Siberian Arctic
+europe,taymyr,-500,=0,high,hoc,
+europe,taymyr,1610..1620,=1,medium,hoc,Traders from Mangazeya reach the Taymyr by sea
+europe,taymyr,1739..1742,3,high,mills-polar,The Great Northern Expedition charts the coast; Chelyuskin reaches Asia's northernmost cape
+china,taymyr,-500,=0,high,hoc,
+china,taymyr,1843..1852,2,medium,haiguo-tuzhi,
+europe,new-siberian-islands,-500,=0,high,mills-polar,
+europe,new-siberian-islands,1712,=1,medium,mills-polar,Cossacks hear of land beyond the sea ice
+europe,new-siberian-islands,1773,=2,high,mills-polar,Ivan Lyakhov reaches the islands over the ice
+europe,new-siberian-islands,1809..1811,3,high,mills-polar,Hedenström charts the islands
+humanity,new-siberian-islands,-70000,=0,high,pitulko-2004,
+humanity,new-siberian-islands,-6400..-6000,4,medium,pitulko-2004,Hunters camp on Zhokhov Island
+europe,severnaya-zemlya,-500,=0,high,mills-polar,
+europe,severnaya-zemlya,1913,=1,high,mills-polar,Vilkitsky's icebreakers sight unknown land
+europe,severnaya-zemlya,1930..1932,3,high,mills-polar,Ushakov and Urvantsev winter on the islands and map them
+*,severnaya-zemlya,1900,=0,high,mills-polar,
+*,severnaya-zemlya,1913,=1,high,mills-polar,
+*,severnaya-zemlya,1930..1932,3,high,mills-polar,
+humanity,severnaya-zemlya,-70000,=0,high,mills-polar,
+humanity,severnaya-zemlya,1930..1932,4,high,mills-polar,The first people to live on the islands
+europe,franz-josef-land,-500,=0,high,mills-polar,
+europe,franz-josef-land,1873,3,high,mills-polar,The ice-bound Tegetthoff drifts to an unknown archipelago
+humanity,franz-josef-land,-70000,=0,high,mills-polar,
+humanity,franz-josef-land,1873,3,high,mills-polar,
+# Australia
+europe,australia-east,-500,=0,high,tasman,The Dutch chart the north and west; the east coast stays unseen
+europe,australia-south,-500,=0,high,tasman,
+europe,australia-south,1627,=2,high,tasman,Thijssen and Nuyts sail along the western Great Australian Bight
+europe,australia-south,1802,3,high,hoc,Flinders and Baudin chart the south coast
+europe,tasmania,-500,=0,high,tasman,
+europe,tasmania,1642..1643,=2,high,tasman,Tasman sights and names Van Diemen's Land
+europe,tasmania,1798..1799,3,high,hoc,Bass and Flinders sail around it and prove it an island
+humanity,tasmania,-70000,=0,low,clarkson-2017,
+humanity,tasmania,-41000..-39000,5,medium,draft,People walk in while it is joined to the mainland
+europe,australia-desert,-500,=0,high,tasman,
+europe,australia-desert,1840..1841,=1,high,hoc,Eyre skirts the deserts' southern edge
+europe,australia-desert,1873..1876,4,high,hoc,"Warburton, Forrest and Giles cross the western deserts"
+# Alaska and Labrador
+europe,alaska-arctic,-500,=0,high,mills-polar,
+europe,alaska-arctic,1778,=1,high,cook-journals,Cook is turned back by the ice at Icy Cape
+europe,alaska-arctic,1826..1837,3,high,mills-polar,Beechey reaches Point Barrow; Dease and Simpson chart the coast
+europe,alaska-interior,-500,=0,high,hoc,
+europe,alaska-interior,1842..1844,=2,high,hoc,Zagoskin travels the lower Yukon
+europe,alaska-interior,1883,3,high,hoc,Schwatka rafts down the Yukon
+europe,labrador-interior,-500,=0,high,hoc,
+europe,labrador-interior,1838..1842,=1,medium,hoc,Hudson's Bay Company posts on Ungava Bay
+europe,labrador-interior,1893..1894,3,high,hoc,A. P. Low surveys the interior
+# Antarctica
+europe,antarctica-west-coast,-500,=0,high,headland,
+europe,antarctica-west-coast,1774,=1,high,cook-journals,Cook turns back at the ice edge near 71°S
+europe,antarctica-west-coast,1929..1935,3,high,headland,Byrd and Ellsworth fly over and sledge into the coast
+*,antarctica-west-coast,1900,=1,high,headland,
+*,antarctica-west-coast,1929..1935,=3,high,headland,
+*,antarctica-west-coast,1957,4,high,headland,
+humanity,antarctica-west-coast,1895,=0,high,headland,
+humanity,antarctica-west-coast,1929..1934,3,high,headland,
+europe,weddell-coast,-500,=0,high,headland,
+europe,weddell-coast,1823,=1,high,headland,Weddell sails to 74°S in open water and sees no land
+europe,weddell-coast,1904..1912,3,high,headland,Bruce finds Coats Land; Filchner reaches the Luitpold Coast
+*,weddell-coast,1900,=1,high,headland,
+*,weddell-coast,1904..1912,=3,high,headland,
+*,weddell-coast,1957,4,high,headland,
+humanity,weddell-coast,1895,=0,high,headland,
+humanity,weddell-coast,1955..1957,4,high,headland,The first bases on the Weddell coast
+europe,dronning-maud-land,-500,=0,high,headland,
+europe,dronning-maud-land,1820,=1,high,headland,Bellingshausen sights the ice shelf
+europe,dronning-maud-land,1929..1931,3,high,headland,Norwegian flights chart the coast
+*,dronning-maud-land,1900,=1,high,headland,
+*,dronning-maud-land,1929..1931,=3,high,headland,
+*,dronning-maud-land,1957,4,high,headland,
+humanity,dronning-maud-land,1895,=0,high,headland,
+humanity,dronning-maud-land,1949..1952,4,high,headland,The Norwegian–British–Swedish expedition winters at Maudheim
