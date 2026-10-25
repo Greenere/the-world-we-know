@@ -1,0 +1,28 @@
+name: Build
+
+# Checks that the data and the site build. Deploying is done locally with
+# `npm run deploy`, which publishes to https://greenere.github.io/the-world-we-know/.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: astral-sh/setup-uv@v6
+      - run: npm ci
+      # Validates every source, confidence and journey, then writes public/data.
+      - run: npm run data
+      - run: npm run build

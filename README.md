@@ -12,7 +12,7 @@ npm run data     # Python build step (uses uv); downloads Natural Earth once
 npm run dev      # http://localhost:5173
 ```
 
-`npm run data` needs [uv](https://docs.astral.sh/uv/); it creates its own Python environment with `h3` and `shapely`. `npm run build` type-checks and writes a static site to `dist/`. Pushing to `main` builds and deploys it to GitHub Pages (`.github/workflows/pages.yml`; set Pages to "GitHub Actions" in the repo settings).
+`npm run data` needs [uv](https://docs.astral.sh/uv/); it creates its own Python environment with `h3`, `shapely` and `scipy`. `npm run build` type-checks and writes a static site to `dist/`. `npm run deploy` builds with the base path `/the-world-we-know/` and publishes `dist/` into a sibling checkout of `Greenere.github.io`, live at https://greenere.github.io/the-world-we-know/. Pushes to `main` run a build check (`.github/workflows/build.yml`).
 
 ## Links
 
