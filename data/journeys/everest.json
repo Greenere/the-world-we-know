@@ -1,0 +1,22 @@
+{
+  "id": "everest",
+  "name": "Hillary and Tenzing Norgay on Everest",
+  "traveler": "Edmund Hillary and Tenzing Norgay",
+  "years": "1953",
+  "kind": "mountaineering",
+  "viewpoint": "humanity",
+  "summary": "A British expedition led by John Hunt, carried by hundreds of porters and Sherpa climbers, puts two men on the highest point on Earth: Tenzing Norgay, a Sherpa, and Edmund Hillary, a beekeeper from New Zealand.",
+  "source": "hunt-everest",
+  "confidence": "high",
+  "stops": [
+    {"year": 1953, "place": "Kathmandu", "lat": 27.7, "lon": 85.32, "note": "The expedition sets out on foot with some 350 porters.", "date": "March 1953"},
+    {"year": 1953, "place": "Namche Bazaar", "lat": 27.805, "lon": 86.71, "note": "The heart of Sherpa country."},
+    {"year": 1953, "place": "Tengboche", "lat": 27.836, "lon": 86.764, "note": "Weeks of acclimatization below the monastery."},
+    {"year": 1953, "place": "Base Camp", "lat": 28.0, "lon": 86.85, "note": "A route is forced through the Khumbu Icefall.", "date": "April 1953"},
+    {"year": 1953, "place": "South Col", "lat": 27.973, "lon": 86.93, "note": "Tom Bourdillon and Charles Evans turn back about 100 metres below the summit.", "date": "26 May 1953"},
+    {"year": 1953, "place": "Summit of Chomolungma", "lat": 27.988, "lon": 86.925, "note": "At 11:30 Hillary and Tenzing stand on the summit. The news reaches London on the morning of the coronation, 2 June.", "date": "29 May 1953"}
+  ],
+  "informs": [
+    {"region": "everest", "level": 5, "homeKnows": 1953, "confidence": "high", "note": "The highest point on Earth"}
+  ]
+}

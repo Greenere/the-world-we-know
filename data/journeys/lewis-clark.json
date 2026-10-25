@@ -1,0 +1,26 @@
+{
+  "id": "lewis-clark",
+  "name": "Lewis and Clark's Corps of Discovery",
+  "traveler": "Meriwether Lewis, William Clark, Sacagawea and York",
+  "years": "1804–1806",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "A U.S. Army company sent by Jefferson to find a water route to the Pacific and to map the lands bought from France. Guided and helped by many Native nations, among them the Shoshone woman Sacagawea, they reach the Pacific and come back with maps, specimens and the news that no easy route exists.",
+  "source": "lewis-clark-journals",
+  "confidence": "high",
+  "stops": [
+    {"year": 1804, "place": "Camp Dubois", "lat": 38.80, "lon": -90.10, "note": "About 45 men start up the Missouri.", "date": "May 1804"},
+    {"year": 1804, "place": "Council Bluff", "by": "river", "lat": 41.40, "lon": -96.00, "note": "First council with Oto and Missouria leaders.", "date": "August 1804"},
+    {"year": 1804, "place": "Fort Mandan", "by": "river", "lat": 47.30, "lon": -101.40, "note": "Winter among the Mandan and Hidatsa; Sacagawea and Toussaint Charbonneau join."},
+    {"year": 1805, "place": "Great Falls of the Missouri", "by": "river", "lat": 47.50, "lon": -111.30, "note": "A month to haul the boats around the falls.", "date": "June 1805"},
+    {"year": 1805, "place": "Lemhi Pass", "lat": 44.97, "lon": -113.40, "note": "They cross the Continental Divide; the Shoshone chief turns out to be Sacagawea's brother.", "date": "August 1805"},
+    {"year": 1805, "place": "Lolo Trail", "lat": 46.60, "lon": -114.60, "note": "Near starvation crossing the Bitterroot Mountains in snow."},
+    {"year": 1805, "place": "Weippe Prairie", "lat": 46.40, "lon": -115.90, "note": "The Nez Perce feed them and keep their horses."},
+    {"year": 1805, "place": "Fort Clatsop", "by": "river", "lat": 46.13, "lon": -123.88, "note": "'Ocian in view! O! the joy.' Winter on the Pacific coast.", "date": "November 1805"},
+    {"year": 1806, "place": "St Louis", "by": "river", "lat": 38.63, "lon": -90.20, "note": "Back after 28 months, long given up for dead.", "date": "September 1806"}
+  ],
+  "informs": [
+    {"region": "great-plains", "level": 4, "homeKnows": "1806..1814", "confidence": "high"},
+    {"region": "north-america-west", "level": 3, "homeKnows": "1806..1814", "confidence": "high"}
+  ]
+}

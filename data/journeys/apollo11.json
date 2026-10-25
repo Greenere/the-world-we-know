@@ -1,0 +1,24 @@
+{
+  "id": "apollo11",
+  "name": "Apollo 11",
+  "traveler": "Neil Armstrong, Buzz Aldrin and Michael Collins",
+  "years": "1969",
+  "kind": "spaceflight",
+  "viewpoint": "humanity",
+  "summary": "Eight days, 1.5 million kilometres, and the first people to walk on another world. Collins circles the Moon alone while Armstrong and Aldrin spend about two and a half hours outside on the surface.",
+  "source": "nasa-apollo11",
+  "confidence": "high",
+  "space": "moon",
+  "stops": [
+    {"year": 1969, "place": "Launch Complex 39A, Florida", "lat": 28.573, "lon": -80.649, "note": "A Saturn V lifts off at 13:32 UTC.", "date": "16 July 1969"},
+    {"year": 1969, "place": "Earth orbit", "note": "One and a half orbits, then the third stage fires toward the Moon over the Pacific.", "date": "16 July 1969", "body": "orbit"},
+    {"year": 1969, "place": "Lunar orbit", "note": "Apollo 11 slips into orbit behind the Moon, out of radio contact.", "date": "19 July 1969", "body": "moon-orbit"},
+    {"year": 1969, "place": "Tranquility Base", "lat": 0.674, "lon": 23.473, "note": "At 20:17 UTC: 'The Eagle has landed.'", "date": "20 July 1969", "body": "moon"},
+    {"year": 1969, "place": "The Sea of Tranquility", "lat": 0.674, "lon": 23.473, "note": "At 02:56 UTC Armstrong steps onto the surface; Aldrin follows.", "date": "21 July 1969", "body": "moon"},
+    {"year": 1969, "place": "Lunar orbit", "note": "Eagle lifts off and rejoins Collins in Columbia.", "date": "21 July 1969", "body": "moon-orbit"},
+    {"year": 1969, "place": "Splashdown, Pacific Ocean", "lat": 13.32, "lon": -169.15, "note": "The USS Hornet recovers the crew.", "date": "24 July 1969"}
+  ],
+  "informs": [
+    {"region": "moon", "level": 5, "homeKnows": 1969, "confidence": "high", "note": "The first people on another world"}
+  ]
+}

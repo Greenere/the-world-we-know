@@ -1,0 +1,24 @@
+{
+  "id": "livingstone",
+  "name": "Livingstone crosses Africa",
+  "traveler": "David Livingstone and his Makololo companions",
+  "years": "1853–1856",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "A Scottish missionary-doctor, with men lent by the Makololo chief Sekeletu, walks from the upper Zambezi to the Atlantic, then back across the whole continent to the Indian Ocean. Along the way he is shown Mosi-oa-Tunya, which he names Victoria Falls.",
+  "source": "livingstone-travels",
+  "confidence": "high",
+  "stops": [
+    {"year": 1853, "place": "Linyanti", "lat": -18.05, "lon": 23.90, "note": "Sekeletu provides 27 men for the journey west."},
+    {"year": 1854, "place": "Upper Zambezi", "lat": -14.50, "lon": 23.00, "note": "Fever almost every week."},
+    {"year": 1854, "place": "Luanda", "lat": -8.84, "lon": 13.23, "note": "Reaches the Atlantic, exhausted, and turns back to bring his companions home.", "date": "May 1854", "city": "luanda"},
+    {"year": 1855, "place": "Linyanti", "lat": -18.05, "lon": 23.90, "note": "Back with his companions, as promised, a year later.", "date": "September 1855"},
+    {"year": 1855, "place": "Mosi-oa-Tunya (Victoria Falls)", "lat": -17.92, "lon": 25.86, "note": "'The smoke that thunders.' He names it after his queen.", "date": "November 1855"},
+    {"year": 1856, "place": "Tete", "by": "river", "lat": -16.16, "lon": 33.59, "note": "A Portuguese outpost on the lower Zambezi."},
+    {"year": 1856, "place": "Quelimane", "by": "river", "lat": -17.88, "lon": 36.89, "note": "The Indian Ocean: the first recorded crossing of southern Africa by a European.", "date": "May 1856"}
+  ],
+  "informs": [
+    {"region": "zambezi", "level": 3, "homeKnows": 1857, "confidence": "high", "note": "Missionary Travels"},
+    {"region": "congo", "level": 2, "homeKnows": 1857, "confidence": "medium"}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "mansamusa",
+  "name": "Mansa Musa's hajj",
+  "traveler": "Mansa Musa of Mali",
+  "years": "1324–1325",
+  "kind": "pilgrim",
+  "viewpoint": "islam",
+  "summary": "The king of Mali crosses the Sahara to Mecca with a caravan of thousands and so much gold that its price in Cairo stays low for years. Cairo's chroniclers write Mali into the Islamic world's geography, and within fifteen years a crowned African king appears on Mediterranean charts.",
+  "source": "al-umari",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1324, "place": "Niani", "lat": 11.4, "lon": -8.4, "note": "The caravan leaves the capital of Mali. Niani is one candidate for its site; the capital has not been located for certain.", "confidence": "low"},
+    {"year": 1324, "place": "Walata", "lat": 17.27, "lon": -7.0, "note": "The last town before the desert.", "city": "walata"},
+    {"year": 1324, "place": "Tuat", "lat": 27.87, "lon": -0.29, "note": "Oases of the central Sahara."},
+    {"waypoint": true, "lat": 28.4, "lon": 10.0},
+    {"waypoint": true, "lat": 29.4, "lon": 25.0},
+    {"year": 1324, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "He gives away and spends so much gold that its value in Cairo falls for years, al-Umari reports.", "city": "cairo"},
+    {"waypoint": true, "lat": 29.9, "lon": 33.4},
+    {"waypoint": true, "lat": 28.0, "lon": 35.6},
+    {"waypoint": true, "lat": 24.4, "lon": 38.3},
+    {"year": 1324, "place": "Mecca", "lat": 21.42, "lon": 39.83, "note": "Performs the hajj.", "city": "mecca"},
+    {"year": 1325, "place": "Cairo", "by": "land", "lat": 30.04, "lon": 31.24, "note": "Out of money, he borrows from Cairo's merchants at high interest for the journey home.", "city": "cairo"},
+    {"waypoint": true, "lat": 26.0, "lon": 16.0},
+    {"waypoint": true, "lat": 19.5, "lon": 6.5},
+    {"year": 1325, "place": "Gao", "lat": 16.27, "lon": 0.04, "note": "Mali's general has taken Songhay's capital; Musa visits.", "city": "gao"},
+    {"year": 1325, "place": "Timbuktu", "lat": 16.77, "lon": -3.0, "note": "Commissions the Djinguereber mosque, said to be designed by the Andalusian poet Abu Ishaq es-Saheli.", "city": "timbuktu"},
+    {"year": 1325, "place": "Niani", "lat": 11.4, "lon": -8.4, "note": "Home.", "confidence": "low"}
+  ],
+  "informs": [
+    {"region": "bilad-al-sudan", "level": 4, "homeKnows": 1324, "confidence": "high", "note": "Mali described in Cairo"},
+    {"region": "sahara", "level": 4, "homeKnows": 1324, "confidence": "medium"},
+    {"viewpoint": "europe", "region": "bilad-al-sudan", "level": 2, "homeKnows": 1339, "confidence": "medium", "source": "dulcert", "note": "'Rex Melly' appears on Dulcert's chart; the Catalan Atlas of 1375 shows Musa holding a gold nugget"}
+  ]
+}

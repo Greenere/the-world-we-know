@@ -1,0 +1,1027 @@
+viewpoint,region,year,level,confidence,source,note
+# Format
+#   year   a single year (negative = BCE) or a range "a..b"; the map uses the midpoint
+#   level  0–5 (unknown … surveyed). A cell takes the highest level of all regions that contain it.
+#          "=n" means exactly n: it overrides the containing regions until this region's next row.
+#   viewpoint "*" applies to all four cultural viewpoints (not Humanity).
+# Events caused by a journey live in journeys/<id>.json under "informs", not here.
+
+# ═══ Mediterranean / Europe ═══════════════════════════════════════════════
+# The Greek world c. 500 BCE
+europe,greece,-500,4,high,hecataeus,Home waters of the Greek cities
+europe,crete,-500,4,high,hecataeus,
+europe,cyprus,-500,4,high,hecataeus,
+europe,anatolia,-500,3,high,hecataeus,The Ionian coast well known; the Persian interior by report
+europe,med-east,-500,4,high,hecataeus,
+europe,med-west,-500,3,medium,hecataeus,Greek colonies at Massalia and in Sicily
+europe,italy,-500,3,medium,hecataeus,Magna Graecia and the Etruscans
+europe,sicily,-500,4,high,hecataeus,
+europe,black-sea,-500,3,high,hecataeus,Greek colonies around the Euxine
+europe,pontic-steppe,-500,2,medium,hecataeus,Scythians known through trade
+europe,balkans,-500,2,medium,hecataeus,Thrace
+europe,egypt,-500,3,high,hecataeus,Greek traders at Naukratis
+europe,levant,-500,3,medium,hecataeus,The Phoenician cities
+europe,libya,-500,3,medium,hecataeus,Cyrene
+europe,ifriqiya,-500,3,medium,hecataeus,Carthage
+europe,maghreb,-500,1,low,hecataeus,
+europe,iberia,-500,2,medium,hecataeus,Tartessos and the Pillars of Heracles
+europe,gaul,-500,2,medium,hecataeus,The hinterland of Massalia
+europe,mesopotamia,-500,2,medium,hecataeus,Babylon by report
+europe,persia,-500,2,medium,hecataeus,The Persian empire
+europe,caucasus,-500,2,low,hecataeus,Colchis
+europe,arabia-felix,-500,1,low,hecataeus,The land of frankincense
+europe,red-sea,-500,1,low,hecataeus,
+europe,indus,-500,1,low,herodotus,Scylax's voyage for Darius c. 515 BCE
+europe,upper-nile,-500,1,low,hecataeus,The Aethiopians beyond Egypt
+europe,sahara,-500,1,low,hecataeus,
+europe,britain,-500,1,low,strabo,The Tin Islands by rumour
+europe,alps-danube,-500,1,low,hecataeus,The Ister (Danube)
+europe,caspian,-500,1,low,hecataeus,
+europe,north-atlantic-east,-500,1,low,hecataeus,The Ocean beyond the Pillars
+# Herodotus, c. 430 BCE
+europe,egypt,-430,4,high,herodotus,Herodotus travels up the Nile
+europe,upper-nile,-430,2,medium,herodotus,Meroë by report
+europe,sahara,-430,2,medium,herodotus,The Garamantes and the oases
+europe,pontic-steppe,-430,3,high,herodotus,Scythia described at length
+europe,kazakh-steppe,-430,1,low,herodotus,Issedones and Argippaei
+europe,caspian,-430,2,medium,herodotus,Correctly described as a closed sea
+europe,persia,-430,3,high,herodotus,
+europe,mesopotamia,-430,3,high,herodotus,
+europe,arabia-felix,-430,2,medium,herodotus,
+europe,indus,-430,2,medium,herodotus,
+europe,red-sea,-430,2,medium,herodotus,
+europe,balkans,-430,3,medium,herodotus,
+# Alexander, 334–323 BCE
+# Hellenistic and Roman expansion
+europe,india-north,-300,3,medium,strabo,Megasthenes' Indika
+europe,iberia,-206,3,high,strabo,
+europe,balkans,-148,4,high,strabo,Macedonia becomes a province
+europe,ifriqiya,-146,4,high,appian,Carthage destroyed; the province of Africa
+europe,iberia,-133,4,high,strabo,
+europe,gaul,-121,3,high,strabo,Gallia Narbonensis
+europe,maghreb,-105,2,medium,strabo,The Jugurthine war
+europe,gaul,-51,4,high,strabo,Caesar's Gallic war
+europe,china-north,-30,1,low,strabo,The Seres: a people of silk
+europe,maghreb,-25,3,medium,pliny,Juba II's Mauretania
+europe,canaries,-25,2,medium,pliny,Juba II's expedition to the Fortunate Isles
+europe,madeira,-25,1,low,pliny,The Purple Islands may be Madeira
+europe,arabia-felix,-25,3,medium,strabo,Aelius Gallus marches into Arabia
+europe,arabia-hejaz,-25,2,medium,strabo,
+europe,sahara,-19,3,medium,pliny,Balbus campaigns against the Garamantes
+europe,alps-danube,-15,3,high,strabo,Raetia and Noricum
+europe,germania,-12,2,medium,tacitus,Drusus reaches the Elbe
+europe,china-north,1,2,medium,pliny,Silk reaches Rome in quantity; the Seres known through trade
+europe,tarim,1,1,low,pliny,
+europe,alps-danube,10,4,high,strabo,Pannonia
+europe,upper-nile,61,3,medium,pliny,Nero's centurions reach the Sudd
+europe,britain,84,4,high,tacitus,Agricola's fleet sails around Britain
+europe,northern-isles,84,3,medium,tacitus,The Orkneys
+europe,ireland,84,2,medium,tacitus,
+europe,central-sahel,90,1,low,ptolemy,Julius Maternus reaches Agisymba
+europe,germania,98,3,high,tacitus,Tacitus' Germania
+europe,scandinavia,98,1,low,tacitus,The Suiones beyond the sea
+# Ptolemy's Geography, c. 150
+europe,italy,150,4,high,ptolemy,
+europe,iberia,150,4,high,ptolemy,
+europe,gaul,150,4,high,ptolemy,
+europe,maghreb,150,4,high,ptolemy,
+europe,libya,150,4,high,ptolemy,
+europe,egypt,150,4,high,ptolemy,
+europe,levant,150,4,high,ptolemy,
+europe,anatolia,150,4,high,ptolemy,
+europe,balkans,150,4,high,ptolemy,
+europe,med-west,150,4,high,ptolemy,
+europe,ireland,150,3,medium,ptolemy,Hibernia
+europe,germania,150,3,medium,ptolemy,
+europe,scandinavia,150,2,medium,ptolemy,Scandia
+europe,baltic,150,2,medium,ptolemy,The amber coast
+europe,rus,150,1,low,ptolemy,Sarmatia
+europe,lower-volga,150,2,medium,ptolemy,The Rha (Volga)
+europe,volga,150,1,low,ptolemy,
+europe,kazakh-steppe,150,2,medium,ptolemy,
+europe,caspian,150,3,medium,ptolemy,
+europe,persia,150,4,high,ptolemy,
+europe,bactria,150,4,medium,ptolemy,
+europe,transoxiana,150,3,medium,ptolemy,
+europe,tarim,150,2,medium,ptolemy,The Stone Tower route of Maes Titianus
+europe,china-south,150,1,low,ptolemy,Sinae and Cattigara
+europe,india-north,150,3,medium,ptolemy,
+europe,deccan,150,3,medium,ptolemy,
+europe,bengal,150,3,medium,ptolemy,
+europe,burma,150,2,low,ptolemy,
+europe,malay-peninsula,150,2,medium,ptolemy,The Golden Chersonese
+europe,khmer,150,1,low,ptolemy,
+europe,annam,150,1,low,ptolemy,Cattigara
+europe,sri-lanka,150,3,medium,ptolemy,"Taprobane, drawn far too large"
+europe,great-lakes,150,1,low,ptolemy,The Mountains of the Moon and the Nile lakes
+europe,ethiopia,150,3,medium,ptolemy,
+europe,sahara,150,3,medium,ptolemy,
+europe,bilad-al-sudan,150,1,low,ptolemy,The Nigeir
+europe,atlantic-sahara,150,2,medium,ptolemy,
+europe,europe,150,1,medium,ptolemy,Sarmatia and Scandia at the edge of the known world
+# The western world contracts, c. 450–650
+europe,india-north,450..650,2,medium,cosmas,Greek geography fades in the Latin West
+europe,deccan,450..650,1,medium,cosmas,
+europe,bengal,450..650,1,medium,cosmas,
+europe,burma,450..650,0,low,hoc,
+europe,malay-peninsula,450..650,1,low,hoc,
+europe,khmer,450..650,0,low,hoc,
+europe,annam,450..650,0,low,hoc,
+europe,china-south,450..650,1,low,cosmas,Tzinitza: the land of silk at the edge of the world
+europe,china-north,450..650,1,low,cosmas,
+europe,tarim,450..650,1,low,hoc,
+europe,transoxiana,450..650,2,medium,menander,
+europe,bactria,450..650,2,medium,hoc,
+europe,great-lakes,450..650,0,low,hoc,
+europe,central-sahel,450..650,0,low,hoc,
+europe,bilad-al-sudan,450..650,0,low,hoc,
+europe,sahara,450..650,2,medium,hoc,
+europe,scandinavia,450..650,1,low,hoc,
+europe,baltic,450..650,1,low,hoc,
+europe,ireland,450..650,2,medium,hoc,
+europe,canaries,450..650,1,low,hoc,The Fortunate Isles become a legend
+europe,madeira,450..650,0,low,hoc,
+europe,east-africa-coast,450..650,1,low,cosmas,Zingion
+europe,malabar,450..650,2,medium,cosmas,
+europe,tamilakam,450..650,1,low,hoc,
+europe,west-india-coast,450..650,2,medium,cosmas,
+europe,horn,450..650,2,medium,cosmas,
+europe,oman,450..650,1,low,hoc,
+europe,ethiopia,525,3,high,cosmas,Aksum allied with Byzantium; Cosmas visits Adulis
+europe,sri-lanka,550,2,medium,cosmas,Cosmas describes Taprobane from merchants' reports
+europe,kazakh-steppe,568,2,medium,menander,Zemarchus' embassy to the Turks
+europe,zhetysu,568,2,medium,menander,The khagan's camp in the Tian Shan
+# The Arab conquests cut the routes south and east
+europe,arabian-sea,650,2,medium,hoc,
+europe,red-sea,650,2,medium,hoc,
+europe,malabar,700,1,low,hoc,
+europe,west-india-coast,700,1,low,hoc,
+europe,east-africa-coast,700,0,low,hoc,
+europe,horn,700,1,low,hoc,
+europe,tamilakam,700,0,low,hoc,
+europe,maghreb,700,3,medium,hoc,
+europe,arabia-felix,700,2,low,hoc,
+# The North Atlantic and the north, 800–1100
+europe,iceland,795..825,2,low,dicuil,Irish monks reach Thule
+europe,faroes,825,3,medium,dicuil,
+europe,faroes,900,4,medium,landnamabok,
+europe,iceland,874,4,high,landnamabok,Norse settlement
+europe,norwegian-sea,874,3,medium,landnamabok,
+europe,north-atlantic-east,874,2,medium,landnamabok,
+europe,rus,950,3,high,constantine-dai,The Rus' and the Dnieper route
+europe,lower-volga,950,3,medium,constantine-dai,The Khazars
+europe,pontic-steppe,950,4,high,constantine-dai,The Pechenegs
+europe,scandinavia,950,3,medium,constantine-dai,
+europe,greenland,985..986,3,high,vinland-sagas,Erik the Red's settlements
+europe,scandinavia,1075,4,high,adam-bremen,
+europe,baltic,1075,3,high,adam-bremen,
+europe,lapland,1075,1,low,adam-bremen,
+europe,vinland,1121,1,low,vinland-sagas,Bishop Eirik sets out to find Vinland
+europe,helluland-markland,1121,1,low,vinland-sagas,
+europe,vinland,1347..1450,0,low,vinland-sagas,The last recorded voyage to Markland is in 1347
+europe,helluland-markland,1347..1450,0,low,vinland-sagas,
+europe,north-atlantic-west,1347..1450,0,low,vinland-sagas,
+europe,greenland,1408..1500,1,low,hoc,The Norse colonies fall silent after 1408
+# Crusades and the Mongol roads
+europe,levant,1099,4,high,hoc,
+europe,egypt,1250,4,medium,hoc,
+europe,mongolia,1247..1255,3,high,carpini-rubruck,The courts of the Great Khan
+europe,kazakh-steppe,1247..1255,3,high,carpini-rubruck,
+europe,lower-volga,1247..1255,4,high,carpini-rubruck,
+europe,volga,1255,3,medium,carpini-rubruck,
+europe,zhetysu,1255,2,medium,carpini-rubruck,
+europe,china-north,1255,2,medium,carpini-rubruck,Rubruck: Cathay is the land of the ancient Seres
+europe,asia,1255,1,medium,carpini-rubruck,The Mongol empire's reach is known in outline
+europe,canaries,1312..1341,3,medium,hoc,Lancelotto Malocello; the voyage of 1341
+europe,azores,1351,1,low,hoc,Islands in the Atlantic on the Medici atlas
+europe,madeira,1351,1,low,hoc,
+europe,china-north,1370..1400,2,low,hoc,The Mongol roads close; Cathay becomes a legend again
+europe,china-south,1370..1400,2,low,hoc,
+europe,sahara,1375,3,medium,catalan-atlas,
+europe,atlantic-sahara,1375,2,medium,catalan-atlas,
+europe,great-lakes,1410,1,low,ptolemy,Ptolemy's Geography returns to the Latin West
+europe,malay-peninsula,1410,2,medium,ptolemy,
+europe,india-north,1450,3,medium,fra-mauro,Niccolò de' Conti's travels feed Fra Mauro's map
+europe,deccan,1450,3,medium,fra-mauro,
+europe,bengal,1450,3,medium,fra-mauro,
+europe,burma,1450,2,medium,fra-mauro,
+europe,java,1450,3,medium,fra-mauro,
+europe,ethiopia,1450,3,medium,fra-mauro,
+europe,east-africa-coast,1450,2,low,fra-mauro,
+europe,zambezi,1450,1,low,fra-mauro,
+europe,southern-africa,1450,1,low,fra-mauro,Fra Mauro shows Africa surrounded by sea
+# Portugal down the coast of Africa
+europe,maghreb,1415,4,high,zurara,Ceuta
+europe,madeira,1419..1420,4,high,zurara,
+europe,azores,1427..1432,3,high,zurara,
+europe,atlantic-sahara,1434,3,high,zurara,Gil Eanes passes Cape Bojador
+europe,senegambia,1444..1446,3,high,zurara,
+europe,north-atlantic-east,1450,3,high,hoc,The volta do mar
+europe,azores,1450,4,high,hoc,
+europe,cape-verde,1456..1462,3,high,hoc,
+europe,bilad-al-sudan,1460,2,medium,hoc,
+europe,guinea-coast,1471,3,high,hoc,The Gold Coast
+europe,angola,1482..1486,3,high,hoc,Diogo Cão at the mouth of the Congo
+europe,congo,1485,1,medium,hoc,
+europe,cape,1488,3,high,hoc,Bartolomeu Dias rounds the Cape
+europe,south-atlantic,1488,2,high,hoc,
+europe,africa,1500,1,high,hoc,The outline of Africa is known after Dias and da Gama
+europe,asia,1550,2,high,hoc,
+europe,southern-africa,1488,2,medium,hoc,
+# The Atlantic world opens
+europe,vinland,1497,3,high,hoc,John Cabot
+europe,canada-east,1497,2,medium,hoc,
+europe,north-atlantic-west,1497,3,high,hoc,
+europe,andes-north,1498..1500,3,high,hoc,Columbus at the Gulf of Paria; Ojeda and Vespucci
+europe,brazil-coast,1500,3,high,hoc,Cabral
+europe,north-atlantic-east,1500,4,high,hoc,
+europe,pampas,1502,1,low,waldseemuller,
+europe,central-america,1502..1504,3,high,hoc,Columbus's fourth voyage
+europe,south-america,1507,2,high,waldseemuller,A new continent named America
+europe,north-america,1507,1,medium,waldseemuller,
+europe,caribbean,1510,4,high,hoc,
+europe,eastern-woodlands,1513..1524,2,high,hoc,Ponce de León in Florida; Verrazzano
+europe,peru,1532..1535,4,high,hoc,
+europe,canada-east,1534..1535,3,high,hoc,Cartier on the St Lawrence
+europe,atacama-chile,1536..1541,3,high,hoc,
+europe,pampas,1536..1580,3,medium,hoc,
+europe,andes-north,1538,4,high,hoc,
+europe,north-america-west,1540,2,medium,hoc,
+europe,mississippi,1541,2,medium,hoc,De Soto
+europe,great-plains,1541,2,medium,hoc,Coronado
+europe,amazon,1542,2,high,hoc,Orellana descends the Amazon
+europe,california,1542,2,medium,hoc,Cabrillo
+europe,south-america,1550,3,high,hoc,
+europe,north-america,1550,2,medium,hoc,
+europe,north-atlantic-west,1550,4,high,hoc,
+europe,south-atlantic,1550,4,high,hoc,
+# Europe in the Indian Ocean and East Asia
+europe,madagascar,1500,3,high,hoc,Diogo Dias
+europe,indian-ocean,1500,3,high,hoc,
+europe,east-africa-coast,1505,4,high,hoc,
+europe,tamilakam,1505,3,high,hoc,
+europe,sri-lanka,1505,4,high,hoc,
+europe,mascarenes,1507,2,high,hoc,
+europe,persian-gulf,1507,4,high,hoc,Albuquerque takes Hormuz
+europe,oman,1507,3,high,hoc,
+europe,sumatra,1509,3,high,hoc,
+europe,west-india-coast,1510,4,high,hoc,Goa
+europe,maldives,1510,3,medium,hoc,
+europe,malacca-strait,1511,4,high,hoc,Malacca taken
+europe,malay-peninsula,1511,4,high,hoc,
+europe,java,1512,3,high,hoc,
+europe,moluccas,1512,3,high,hoc,
+europe,lesser-sunda,1512,2,high,hoc,
+europe,java-sea,1512,3,high,hoc,
+europe,horn,1513,3,high,hoc,
+europe,red-sea,1513..1541,3,high,hoc,
+europe,arabia-felix,1513,3,high,hoc,
+europe,south-china-sea,1513..1517,3,high,hoc,
+europe,china-south,1517,3,high,hoc,Tomé Pires's embassy reaches Canton
+europe,lingnan,1517,3,high,hoc,
+europe,bay-of-bengal,1518,4,high,hoc,
+europe,bengal,1518,3,high,hoc,
+europe,burma,1519,3,medium,hoc,
+europe,ethiopia,1520..1540,4,high,hoc,Álvares's embassy and book
+europe,east-china-sea,1540,2,medium,hoc,
+europe,japan,1543,3,high,hoc,The Portuguese at Tanegashima
+europe,ryukyu-taiwan,1544,2,medium,hoc,Formosa
+europe,annam,1550,2,medium,hoc,
+europe,indian-ocean,1550,4,high,hoc,
+europe,khmer,1550..1590,2,medium,hoc,Portuguese visitors describe Angkor
+europe,china-north,1600,3,high,hoc,Jesuits in Beijing
+# Spain and the Dutch in the Pacific
+europe,new-guinea,1526..1545,2,high,hoc,
+europe,philippines,1565,4,high,hoc,Legazpi
+europe,micronesia,1565,3,high,hoc,
+europe,pacific-north,1565,3,high,hoc,Urdaneta finds the way back east
+europe,near-oceania,1568,2,high,hoc,Mendaña in the Solomons
+europe,marquesas,1595,2,high,hoc,
+europe,pacific-south,1600,3,medium,hoc,
+europe,pacific-north,1600,3,medium,hoc,
+europe,tuamotu,1606,2,medium,hoc,
+europe,remote-melanesia,1606,2,high,hoc,Quirós at Espiritu Santo
+europe,australia,1606,2,high,tasman,The Duyfken on Cape York
+europe,magellan-strait,1616,4,high,hoc,Le Maire and Schouten round Cape Horn
+europe,australia,1616..1644,3,high,tasman,Dutch charts of New Holland
+europe,tonga,1616..1643,2,high,tasman,
+europe,aotearoa,1642,2,high,tasman,Staten Landt
+europe,tasman-sea,1642,2,high,tasman,
+europe,fiji,1643,2,high,tasman,
+# The north
+europe,helluland-markland,1576..1587,3,high,hoc,Frobisher and Davis
+europe,greenland,1585,2,high,hoc,
+europe,svalbard,1596,3,high,hoc,Barentsz
+europe,barents-sea,1596,3,high,hoc,
+europe,eastern-woodlands,1600,3,high,hoc,
+europe,canada-east,1608,4,high,hoc,
+europe,hudson-bay,1610..1612,3,high,hoc,
+europe,baffin-bay,1616,2,high,hoc,
+europe,siberia-east,1648,2,medium,hoc,Dezhnev rounds the tip of Asia
+europe,tibet,1661..1716,2,medium,hoc,Grueber and d'Orville; Desideri
+europe,canadian-shield,1670,2,medium,hoc,The Hudson's Bay Company
+europe,mississippi,1673..1682,3,high,hoc,Marquette and Jolliet; La Salle
+europe,siberia-east,1687..1701,3,medium,hoc,Witsen and Remezov
+europe,kamchatka,1697,3,medium,hoc,
+europe,mongolia,1700,3,medium,hoc,
+europe,greenland,1721,3,high,hoc,Hans Egede
+europe,bering-sea,1728,3,high,hoc,Bering's first voyage
+europe,alaska,1741,2,high,hoc,
+europe,eastern-woodlands,1750,4,high,hoc,
+europe,canadian-shield,1770..1795,3,medium,hoc,Hearne and Mackenzie
+europe,arctic-canada,1789,2,medium,hoc,
+europe,arctic-ocean,1827,2,medium,hoc,Parry
+europe,arctic-canada,1850..1859,3,high,hoc,The search for Franklin
+europe,greenland-ice,1888,3,high,nansen,Nansen crosses the ice sheet
+europe,arctic-ocean,1893..1896,3,high,nansen,The Fram drifts across the ice
+europe,arctic-central,1895,2,high,nansen,Nansen reaches 86°14′ north
+# The Pacific in the 18th century
+europe,rapa-nui,1722,2,high,hoc,Roggeveen
+europe,galapagos,1535,2,high,hoc,Tomás de Berlanga's ship drifts there
+europe,society-islands,1767..1768,3,high,cook-journals,Wallis and Bougainville
+europe,mangareva-pitcairn,1767,2,high,hoc,Carteret
+europe,samoa,1768,2,high,hoc,Bougainville
+europe,tonga,1773..1777,4,high,cook-journals,
+europe,cook-islands,1773..1777,3,high,cook-journals,
+europe,southern-ocean,1773..1775,3,high,cook-journals,Cook circles the far south
+europe,remote-melanesia,1774,4,high,cook-journals,
+europe,rapa-nui,1774,3,high,cook-journals,
+europe,marquesas,1774,3,high,cook-journals,
+europe,pacific-south,1775,4,high,cook-journals,
+europe,hawaii,1778..1779,4,high,cook-journals,
+europe,pacific-northwest,1778,3,high,cook-journals,
+europe,alaska,1778,3,high,cook-journals,
+europe,pacific-north,1779,4,high,cook-journals,
+europe,samoa,1787,3,high,hoc,La Pérouse
+europe,kermadecs,1788..1793,3,high,hoc,
+europe,chatham,1791,3,high,hoc,
+europe,mangareva-pitcairn,1797,3,high,hoc,
+# Interiors, 1700–1900
+europe,china-north,1735,4,high,du-halde,The Kangxi atlas published in Paris
+europe,china-south,1735,4,high,du-halde,
+europe,manchuria,1735,3,high,du-halde,
+europe,korea,1735,3,high,du-halde,
+europe,mongolia,1735,3,high,du-halde,
+europe,tibet,1735,2,high,du-halde,
+europe,arabia-interior,1762,2,medium,hoc,Niebuhr's expedition
+europe,california,1769..1850,4,high,hoc,
+europe,ethiopia,1770,4,medium,hoc,Bruce at the source of the Blue Nile
+europe,pacific-northwest,1792..1805,4,high,hoc,Vancouver; Lewis and Clark
+europe,bilad-al-sudan,1796,3,high,hoc,Mungo Park reaches the Niger
+europe,australia-east,1800,5,medium,hoc,
+europe,north-america-west,1842..1846,4,high,hoc,Frémont's surveys of the West
+europe,mississippi,1820,4,high,hoc,
+europe,upper-nile,1821..1840,4,medium,hoc,
+europe,central-sahel,1823,3,high,hoc,Denham and Clapperton reach Lake Chad
+europe,japan,1832,4,high,hoc,Siebold's Nippon
+europe,southern-africa,1836,4,medium,hoc,
+europe,australia,1840..1862,4,high,hoc,"Eyre, Sturt and Stuart"
+europe,sahara,1850..1855,4,high,hoc,Heinrich Barth
+europe,aotearoa,1850,5,medium,hoc,
+europe,new-guinea,1850,3,medium,hoc,
+europe,borneo,1850,3,medium,hoc,
+europe,himalaya,1850..1860,4,high,national-surveys,
+europe,burma,1855,4,medium,hoc,
+europe,great-lakes,1858,3,high,hoc,Burton and Speke
+europe,khmer,1860,3,high,mouhot,Mouhot makes Angkor famous in Europe
+europe,annam,1860,4,medium,hoc,
+europe,great-lakes,1862,4,high,hoc,Speke at the outflow of the Nile
+europe,mongolia,1870..1885,4,medium,hoc,Przhevalsky
+europe,congo,1877,3,high,hoc,Stanley follows the Congo to the sea
+europe,tarim,1890..1900,3,high,hedin,
+europe,antarctica-coast,1820,2,high,headland,"Bellingshausen, Bransfield and Palmer sight the continent"
+europe,antarctica-coast,1840..1842,3,high,headland,"Wilkes, Dumont d'Urville and Ross"
+europe,antarctic-seas,1823..1842,3,high,headland,Weddell and Ross
+# Systematic surveys
+europe,gaul,1756..1789,5,high,national-surveys,The Cassini map of France
+europe,britain,1791..1853,5,high,national-surveys,The Ordnance Survey
+europe,india-north,1802..1871,5,high,national-surveys,The Great Trigonometrical Survey
+europe,deccan,1802..1871,5,high,national-surveys,
+europe,alps-danube,1810..1870,5,medium,national-surveys,
+europe,ireland,1825..1846,5,high,national-surveys,
+europe,italy,1820..1880,5,medium,national-surveys,
+europe,germania,1820..1870,5,medium,national-surveys,
+europe,scandinavia,1820..1880,5,medium,national-surveys,
+europe,iberia,1850..1880,5,medium,national-surveys,
+europe,europe,1850,4,medium,national-surveys,
+europe,north-america,1850,3,medium,hoc,
+europe,south-america,1850,3,medium,hoc,
+europe,africa,1850,2,medium,hoc,
+europe,asia,1850,3,medium,hoc,
+
+# ═══ China ════════════════════════════════════════════════════════════════
+# Eastern Zhou, c. 500 BCE
+china,china-north,-500,4,high,shangshu-yugong,The Nine Provinces of the Tribute of Yu
+china,china-south,-500,3,medium,shangshu-yugong,"Chu, Wu and Yue"
+china,sichuan,-500,2,medium,shangshu-yugong,Ba and Shu
+china,lingnan,-500,1,low,shanhaijing,The Hundred Yue
+china,korea,-500,1,low,shanhaijing,
+china,manchuria,-500,1,low,shanhaijing,
+china,mongolia,-500,2,medium,shangshu-yugong,The Rong and Di peoples of the north
+china,hexi,-500,1,low,shanhaijing,
+china,tarim,-500,1,low,shanhaijing,Kunlun and the Queen Mother of the West
+china,tibet,-500,1,low,shanhaijing,
+china,east-china-sea,-500,2,medium,shangshu-yugong,
+china,sichuan,-316,4,high,shiji,Qin conquers Shu
+china,china-south,-221,4,high,shiji,The Qin unification
+china,lingnan,-214,3,high,shiji,Qin armies reach the southern sea
+china,annam,-214,1,medium,shiji,
+china,south-china-sea,-214,2,medium,shiji,
+china,mongolia,-209,3,high,shiji,The Xiongnu confederation under Modu
+# Han expansion
+china,hexi,-121,4,high,shiji,The Hexi corridor taken
+china,lingnan,-111,4,high,hanshu,Nanyue conquered
+china,annam,-111,3,high,hanshu,Jiaozhi commandery
+china,south-china-sea,-111,3,medium,hanshu,
+china,korea,-108,3,high,hanshu,Lelang commandery
+china,manchuria,-108,2,medium,hanshu,
+china,transoxiana,-101,4,high,hanshu,The war of the Heavenly Horses against Dayuan
+china,tarim,-60,4,high,hanshu,The Protectorate of the Western Regions
+china,zhetysu,-60,3,high,hanshu,The Wusun
+china,bay-of-bengal,-1..1,2,low,hanshu,The Hanshu's sea route to Huangzhi
+china,tamilakam,-1..1,1,low,hanshu,
+china,japan,57,2,high,houhanshu,The king of Na in Wa receives a gold seal
+china,persia,97,2,medium,houhanshu,Anxi (Parthia)
+china,mesopotamia,97,2,medium,houhanshu,Tiaozhi on the shore of the great sea
+china,persian-gulf,97,2,medium,houhanshu,
+china,levant,97,1,low,houhanshu,Daqin beyond the sea
+china,italy,97,1,low,houhanshu,
+china,levant,166,2,low,houhanshu,Envoys of the king of Daqin arrive by sea
+china,med-east,166,1,low,houhanshu,
+china,khmer,245..250,3,medium,kang-tai,Kang Tai and Zhu Ying visit Funan
+china,malay-peninsula,245..250,2,medium,kang-tai,
+china,india-north,245..250,2,medium,kang-tai,
+china,annam,245..250,4,medium,kang-tai,
+china,japan,607..608,3,high,hoc,Sui embassies to Wa
+china,ryukyu-taiwan,610,2,medium,hoc,The Sui expedition to Liuqiu
+china,tibet,641,3,high,hoc,Princess Wencheng goes to the Tibetan court
+china,arabia-hejaz,651,1,medium,hoc,Envoys of the Dashi (Arabs)
+china,arabia-interior,651,1,medium,hoc,
+china,zhetysu,657..659,4,high,hoc,The Tang defeat the Western Turks
+china,transoxiana,659,4,high,hoc,
+china,korea,668,4,high,hoc,
+china,manchuria,668,3,high,hoc,
+china,sumatra,671..695,3,high,yijing,Yijing studies at Srivijaya
+china,malay-peninsula,671..695,3,medium,yijing,
+china,bengal,671..695,3,high,yijing,Tamralipti
+china,india-north,671..695,4,high,yijing,Nalanda
+china,mesopotamia,762,3,medium,du-huan,Du Huan in Kufa
+china,levant,762,2,medium,du-huan,
+china,persia,762,3,medium,du-huan,
+china,arabia-hejaz,762,2,medium,du-huan,
+china,maghreb,762,1,low,du-huan,"Molin, perhaps in north Africa"
+china,egypt,762,1,low,du-huan,
+# After An Lushan: the west recedes
+china,tarim,790,3,medium,hoc,The Tarim garrisons fall to Tibet
+china,transoxiana,790,2,medium,hoc,
+china,bactria,790,2,medium,hoc,
+china,zhetysu,790,2,medium,hoc,
+china,arabian-sea,801,3,medium,jia-dan,Jia Dan's sea route to Baghdad
+china,persian-gulf,801,3,medium,jia-dan,
+china,malacca-strait,801,3,medium,jia-dan,
+china,malabar,801,2,medium,jia-dan,
+china,west-india-coast,801,2,medium,jia-dan,
+china,mesopotamia,801,3,medium,jia-dan,
+# Song maritime knowledge
+china,south-china-sea,1178,4,high,zhou-qufei,
+china,annam,1178,4,high,zhou-qufei,
+china,khmer,1178,4,high,zhou-qufei,Zhenla
+china,java,1178,3,high,zhou-qufei,
+china,sumatra,1178,4,high,zhou-qufei,Sanfoqi
+china,malacca-strait,1178,4,high,zhou-qufei,
+china,malay-peninsula,1178,3,high,zhou-qufei,
+china,arabian-sea,1178,3,high,zhou-qufei,
+china,philippines,1225,3,high,zhao-rugua,Mayi
+china,borneo,1225,2,high,zhao-rugua,Boni
+china,moluccas,1225,1,low,zhao-rugua,
+china,burma,1225,2,medium,zhao-rugua,
+china,bengal,1225,2,medium,zhao-rugua,
+china,tamilakam,1225,3,high,zhao-rugua,Zhunian (the Cholas)
+china,malabar,1225,3,high,zhao-rugua,Nanpi
+china,west-india-coast,1225,2,medium,zhao-rugua,Huchala (Gujarat)
+china,sri-lanka,1225,3,high,zhao-rugua,
+china,maldives,1225,1,low,zhao-rugua,
+china,persian-gulf,1225,3,high,zhao-rugua,
+china,arabia-hejaz,1225,2,medium,zhao-rugua,Maqie (Mecca)
+china,arabia-felix,1225,2,medium,zhao-rugua,
+china,mesopotamia,1225,3,medium,zhao-rugua,Baida (Baghdad)
+china,egypt,1225,2,medium,zhao-rugua,Wusili (Misr)
+china,maghreb,1225,1,low,zhao-rugua,Mulanpi
+china,sicily,1225,1,low,zhao-rugua,Sijialiye
+china,east-africa-coast,1225,2,medium,zhao-rugua,Cengba: the land of the Zanj
+china,horn,1225,2,medium,zhao-rugua,Bibaluo (Berbera)
+china,korea,1225,4,high,zhao-rugua,
+china,japan,1225,3,high,zhao-rugua,
+china,ryukyu-taiwan,1225,2,high,zhao-rugua,
+# The Mongol world
+china,mongolia,1260,4,high,hoc,
+china,transoxiana,1260,4,high,hoc,
+china,bactria,1260,3,high,hoc,
+china,zhetysu,1260,4,high,hoc,
+china,tarim,1260,4,high,hoc,
+china,kazakh-steppe,1260,4,high,hoc,
+china,lower-volga,1260,3,high,hoc,The Golden Horde
+china,rus,1260,2,medium,hoc,
+china,persia,1260..1300,4,high,hoc,The Ilkhanate
+china,mesopotamia,1260..1300,3,high,hoc,
+china,anatolia,1270,2,medium,hoc,
+china,tibet,1270,4,high,hoc,
+china,siberia-east,1270,1,low,hoc,
+china,japan,1281,4,high,hoc,
+china,burma,1287,3,high,hoc,
+china,java,1293,3,high,hoc,
+china,khmer,1297,4,high,zhou-daguan,Zhou Daguan describes Angkor
+china,africa,1330,1,low,kangnido,Africa drawn as a triangle pointing south
+china,southern-africa,1330,1,low,kangnido,
+china,maghreb,1330,2,low,kangnido,
+china,europe,1330,1,low,kangnido,
+china,iberia,1330,1,low,kangnido,
+china,italy,1330,1,low,kangnido,
+china,east-africa-coast,1349,2,medium,wang-dayuan,
+china,arabia-felix,1349,3,medium,wang-dayuan,
+china,maldives,1349,2,medium,wang-dayuan,
+china,egypt,1349,2,medium,wang-dayuan,
+china,transoxiana,1415,4,high,ming-shilu,Chen Cheng's embassy to Herat and Samarkand
+china,bactria,1415,4,high,ming-shilu,
+# The treasure fleets are not sent again
+china,east-africa-coast,1450..1500,1,low,ming-shilu,Long-distance missions lapse after 1433
+china,horn,1450..1500,1,low,ming-shilu,
+china,arabia-felix,1450..1500,1,low,ming-shilu,
+china,arabia-hejaz,1450..1500,1,low,ming-shilu,
+china,persian-gulf,1450..1500,2,low,ming-shilu,
+china,arabian-sea,1450..1500,2,low,ming-shilu,
+china,maldives,1450..1500,1,low,ming-shilu,
+china,malabar,1450..1500,2,low,ming-shilu,
+china,west-india-coast,1450..1500,1,low,ming-shilu,
+china,sri-lanka,1450..1500,2,low,ming-shilu,
+china,bengal,1450..1500,2,low,ming-shilu,
+china,bay-of-bengal,1450..1500,2,low,ming-shilu,
+china,egypt,1450..1500,1,low,ming-shilu,
+china,mesopotamia,1450..1500,1,low,ming-shilu,
+china,persia,1450..1500,2,low,ming-shilu,
+china,transoxiana,1500,3,low,ming-shilu,
+china,bactria,1500,2,low,ming-shilu,
+# Europe arrives; Ricci's map
+china,iberia,1517,1,medium,ming-shilu,The Folangji (Portuguese) arrive at Canton
+china,europe,1517,1,medium,ming-shilu,
+china,europe,1602,3,high,ricci-map,Ouluoba on Ricci's map
+china,italy,1602,3,high,ricci-map,
+china,gaul,1602,3,high,ricci-map,
+china,iberia,1602,3,high,ricci-map,
+china,britain,1602,2,high,ricci-map,
+china,germania,1602,2,high,ricci-map,
+china,scandinavia,1602,2,high,ricci-map,
+china,med-east,1602,3,high,ricci-map,
+china,med-west,1602,3,high,ricci-map,
+china,africa,1602,2,high,ricci-map,"Liweiya (Libya), Ricci's name for Africa"
+china,east-africa-coast,1602,2,high,ricci-map,
+china,north-america,1602,2,high,ricci-map,Yamolijia
+china,south-america,1602,2,high,ricci-map,
+china,mexico,1602,2,high,ricci-map,
+china,peru,1602,2,high,ricci-map,
+china,caribbean,1602,2,high,ricci-map,
+china,brazil-coast,1602,2,high,ricci-map,
+china,north-atlantic-east,1602,2,high,ricci-map,
+china,north-atlantic-west,1602,2,high,ricci-map,
+china,south-atlantic,1602,2,high,ricci-map,
+china,indian-ocean,1602,2,high,ricci-map,
+china,pacific-north,1602,2,high,ricci-map,
+china,pacific-south,1602,1,high,ricci-map,
+china,europe,1623,3,high,aleni,Aleni's Record of Places Outside the Imperial Geographer's Charge
+china,north-america,1623,2,high,aleni,
+china,ryukyu-taiwan,1683,4,high,hoc,Taiwan annexed
+china,siberia-east,1689,2,high,hoc,The Treaty of Nerchinsk
+china,china-north,1708..1718,5,high,kangxi-atlas,The Kangxi atlas surveys the empire
+china,china-south,1708..1718,5,high,kangxi-atlas,
+china,lingnan,1708..1718,5,high,kangxi-atlas,
+china,sichuan,1708..1718,5,high,kangxi-atlas,
+china,hexi,1708..1718,5,high,kangxi-atlas,
+china,manchuria,1708..1718,4,high,kangxi-atlas,
+china,mongolia,1708..1718,4,high,kangxi-atlas,
+china,tibet,1717,3,high,kangxi-atlas,Lama surveyors map Tibet
+china,korea,1718,3,high,kangxi-atlas,
+china,tarim,1759..1760,4,high,hoc,The Qing take Xinjiang
+china,zhetysu,1759..1760,4,high,hoc,
+china,britain,1820,3,medium,hoc,Xie Qinggao's Records of the Seas
+china,europe,1843..1852,4,high,haiguo-tuzhi,
+china,britain,1843..1852,4,high,haiguo-tuzhi,
+china,gaul,1843..1852,4,high,haiguo-tuzhi,
+china,india-north,1843..1852,4,high,haiguo-tuzhi,
+china,north-america,1843..1852,3,high,haiguo-tuzhi,
+china,south-america,1843..1852,3,high,haiguo-tuzhi,
+china,africa,1843..1852,3,high,haiguo-tuzhi,
+china,australia,1843..1852,2,high,haiguo-tuzhi,
+china,pacific-north,1843..1852,3,high,haiguo-tuzhi,
+china,north-atlantic-east,1843..1852,3,high,haiguo-tuzhi,
+china,indian-ocean,1843..1852,3,high,haiguo-tuzhi,
+china,south-atlantic,1843..1852,3,high,haiguo-tuzhi,
+
+# ═══ Islamic world ════════════════════════════════════════════════════════
+# Before 622: the Arabian trading world Islam grew from
+islam,arabia-hejaz,-500,4,low,hoc,Caravan towns of the Hejaz
+islam,arabia-felix,-500,4,low,hoc,Saba and the incense kingdoms
+islam,arabia-interior,-500,3,low,hoc,
+islam,oman,-500,3,low,hoc,
+islam,persian-gulf,-500,3,low,hoc,
+islam,red-sea,-500,3,low,hoc,
+islam,levant,-500,3,low,hoc,
+islam,mesopotamia,-500,2,low,hoc,
+islam,egypt,-500,2,low,hoc,
+islam,persia,-500,2,low,hoc,
+islam,ethiopia,-500,2,low,hoc,
+islam,horn,-500,2,low,hoc,The incense coast of Africa
+islam,east-africa-coast,-500,1,low,hoc,
+islam,arabian-sea,-500,2,low,hoc,
+islam,west-india-coast,-500,1,low,hoc,
+islam,east-africa-coast,50,2,low,periplus,Arab traders at Rhapta
+islam,malabar,50,2,low,periplus,
+islam,west-india-coast,50,2,low,periplus,
+islam,ethiopia,615,3,medium,al-baladhuri,The first emigration to Aksum
+# The first conquests, 632–656
+islam,levant,636,4,high,al-baladhuri,Yarmuk and the conquest of Syria
+islam,mesopotamia,637,4,high,al-baladhuri,
+islam,egypt,641,4,high,al-baladhuri,
+islam,persia,642,3,high,al-baladhuri,Nahavand
+islam,libya,643,3,high,al-baladhuri,
+islam,cyprus,649,3,high,al-baladhuri,
+islam,persia,651,4,high,al-baladhuri,
+islam,transoxiana,651,2,medium,al-baladhuri,
+islam,caucasus,652,2,medium,al-baladhuri,
+islam,upper-nile,652,3,high,al-baladhuri,The baqt treaty with Nubia
+islam,med-east,655,3,high,al-baladhuri,The Battle of the Masts
+islam,anatolia,668,3,high,al-baladhuri,The siege of Constantinople
+# The Umayyads, 661–750
+islam,ifriqiya,670,4,high,al-baladhuri,Kairouan founded
+islam,maghreb,700..710,4,high,al-baladhuri,
+islam,iberia,711..718,4,high,al-baladhuri,Al-Andalus
+islam,bactria,705,4,high,al-baladhuri,
+islam,transoxiana,705..715,4,high,al-baladhuri,
+islam,indus,711..712,4,high,al-baladhuri,Sind
+islam,caspian,720,4,medium,al-baladhuri,
+islam,med-west,720,3,medium,al-baladhuri,
+islam,gaul,732,2,high,al-baladhuri,The land of the Franks
+islam,sahara,734,2,medium,levtzion-hopkins,
+islam,bilad-al-sudan,734,1,medium,levtzion-hopkins,
+islam,kazakh-steppe,737,2,medium,al-baladhuri,
+islam,lower-volga,737,3,medium,al-baladhuri,The Khazar war
+islam,zhetysu,751,2,high,hoc,The battle of Talas
+islam,tarim,751,2,medium,hoc,
+islam,china-north,751,2,medium,hoc,
+# Abbasid Baghdad and the sea routes, 750–950
+islam,arabian-sea,775,4,high,hoc,
+islam,west-india-coast,775,4,high,hoc,
+islam,east-africa-coast,780,3,medium,hoc,The land of the Zanj
+islam,horn,780,3,medium,hoc,
+islam,ethiopia,780,3,medium,hoc,
+islam,bilad-al-sudan,790,2,medium,levtzion-hopkins,Ghana: the land of gold
+islam,malabar,800,4,high,hoc,
+islam,tamilakam,800,3,medium,hoc,
+islam,sri-lanka,800,3,high,hoc,Sarandib
+islam,maldives,800,3,medium,hoc,
+islam,central-sahel,800,1,low,levtzion-hopkins,
+islam,sicily,827..902,4,high,hoc,
+islam,italy,846,3,medium,hoc,
+islam,bay-of-bengal,851,4,high,akhbar-sin,
+islam,india-north,851,3,medium,akhbar-sin,
+islam,bengal,851,2,medium,akhbar-sin,
+islam,burma,851,2,low,akhbar-sin,
+islam,malacca-strait,851,4,high,akhbar-sin,
+islam,malay-peninsula,851,3,high,akhbar-sin,Kalah
+islam,sumatra,851,3,high,akhbar-sin,Zabaj
+islam,java,851,2,medium,akhbar-sin,
+islam,south-china-sea,851,4,high,akhbar-sin,
+islam,khmer,851,2,medium,akhbar-sin,Qimar
+islam,annam,851,3,medium,akhbar-sin,Sanf (Champa)
+islam,lingnan,851,4,high,akhbar-sin,"Khanfu (Guangzhou), home to many Muslim merchants"
+islam,china-south,851,3,medium,akhbar-sin,
+islam,china-north,851,2,medium,akhbar-sin,
+islam,sri-lanka,851,4,high,akhbar-sin,
+islam,tamilakam,851,3,high,akhbar-sin,
+islam,korea,870,1,medium,ibn-khurradadhbih,Al-Sila
+islam,rus,870,1,medium,ibn-khurradadhbih,Rus merchants
+islam,balkans,870,2,medium,ibn-khurradadhbih,
+islam,italy,870,3,medium,ibn-khurradadhbih,
+islam,gaul,870,2,medium,ibn-khurradadhbih,
+islam,germania,870,1,low,ibn-khurradadhbih,
+islam,east-africa-coast,947,4,high,al-masudi,The gold of Sofala
+islam,zambezi,947,1,low,al-masudi,
+islam,madagascar,947,1,low,al-masudi,Qumr
+islam,germania,965,2,medium,al-bakri,Ibrahim ibn Yaqub travels to Prague
+islam,baltic,965,1,low,al-bakri,
+islam,alps-danube,965,2,medium,al-bakri,
+# Scholars of the eleventh and twelfth centuries
+islam,india-north,1030,4,high,al-biruni,
+islam,indus,1030,4,high,al-biruni,
+islam,deccan,1030,3,high,al-biruni,
+islam,himalaya,1030,3,medium,al-biruni,Kashmir
+islam,bengal,1030,3,medium,al-biruni,
+islam,bilad-al-sudan,1068,3,high,al-bakri,Ghana and its capital
+islam,sahara,1068,3,high,al-bakri,
+islam,atlantic-sahara,1068,2,medium,al-bakri,
+islam,senegambia,1068,2,medium,al-bakri,Takrur
+islam,central-sahel,1068,2,medium,al-bakri,
+islam,britain,1154,3,high,al-idrisi,Inkiltara
+islam,ireland,1154,2,medium,al-idrisi,
+islam,scandinavia,1154,2,medium,al-idrisi,
+islam,baltic,1154,2,medium,al-idrisi,
+islam,germania,1154,3,high,al-idrisi,
+islam,gaul,1154,3,high,al-idrisi,
+islam,italy,1154,4,high,al-idrisi,
+islam,balkans,1154,3,high,al-idrisi,
+islam,rus,1154,2,medium,al-idrisi,
+islam,north-atlantic-east,1154,1,medium,al-idrisi,The Sea of Darkness
+islam,canaries,1154,1,low,al-idrisi,The Eternal Isles
+islam,upper-nile,1154,3,high,al-idrisi,
+islam,great-lakes,1154,1,low,al-idrisi,The lakes of the Nile from Ptolemy
+islam,china-south,1154,3,medium,al-idrisi,
+islam,tarim,1154,3,medium,al-idrisi,
+islam,tibet,1154,2,medium,al-idrisi,
+islam,europe,1154,2,medium,al-idrisi,
+islam,asia,1154,1,medium,al-idrisi,Asia's far north and east by report
+islam,africa,1154,1,medium,al-idrisi,Africa south of the Zanj coast by report
+# Mamluk Cairo, the Ottomans and after
+islam,bilad-al-sudan,1338,4,high,al-umari,Al-Umari's account of Mali
+islam,sahara,1338,4,high,al-umari,
+islam,caribbean,1513,1,high,piri-reis,From a copy of Columbus's map
+islam,brazil-coast,1513,2,high,piri-reis,
+islam,south-atlantic,1513,2,high,piri-reis,
+islam,north-atlantic-west,1513,1,high,piri-reis,
+islam,north-america,1580,1,high,tarih-hind,The New World described in Ottoman Turkish
+islam,south-america,1580,1,high,tarih-hind,
+islam,mexico,1580,2,high,tarih-hind,
+islam,peru,1580,2,high,tarih-hind,
+islam,caribbean,1580,2,high,tarih-hind,
+islam,europe,1732,4,high,katip-celebi,
+islam,north-america,1732,2,high,katip-celebi,
+islam,south-america,1732,2,high,katip-celebi,
+islam,japan,1732,2,high,katip-celebi,
+islam,china-north,1732,3,high,katip-celebi,
+islam,gaul,1834,4,high,tahtawi,Al-Tahtawi's account of Paris
+islam,britain,1834,4,medium,tahtawi,
+
+# ═══ Polynesia ════════════════════════════════════════════════════════════
+polynesia,tonga,-500,4,medium,kirch,Home islands of the Lapita descendants
+polynesia,samoa,-500,4,medium,kirch,
+polynesia,fiji,-500,3,medium,kirch,
+polynesia,west-polynesia-sea,-500,4,medium,kirch,"Voyaging routes between Tonga, Samoa, Fiji, ʻUvea and Futuna"
+polynesia,remote-melanesia,-500,1,low,kirch,Ancestral Lapita lands to the west
+polynesia,cook-islands,-200..800,1,low,kirch,Possible early probes to the east
+polynesia,polynesian-triangle,1000..1100,3,low,kirch,The open ocean of East Polynesia becomes a road
+polynesia,tonga,1150,3,low,kirch,West Polynesia seen from the new homeland
+polynesia,samoa,1150,3,low,kirch,
+polynesia,fiji,1150,2,low,kirch,
+polynesia,west-polynesia-sea,1150,3,low,kirch,
+polynesia,andes-north,1150..1230,2,low,ioannidis-2020,Contact with South America; the kūmara (sweet potato)
+polynesia,peru,1150..1230,1,low,ioannidis-2020,
+# The longest voyages cease, c. 1350–1500
+polynesia,andes-north,1350..1450,0,low,kirch,Contact with South America is not kept up
+polynesia,peru,1350..1450,0,low,kirch,
+polynesia,hawaii,1350..1450,1,low,kirch,Remembered in chants and genealogies
+polynesia,rapa-nui,1350..1450,1,low,kirch,
+polynesia,aotearoa,1350..1500,1,low,kirch,
+polynesia,kermadecs,1350..1450,0,low,kirch,Raoul and Norfolk islands are abandoned
+polynesia,polynesian-triangle,1350..1450,2,low,kirch,The longest sea roads fall out of use
+polynesia,mangareva-pitcairn,1450..1500,2,low,kirch,The Mangareva–Pitcairn–Henderson exchange collapses
+# Tupaia's chart, 1769
+polynesia,tuamotu,1769,4,medium,di-piazza-pearthree,
+polynesia,cook-islands,1769,3,medium,di-piazza-pearthree,
+polynesia,marquesas,1769,3,medium,di-piazza-pearthree,
+polynesia,samoa,1769,3,medium,di-piazza-pearthree,
+polynesia,tonga,1769,3,medium,di-piazza-pearthree,
+polynesia,fiji,1769,2,medium,di-piazza-pearthree,
+# Contact with Europeans
+polynesia,britain,1767,1,medium,cook-journals,Peretāne: the land the ships come from
+polynesia,britain,1777,2,high,cook-journals,Mai comes home from England
+polynesia,europe,1777,1,medium,cook-journals,
+polynesia,hawaii,1820..1830,3,medium,kirch,Tahitian missionaries in Hawaiʻi
+polynesia,aotearoa,1820..1830,3,medium,kirch,
+polynesia,australia-east,1830,2,medium,kirch,The Sydney trade
+polynesia,europe,1830,2,medium,kirch,
+polynesia,north-america,1830,1,medium,kirch,
+
+# ═══ Humanity: first arrival of modern humans ═════════════════════════════
+humanity,africa,-70000,5,high,bae-2017,"Homo sapiens has lived in Africa for some 300,000 years"
+humanity,red-sea,-70000..-60000,5,medium,bae-2017,Crossing at the Bab-el-Mandeb
+humanity,arabia-felix,-70000..-60000,5,medium,bae-2017,
+humanity,arabia-hejaz,-70000..-60000,5,medium,bae-2017,
+humanity,arabia-interior,-70000..-60000,5,medium,bae-2017,
+humanity,oman,-70000..-60000,5,medium,bae-2017,
+humanity,levant,-70000..-60000,5,medium,bae-2017,"Earlier groups reached the Levant by 120,000 years ago"
+humanity,persian-gulf,-70000..-60000,5,medium,bae-2017,Then a dry river valley
+humanity,mesopotamia,-60000..-50000,5,medium,bae-2017,
+humanity,persia,-60000..-50000,5,medium,bae-2017,
+humanity,caucasus,-50000..-40000,5,medium,bae-2017,
+humanity,anatolia,-50000..-45000,5,medium,hublin-2020,
+humanity,indus,-60000..-50000,5,low,bae-2017,
+humanity,west-india-coast,-60000..-50000,5,low,bae-2017,
+humanity,india-north,-60000..-50000,5,low,bae-2017,
+humanity,deccan,-60000..-50000,5,low,bae-2017,
+humanity,malabar,-60000..-50000,5,low,bae-2017,
+humanity,tamilakam,-60000..-50000,5,low,bae-2017,
+humanity,bengal,-60000..-50000,5,low,bae-2017,
+humanity,sri-lanka,-60000..-45000,5,low,bae-2017,Joined to India when the seas were low
+humanity,maldives,-500..1,5,low,draft,
+humanity,arabian-sea,-3000..-2500,4,medium,draft,Ships between the Indus and Mesopotamia
+humanity,burma,-60000..-50000,5,low,bae-2017,
+humanity,khmer,-60000..-45000,5,low,bae-2017,Tam Pa Ling in Laos
+humanity,annam,-60000..-45000,5,low,bae-2017,
+humanity,malay-peninsula,-60000..-45000,5,low,bae-2017,
+humanity,sumatra,-60000..-45000,5,low,bae-2017,"Sundaland, then joined to the mainland"
+humanity,java,-60000..-45000,5,low,bae-2017,
+humanity,borneo,-60000..-45000,5,low,bae-2017,Niah Cave
+humanity,malacca-strait,-60000..-45000,4,low,bae-2017,
+humanity,java-sea,-60000..-45000,4,low,bae-2017,Dry land on the Sunda shelf
+humanity,lesser-sunda,-60000..-50000,5,low,bae-2017,
+humanity,moluccas,-60000..-50000,5,low,bae-2017,
+humanity,philippines,-50000..-45000,5,low,bae-2017,Tabon Cave
+humanity,new-guinea,-60000..-50000,5,low,clarkson-2017,Sahul
+humanity,australia,-60000..-50000,5,low,clarkson-2017,"Madjedbebe may be 65,000 years old"
+humanity,australia-east,-60000..-50000,5,low,clarkson-2017,
+humanity,arafura-timor,-60000..-50000,4,low,clarkson-2017,
+humanity,near-oceania,-45000..-35000,5,medium,kirch,New Ireland and Buka
+humanity,south-china-sea,-3000..-2000,4,low,kirch,Austronesian voyagers
+humanity,bay-of-bengal,-400..-200,4,low,draft,Crossings between India and Southeast Asia
+humanity,coral-sea,-1100..-1000,3,low,kirch,
+humanity,remote-melanesia,-1100..-1000,5,medium,kirch,Lapita pottery at Teouma
+humanity,fiji,-1000..-900,5,medium,kirch,
+humanity,tonga,-900..-850,5,medium,kirch,
+humanity,samoa,-850..-800,5,medium,kirch,
+humanity,west-polynesia-sea,-1000..-800,4,medium,kirch,
+humanity,micronesia,-1500..-1000,5,low,kirch,"The Marianas first; the Carolines and Marshalls later"
+humanity,polynesian-triangle,1000..1200,4,low,wilmshurst-2011,East Polynesian voyagers cross the open ocean
+humanity,pacific-south,1520..1600,3,medium,pigafetta,
+humanity,pacific-south,1773,4,high,cook-journals,
+humanity,pacific-north,1521,3,high,pigafetta,
+humanity,pacific-north,1565,4,high,hoc,The Manila galleons cross both ways
+humanity,challenger-deep,1565,=3,low,hoc,Ships cross the waters far above
+humanity,tasman-sea,1300,3,low,kirch,
+humanity,chatham,1450..1500,5,low,kirch,The Moriori
+humanity,china-north,-50000..-40000,5,medium,bae-2017,Tianyuan Cave
+humanity,china-south,-50000..-40000,5,medium,bae-2017,
+humanity,lingnan,-50000..-40000,5,medium,bae-2017,
+humanity,sichuan,-50000..-40000,5,medium,bae-2017,
+humanity,east-china-sea,-50000..-40000,4,low,bae-2017,Much of it dry land in glacial times
+humanity,korea,-45000..-40000,5,medium,bae-2017,
+humanity,japan,-38000,5,medium,bae-2017,
+humanity,sea-of-japan,-38000,4,medium,bae-2017,
+humanity,ryukyu-taiwan,-35000..-30000,5,medium,bae-2017,
+humanity,mongolia,-45000..-40000,5,medium,bae-2017,
+humanity,manchuria,-40000..-35000,5,medium,bae-2017,
+humanity,hexi,-40000..-30000,5,low,bae-2017,
+humanity,tarim,-40000..-30000,5,low,bae-2017,
+humanity,tibet,-40000..-30000,5,low,bae-2017,Nwya Devu on the high plateau
+humanity,himalaya,-40000..-30000,5,low,bae-2017,
+humanity,everest,-30000,=3,low,bae-2017,People in the valleys below; the summit unreached
+humanity,zhetysu,-45000..-40000,5,low,bae-2017,
+humanity,kazakh-steppe,-45000..-40000,5,low,bae-2017,
+humanity,transoxiana,-50000..-40000,5,low,bae-2017,
+humanity,bactria,-50000..-40000,5,low,bae-2017,
+humanity,caspian,-50000..-40000,5,low,bae-2017,
+humanity,siberia-west,-45000,5,high,fu-2014,Ust'-Ishim
+humanity,siberia-east,-32000,5,high,pitulko-2004,The Yana Rhinoceros Horn Site
+humanity,kamchatka,-15000..-13000,5,medium,draft,
+humanity,sea-of-okhotsk,-15000,4,low,draft,
+humanity,bering-sea,-25000..-15000,4,low,bennett-2021,Beringia: a land bridge
+humanity,alaska,-15000..-13000,5,medium,bennett-2021,
+humanity,north-america,-23000..-14000,5,low,bennett-2021,Footprints at White Sands date to the Last Glacial Maximum
+humanity,canadian-shield,-23000,=0,medium,draft,Under the ice sheet
+humanity,canadian-shield,-9000..-7000,5,medium,draft,The ice retreats
+humanity,hudson-bay,-23000,=0,medium,draft,
+humanity,hudson-bay,-5000..-2500,5,medium,raghavan-2014,
+humanity,canada-east,-23000,=0,medium,draft,
+humanity,canada-east,-10000..-9000,5,medium,draft,
+humanity,vinland,-23000,=0,medium,draft,
+humanity,vinland,-7000..-5000,5,medium,draft,Maritime Archaic peoples
+humanity,pacific-northwest,-16000..-14000,5,low,draft,
+humanity,helluland-markland,-5000..-2500,5,low,raghavan-2014,
+humanity,arctic-canada,-2500..-2000,5,high,raghavan-2014,The Paleo-Inuit
+humanity,greenland,-2500,5,high,raghavan-2014,Independence I and Saqqaq
+humanity,greenland-ice,-2500,=0,high,draft,No one lives on the ice sheet
+humanity,greenland-ice,1888,=3,high,nansen,Nansen crosses the ice
+humanity,greenland-ice,1949..1951,=4,medium,draft,Research stations on the ice
+humanity,baffin-bay,-2500,4,medium,raghavan-2014,
+humanity,arctic-ocean,-2500,3,low,raghavan-2014,Hunters on the sea ice
+humanity,south-america,-16000..-14500,5,medium,dillehay-2008,Monte Verde
+humanity,patagonia,-13000..-11000,5,medium,dillehay-2008,
+humanity,magellan-strait,-11000..-10000,5,medium,draft,
+humanity,caribbean,-5000..-4000,5,medium,keegan-hofman,
+humanity,gulf-of-mexico,-3000,3,low,draft,
+humanity,galapagos,1535,3,high,hoc,Tomás de Berlanga's ship drifts there
+humanity,galapagos,1832,5,medium,hoc,
+humanity,falklands,1690,3,medium,hoc,
+humanity,falklands,1764,5,high,hoc,
+humanity,balkans,-47000..-44000,5,high,hublin-2020,Bacho Kiro Cave
+humanity,greece,-45000,5,medium,hublin-2020,
+humanity,italy,-45000,5,medium,hublin-2020,
+humanity,pontic-steppe,-45000,5,medium,draft,Kostenki on the Don
+humanity,rus,-42000,5,medium,draft,
+humanity,volga,-35000,5,low,draft,
+humanity,lower-volga,-40000,5,low,draft,
+humanity,alps-danube,-43000,5,medium,hublin-2020,
+humanity,germania,-42000,5,medium,hublin-2020,
+humanity,gaul,-42000,5,medium,hublin-2020,
+humanity,iberia,-42000,5,medium,hublin-2020,
+humanity,britain,-42000..-40000,5,medium,draft,
+humanity,north-sea,-12000,4,low,draft,Doggerland
+humanity,med-east,-11000,4,medium,draft,Obsidian from Melos
+humanity,med-west,-7000,4,medium,draft,
+humanity,black-sea,-8000,4,low,draft,
+humanity,crete,-45000,=0,medium,draft,
+humanity,crete,-7000,5,medium,draft,Neolithic Knossos
+humanity,cyprus,-60000,=0,medium,draft,
+humanity,cyprus,-10500..-9000,5,medium,draft,
+humanity,sicily,-15000,5,low,draft,
+humanity,ireland,-10500..-8000,5,medium,draft,
+humanity,scandinavia,-12000..-9000,5,medium,draft,As the ice retreats
+humanity,lapland,-9000..-8000,5,medium,draft,
+humanity,baltic,-10000,5,medium,draft,
+humanity,northern-isles,-6800..-3500,5,low,draft,
+humanity,faroes,500..800,5,low,draft,
+humanity,iceland,795,3,low,dicuil,Irish hermits
+humanity,iceland,874,5,high,landnamabok,
+humanity,norwegian-sea,800,3,medium,landnamabok,
+humanity,norwegian-sea,900,4,medium,landnamabok,
+humanity,north-atlantic-east,800,3,medium,landnamabok,
+humanity,north-atlantic-east,1000,4,medium,vinland-sagas,
+humanity,north-atlantic-west,1000,3,medium,vinland-sagas,
+humanity,north-atlantic-west,1492,4,high,columbus,
+humanity,svalbard,1596,3,high,hoc,
+humanity,svalbard,1906,5,high,hoc,
+humanity,barents-sea,1000,3,low,draft,Pomor hunters
+humanity,barents-sea,1596,4,high,hoc,
+humanity,arctic-central,1948,3,high,draft,A Soviet party lands at the North Pole
+humanity,arctic-central,1968..1969,4,medium,draft,The first surface journeys to the pole
+humanity,canaries,-1000..100,5,low,draft,Ancestors of the Guanches
+humanity,madeira,1420,5,high,zurara,
+humanity,azores,1427..1439,5,high,zurara,
+humanity,cape-verde,1456..1462,5,high,hoc,
+humanity,madagascar,400..700,5,low,dewar-wright,Austronesian and Bantu settlers
+humanity,indian-ocean,400..700,4,low,dewar-wright,The crossing to Madagascar
+humanity,mascarenes,1507,3,high,hoc,
+humanity,mascarenes,1638,5,high,hoc,
+humanity,seychelles,1609,3,medium,hoc,
+humanity,seychelles,1770,5,high,hoc,
+humanity,south-atlantic,1500,4,high,hoc,
+humanity,southern-ocean,1578,3,low,hoc,
+humanity,southern-ocean,1773,4,high,cook-journals,
+humanity,antarctic-seas,1823,3,high,headland,
+humanity,antarctic-seas,1842,4,high,headland,
+humanity,antarctica-coast,1895,3,high,headland,"The first confirmed landing on the continent, at Cape Adare"
+humanity,antarctica-coast,1956,4,high,headland,Year-round stations
+humanity,antarctica-interior,1957,4,high,headland,
+humanity,south-pole,1956..1957,4,high,headland,The Amundsen–Scott station
+humanity,leo,1957,2,high,sputnik,Sputnik 1: the first machine in orbit
+humanity,moon,1959,2,high,luna-surveyor,Luna 2 strikes the Moon
+humanity,moon,1966,3,high,luna-surveyor,Luna 9 and Surveyor 1 land softly
+
+# ═══ The modern frontier: after about 1900 the four viewpoints share one map ═══
+# Floors for the whole world; frontier regions are held back with exact ("=n") rows.
+*,world-land,1900,4,medium,hoc,One shared map: most land mapped
+*,world-land,1950,5,medium,hoc,Aerial survey after the Second World War
+*,world-sea,1900,4,medium,hoc,"Every sea charted, its floor still unknown"
+*,world-sea,1977,5,high,heezen-tharp,The first map of the whole ocean floor
+*,europe,1900,5,high,national-surveys,
+*,antarctica-coast,1900,=3,high,headland,
+*,antarctica-coast,1957,=4,high,headland,The International Geophysical Year
+*,antarctica-coast,1997,5,medium,headland,
+*,antarctica-interior,1900,=0,high,headland,
+*,antarctica-interior,1912,=3,high,amundsen,Amundsen and Scott cross the plateau
+*,antarctica-interior,1958,=4,high,headland,The first overland crossing of the continent
+*,antarctica-interior,1997,5,medium,headland,
+*,south-pole,1900,=0,high,headland,
+*,south-pole,1912,=3,high,amundsen,
+*,south-pole,1957,=4,high,headland,The Amundsen–Scott station
+*,south-pole,1997,5,medium,headland,
+*,antarctic-seas,1900,=3,high,headland,
+*,antarctic-seas,1950,=4,medium,headland,
+*,antarctic-seas,1977,5,medium,heezen-tharp,
+*,arctic-central,1900,=2,high,nansen,
+*,arctic-central,1926,=3,high,draft,The airship Norge flies over the North Pole
+*,arctic-central,1958,=4,high,draft,The submarine Nautilus passes beneath the pole
+*,arctic-central,1977,5,medium,draft,
+*,greenland-ice,1900,=3,high,nansen,
+*,greenland-ice,1931,=4,medium,draft,Wegener's expedition winters on the ice
+*,greenland-ice,1960,5,medium,draft,
+*,arctic-canada,1900,=3,high,hoc,
+*,arctic-canada,1950,5,medium,hoc,
+*,new-guinea,1900,=3,medium,hoc,The coasts are charted; the highlands are unknown to outsiders
+*,new-guinea,1933..1938,=4,medium,hoc,Outsiders first enter the populous highland valleys
+*,new-guinea,1960,5,medium,hoc,
+*,amazon,1900,=3,medium,hoc,
+*,amazon,1950,=4,medium,hoc,
+*,amazon,1970..1980,5,medium,hoc,Radar survey of the Amazon
+*,arabia-interior,1900,=3,medium,hoc,
+*,arabia-interior,1931..1932,=4,high,hoc,Thomas and Philby cross the Empty Quarter
+*,arabia-interior,1950,5,medium,hoc,
+*,tibet,1900,=3,medium,hoc,
+*,tibet,1904,=4,medium,hoc,
+*,tibet,1960,5,medium,hoc,
+*,everest,1900,=3,high,hunt-everest,The highest summit is still unreached
+*,everest,1953,5,high,hunt-everest,
+*,challenger-deep,1900,=3,high,piccard-dietz,The deepest water is still unreached
+*,challenger-deep,1960,5,high,piccard-dietz,
+*,leo,1957,2,high,sputnik,Sputnik 1
+*,leo,1961,5,high,vostok1,
+*,moon,1959,2,high,luna-surveyor,
+*,moon,1966,3,high,luna-surveyor,
+*,moon,1969,5,high,nasa-apollo11,

@@ -1,0 +1,42 @@
+{
+  "id": "faxian",
+  "name": "Faxian's pilgrimage",
+  "traveler": "Faxian",
+  "years": "399–414",
+  "kind": "pilgrim",
+  "viewpoint": "china",
+  "summary": "A Buddhist monk in his sixties walks to India for the monastic rules, then comes home by sea through Sri Lanka and Southeast Asia, and is blown far off course to the Shandong coast. His short record is the first Chinese account of the sea route from India.",
+  "source": "faxian",
+  "confidence": "high",
+  "stops": [
+    {"year": 399, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "note": "Sets out with four companions.", "city": "changan"},
+    {"year": 400, "place": "Dunhuang", "lat": 40.14, "lon": 94.66, "note": "Crosses the desert, 'with only the bones of the dead to mark the way'.", "city": "dunhuang"},
+    {"year": 401, "place": "Khotan", "lat": 37.11, "lon": 79.93, "note": "A grand Buddhist procession.", "city": "khotan"},
+    {"year": 402, "place": "Purushapura", "lat": 34.01, "lon": 71.58, "note": "Over the Pamirs into Gandhara.", "city": "peshawar"},
+    {"year": 404, "place": "Mathura", "lat": 27.49, "lon": 77.67, "note": "A great centre of Buddhist sculpture.", "city": "mathura"},
+    {"year": 405, "place": "Pataliputra", "lat": 25.61, "lon": 85.14, "note": "Three years copying texts in the Gupta capital.", "city": "pataliputra"},
+    {"year": 409, "place": "Tamralipti", "lat": 22.3, "lon": 87.92, "note": "Takes ship for the Lion Kingdom."},
+    {"waypoint": true, "lat": 16.0, "lon": 85.5},
+    {"waypoint": true, "lat": 9.5, "lon": 82.0},
+    {"year": 410, "place": "Anuradhapura", "lat": 8.35, "lon": 80.39, "note": "Two years in Sri Lanka; seeing a fan from China, he weeps with homesickness.", "city": "anuradhapura"},
+    {"waypoint": true, "lat": 6.0, "lon": 88.0},
+    {"waypoint": true, "lat": 5.5, "lon": 96.0},
+    {"waypoint": true, "lat": 1.2, "lon": 104.2},
+    {"year": 412, "place": "Yepoti (Java or Borneo)", "lat": -6.8, "lon": 110.4, "note": "A storm drives the ship to an island where 'heretics and Brahmins flourish'.", "confidence": "low"},
+    {"waypoint": true, "lat": 4.0, "lon": 109.0},
+    {"waypoint": true, "lat": 15.0, "lon": 113.0},
+    {"waypoint": true, "lat": 24.0, "lon": 121.5},
+    {"waypoint": true, "lat": 31.5, "lon": 123.5},
+    {"year": 412, "place": "Laoshan, Shandong", "lat": 36.1, "lon": 120.6, "note": "Bound for Guangzhou, the ship is blown north for months and lands on the Shandong coast."},
+    {"year": 414, "place": "Jiankang (Nanjing)", "lat": 32.06, "lon": 118.78, "note": "Writes the Record of Buddhist Kingdoms.", "city": "nanjing"}
+  ],
+  "informs": [
+    {"region": "india-north", "level": 3, "homeKnows": 414, "confidence": "high"},
+    {"region": "indus", "level": 2, "homeKnows": 414, "confidence": "medium"},
+    {"region": "sri-lanka", "level": 3, "homeKnows": 414, "confidence": "high", "note": "The Lion Kingdom"},
+    {"region": "bay-of-bengal", "level": 3, "homeKnows": 414, "confidence": "medium"},
+    {"region": "sumatra", "level": 2, "homeKnows": 414, "confidence": "medium"},
+    {"region": "java", "level": 2, "homeKnows": 414, "confidence": "medium", "note": "Yepoti"},
+    {"region": "south-china-sea", "level": 3, "homeKnows": 414, "confidence": "medium"}
+  ]
+}

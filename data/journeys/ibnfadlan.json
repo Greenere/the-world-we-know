@@ -1,0 +1,30 @@
+{
+  "id": "ibnfadlan",
+  "name": "Ibn Fadlan's embassy to the Volga",
+  "traveler": "Ahmad ibn Fadlan",
+  "years": "921–923",
+  "kind": "envoy",
+  "viewpoint": "islam",
+  "summary": "Secretary of an Abbasid embassy to the king of the Volga Bulghars, Ibn Fadlan crosses the frozen steppe of the Oghuz Turks and writes the most vivid early description of the Rus, including a ship burial.",
+  "source": "ibn-fadlan",
+  "confidence": "high",
+  "stops": [
+    {"year": 921, "place": "Baghdad", "lat": 33.31, "lon": 44.36, "note": "The embassy leaves the caliph's court.", "date": "June 921", "city": "baghdad"},
+    {"year": 921, "place": "Hamadan", "lat": 34.8, "lon": 48.52, "note": "Through the Zagros by the old Khorasan road."},
+    {"year": 921, "place": "Rayy", "lat": 35.59, "lon": 51.43, "note": "Rayy, near today's Tehran.", "city": "rayy"},
+    {"year": 921, "place": "Nishapur", "lat": 36.21, "lon": 58.8, "note": "The great city of Khorasan.", "city": "nishapur"},
+    {"year": 921, "place": "Bukhara", "lat": 39.77, "lon": 64.42, "note": "Received by the Samanid emir.", "city": "bukhara"},
+    {"year": 922, "place": "Gurganj, Khwarazm", "lat": 42.3, "lon": 59.15, "note": "Winter so cold that beards freeze to blocks of ice."},
+    {"year": 922, "place": "The Oghuz steppe", "lat": 45.5, "lon": 55.0, "note": "Among the Oghuz Turks, whose customs he describes with curiosity and disapproval."},
+    {"year": 922, "place": "The Yayiq (Ural river)", "lat": 51.2, "lon": 51.4, "note": "Crossing the rivers on rafts of camel skin."},
+    {"year": 922, "place": "Bulghar", "lat": 54.98, "lon": 49.06, "note": "Meets the Volga Bulghar king, and the Rus traders, whose chieftain's ship burial he witnesses.", "date": "May 922", "city": "bulghar"},
+    {"year": 923, "place": "Baghdad", "lat": 33.31, "lon": 44.36, "note": "Returns; his report (the Risala) is written down.", "city": "baghdad"}
+  ],
+  "informs": [
+    {"region": "volga", "level": 4, "homeKnows": 923, "confidence": "high"},
+    {"region": "rus", "level": 2, "homeKnows": 923, "confidence": "high"},
+    {"region": "scandinavia", "level": 1, "homeKnows": 923, "confidence": "low", "note": "The homeland of the Rus, by report"},
+    {"region": "lower-volga", "level": 4, "homeKnows": 923, "confidence": "high"},
+    {"region": "kazakh-steppe", "level": 3, "homeKnows": 923, "confidence": "high", "note": "The Oghuz"}
+  ]
+}

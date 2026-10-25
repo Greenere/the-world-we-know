@@ -1,0 +1,20 @@
+{
+  "id": "trieste",
+  "name": "Trieste to the Challenger Deep",
+  "traveler": "Jacques Piccard and Don Walsh",
+  "years": "1960",
+  "kind": "deep dive",
+  "viewpoint": "humanity",
+  "summary": "Two men sealed inside a steel sphere slung beneath a float of gasoline sink nearly eleven kilometres to the floor of the Mariana Trench, the deepest point of the ocean. No one returns there for 52 years.",
+  "source": "piccard-dietz",
+  "confidence": "high",
+  "stops": [
+    {"year": 1960, "place": "Apra Harbor, Guam", "lat": 13.44, "lon": 144.66, "note": "The bathyscaphe Trieste is towed out by the USS Wandank.", "date": "January 1960"},
+    {"year": 1960, "place": "Dive site", "lat": 11.33, "lon": 142.3, "note": "At 08:23 Piccard and Walsh begin to descend.", "date": "23 January 1960"},
+    {"year": 1960, "place": "Challenger Deep", "lat": 11.37, "lon": 142.59, "note": "At 13:06 they touch bottom at about 10,900 metres. An outer window has cracked on the way down. They report seeing a flatfish.", "date": "23 January 1960"},
+    {"year": 1960, "place": "The surface", "lat": 11.37, "lon": 142.59, "note": "Back on the surface at 16:56, after nine hours.", "date": "23 January 1960"}
+  ],
+  "informs": [
+    {"region": "challenger-deep", "level": 5, "homeKnows": 1960, "confidence": "high", "note": "The deepest point of the ocean"}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "humboldt",
+  "name": "Humboldt and Bonpland in the Americas",
+  "traveler": "Alexander von Humboldt and Aimé Bonpland",
+  "years": "1799–1804",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "A Prussian naturalist and a French botanist carry 42 instruments through the Spanish Americas, measuring altitude, temperature, magnetism and plants as they go. They show how climate and life change with height, and their thirty-volume account remakes Europe's picture of South America.",
+  "source": "humboldt-narrative",
+  "confidence": "high",
+  "stops": [
+    {"year": 1799, "place": "A Coruña", "lat": 43.37, "lon": -8.4, "note": "Sail on the Pizarro with royal permission to go anywhere in Spanish America.", "date": "June 1799"},
+    {"year": 1799, "place": "Teide, Tenerife", "lat": 28.27, "lon": -16.64, "note": "Climb the volcano and record how vegetation changes with height."},
+    {"waypoint": true, "lat": 20.0, "lon": -40.0},
+    {"year": 1799, "place": "Cumaná", "lat": 10.46, "lon": -64.17, "note": "First landfall in America.", "date": "July 1799"},
+    {"year": 1800, "place": "The Llanos", "lat": 8.0, "lon": -67.5, "note": "Experiments with electric eels on the grassy plains."},
+    {"year": 1800, "place": "Casiquiare", "by": "river", "lat": 2.0, "lon": -66.8, "note": "Confirm that the Casiquiare joins the Orinoco to the Amazon basin."},
+    {"year": 1801, "place": "Bogotá", "lat": 4.61, "lon": -74.07, "note": "Studies the cinchona trees that give quinine.", "city": "bogota", "from": "The Llanos"},
+    {"year": 1802, "place": "Quito", "lat": -0.22, "lon": -78.51, "note": "Climbs the volcanoes around the city.", "city": "quito"},
+    {"year": 1802, "place": "Chimborazo", "lat": -1.47, "lon": -78.82, "note": "Reach about 5,900 metres, higher than anyone known before them; from it Humboldt draws his famous profile of life by altitude.", "date": "June 1802"},
+    {"year": 1802, "place": "Lima", "lat": -12.05, "lon": -77.04, "note": "Measure the cold current offshore, later named after Humboldt.", "city": "lima"},
+    {"waypoint": true, "lat": -4.0, "lon": -82.5},
+    {"waypoint": true, "lat": 10.0, "lon": -93.0},
+    {"year": 1803, "place": "Acapulco", "lat": 16.85, "lon": -99.88, "note": "By sea to New Spain."},
+    {"year": 1803, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "note": "A year in New Spain's archives and mines.", "city": "tenochtitlan"},
+    {"year": 1804, "place": "Washington", "by": "sea", "lat": 38.9, "lon": -77.04, "note": "Meets President Jefferson, who wants news of Mexico's borders.", "city": "washington", "from": "Mexico City", "date": "June 1804"},
+    {"waypoint": true, "lat": 42.0, "lon": -45.0},
+    {"year": 1804, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "Home with 60,000 specimens; publishing takes thirty years.", "date": "August 1804", "city": "paris"}
+  ],
+  "informs": [
+    {"region": "amazon", "level": 3, "homeKnows": "1805..1810", "confidence": "high"},
+    {"region": "andes-north", "level": 4, "homeKnows": "1805..1810", "confidence": "high"}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "columbus",
+  "name": "Columbus, first voyage",
+  "traveler": "Christopher Columbus",
+  "years": "1492–1493",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Looking for a westward route to Asia, Columbus reaches the Bahamas, Cuba and Hispaniola, islands long home to the Lucayan and Taíno peoples. He thinks he is in the Indies. His printed letter spreads the news across Europe within months.",
+  "source": "columbus",
+  "confidence": "high",
+  "stops": [
+    {"year": 1492, "place": "Palos de la Frontera", "lat": 37.23, "lon": -6.89, "note": "3 August: three ships, the Santa María, the Pinta and the Niña.", "date": "3 August 1492"},
+    {"waypoint": true, "lat": 35.0, "lon": -9.6},
+    {"waypoint": true, "lat": 31.0, "lon": -13.0},
+    {"year": 1492, "place": "La Gomera, Canary Islands", "lat": 28.09, "lon": -17.11, "note": "The last port before the open ocean.", "date": "6 September 1492"},
+    {"waypoint": true, "lat": 27.6, "lon": -40.0},
+    {"waypoint": true, "lat": 26.4, "lon": -60.0},
+    {"waypoint": true, "lat": 25.0, "lon": -70.0},
+    {"year": 1492, "place": "Guanahani", "lat": 24.06, "lon": -74.5, "note": "Landfall on an island its Lucayan people call Guanahani; Columbus names it San Salvador.", "date": "12 October 1492"},
+    {"waypoint": true, "lat": 22.6, "lon": -75.0},
+    {"year": 1492, "place": "Cuba", "lat": 21.08, "lon": -75.65, "note": "He wonders whether this is the Asian mainland and sends envoys inland to find the Great Khan.", "date": "28 October 1492"},
+    {"waypoint": true, "lat": 20.4, "lon": -74.4},
+    {"year": 1492, "place": "Hispaniola", "lat": 19.8, "lon": -73.38, "note": "Larger islands, gold ornaments and the Taíno chief Guacanagarí.", "date": "6 December 1492"},
+    {"year": 1492, "place": "La Navidad", "lat": 19.73, "lon": -72.1, "note": "The Santa María runs aground on Christmas Day; 39 men are left behind in a fort built from her timbers.", "date": "25 December 1492"},
+    {"year": 1493, "place": "Samaná Bay", "lat": 19.2, "lon": -69.3, "note": "Sets out for Spain.", "date": "16 January 1493"},
+    {"waypoint": true, "lat": 25.0, "lon": -65.0},
+    {"waypoint": true, "lat": 33.0, "lon": -55.0},
+    {"waypoint": true, "lat": 37.0, "lon": -38.0},
+    {"year": 1493, "place": "Santa Maria, Azores", "lat": 36.97, "lon": -25.1, "note": "After a great storm, the Portuguese briefly arrest part of the crew.", "date": "18 February 1493"},
+    {"year": 1493, "place": "Lisbon", "lat": 38.71, "lon": -9.14, "note": "Another storm drives the Niña into Lisbon; Columbus meets King João II.", "date": "4 March 1493", "city": "lisbon"},
+    {"year": 1493, "place": "Palos de la Frontera", "lat": 37.23, "lon": -6.89, "note": "Home.", "date": "15 March 1493"},
+    {"year": 1493, "place": "Barcelona", "lat": 41.38, "lon": 2.17, "note": "Received by Ferdinand and Isabella. His letter is printed and spreads across Europe.", "date": "April 1493", "city": "barcelona"}
+  ],
+  "informs": [
+    {"region": "caribbean", "level": 3, "homeKnows": 1493, "confidence": "high", "note": "The islands of 'the Indies'"},
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1493, "confidence": "high"}
+  ]
+}

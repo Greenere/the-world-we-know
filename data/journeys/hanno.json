@@ -1,0 +1,29 @@
+{
+  "id": "hanno",
+  "name": "Hanno the Navigator",
+  "traveler": "Hanno of Carthage",
+  "years": "c. 500 BCE",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "A Carthaginian fleet sails out past the Pillars of Heracles to found colonies down the Atlantic coast of Africa, then explores further south. The account survives only in a short Greek translation, so how far Hanno got (Senegal, Sierra Leone or Cameroon) is still argued over.",
+  "source": "hanno",
+  "confidence": "low",
+  "stops": [
+    {"year": -500, "place": "Carthage", "lat": 36.85, "lon": 10.32, "note": "Sixty ships carrying colonists set out.", "city": "carthage"},
+    {"waypoint": true, "lat": 37.3, "lon": 3.0},
+    {"waypoint": true, "lat": 36.0, "lon": -5.4},
+    {"year": -500, "place": "Thymiaterion", "lat": 34.30, "lon": -6.65, "note": "The first colony, beyond the Pillars of Heracles."},
+    {"year": -500, "place": "Cape Soloeis", "lat": 32.55, "lon": -9.27, "note": "A wooded headland, where they build a shrine to Poseidon."},
+    {"year": -500, "place": "River Lixus", "lat": 28.70, "lon": -11.10, "note": "Friendly herders act as interpreters for the voyage south."},
+    {"year": -500, "place": "Kerne", "lat": 23.70, "lon": -15.90, "note": "An island trading post, as far from the Pillars as Carthage is."},
+    {"year": -500, "place": "River Chretes", "lat": 16.00, "lon": -16.50, "note": "A river full of crocodiles and hippopotamuses: perhaps the Senegal."},
+    {"year": -500, "place": "The Western Horn", "lat": 11.30, "lon": -16.00, "note": "At night they see fires and hear pipes and drums from the land."},
+    {"year": -500, "place": "Chariot of the Gods", "lat": 9.90, "lon": -13.50, "note": "A great burning mountain: perhaps Mount Kakulima in Guinea, or Mount Cameroon."},
+    {"year": -500, "place": "The Southern Horn", "lat": 7.50, "lon": -13.00, "note": "They capture three 'hairy people' their guides call gorillai, then turn back for want of supplies."}
+  ],
+  "informs": [
+    {"region": "atlantic-sahara", "level": 1, "homeKnows": "-500..-450", "confidence": "low", "source": "hanno"},
+    {"region": "senegambia", "level": 1, "homeKnows": "-500..-450", "confidence": "low", "source": "hanno"},
+    {"region": "guinea-coast", "level": 1, "homeKnows": "-500..-450", "confidence": "low", "source": "hanno"}
+  ]
+}

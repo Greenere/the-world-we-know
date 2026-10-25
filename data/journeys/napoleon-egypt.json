@@ -1,0 +1,26 @@
+{
+  "id": "napoleon-egypt",
+  "name": "Napoleon's expedition to Egypt",
+  "traveler": "Bonaparte's army and the Commission of Sciences and Arts",
+  "years": "1798–1801",
+  "kind": "military",
+  "viewpoint": "europe",
+  "summary": "A French invasion of Ottoman Egypt that ends in military failure but brings along 167 scholars, engineers and artists. They measure, draw and collect everything, find the Rosetta Stone, and publish the Description de l'Égypte: the first systematic survey of a whole country outside Europe.",
+  "source": "description-egypte",
+  "confidence": "high",
+  "stops": [
+    {"year": 1798, "place": "Toulon", "lat": 43.12, "lon": 5.93, "note": "Some 35,000 soldiers and 167 savants sail in secret.", "date": "May 1798"},
+    {"year": 1798, "place": "Malta", "lat": 35.9, "lon": 14.5, "note": "Taken from the Knights of St John on the way."},
+    {"year": 1798, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "The army lands and storms the city.", "date": "July 1798", "city": "alexandria"},
+    {"year": 1798, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "After the Battle of the Pyramids, the Institut d'Égypte is founded in the city.", "date": "July 1798", "city": "cairo"},
+    {"year": 1798, "place": "Aboukir Bay", "lat": 31.32, "lon": 30.07, "note": "Nelson destroys the French fleet; the army is stranded.", "date": "August 1798"},
+    {"year": 1799, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "Desaix's column, with the artist Vivant Denon, reaches the temples of Upper Egypt.", "city": "thebes", "from": "Cairo"},
+    {"year": 1799, "place": "Philae", "lat": 24.02, "lon": 32.88, "note": "The southern limit of the survey."},
+    {"year": 1799, "place": "Rosetta", "lat": 31.4, "lon": 30.42, "note": "Soldiers find a stone inscribed in hieroglyphs, Demotic and Greek; it will unlock the hieroglyphs in 1822.", "date": "July 1799"},
+    {"year": 1799, "place": "Acre", "by": "land", "lat": 32.92, "lon": 35.07, "note": "The Syrian campaign stalls at Acre; Bonaparte slips back to France in August.", "date": "May 1799"},
+    {"year": 1801, "place": "Alexandria", "by": "land", "lat": 31.2, "lon": 29.92, "note": "The French surrender to the British; the Rosetta Stone goes to London, the notes to Paris.", "city": "alexandria"}
+  ],
+  "informs": [
+    {"region": "egypt", "level": 5, "homeKnows": "1809..1829", "confidence": "high", "note": "The Description de l'Égypte"}
+  ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "europe",
+    "name": "Europe",
+    "longName": "Mediterranean / Europe",
+    "adjective": "European",
+    "color": "#34588f",
+    "seal": "europe",
+    "homes": [
+      {"from": -500, "place": "Athens", "lat": 37.97, "lon": 23.73},
+      {"from": -146, "place": "Rome", "lat": 41.89, "lon": 12.49},
+      {"from": 330, "place": "Constantinople", "lat": 41.01, "lon": 28.98},
+      {"from": 1204, "place": "Venice", "lat": 45.44, "lon": 12.33},
+      {"from": 1415, "place": "Lisbon", "lat": 38.71, "lon": -9.14},
+      {"from": 1600, "place": "London", "lat": 51.51, "lon": -0.12}
+    ],
+    "moments": [
+      {"year": -430, "label": "Herodotus writes the Histories", "source": "herodotus"},
+      {"year": -326, "label": "Alexander reaches the Indus", "source": "arrian"},
+      {"year": -320, "label": "Pytheas returns from the North Atlantic", "source": "pytheas-strabo"},
+      {"year": 150, "label": "Ptolemy's Geography", "source": "ptolemy"},
+      {"year": 550, "label": "The western world contracts", "source": "cosmas"},
+      {"year": 1037, "label": "Vinland reaches the record, then fades", "source": "adam-bremen"},
+      {"year": 1300, "label": "Marco Polo's book", "source": "polo"},
+      {"year": 1434, "label": "The Portuguese pass Cape Bojador", "source": "zurara"},
+      {"year": 1493, "label": "Columbus returns from the Caribbean", "source": "columbus"},
+      {"year": 1499, "label": "Da Gama returns from India", "source": "velho-roteiro"},
+      {"year": 1522, "label": "The Victoria completes the first circumnavigation", "source": "pigafetta"},
+      {"year": 1771, "label": "Cook's Endeavour returns with Tupaia's chart", "source": "cook-journals"}
+    ]
+  },
+  {
+    "id": "china",
+    "name": "China",
+    "longName": "China",
+    "adjective": "Chinese",
+    "color": "#b4432c",
+    "seal": "china",
+    "homes": [
+      {"from": -500, "place": "Luoyang", "lat": 34.62, "lon": 112.45},
+      {"from": -202, "place": "Chang'an", "lat": 34.26, "lon": 108.94},
+      {"from": 25, "place": "Luoyang", "lat": 34.62, "lon": 112.45},
+      {"from": 581, "place": "Chang'an", "lat": 34.26, "lon": 108.94},
+      {"from": 907, "place": "Kaifeng", "lat": 34.80, "lon": 114.31},
+      {"from": 1127, "place": "Hangzhou", "lat": 30.27, "lon": 120.15},
+      {"from": 1276, "place": "Dadu (Beijing)", "lat": 39.90, "lon": 116.40},
+      {"from": 1368, "place": "Nanjing", "lat": 32.06, "lon": 118.78},
+      {"from": 1421, "place": "Beijing", "lat": 39.90, "lon": 116.40}
+    ],
+    "moments": [
+      {"year": -126, "label": "Zhang Qian returns from the west", "source": "shiji"},
+      {"year": 97, "label": "Gan Ying reaches the Persian Gulf", "source": "houhanshu"},
+      {"year": 166, "label": "Envoys from Daqin arrive by sea", "source": "houhanshu"},
+      {"year": 414, "label": "Faxian returns from India by sea", "source": "faxian"},
+      {"year": 645, "label": "Xuanzang returns from India", "source": "xuanzang"},
+      {"year": 762, "label": "Du Huan returns from the Abbasid lands", "source": "du-huan"},
+      {"year": 1225, "label": "Zhao Rugua's Description of Foreign Peoples", "source": "zhao-rugua"},
+      {"year": 1405, "label": "Zheng He's first voyage sets out", "source": "ming-shilu"},
+      {"year": 1475, "label": "The treasure fleets are not sent again", "source": "ming-shilu"},
+      {"year": 1602, "label": "Ricci's world map", "source": "ricci-map"},
+      {"year": 1718, "label": "The Kangxi atlas is completed", "source": "kangxi-atlas"},
+      {"year": 1843, "label": "Wei Yuan's Illustrated Treatise on the Sea Kingdoms", "source": "haiguo-tuzhi"}
+    ]
+  },
+  {
+    "id": "islam",
+    "name": "Islamic world",
+    "longName": "Islamic world",
+    "adjective": "Islamic",
+    "color": "#2b7a57",
+    "seal": "islam",
+    "startNote": "Before 622 this view shows the Arabian trading world that Islam grew from.",
+    "homes": [
+      {"from": -500, "place": "Mecca", "lat": 21.42, "lon": 39.83, "note": "pre-Islamic"},
+      {"from": 622, "place": "Medina", "lat": 24.47, "lon": 39.61},
+      {"from": 661, "place": "Damascus", "lat": 33.51, "lon": 36.29},
+      {"from": 762, "place": "Baghdad", "lat": 33.31, "lon": 44.36},
+      {"from": 1258, "place": "Cairo", "lat": 30.04, "lon": 31.24},
+      {"from": 1350, "place": "Fez", "lat": 34.03, "lon": -4.98},
+      {"from": 1450, "place": "Cairo", "lat": 30.04, "lon": 31.24}
+    ],
+    "moments": [
+      {"year": 641, "label": "The first conquests: Syria, Iraq, Egypt", "source": "al-baladhuri"},
+      {"year": 711, "label": "Al-Andalus and Sind enter the map", "source": "al-baladhuri"},
+      {"year": 851, "label": "Accounts of China and India", "source": "akhbar-sin"},
+      {"year": 922, "label": "Ibn Fadlan on the Volga", "source": "ibn-fadlan"},
+      {"year": 1030, "label": "Al-Biruni's India", "source": "al-biruni"},
+      {"year": 1068, "label": "Al-Bakri describes Ghana", "source": "al-bakri"},
+      {"year": 1154, "label": "Al-Idrisi's world map", "source": "al-idrisi"},
+      {"year": 1324, "label": "Mansa Musa passes through Cairo", "source": "al-umari"},
+      {"year": 1355, "label": "Ibn Battuta's Rihla is written down", "source": "ibn-battuta"},
+      {"year": 1513, "label": "Piri Reis's world map", "source": "piri-reis"}
+    ]
+  },
+  {
+    "id": "polynesia",
+    "name": "Polynesia",
+    "longName": "Polynesia",
+    "adjective": "Polynesian",
+    "color": "#b07a24",
+    "seal": "polynesia",
+    "oral": true,
+    "startNote": "Polynesian knowledge lived in navigation lore and oral tradition, not on written maps. Its dates come from archaeology and genetics, so its edges are wide.",
+    "homes": [
+      {"from": -500, "place": "Tonga and Samoa", "lat": -13.8, "lon": -171.8},
+      {"from": 1000, "place": "Marquesas", "lat": -8.9, "lon": -140.1},
+      {"from": 1150, "place": "Ra'iātea, Society Islands", "lat": -16.83, "lon": -151.43}
+    ],
+    "moments": [
+      {"year": -850, "label": "Lapita settlers already in Tonga and Samoa", "source": "kirch"},
+      {"year": 0, "label": "The long pause in West Polynesia", "source": "kirch"},
+      {"year": 1025, "label": "East Polynesia is settled", "source": "wilmshurst-2011"},
+      {"year": 1190, "label": "Contact with South America", "source": "ioannidis-2020"},
+      {"year": 1200, "label": "Hawaiʻi and Rapa Nui are reached", "source": "wilmshurst-2011"},
+      {"year": 1270, "label": "Aotearoa is reached", "source": "wilmshurst-2011"},
+      {"year": 1450, "label": "The longest voyages cease", "source": "kirch"},
+      {"year": 1769, "label": "Tupaia draws his chart", "source": "tupaia-chart"},
+      {"year": 1777, "label": "Mai comes home from England", "source": "cook-journals"}
+    ]
+  },
+  {
+    "id": "humanity",
+    "name": "Humanity",
+    "longName": "Humanity",
+    "adjective": "human",
+    "color": "#6d4f86",
+    "seal": "humanity",
+    "special": true,
+    "startNote": "When modern humans (Homo sapiens) first arrived. Earlier humans, among them Neanderthals, Denisovans and Homo erectus, lived across much of Eurasia long before.",
+    "homes": [
+      {"from": -70000, "place": "Eastern Africa", "lat": 5.4, "lon": 35.9}
+    ],
+    "moments": [
+      {"year": -65000, "label": "Out of Africa", "source": "bae-2017"},
+      {"year": -55000, "label": "Sahul: Australia and New Guinea", "source": "clarkson-2017"},
+      {"year": -45000, "label": "Europe and western Siberia", "source": "hublin-2020"},
+      {"year": -38000, "label": "Japan", "source": "bae-2017"},
+      {"year": -32000, "label": "Arctic Siberia", "source": "pitulko-2004"},
+      {"year": -18500, "label": "The Americas", "source": "bennett-2021"},
+      {"year": -2500, "label": "The High Arctic and Greenland", "source": "raghavan-2014"},
+      {"year": -1050, "label": "Remote Oceania", "source": "kirch"},
+      {"year": 550, "label": "Madagascar", "source": "dewar-wright"},
+      {"year": 874, "label": "Iceland", "source": "landnamabok"},
+      {"year": 1270, "label": "Aotearoa New Zealand", "source": "wilmshurst-2011"},
+      {"year": 1911, "label": "The South Pole", "source": "amundsen"},
+      {"year": 1953, "label": "The summit of Everest", "source": "hunt-everest"},
+      {"year": 1960, "label": "The Challenger Deep", "source": "piccard-dietz"},
+      {"year": 1961, "label": "Orbit", "source": "vostok1"},
+      {"year": 1969, "label": "The Moon", "source": "nasa-apollo11"}
+    ]
+  }
+]

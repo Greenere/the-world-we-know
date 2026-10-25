@@ -1,0 +1,25 @@
+{
+  "id": "leif",
+  "name": "Leif Erikson to Vinland",
+  "traveler": "Leif Eriksson",
+  "years": "c. 1000",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "Norse Greenlanders sail west and winter in a land of grapes and timber. The knowledge stays in the sagas of the far north, reaches the rest of Europe as a rumour in Adam of Bremen, and fades. Five centuries later the Americas have to be found again.",
+  "source": "vinland-sagas",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1000, "place": "Brattahlíð", "lat": 61.15, "lon": -45.5, "note": "Leif buys the ship of Bjarni Herjólfsson, who had sighted land to the west, and sets out with 35 men.", "city": "brattahlid"},
+    {"waypoint": true, "lat": 62.5, "lon": -55.0},
+    {"year": 1000, "place": "Helluland", "lat": 64.5, "lon": -65.5, "note": "'Land of flat stones': probably Baffin Island."},
+    {"year": 1000, "place": "Markland", "lat": 54.5, "lon": -58.5, "note": "'Land of forests': probably Labrador."},
+    {"year": 1000, "place": "Vinland", "lat": 51.6, "lon": -55.53, "note": "They winter where there are grapes and timber. The Norse site at L'Anse aux Meadows, found in 1960, fits the sagas.", "city": "lanse-aux-meadows"},
+    {"waypoint": true, "lat": 56.0, "lon": -51.0},
+    {"year": 1001, "place": "Brattahlíð", "lat": 61.15, "lon": -45.5, "note": "Home with timber and grapes. Later voyages try to settle, then give up.", "city": "brattahlid"}
+  ],
+  "informs": [
+    {"region": "vinland", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "note": "Known in Greenland and Iceland; reaches the rest of Europe through Adam of Bremen, c. 1075", "source": "adam-bremen"},
+    {"region": "helluland-markland", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "source": "adam-bremen"},
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "source": "adam-bremen"}
+  ]
+}

@@ -1,0 +1,655 @@
+kind,id,viewpoint,name,native,from,to,source
+# viewpoint "*" is the default for everyone. from/to are inclusive years; blank means open-ended.
+# Region rows here are historical names only; a region's plain name lives in regions.geojson.
+
+# ═══ Region names: Mediterranean / Europe ═══
+region,china-north,europe,Serica,,-50,1250,ptolemy
+region,china-north,europe,Cathay,,1251,1650,polo
+region,china-south,europe,Sinae,,100,1250,ptolemy
+region,china-south,europe,Mangi,,1298,1600,polo
+region,sri-lanka,europe,Taprobane,Ταπροβάνη,-300,1300,ptolemy
+region,sri-lanka,europe,Seilan,,1301,1500,polo
+region,sri-lanka,europe,Ceylon,,1501,1972,hoc
+region,india-north,europe,India,,-500,,herodotus
+region,malay-peninsula,europe,Golden Chersonese,Χρυσῆ Χερσόνησος,150,1500,ptolemy
+region,arabia-felix,europe,Arabia Felix,,-300,1600,strabo
+region,east-africa-coast,europe,Azania,,50,600,periplus
+region,east-africa-coast,europe,Zanguebar,,1500,1800,hoc
+region,ethiopia,europe,Aethiopia,,-500,1300,herodotus
+region,ethiopia,europe,Land of Prester John,,1301,1550,hoc
+region,ethiopia,europe,Abyssinia,,1551,1950,hoc
+region,upper-nile,europe,Meroë,,-430,350,herodotus
+region,upper-nile,europe,Nubia,,351,1820,hoc
+region,bilad-al-sudan,europe,Melli,,1339,1500,dulcert
+region,persia,europe,Persis,Περσίς,-500,650,herodotus
+region,persia,europe,Persia,,651,1935,hoc
+region,transoxiana,europe,Sogdiana,,-330,700,arrian
+region,bactria,europe,Bactria,,-500,700,arrian
+region,britain,europe,Prettanike,Πρεττανική,-325,-51,pytheas-strabo
+region,britain,europe,Britannia,,-50,700,tacitus
+region,ireland,europe,Ierne,,-325,-51,pytheas-strabo
+region,ireland,europe,Hibernia,,-50,1000,tacitus
+region,iceland,europe,Thule,Θούλη,-325,869,pytheas-strabo
+region,scandinavia,europe,Scandia,,50,800,ptolemy
+region,germania,europe,Germania,,-50,800,tacitus
+region,gaul,europe,Gallia,,-200,500,strabo
+region,gaul,europe,Francia,,501,1000,hoc
+region,iberia,europe,Hispania,,-200,1500,strabo
+region,maghreb,europe,Mauretania,,-100,700,strabo
+region,maghreb,europe,Barbary,,1500,1830,hoc
+region,ifriqiya,europe,Africa,,-146,698,appian
+region,pontic-steppe,europe,Scythia,Σκυθία,-500,300,herodotus
+region,pontic-steppe,europe,Sarmatia,,301,1100,ptolemy
+region,mongolia,europe,Tartary,,1250,1800,carpini-rubruck
+region,siberia-east,europe,Tartary,,1300,1700,hoc
+region,vinland,europe,Vinland,Vínland,1000,1496,vinland-sagas
+region,vinland,europe,Newfoundland,,1497,,hoc
+region,helluland-markland,europe,Helluland and Markland,,1000,1500,vinland-sagas
+region,caribbean,europe,The Indies,,1493,1520,columbus
+region,caribbean,europe,West Indies,,1521,,hoc
+region,south-america,europe,Mundus Novus,,1503,1506,waldseemuller
+region,south-america,europe,America,,1507,1600,waldseemuller
+region,brazil-coast,europe,Terra de Santa Cruz,,1500,1530,hoc
+region,brazil-coast,europe,Brazil,,1531,,hoc
+region,australia,europe,New Holland,,1644,1824,tasman
+region,aotearoa,europe,Staten Landt,,1642,1645,tasman
+region,aotearoa,europe,Nova Zeelandia,,1646,1840,tasman
+region,hawaii,europe,Sandwich Islands,,1778,1850,cook-journals
+region,tonga,europe,Friendly Islands,,1773,1900,cook-journals
+region,remote-melanesia,europe,New Hebrides,,1774,1980,cook-journals
+region,japan,europe,Cipangu,,1300,1550,polo
+region,java,europe,Java Major,,1300,1500,polo
+region,sumatra,europe,Java Minor,,1300,1500,polo
+region,korea,europe,Corea,,1590,1900,hoc
+region,ryukyu-taiwan,europe,Formosa,,1544,1945,hoc
+region,annam,europe,Champa,,1300,1600,polo
+region,annam,europe,Cochinchina,,1601,1900,hoc
+region,moluccas,europe,Spice Islands,,1512,,hoc
+region,arabian-sea,europe,Erythraean Sea,Ἐρυθρὰ Θάλασσα,-300,400,periplus
+region,pacific-north,europe,Mar del Sur,,1513,1520,hoc
+region,pacific-south,europe,Mar Pacífico,,1521,1700,pigafetta
+region,north-atlantic-east,europe,Ocean Sea,,-500,1500,hecataeus
+region,black-sea,europe,Pontus Euxinus,Πόντος Εὔξεινος,-500,500,herodotus
+region,caspian,europe,Hyrcanian Sea,,-430,1000,herodotus
+
+# ═══ Region names: China ═══
+region,levant,china,Daqin,大秦,97,629,houhanshu
+region,levant,china,Fulin,拂菻,630,1300,du-huan
+region,anatolia,china,Fulin,拂菻,630,1453,du-huan
+region,anatolia,china,Lumi,鲁迷,1454,1700,ming-shilu
+region,persia,china,Anxi,安息,-126,226,shiji
+region,persia,china,Bosi,波斯,227,,hoc
+region,mesopotamia,china,Tiaozhi,条支,-126,226,shiji
+region,arabia-interior,china,Dashi,大食,651,1400,hoc
+region,arabia-hejaz,china,Tianfang,天方,1401,1800,ma-huan
+region,transoxiana,china,Dayuan,大宛,-126,600,shiji
+region,bactria,china,Daxia,大夏,-126,200,shiji
+region,bactria,china,Tuhuoluo,吐火罗,600,900,xuanzang
+region,india-north,china,Shendu,身毒,-126,100,shiji
+region,india-north,china,Tianzhu,天竺,101,645,houhanshu
+region,india-north,china,Yindu,印度,646,,xuanzang
+region,sri-lanka,china,Shiziguo,狮子国,414,1000,faxian
+region,sri-lanka,china,Xilan,锡兰,1400,,ma-huan
+region,tarim,china,Xiyu,西域,-126,1759,hanshu
+region,tarim,china,Xinjiang,新疆,1760,,hoc
+region,mongolia,china,Xiongnu,匈奴,-300,100,shiji
+region,mongolia,china,Tujue,突厥,552,744,hoc
+region,mongolia,china,Menggu,蒙古,1200,,hoc
+region,japan,china,Wo,倭,57,670,houhanshu
+region,japan,china,Riben,日本,671,,hoc
+region,korea,china,Gaoli,高丽,918,1392,hoc
+region,korea,china,Chaoxian,朝鲜,1393,1910,ming-shilu
+region,annam,china,Jiaozhi,交趾,-111,678,hanshu
+region,annam,china,Annan,安南,679,1800,hoc
+region,khmer,china,Funan,扶南,245,550,kang-tai
+region,khmer,china,Zhenla,真腊,551,1600,zhou-daguan
+region,java,china,Shepo,闍婆,430,1300,zhao-rugua
+region,java,china,Zhaowa,爪哇,1301,,ma-huan
+region,sumatra,china,Shilifoshi,室利佛逝,670,904,yijing
+region,sumatra,china,Sanfoqi,三佛齐,905,1400,zhao-rugua
+region,philippines,china,Mayi,麻逸,1000,1400,zhao-rugua
+region,philippines,china,Lüsong,吕宋,1401,,ming-shilu
+region,borneo,china,Boni,渤泥,900,,zhao-rugua
+region,east-africa-coast,china,Cengba,层拔,1178,1400,zhao-rugua
+region,egypt,china,Wusili,勿斯里,1178,1500,zhao-rugua
+region,maghreb,china,Mulanpi,木兰皮,1178,1400,zhao-rugua
+region,tibet,china,Tubo,吐蕃,641,1300,hoc
+region,tibet,china,Xizang,西藏,1700,,hoc
+region,ryukyu-taiwan,china,Liuqiu,流求,610,1600,hoc
+region,europe,china,Ouluoba,欧逻巴,1602,1850,ricci-map
+region,europe,china,Ouzhou,欧洲,1851,,haiguo-tuzhi
+region,north-america,china,Yamolijia,亚墨利加,1602,1850,ricci-map
+region,south-america,china,Yamolijia,亚墨利加,1602,1850,ricci-map
+region,africa,china,Liweiya,利未亚,1602,1850,ricci-map
+region,africa,china,Feizhou,非洲,1851,,haiguo-tuzhi
+region,iberia,china,Folangji,佛郎机,1517,1700,ming-shilu
+region,britain,china,Yingjili,英吉利,1700,,hoc
+region,arabian-sea,china,Xiyang,西洋,1405,1600,ma-huan
+region,bay-of-bengal,china,Xiyang,西洋,1405,1600,ma-huan
+region,south-china-sea,china,Nanhai,南海,-200,,hanshu
+
+# ═══ Region names: Islamic world ═══
+region,china-north,islam,al-Sin,الصين,650,,akhbar-sin
+region,china-south,islam,al-Sin,الصين,650,,akhbar-sin
+region,india-north,islam,al-Hind,الهند,632,,al-biruni
+region,indus,islam,al-Sind,السند,632,,al-baladhuri
+region,gaul,islam,Ifranja,إفرنجة,732,1500,al-masudi
+region,anatolia,islam,Bilad al-Rum,بلاد الروم,632,1500,al-baladhuri
+region,iberia,islam,al-Andalus,الأندلس,711,1492,al-baladhuri
+region,bilad-al-sudan,islam,Bilad al-Sudan,بلاد السودان,734,,al-bakri
+region,east-africa-coast,islam,Bilad al-Zanj,بلاد الزنج,750,1500,al-masudi
+region,sri-lanka,islam,Sarandib,سرنديب,750,,akhbar-sin
+region,sumatra,islam,Zabaj,الزابج,800,1300,akhbar-sin
+region,malay-peninsula,islam,Kalah,كلة,850,1300,akhbar-sin
+region,korea,islam,al-Sila,السيلا,870,1300,ibn-khurradadhbih
+region,madagascar,islam,Qumr,القمر,947,1500,al-masudi
+region,egypt,islam,Misr,مصر,641,,al-baladhuri
+region,mesopotamia,islam,al-Iraq,العراق,637,,al-baladhuri
+region,persia,islam,Faris,فارس,642,,al-baladhuri
+region,transoxiana,islam,Ma wara' al-nahr,ما وراء النهر,705,1500,al-baladhuri
+region,ethiopia,islam,al-Habasha,الحبشة,615,,al-baladhuri
+region,upper-nile,islam,al-Nuba,النوبة,652,,al-baladhuri
+region,maghreb,islam,al-Maghrib,المغرب,700,,al-baladhuri
+region,ifriqiya,islam,Ifriqiya,إفريقية,670,,al-baladhuri
+region,volga,islam,Bulghar,بلغار,922,1400,ibn-fadlan
+region,rus,islam,al-Rus,الروس,870,,ibn-fadlan
+region,britain,islam,Inkiltara,إنكلترة,1154,,al-idrisi
+region,caspian,islam,Bahr al-Khazar,بحر الخزر,737,,al-masudi
+region,north-atlantic-east,islam,Sea of Darkness,بحر الظلمات,850,1500,al-idrisi
+region,canaries,islam,The Eternal Isles,الجزائر الخالدات,900,1500,al-idrisi
+region,tibet,islam,al-Tubbat,التبت,750,,al-idrisi
+region,caribbean,islam,Hind-i Garbi,هند غربی,1580,,tarih-hind
+
+# ═══ Region names: Polynesia ═══
+region,samoa,polynesia,Sāmoa,,-500,,kirch
+region,tonga,polynesia,Tonga,,-500,,kirch
+region,fiji,polynesia,Fisi,,-500,,kirch
+region,society-islands,polynesia,Tahiti and Raʻiātea,,1025,,kirch
+region,marquesas,polynesia,Te Henua ʻEnana,,1075,,kirch
+region,hawaii,polynesia,Hawaiʻi,,1200,,kirch
+region,rapa-nui,polynesia,Te Pito o te Henua,,1200,,kirch
+region,aotearoa,polynesia,Aotearoa,,1270,,kirch
+region,tuamotu,polynesia,Paumotu,,1050,,kirch
+region,mangareva-pitcairn,polynesia,Mangareva,,1100,,kirch
+region,britain,polynesia,Peretāne,,1767,,cook-journals
+
+# ═══ City names ═══
+city,athens,*,Athens,Ἀθῆναι,,,
+city,sparta,*,Sparta,Σπάρτη,,,
+city,corinth,*,Corinth,Κόρινθος,,,
+city,syracuse,*,Syracuse,Συράκουσαι,,,
+city,thessaloniki,*,Thessalonica,Θεσσαλονίκη,,1912,
+city,thessaloniki,*,Thessaloniki,,1913,,
+city,rome,*,Rome,Roma,,,
+city,rome,china,Daqin,大秦,97,700,houhanshu
+city,rome,islam,Rumiya,رومية,700,,al-idrisi
+city,carthage,*,Carthage,Qart-ḥadašt,,,
+city,carthago,*,Carthago,,,,
+city,alexandria,*,Alexandria,Ἀλεξάνδρεια,,,
+city,alexandria,islam,al-Iskandariyya,الإسكندرية,641,,
+city,pompeii,*,Pompeii,,,,
+city,herculaneum,*,Herculaneum,,,,
+city,massalia,*,Massalia,Μασσαλία,,500,
+city,massalia,*,Marseille,,501,,
+city,gades,*,Gades,,,800,
+city,gades,*,Cádiz,,801,,
+city,constantinople,*,Byzantion,Βυζάντιον,,329,
+city,constantinople,*,Constantinople,Κωνσταντινούπολις,330,1929,
+city,constantinople,*,Istanbul,,1930,,
+city,constantinople,islam,al-Qustantiniyya,القسطنطينية,632,1452,al-masudi
+city,constantinople,islam,Istanbul,استانبول,1453,,
+city,constantinople,china,Fulin,拂菻,630,1300,du-huan
+city,troy,*,Troy (Ilion),,,,
+city,knossos,*,Knossos,Κνωσός,,,
+city,mycenae,*,Mycenae,Μυκῆναι,,,
+city,delphi,*,Delphi,Δελφοί,,,
+city,ephesus,*,Ephesus,Ἔφεσος,,,
+city,miletus,*,Miletus,Μίλητος,,,
+city,antioch,*,Antioch,,,,
+city,jerusalem,*,Jerusalem,,,,
+city,jerusalem,islam,al-Quds,القدس,636,,
+city,tyre,*,Tyre,,,,
+city,palmyra,*,Palmyra,,,,
+city,petra,*,Petra,,,,
+city,damascus,*,Damascus,,,,
+city,damascus,islam,Dimashq,دمشق,634,,
+city,aleppo,*,Aleppo,,,,
+city,aleppo,islam,Halab,حلب,637,,
+city,venice,*,Venice,Venezia,,,
+city,florence,*,Florence,Firenze,,,
+city,milan,*,Mediolanum,,,500,
+city,milan,*,Milan,,501,,
+city,ravenna,*,Ravenna,,,,
+city,genoa,*,Genoa,Genova,,,
+city,naples,*,Neapolis,Νεάπολις,,500,
+city,naples,*,Naples,,501,,
+city,paris,*,Lutetia,,,360,
+city,paris,*,Paris,,361,,
+city,london,*,Londinium,,,500,
+city,london,*,London,,501,,
+city,york,*,Eboracum,,,600,
+city,york,*,York,,601,,
+city,trier,*,Augusta Treverorum,,,500,
+city,trier,*,Trier,,501,,
+city,cologne,*,Colonia Agrippina,,,500,
+city,cologne,*,Cologne,,501,,
+city,lyon,*,Lugdunum,,,500,
+city,lyon,*,Lyon,,501,,
+city,vienna,*,Vindobona,,,500,
+city,vienna,*,Vienna,,501,,
+city,lisbon,*,Olisipo,,,710,
+city,lisbon,*,Lisbon,,711,,
+city,lisbon,islam,al-Ushbuna,الأشبونة,711,1147,
+city,seville,*,Hispalis,,,710,
+city,seville,*,Seville,,711,,
+city,seville,islam,Ishbiliya,إشبيلية,711,1248,
+city,cordoba,*,Corduba,,,710,
+city,cordoba,*,Córdoba,,711,,
+city,cordoba,islam,Qurtuba,قرطبة,711,1236,
+city,toledo,*,Toletum,,,710,
+city,toledo,*,Toledo,,711,,
+city,toledo,islam,Tulaytula,طليطلة,711,1085,
+city,granada,*,Granada,,,,
+city,granada,islam,Gharnata,غرناطة,750,1492,
+city,barcelona,*,Barcino,,,500,
+city,barcelona,*,Barcelona,,501,,
+city,madrid,*,Mayrit,مجريط,,1085,
+city,madrid,*,Madrid,,1086,,
+city,kyiv,*,Kyiv,Київ,,,
+city,novgorod,*,Novgorod,Новгород,,,
+city,moscow,*,Moscow,Москва,,,
+city,st-petersburg,*,St Petersburg,Санкт-Петербург,,,
+city,hamburg,*,Hamburg,,,,
+city,lubeck,*,Lübeck,,,,
+city,bergen,*,Bergen,,,,
+city,birka,*,Birka,,,,
+city,hedeby,*,Hedeby,,,,
+city,reykjavik,*,Reykjavík,,,,
+city,dublin,*,Dublin,Dubh Linn,,,
+city,edinburgh,*,Edinburgh,Din Eidyn,,,
+city,amsterdam,*,Amsterdam,,,,
+city,antwerp,*,Antwerp,,,,
+city,bruges,*,Bruges,,,,
+city,krakow,*,Kraków,,,,
+city,prague,*,Prague,Praha,,,
+city,buda,*,Buda,,,1872,
+city,buda,*,Budapest,,1873,,
+city,trebizond,*,Trebizond,Τραπεζοῦς,,1460,
+city,trebizond,*,Trabzon,,1461,,
+city,caffa,*,Theodosia,,,1265,
+city,caffa,*,Caffa,,1266,1475,
+city,caffa,*,Kefe,,1476,1783,
+city,caffa,*,Feodosia,,1784,,
+city,sarai,*,New Sarai,,,,
+city,bulghar,*,Bulghar,,,,
+city,brattahlid,*,Brattahlíð,,,,
+city,lanse-aux-meadows,*,L'Anse aux Meadows,,,,
+city,babylon,*,Babylon,,,,
+city,nineveh,*,Nineveh,,,,
+city,persepolis,*,Persepolis,Pārsa,,,
+city,persepolis,islam,Takht-e Jamshid,تخت جمشید,700,,
+city,susa,*,Susa,,,,
+city,ctesiphon,*,Ctesiphon,,,,
+city,ctesiphon,islam,al-Mada'in,المدائن,637,,
+city,seleucia,*,Seleucia on the Tigris,,,,
+city,baghdad,*,Baghdad,بغداد,,,
+city,baghdad,islam,Madinat al-Salam,مدينة السلام,762,1258,al-tabari
+city,baghdad,china,Baida,白达,1178,1258,zhao-rugua
+city,baghdad,europe,Baldac,,1298,1600,polo
+city,basra,*,Basra,البصرة,,,
+city,kufa,*,Kufa,الكوفة,,,
+city,samarra,*,Samarra,سامراء,,,
+city,isfahan,*,Isfahan,اصفهان,,,
+city,shiraz,*,Shiraz,شیراز,,,
+city,tabriz,*,Tabriz,تبریز,,,
+city,tabriz,europe,Tauris,,1298,1700,polo
+city,rayy,*,Rayy,ری,,,
+city,tehran,*,Tehran,تهران,,,
+city,nishapur,*,Nishapur,نیشابور,,,
+city,merv,*,Merv,,,,
+city,herat,*,Herat,,,,
+city,balkh,*,Balkh,بلخ,,,
+city,balkh,europe,Bactra,Βάκτρα,-330,650,arrian
+city,balkh,china,Lanshi,蓝市,-128,200,shiji
+city,samarkand,*,Samarkand,سمرقند,,,
+city,samarkand,europe,Maracanda,Μαράκανδα,-329,700,arrian
+city,samarkand,china,Kangguo,康国,600,900,xuanzang
+city,samarkand,china,Sama'erhan,撒马儿罕,1400,1600,ming-shilu
+city,bukhara,*,Bukhara,بخارا,,,
+city,tashkent,*,Chach,,,1000,
+city,tashkent,*,Tashkent,,1001,,
+city,kabul,*,Kabul,,,,
+city,ghazni,*,Ghazni,,,,
+city,peshawar,*,Purushapura,,,1500,
+city,peshawar,*,Peshawar,,1501,,
+city,mecca,*,Mecca,مكة,,,
+city,mecca,china,Tianfang,天方,1400,1800,ma-huan
+city,medina,*,Yathrib,يثرب,,621,
+city,medina,*,Medina,المدينة,622,,
+city,sanaa,*,Sanaa,صنعاء,,,
+city,aden,*,Aden,عدن,,,
+city,aden,europe,Eudaimon Arabia,,1,300,periplus
+city,aden,china,Adan,阿丹,1417,1500,ma-huan
+city,muscat,*,Muscat,مسقط,,,
+city,sohar,*,Sohar,صحار,,,
+city,hormuz,*,Hormuz,هرمز,,,
+city,hormuz,china,Hulumosi,忽鲁谟斯,1414,1500,ma-huan
+city,hormuz,europe,Ormus,,1298,1650,polo
+city,siraf,*,Siraf,سيراف,,,
+city,cairo,*,Cairo,القاهرة,,,
+city,cairo,china,Wusili,勿斯里,1178,1500,zhao-rugua
+city,cairo,europe,Babylon of Egypt,,1100,1400,hoc
+city,fustat,*,Fustat,الفسطاط,,,
+city,memphis,*,Memphis,,,,
+city,thebes,*,Thebes,,,,
+city,meroe,*,Meroë,,,,
+city,aksum,*,Aksum,,,,
+city,adulis,*,Adulis,,,,
+city,kairouan,*,Kairouan,القيروان,,,
+city,tunis,*,Tunis,تونس,,,
+city,fez,*,Fez,فاس,,,
+city,marrakesh,*,Marrakesh,مراكش,,,
+city,sijilmasa,*,Sijilmasa,سجلماسة,,,
+city,tlemcen,*,Tlemcen,تلمسان,,,
+city,tripoli,*,Oea,,,640,
+city,tripoli,*,Tripoli,طرابلس,641,,
+city,cyrene,*,Cyrene,Κυρήνη,,,
+city,leptis-magna,*,Leptis Magna,,,,
+city,timbuktu,*,Timbuktu,تمبكتو,,,
+city,djenne,*,Djenné,,,,
+city,gao,*,Gao,,,,
+city,koumbi-saleh,*,Koumbi Saleh,,,,
+city,walata,*,Walata,ولاتة,,,
+city,kano,*,Kano,,,,
+city,ife,*,Ilé-Ifẹ̀,,,,
+city,benin-city,*,Benin City,Edo,,,
+city,elmina,*,Elmina,,,,
+city,great-zimbabwe,*,Great Zimbabwe,,,,
+city,mapungubwe,*,Mapungubwe,,,,
+city,kilwa,*,Kilwa Kisiwani,,,,
+city,mombasa,*,Mombasa,,,,
+city,malindi,*,Malindi,,,,
+city,malindi,china,Malin,麻林,1415,1500,ming-shilu
+city,mogadishu,*,Mogadishu,مقديشو,,,
+city,mogadishu,china,Mugudushu,木骨都束,1417,1500,fei-xin
+city,zanzibar,*,Zanzibar,,,,
+city,sofala,*,Sofala,سفالة,,,
+city,lalibela,*,Lalibela,,,,
+city,gondar,*,Gondar,,,,
+city,harar,*,Harar,,,,
+city,mbanza-kongo,*,Mbanza Kongo,,,,
+city,luanda,*,Luanda,,,,
+city,cape-town,*,Cape Town,,,,
+city,mohenjo-daro,*,Mohenjo-daro,,,,
+city,harappa,*,Harappa,,,,
+city,pataliputra,*,Pataliputra,,,1540,
+city,pataliputra,*,Patna,,1541,,
+city,pataliputra,europe,Palibothra,Παλίβοθρα,-300,600,strabo
+city,taxila,*,Taxila,,,,
+city,varanasi,*,Varanasi,,,,
+city,varanasi,europe,Benares,,1600,1956,
+city,ujjain,*,Ujjain,,,,
+city,mathura,*,Mathura,,,,
+city,kannauj,*,Kannauj,,,,
+city,nalanda,*,Nalanda,,,,
+city,delhi,*,Delhi,,,,
+city,agra,*,Agra,,,,
+city,lahore,*,Lahore,,,,
+city,multan,*,Multan,,,,
+city,bharuch,*,Bharuch,,,,
+city,bharuch,europe,Barygaza,Βαρύγαζα,-100,300,periplus
+city,calicut,*,Kozhikode,,,,
+city,calicut,europe,Calicut,,1498,,velho-roteiro
+city,calicut,china,Guli,古里,1405,1600,ma-huan
+city,calicut,islam,Qaliqut,قاليقوط,1300,,ibn-battuta
+city,muziris,*,Muziris,,,,
+city,kochi,*,Kochi,,,,
+city,kochi,europe,Cochin,,1500,1996,
+city,goa,*,Goa,,,,
+city,arikamedu,*,Arikamedu,,,,
+city,arikamedu,europe,Poduke,Ποδούκη,-100,300,periplus
+city,madurai,*,Madurai,,,,
+city,kanchipuram,*,Kanchipuram,,,,
+city,vijayanagara,*,Vijayanagara,,,1565,
+city,vijayanagara,*,Hampi,,1566,,
+city,anuradhapura,*,Anuradhapura,,,,
+city,polonnaruwa,*,Polonnaruwa,,,,
+city,gaur,*,Gaur,,,,
+city,dhaka,*,Dhaka,,,,
+city,kolkata,*,Calcutta,,,2000,
+city,kolkata,*,Kolkata,,2001,,
+city,mumbai,*,Bombay,,,1994,
+city,mumbai,*,Mumbai,,1995,,
+city,anyang,*,Yin,殷,,,
+city,xianyang,*,Xianyang,咸阳,,,
+city,changan,*,Chang'an,长安,,1368,
+city,changan,*,Xi'an,西安,1369,,
+city,changan,islam,Khumdan,خمدان,750,1000,akhbar-sin
+city,luoyang,*,Luoyang,洛阳,,,
+city,kaifeng,*,Daliang,大梁,,906,
+city,kaifeng,*,Bianjing,汴京,907,1127,
+city,kaifeng,*,Kaifeng,开封,1128,,
+city,hangzhou,*,Hangzhou,杭州,,1137,
+city,hangzhou,*,Lin'an,临安,1138,1276,
+city,hangzhou,*,Hangzhou,杭州,1277,,
+city,hangzhou,europe,Quinsay,,1298,1600,polo
+city,hangzhou,islam,al-Khansa,الخنساء,1300,1500,ibn-battuta
+city,suzhou,*,Suzhou,苏州,,,
+city,nanjing,*,Jianye,建业,,280,
+city,nanjing,*,Jiankang,建康,281,589,
+city,nanjing,*,Jinling,金陵,590,1367,
+city,nanjing,*,Nanjing,南京,1368,,
+city,nanjing,europe,Nanking,,1600,1980,
+city,yangzhou,*,Yangzhou,扬州,,,
+city,beijing,*,Ji,蓟,,937,
+city,beijing,*,Yanjing,燕京,938,1271,
+city,beijing,*,Dadu,大都,1272,1367,
+city,beijing,*,Beiping,北平,1368,1402,
+city,beijing,*,Beijing,北京,1403,,
+city,beijing,europe,Cambaluc,,1298,1600,polo
+city,beijing,europe,Peking,,1601,1979,
+city,beijing,islam,Khanbaliq,خان بالق,1272,1500,ibn-battuta
+city,shanghai,*,Shanghai,上海,,,
+city,quanzhou,*,Quanzhou,泉州,,,
+city,quanzhou,europe,Zaiton,,1298,1600,polo
+city,quanzhou,islam,Zaytun,زيتون,1100,1500,ibn-battuta
+city,guangzhou,*,Panyu,番禺,,225,
+city,guangzhou,*,Guangzhou,广州,226,,
+city,guangzhou,islam,Khanfu,خانفو,750,1300,akhbar-sin
+city,guangzhou,europe,Canton,,1517,1950,
+city,macau,*,Macau,澳门,,,
+city,hong-kong,*,Hong Kong,香港,,,
+city,chengdu,*,Chengdu,成都,,,
+city,dunhuang,*,Dunhuang,敦煌,,,
+city,dunhuang,china,Shazhou,沙州,622,1300,
+city,kashgar,*,Kashgar,,,,
+city,kashgar,china,Shule,疏勒,-126,900,hanshu
+city,khotan,*,Khotan,,,,
+city,khotan,china,Yutian,于阗,-126,1000,hanshu
+city,kucha,*,Kucha,,,,
+city,kucha,china,Qiuci,龟兹,-126,1000,hanshu
+city,loulan,*,Loulan,楼兰,,,
+city,loulan,europe,Kroraina,,1901,,stein
+city,niya,*,Niya,,,,
+city,gaochang,*,Gaochang,高昌,,,
+city,karakorum,*,Karakorum,,,,
+city,shangdu,*,Shangdu,上都,,,
+city,shangdu,europe,Xanadu,,1298,,polo
+city,lhasa,*,Lhasa,,,,
+city,kyoto,*,Heian-kyō,平安京,,1868,
+city,kyoto,*,Kyoto,京都,1869,,
+city,nara,*,Heijō-kyō,平城京,,784,
+city,nara,*,Nara,奈良,785,,
+city,kamakura,*,Kamakura,鎌倉,,,
+city,edo,*,Edo,江戸,,1867,
+city,edo,*,Tokyo,東京,1868,,
+city,osaka,*,Naniwa,難波,,1495,
+city,osaka,*,Osaka,大坂,1496,,
+city,nagasaki,*,Nagasaki,長崎,,,
+city,gyeongju,*,Gyeongju,경주,,,
+city,kaesong,*,Kaesong,개성,,,
+city,seoul,*,Hanseong,한성,,1909,
+city,seoul,*,Gyeongseong,경성,1910,1945,
+city,seoul,*,Seoul,서울,1946,,
+city,pyongyang,*,Pyongyang,평양,,,
+city,oc-eo,*,Óc Eo,,,,
+city,angkor,*,Yasodharapura,,,1431,
+city,angkor,*,Angkor,,1432,,
+city,bagan,*,Bagan,,,,
+city,bagan,europe,Pagan,,1800,1989,
+city,ayutthaya,*,Ayutthaya,,,,
+city,palembang,*,Palembang,,,,
+city,trowulan,*,Trowulan (Majapahit),,,,
+city,malacca,*,Melaka,,,,
+city,malacca,china,Manlajia,满剌加,1405,1600,ma-huan
+city,malacca,europe,Malacca,,1509,,
+city,hanoi,*,Thăng Long,,,1830,
+city,hanoi,*,Hanoi,,1831,,
+city,hue,*,Huế,,,,
+city,manila,*,Manila,,,,
+city,cebu,*,Sugbu,,,1564,
+city,cebu,*,Cebu,,1565,,
+city,ternate,*,Ternate,,,,
+city,batavia,*,Batavia,,,1942,
+city,batavia,*,Jakarta,,1943,,
+city,singapore,*,Singapore,,,,
+city,caral,*,Caral,,,,
+city,chavin,*,Chavín de Huántar,,,,
+city,el-mirador,*,El Mirador,,,,
+city,monte-alban,*,Monte Albán,,,,
+city,teotihuacan,*,Teotihuacan,,,,
+city,tikal,*,Tikal,,,,
+city,calakmul,*,Calakmul,,,,
+city,palenque,*,Palenque,,,,
+city,copan,*,Copán,,,,
+city,chichen-itza,*,Chichén Itzá,,,,
+city,mayapan,*,Mayapán,,,,
+city,cholula,*,Cholula,,,,
+city,tula,*,Tollan,,,,
+city,tzintzuntzan,*,Tzintzuntzan,,,,
+city,tenochtitlan,*,Tenochtitlan,,,1520,
+city,tenochtitlan,*,Mexico City,,1521,,
+city,cahokia,*,Cahokia,,,,
+city,chaco,*,Pueblo Bonito,,,,
+city,mesa-verde,*,Mesa Verde,,,,
+city,chan-chan,*,Chan Chan,,,,
+city,tiwanaku,*,Tiwanaku,,,,
+city,huari,*,Huari,,,,
+city,cuzco,*,Qusqu,,,1533,
+city,cuzco,*,Cuzco,,1534,,
+city,machu-picchu,*,Machu Picchu,,,,
+city,lima,*,Lima,,,,
+city,quito,*,Quito,,,,
+city,bogota,*,Santafé de Bogotá,,,1819,
+city,bogota,*,Bogotá,,1820,,
+city,potosi,*,Potosí,,,,
+city,cartagena,*,Cartagena,,,,
+city,panama-viejo,*,Panamá,,,,
+city,santo-domingo,*,Santo Domingo,,,,
+city,havana,*,Havana,,,,
+city,veracruz,*,Veracruz,,,,
+city,st-augustine,*,St Augustine,,,,
+city,jamestown,*,Jamestown,,,,
+city,quebec,*,Quebec,,,,
+city,boston,*,Boston,,,,
+city,new-york,*,New Amsterdam,,,1664,
+city,new-york,*,New York,,1665,,
+city,philadelphia,*,Philadelphia,,,,
+city,washington,*,Washington,,,,
+city,chicago,*,Chicago,,,,
+city,san-francisco,*,Yerba Buena,,,1846,
+city,san-francisco,*,San Francisco,,1847,,
+city,salvador,*,Salvador,,,,
+city,rio,*,Rio de Janeiro,,,,
+city,buenos-aires,*,Buenos Aires,,,,
+city,santiago,*,Santiago,,,,
+city,nan-madol,*,Nan Madol,,,,
+city,lapaha,*,Lapaha (Muʻa),,,,
+city,taputapuatea,*,Taputapuātea,,,,
+city,honolulu,*,Honolulu,,,,
+city,auckland,*,Tāmaki Makaurau,,,1840,
+city,auckland,*,Auckland,,1841,,
+city,sydney,*,Sydney,,,,
+city,hobart,*,Hobart,,,,
+city,melbourne,*,Melbourne,,,,
+
+# ── Names for the added cities ──
+city,ur,*,Ur,,,,
+city,uruk,*,Uruk,,,,
+city,hattusa,*,Hattusa,,,,
+city,sardis,*,Sardis,Σάρδεις,,,
+city,pergamon,*,Pergamon,Πέργαμον,,,
+city,rhodes,*,Rhodes,Ῥόδος,,,
+city,byblos,*,Byblos,,,,
+city,ugarit,*,Ugarit,,,,
+city,ecbatana,*,Ecbatana,,,700,
+city,ecbatana,*,Hamadan,همدان,701,,
+city,pasargadae,*,Pasargadae,,,,
+city,jerash,*,Gerasa,,,750,
+city,jerash,*,Jerash,,751,,
+city,ostia,*,Ostia,,,,
+city,aquileia,*,Aquileia,,,,
+city,volubilis,*,Volubilis,,,,
+city,timgad,*,Thamugadi,,,,
+city,tangier,*,Tingis,,,700,
+city,tangier,*,Tangier,طنجة,701,,
+city,algiers,*,Algiers,الجزائر,,,
+city,napata,*,Napata,,,,
+city,kerma,*,Kerma,,,,
+city,dongola,*,Old Dongola,,,,
+city,gedi,*,Gede,,,,
+city,lamu,*,Lamu,,,,
+city,zeila,*,Zeila,زيلع,,,
+city,shibam,*,Shibam,شبام,,,
+city,khartoum,*,Khartoum,الخرطوم,,,
+city,addis-ababa,*,Addis Ababa,አዲስ አበባ,,,
+city,saint-louis,*,Saint-Louis,,,,
+city,freetown,*,Freetown,,,,
+city,oyo,*,Ọ̀yọ́-Ilé,,,,
+city,khami,*,Khami,,,,
+city,durban,*,Port Natal,,,1854,
+city,durban,*,Durban,,1855,,
+city,derbent,*,Derbent,,,,
+city,derbent,islam,Bab al-Abwab,باب الأبواب,654,1400,
+city,astrakhan,*,Xacitarxan,,,1556,
+city,astrakhan,*,Astrakhan,Астрахань,1557,,
+city,kazan,*,Kazan,Казань,,,
+city,tobolsk,*,Tobolsk,Тобольск,,,
+city,yakutsk,*,Yakutsk,Якутск,,,
+city,irkutsk,*,Irkutsk,Иркутск,,,
+city,okhotsk,*,Okhotsk,Охотск,,,
+city,ani,*,Ani,Անի,,,
+city,yarkand,*,Yarkand,,,,
+city,yarkand,china,Shache,莎车,-100,,
+city,leh,*,Leh,,,,
+city,kathmandu,*,Kantipur,,,1768,
+city,kathmandu,*,Kathmandu,,1769,,
+city,pagan-mandalay,*,Mandalay,,,,
+city,pegu,*,Hanthawaddy,,,1600,
+city,pegu,*,Pegu,,1601,,
+city,sukhothai,*,Sukhothai,สุโขทัย,,,
+city,luang-prabang,*,Muang Sua,,,1350,
+city,luang-prabang,*,Luang Prabang,,1351,,
+city,hoi-an,*,Hội An,,,,
+city,hoi-an,europe,Faifo,,1600,1850,
+city,banten,*,Banten,,,,
+city,makassar,*,Makassar,,,,
+city,hakata,*,Hakata,博多,,,
+city,liangzhou,*,Liangzhou,凉州,,,
+city,jiaohe,*,Jiaohe,交河,,,
+city,datong,*,Pingcheng,平城,,494,
+city,datong,*,Datong,大同,495,,
+city,montreal,*,Ville-Marie,,,1704,
+city,montreal,*,Montreal,,1705,,
+city,new-orleans,*,New Orleans,,,,
+city,santa-fe,*,Santa Fe,,,,
+city,acapulco,*,Acapulco,,,,
+city,cajamarca,*,Cajamarca,,,,
+city,arequipa,*,Arequipa,,,,
+city,montevideo,*,Montevideo,,,,
+city,nukualofa,*,Nukuʻalofa,,,,
+city,papeete,*,Papeete,,,,
+city,wellington,*,Te Whanganui-a-Tara,,,1839,
+city,wellington,*,Wellington,,1840,,
+city,perth,*,Perth,,,,
+city,adelaide,*,Adelaide,,,,

@@ -1,0 +1,37 @@
+{
+  "id": "gagarin",
+  "name": "Gagarin, Vostok 1",
+  "traveler": "Yuri Gagarin",
+  "years": "1961",
+  "kind": "spaceflight",
+  "viewpoint": "humanity",
+  "summary": "A 27-year-old Soviet pilot makes one orbit of the Earth in 108 minutes. The line on the map is his ground track: the path traced on the surface beneath him.",
+  "source": "vostok1",
+  "confidence": "medium",
+  "space": "orbit",
+  "stops": [
+    {"year": 1961, "place": "Baikonur", "lat": 45.92, "lon": 63.34, "note": "Lift-off at 09:07 Moscow time. 'Poyekhali!' ('Let's go!')", "date": "12 April 1961", "body": "orbit"},
+    {"waypoint": true, "lat": 55.0, "lon": 78.0},
+    {"year": 1961, "place": "Over Siberia", "lat": 62.0, "lon": 97.0, "note": "In orbit, climbing toward the most northerly point of the track.", "body": "orbit"},
+    {"waypoint": true, "lat": 64.9, "lon": 120.0},
+    {"waypoint": true, "lat": 60.0, "lon": 145.0},
+    {"waypoint": true, "lat": 48.0, "lon": 165.0},
+    {"waypoint": true, "lat": 30.0, "lon": 180.0},
+    {"year": 1961, "place": "Over the Pacific", "lat": 10.0, "lon": -165.0, "note": "Crossing the Pacific into the night side of the Earth.", "body": "orbit"},
+    {"waypoint": true, "lat": -10.0, "lon": -150.0},
+    {"waypoint": true, "lat": -30.0, "lon": -132.0},
+    {"waypoint": true, "lat": -48.0, "lon": -108.0},
+    {"year": 1961, "place": "Near the tip of South America", "lat": -60.0, "lon": -75.0, "note": "The southernmost part of the orbit.", "body": "orbit"},
+    {"waypoint": true, "lat": -64.5, "lon": -45.0},
+    {"waypoint": true, "lat": -55.0, "lon": -15.0},
+    {"waypoint": true, "lat": -35.0, "lon": 0.0},
+    {"year": 1961, "place": "Off the coast of Angola", "lat": -12.0, "lon": 11.0, "note": "The retro-rocket fires to bring the capsule down.", "body": "orbit"},
+    {"waypoint": true, "lat": 5.0, "lon": 20.0},
+    {"waypoint": true, "lat": 25.0, "lon": 30.0},
+    {"waypoint": true, "lat": 40.0, "lon": 38.5},
+    {"year": 1961, "place": "Near Engels, Saratov", "lat": 51.27, "lon": 45.99, "note": "108 minutes after launch Gagarin ejects and comes down by parachute in a field.", "date": "12 April 1961"}
+  ],
+  "informs": [
+    {"region": "leo", "level": 5, "homeKnows": 1961, "confidence": "high", "note": "The first human in orbit"}
+  ]
+}

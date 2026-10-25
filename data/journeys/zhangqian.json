@@ -1,0 +1,40 @@
+{
+  "id": "zhangqian",
+  "name": "Zhang Qian's mission to the west",
+  "traveler": "Zhang Qian",
+  "years": "138–126 BCE",
+  "kind": "envoy",
+  "viewpoint": "china",
+  "summary": "Sent to find allies against the Xiongnu, Zhang Qian is captured twice and gone for thirteen years. He brings back no alliance, but his report opens Central Asia to Han China and starts the trade later called the Silk Road.",
+  "source": "shiji",
+  "confidence": "high",
+  "stops": [
+    {"year": -138, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "note": "Emperor Wu sends him west with about a hundred men to find the Yuezhi.", "city": "changan"},
+    {"year": -138, "place": "Longxi", "lat": 35.0, "lon": 104.6, "note": "He leaves Han territory."},
+    {"year": -138, "place": "Xiongnu lands", "lat": 39.2, "lon": 101.0, "note": "Captured by the Xiongnu and held for about ten years. He marries and has a son, but keeps the envoy's staff.", "confidence": "medium"},
+    {"waypoint": true, "lat": 42.4, "lon": 93.0},
+    {"waypoint": true, "lat": 41.8, "lon": 86.0},
+    {"waypoint": true, "lat": 41.2, "lon": 80.3},
+    {"year": -129, "place": "Dayuan (Ferghana)", "lat": 40.53, "lon": 70.94, "note": "Escapes west. Dayuan has walled cities, grape wine and the 'blood-sweating' horses."},
+    {"year": -128, "place": "Kangju", "lat": 39.65, "lon": 66.96, "note": "The people of Kangju guide him on to the Yuezhi.", "city": "samarkand"},
+    {"year": -128, "place": "Da Yuezhi", "lat": 37.22, "lon": 67.28, "note": "The Yuezhi are settled and prosperous north of the Oxus and have no wish for revenge."},
+    {"year": -128, "place": "Daxia (Bactra)", "lat": 36.76, "lon": 66.9, "note": "In the markets he sees bamboo and cloth from Shu, brought by way of a country called Shendu: India.", "city": "balkh"},
+    {"waypoint": true, "lat": 37.8, "lon": 74.8},
+    {"waypoint": true, "lat": 38.4, "lon": 77.2},
+    {"year": -127, "place": "Yutian (Khotan)", "lat": 37.11, "lon": 79.93, "note": "Returns along the southern rim of the Tarim basin.", "city": "khotan"},
+    {"waypoint": true, "lat": 39.0, "lon": 88.2},
+    {"waypoint": true, "lat": 37.6, "lon": 95.0},
+    {"year": -127, "place": "Qiang lands", "lat": 36.7, "lon": 100.6, "note": "Captured by the Xiongnu again while trying to pass through Qiang territory.", "confidence": "medium"},
+    {"year": -126, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "note": "Escapes in the confusion after the Shanyu's death and reaches Chang'an with one companion, Ganfu, after thirteen years.", "city": "changan"}
+  ],
+  "informs": [
+    {"region": "transoxiana", "level": 3, "homeKnows": -126, "confidence": "high", "note": "Dayuan and Kangju"},
+    {"region": "bactria", "level": 3, "homeKnows": -126, "confidence": "high", "note": "Daxia and the Yuezhi"},
+    {"region": "tarim", "level": 3, "homeKnows": -126, "confidence": "high"},
+    {"region": "kazakh-steppe", "level": 2, "homeKnows": -126, "confidence": "medium", "note": "The Wusun and Kangju"},
+    {"region": "persia", "level": 1, "homeKnows": -126, "confidence": "medium", "note": "Anxi (Parthia), by report"},
+    {"region": "india-north", "level": 1, "homeKnows": -126, "confidence": "medium", "note": "Shendu, by report"},
+    {"region": "indus", "level": 1, "homeKnows": -126, "confidence": "medium"},
+    {"region": "mesopotamia", "level": 1, "homeKnows": -126, "confidence": "low", "note": "Tiaozhi, by report"}
+  ]
+}
