@@ -194,6 +194,8 @@ export class OverlayModel {
   private labels: {cities: CityView[]; regions: RegionLabel[]} = {cities: [], regions: []};
   private regionLabels: RegionLabel[] = [];
   private travellerLabels: Traveller[] = [];
+  /** Whole turns of 360° added to journey geometry so it lands on the world copy the camera is looking at. */
+  private journeyShift = 0;
   private declutterKey = '';
   private declutteredAt = 0;
 
@@ -398,7 +400,7 @@ export class OverlayModel {
     }
     for (const o of this.travellerLabels) {
       if (hidden(o.pos[0], o.pos[1])) continue;
-      const p = map.project([o.pos[0], o.pos[1]]);
+      const p = map.project([o.pos[0] + this.journeyShift, o.pos[1]]);
       ctx.font = `italic 13px ${FONT_TEXT}`;
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
@@ -422,6 +424,12 @@ export class OverlayModel {
     const {grid, field} = this.ctx;
     const globe = state.globe;
     const P = (p: LngLat): LngLat => [p[0], clampLat(p[1], globe)];
+    // Journeys keep their longitudes unwrapped so a circumnavigation stays one unbroken line (Spithead
+    // ends at 359°), but the camera wraps to ±180°. Draw them on the copy nearest the camera.
+    const anchor = geo ? travelled(geo, state.progress).pos : null;
+    this.journeyShift = anchor ? Math.round((this.ctx.map.getCenter().lng - anchor[0]) / 360) * 360 : 0;
+    const shift = this.journeyShift;
+    const PJ = shift ? (p: LngLat): LngLat => [p[0] + shift, clampLat(p[1], globe)] : P;
     const layers: Layer[] = [
       new FogLayer({
         id: 'fog',
@@ -532,8 +540,8 @@ export class OverlayModel {
     );
 
     layers.push(...this.inventionLayers(state, P));
-    layers.push(...this.travellerLayers(others, state, P));
-    if (geo) layers.push(...journeyLayers(geo, state, vpColor, now, P, globe ? paths => this.splitAtHorizon(paths) : paths => paths));
+    layers.push(...this.travellerLayers(others, state, PJ));
+    if (geo) layers.push(...journeyLayers(geo, state, vpColor, now, PJ, globe ? paths => this.splitAtHorizon(paths) : paths => paths));
     return layers;
   }
 
@@ -703,8 +711,12 @@ function journeyLayers(
 ): Layer[] {
   const color = hexToRgb(vpColor);
   const {pos, trail} = travelled(geo, state.progress);
-  const route = visible(geo.legs.filter(l => l.onMap).map(l => l.points.map(P)));
-  const trailPaths = visible(trail.map(t => t.map(P)));
+  // On the flat map the lines repeat a world-width either side, like the basemap, so a voyage that has
+  // gone right round (the Challenger back in the Atlantic) still shows where it sailed first.
+  const copies = (paths: LngLat[][]) =>
+    state.globe ? paths : paths.flatMap(path => [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
+  const route = visible(copies(geo.legs.filter(l => l.onMap).map(l => l.points.map(P))));
+  const trailPaths = visible(copies(trail.map(t => t.map(P))));
   const cur = currentStopIndex(geo, state.progress);
   const stops = geo.stops.filter(s => s.pos).map((s, _i, arr) => ({s, i: geo.stops.indexOf(s), n: arr.length}));
   const pulse = (now % 1800) / 1800;
