@@ -32,8 +32,8 @@ export class JourneyPanel {
   private epilogueEl: HTMLElement | null = null;
   private tab: 'journeys' | 'inventions' = 'journeys';
   private filter = 'all';
-  /** Viewpoint filter: null for all; undefined until the list first opens (then the current viewpoint). */
-  private vpFilter: VpId | null | undefined = undefined;
+  /** Viewpoint filter: null for all journeys (where the list always opens). */
+  private vpFilter: VpId | null = null;
   private query = '';
   private view: 'list' | 'timeline' = 'list';
   private openEras = new Set<string>();
@@ -152,10 +152,6 @@ export class JourneyPanel {
   }
 
   private journeyList(): Node[] {
-    if (this.vpFilter === undefined) {
-      const vp = this.store.state.vps[0];
-      this.vpFilter = (MAIN_VPS as VpId[]).includes(vp) && this.data.journeys.some(j => j.viewpoint === vp) ? vp : null;
-    }
     const all = this.data.journeys;
     const chips = (cls: string, label: string, items: {id: string | null; label: string; n: number; color?: string}[], current: string | null, set: (id: string | null) => void) =>
       h(
@@ -191,7 +187,7 @@ export class JourneyPanel {
       'jp-vps',
       t('Viewpoint'),
       [{id: null, label: t('All'), n: all.length}, ...MAIN_VPS.map(v => ({id: v, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => j.viewpoint === v).length, color: this.data.vp[v].color}))],
-      this.vpFilter ?? null,
+      this.vpFilter,
       id => (this.vpFilter = id as VpId | null),
     );
     const kindChips = chips(
