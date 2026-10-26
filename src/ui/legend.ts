@@ -7,13 +7,15 @@ import {mixHex} from './color';
 import {h} from './dom';
 import {fogAlphaFor} from './cards';
 
-/** What the fog means: one swatch per level, or the three tints of compare mode. */
+const SHORT_LEVEL_NAMES = ['Unknown', 'Rumor', 'Contact', 'Coast', 'Interior', 'Surveyed'];
+
+/** What the fog means, as a row in the title card: one swatch per level, or the tints of compare mode. */
 export class Legend {
   el: HTMLElement;
   private key = '';
 
   constructor(private data: AppData) {
-    this.el = h('div.legend.panel', {'aria-label': t('Legend')});
+    this.el = h('div.legend', {'aria-label': t('Legend')});
   }
 
   update(s: State, geo: JourneyGeo | null) {
@@ -25,7 +27,6 @@ export class Legend {
       const [a, b] = s.vps.map(v => this.data.vp[v]);
       const both = mixHex(a.color, b.color, 0.5, 0.08);
       this.el.append(
-        h('div.legend-title', t('Known to')),
         h(
           'ul.legend-tints',
           [
@@ -38,13 +39,16 @@ export class Legend {
       );
       return;
     }
-    const names = s.vps[0] === 'humanity' ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES;
-    const levels = s.vps[0] === 'humanity' ? [0, 3, 5] : [0, 1, 2, 3, 4, 5];
+    const humanity = s.vps[0] === 'humanity';
+    const names = humanity ? HUMANITY_LEVEL_NAMES : LEVEL_NAMES;
+    // One short word under each swatch, so the row fits the title card; the full name is the tooltip.
+    const short = humanity ? names : SHORT_LEVEL_NAMES;
+    const levels = humanity ? [0, 3, 5] : [0, 1, 2, 3, 4, 5];
     this.el.append(
-      h('div.legend-title', t(s.vps[0] === 'humanity' ? 'People' : 'What was known')),
       h(
         'ul.legend-levels',
-        levels.map(l => h('li', {title: t(names[l])}, h('span.fog-swatch', {style: `--a:${fogAlphaFor(l)}`}), h('span.legend-name', t(names[l])))),
+        {'aria-label': t(humanity ? 'People' : 'What was known')},
+        levels.map(l => h('li', {title: t(names[l])}, h('span.fog-swatch', {style: `--a:${fogAlphaFor(l)}`}), h('span.legend-name', t(short[l])))),
       ),
     );
     if (geo) {

@@ -68,6 +68,8 @@ export class TopBar {
   private globeBtn: HTMLButtonElement;
   private subtitle: HTMLElement;
   private note: HTMLElement;
+  /** Where the legend sits: a row under the subtitle. */
+  legendSlot: HTMLElement;
   private moreBtn: HTMLButtonElement;
   private picker: HTMLElement;
   private pickerItems = new Map<VpId, HTMLButtonElement>();
@@ -157,12 +159,14 @@ export class TopBar {
     });
     this.subtitle = h('div.cartouche-sub');
     this.note = h('div.cartouche-note');
+    this.legendSlot = h('div.cartouche-legend');
     this.el = h(
       'header.topbar',
       h(
         'div.cartouche.panel',
         h('h1.cartouche-title', t('The World We Know')),
         this.subtitle,
+        this.legendSlot,
         this.note,
       ),
       h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips, this.moreBtn), h('span.switcher-rule'), this.compareBtn, this.picker),

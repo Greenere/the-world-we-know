@@ -616,27 +616,16 @@ kbd {
   transform: none;
 }
 
-/* ── Legend and inset ───────────────────────────────────────────────────── */
+/* ── Inset ───────────────────────────────────────────────────── */
 
-.bottom-left,
 .bottom-right {
   position: absolute;
   bottom: calc(var(--tl-h) + var(--gutter) + 10px);
   pointer-events: none;
 }
 
-.bottom-left > *,
 .bottom-right > * {
   pointer-events: auto;
-}
-
-.bottom-left {
-  left: var(--gutter);
-  transition: left 0.35s ease;
-}
-
-.has-journey .bottom-left {
-  left: calc(var(--gutter) + 392px);
 }
 
 .bottom-right {
@@ -648,8 +637,11 @@ kbd {
   right: calc(var(--gutter) + 404px);
 }
 
-.legend {
-  padding: 8px 14px 9px;
+/* The legend: a row in the title card, under the subtitle. */
+.cartouche-legend {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid var(--rule);
 }
 
 .legend-title,
@@ -666,8 +658,9 @@ kbd {
 .legend-levels,
 .legend-tints {
   display: flex;
-  gap: 12px;
-  margin: 5px 0 0;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -676,26 +669,35 @@ kbd {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
-  width: 54px;
+  gap: 2px;
+  min-width: 38px;
   text-align: center;
 }
 
+.legend-levels .fog-swatch {
+  width: 26px;
+  height: 15px;
+}
+
 .legend-name {
-  font-size: 11.5px;
+  font-size: 11px;
   line-height: 1.1;
+  white-space: nowrap;
   color: var(--ink-2);
 }
 
 .legend-seen {
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-top: 8px;
-  padding-top: 7px;
-  border-top: 1px solid var(--rule);
-  font-size: 13px;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 12px;
   color: var(--ink-2);
+}
+
+.legend-seen .seen-swatch {
+  width: 26px;
+  height: 15px;
 }
 
 .legend-seen em {
@@ -717,8 +719,8 @@ kbd {
 .legend-tints li {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 5px;
+  font-size: 12px;
   color: var(--ink-2);
 }
 
@@ -2052,12 +2054,6 @@ kbd {
   :root {
     --top-h: 122px;
   }
-  .legend-levels {
-    gap: 6px;
-  }
-  .legend-levels li {
-    width: 46px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -2129,7 +2125,7 @@ kbd {
     width: 38px;
     height: 38px;
   }
-  .bottom-left {
+  .cartouche-legend {
     display: none;
   }
   .has-card .bottom-right {

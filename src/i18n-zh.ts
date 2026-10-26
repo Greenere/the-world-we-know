@@ -12,6 +12,8 @@ export const zhUi: Record<string, string> = {
   'Flat map': '平面地图',
   'Toggle globe view': '切换地球仪视图',
   Viewpoint: '视角',
+  Coast: '海岸',
+  Interior: '内陆',
   Kind: '类型',
   View: '视图',
   'Journeys and inventions': '旅程与发明',

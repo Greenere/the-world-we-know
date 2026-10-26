@@ -187,12 +187,12 @@ class App {
       ui.top.el,
       ui.journey.el,
       ui.cards.el,
-      h('div.bottom-left', ui.legend.el),
       h('div.bottom-right', ui.inset.el),
       ui.timeline.el,
       ui.search.el,
       ui.about.el,
     ];
+    ui.top.legendSlot.append(ui.legend.el);
     document.getElementById('app')!.prepend(...this.uiNodes);
     return ui;
   }
