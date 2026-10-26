@@ -1,0 +1,10 @@
+{
+  "subject": "journey/hasekura",
+  "era": "havana",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare",
+  "date": "2026-10-26",
+  "base": null,
+  "ref": "galleon",
+  "prompt": "The attached page is from the same journal. Draw a new, different scene as described below, matching only its drawing style, paper and palette; none of its people. Do not copy its composition.\n\nAn illustrated page from an explorer's journal: one particular moment on the journey, drawn close enough to see faces, hands, tools, clothing and the things being traded, measured or found. The traveller need not appear: some pages record only what the party saw (a harbour, a fortress, a market, an animal or plant). When the traveller does appear, draw them in action and in a natural, varied pose, not standing to attention. In the manner of the expedition artists of the 18th and 19th centuries. A visible graphite underdrawing with construction lines left in; quick sepia and brown ink with loose hatching; watercolour dropped in quickly and unevenly in a few washes of ochre, grey-green, faded blue and a touch of red. The page may carry one or two small separate studies of a detail (an object, a tool, a creature) loosely arranged beside the main scene, as on a real sketchbook page. Edges unfinished, dissolving into bare, slightly foxed cream paper; a single page, no binding visible. No legible writing of any kind: no annotations, labels, captions, numbers, dates or signature; any writing that appears in the scene is illegible marks. No border or frame. Nothing anachronistic for the year given; people, dress and objects true to their place and time, drawn with respect.\n\nThis page shows only what the travellers saw. Do not draw the traveller or anyone from their party: no samurai, no friar, no explorer figures.\n\nThis picture: Havana harbour, Cuba, 1614: a crowd of Spanish galleons with high sterns at anchor inside the narrow harbour mouth, the Morro castle on its headland, small boats rowing between them, palm trees and low tiled houses on the shore. A small separate study on the page shows a pineapple and a tobacco leaf."
+}

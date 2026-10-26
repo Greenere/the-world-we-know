@@ -101,6 +101,12 @@ data/depictions/
 | `stop`, `place` | The stop the scene shows: its index among the journey's stops, counting from 0 and skipping waypoints, and its `place`, which the build checks against the journey file |
 | `title`, `caption`, `captions`, `sources`, `confidence`, `prompt` | As for a city |
 | `ref` | Optional: another scene whose accepted picture is attached as a reference for style and for the traveller's face, without copying its composition. Usually every scene refers to the first one |
+| `traveller` | Optional, `false` for a page of what the party saw (a harbour, a fortress, a market) with none of the party in it. Without it the model tends to copy the reference page's people into the scene |
+
+**Making a good journey sketchbook.**
+- **Aim for one scene per major stop.** A long journey like Hasekura's has ten scenes, so the card changes often while it plays.
+- **Mix the pages.** Some show the traveller in a moment; others show only what they saw or found.
+- **Vary the traveller's pose and action** from scene to scene: on deck in a storm, head bowed at a font, kneeling, walking through a crowd. Write the action into the prompt rather than "stands beside".
 
 While a journey with scenes is followed, the right-hand card shows the scene for the traveller's latest sketched stop, crossfading as they move on. Stops with a scene get a small picture mark in the journey panel. The card can be closed, and it reappears at the next scene.
 

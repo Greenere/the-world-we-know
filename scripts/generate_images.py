@@ -67,17 +67,24 @@ def prompt_for(style: str, kind: str, subject: dict, item: dict, mode: str | Non
     parts = [style]
     if kind == "city":
         parts.append("View: " + subject["view"])
-    else:
+    elif item.get("traveller", True):
         parts.append("The traveller: " + subject["traveller"])
+    else:
+        # A page of what the party saw: keep the travellers out, whatever the reference page shows.
+        parts.append("This page shows only what the travellers saw. Do not draw the traveller or anyone from "
+                     "their party: no samurai, no friar, no explorer figures.")
     parts.append("This picture: " + item["prompt"])
     if mode == "base":
         parts.insert(0, "Redraw the attached sketch from exactly the same viewpoint, framing and drawing style. "
                         "Change only what the description below says has changed in this era; keep the land, "
                         "the shoreline and the composition as they are.")
+    elif mode == "ref" and not item.get("traveller", True):
+        parts.insert(0, "The attached page is from the same journal. Draw a new, different scene as described below, "
+                        "matching only its drawing style, paper and palette; none of its people. Do not copy its composition.")
     elif mode == "ref":
         parts.insert(0, "The attached page is from the same journal. Draw a new, different scene as described below, "
-                        "matching its drawing style, paper and palette, and drawing the traveller with the same face, "
-                        "build and clothing. Do not copy its composition.")
+                        "matching its drawing style, paper and palette. If the traveller appears, give them the same face, "
+                        "build and clothing, but a different pose. Do not copy its composition.")
     return "\n\n".join(parts)
 
 

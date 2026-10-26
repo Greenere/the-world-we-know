@@ -17,6 +17,10 @@
     {"year": 1614, "place": "Seville", "lat": 37.39, "lon": -5.99, "note": "Up the Guadalquivir; stays at Coria del Río, where Japón is still a surname.", "city": "seville", "date": "October 1614"},
     {"year": 1615, "place": "Madrid", "lat": 40.42, "lon": -3.7, "note": "Baptised before King Philip III.", "city": "madrid", "by": "land"},
     {"year": 1615, "place": "Rome", "lat": 41.9, "lon": 12.5, "note": "Received by Pope Paul V and made a Roman citizen.", "city": "rome", "date": "November 1615"},
+    {"year": 1617, "place": "Seville", "lat": 37.39, "lon": -5.99, "note": "Back to Andalusia; the embassy sails for New Spain from Sanlúcar.", "city": "seville", "by": "land", "date": "July 1617"},
+    {"year": 1617, "place": "Veracruz", "lat": 19.18, "lon": -96.13, "note": "Back across the Atlantic with the fleet.", "city": "veracruz"},
+    {"year": 1618, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "note": "Retracing the road across New Spain.", "city": "tenochtitlan", "by": "land"},
+    {"year": 1618, "place": "Acapulco", "lat": 16.85, "lon": -99.88, "note": "Sails for Manila on the galleon; sources differ on whether in 1618 or 1619.", "city": "acapulco", "by": "land", "confidence": "medium"},
     {"year": 1618, "place": "Manila", "lat": 14.6, "lon": 120.98, "note": "Two years waiting in the Philippines.", "city": "manila"},
     {"year": 1620, "place": "Sendai", "lat": 38.27, "lon": 140.87, "note": "Home, to a country that has banned Christianity.", "date": "September 1620"}
   ],

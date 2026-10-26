@@ -2841,3 +2841,21 @@ kbd {
     overflow-y: auto;
   }
 }
+
+/* The strip of eras or scenes: equal thumbnails whatever the label, scrolling when there are many. */
+.plate-eras {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(46px, 1fr);
+  overflow-x: auto;
+}
+
+.plate-era-btn {
+  min-width: 0;
+}
+
+.plate-era-btn span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
