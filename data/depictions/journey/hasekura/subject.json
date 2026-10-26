@@ -1,0 +1,71 @@
+{
+  "traveller": "Hasekura Rokuemon Tsunenaga, a samurai of the Date clan of Sendai, about forty-two: lean, with a long serious face, a thin moustache and the shaved crown and topknot (chonmage) of a samurai; in a formal silk kimono and hakama with a short haori jacket bearing a small family crest, two swords at his sash; often beside him the Spanish Franciscan friar Luis Sotelo in a brown habit with a rope belt.",
+  "scenes": [
+    {
+      "id": "galleon",
+      "stop": 0,
+      "place": "Tsukinoura, Sendai",
+      "title": "The San Juan Bautista sails",
+      "caption": "Date Masamune had the galleon built in 45 days by Japanese shipwrights with help from the Spanish navigator Sebastián Vizcaíno's crew. She sailed from Tsukinoura in October 1613 with about 180 people: samurai, merchants and Spaniards.",
+      "sources": [
+        "amati"
+      ],
+      "confidence": "high",
+      "prompt": "A small bay with pine-covered hills at Tsukinoura near Sendai, Japan, October 1613. A European-style three-masted galleon with a high stern castle rides at anchor; small Japanese boats ferry chests out to it. On the beach in the foreground Hasekura, in kimono and hakama with two swords, takes leave of samurai officials who bow; the friar Luis Sotelo stands beside him. A small separate study on the page shows a samurai's katana in its scabbard."
+    },
+    {
+      "id": "mexico",
+      "stop": 2,
+      "place": "Mexico City",
+      "title": "Samurai in Mexico City",
+      "caption": "In Mexico City the Nahua chronicler Chimalpahin noted the Japanese envoy's arrival in his diary, and that some of the samurai were baptised at the church of San Francisco. Japanese in kimono walked the streets of the viceroy's capital.",
+      "sources": [
+        "chimalpahin",
+        "amati"
+      ],
+      "confidence": "high",
+      "ref": "galleon",
+      "prompt": "A plaza in Mexico City, 1614, with a Spanish baroque church front and arcaded houses behind. Hasekura and a few samurai in kimono and hakama, wearing two swords, walk through a crowd of Nahua townspeople in cotton tilmas, Spanish settlers in doublets and a friar; a Nahua scholar in a cloak writes in a book at the side. A small separate study on the page shows a pair of Japanese straw sandals (waraji)."
+    },
+    {
+      "id": "seville",
+      "stop": 5,
+      "place": "Seville",
+      "title": "Arrival at Seville",
+      "caption": "The embassy came up the Guadalquivir and was received at Coria del Río and then Seville with ceremony. A few of its members stayed in Coria, where hundreds of people still carry the surname Japón.",
+      "sources": [
+        "amati"
+      ],
+      "confidence": "high",
+      "ref": "galleon",
+      "prompt": "The river Guadalquivir at Seville, October 1614. Boats with Spanish rowers bring Hasekura and his samurai to a riverside landing below the Torre del Oro and the great cathedral tower (the Giralda) in the distance; Spanish nobles in ruffs and black doublets and crowds of curious townspeople wait on the bank; a trumpeter. A small separate study on the page shows a folding fan held by a samurai."
+    },
+    {
+      "id": "rome",
+      "stop": 7,
+      "place": "Rome",
+      "title": "Before the Pope",
+      "caption": "In November 1615 Hasekura was received by Pope Paul V in the Quirinal Palace and made an honorary citizen of Rome. A portrait of him painted in Rome, in a richly embroidered kimono, survives in the Borghese collection.",
+      "sources": [
+        "amati"
+      ],
+      "confidence": "high",
+      "ref": "galleon",
+      "prompt": "A great frescoed hall in the Quirinal Palace in Rome, November 1615. The Pope sits on a raised throne under a red canopy, in white and red papal robes, with cardinals in scarlet around him. Hasekura, in a formal kimono richly embroidered with golden deer and plants and a hakama, kneels and presents a lacquered letter box; Luis Sotelo stands beside him interpreting. A small separate study on the page shows the black lacquered letter box with gold decoration."
+    },
+    {
+      "id": "return",
+      "stop": 9,
+      "place": "Sendai",
+      "title": "Home to a closed country",
+      "caption": "Hasekura came home in 1620 after seven years to find Christianity banned across Japan and his lord unable to protect converts. He died two years later; the gifts he brought back, a portrait and a rosary among them, were hidden and survived in the Date family's storehouse.",
+      "sources": [
+        "amati",
+        "hoc"
+      ],
+      "confidence": "medium",
+      "ref": "galleon",
+      "prompt": "A quiet room with tatami mats and sliding paper screens in Sendai, 1620. Hasekura, older and tired, kneels and lays a small crucifix, a rosary and a European painting in a wooden chest before an open storehouse door; a Japanese retainer in kimono waits to close it. Hasekura is alone with the retainer: no friar, no European, no monk in the scene. Through the screen, a garden with a pine tree. A small separate study on the page shows the rosary with its small cross."
+    }
+  ]
+}

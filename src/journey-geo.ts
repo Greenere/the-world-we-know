@@ -53,6 +53,21 @@ export function km(a: LngLat, b: LngLat) {
   return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
+/**
+ * Drop repeated and non-finite points. A zero-length segment gives deck.gl's path joints no direction, and it
+ * can draw a stray spike from that vertex toward the edge of the screen.
+ */
+export function cleanPath(points: LngLat[]): LngLat[] {
+  const out: LngLat[] = [];
+  for (const p of points) {
+    if (!Number.isFinite(p[0]) || !Number.isFinite(p[1])) continue;
+    const q = out[out.length - 1];
+    if (q && Math.abs(p[0] - q[0]) < 1e-7 && Math.abs(p[1] - q[1]) < 1e-7) continue;
+    out.push(p);
+  }
+  return out;
+}
+
 /** Insert points so no segment spans more than `step` degrees. */
 function densify(points: LngLat[], step = 1): LngLat[] {
   const out: LngLat[] = [];
@@ -65,7 +80,7 @@ function densify(points: LngLat[], step = 1): LngLat[] {
     }
     out.push(p);
   }
-  return out;
+  return cleanPath(out);
 }
 
 function unwrap(lon: number, ref: number) {
@@ -210,6 +225,8 @@ export function placeAt(g: JourneyGeo, progress: number): string {
 }
 
 function along(leg: Leg, f: number): {point: LngLat; idx: number} {
+  // A leg that starts and ends in the same place has a single point after cleaning.
+  if (leg.points.length < 2) return {point: leg.points[0], idx: leg.points.length};
   const target = leg.km * f;
   let i = 1;
   while (i < leg.cum.length - 1 && leg.cum[i] < target) i++;
@@ -253,11 +270,12 @@ export function travelled(g: JourneyGeo, progress: number): {pos: LngLat | null;
       return;
     }
     if (fr >= 1) {
-      trail.push(leg.points);
+      if (leg.points.length > 1) trail.push(leg.points);
       return;
     }
     const {point, idx} = along(leg, fr);
-    trail.push([...leg.points.slice(0, idx), point]);
+    const part = cleanPath([...leg.points.slice(0, idx), point]);
+    if (part.length > 1) trail.push(part);
     parties.push(point);
     if (current) pos = point;
   });

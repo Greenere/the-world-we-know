@@ -8,7 +8,7 @@ import type {FogField} from '../fog/field';
 import {cellAt, type Grid} from '../fog/grid';
 import {FogLayer, type FogLayerUniforms} from '../fog/layer';
 import type {JourneyGeo, LngLat} from '../journey-geo';
-import {currentStopIndex, travelled} from '../journey-geo';
+import {cleanPath, currentStopIndex, travelled} from '../journey-geo';
 import type {State} from '../state';
 import type {City, Invention, VpId} from '../types';
 import {tx} from '../i18n';
@@ -205,7 +205,7 @@ export class OverlayModel {
   private baseCharset: string;
 
   constructor(private ctx: OverlayContext) {
-    const chars = new Set<string>(' \u200A0123456789-–’\'.,()ʻ');
+    const chars = new Set<string>(' \u200A0123456789-–’\'.,()ʻ·');
     for (const c of ctx.data.cities) for (const n of c.names) for (const ch of n.name) chars.add(ch);
     for (const r of ctx.data.regions) for (const n of r.names) for (const ch of n.name) chars.add(ch);
     for (const x of ctx.data.inventions) for (const ch of x.name) chars.add(ch);
@@ -561,7 +561,9 @@ export class OverlayModel {
     this.travellerLabels = others.filter(o => o.labelled);
     if (!others.length) return [];
     const split = state.globe ? (paths: LngLat[][]) => this.splitAtHorizon(paths) : (paths: LngLat[][]) => paths;
-    const trails = others.flatMap(o => split(o.trail.map(t => t.map(P))).map(path => ({path, o})));
+    const trails = others
+      .flatMap(o => split(o.trail.map(t => t.map(P))).map(path => ({path: cleanPath(path), o})))
+      .filter(d => d.path.length > 1);
     const a = (o: Traveller, k: number) => Math.round(k * o.alpha * (o.ghost ? 0.62 : 1));
     const out: Layer[] = [
       new PathLayer<{path: LngLat[]; o: Traveller}>({
@@ -728,8 +730,9 @@ function journeyLayers(
   // gone right round (the Challenger back in the Atlantic) still shows where it sailed first.
   const copies = (paths: LngLat[][]) =>
     state.globe ? paths : paths.flatMap(path => [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
-  const route = visible(copies(geo.legs.filter(l => l.onMap).map(l => l.points.map(P))));
-  const trailPaths = visible(copies(trail.map(t => t.map(P))));
+  const tidy = (paths: LngLat[][]) => paths.map(cleanPath).filter(p => p.length > 1);
+  const route = tidy(visible(copies(geo.legs.filter(l => l.onMap).map(l => l.points.map(P)))));
+  const trailPaths = tidy(visible(copies(trail.map(t => t.map(P)))));
   const cur = currentStopIndex(geo, state.progress);
   const stops = geo.stops.filter(s => s.pos).map((s, _i, arr) => ({s, i: geo.stops.indexOf(s), n: arr.length}));
   const pulse = (now % 1800) / 1800;
