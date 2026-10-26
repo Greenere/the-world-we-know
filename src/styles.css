@@ -839,8 +839,9 @@ kbd {
 .card,
 .journey-panel {
   position: absolute;
-  top: calc(var(--gutter) + var(--top-h));
-  max-height: calc(100% - var(--top-h) - var(--tl-h) - var(--gutter) * 2 - 12px);
+  /* --side-top is set from the top bar's real height on each side (the cartouche can wrap to two lines). */
+  top: var(--side-top, calc(var(--gutter) + var(--top-h)));
+  max-height: calc(100% - var(--side-top, calc(var(--gutter) + var(--top-h))) - var(--tl-h) - var(--gutter) - 12px);
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
@@ -851,6 +852,7 @@ kbd {
 /* The card is a fixed frame; only .card-scroll scrolls. The close button belongs to the frame, so it never
    moves or slips under the content while the card's text changes during playback. */
 .card {
+  --side-top: var(--top-right);
   right: var(--gutter);
   width: 392px;
   display: flex;
@@ -883,6 +885,7 @@ kbd {
 }
 
 .journey-panel {
+  --side-top: var(--top-left);
   left: var(--gutter);
   width: 380px;
   padding: 16px 20px 20px;
@@ -2018,12 +2021,14 @@ kbd {
     padding: 6px 10px 6px 8px;
     font-size: 14px;
   }
-  .vp-compare .vp-name {
+  .vp-compare .vp-name,
+  .vp-more .vp-name,
+  .tool-wide .tool-label {
     display: none;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) auto;
   }

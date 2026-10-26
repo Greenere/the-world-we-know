@@ -24,6 +24,12 @@ export interface Leg {
   onMap: boolean;
   /** Starts somewhere other than the previous stop (a new branch of a group voyage). */
   branch: boolean;
+  /** The stop this leg departs from (the previous stop, or the fork for a branch). */
+  origin: number;
+  /** When the party leaves `origin` and reaches `to`, by the shared clock. A branch sets out when its
+   *  party leaves the fork, so concurrent parties travel side by side. */
+  t0: number;
+  t1: number;
 }
 
 export interface JourneyGeo {
@@ -124,7 +130,10 @@ export function buildJourneyGeo(j: Journey): JourneyGeo {
       }
       const cum = [0];
       for (let i = 1; i < points.length; i++) cum.push(cum[i - 1] + km(points[i - 1], points[i]));
-      legs.push({from: index - 1, to: index, points, cum, km: cum[cum.length - 1] ?? 0, onMap, branch: branchFrom !== null});
+      legs.push({
+        from: index - 1, to: index, points, cum, km: cum[cum.length - 1] ?? 0, onMap, branch: branchFrom !== null,
+        origin: fromIdx, t0: stops[fromIdx].t, t1: stops[index].t,
+      });
     }
     if (s.place) byPlace.set(s.place, index);
     pending = [];
@@ -212,25 +221,47 @@ function along(leg: Leg, f: number): {point: LngLat; idx: number} {
 }
 
 /** Where the traveller is, and the trail travelled so far. */
-export function travelled(g: JourneyGeo, progress: number): {pos: LngLat | null; trail: LngLat[][]} {
+/** How far along a leg its party is in a given year (0 before it sets out, 1 once it has arrived). */
+function legFraction(leg: Leg, year: number) {
+  if (year >= leg.t1) return 1;
+  if (year <= leg.t0) return 0;
+  return (year - leg.t0) / (leg.t1 - leg.t0);
+}
+
+/**
+ * Where the parties are, and the trail travelled so far. Legs run on the shared clock, so when a journey
+ * splits (a branch from an earlier stop), each party moves along its own leg at the same time. `pos` is the
+ * party on the leg being stepped through (the one the camera follows); `parties` are all those under way.
+ */
+export function travelled(g: JourneyGeo, progress: number): {pos: LngLat | null; trail: LngLat[][]; parties: LngLat[]} {
   const trail: LngLat[][] = [];
+  const parties: LngLat[] = [];
   const n = g.stops.length;
   const p = Math.min(progress, n - 1);
-  const k = Math.floor(p);
+  const k = Math.floor(p + 1e-9);
   const f = p - k;
-  for (let i = 0; i < Math.min(k, g.legs.length); i++) if (g.legs[i].onMap) trail.push(g.legs[i].points);
+  const year = yearAt(g, p);
   let pos: LngLat | null = g.stops[Math.min(k, n - 1)].pos;
-  if (k < n - 1 && f > 0) {
-    const leg = g.legs[k];
-    if (leg.onMap) {
-      const {point, idx} = along(leg, f);
-      trail.push([...leg.points.slice(0, idx), point]);
-      pos = point;
-    } else {
-      pos = f < 0.5 ? g.stops[k].pos : g.stops[k + 1].pos;
+  g.legs.forEach((leg, i) => {
+    // Every leg follows the clock; for an ordinary leg that is exactly the stepping progress. A branch party
+    // that set out earlier is already part-way along when its step comes round, so it never jumps back.
+    const current = i === k && k < n - 1 && f > 0;
+    const fr = i < k ? 1 : legFraction(leg, year);
+    if (fr <= 0) return;
+    if (!leg.onMap) {
+      if (current) pos = f < 0.5 ? g.stops[leg.origin].pos : g.stops[leg.to].pos;
+      return;
     }
-  }
-  return {pos, trail};
+    if (fr >= 1) {
+      trail.push(leg.points);
+      return;
+    }
+    const {point, idx} = along(leg, fr);
+    trail.push([...leg.points.slice(0, idx), point]);
+    parties.push(point);
+    if (current) pos = point;
+  });
+  return {pos, trail, parties};
 }
 
 /** Seconds to travel a leg at 1× speed. */

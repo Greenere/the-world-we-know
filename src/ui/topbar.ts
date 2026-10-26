@@ -89,6 +89,7 @@ export class TopBar {
       h('span.vp-seal', {html: icons.more}),
       h('span.vp-name', t('More')),
     );
+    requestAnimationFrame(() => this.watchHeight());
     document.addEventListener('click', e => {
       if (!this.picker.hidden && !this.picker.contains(e.target as Node)) this.closePicker();
     });
@@ -134,6 +135,32 @@ export class TopBar {
         h('button.tool', {type: 'button', title: t('About this atlas'), 'aria-label': t('About'), onclick: () => this.togglePanel('about'), html: icons.info}),
       ),
     );
+  }
+
+  /**
+   * Tell the side panels where the top bar really ends above each of them (the cartouche can wrap to two lines,
+   * and on narrower screens the viewpoint switcher drops to a second row), so they never slide under it.
+   */
+  private watchHeight() {
+    const PANEL = 410; // the side panels' width, with a margin
+    const measure = () => {
+      const W = innerWidth;
+      let left = 0;
+      let right = 0;
+      for (const child of this.el.children) {
+        const r = (child as HTMLElement).getBoundingClientRect();
+        if (!r.height || (child as HTMLElement).hidden) continue;
+        if (r.left < PANEL) left = Math.max(left, r.bottom);
+        if (r.right > W - PANEL) right = Math.max(right, r.bottom);
+      }
+      const root = document.documentElement.style;
+      if (left > 0) root.setProperty('--top-left', `${Math.ceil(left) + 8}px`);
+      if (right > 0) root.setProperty('--top-right', `${Math.ceil(right) + 8}px`);
+    };
+    const ro = new ResizeObserver(measure);
+    ro.observe(this.el);
+    for (const child of this.el.children) ro.observe(child);
+    addEventListener('resize', measure);
   }
 
   private openPicker() {

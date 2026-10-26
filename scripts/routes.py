@@ -548,6 +548,7 @@ def route_journey(router: Router, j: dict):
         return nxt if nxt and nxt["from"] == i else None
 
     routes, lengths, modes = [], [], []
+    j["_origins"] = [leg["from"] if leg else max(0, i - 1) for i, leg in enumerate(legs)]
     for i, leg in enumerate(legs):
         if leg is None:
             routes.append(None)
@@ -618,27 +619,33 @@ def stop_times(j: dict, lengths: list[float]) -> list[float]:
     return [round(x, 4) for x in t]
 
 
-def position_at(routes, times, year):
-    """Where a journey's traveller is at a (fractional) year, or None outside it or off the map."""
+def position_at(routes, times, year, origins=None):
+    """Where a journey's lead party is at a (fractional) year, or None outside it or off the map. Each leg runs
+    from its origin stop's time to its own; where parties travel at once, the latest-departing one is used."""
     if year < times[0] or year > times[-1]:
         return None
+    origins = origins or [max(0, i - 1) for i in range(len(times))]
+    best = None
     for i in range(1, len(times)):
-        if year <= times[i]:
-            r = routes[i]
-            if not r:
-                return None
-            f = (year - times[i - 1]) / (times[i] - times[i - 1]) if times[i] > times[i - 1] else 1
-            total = path_km(r)
-            target = total * f
-            acc = 0.0
-            for a, b in zip(r, r[1:]):
-                d = km(a, b)
-                if acc + d >= target:
-                    g = (target - acc) / d if d else 0
-                    return (a[0] + (b[0] - a[0]) * g, a[1] + (b[1] - a[1]) * g)
-                acc += d
-            return r[-1]
-    return None
+        t0, t1 = times[origins[i]], times[i]
+        if not (t0 <= year <= t1) or not routes[i]:
+            continue
+        if best is None or t0 >= best[0]:
+            best = (t0, i)
+    if best is None:
+        return None
+    i = best[1]
+    t0, t1, r = times[origins[i]], times[i], routes[i]
+    f = (year - t0) / (t1 - t0) if t1 > t0 else 1
+    target = path_km(r) * f
+    acc = 0.0
+    for a, b in zip(r, r[1:]):
+        d = km(a, b)
+        if acc + d >= target:
+            g = (target - acc) / d if d else 0
+            return (a[0] + (b[0] - a[0]) * g, a[1] + (b[1] - a[1]) * g)
+        acc += d
+    return r[-1]
 
 
 def crossings(journeys: list[dict]) -> dict[str, list[dict]]:
@@ -655,7 +662,7 @@ def crossings(journeys: list[dict]) -> dict[str, list[dict]]:
                 steps = int(min(400, max(40, (hi - lo) * 60)))
                 for k in range(steps + 1):
                     y = lo + (hi - lo) * k / steps
-                    pa, pb = position_at(A["_routes"], ta, y), position_at(B["_routes"], tb, y)
+                    pa, pb = position_at(A["_routes"], ta, y, A.get("_origins")), position_at(B["_routes"], tb, y, B.get("_origins"))
                     if pa and pb:
                         d = km(pa, pb)
                         if d < 1500 and (best is None or d < best[0]):

@@ -721,7 +721,9 @@ function journeyLayers(
   visible: (paths: LngLat[][]) => LngLat[][],
 ): Layer[] {
   const color = hexToRgb(vpColor);
-  const {pos, trail} = travelled(geo, state.progress);
+  const {pos, trail, parties} = travelled(geo, state.progress);
+  // The other parties of a split journey, travelling at the same time as the one followed.
+  const others = parties.filter(p => !pos || p[0] !== pos[0] || p[1] !== pos[1]);
   // On the flat map the lines repeat a world-width either side, like the basemap, so a voyage that has
   // gone right round (the Challenger back in the Atlantic) still shows where it sailed first.
   const copies = (paths: LngLat[][]) =>
@@ -816,6 +818,26 @@ function journeyLayers(
         stroked: true,
         radiusUnits: 'pixels',
         lineWidthUnits: 'pixels',
+      }),
+    );
+  }
+  // The other parties: the same colour, a little smaller, without the pulse.
+  if (others.length) {
+    out.push(
+      new ScatterplotLayer({
+        id: 'journey-parties',
+        parameters: SURFACE_PARAMETERS,
+        extensions: [horizonCull],
+        data: others,
+        getPosition: (d: LngLat) => P(d),
+        getRadius: 4.6,
+        getFillColor: [...color, 235],
+        getLineColor: [...PAPER, 255],
+        getLineWidth: 1.8,
+        stroked: true,
+        radiusUnits: 'pixels',
+        lineWidthUnits: 'pixels',
+        updateTriggers: {getPosition: state.globe},
       }),
     );
   }
