@@ -152,6 +152,14 @@ Commit `<era>.webp` and `<era>.json` in the subject's folder. Each is about 200�
 
 They took 14 calls in all. Two eras needed a sharper prompt: the tidal island first came with a medieval castle on it (St Michael's Mount), and the gnomon became a later sundial with a triangular blade.
 
+### The Odyssey sketchbook
+
+`data/depictions/journey/odyssey/subject.json` gives every one of the journey’s 18 stops a distinct page, including the storm at Malea, both returns to Aeolia and Aeaea, and the final recognition in Ithaca. Every caption cites Homer and names the relevant book; `data/i18n/zh/depictions.json` supplies Chinese titles and captions.
+
+These are illustrations of a poem, not reconstructions of observed events. Use plausible late Bronze Age ships, clothing and buildings for the material setting, while keeping the supernatural episodes recognisably literary. The character description and the departure page provide continuity; vary the action and composition at each stop. Three observation pages omit the main character: the Laestrygonian harbour, Elpenor’s grave and the strait of Scylla and Charybdis. They set `traveller: false` and use no character reference. In particular, avoid medieval Troy, later multi-bank triremes, mermaid Sirens presented as Homer’s description, and an invented modern botanical identification for the lotus.
+
+The accepted pages were made with the built-in image generation tool. Their adjacent JSON files record the prompts and method. The normal data build produces the thumbnail, card and enlarged WebP sizes and attaches the sketchbook automatically; open `?journey=odyssey` to follow it.
+
 ## 5. Reviewing a picture
 
 Reject a candidate if any of these fail:

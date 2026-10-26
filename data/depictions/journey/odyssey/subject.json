@@ -1,0 +1,238 @@
+{
+  "traveller": "Odysseus: a weathered olive-skinned Aegean man about forty, wiry and strong, curly dark hair, short square dark beard, prominent nose; short undyed wool tunic and faded rust-red cloak fastened at the shoulder. Later scenes show more grey and wear. No ornate crown or classical armour.",
+  "scenes": [
+    {
+      "id": "departure",
+      "stop": 0,
+      "place": "Troy",
+      "title": "Casting off from Troy",
+      "caption": "After Troy falls, Odysseus leaves with twelve ships, beginning the return he recounts to the Phaeacians. This page imagines the departure in Book 9.",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus leans forward hauling a mooring rope into a low wooden Aegean ship; other ships and distant ruined Troy lightly sketched behind. Separate study of a rope knot. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects."
+    },
+    {
+      "id": "ismarus",
+      "stop": 1,
+      "place": "Ismarus",
+      "title": "Driven back to the ships",
+      "caption": "At Ismarus, the raiders linger over their plunder until the Cicones rally against them. Odysseus loses six men from each ship before escaping (Book 9).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus braces knee-deep in surf, helping a weary companion climb into a departing wooden ship, other men pushing off behind; inland figures distant, no visible injuries or gore. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "malea",
+      "stop": 2,
+      "place": "Cape Malea",
+      "title": "The cape disappears in rain",
+      "caption": "Rounding Malea, a northerly wind and the current carry the ships away from their course for home. The storm opens the voyage into unfamiliar waters (Book 9).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Low onboard view of rain, steep waves and a dark headland disappearing behind. Odysseus crouches at a wooden steering oar while two sailors lower a single square sail. No modern rigging. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "lotus",
+      "stop": 3,
+      "place": "Land of the Lotus-eaters",
+      "title": "The taste of forgetting",
+      "caption": "The Lotus-eaters offer food that makes the scouts forget their wish to go home. Odysseus brings them back by force and ties them beneath the rowing benches (Book 9).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. On a quiet shore, seated sailors reach dreamily for fruit offered in a shallow basket by a peacefully dressed local woman; Odysseus pulls one reluctant companion toward the waiting boat. Lotus food remains an unspecified fruit, no asserted botanical species. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "cyclops",
+      "stop": 4,
+      "place": "Land of the Cyclopes",
+      "title": "Beneath the ram",
+      "caption": "Calling himself Nobody, Odysseus outwits Polyphemus. At dawn he clings beneath a ram while the blinded Cyclops feels the animals’ backs as they leave the cave (Book 9).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Low close view of Odysseus gripping thick fleece beneath a large ram walking out of a rocky cave. A huge seated Cyclops with a cloth covering his single eye feels the ram’s back; no gore. Separate small study of a wooden milk bowl. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "aeolus",
+      "stop": 5,
+      "place": "Aeolia",
+      "title": "A bag full of winds",
+      "caption": "Aeolus closes the blustering winds inside an oxhide bag, leaving the west wind to carry the ships toward Ithaca (Book 10).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. On a rocky island terrace, Aeolus, an older bearded host in a plain ochre robe, hands a tightly bound oxhide sack to Odysseus, who bends to receive its weight. Small separate study of the silver binding cord. The bag is closed; no wind escaping yet. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "winds",
+      "stop": 6,
+      "place": "Within sight of Ithaca",
+      "title": "Home lost within sight",
+      "caption": "With Ithaca close enough for its fires to be seen, the crew opens the bag while Odysseus sleeps. The released winds drive them back across the sea (Book 10).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Aboard the same low wooden single-masted ship, two curious sailors loosen a leather sack; swirling ink-and-wash gusts wrench the square sail as sleeping Odysseus begins to wake beneath his rust-red cloak. Faint island shoreline far behind. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "refusal",
+      "stop": 7,
+      "place": "Aeolia again",
+      "title": "Aeolus closes his door",
+      "caption": "Back on Aeolia, Odysseus asks for help again. Aeolus refuses to aid a man he believes the gods oppose (Book 10).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus sits exhausted at a rough stone threshold with empty hands raised in appeal. Aeolus stands inside a modest Bronze Age timber doorway, arm extended toward the sea in refusal. Closed, still scene unlike earlier gift exchange. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "laestrygonians",
+      "stop": 8,
+      "place": "Land of the Laestrygonians",
+      "title": "One ship outside the harbour",
+      "caption": "The Laestrygonians crush the ships trapped inside their enclosed harbour. Odysseus, who moored outside, cuts his cable and escapes with the only surviving vessel (Book 10).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. A view recorded by the fleeing crew, with none of the travelling party visible: a narrow enclosed harbour seen from the open sea, towering cliffs, giant silhouettes above hurling rocks, small shattered wooden ships trapped inside. Emphasise the shape of the enclosing harbour and the vast difference in scale. No Odysseus, no close-up human portrait, no gore. No modern objects, later triremes or medieval architecture.",
+      "traveller": false
+    },
+    {
+      "id": "circe",
+      "stop": 9,
+      "place": "Aeaea — Circe’s island",
+      "title": "At Circe’s table",
+      "caption": "Circe turns the companions into swine. Protected by the herb Hermes gives him, Odysseus resists her magic and wins their release; the company stays a year (Book 10).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Circe in a woven ochre dress holds a shallow cup and slender wand beside a rustic timber hall. Odysseus watches cautiously across the table, holding a small white-flowered dark-rooted herb. Several pigs gather at her feet, forest behind. No sexualized costume. Separate study of the magical herb, without botanical labels. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "dead",
+      "stop": 10,
+      "place": "The edge of Ocean",
+      "title": "A voice at the edge of Ocean",
+      "caption": "In the Cimmerians’ mist, Odysseus summons the dead. Tiresias warns him to spare the Sun’s cattle, while his mother tells him of the home he has not seen (Book 11).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus kneels on a dark misty shore beside a small ritual trench, an untouched bronze sword across his knees; the translucent elderly prophet Tiresias leans on a staff across from him, other faint human shades receding into grey wash. Omit blood and sacrifices; solemn, quiet, no skeleton army. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "elpenor",
+      "stop": 11,
+      "place": "Back to Aeaea",
+      "title": "An oar above the grave",
+      "caption": "Returning to Aeaea, the crew buries Elpenor and plants his oar above the mound, as his shade requested. Circe then explains the dangers ahead (Book 12).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. An unpeopled memorial study on a quiet coastal headland at dawn: a single long wooden oar planted upright above a low mound of stones and earth, with sea and a few wind-bent grasses fading into paper. A small separate close study of the worn blade and its grain. No people, no Odysseus, no body, no lettering. No modern objects, later triremes or medieval architecture.",
+      "traveller": false
+    },
+    {
+      "id": "sirens",
+      "stop": 12,
+      "place": "The Sirens",
+      "title": "The song he must not follow",
+      "caption": "The rowers stop their ears with wax; Odysseus is bound upright to the mast so he can hear the Sirens without steering toward them (Book 12).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus tied upright at chest and ankles to the mast of a low ancient rowing ship, straining toward a distant rocky islet; seated sailors row steadily with wax visibly at their ears. Two small distant human-like singing figures on rocks, not mermaids; Homer does not specify their anatomy. Separate study of a lump of beeswax. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "strait",
+      "stop": 13,
+      "place": "Scylla and Charybdis",
+      "title": "Between rock and whirlpool",
+      "caption": "Following Circe’s warning, Odysseus steers away from Charybdis toward Scylla. Six companions are taken as the ship passes the monster’s cliff (Book 12).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. A page of things seen from the ship: a swirling whirlpool on one side and a sheer opposing cliff with a shadowy cave from which six long serpentine dog-headed necks emerge. One small ancient wooden rowing ship between them gives scale, with only tiny indistinct crew. No identifiable Odysseus, no foreground traveller or portrait. A separate small ink study of the circular current. Peril without attacks or gore. No modern objects, later triremes or medieval architecture.",
+      "traveller": false
+    },
+    {
+      "id": "shipwreck",
+      "stop": 14,
+      "place": "Thrinacia — the cattle of the Sun",
+      "title": "The last ship breaks",
+      "caption": "After the crew kills the Sun’s cattle on Thrinacia, Zeus shatters the ship with a thunderbolt. Odysseus lashes mast and keel together and survives alone (Book 12).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus alone in a storm, chest pressed to a lashed pair of heavy broken wooden timbers, clutching rope as waves rise behind him. A distant broken mast and faint branching lightning in a grey sky, no other people, no intact ship, no gore. Small study of the timber lashing. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "calypso",
+      "stop": 15,
+      "place": "Ogygia — Calypso’s island",
+      "title": "Building a way off the island",
+      "caption": "On Ogygia, Odysseus longs for home despite Calypso’s promise of immortality. When the gods order his release, she gives tools and cloth for the raft he builds (Book 5).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. An older, greying Odysseus kneels using a bronze adze on raft timbers on a wooded shore; coils of rope and a folded square sail nearby. Calypso in a simple muted green woven dress brings a roll of cloth from a vine-covered cave. Practical boatbuilding, no romantic embrace. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "phaeacians",
+      "stop": 16,
+      "place": "Scheria — the Phaeacians",
+      "title": "A stranger asks for help",
+      "caption": "Shipwrecked on Scheria, Odysseus meets Nausicaa beside the washing pools. She directs him toward her parents’ palace, where the Phaeacians will hear his story and arrange his return (Book 6).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. At a river mouth, weary greying Odysseus fully wrapped in a rough borrowed cloth asks for help from a respectful distance. Nausicaa stands beside baskets of washed linen, a wooden mule cart behind her, attendants near the river. Hands open, no nudity, no romantic staging. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    },
+    {
+      "id": "homecoming",
+      "stop": 17,
+      "place": "Ithaca",
+      "title": "The secret of the olive bed",
+      "caption": "In Ithaca, Penelope tests the stranger by ordering their bed moved. Odysseus knows it was built around a living olive trunk; at that proof she recognises him (Book 23).",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Intimate quiet Bronze Age timber-and-plaster room. Greying Odysseus and Penelope, a mature woman in a simple woven cream dress and muted ochre mantle, clasp one another’s forearms beside a wooden bed built around a rooted living olive trunk. Soft oil-lamp light, relief and recognition. No battle, no classical columns, no modern furniture. Small separate study of the carved bedpost and living root. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
+      "ref": "departure"
+    }
+  ]
+}

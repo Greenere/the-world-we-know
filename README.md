@@ -2,7 +2,7 @@
 
 A browser atlas of how much of the world a civilization knew in any year, and of the travellers who pushed that knowledge outward. Fog covers what a viewpoint did not know; it lifts when a traveller's news reaches home, and it comes back when knowledge is lost.
 
-This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): twenty-one cultural viewpoints (two knowledge communities, Europe — Greece, Rome, Iberia, France, Britain, Germany and the Low Countries, the Norse and, from 1745, Russia — and the Islamic world — Arabia, Egypt, Persia and the Maghreb — each member also a viewpoint of its own; China, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca) plus Humanity, 2000 BCE to today (Humanity back to 70,000 years ago), 98 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 29 inventions that changed how people saw the world, 404 cities and 221 regions.
+This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): twenty-one cultural viewpoints (two knowledge communities, Europe — Greece, Rome, Iberia, France, Britain, Germany and the Low Countries, the Norse and, from 1745, Russia — and the Islamic world — Arabia, Egypt, Persia and the Maghreb — each member also a viewpoint of its own; China, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca) plus Humanity, 2000 BCE to today (Humanity back to 70,000 years ago), 100 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 29 inventions that changed how people saw the world, 404 cities and 221 regions.
 
 ## Run it
 
@@ -22,6 +22,7 @@ Every view is a link:
 | --- | --- |
 | `?vp=china&year=1420` | China's known world in 1420 |
 | `?vp=europe,china&year=1420` | Compare mode; overlap is the third tint |
+| `?journey=odyssey` | Odysseus’s legendary return from Troy to Ithaca |
 | `?journey=zhenghe&stop=4` | Zheng He's voyages at the fourth stop |
 | `?region=east-africa-coast&vp=islam` | The region card |
 | `?city=loulan` | The city card |
@@ -58,6 +59,8 @@ Conventions in `knowledge.csv`:
 - Lines starting with `#` are comments.
 
 The build fails if any event, journey stop, city or invention lacks a source or confidence, if a source id is unknown, if a viewpoint has fewer than 8 key moments, or if a journey does not lift fog for at least one region. It routes every journey leg on a ~22 km H3 grid (sea legs keep to water, with straits carved open and the Suez and Panama canals opening in 1869 and 1914; land legs follow valleys and passes using ETOPO5 elevation; river legs follow Natural Earth rivers), treats the high Arctic as pack ice, snaps inland stops to the coast facing their next stop, warns about legs that detour absurdly or cross water by land (or land by sea), gives every stop a fractional year from its date or by distance within its year, and finds where journeys crossed paths. It also rasterizes regions onto an H3 grid (resolution 3, 41,162 cells, oceans included), turns everything into per-cell change points per viewpoint, and keeps the fog data under 5 MB (it is about 0.8 MB).
+
+Legendary journeys such as the Odyssey label their dates and disputed map locations as illustrative. The Odyssey’s knowledge events belong to the poem’s circulation around 750 BCE, rather than to its schematic Bronze Age travel dates.
 
 Dates come from general knowledge and the cited works and are approximate until the phase-3 verification pass. Sources marked `draft` / `draft-urban` are placeholders for exactly that pass.
 

@@ -1,0 +1,179 @@
+{
+  "id": "odyssey",
+  "name": "The Odyssey — Odysseus returns home",
+  "traveler": "Odysseus (Ulysses)",
+  "years": "c. 1200–1190 BCE (legendary)",
+  "kind": "sailor",
+  "by": "sea",
+  "viewpoint": "greece",
+  "summary": "Ten years from Troy to Ithaca: lotus, giants, enchantresses and shipwreck stand between Odysseus and home. This is Homer’s legendary voyage, not a documented expedition. Dates are schematic and the disputed locations are illustrative map placements. Its knowledge events represent the poem’s circulation around 750 BCE, not Bronze Age discoveries.",
+  "source": "homer",
+  "confidence": "low",
+  "stops": [
+    {
+      "year": -1200,
+      "place": "Troy",
+      "lat": 39.96,
+      "lon": 26.24,
+      "note": "After the sack of Troy, Odysseus sails for Ithaca with twelve ships. The years on this route are schematic, placing the ten-year legend around 1200 BCE."
+    },
+    {
+      "year": -1200,
+      "place": "Ismarus",
+      "lat": 40.87,
+      "lon": 25.52,
+      "note": "His men sack the city of the Cicones, then linger too long; a counterattack drives them back to sea (Book 9)."
+    },
+    {
+      "year": -1200,
+      "place": "Cape Malea",
+      "lat": 36.44,
+      "lon": 23.2,
+      "note": "Wind and current sweep the fleet past the cape and away from home (Book 9)."
+    },
+    {
+      "year": -1200,
+      "place": "Land of the Lotus-eaters",
+      "lat": 33.82,
+      "lon": 10.86,
+      "note": "Some men taste lotus and forget their wish to return. Plotted near Djerba as an illustrative placement; Homer gives no secure modern location (Book 9)."
+    },
+    {
+      "year": -1200,
+      "place": "Land of the Cyclopes",
+      "lat": 37.77,
+      "lon": 15.28,
+      "note": "Odysseus blinds Polyphemus and escapes beneath his sheep, earning Poseidon’s anger. Plotted in eastern Sicily for this reconstruction (Book 9)."
+    },
+    {
+      "year": -1200,
+      "place": "Aeolia",
+      "lat": 38.56,
+      "lon": 14.84,
+      "note": "Aeolus gives him the winds tied in a bag. The floating island is placed among the Aeolian Islands for illustration (Book 10)."
+    },
+    {
+      "year": -1200,
+      "place": "Within sight of Ithaca",
+      "lat": 38.32,
+      "lon": 20.35,
+      "note": "After nine days Ithaca is in sight, but the crew opens the bag while Odysseus sleeps and releases the winds (Book 10)."
+    },
+    {
+      "year": -1200,
+      "place": "Aeolia again",
+      "lat": 38.56,
+      "lon": 14.84,
+      "note": "Blown back to Aeolus, Odysseus is refused further help (Book 10)."
+    },
+    {
+      "year": -1200,
+      "place": "Land of the Laestrygonians",
+      "lat": 41.2,
+      "lon": 9.42,
+      "note": "Giants destroy every ship except his own. This imaginary harbour is plotted near northern Sardinia; its location is uncertain (Book 10)."
+    },
+    {
+      "year": -1200,
+      "place": "Aeaea — Circe’s island",
+      "lat": 41.23,
+      "lon": 13.04,
+      "note": "Circe turns his companions into swine, then restores them. They stay a year. Aeaea is plotted near Cape Circeo as an illustrative identification (Book 10)."
+    },
+    {
+      "year": -1199,
+      "place": "The edge of Ocean",
+      "lat": 40.84,
+      "lon": 14.05,
+      "note": "At the misty land of the Cimmerians, he summons the dead and hears Tiresias. The setting lies beyond ordinary geography; the point near Cumae is only a map symbol (Book 11)."
+    },
+    {
+      "year": -1199,
+      "place": "Back to Aeaea",
+      "lat": 41.23,
+      "lon": 13.04,
+      "note": "They bury Elpenor, and Circe warns them of the dangers ahead (Book 12)."
+    },
+    {
+      "year": -1199,
+      "place": "The Sirens",
+      "lat": 40.58,
+      "lon": 14.43,
+      "note": "The crew plugs its ears with wax; Odysseus hears the song bound to the mast. Plotted off the Sorrento peninsula for illustration (Book 12)."
+    },
+    {
+      "year": -1199,
+      "place": "Scylla and Charybdis",
+      "lat": 38.25,
+      "lon": 15.63,
+      "note": "He sails between a devouring monster and a whirlpool, losing six men. The Strait of Messina is an illustrative identification (Book 12)."
+    },
+    {
+      "year": -1199,
+      "place": "Thrinacia — the cattle of the Sun",
+      "lat": 37.05,
+      "lon": 15.29,
+      "note": "His starving men kill Helios’s cattle. Zeus wrecks their ship; only Odysseus survives. Plotted by Sicily, without a certain identification (Book 12)."
+    },
+    {
+      "year": -1197,
+      "place": "Ogygia — Calypso’s island",
+      "lat": 36.05,
+      "lon": 14.19,
+      "note": "After drifting back past Charybdis, he reaches Calypso and stays seven years. Ogygia is plotted near Gozo only for illustration (Books 7, 12)."
+    },
+    {
+      "year": -1190,
+      "place": "Scheria — the Phaeacians",
+      "lat": 39.62,
+      "lon": 19.92,
+      "note": "Freed by the gods, he builds a raft, survives Poseidon’s storm and is welcomed by Nausicaa and Alcinous. Scheria is plotted at Corfu for illustration (Books 5–8)."
+    },
+    {
+      "year": -1190,
+      "place": "Ithaca",
+      "lat": 38.37,
+      "lon": 20.72,
+      "note": "The Phaeacians carry him home asleep. Athena disguises him before he confronts the suitors and reunites with Penelope (Books 13–23)."
+    }
+  ],
+  "informs": [
+    {
+      "region": "sicily",
+      "level": 2,
+      "homeKnows": -750,
+      "confidence": "medium",
+      "note": "The island of the Cyclopes"
+    },
+    {
+      "region": "sicily",
+      "level": 2,
+      "homeKnows": -750,
+      "confidence": "medium",
+      "note": "The island of the Cyclopes",
+      "viewpoint": "europe"
+    },
+    {
+      "region": "italy",
+      "level": 2,
+      "homeKnows": -750,
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "region": "italy",
+      "level": 2,
+      "homeKnows": -750,
+      "confidence": "medium",
+      "note": "",
+      "viewpoint": "europe"
+    },
+    {
+      "region": "libya",
+      "level": 1,
+      "homeKnows": -750,
+      "confidence": "low",
+      "note": "The Lotus-eaters"
+    }
+  ]
+}
