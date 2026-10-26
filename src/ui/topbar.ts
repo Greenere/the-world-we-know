@@ -2,7 +2,7 @@ import type {AppData} from '../data';
 import {homeAt} from '../data';
 import type {State, Store} from '../state';
 import {getLang, t, tx} from '../i18n';
-import {formatYear} from '../time';
+import {formatYear, START} from '../time';
 import type {VpId} from '../types';
 import {ALL_VPS} from '../types';
 import {h, setIcon} from './dom';
@@ -13,8 +13,8 @@ const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
 
 /** The picker's groups: the knowledge communities that span many lands, then each viewpoint by where its home was. */
 const GROUPS: [string, VpId[]][] = [
-  ['Knowledge communities', ['islam', 'humanity']],
-  ['Europe', ['europe']],
+  ['Knowledge communities', ['europe', 'islam', 'humanity']],
+  ['Europe', ['greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia']],
   ['Asia', ['arabia', 'persia', 'india', 'china', 'japan']],
   ['Africa', ['egypt', 'maghreb', 'sahel']],
   ['The Americas', ['mexica', 'inca']],
@@ -29,13 +29,17 @@ function pickerLine(data: AppData, id: VpId): string {
   if (vp.special) return t('When people first arrived');
   // The long name only when it says more than the name (not "India / India").
   const long = vp.longName !== vp.name ? tx.viewpoint(id, 'longName', vp.longName) : '';
-  const of = ALL_VPS.find(c => data.vp[c].community?.members.some(m => m.viewpoint === id));
-  const m = of && data.vp[of].community!.members.find(x => x.viewpoint === id)!;
-  if (of && m) {
-    const joined = t('in the {community} from {year}', {community: name(of), year: formatYear(m.from)});
-    return long ? `${long} · ${joined}` : joined.charAt(0).toUpperCase() + joined.slice(1);
-  }
-  return long;
+  // Every community it belonged to, in order: Egypt is part of Europe from 331 BCE to 641, then of the Islamic world.
+  const spans = ALL_VPS.flatMap(c => (data.vp[c].community?.members ?? []).filter(m => m.viewpoint === id).map(m => ({c, ...m})))
+    .sort((a, b) => a.from - b.from)
+    .map(({c, from, until}) => {
+      const community = tx.viewpoint(c, 'longName', data.vp[c].longName);
+      if (until !== undefined) return t('part of {community} {from}–{until}', {community, from: formatYear(from), until: formatYear(until)});
+      return from <= START ? t('part of {community} from the start', {community}) : t('joins {community} in {year}', {community, year: formatYear(from)});
+    });
+  if (!spans.length) return long;
+  const joined = spans.join(t('; '));
+  return long ? `${long} · ${joined}` : joined.charAt(0).toUpperCase() + joined.slice(1);
 }
 
 export class TopBar {

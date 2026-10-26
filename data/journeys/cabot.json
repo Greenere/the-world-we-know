@@ -4,7 +4,7 @@
   "traveler": "John Cabot (Giovanni Caboto)",
   "years": "1497",
   "kind": "sailor",
-  "viewpoint": "europe",
+  "viewpoint": "britain",
   "summary": "A Venetian sailing for Henry VII crosses the North Atlantic in the small Matthew and lands on a coast he takes for north-east Asia, five centuries after the Norse. The cod he reports, so thick 'they could be taken with baskets', draws fishermen for centuries. He vanishes on a second voyage in 1498.",
   "source": "hakluyt",
   "confidence": "medium",
@@ -17,6 +17,8 @@
   ],
   "informs": [
     {"region": "vinland", "level": 3, "homeKnows": 1497, "confidence": "high", "note": "John Cabot"},
-    {"region": "north-atlantic-west", "level": 3, "homeKnows": 1498, "confidence": "high"}
+    {"viewpoint": "europe", "region": "vinland", "level": 3, "homeKnows": 1497, "confidence": "high", "note": "John Cabot"},
+    {"region": "north-atlantic-west", "level": 3, "homeKnows": 1498, "confidence": "high"},
+    {"viewpoint": "europe", "region": "north-atlantic-west", "level": 3, "homeKnows": 1498, "confidence": "high"}
   ]
 }

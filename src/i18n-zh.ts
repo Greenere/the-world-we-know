@@ -52,8 +52,8 @@ export const zhUi: Record<string, string> = {
   Viewpoints: '视角',
   'A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the cultural viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.':
     '视角是一种文化共有的知识，而不是某一个人的见闻。知识要传回故乡才算数：通过归来的使节、商人的报告、一本书或一幅地图。大约1900年以后，各文化视角共用同一幅地图，迷雾只标出最后无人到达的地方：两极、最高的山峰、最深的海沟，以及太空。',
-  'Thirteen cultural viewpoints: Europe, China, the Islamic world, Arabia, Egypt, Persia, the Maghreb, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. The Islamic world is a knowledge community: Arabia, Egypt, Persia and the Maghreb each share what they know from the year they join it, and each still keeps its own view. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.':
-    '十三个文化视角：欧洲、中国、伊斯兰世界、阿拉伯、埃及、波斯、马格里布、波利尼西亚、印度、日本、西非萨赫勒、墨西加与印加。伊斯兰世界是一个知识共同体：阿拉伯、埃及、波斯与马格里布自加入之年起分享各自所知，同时各自保有自己的视角。没有视角会终结：在被征服或殖民统治之后，一个视角仍跟随它自己人民的知识，由《佛罗伦萨手抄本》的纳瓦作者或安第斯编年史家瓜曼·波马这样的学者写下。',
+  'Twenty-one cultural viewpoints. Two are knowledge communities, which know what their members know from the year each joins: Europe (Greece and Byzantium, Rome and Italy, Spain and Portugal, France, Britain and Ireland, Germany and the Low Countries, the Norse and Scandinavia, and from 1745 Russia) and the Islamic world (Arabia, Egypt, Persia and the Maghreb). The others are China, India, Japan, Polynesia, the West African Sahel, the Mexica and the Inca. What one member knew stays known to its community unless the record shows it was forgotten, and what never spread beyond its finders, like the Norse Vinland, reaches the rest only as a rumour. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.':
+    '二十一个文化视角。其中两个是知识共同体，自各成员加入之年起便知道成员所知：欧洲（希腊与拜占庭、罗马与意大利、西班牙与葡萄牙、法国、不列颠与爱尔兰、德意志与低地国家、诺斯人与斯堪的纳维亚，以及1745年起的俄罗斯）和伊斯兰世界（阿拉伯、埃及、波斯与马格里布）。其余是中国、印度、日本、波利尼西亚、西非萨赫勒、墨西加与印加。一个成员所知，共同体便一直知道，除非史料表明它被遗忘；而那些从未传出发现者圈子的知识，比如诺斯人的文兰，传到其他成员那里只是传闻。没有视角会终结：在被征服或殖民统治之后，一个视角仍跟随它自己人民的知识，由《佛罗伦萨手抄本》的纳瓦作者或安第斯编年史家瓜曼·波马这样的学者写下。',
   'The Humanity layer is different: it shows when modern humans first arrived. We say “first known to” a viewpoint, never “discovered”. Someone was usually already there.':
     '“人类”一层与众不同：它显示现代人类最早抵达各地的时间。我们说某地“最早为某个视角所知”，从不说“被发现”——那里通常早已有人居住。',
   Keys: '快捷键',
@@ -235,7 +235,10 @@ export const zhUi: Record<string, string> = {
   'Knowledge communities': '知识共同体',
   'Shared by {members}': '由{members}共享',
   ', ': '、',
-  'in the {community} from {year}': '{year}起属于{community}',
+  'joins {community} in {year}': '{year}加入{community}',
+  'part of {community} from the start': '自始属于{community}',
+  'part of {community} {from}–{until}': '{from}至{until}属于{community}',
+  '; ': '；',
   'When people first arrived': '人类最早抵达之时',
   'through {vp}': '经由{vp}',
   '{vp} brings it, known since {year}': '由{vp}带来，{year}起已知',

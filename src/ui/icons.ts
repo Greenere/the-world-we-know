@@ -120,6 +120,46 @@ export function sealSvg(id: string, color: string, size = 18) {
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M7.4 18V11a4.6 4.6 0 0 1 9.2 0v7h-2.2v-6.6a2.4 2.4 0 0 0-4.8 0V18z" fill="#f6f0e2"/><path d="M6 18.2h12" stroke="#f6f0e2" stroke-width="1.2"/>`,
       );
+    case 'greece':
+      // An Ionic column.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><rect x="6.8" y="6" width="10.4" height="1.3" rx=".3"/><circle cx="7.6" cy="8.6" r="1.3"/><circle cx="16.4" cy="8.6" r="1.3"/><rect x="7.6" y="7.3" width="8.8" height="1.3"/><rect x="9.2" y="8.6" width="5.6" height="8"/><rect x="8" y="16.6" width="8" height="1.4" rx=".3"/></g><path d="M10.6 9.4v6.6M12 9.4v6.6M13.4 9.4v6.6" stroke="${color}" stroke-width=".6"/><circle cx="7.6" cy="8.6" r=".45" fill="${color}"/><circle cx="16.4" cy="8.6" r=".45" fill="${color}"/>`,
+      );
+    case 'rome':
+      // A laurel wreath.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2">${[0, 1, 2, 3, 4, 5].map(k => { const a = ((115 + k * 25) * Math.PI) / 180; const x = 12 + Math.cos(a) * 6; const y = 12 + Math.sin(a) * 6; const r = (115 + k * 25) + 90; return `<ellipse cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" rx=".95" ry="2" transform="rotate(${r - 35} ${x.toFixed(2)} ${y.toFixed(2)})"/><ellipse cx="${(24 - x).toFixed(2)}" cy="${y.toFixed(2)}" rx=".95" ry="2" transform="rotate(${-(r - 35)} ${(24 - x).toFixed(2)} ${y.toFixed(2)})"/>`; }).join('')}</g><path d="M10.2 18.2l1.8-1 1.8 1" stroke="#f6f0e2" stroke-width="1" fill="none" stroke-linecap="round"/>`,
+      );
+    case 'iberia':
+      // The castle of Castile.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M6.6 17.6V10.4h1.7V8.6h1.6v1.8h1.3V7.2h1.6v3.2h1.3V8.6h1.6v1.8h1.7v7.2z" fill="#f6f0e2"/><path d="M11 17.6v-3a1 1 0 0 1 2 0v3M8.6 12.4h1M14.4 12.4h1" stroke="${color}" stroke-width=".9" fill="none"/>`,
+      );
+    case 'france':
+      // A fleur-de-lis.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M12 4.8c1.7 2.1 1.9 4.4 0 6.9-1.9-2.5-1.7-4.8 0-6.9z"/><path d="M11.3 12.3C9.5 9.4 6.3 9.9 6.5 12.5c.2 1.7 2.1 2.1 2.9 1-1 .2-1.8-.6-1.4-1.4.6-1.1 2.3-.6 3.3.2z"/><path d="M12.7 12.3c1.8-2.9 5-2.4 4.8.2-.2 1.7-2.1 2.1-2.9 1 1 .2 1.8-.6 1.4-1.4-.6-1.1-2.3-.6-3.3.2z"/><rect x="8.8" y="12.3" width="6.4" height="1.3" rx=".3"/><path d="M11.2 13.6l-.7 3.8h3l-.7-3.8z"/></g>`,
+      );
+    case 'britain':
+      // A Tudor rose.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2">${[0, 1, 2, 3, 4].map(k => { const a = ((-90 + k * 72) * Math.PI) / 180; return `<circle cx="${(12 + Math.cos(a) * 3.6).toFixed(2)}" cy="${(12 + Math.sin(a) * 3.6).toFixed(2)}" r="2.7"/>`; }).join('')}</g><circle cx="12" cy="12" r="2.9" fill="${color}"/><circle cx="12" cy="12" r="1.5" fill="#f6f0e2"/>`,
+      );
+    case 'germany':
+      // A Hanseatic cog.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M5.2 13.4h13.6l-1.9 3.8H7.1z"/><rect x="8.6" y="5.6" width="6.8" height="6.4" rx=".4"/><path d="M15.6 13.4v-2h2.6l.6 2z"/></g><path d="M12 5v8.4" stroke="#f6f0e2" stroke-width=".9"/><path d="M8.6 8.8h6.8" stroke="${color}" stroke-width=".7"/>`,
+      );
+    case 'norse':
+      // A longship under sail.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M4.4 13q7.6 5.4 15.2 0l-.9 1.6q-6.7 3.6-13.4 0z"/><rect x="8.6" y="5.6" width="6.8" height="6" rx=".3"/></g><path d="M8.6 7.6h6.8M8.6 9.6h6.8" stroke="${color}" stroke-width=".8"/><path d="M12 5v8.6M4.4 13c-.7-1.5-.3-3 .9-3.5.7-.3 1.2.4.8.9M19.6 13c.5-1.2.4-2.4-.4-3" stroke="#f6f0e2" stroke-width="1" fill="none" stroke-linecap="round"/>`,
+      );
+    case 'russia':
+      // An onion dome.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M12 5.6c.6 1.6 3.7 3 3.7 5.9 0 1.4-1.3 2.2-3.7 2.2s-3.7-.8-3.7-2.2c0-2.9 3.1-4.3 3.7-5.9z"/><rect x="9.3" y="13.2" width="5.4" height="4.4"/><rect x="7.6" y="17.4" width="8.8" height="1" rx=".3"/></g><path d="M12 3.4v2.4M11 4.3h2M11 17.6v-2.2a1 1 0 0 1 2 0v2.2" stroke="#f6f0e2" stroke-width=".8" fill="none"/><path d="M11 17.6v-2.2a1 1 0 0 1 2 0v2.2" stroke="${color}" stroke-width=".8" fill="none"/>`,
+      );
     case 'inca':
       // Inti, the sun.
       return s(

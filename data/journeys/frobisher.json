@@ -4,7 +4,7 @@
   "traveler": "Martin Frobisher",
   "years": "1576–1578",
   "kind": "sailor",
-  "viewpoint": "europe",
+  "viewpoint": "britain",
   "summary": "Looking for a northern way to Cathay, Frobisher sails into a deep bay in Baffin Island he takes for a strait between Asia and America. He brings back an Inuk captive and black rock thought to hold gold; two more voyages mine 1,350 tons of worthless ore.",
   "source": "hakluyt",
   "confidence": "high",
@@ -17,6 +17,7 @@
     {"year": 1578, "place": "London", "lat": 51.5, "lon": -0.1, "note": "The ore proves worthless; it ends as road metal.", "city": "london"}
   ],
   "informs": [
-    {"region": "helluland-markland", "level": 3, "homeKnows": 1577, "confidence": "high", "note": "Frobisher"}
+    {"region": "helluland-markland", "level": 3, "homeKnows": 1577, "confidence": "high", "note": "Frobisher"},
+    {"viewpoint": "europe", "region": "helluland-markland", "level": 3, "homeKnows": 1577, "confidence": "high", "note": "Frobisher"}
   ]
 }

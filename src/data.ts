@@ -126,10 +126,15 @@ export function decodeBase64(text: string): Uint8Array {
   return out;
 }
 
-/** The name a viewpoint used for a place in a given year; falls back to the default (*) name. */
-export function nameFor(names: NameEntry[], vp: VpId, year: number, fallback = ''): NameEntry | null {
+/** The knowledge community a viewpoint belonged to in a year, whose names it shared (Rome in 1300 → Europe). */
+export function communityOf(data: AppData, vp: VpId, year: number): VpId | undefined {
+  return data.viewpoints.find(c => c.community?.members.some(m => m.viewpoint === vp && year >= m.from && (m.until === undefined || year < m.until)))?.id;
+}
+
+/** The name a viewpoint used for a place in a given year; then its community's (`shared`); then the default (*) name. */
+export function nameFor(names: NameEntry[], vp: VpId, year: number, fallback = '', shared?: VpId): NameEntry | null {
   const fits = (n: NameEntry) => (n.from === undefined || year >= n.from) && (n.to === undefined || year <= n.to);
-  const own = names.find(n => n.vp === vp && fits(n));
+  const own = names.find(n => n.vp === vp && fits(n)) ?? (shared ? names.find(n => n.vp === shared && fits(n)) : undefined);
   if (own) return own;
   const def = names.find(n => n.vp === '*' && fits(n));
   if (def) return def;
@@ -138,11 +143,9 @@ export function nameFor(names: NameEntry[], vp: VpId, year: number, fallback = '
 }
 
 /** Only a viewpoint's own historical name (no default), for map labels. */
-export function historicalName(names: NameEntry[], vp: VpId, year: number): NameEntry | null {
-  return (
-    names.find(n => n.vp === vp && (n.from === undefined || year >= n.from) && (n.to === undefined || year <= n.to)) ??
-    null
-  );
+export function historicalName(names: NameEntry[], vp: VpId, year: number, shared?: VpId): NameEntry | null {
+  const fits = (n: NameEntry) => (n.from === undefined || year >= n.from) && (n.to === undefined || year <= n.to);
+  return names.find(n => n.vp === vp && fits(n)) ?? (shared ? names.find(n => n.vp === shared && fits(n)) : undefined) ?? null;
 }
 
 export function homeAt(vp: Viewpoint, year: number) {

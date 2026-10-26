@@ -50,7 +50,7 @@ export class About {
         ),
         h(
           'p',
-          t('Thirteen cultural viewpoints: Europe, China, the Islamic world, Arabia, Egypt, Persia, the Maghreb, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. The Islamic world is a knowledge community: Arabia, Egypt, Persia and the Maghreb each share what they know from the year they join it, and each still keeps its own view. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
+          t('Twenty-one cultural viewpoints. Two are knowledge communities, which know what their members know from the year each joins: Europe (Greece and Byzantium, Rome and Italy, Spain and Portugal, France, Britain and Ireland, Germany and the Low Countries, the Norse and Scandinavia, and from 1745 Russia) and the Islamic world (Arabia, Egypt, Persia and the Maghreb). The others are China, India, Japan, Polynesia, the West African Sahel, the Mexica and the Inca. What one member knew stays known to its community unless the record shows it was forgotten, and what never spread beyond its finders, like the Norse Vinland, reaches the rest only as a rumour. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
         ),
         h(
           'p',

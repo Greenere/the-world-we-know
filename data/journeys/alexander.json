@@ -4,7 +4,7 @@
   "traveler": "Alexander of Macedon and his army",
   "years": "334–323 BCE",
   "kind": "military",
-  "viewpoint": "europe",
+  "viewpoint": "greece",
   "summary": "A Macedonian army crosses into Asia, destroys the Persian empire and marches to the Indus. It brings surveyors (bematists) who pace out the roads, and its reports, together with Nearchus' voyage home along the coast, give the Greek world its first first-hand picture of Persia, Central Asia and India.",
   "source": "arrian",
   "confidence": "high",
@@ -38,7 +38,9 @@
   ],
   "informs": [
     {"region": "anatolia", "level": 4, "homeKnows": -333, "confidence": "high"},
+    {"viewpoint": "europe", "region": "anatolia", "level": 4, "homeKnows": -333, "confidence": "high"},
     {"region": "levant", "level": 4, "homeKnows": -332, "confidence": "high"},
+    {"viewpoint": "europe", "region": "levant", "level": 4, "homeKnows": -332, "confidence": "high"},
     {"region": "mesopotamia", "level": 4, "homeKnows": -331, "confidence": "high", "note": "Gaugamela and Babylon"},
     {"region": "persia", "level": 4, "homeKnows": -330, "confidence": "high"},
     {"region": "bactria", "level": 3, "homeKnows": -329, "confidence": "high"},

@@ -318,6 +318,10 @@ kbd {
   align-items: center;
   gap: 22px;
   padding: 8px 22px 6px 16px;
+  /* Dragging along the track shouldn't select the year or the tick labels. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .tl-controls {

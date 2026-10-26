@@ -2,10 +2,56 @@
   {
     "id": "europe",
     "name": "Europe",
-    "longName": "Mediterranean / Europe",
+    "longName": "Europe",
     "adjective": "European",
     "color": "#34588f",
     "seal": "europe",
+    "community": {
+      "members": [
+        {
+          "viewpoint": "greece",
+          "from": -2000
+        },
+        {
+          "viewpoint": "egypt",
+          "from": -331,
+          "until": 641
+        },
+        {
+          "viewpoint": "rome",
+          "from": -146
+        },
+        {
+          "viewpoint": "maghreb",
+          "from": -146,
+          "until": 670
+        },
+        {
+          "viewpoint": "iberia",
+          "from": -133
+        },
+        {
+          "viewpoint": "france",
+          "from": -50
+        },
+        {
+          "viewpoint": "britain",
+          "from": 43
+        },
+        {
+          "viewpoint": "germany",
+          "from": 800
+        },
+        {
+          "viewpoint": "norse",
+          "from": 1103
+        },
+        {
+          "viewpoint": "russia",
+          "from": 1745
+        }
+      ]
+    },
     "homes": [
       {
         "from": -2000,
@@ -329,7 +375,7 @@
   {
     "id": "islam",
     "name": "Islamic world",
-    "longName": "Islamic world",
+    "longName": "the Islamic world",
     "adjective": "Islamic",
     "color": "#2b7a57",
     "seal": "islam",
@@ -353,8 +399,44 @@
         }
       ]
     },
-    "startNote": "The Islamic world is a knowledge community. It begins with the hijra in 622; Arabia, Egypt, Persia and the Maghreb each share what they know as they join, and what one knows, all keep.",
+    "startNote": "The Islamic world is a knowledge community. Before 622 it shows Arabia, which it grew from; after the hijra, Arabia, Egypt, Persia and the Maghreb each share what they know as they join, and what one knows, all keep.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Dilmun",
+        "lat": 26.23,
+        "lon": 50.52
+      },
+      {
+        "from": -1000,
+        "place": "Tayma",
+        "lat": 27.63,
+        "lon": 38.55
+      },
+      {
+        "from": -750,
+        "place": "Marib",
+        "lat": 15.42,
+        "lon": 45.33
+      },
+      {
+        "from": -500,
+        "place": "Marib",
+        "lat": 15.42,
+        "lon": 45.33
+      },
+      {
+        "from": -100,
+        "place": "Petra",
+        "lat": 30.33,
+        "lon": 35.44
+      },
+      {
+        "from": 300,
+        "place": "Mecca",
+        "lat": 21.42,
+        "lon": 39.83
+      },
       {
         "from": 622,
         "place": "Medina",
@@ -1795,6 +1877,832 @@
     ],
     "startNote": "Before Carthage was founded in 814 BCE, this view follows its mother city, Tyre, whose Phoenician sailors opened the western Mediterranean.",
     "noteUntil": -814
+  },
+  {
+    "id": "greece",
+    "name": "Greece",
+    "longName": "Greece and Byzantium",
+    "adjective": "Greek",
+    "color": "#3f86b0",
+    "seal": "greece",
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Knossos",
+        "lat": 35.3,
+        "lon": 25.16
+      },
+      {
+        "from": -1450,
+        "place": "Mycenae",
+        "lat": 37.73,
+        "lon": 22.76
+      },
+      {
+        "from": -1100,
+        "place": "Athens",
+        "lat": 37.97,
+        "lon": 23.73
+      },
+      {
+        "from": -300,
+        "place": "Alexandria",
+        "lat": 31.2,
+        "lon": 29.92
+      },
+      {
+        "from": 330,
+        "place": "Constantinople",
+        "lat": 41.01,
+        "lon": 28.98
+      },
+      {
+        "from": 1834,
+        "place": "Athens",
+        "lat": 37.97,
+        "lon": 23.73
+      }
+    ],
+    "moments": [
+      {
+        "year": -1400,
+        "label": "Mycenaean Greeks write in Linear B",
+        "source": "cline-1177"
+      },
+      {
+        "year": -1177,
+        "label": "The Bronze Age collapse",
+        "source": "cline-1177"
+      },
+      {
+        "year": -750,
+        "label": "Homer's world",
+        "source": "homer"
+      },
+      {
+        "year": -430,
+        "label": "Herodotus writes the Histories",
+        "source": "herodotus"
+      },
+      {
+        "year": -326,
+        "label": "Alexander reaches the Indus",
+        "source": "arrian"
+      },
+      {
+        "year": -240,
+        "label": "Eratosthenes measures the Earth",
+        "source": "cleomedes"
+      },
+      {
+        "year": 150,
+        "label": "Ptolemy's Geography",
+        "source": "ptolemy"
+      },
+      {
+        "year": 550,
+        "label": "Cosmas describes India and Taprobane",
+        "source": "cosmas"
+      },
+      {
+        "year": 950,
+        "label": "Constantine VII's guide to the peoples around the empire",
+        "source": "constantine-dai"
+      },
+      {
+        "year": 1295,
+        "label": "Planudes recovers Ptolemy's Geography",
+        "source": "diller-ptolemy"
+      },
+      {
+        "year": 1453,
+        "label": "Constantinople falls to the Ottomans",
+        "source": "kritovoulos"
+      }
+    ]
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "longName": "Rome and Italy",
+    "adjective": "Roman",
+    "color": "#8b2232",
+    "seal": "rome",
+    "startNote": "Before Rome was founded in 753 BCE, this view follows the peoples of Italy: the villages of the Bronze Age, then the Etruscan cities.",
+    "noteUntil": -753,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Latium",
+        "lat": 41.8,
+        "lon": 12.6
+      },
+      {
+        "from": -753,
+        "place": "Rome",
+        "lat": 41.89,
+        "lon": 12.49
+      },
+      {
+        "from": 402,
+        "place": "Ravenna",
+        "lat": 44.42,
+        "lon": 12.2
+      },
+      {
+        "from": 590,
+        "place": "Rome",
+        "lat": 41.89,
+        "lon": 12.49
+      },
+      {
+        "from": 1100,
+        "place": "Venice",
+        "lat": 45.44,
+        "lon": 12.33
+      },
+      {
+        "from": 1871,
+        "place": "Rome",
+        "lat": 41.89,
+        "lon": 12.49
+      }
+    ],
+    "moments": [
+      {
+        "year": -753,
+        "label": "Rome is founded",
+        "source": "hoc"
+      },
+      {
+        "year": -509,
+        "label": "The first treaty with Carthage",
+        "source": "hoc"
+      },
+      {
+        "year": -264,
+        "label": "The First Punic War",
+        "source": "hoc"
+      },
+      {
+        "year": -146,
+        "label": "Rome takes Greece and Carthage",
+        "source": "appian"
+      },
+      {
+        "year": 77,
+        "label": "Pliny's Natural History",
+        "source": "pliny"
+      },
+      {
+        "year": 98,
+        "label": "Tacitus's Germania",
+        "source": "tacitus"
+      },
+      {
+        "year": 166,
+        "label": "A Roman embassy reaches Han China",
+        "source": "houhanshu"
+      },
+      {
+        "year": 1245,
+        "label": "Carpini sets out for the Mongol court",
+        "source": "carpini-rubruck"
+      },
+      {
+        "year": 1300,
+        "label": "Marco Polo's book",
+        "source": "polo"
+      },
+      {
+        "year": 1450,
+        "label": "Fra Mauro's world map",
+        "source": "fra-mauro"
+      },
+      {
+        "year": 1601,
+        "label": "Matteo Ricci enters Beijing",
+        "source": "ricci-map"
+      }
+    ]
+  },
+  {
+    "id": "iberia",
+    "name": "Iberia",
+    "longName": "Spain and Portugal",
+    "adjective": "Iberian",
+    "color": "#c49a2c",
+    "seal": "iberia",
+    "startNote": "Before Rome, this view follows the peoples of Iberia: El Argar in the Bronze Age, then Tartessos, the silver kingdom the Phoenicians and Greeks traded with. From 711 to 1492 it follows the Christian kingdoms of the north; al-Andalus belongs to the Maghreb.",
+    "noteUntil": -133,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "El Argar",
+        "lat": 37.13,
+        "lon": -1.86
+      },
+      {
+        "from": -900,
+        "place": "Tartessos",
+        "lat": 37.25,
+        "lon": -6.95
+      },
+      {
+        "from": -218,
+        "place": "Tarraco",
+        "lat": 41.12,
+        "lon": 1.25
+      },
+      {
+        "from": 560,
+        "place": "Toledo",
+        "lat": 39.86,
+        "lon": -4.02
+      },
+      {
+        "from": 718,
+        "place": "Oviedo",
+        "lat": 43.36,
+        "lon": -5.85
+      },
+      {
+        "from": 1415,
+        "place": "Lisbon",
+        "lat": 38.71,
+        "lon": -9.14
+      },
+      {
+        "from": 1503,
+        "place": "Seville",
+        "lat": 37.39,
+        "lon": -5.99
+      },
+      {
+        "from": 1600,
+        "place": "Madrid",
+        "lat": 40.42,
+        "lon": -3.7
+      }
+    ],
+    "moments": [
+      {
+        "year": -900,
+        "label": "Tartessos trades silver with the Phoenicians",
+        "source": "cunliffe"
+      },
+      {
+        "year": -133,
+        "label": "Numantia falls; Hispania becomes Roman",
+        "source": "appian"
+      },
+      {
+        "year": 630,
+        "label": "Isidore's Etymologies",
+        "source": "isidore"
+      },
+      {
+        "year": 1375,
+        "label": "The Catalan Atlas",
+        "source": "catalan-atlas"
+      },
+      {
+        "year": 1434,
+        "label": "The Portuguese pass Cape Bojador",
+        "source": "zurara"
+      },
+      {
+        "year": 1488,
+        "label": "Dias rounds the Cape of Good Hope",
+        "source": "hoc"
+      },
+      {
+        "year": 1493,
+        "label": "Columbus returns from the Caribbean",
+        "source": "columbus"
+      },
+      {
+        "year": 1499,
+        "label": "Da Gama returns from India",
+        "source": "velho-roteiro"
+      },
+      {
+        "year": 1522,
+        "label": "The Victoria completes the first circumnavigation",
+        "source": "pigafetta"
+      },
+      {
+        "year": 1565,
+        "label": "Urdaneta finds the way back across the Pacific",
+        "source": "hoc"
+      }
+    ]
+  },
+  {
+    "id": "france",
+    "name": "France",
+    "longName": "France and Gaul",
+    "adjective": "French",
+    "color": "#3a4fa0",
+    "seal": "france",
+    "startNote": "Before Caesar's conquest, this view follows the Celtic peoples of Gaul, with the Greek city of Massalia on their coast.",
+    "noteUntil": -50,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Gaul",
+        "lat": 47.0,
+        "lon": 2.0
+      },
+      {
+        "from": -600,
+        "place": "Massalia",
+        "lat": 43.3,
+        "lon": 5.37
+      },
+      {
+        "from": -43,
+        "place": "Lugdunum",
+        "lat": 45.76,
+        "lon": 4.83
+      },
+      {
+        "from": 508,
+        "place": "Paris",
+        "lat": 48.86,
+        "lon": 2.35
+      }
+    ],
+    "moments": [
+      {
+        "year": -600,
+        "label": "Greeks found Massalia",
+        "source": "boardman"
+      },
+      {
+        "year": -390,
+        "label": "The Gauls sack Rome",
+        "source": "hoc"
+      },
+      {
+        "year": -50,
+        "label": "Caesar completes the conquest of Gaul",
+        "source": "caesar-bg"
+      },
+      {
+        "year": 508,
+        "label": "Clovis makes Paris his capital",
+        "source": "hoc"
+      },
+      {
+        "year": 1099,
+        "label": "Crusaders take Jerusalem",
+        "source": "hoc"
+      },
+      {
+        "year": 1253,
+        "label": "Rubruck reaches Karakorum",
+        "source": "carpini-rubruck"
+      },
+      {
+        "year": 1535,
+        "label": "Cartier sails up the St Lawrence",
+        "source": "hoc"
+      },
+      {
+        "year": 1682,
+        "label": "La Salle reaches the Gulf of Mexico",
+        "source": "hoc"
+      },
+      {
+        "year": 1768,
+        "label": "Bougainville in Tahiti",
+        "source": "hoc"
+      },
+      {
+        "year": 1809,
+        "label": "The Description de l'Égypte begins to appear",
+        "source": "description-egypte"
+      }
+    ]
+  },
+  {
+    "id": "britain",
+    "name": "Britain",
+    "longName": "Britain and Ireland",
+    "adjective": "British",
+    "color": "#7a3f5c",
+    "seal": "britain",
+    "startNote": "Before the Roman conquest, this view follows the peoples of Britain and Ireland, known from archaeology and from what Greek and Roman travellers wrote.",
+    "noteUntil": 43,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Stonehenge",
+        "lat": 51.18,
+        "lon": -1.83
+      },
+      {
+        "from": -50,
+        "place": "Camulodunum",
+        "lat": 51.89,
+        "lon": 0.9
+      },
+      {
+        "from": 50,
+        "place": "Londinium",
+        "lat": 51.51,
+        "lon": -0.09
+      },
+      {
+        "from": 871,
+        "place": "Winchester",
+        "lat": 51.06,
+        "lon": -1.31
+      },
+      {
+        "from": 1066,
+        "place": "London",
+        "lat": 51.51,
+        "lon": -0.12
+      }
+    ],
+    "moments": [
+      {
+        "year": -55,
+        "label": "Caesar lands in Britain",
+        "source": "caesar-bg"
+      },
+      {
+        "year": 43,
+        "label": "Rome invades Britain",
+        "source": "tacitus"
+      },
+      {
+        "year": 825,
+        "label": "Dicuil hears of Iceland from Irish monks",
+        "source": "dicuil"
+      },
+      {
+        "year": 890,
+        "label": "Ohthere tells King Alfred of the far north",
+        "source": "orosius-alfred"
+      },
+      {
+        "year": 1497,
+        "label": "Cabot reaches Newfoundland",
+        "source": "hoc"
+      },
+      {
+        "year": 1600,
+        "label": "The East India Company is founded",
+        "source": "hoc"
+      },
+      {
+        "year": 1770,
+        "label": "Cook charts eastern Australia",
+        "source": "cook-journals"
+      },
+      {
+        "year": 1859,
+        "label": "The fate of Franklin's expedition is found",
+        "source": "hoc"
+      },
+      {
+        "year": 1872,
+        "label": "The Challenger sails to sound the oceans",
+        "source": "challenger-report"
+      }
+    ]
+  },
+  {
+    "id": "germany",
+    "name": "Germany",
+    "longName": "Germany and the Low Countries",
+    "adjective": "German",
+    "color": "#55606b",
+    "seal": "germany",
+    "startNote": "Before Charlemagne, this view follows the peoples of Germania and the Low Countries: Bronze Age farmers, then the Germanic tribes Rome fought and the peoples of the migrations.",
+    "noteUntil": 800,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The Elbe valley",
+        "lat": 51.5,
+        "lon": 12.0
+      },
+      {
+        "from": 800,
+        "place": "Aachen",
+        "lat": 50.78,
+        "lon": 6.08
+      },
+      {
+        "from": 1050,
+        "place": "Bremen",
+        "lat": 53.08,
+        "lon": 8.8
+      },
+      {
+        "from": 1300,
+        "place": "Lübeck",
+        "lat": 53.87,
+        "lon": 10.69
+      },
+      {
+        "from": 1470,
+        "place": "Nuremberg",
+        "lat": 49.45,
+        "lon": 11.08
+      },
+      {
+        "from": 1550,
+        "place": "Antwerp",
+        "lat": 51.22,
+        "lon": 4.4
+      },
+      {
+        "from": 1600,
+        "place": "Amsterdam",
+        "lat": 52.37,
+        "lon": 4.9
+      },
+      {
+        "from": 1871,
+        "place": "Berlin",
+        "lat": 52.52,
+        "lon": 13.4
+      }
+    ],
+    "moments": [
+      {
+        "year": -102,
+        "label": "The Cimbri and Teutones invade Italy",
+        "source": "hoc"
+      },
+      {
+        "year": 9,
+        "label": "Three Roman legions are lost in the Teutoburg forest",
+        "source": "tacitus"
+      },
+      {
+        "year": 800,
+        "label": "Charlemagne is crowned emperor",
+        "source": "hoc"
+      },
+      {
+        "year": 1075,
+        "label": "Adam of Bremen writes of the North",
+        "source": "adam-bremen"
+      },
+      {
+        "year": 1356,
+        "label": "The Hanseatic League",
+        "source": "hoc"
+      },
+      {
+        "year": 1507,
+        "label": "Waldseemüller names America",
+        "source": "waldseemuller"
+      },
+      {
+        "year": 1596,
+        "label": "Barentsz winters on Novaya Zemlya",
+        "source": "de-veer"
+      },
+      {
+        "year": 1642,
+        "label": "Tasman sails south of Australia",
+        "source": "tasman"
+      },
+      {
+        "year": 1799,
+        "label": "Humboldt sails for the Americas",
+        "source": "humboldt-narrative"
+      }
+    ]
+  },
+  {
+    "id": "norse",
+    "name": "Norse",
+    "longName": "Norse and Scandinavia",
+    "adjective": "Norse",
+    "color": "#3e7a76",
+    "seal": "norse",
+    "startNote": "Before the Viking age, this view follows the peoples of Scandinavia, known from archaeology: the ship-builders of the Bronze Age and the farmers of the Iron Age.",
+    "noteUntil": 793,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Southern Scandinavia",
+        "lat": 56.5,
+        "lon": 10.0
+      },
+      {
+        "from": 800,
+        "place": "Hedeby",
+        "lat": 54.49,
+        "lon": 9.57
+      },
+      {
+        "from": 997,
+        "place": "Trondheim",
+        "lat": 63.43,
+        "lon": 10.4
+      },
+      {
+        "from": 1100,
+        "place": "Bergen",
+        "lat": 60.39,
+        "lon": 5.32
+      },
+      {
+        "from": 1450,
+        "place": "Copenhagen",
+        "lat": 55.68,
+        "lon": 12.57
+      }
+    ],
+    "moments": [
+      {
+        "year": 793,
+        "label": "Vikings raid Lindisfarne",
+        "source": "brink-price"
+      },
+      {
+        "year": 862,
+        "label": "Rurik comes to Novgorod",
+        "source": "primary-chronicle"
+      },
+      {
+        "year": 874,
+        "label": "The settlement of Iceland",
+        "source": "landnamabok"
+      },
+      {
+        "year": 985,
+        "label": "Erik the Red settles Greenland",
+        "source": "vinland-sagas"
+      },
+      {
+        "year": 1000,
+        "label": "Leif Eriksson in Vinland",
+        "source": "vinland-sagas"
+      },
+      {
+        "year": 1103,
+        "label": "Lund becomes the archbishopric of the North",
+        "source": "hoc"
+      },
+      {
+        "year": 1408,
+        "label": "The last word from the Greenland colonies",
+        "source": "hoc"
+      },
+      {
+        "year": 1721,
+        "label": "Hans Egede in Greenland",
+        "source": "hoc"
+      },
+      {
+        "year": 1888,
+        "label": "Nansen crosses Greenland",
+        "source": "nansen"
+      },
+      {
+        "year": 1911,
+        "label": "Amundsen reaches the South Pole",
+        "source": "amundsen"
+      }
+    ]
+  },
+  {
+    "id": "russia",
+    "name": "Russia",
+    "longName": "Rus and Russia",
+    "adjective": "Russian",
+    "color": "#23415f",
+    "seal": "russia",
+    "startNote": "Before the Rus, this view follows the peoples of the steppe and forest from whom Russia grew: the chariot-builders of Sintashta, the Scythians and the early Slavs.",
+    "noteUntil": 862,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Sintashta",
+        "lat": 52.5,
+        "lon": 60.0
+      },
+      {
+        "from": -700,
+        "place": "Scythia",
+        "lat": 47.5,
+        "lon": 34.3
+      },
+      {
+        "from": 500,
+        "place": "Kyiv",
+        "lat": 50.45,
+        "lon": 30.52
+      },
+      {
+        "from": 862,
+        "place": "Novgorod",
+        "lat": 58.52,
+        "lon": 31.27
+      },
+      {
+        "from": 882,
+        "place": "Kyiv",
+        "lat": 50.45,
+        "lon": 30.52
+      },
+      {
+        "from": 1169,
+        "place": "Vladimir",
+        "lat": 56.13,
+        "lon": 40.41
+      },
+      {
+        "from": 1328,
+        "place": "Moscow",
+        "lat": 55.75,
+        "lon": 37.62
+      },
+      {
+        "from": 1712,
+        "place": "St Petersburg",
+        "lat": 59.94,
+        "lon": 30.31
+      },
+      {
+        "from": 1918,
+        "place": "Moscow",
+        "lat": 55.75,
+        "lon": 37.62
+      }
+    ],
+    "moments": [
+      {
+        "year": -2000,
+        "label": "Chariots on the steppe at Sintashta",
+        "source": "anthony"
+      },
+      {
+        "year": 862,
+        "label": "Rurik comes to Novgorod",
+        "source": "primary-chronicle"
+      },
+      {
+        "year": 988,
+        "label": "Vladimir of Kyiv is baptized",
+        "source": "primary-chronicle"
+      },
+      {
+        "year": 1113,
+        "label": "The Tale of Bygone Years",
+        "source": "primary-chronicle"
+      },
+      {
+        "year": 1240,
+        "label": "The Mongols take Kyiv",
+        "source": "hoc"
+      },
+      {
+        "year": 1475,
+        "label": "Afanasy Nikitin's notebook from India reaches Moscow",
+        "source": "nikitin"
+      },
+      {
+        "year": 1582,
+        "label": "Yermak crosses the Urals",
+        "source": "stroganov-chronicle"
+      },
+      {
+        "year": 1648,
+        "label": "Dezhnev rounds the tip of Asia",
+        "source": "hoc"
+      },
+      {
+        "year": 1697,
+        "label": "Atlasov reaches Kamchatka",
+        "source": "hoc"
+      },
+      {
+        "year": 1745,
+        "label": "The Academy publishes the Atlas Russicus",
+        "source": "atlas-russicus"
+      },
+      {
+        "year": 1820,
+        "label": "Bellingshausen sights Antarctica",
+        "source": "bellingshausen"
+      },
+      {
+        "year": 1876,
+        "label": "Przhevalsky reaches Lop Nur",
+        "source": "hoc"
+      }
+    ]
   },
   {
     "id": "humanity",

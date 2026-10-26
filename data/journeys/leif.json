@@ -4,7 +4,7 @@
   "traveler": "Leif Eriksson",
   "years": "c. 1000",
   "kind": "sailor",
-  "viewpoint": "europe",
+  "viewpoint": "norse",
   "summary": "Norse Greenlanders sail west and winter in a land of grapes and timber. The knowledge stays in the sagas of the far north, reaches the rest of Europe as a rumour in Adam of Bremen, and fades. Five centuries later the Americas have to be found again.",
   "source": "vinland-sagas",
   "confidence": "medium",
@@ -18,8 +18,14 @@
     {"year": 1001, "place": "Brattahlíð", "lat": 61.15, "lon": -45.5, "note": "Home with timber and grapes. Later voyages try to settle, then give up.", "city": "brattahlid"}
   ],
   "informs": [
-    {"region": "vinland", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "note": "Known in Greenland and Iceland; reaches the rest of Europe through Adam of Bremen, c. 1075", "source": "adam-bremen"},
-    {"region": "helluland-markland", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "source": "adam-bremen"},
-    {"region": "north-atlantic-west", "level": 2, "homeKnows": "1000..1075", "confidence": "low", "source": "adam-bremen"}
+    {"region": "vinland", "level": 3, "homeKnows": 1001, "confidence": "medium", "note": "Known in Greenland and Iceland", "source": "vinland-sagas"},
+    {"region": "helluland-markland", "level": 2, "homeKnows": 1001, "confidence": "medium", "source": "vinland-sagas"},
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1001, "confidence": "medium", "source": "vinland-sagas"},
+    {"viewpoint": "germany", "region": "vinland", "level": 1, "homeKnows": 1075, "confidence": "low", "note": "A rumour in Adam of Bremen", "source": "adam-bremen"},
+    {"viewpoint": "germany", "region": "helluland-markland", "level": 1, "homeKnows": 1075, "confidence": "low", "source": "adam-bremen"},
+    {"viewpoint": "germany", "region": "north-atlantic-west", "level": 1, "homeKnows": 1075, "confidence": "low", "source": "adam-bremen"},
+    {"viewpoint": "europe", "region": "vinland", "level": 1, "homeKnows": 1075, "confidence": "low", "source": "adam-bremen"},
+    {"viewpoint": "europe", "region": "helluland-markland", "level": 1, "homeKnows": 1075, "confidence": "low", "source": "adam-bremen"},
+    {"viewpoint": "europe", "region": "north-atlantic-west", "level": 1, "homeKnows": 1075, "confidence": "low", "source": "adam-bremen"}
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "id": "daniel-abbot",
+  "name": "Abbot Daniel's pilgrimage to the Holy Land",
+  "traveler": "Daniel, abbot of a monastery near Chernigov",
+  "years": "1104–1108",
+  "kind": "pilgrim",
+  "viewpoint": "russia",
+  "summary": "A Rus' abbot travels by way of Constantinople and the Greek islands to crusader Jerusalem, stays sixteen months, rides with King Baldwin to Galilee and sets a lamp at the Holy Sepulchre for all the land of Rus. His account is the earliest Russian travel book.",
+  "source": "daniel-abbot",
+  "confidence": "high",
+  "stops": [
+    {"year": 1104, "place": "Chernigov", "lat": 51.49, "lon": 31.29, "note": "Sets out from his monastery in the land of Chernigov."},
+    {"year": 1105, "place": "Constantinople", "lat": 41.01, "lon": 28.98, "note": "Down the Dnieper and across the Black Sea to Tsargrad.", "by": "sea", "city": "constantinople"},
+    {"year": 1106, "place": "Ephesus", "lat": 37.94, "lon": 27.34, "note": "Through the Greek islands, visiting the tomb of St John.", "by": "sea", "city": "ephesus"},
+    {"year": 1106, "place": "Cyprus", "lat": 34.77, "lon": 32.42, "note": "Paphos and the island's monasteries.", "by": "sea"},
+    {"year": 1106, "place": "Jaffa", "lat": 32.05, "lon": 34.75, "note": "Landfall in the crusader kingdom.", "by": "sea"},
+    {"year": 1106, "place": "Jerusalem", "lat": 31.78, "lon": 35.23, "note": "Sixteen months in the holy city, with a guide who knows every place.", "by": "land", "city": "jerusalem"},
+    {"year": 1107, "place": "Tiberias", "lat": 32.79, "lon": 35.53, "note": "With King Baldwin's escort to the Sea of Galilee.", "by": "land"},
+    {"year": 1107, "place": "Jerusalem", "lat": 31.78, "lon": 35.23, "note": "At Easter he sets a lamp on the Holy Sepulchre for all the princes of Rus.", "by": "land", "city": "jerusalem"},
+    {"year": 1108, "place": "Chernigov", "lat": 51.49, "lon": 31.29, "note": "Home, where he writes it all down.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "levant", "level": 4, "homeKnows": 1108, "confidence": "high", "note": "The Holy Land seen by a Russian pilgrim"},
+    {"region": "cyprus", "level": 3, "homeKnows": 1108, "confidence": "medium"}
+  ]
+}

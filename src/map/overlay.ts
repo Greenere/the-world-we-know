@@ -3,7 +3,7 @@ import {PathStyleExtension, type PathStyleExtensionProps} from '@deck.gl/extensi
 import {IconLayer, PathLayer, ScatterplotLayer, TextLayer} from '@deck.gl/layers';
 import {LngLat as MlLngLat, type Map as MlMap} from 'maplibre-gl';
 import type {AppData} from '../data';
-import {historicalName, nameFor} from '../data';
+import {communityOf, historicalName, nameFor} from '../data';
 import type {FogField} from '../fog/field';
 import {cellAt, type Grid} from '../fog/grid';
 import {FogLayer, type FogLayerUniforms} from '../fog/layer';
@@ -236,13 +236,14 @@ export class OverlayModel {
     const humanity = state.vps.includes('humanity');
     const levels = state.vps.map(vp => field.levelsFor(vp, year).level);
     const labelVp: VpId = state.vps[0];
+    const sharedVp = communityOf(data, labelVp, year);
     const views: CityView[] = [];
     for (const c of data.cities) {
       const status = cityStatus(c, year);
       if (status === 'unborn') continue;
       if (status === 'lost' && !humanity) continue;
       if (!humanity && !levels.some(l => l[c.cell] >= 2) && !(seen && seen[c.cell] >= 0.6)) continue;
-      const name = nameFor(c.names, labelVp, year, c.id)!;
+      const name = nameFor(c.names, labelVp, year, c.id, sharedVp)!;
       const prev = this.appeared.get(c.id);
       let appearedAt = prev ?? (first ? -1e9 : now);
       if (prev === undefined) this.appeared.set(c.id, appearedAt);
@@ -265,7 +266,7 @@ export class OverlayModel {
       for (let i = 0; i < data.regions.length; i++) {
         const r = data.regions[i];
         if (!r.label || r.hidden) continue;
-        const n = historicalName(r.names, labelVp, year);
+        const n = historicalName(r.names, labelVp, year, sharedVp);
         if (!n) continue;
         const cell = labelCell(this.ctx.grid, r.id, r.label);
         if (cell >= 0 && lvl[cell] < 1) continue;

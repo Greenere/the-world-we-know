@@ -4,7 +4,7 @@
   "traveler": "Juan de Oñate",
   "years": "1598–1601",
   "kind": "military",
-  "viewpoint": "europe",
+  "viewpoint": "iberia",
   "summary": "Oñate leads some 500 settlers, soldiers and friars with 7,000 head of livestock up the Camino Real to found the colony of New Mexico. He destroys Acoma Pueblo after a revolt and sends parties east to the plains and west to the Gulf of California.",
   "source": "villagra",
   "confidence": "high",
@@ -17,6 +17,7 @@
   ],
   "informs": [
     {"region": "rio-grande-pueblos", "level": 4, "homeKnows": "1601..1605", "confidence": "high"},
+    {"viewpoint": "europe", "region": "rio-grande-pueblos", "level": 4, "homeKnows": "1601..1605", "confidence": "high"},
     {"region": "north-america-west", "level": 3, "homeKnows": "1601..1605", "confidence": "medium"}
   ]
 }

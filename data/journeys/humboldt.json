@@ -4,7 +4,7 @@
   "traveler": "Alexander von Humboldt and Aimé Bonpland",
   "years": "1799–1804",
   "kind": "scientific",
-  "viewpoint": "europe",
+  "viewpoint": "germany",
   "summary": "A Prussian naturalist and a French botanist carry 42 instruments through the Spanish Americas, measuring altitude, temperature, magnetism and plants as they go. They show how climate and life change with height, and their thirty-volume account remakes Europe's picture of South America.",
   "source": "humboldt-narrative",
   "confidence": "high",
@@ -29,6 +29,7 @@
   ],
   "informs": [
     {"region": "orinoco", "level": 4, "homeKnows": "1805..1810", "confidence": "high", "note": "The Orinoco and the Casiquiare"},
+    {"viewpoint": "europe", "region": "orinoco", "level": 4, "homeKnows": "1805..1810", "confidence": "high", "note": "The Orinoco and the Casiquiare"},
     {"region": "andes-north", "level": 4, "homeKnows": "1805..1810", "confidence": "high"}
   ]
 }

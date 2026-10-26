@@ -40,7 +40,7 @@
   "informs": [
     {"region": "south-pole", "level": 3, "homeKnows": 1911, "confidence": "high", "note": "First people at the South Pole"},
     {"region": "antarctica-interior", "level": 3, "homeKnows": 1911, "confidence": "high"},
-    {"viewpoint": "europe", "region": "south-pole", "level": 3, "homeKnows": 1912, "confidence": "high", "note": "The news reaches Europe from Hobart"},
-    {"viewpoint": "europe", "region": "antarctica-interior", "level": 3, "homeKnows": 1912, "confidence": "high"}
+    {"viewpoint": "norse", "region": "south-pole", "level": 3, "homeKnows": 1912, "confidence": "high", "note": "The news reaches Europe from Hobart"},
+    {"viewpoint": "norse", "region": "antarctica-interior", "level": 3, "homeKnows": 1912, "confidence": "high"}
   ]
 }

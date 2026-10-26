@@ -4,7 +4,7 @@
   "traveler": "Francisco Vázquez de Coronado",
   "years": "1540–1542",
   "kind": "military",
-  "viewpoint": "europe",
+  "viewpoint": "iberia",
   "summary": "An army of some 350 Spaniards and over 1,000 Indigenous allies from Mexico goes north to find the Seven Cities of Cíbola. They find the Zuni pueblos, made of adobe, not gold; a detachment is led to the rim of the Grand Canyon by Hopi guides; and the main army crosses the Great Plains to Quivira in Kansas before turning back empty-handed.",
   "source": "castaneda",
   "confidence": "high",
@@ -22,6 +22,7 @@
   "informs": [
     {"region": "north-america-west", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
     {"region": "great-plains", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
-    {"region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"}
+    {"region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"},
+    {"viewpoint": "europe", "region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"}
   ]
 }

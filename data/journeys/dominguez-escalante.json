@@ -4,7 +4,7 @@
   "traveler": "Francisco Atanasio Domínguez and Silvestre Vélez de Escalante",
   "years": "1776",
   "kind": "traveler",
-  "viewpoint": "europe",
+  "viewpoint": "iberia",
   "summary": "Two Franciscan friars and eight companions set out from Santa Fe to find a road to the new missions of California. Guided by Ute people, they cross the Colorado Plateau and reach Utah Lake before snow turns them back; their map is the first of the Great Basin.",
   "source": "escalante-diario",
   "confidence": "high",
@@ -19,6 +19,8 @@
   ],
   "informs": [
     {"region": "colorado-plateau", "level": "=3", "homeKnows": 1777, "confidence": "high", "note": "The first map of the Colorado Plateau"},
-    {"region": "great-basin", "level": "=1", "homeKnows": 1777, "confidence": "medium", "note": "Utah Lake and word of the lands beyond"}
+    {"viewpoint": "europe", "region": "colorado-plateau", "level": "=3", "homeKnows": 1777, "confidence": "high", "note": "The first map of the Colorado Plateau"},
+    {"region": "great-basin", "level": "=1", "homeKnows": 1777, "confidence": "medium", "note": "Utah Lake and word of the lands beyond"},
+    {"viewpoint": "europe", "region": "great-basin", "level": "=1", "homeKnows": 1777, "confidence": "medium", "note": "Utah Lake and word of the lands beyond"}
   ]
 }

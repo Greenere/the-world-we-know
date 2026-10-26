@@ -239,11 +239,18 @@ export class Cards {
     for (const e of r.events[vp] ?? []) rows.push({e, shared: false});
     if (vp !== 'humanity') for (const e of r.events['*'] ?? []) rows.push({e, shared: true});
     // A community also knows what its members know: what each brought when it joined, and all it learned after.
-    for (const {viewpoint, from} of this.data.vp[vp].community?.members ?? []) {
+    // The same record held by the community and a member, or by two members (Ptolemy, read in Greece and Rome),
+    // is listed once.
+    const seen = new Set(rows.map(({e}) => `${y(e)}|${e.source}|${e.journey ?? ''}`));
+    for (const {viewpoint, from, until} of this.data.vp[vp].community?.members ?? []) {
       const evs = r.events[viewpoint] ?? [];
       const before = evs.filter(e => y(e) < from).pop();
       if (before && before.level > 0) rows.push({e: before, shared: false, via: viewpoint, at: from});
-      for (const e of evs) if (y(e) >= from) rows.push({e, shared: false, via: viewpoint});
+      for (const e of evs) {
+        const key = `${y(e)}|${e.source}|${e.journey ?? ''}`;
+        if (y(e) >= from && (until === undefined || y(e) < until) && !seen.has(key)) rows.push({e, shared: false, via: viewpoint});
+        seen.add(key);
+      }
     }
     rows.sort((a, b) => (a.at ?? y(a.e)) - (b.at ?? y(b.e)));
     return rows.map(({e, shared, via, at}) => {
@@ -302,7 +309,6 @@ export class Cards {
     parts.push(`<line x1="${L}" x2="${L}" y1="0" y2="${H - 14}" class="rb-now"/>`);
     for (const [y, label] of [
       [START, '2000 BCE'],
-      [-500, '500 BCE'],
       [1000, '1000'],
       [1500, '1500'],
       [1900, '1900'],

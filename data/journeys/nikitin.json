@@ -1,0 +1,35 @@
+{
+  "id": "nikitin",
+  "name": "Afanasy Nikitin's journey beyond three seas",
+  "traveler": "Afanasy Nikitin",
+  "years": "1468–1475",
+  "kind": "traveler",
+  "viewpoint": "russia",
+  "summary": "A merchant of Tver sails down the Volga to trade, is robbed near Astrakhan and, with nothing to go home to, keeps going: across the Caspian and Persia to Hormuz, then by sea to India, where he spends three years in the Bahmani sultanate. His notebook, the first Russian account of India, reached Moscow after he died on the way home.",
+  "source": "nikitin",
+  "confidence": "high",
+  "stops": [
+    {"year": 1468, "place": "Tver", "lat": 56.86, "lon": 35.9, "note": "Sets out with a letter from the grand prince, to trade on the Volga."},
+    {"year": 1468, "place": "Nizhny Novgorod", "lat": 56.33, "lon": 44.0, "note": "Joins the returning embassy of the Shirvanshah.", "by": "river"},
+    {"year": 1468, "place": "Astrakhan", "lat": 46.35, "lon": 48.04, "note": "Tatars rob the ships at the mouth of the Volga.", "by": "river"},
+    {"year": 1469, "place": "Derbent", "lat": 42.06, "lon": 48.29, "note": "Across the Caspian, the first of the three seas.", "by": "sea"},
+    {"year": 1470, "place": "Yazd", "lat": 31.9, "lon": 54.37, "note": "A year crossing Persia.", "by": "land"},
+    {"year": 1471, "place": "Hormuz", "lat": 27.1, "lon": 56.45, "note": "The great port of the Persian Gulf, where he buys a horse to sell in India.", "by": "land"},
+    {"year": 1471, "place": "Chaul", "lat": 18.55, "lon": 72.93, "note": "Across the Indian Ocean, the second sea, in six weeks.", "by": "sea"},
+    {"year": 1471, "place": "Bidar", "lat": 17.91, "lon": 77.52, "note": "The Bahmani capital, where he describes the sultan's court, the elephants and the temples of Parvat.", "by": "land"},
+    {"year": 1474, "place": "Dabhol", "lat": 17.59, "lon": 73.18, "note": "He takes ship for home.", "by": "land"},
+    {"waypoint": true, "lat": 19.0, "lon": 64.0},
+    {"year": 1474, "place": "Hormuz", "lat": 27.1, "lon": 56.45, "note": "Back across the sea.", "by": "sea"},
+    {"year": 1475, "place": "Trebizond", "lat": 41.0, "lon": 39.72, "note": "Overland through Persia to the Black Sea, the third sea.", "by": "land"},
+    {"year": 1475, "place": "Caffa", "lat": 45.03, "lon": 35.38, "note": "The Genoese port in Crimea.", "by": "sea"},
+    {"year": 1475, "place": "Near Smolensk", "lat": 54.78, "lon": 32.05, "note": "He dies before reaching Tver; merchants carry his notebook to Moscow.", "by": "land"}
+  ],
+  "informs": [
+    {"region": "deccan", "level": 4, "homeKnows": 1475, "confidence": "high", "note": "The Bahmani sultanate described from within"},
+    {"region": "west-india-coast", "level": 3, "homeKnows": 1475, "confidence": "high"},
+    {"region": "india-north", "level": 2, "homeKnows": 1475, "confidence": "medium"},
+    {"region": "persia", "level": 3, "homeKnows": 1475, "confidence": "high"},
+    {"region": "persian-gulf", "level": 3, "homeKnows": 1475, "confidence": "high"},
+    {"region": "arabian-sea", "level": 3, "homeKnows": 1475, "confidence": "medium"}
+  ]
+}

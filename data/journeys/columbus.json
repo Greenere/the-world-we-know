@@ -4,7 +4,7 @@
   "traveler": "Christopher Columbus",
   "years": "1492–1493",
   "kind": "sailor",
-  "viewpoint": "europe",
+  "viewpoint": "iberia",
   "summary": "Looking for a westward route to Asia, Columbus reaches the Bahamas, Cuba and Hispaniola, islands long home to the Lucayan and Taíno peoples. He thinks he is in the Indies. His printed letter spreads the news across Europe within months.",
   "source": "columbus",
   "confidence": "high",
@@ -33,6 +33,7 @@
   ],
   "informs": [
     {"region": "caribbean", "level": 3, "homeKnows": 1493, "confidence": "high", "note": "The islands of 'the Indies'"},
-    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1493, "confidence": "high"}
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1493, "confidence": "high"},
+    {"viewpoint": "europe", "region": "north-atlantic-west", "level": 2, "homeKnows": 1493, "confidence": "high"}
   ]
 }

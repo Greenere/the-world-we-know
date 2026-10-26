@@ -5,7 +5,7 @@
   "years": "1872–1876",
   "kind": "scientific",
   "by": "sea",
-  "viewpoint": "europe",
+  "viewpoint": "britain",
   "summary": "The first great oceanographic expedition sails 127,000 km, stopping every 200 miles to sound the depth, dredge the floor and take the temperature of the water. It finds over 4,000 new species, maps the Mid-Atlantic Ridge and sounds a trench near Guam deeper than any then known.",
   "source": "challenger-report",
   "confidence": "high",
@@ -42,6 +42,7 @@
   "informs": [
     {"region": "southern-ocean", "level": 4, "homeKnows": 1880, "confidence": "high"},
     {"region": "antarctic-seas", "level": 4, "homeKnows": 1880, "confidence": "high"},
-    {"region": "north-atlantic-west", "level": 5, "homeKnows": 1880, "confidence": "medium", "note": "The first profile of the ocean floor"}
+    {"region": "north-atlantic-west", "level": 5, "homeKnows": 1880, "confidence": "medium", "note": "The first profile of the ocean floor"},
+    {"viewpoint": "europe", "region": "north-atlantic-west", "level": 5, "homeKnows": 1880, "confidence": "medium", "note": "The first profile of the ocean floor"}
   ]
 }

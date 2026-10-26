@@ -4,18 +4,18 @@
   "traveler": "Yermak Timofeyevich and his Cossacks",
   "years": "1581–1585",
   "kind": "military",
-  "viewpoint": "europe",
+  "viewpoint": "russia",
   "summary": "A band of Cossacks hired by the Stroganov merchants crosses the Urals and takes Qashliq, capital of the Khanate of Sibir. Yermak dies in an ambush, but Russia's advance across Siberia to the Pacific follows within sixty years.",
   "source": "stroganov-chronicle",
   "confidence": "medium",
   "stops": [
-    {"year": 1581, "place": "Stroganov lands, Chusovaya river", "lat": 58.30, "lon": 57.80, "note": "About 540 Cossacks set out by river boat."},
-    {"year": 1581, "place": "The Urals", "lat": 58.20, "lon": 59.60, "note": "They drag their boats over the watershed."},
-    {"year": 1582, "place": "Tura river", "lat": 57.70, "lon": 63.80, "note": "Down the Tura and Tobol into Sibir."},
-    {"year": 1582, "place": "Chuvash Cape", "lat": 58.10, "lon": 68.20, "note": "Firearms decide the battle against Khan Kuchum's army."},
+    {"year": 1581, "place": "Stroganov lands, Chusovaya river", "lat": 58.3, "lon": 57.8, "note": "About 540 Cossacks set out by river boat."},
+    {"year": 1581, "place": "The Urals", "lat": 58.2, "lon": 59.6, "note": "They drag their boats over the watershed."},
+    {"year": 1582, "place": "Tura river", "lat": 57.7, "lon": 63.8, "note": "Down the Tura and Tobol into Sibir."},
+    {"year": 1582, "place": "Chuvash Cape", "lat": 58.1, "lon": 68.2, "note": "Firearms decide the battle against Khan Kuchum's army."},
     {"year": 1582, "place": "Qashliq", "lat": 58.13, "lon": 68.33, "note": "The capital of Sibir is taken.", "date": "October 1582"},
     {"year": 1583, "place": "Moscow", "lat": 55.76, "lon": 37.62, "note": "Envoys bring Ivan IV furs and news of the conquest.", "city": "moscow"},
-    {"year": 1585, "place": "The Irtysh", "lat": 57.40, "lon": 71.00, "note": "Yermak drowns during a night attack, weighed down, the story says, by his armour.", "from": "Qashliq"}
+    {"year": 1585, "place": "The Irtysh", "lat": 57.4, "lon": 71.0, "note": "Yermak drowns during a night attack, weighed down, the story says, by his armour.", "from": "Qashliq"}
   ],
   "informs": [
     {"region": "siberia-west", "level": 3, "homeKnows": 1583, "confidence": "medium"}

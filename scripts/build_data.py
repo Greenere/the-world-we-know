@@ -41,7 +41,7 @@ NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/
 NE_FILES = ["ne_50m_land", "ne_50m_lakes", "ne_50m_rivers_lake_centerlines", "ne_50m_antarctic_ice_shelves_polys"]
 
 RES = 3
-MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb"]
+MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia"]
 ALL_VPS = MAIN_VPS + ["humanity"]
 CONFIDENCE = {"high": 0, "medium": 1, "low": 2}
 BODIES = {"orbit", "moon"}
@@ -607,33 +607,78 @@ def cell_timelines(vp: str, member, regions, events, grid: Grid, raw: bool = Fal
         has_cap[c] = any_cap
     if raw:
         return out, has_cap
+    RAW_TLS[vp], CAPS[vp] = out, has_cap
     return coast_rule(out, grid, has_cap)
 
 
-def community_timelines(vp: str, members: list[dict], fog_tls: dict, member, regions, events, grid: Grid):
-    """A knowledge community (the Islamic world): its own rows, plus whatever each member knows from the
-    year it joins. What one member brings stays known to all, unless the community's own exact ('=n') row
-    says it was lost."""
-    own, has_cap = cell_timelines(vp, member, regions, events, grid, raw=True)
+# Each viewpoint's cell histories before the coast rule: a community joins its members' own knowledge, and
+# infers its coastal waters once, from the union.
+RAW_TLS: dict[str, list] = {}
+CAPS: dict[str, np.ndarray] = {}
+
+
+def learn_from_community(own, coms: list[tuple[list, int, int | None]], grid: Grid, has_cap):
+    """Sharing runs both ways: while it belongs to a community, a member also knows what the community knows
+    (Britain in 1549 knows Spain as well as Europe does; Roman Alexandria knows the Roman world). What it
+    found for itself it keeps, even where the community holds it lower (the Norse knew Vinland; the rest of
+    Europe heard a rumour). `coms` holds (community history, from, until) for each membership."""
     out = []
     for c in range(len(grid.cells)):
-        tls = [(m["from"], fog_tls[m["viewpoint"]][c]) for m in members]
-        years = sorted({y for y, *_ in own[c]} | {max(y, start) for start, tl in tls for y, *_ in tl} | {start for start, tl in tls if tl})
-        held = [(0, 0)] * len(tls)
-        changes, prev, k = [], (0, 0), 0
-        cur = (0, 0, False)
-        for y in years:
-            while k < len(own[c]) and own[c][k][0] <= y:
-                cur = own[c][k][1:]
-                k += 1
-            for i, (start, tl) in enumerate(tls):
-                if y >= start:
-                    held[i] = max(held[i], level_at(tl, y))
-            best = (cur[0], cur[1]) if cur[2] else max([(cur[0], cur[1]), *held])
+        years = {y for y, *_ in own[c]}
+        for com, start, until in coms:
+            years |= {max(y, start) for y, *_ in com[c] if until is None or y < until} | {start} | ({until} if until else set())
+        changes, prev = [], (0, 0)
+        for y in sorted(years):
+            best = max([level_at(own[c], y)] + [level_at(com[c], y) for com, start, until in coms if start <= y and (until is None or y < until)])
             if best != prev:
                 changes.append((y, best[0], best[1]))
                 prev = best
         out.append(changes)
+    return coast_rule(out, grid, has_cap)
+
+
+def community_timelines(vp: str, members: list[dict], fog_tls: dict, member, regions, events, grid: Grid):
+    """A knowledge community (the Islamic world, Europe): its own rows, plus whatever each member knows from
+    the year it joins. What one member brings stays known to all until the community's own rows say it was
+    lost: where its own level falls (the Latin West forgetting Ptolemy), or an exact ('=n') row holds it down
+    (Vinland, known beyond the Norse only as a rumour). After that only what members learn anew brings the
+    knowledge back. Before its first member joins, a community shows that member, the forerunner it grew
+    from (Arabia before 622)."""
+    own, has_cap = cell_timelines(vp, member, regions, events, grid, raw=True)
+    members = sorted(members, key=lambda m: m["from"])
+    first = members[0]["from"]
+    out = []
+    for c in range(len(grid.cells)):
+        tls = [(m["from"], RAW_TLS[m["viewpoint"]][c]) for m in members]
+        ends = [m.get("until") for m in members]
+        # A member that leaves (Egypt, from Europe to the Islamic world) adds nothing new after it goes.
+        moves = [{y for y, *_ in tl if ends[i] is None or y < ends[i]} for i, (_, tl) in enumerate(tls)]
+        years = sorted({y for y, *_ in own[c]} | {y for mv in moves for y in mv} | {start for start, _ in tls})
+        held = [(0, 0)] * len(tls)
+        changes, prev, k = [], (0, 0), 0
+        cur = (0, 0, False)
+        for y in years:
+            lost = False
+            while k < len(own[c]) and own[c][k][0] <= y:
+                nxt = own[c][k][1:]
+                lost |= own[c][k][0] == y and (nxt[2] or nxt[0] < cur[0])
+                cur = nxt
+                k += 1
+            if y < first:
+                fore = level_at(tls[0][1], y)
+                best = (cur[0], cur[1]) if cur[2] else max((cur[0], cur[1]), fore)
+            else:
+                for i, (start, tl) in enumerate(tls):
+                    if lost:
+                        held[i] = min(held[i], (cur[0], cur[1]))
+                    elif y >= start and (y == start or y in moves[i]):
+                        held[i] = max(held[i], level_at(tl, y))
+                best = (cur[0], cur[1]) if cur[2] else max([(cur[0], cur[1]), *held])
+            if best != prev:
+                changes.append((y, best[0], best[1]))
+                prev = best
+        out.append(changes)
+    RAW_TLS[vp] = out
     return coast_rule(out, grid, has_cap)
 
 
@@ -1155,7 +1200,7 @@ def main() -> int:
         if "community" in v:
             ms = v["community"].get("members", [])
             if not ms or any(m.get("viewpoint") not in MAIN_VPS or m.get("viewpoint") == v["id"] or "community" in vp_by_id(viewpoints, m.get("viewpoint"))
-                             or not isinstance(m.get("from"), int) for m in ms):
+                             or not isinstance(m.get("from"), int) or not isinstance(m.get("until", 0), int) for m in ms):
                 fail(f"viewpoints.json: {v['id']} community members must be other viewpoints, each with a 'from' year")
             communities[v["id"]] = ms
         if v["id"] in MAIN_VPS and len(v.get("moments", [])) < 8:
@@ -1188,10 +1233,20 @@ def main() -> int:
     fog_tls = {}
     for vp in sorted(ALL_VPS, key=lambda v: v in communities):
         if vp in communities:
-            tls = community_timelines(vp, communities[vp], fog_tls, member, regions, events, grid)
+            fog_tls[vp] = community_timelines(vp, communities[vp], fog_tls, member, regions, events, grid)
         else:
-            tls = cell_timelines(vp, member, regions, events, grid)
-        fog_tls[vp] = tls
+            fog_tls[vp] = cell_timelines(vp, member, regions, events, grid)
+    # What each viewpoint found out for itself, before members learn from their communities: a journey must
+    # lift the fog of the viewpoint that sent it.
+    own_tls = dict(fog_tls)
+    belongs: dict[str, list] = defaultdict(list)
+    for com, ms in communities.items():
+        for m in ms:
+            belongs[m["viewpoint"]].append((RAW_TLS[com], m["from"], m.get("until")))
+    for vp, coms in belongs.items():
+        fog_tls[vp] = learn_from_community(RAW_TLS[vp], coms, grid, CAPS[vp])
+    for vp in ALL_VPS:
+        tls = fog_tls[vp]
         doc, pats = encode_fog(vp, tls)
         sizes[f"fog/{vp}.json"] = write_json(f"fog/{vp}.json", doc)
         print(f"    {vp}: {len(pats)} distinct cell histories")
@@ -1229,7 +1284,7 @@ def main() -> int:
                     lifted.append(r.id)
                 continue
             for c in r.cells:
-                tl = fog_tls[vp][c]
+                tl = own_tls[vp][c]
                 if level_at(tl, y.mid)[0] > level_at(tl, y.mid - 0.01)[0]:
                     lifted.append(r.id)
                     break
