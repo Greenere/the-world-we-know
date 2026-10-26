@@ -50,7 +50,7 @@ export class About {
         ),
         h(
           'p',
-          t('Nine cultural viewpoints: Europe, China, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. None of them ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
+          t('Twelve cultural viewpoints: Europe, China, Persia, Egypt, Arabia, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. Persia, Egypt and Arabia join the Islamic world in the seventh century, and the map follows it from then on. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
         ),
         h(
           'p',

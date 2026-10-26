@@ -1,7 +1,7 @@
 // Shapes of the files written by scripts/build_data.py.
 
-export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'india' | 'japan' | 'sahel' | 'mexica' | 'inca' | 'humanity';
-export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'india', 'japan', 'sahel', 'mexica', 'inca'];
+export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'india' | 'japan' | 'sahel' | 'mexica' | 'inca' | 'persia' | 'egypt' | 'arabia' | 'humanity';
+export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'india', 'japan', 'sahel', 'mexica', 'inca', 'persia', 'egypt', 'arabia'];
 export const ALL_VPS: VpId[] = [...MAIN_VPS, 'humanity'];
 
 export interface Home {
@@ -28,6 +28,10 @@ export interface Viewpoint {
   homes: Home[];
   moments: Moment[];
   startNote?: string;
+  /** A forerunner merges into another viewpoint in this year (Persia → the Islamic world, 651). */
+  joins?: {viewpoint: VpId; year: number};
+  /** Before this year, the viewpoint is shown as its forerunner (the Islamic world before 622 → Arabia). */
+  before?: {viewpoint: VpId; year: number};
   special?: boolean;
   oral?: boolean;
 }

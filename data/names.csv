@@ -750,3 +750,15 @@ region,peru,inca,Tawantinsuyu,,1438,,sarmiento
 region,andes-north,inca,Chinchaysuyu,,1438,,guaman-poma
 region,atacama-chile,inca,Qullasuyu,,1438,,guaman-poma
 region,amazon,inca,Antisuyu,,1438,,guaman-poma
+
+# ── Names used by Persia, Egypt and Arabia ──
+region,egypt,persia,Mudraya,,,,hoc
+region,greece,persia,Yauna,,,,hoc
+region,indus,persia,Hindush,,,,hoc
+region,pontic-steppe,persia,Saka,,,,hoc
+region,italy,persia,Hrōm,,224,,daryaee
+region,china-north,persia,Čīnistān,,224,,daryaee
+region,upper-nile,egypt,Kush,,,,hoc
+region,horn,egypt,Punt,,,,hoc
+region,arabia-felix,arabia,Saba,,,,hoc
+region,ethiopia,arabia,Ḥabashat,,,,hoc

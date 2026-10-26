@@ -9,12 +9,13 @@ import {h, setIcon} from './dom';
 import {icons, sealSvg} from './icons';
 
 /** The viewpoints always in the bar; the others are a tap away in the picker, and join the bar while chosen. */
-const FEATURED: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'humanity'];
+const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
 
 /** The picker's groups, by where each viewpoint's home was. */
 const GROUPS: [string, VpId[]][] = [
   ['Europe and the Mediterranean', ['europe']],
-  ['Asia', ['china', 'islam', 'india', 'japan']],
+  ['Asia', ['china', 'india', 'japan']],
+  ['The Near East', ['arabia', 'persia', 'egypt', 'islam']],
   ['Africa', ['sahel']],
   ['The Americas', ['mexica', 'inca']],
   ['Oceania', ['polynesia']],
@@ -70,7 +71,15 @@ export class TopBar {
                 this.closePicker();
               }},
               h('span.vp-seal', {html: sealSvg(vp.seal, vp.color, 22)}),
-              h('span.vp-picker-text', h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)), h('span.vp-picker-long', tx.viewpoint(id, 'longName', vp.longName))),
+              h(
+                'span.vp-picker-text',
+                h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)),
+                h('span.vp-picker-long', vp.joins
+                  ? t('until {year}, then the {to}', {year: formatYear(vp.joins.year), to: tx.viewpoint(vp.joins.viewpoint, 'longName', data.vp[vp.joins.viewpoint].longName)})
+                  : vp.before
+                    ? t('from {year}; before that, {from}', {year: formatYear(vp.before.year), from: tx.viewpoint(vp.before.viewpoint, 'name', data.vp[vp.before.viewpoint].name)})
+                    : tx.viewpoint(id, 'longName', vp.longName)),
+              ),
             );
             this.pickerItems.set(id, b);
             return b;

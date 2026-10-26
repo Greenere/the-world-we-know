@@ -41,7 +41,7 @@ NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/
 NE_FILES = ["ne_50m_land", "ne_50m_lakes", "ne_50m_rivers_lake_centerlines", "ne_50m_antarctic_ice_shelves_polys"]
 
 RES = 3
-MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca"]
+MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia"]
 ALL_VPS = MAIN_VPS + ["humanity"]
 CONFIDENCE = {"high": 0, "medium": 1, "low": 2}
 BODIES = {"orbit", "moon"}
@@ -1115,6 +1115,10 @@ def main() -> int:
     if vp_ids != set(ALL_VPS):
         fail(f"viewpoints.json must define exactly {ALL_VPS}")
     for v in viewpoints:
+        # A forerunner joins another viewpoint in a given year (Persia into the Islamic world in 651).
+        for key in ("joins", "before"):
+            if key in v and (v[key].get("viewpoint") not in vp_ids or not isinstance(v[key].get("year"), int)):
+                fail(f"viewpoints.json: {v['id']} {key} must name a viewpoint and a year")
         if v["id"] in MAIN_VPS and len(v.get("moments", [])) < 8:
             fail(f"viewpoints.json: {v['id']} needs at least 8 key moments")
         for m in v.get("moments", []):

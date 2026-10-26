@@ -100,6 +100,21 @@ export function sealSvg(id: string, color: string, size = 18) {
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M5.5 17.5h13l-1.5-2.6h-10zM7.2 14.9h9.6L15.6 12.4H8.4zM8.6 12.4h6.8L14.4 10H9.6z" fill="#f6f0e2"/><path d="M9.8 10V7.6h1.8V10M12.4 10V7.6h1.8V10" fill="#f6f0e2"/>`,
       );
+    case 'persia':
+      // A winged disc.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><circle cx="12" cy="10.6" r="2.4" fill="#f6f0e2"/><path d="M4.6 10.4c2.6.2 4.4.9 5.2 1.6M19.4 10.4c-2.6.2-4.4.9-5.2 1.6M5.4 12.4c2.2.2 3.8.8 4.6 1.4M18.6 12.4c-2.2.2-3.8.8-4.6 1.4M10.6 13.4l1.4 4 1.4-4" stroke="#f6f0e2" stroke-width="1.2" fill="none" stroke-linecap="round"/>`,
+      );
+    case 'egypt':
+      // A pyramid under the sun.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><circle cx="12" cy="7" r="1.8" fill="#f6f0e2"/><path d="M5.5 17.5L12 9.6l6.5 7.9z" fill="#f6f0e2"/><path d="M12 9.6l1.4 7.9" stroke="${color}" stroke-width=".8"/>`,
+      );
+    case 'arabia':
+      // An incense burner with rising smoke.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M8.4 12.2h7.2v3.4H8.4zM9.6 15.6h4.8l.8 2H8.8z" fill="#f6f0e2"/><path d="M11 11c-1-1.4.6-2.2 0-3.6M13 11c-.8-1.6.8-2.4.2-4" stroke="#f6f0e2" stroke-width="1" fill="none" stroke-linecap="round"/>`,
+      );
     case 'inca':
       // Inti, the sun.
       return s(

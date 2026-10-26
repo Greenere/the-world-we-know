@@ -588,25 +588,25 @@ china,south-atlantic,1843..1852,3,high,haiguo-tuzhi,
 
 # ═══ Islamic world ════════════════════════════════════════════════════════
 # Before 622: the Arabian trading world Islam grew from
-islam,arabia-hejaz,-500,4,low,hoc,Caravan towns of the Hejaz
-islam,arabia-felix,-500,4,low,hoc,Saba and the incense kingdoms
-islam,arabia-interior,-500,3,low,hoc,
-islam,oman,-500,3,low,hoc,
-islam,persian-gulf,-500,3,low,hoc,
-islam,red-sea,-500,3,low,hoc,
-islam,levant,-500,3,low,hoc,
-islam,mesopotamia,-500,2,low,hoc,
-islam,egypt,-500,2,low,hoc,
-islam,persia,-500,2,low,hoc,
-islam,ethiopia,-500,2,low,hoc,
-islam,horn,-500,2,low,hoc,The incense coast of Africa
-islam,east-africa-coast,-500,1,low,hoc,
-islam,arabian-sea,-500,2,low,hoc,
-islam,west-india-coast,-500,1,low,hoc,
-islam,east-africa-coast,50,2,low,periplus,Arab traders at Rhapta
-islam,malabar,50,2,low,periplus,
-islam,west-india-coast,50,2,low,periplus,
-islam,ethiopia,615,3,medium,al-baladhuri,The first emigration to Aksum
+arabia,arabia-hejaz,-500,4,low,hoc,Caravan towns of the Hejaz
+arabia,arabia-felix,-500,4,low,hoc,Saba and the incense kingdoms
+arabia,arabia-interior,-500,3,low,hoc,
+arabia,oman,-500,3,low,hoc,
+arabia,persian-gulf,-500,3,low,hoc,
+arabia,red-sea,-500,3,low,hoc,
+arabia,levant,-500,3,low,hoc,
+arabia,mesopotamia,-500,2,low,hoc,
+arabia,egypt,-500,2,low,hoc,
+arabia,persia,-500,2,low,hoc,
+arabia,ethiopia,-500,2,low,hoc,
+arabia,horn,-500,2,low,hoc,The incense coast of Africa
+arabia,east-africa-coast,-500,1,low,hoc,
+arabia,arabian-sea,-500,2,low,hoc,
+arabia,west-india-coast,-500,1,low,hoc,
+arabia,east-africa-coast,50,2,low,periplus,Arab traders at Rhapta
+arabia,malabar,50,2,low,periplus,
+arabia,west-india-coast,50,2,low,periplus,
+arabia,ethiopia,615,3,medium,al-baladhuri,The first emigration to Aksum
 # The first conquests, 632–656
 islam,levant,636,4,high,al-baladhuri,Yarmuk and the conquest of Syria
 islam,mesopotamia,637,4,high,al-baladhuri,
@@ -1304,3 +1304,119 @@ inca,europe,1609,3,high,garcilaso,Garcilaso writes in Spain
 inca,iberia,1560,2,medium,garcilaso,
 inca,iberia,1609,3,medium,garcilaso,
 inca,mexico,1533,1,medium,hoc,News of New Spain
+# The Islamic world begins in 622 from what Arabia knew; Persia and Egypt join it in 651 and 641
+islam,arabia-hejaz,622,4,low,hoc,
+islam,arabia-felix,622,4,low,hoc,
+islam,arabia-interior,622,3,low,hoc,
+islam,oman,622,3,low,hoc,
+islam,persian-gulf,622,3,low,hoc,
+islam,red-sea,622,3,low,hoc,
+islam,levant,622,3,low,hoc,
+islam,mesopotamia,622,2,low,hoc,
+islam,egypt,622,2,low,hoc,
+islam,persia,622,2,low,hoc,
+islam,ethiopia,622,2,low,hoc,
+islam,horn,622,2,low,hoc,
+islam,east-africa-coast,622,1,low,hoc,
+islam,arabian-sea,622,2,low,hoc,
+islam,west-india-coast,622,1,low,hoc,
+islam,east-africa-coast,622,2,low,periplus,
+islam,malabar,622,2,low,periplus,
+islam,west-india-coast,622,2,low,periplus,
+islam,ethiopia,622,3,medium,al-baladhuri,
+# ════ Persia (with Mesopotamia), until it joins the Islamic world in 651 ════
+persia,persia,-500,5,high,behistun,"The Achaemenid heartland, measured by the royal road and its stations"
+persia,mesopotamia,-500,5,high,behistun,Babylon: a royal capital
+persia,anatolia,-500,4,high,herodotus,The royal road to Sardis
+persia,levant,-500,4,high,herodotus,
+persia,egypt,-500,4,high,herodotus,The satrapy of Mudraya
+persia,egypt,-332,2,medium,hoc,Lost to Alexander
+persia,egypt,619,4,medium,daryaee,Khosrow II's armies hold Egypt for a decade
+persia,upper-nile,-500,2,medium,herodotus,Cambyses' campaign against Kush
+persia,libya,-500,2,medium,herodotus,
+persia,bactria,-500,4,high,behistun,
+persia,transoxiana,-500,3,high,behistun,Sogdiana
+persia,indus,-500,4,high,behistun,The satrapy of Hindush
+persia,indus,-320,2,medium,hoc,
+persia,indus,240,3,medium,daryaee,Sasanian Sind and the Kushanshahr
+persia,india-north,-500,1,medium,herodotus,
+persia,india-north,300,2,medium,daryaee,
+persia,arabian-sea,-500,3,medium,herodotus,Scylax's voyage down the Indus and round Arabia
+persia,persian-gulf,-500,4,high,hoc,
+persia,oman,-500,3,medium,hoc,
+persia,oman,250,4,medium,daryaee,
+persia,arabia-interior,-500,2,medium,herodotus,
+persia,arabia-felix,-500,2,medium,hoc,
+persia,arabia-felix,570,4,medium,daryaee,The Sasanian conquest of Yemen
+persia,red-sea,-500,3,medium,herodotus,Darius's canal from the Nile to the Red Sea
+persia,caucasus,-500,3,medium,herodotus,
+persia,caucasus,300,4,medium,daryaee,
+persia,caspian,-500,3,medium,herodotus,
+persia,pontic-steppe,-500,2,medium,herodotus,Darius's campaign against the Scythians
+persia,kazakh-steppe,-500,1,low,herodotus,
+persia,kazakh-steppe,450,2,medium,daryaee,The Hephthalites
+persia,greece,-500,3,high,herodotus,Yauna: the Greek cities
+persia,med-east,-500,3,high,herodotus,
+persia,balkans,-500,2,medium,herodotus,Thrace
+persia,black-sea,-500,2,medium,herodotus,
+persia,italy,-100,1,medium,hoc,
+persia,italy,250,2,medium,daryaee,"Hrōm: Rome, the great rival"
+persia,tarim,-100,2,medium,hanshu,
+persia,tarim,500,3,medium,daryaee,
+persia,china-north,-115,2,high,shiji,The Han embassy reaches Parthia
+persia,china-north,450,3,medium,daryaee,Sasanian embassies to the Northern Wei
+persia,zhetysu,560,3,medium,daryaee,The Western Turks
+persia,mongolia,560,1,low,daryaee,
+persia,malabar,400,3,medium,cosmas,Persian Christian merchants on the Malabar coast
+persia,west-india-coast,400,3,medium,cosmas,
+persia,sri-lanka,500,3,medium,cosmas,Persian ships at Taprobane
+persia,bay-of-bengal,500,1,low,cosmas,
+persia,china-south,600,1,low,hoc,Bosi merchants in Guangzhou
+persia,east-africa-coast,550,1,low,hoc,
+persia,horn,550,2,low,cosmas,
+persia,ethiopia,550,2,medium,cosmas,Aksum
+# ════ Egypt, until it joins the Islamic world in 641 ════
+egypt,egypt,-500,5,high,herodotus,"The Nile valley, measured field by field for tax"
+egypt,upper-nile,-500,3,high,herodotus,Kush and Meroë
+egypt,upper-nile,-250,4,medium,bagnall,Ptolemaic hunting expeditions up the Nile
+egypt,ethiopia,-250,2,medium,bagnall,Elephant hunters on the Red Sea coast
+egypt,ethiopia,100,3,medium,periplus,Aksum and Adulis
+egypt,red-sea,-500,3,high,herodotus,
+egypt,red-sea,-270,4,high,bagnall,The Ptolemaic Red Sea ports
+egypt,horn,-500,1,medium,hoc,"Punt, the land of incense"
+egypt,horn,-200,2,medium,bagnall,
+egypt,horn,50,3,high,periplus,
+egypt,east-africa-coast,50,2,high,periplus,Azania as far as Rhapta
+egypt,arabia-felix,-500,2,medium,hoc,
+egypt,arabia-felix,50,3,high,periplus,
+egypt,arabian-sea,-118,2,medium,strabo,Eudoxus of Cyzicus sails to India
+egypt,arabian-sea,1,4,high,periplus,Hippalus: crossing on the monsoon
+egypt,west-india-coast,-118,2,medium,strabo,
+egypt,west-india-coast,50,3,high,periplus,
+egypt,malabar,50,3,high,periplus,The pepper ports
+egypt,tamilakam,50,2,medium,periplus,
+egypt,sri-lanka,150,2,medium,ptolemy,
+egypt,india-north,150,1,medium,ptolemy,
+egypt,levant,-500,4,high,herodotus,
+egypt,med-east,-500,4,high,herodotus,
+egypt,greece,-500,3,high,herodotus,
+egypt,greece,-300,4,high,bagnall,
+egypt,anatolia,-300,3,high,bagnall,
+egypt,italy,-200,2,high,bagnall,
+egypt,italy,-30,4,high,bagnall,Egypt becomes Rome's
+egypt,libya,-500,3,high,herodotus,Cyrene and the oases
+egypt,sahara,-500,2,medium,herodotus,
+egypt,maghreb,-200,2,medium,bagnall,
+egypt,mesopotamia,-500,3,medium,herodotus,
+egypt,persia,-500,3,medium,herodotus,The Persian kings rule Egypt
+egypt,arabia-hejaz,-200,2,medium,bagnall,
+egypt,iberia,-100,1,medium,strabo,
+egypt,britain,150,1,medium,ptolemy,Ptolemy's Geography reaches the edge of the world
+egypt,china-north,150,1,medium,ptolemy,Serica and Sinae
+# ════ Arabia, until it joins the Islamic world in 632 (rows moved from the Islamic world before 622) ════
+arabia,levant,-300,4,medium,hoyland,The Nabataean caravan trade
+arabia,egypt,-300,3,medium,hoyland,
+arabia,italy,50,2,medium,hoyland,
+arabia,persia,250,3,medium,hoyland,
+arabia,ethiopia,525,4,high,hoyland,Aksum conquers Himyar
+arabia,arabia-felix,570,4,high,hoyland,

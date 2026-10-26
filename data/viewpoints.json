@@ -240,7 +240,6 @@
     "adjective": "Islamic",
     "color": "#2b7a57",
     "seal": "islam",
-    "startNote": "Before 622 this view shows the Arabian trading world that Islam grew from.",
     "homes": [
       {
         "from": -500,
@@ -337,7 +336,11 @@
         "label": "Piri Reis's world map",
         "source": "piri-reis"
       }
-    ]
+    ],
+    "before": {
+      "viewpoint": "arabia",
+      "year": 622
+    }
   },
   {
     "id": "polynesia",
@@ -868,6 +871,247 @@
         "year": 1609,
         "label": "Garcilaso de la Vega's Royal Commentaries",
         "source": "garcilaso"
+      }
+    ]
+  },
+  {
+    "id": "persia",
+    "name": "Persia",
+    "longName": "Persia and Mesopotamia",
+    "adjective": "Persian",
+    "color": "#6e7d2c",
+    "seal": "persia",
+    "joins": {
+      "viewpoint": "islam",
+      "year": 651
+    },
+    "homes": [
+      {
+        "from": -500,
+        "place": "Persepolis",
+        "lat": 29.93,
+        "lon": 52.89
+      },
+      {
+        "from": -330,
+        "place": "Babylon",
+        "lat": 32.54,
+        "lon": 44.42
+      },
+      {
+        "from": -141,
+        "place": "Ctesiphon",
+        "lat": 33.09,
+        "lon": 44.58
+      }
+    ],
+    "moments": [
+      {
+        "year": -500,
+        "label": "The royal road runs from Susa to Sardis",
+        "source": "herodotus"
+      },
+      {
+        "year": -515,
+        "label": "Scylax sails down the Indus for Darius",
+        "source": "herodotus"
+      },
+      {
+        "year": -330,
+        "label": "Alexander takes the empire",
+        "source": "arrian"
+      },
+      {
+        "year": -247,
+        "label": "The Parthians rise in the east",
+        "source": "hoc"
+      },
+      {
+        "year": -115,
+        "label": "A Han embassy reaches the Parthian court",
+        "source": "shiji"
+      },
+      {
+        "year": 224,
+        "label": "Ardashir founds the Sasanian empire",
+        "source": "daryaee"
+      },
+      {
+        "year": 260,
+        "label": "Shapur I captures the emperor Valerian",
+        "source": "daryaee"
+      },
+      {
+        "year": 570,
+        "label": "Sasanian forces take Yemen",
+        "source": "daryaee"
+      },
+      {
+        "year": 619,
+        "label": "Khosrow II's armies hold Egypt",
+        "source": "daryaee"
+      },
+      {
+        "year": 651,
+        "label": "Persia becomes part of the Islamic world",
+        "source": "al-tabari"
+      }
+    ]
+  },
+  {
+    "id": "egypt",
+    "name": "Egypt",
+    "longName": "Egypt",
+    "adjective": "Egyptian",
+    "color": "#2f8fb5",
+    "seal": "egypt",
+    "joins": {
+      "viewpoint": "islam",
+      "year": 641
+    },
+    "homes": [
+      {
+        "from": -500,
+        "place": "Memphis",
+        "lat": 29.85,
+        "lon": 31.25
+      },
+      {
+        "from": -331,
+        "place": "Alexandria",
+        "lat": 31.2,
+        "lon": 29.92
+      }
+    ],
+    "moments": [
+      {
+        "year": -497,
+        "label": "Darius completes the canal from the Nile to the Red Sea",
+        "source": "herodotus"
+      },
+      {
+        "year": -331,
+        "label": "Alexandria is founded",
+        "source": "arrian"
+      },
+      {
+        "year": -290,
+        "label": "The Library and the Museum at Alexandria",
+        "source": "hoc"
+      },
+      {
+        "year": -240,
+        "label": "Eratosthenes measures the Earth",
+        "source": "cleomedes"
+      },
+      {
+        "year": -118,
+        "label": "Eudoxus of Cyzicus sails to India",
+        "source": "strabo"
+      },
+      {
+        "year": -30,
+        "label": "Egypt becomes a Roman province",
+        "source": "bagnall"
+      },
+      {
+        "year": 50,
+        "label": "The Periplus describes the monsoon routes",
+        "source": "periplus"
+      },
+      {
+        "year": 150,
+        "label": "Ptolemy's Geography is written in Alexandria",
+        "source": "ptolemy"
+      },
+      {
+        "year": 550,
+        "label": "Cosmas describes India and Taprobane",
+        "source": "cosmas"
+      },
+      {
+        "year": 641,
+        "label": "Egypt becomes part of the Islamic world",
+        "source": "al-baladhuri"
+      }
+    ]
+  },
+  {
+    "id": "arabia",
+    "name": "Arabia",
+    "longName": "Arabia before Islam",
+    "adjective": "Arabian",
+    "color": "#a0704a",
+    "seal": "arabia",
+    "joins": {
+      "viewpoint": "islam",
+      "year": 632
+    },
+    "homes": [
+      {
+        "from": -500,
+        "place": "Marib",
+        "lat": 15.42,
+        "lon": 45.33
+      },
+      {
+        "from": -100,
+        "place": "Petra",
+        "lat": 30.33,
+        "lon": 35.44
+      },
+      {
+        "from": 300,
+        "place": "Mecca",
+        "lat": 21.42,
+        "lon": 39.83
+      }
+    ],
+    "moments": [
+      {
+        "year": -500,
+        "label": "Saba grows rich on the incense road",
+        "source": "hoyland"
+      },
+      {
+        "year": -312,
+        "label": "The Nabataeans of Petra control the caravans",
+        "source": "hoyland"
+      },
+      {
+        "year": -24,
+        "label": "Aelius Gallus's Roman army is turned back",
+        "source": "strabo"
+      },
+      {
+        "year": 106,
+        "label": "Rome annexes the Nabataean kingdom",
+        "source": "hoyland"
+      },
+      {
+        "year": 275,
+        "label": "Himyar unites Yemen",
+        "source": "hoyland"
+      },
+      {
+        "year": 525,
+        "label": "Aksum conquers Himyar",
+        "source": "hoyland"
+      },
+      {
+        "year": 570,
+        "label": "Persia takes Yemen",
+        "source": "hoyland"
+      },
+      {
+        "year": 622,
+        "label": "The hijra: Muhammad goes to Medina",
+        "source": "al-tabari"
+      },
+      {
+        "year": 632,
+        "label": "Arabia is united in the new faith",
+        "source": "al-tabari"
       }
     ]
   },

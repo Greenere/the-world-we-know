@@ -12,8 +12,7 @@
  "islam": {
   "name": "伊斯兰世界",
   "longName": "伊斯兰世界",
-  "adjective": "伊斯兰的",
-  "startNote": "622年之前，这个视角显示的是伊斯兰教兴起之前的阿拉伯商贸世界。"
+  "adjective": "伊斯兰的"
  },
  "polynesia": {
   "name": "波利尼西亚",
@@ -55,5 +54,20 @@
   "longName": "印加（安第斯）",
   "adjective": "安第斯的",
   "startNote": "在印加之前，这个视角跟随他们所继承的安第斯诸国：查文、蒂瓦纳库与瓦里。1533年之后，它跟随西班牙统治下的安第斯编年史家。"
+ },
+ "persia": {
+  "name": "波斯",
+  "longName": "波斯与美索不达米亚",
+  "adjective": "波斯的"
+ },
+ "egypt": {
+  "name": "埃及",
+  "longName": "埃及",
+  "adjective": "埃及的"
+ },
+ "arabia": {
+  "name": "阿拉伯",
+  "longName": "伊斯兰之前的阿拉伯",
+  "adjective": "阿拉伯的"
  }
 }
