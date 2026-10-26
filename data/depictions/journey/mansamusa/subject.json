@@ -1,0 +1,72 @@
+{
+  "traveller": "Mansa Musa, king of Mali, a man in his thirties: dark-skinned, a short black beard, calm and dignified; in a flowing white cotton robe over a long tunic richly embroidered in gold thread, a white turban wound with a fine veil, gold armlets, riding or walking with a gold-topped staff; attendants in white and indigo cotton around him.",
+  "scenes": [
+    {
+      "id": "departure",
+      "stop": 0,
+      "place": "Niani",
+      "title": "The caravan leaves Mali",
+      "caption": "Arab writers who met members of the pilgrimage spoke of thousands of followers, among them hundreds of servants each carrying a staff of gold, and camels laden with gold dust. The numbers grew with the telling, but the caravan was among the largest ever to cross the desert.",
+      "sources": [
+        "al-umari",
+        "levtzion-hopkins"
+      ],
+      "confidence": "medium",
+      "prompt": "The royal town of Mali on the upper Niger, 1324, early morning. A great caravan assembles before a walled compound of rounded mud-brick houses with thatched conical roofs and a large silk-cotton tree: lines of camels being loaded with leather bags and bales, servants in white cotton holding tall staffs topped with gold, drummers and a griot with a kora. Mansa Musa sits on a horse with a red-and-gold saddlecloth under a large parasol, giving an order. A small separate study on the page shows a kora (a West African harp-lute)."
+    },
+    {
+      "id": "desert",
+      "stop": 2,
+      "place": "Tuat",
+      "title": "Across the Sahara",
+      "caption": "The pilgrimage took the caravan road through the oases of Tuat, months of travel across the desert, with water carried in skins between wells. Mali's wealth crossed the same road the other way every year: gold north, salt and goods south.",
+      "sources": [
+        "levtzion-hopkins",
+        "al-umari"
+      ],
+      "confidence": "medium",
+      "ref": "departure",
+      "prompt": "The central Sahara near the oases of Tuat, 1324. A long line of camels crosses wind-rippled sand dunes towards a few date palms and a mud-walled ksar on the horizon; Tuareg guides in indigo veils lead the front; riders in white robes; water skins hang from the saddles. In the foreground a guide kneels at a well to draw water with a leather bucket while Mansa Musa watches from his camel. A small separate study on the page shows a goatskin water bag and a leather bucket."
+    },
+    {
+      "id": "audience",
+      "stop": 3,
+      "place": "Cairo",
+      "title": "The audience at the Citadel",
+      "caption": "Received by the Mamluk sultan al-Nasir Muhammad at the Cairo Citadel, Mansa Musa at first refused to kiss the ground before him, his host Ibn Amir Hajib told al-Umari; at last he bowed, saying, 'I prostrate myself to God who created me.'",
+      "sources": [
+        "al-umari"
+      ],
+      "confidence": "high",
+      "ref": "departure",
+      "prompt": "A hall in the Citadel of Cairo, 1324. Under a carved wooden ceiling with hanging glass lamps, the Mamluk sultan sits on a raised dais in a yellow robe and a white turban, surrounded by Mamluk officers with swords and tall caps. Mansa Musa stands before him, upright and dignified, with his interpreter at his side, his own attendants in white behind him holding gold staffs; a court official gestures to the floor. A small separate study on the page shows a Mamluk enamelled glass mosque lamp."
+    },
+    {
+      "id": "gold",
+      "stop": 5,
+      "place": "Cairo",
+      "title": "Gold in the markets of Cairo",
+      "caption": "Mansa Musa and his people spent and gave away so much gold in Cairo that its value fell there for years, al-Umari reports, twelve years later. By the end of the journey he had run short and borrowed from Cairo's merchants at high interest.",
+      "sources": [
+        "al-umari"
+      ],
+      "confidence": "high",
+      "ref": "departure",
+      "prompt": "A busy market street in Cairo, 1325, under tall houses with wooden mashrabiya screens and a minaret behind. Members of Mali's caravan in white robes buy cloth, jewellery and books from Egyptian merchants, paying from leather bags of gold dust weighed on small brass balances; a moneychanger counts gold dinars; Egyptian onlookers point and stare. A small separate study on the page shows a pile of gold dust on a brass balance pan and a few dinars."
+    },
+    {
+      "id": "timbuktu",
+      "stop": 7,
+      "place": "Timbuktu",
+      "title": "The great mosque at Timbuktu",
+      "caption": "On his return Mansa Musa had a great mosque built at Timbuktu, the Djinguereber, traditionally designed by the Andalusian poet and architect Abu Ishaq al-Sahili, who came back with him from Mecca. Rebuilt many times, it still stands.",
+      "sources": [
+        "tarikh-al-sudan",
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "ref": "departure",
+      "prompt": "Timbuktu at the edge of the desert, 1326. Builders lay sun-dried mud bricks and smooth plaster over the rising walls of a large mosque with a tapering earthen minaret bristling with protruding wooden beams (toron), scaffolding of palm wood around it; women carry water in jars; a scholar in an Andalusian robe and turban shows Mansa Musa a plan drawn on a board (only lines, no writing). Low flat-roofed mud houses and sand around. A small separate study on the page shows a mud brick and a wooden toron beam."
+    }
+  ]
+}
