@@ -181,6 +181,15 @@ export interface Traveller {
   ghost: boolean;
 }
 
+/** A whole journey route, drawn when the journey list shows its matches on the map. */
+export interface RouteView {
+  id: string;
+  name: string;
+  years: string;
+  color: [number, number, number];
+  paths: LngLat[][];
+}
+
 export interface OverlayContext {
   data: AppData;
   grid: Grid;
@@ -431,8 +440,9 @@ export class OverlayModel {
     vpColor: string;
     now: number;
     others: Traveller[];
+    routes: RouteView[];
   }): Layer[] {
-    const {state, fogUniforms, geo, vpColor, now, others} = args;
+    const {state, fogUniforms, geo, vpColor, now, others, routes} = args;
     const {grid, field} = this.ctx;
     const globe = state.globe;
     const P = (p: LngLat): LngLat => [p[0], clampLat(p[1], globe)];
@@ -552,9 +562,39 @@ export class OverlayModel {
     );
 
     layers.push(...this.inventionLayers(state, P));
+    layers.push(...this.routeLayers(routes, state, P));
     layers.push(...this.travellerLayers(others, state, PJ));
     if (geo) layers.push(...journeyLayers(geo, state, vpColor, now, PJ, globe ? paths => this.splitAtHorizon(paths) : paths => paths));
     return layers;
+  }
+
+  /** Every route the journey list matches, drawn whole and thin; the one under the pointer stands out. */
+  private routeLayers(routes: RouteView[], state: State, P: (p: LngLat) => LngLat): Layer[] {
+    if (!routes.length) return [];
+    const copies = (path: LngLat[]) => (state.globe ? [path] : [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
+    const split = state.globe ? (paths: LngLat[][]) => this.splitAtHorizon(paths) : (paths: LngLat[][]) => paths;
+    const data = routes.flatMap(r =>
+      split(r.paths.flatMap(p => copies(p.map(P))))
+        .map(path => ({path: cleanPath(path), r}))
+        .filter(d => d.path.length > 1),
+    );
+    return [
+      new PathLayer<{path: LngLat[]; r: RouteView}>({
+        id: 'routes',
+        parameters: SURFACE_PARAMETERS,
+        data,
+        getPath: d => d.path,
+        getColor: d => [...d.r.color, 175],
+        getWidth: 1.8,
+        widthUnits: 'pixels',
+        widthMinPixels: 1.4,
+        jointRounded: true,
+        capRounded: true,
+        pickable: true,
+        autoHighlight: true,
+        highlightColor: [...INK, 235],
+      }),
+    ];
   }
 
   /** Other travellers: a thin trail, a dot, and (when near enough to matter) the journey's name. */

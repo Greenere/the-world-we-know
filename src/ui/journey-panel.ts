@@ -5,10 +5,10 @@ import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale, START} from '../time';
 import type {Journey, VpId} from '../types';
-import {MAIN_VPS} from '../types';
 import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
+import {GROUPS} from './topbar';
 
 /** Journey kinds grouped into the list's filters. */
 const FILTERS: {id: string; label: string; kinds: string[]}[] = [
@@ -36,6 +36,8 @@ export class JourneyPanel {
   private vpFilter: VpId | null = null;
   private query = '';
   private view: 'list' | 'timeline' = 'list';
+  /** Draw every journey the filters match on the map. */
+  private onMap = false;
   private openEras = new Set<string>();
   private resultsEl: HTMLElement | null = null;
   private haystack = new Map<string, string>();
@@ -93,6 +95,7 @@ export class JourneyPanel {
           onclick: () => {
             if (this.tab === id) return;
             this.tab = id;
+            if (id === 'inventions') this.publishRoutes(null);
             this.key = '';
             this.update(this.store.state, null);
           },
@@ -158,51 +161,110 @@ export class JourneyPanel {
     );
   }
 
+  /**
+   * A filter as a compact menu button ("Viewpoint · All ▾"), so twenty viewpoints don't fill the panel.
+   * Groups give the menu headings (the picker's regions); `get` and `set` read and change the filter.
+   */
+  private dropdown(
+    label: string,
+    groups: {title: string | null; items: {id: string | null; label: string; n: number; color?: string}[]}[],
+    get: () => string | null,
+    set: (id: string | null) => void,
+  ): HTMLElement {
+    const flat = groups.flatMap(g => g.items);
+    const value = h('span.jp-drop-value');
+    const dot = h('span.jp-filter-dot');
+    const show = () => {
+      const cur = flat.find(x => x.id === get()) ?? flat[0];
+      value.textContent = cur.label;
+      dot.hidden = !cur.color;
+      dot.style.setProperty('--chip', cur.color ?? '');
+      btn.classList.toggle('filtered', get() !== null);
+    };
+    const menu: HTMLElement = h(
+      'div.jp-menu',
+      {role: 'listbox', 'aria-label': label},
+      groups.map(g => [
+        g.title ? h('div.jp-menu-h', g.title) : null,
+        g.items.map(x =>
+          h(
+            'button.jp-menu-item',
+            {
+              type: 'button',
+              role: 'option',
+              style: x.color ? `--chip:${x.color}` : '',
+              onclick: () => {
+                set(x.id);
+                show();
+                close();
+                this.renderResults();
+              },
+            },
+            x.color ? h('span.jp-filter-dot') : h('span.jp-menu-blank'),
+            h('span.jp-menu-label', x.label),
+            h('span.jp-filter-n', String(x.n)),
+          ),
+        ),
+      ]),
+    );
+    menu.hidden = true;
+    const btn: HTMLButtonElement = h(
+      'button.jp-drop-btn',
+      {type: 'button', 'aria-haspopup': 'listbox', 'aria-expanded': 'false', onclick: (e: Event) => (e.stopPropagation(), menu.hidden ? open() : close())},
+      h('span.jp-drop-label', label),
+      dot,
+      value,
+      h('span.jp-drop-caret', {html: '<svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'}),
+    ) as HTMLButtonElement;
+    const outside = (e: Event) => {
+      if (!wrap.contains(e.target as Node)) close();
+    };
+    const esc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        close();
+      }
+    };
+    const open = () => {
+      for (const it of menu.querySelectorAll<HTMLElement>('.jp-menu-item')) it.setAttribute('aria-selected', 'false');
+      const i = flat.findIndex(x => x.id === get());
+      menu.querySelectorAll<HTMLElement>('.jp-menu-item')[Math.max(0, i)]?.setAttribute('aria-selected', 'true');
+      menu.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      document.addEventListener('click', outside);
+      document.addEventListener('keydown', esc, true);
+    };
+    const close = () => {
+      menu.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      document.removeEventListener('click', outside);
+      document.removeEventListener('keydown', esc, true);
+    };
+    const wrap = h('div.jp-drop', btn, menu);
+    show();
+    return wrap;
+  }
+
   private journeyList(): Node[] {
     this.vpFilter = null; // always open on every viewpoint's journeys
     const all = this.data.journeys;
-    const chips = (cls: string, label: string, items: {id: string | null; label: string; n: number; color?: string}[], current: string | null, set: (id: string | null) => void) =>
-      h(
-        `div.jp-filters.${cls}`,
-        {role: 'group', 'aria-label': label},
-        items
-          .filter(x => x.n)
-          .map(x =>
-            h(
-              'button.jp-filter',
-              {
-                type: 'button',
-                'aria-pressed': String(x.id === current),
-                class: x.id === current ? 'active' : '',
-                style: x.color ? `--chip:${x.color}` : '',
-                onclick: (e: Event) => {
-                  set(x.id);
-                  const group = (e.currentTarget as HTMLElement).parentElement!;
-                  for (const b of group.children) {
-                    b.classList.toggle('active', b === e.currentTarget);
-                    b.setAttribute('aria-pressed', String(b === e.currentTarget));
-                  }
-                  this.renderResults();
-                },
-              },
-              x.color ? h('span.jp-filter-dot') : null,
-              x.label,
-              h('span.jp-filter-n', String(x.n)),
-            ),
-          ),
-      );
-    const vpChips = chips(
-      'jp-vps',
+    const vpItems = (ids: VpId[]) =>
+      ids
+        .map(v => ({id: v as string | null, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => this.inViewpoint(j, v)).length, color: this.data.vp[v].color}))
+        .filter(x => x.n);
+    const vpDrop = this.dropdown(
       t('Viewpoint'),
-      [{id: null, label: t('All'), n: all.length}, ...MAIN_VPS.map(v => ({id: v, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => this.inViewpoint(j, v)).length, color: this.data.vp[v].color}))],
-      this.vpFilter,
+      [
+        {title: null, items: [{id: null, label: t('All'), n: all.length}]},
+        ...GROUPS.map(([title, ids]) => ({title: t(title), items: vpItems(ids)})).filter(g => g.items.length),
+      ],
+      () => this.vpFilter,
       id => (this.vpFilter = id as VpId | null),
     );
-    const kindChips = chips(
-      'jp-kinds',
-      t('Kind of journey'),
-      FILTERS.map(x => ({id: x.id, label: t(x.label), n: x.id === 'all' ? all.length : all.filter(j => x.kinds.includes(j.kind)).length})),
-      this.filter,
+    const kindDrop = this.dropdown(
+      t('Kind'),
+      [{title: null, items: FILTERS.map(x => ({id: x.id === 'all' ? null : x.id, label: t(x.label), n: x.id === 'all' ? all.length : all.filter(j => x.kinds.includes(j.kind)).length})).filter(x => x.n)}],
+      () => (this.filter === 'all' ? null : this.filter),
       id => (this.filter = id ?? 'all'),
     );
     const search = h('input.jp-search', {
@@ -225,6 +287,8 @@ export class JourneyPanel {
           type: 'button',
           class: this.view === v ? 'active' : '',
           'aria-pressed': String(this.view === v),
+          title: t(label),
+          'aria-label': t(label),
           onclick: (e: Event) => {
             this.view = v;
             for (const b of (e.currentTarget as HTMLElement).parentElement!.children) b.classList.toggle('active', b === e.currentTarget);
@@ -232,16 +296,44 @@ export class JourneyPanel {
           },
         },
         h('span', {html: icon}),
-        h('span.jp-view-label', t(label)),
       );
+    const mapBtn = h(
+      'button.jp-view-btn.jp-map-btn',
+      {
+        type: 'button',
+        class: this.onMap ? 'active' : '',
+        'aria-pressed': String(this.onMap),
+        title: t('Show every journey that matches on the map'),
+        'aria-label': t('Show every journey that matches on the map'),
+        onclick: (e: Event) => {
+          this.onMap = !this.onMap;
+          const b = e.currentTarget as HTMLElement;
+          b.classList.toggle('active', this.onMap);
+          b.setAttribute('aria-pressed', String(this.onMap));
+          this.renderResults();
+        },
+      },
+      h('span', {html: icons.route}),
+    );
     this.resultsEl = h('div.jp-results');
     this.renderResults();
     return [
-      h('div.jp-tools', h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search), h('div.jp-view.jp-list-view', {role: 'group'}, viewBtn('list', 'List', icons.list), viewBtn('timeline', 'Timeline', icons.timeline))),
-      vpChips,
-      kindChips,
+      h(
+        'div.jp-tools',
+        h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search),
+        h('div.jp-view.jp-list-view', {role: 'group', 'aria-label': t('View')}, viewBtn('list', 'List', icons.list), viewBtn('timeline', 'Timeline', icons.timeline)),
+      ),
+      h('div.jp-filter-row', vpDrop, kindDrop, h('div.jp-view.jp-map-toggle', mapBtn)),
       this.resultsEl,
     ];
+  }
+
+  /** Tell the map which routes to draw: the filters' matches while "On map" is on. */
+  private publishRoutes(ids: string[] | null) {
+    const cur = this.store.state.routes;
+    if (ids === cur || (ids && cur && ids.join() === cur.join())) return;
+    // Results can be re-rendered while the store is telling everyone about a change; set it afterwards.
+    queueMicrotask(() => this.store.set({routes: ids}));
   }
 
   private renderResults() {
@@ -250,6 +342,7 @@ export class JourneyPanel {
     const entries = this.entries()
       .map(e => ({e, hits: this.matching(e)}))
       .filter(x => x.hits.length);
+    this.publishRoutes(this.onMap ? entries.flatMap(x => x.hits.map(j => j.id)) : null);
     if (!entries.length) {
       el.replaceChildren(h('p.jp-empty', t('No journey matches.')));
       return;

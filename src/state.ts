@@ -13,6 +13,8 @@ export interface State {
   speed: number;
   /** Timeline playback: show every journey under way, slowing to `journeySpeed` while one is. */
   allJourneys: boolean;
+  /** The journey list's "show on map": every route the list's filters match, drawn whole; null when off. */
+  routes: string[] | null;
   journeySpeed: number;
   scrubbing: boolean;
   journey: string | null;
@@ -73,6 +75,7 @@ export const DEFAULT_STATE: State = {
   playing: false,
   speed: 1,
   allJourneys: false,
+  routes: null,
   journeySpeed: 0.05,
   scrubbing: false,
   journey: null,

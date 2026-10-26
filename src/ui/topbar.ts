@@ -12,7 +12,7 @@ import {icons, sealSvg} from './icons';
 const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
 
 /** The picker's groups: the knowledge communities that span many lands, then each viewpoint by where its home was. */
-const GROUPS: [string, VpId[]][] = [
+export const GROUPS: [string, VpId[]][] = [
   ['Knowledge communities', ['europe', 'islam', 'humanity']],
   ['Europe', ['greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia']],
   ['Asia', ['arabia', 'persia', 'india', 'china', 'japan']],
@@ -20,6 +20,9 @@ const GROUPS: [string, VpId[]][] = [
   ['The Americas', ['mexica', 'inca']],
   ['Oceania', ['polynesia']],
 ];
+
+/** The picker's columns, by group index, chosen so the three come out about the same height. */
+const PICKER_COLUMNS = [[0, 4, 5], [1], [2, 3]];
 
 /** The second line of a picker entry: who is in a knowledge community, or which one a viewpoint joins. */
 function pickerLine(data: AppData, id: VpId): string {
@@ -30,16 +33,32 @@ function pickerLine(data: AppData, id: VpId): string {
   // The long name only when it says more than the name (not "India / India").
   const long = vp.longName !== vp.name ? tx.viewpoint(id, 'longName', vp.longName) : '';
   // Every community it belonged to, in order: Egypt is part of Europe from 331 BCE to 641, then of the Islamic world.
-  const spans = ALL_VPS.flatMap(c => (data.vp[c].community?.members ?? []).filter(m => m.viewpoint === id).map(m => ({c, ...m})))
+  const spans = memberships(data, id);
+  if (!spans.length) return long;
+  const joined = spans.join(t('; '));
+  return long ? `${long} · ${joined}` : joined.charAt(0).toUpperCase() + joined.slice(1);
+}
+
+/** Every community a viewpoint belonged to, in order: Egypt is part of Europe from 331 BCE to 641, then of the Islamic world. */
+function memberships(data: AppData, id: VpId): string[] {
+  return ALL_VPS.flatMap(c => (data.vp[c].community?.members ?? []).filter(m => m.viewpoint === id).map(m => ({c, ...m})))
     .sort((a, b) => a.from - b.from)
     .map(({c, from, until}) => {
       const community = tx.viewpoint(c, 'longName', data.vp[c].longName);
       if (until !== undefined) return t('part of {community} {from}–{until}', {community, from: formatYear(from), until: formatYear(until)});
       return from <= START ? t('part of {community} from the start', {community}) : t('joins {community} in {year}', {community, year: formatYear(from)});
     });
-  if (!spans.length) return long;
-  const joined = spans.join(t('; '));
-  return long ? `${long} · ${joined}` : joined.charAt(0).toUpperCase() + joined.slice(1);
+}
+
+/** The picker's one-line version (the full line is its tooltip): a long community by its first members ("Greece, Egypt,
+ * Rome and 7 more"), a member by the community it belongs to last ("Joins the Islamic world in 641 CE"). */
+function shortLine(data: AppData, id: VpId): string {
+  const ms = data.vp[id].community?.members;
+  const name = (v: VpId) => tx.viewpoint(v, 'name', data.vp[v].name);
+  if (ms && ms.length > 4) return t('{first} and {n} more', {first: ms.slice(0, 3).map(m => name(m.viewpoint)).join(t(', ')), n: ms.length - 3});
+  if (ms) return ms.map(m => name(m.viewpoint)).join(t(', '));
+  const last = memberships(data, id).pop();
+  return last ? last.charAt(0).toUpperCase() + last.slice(1) : pickerLine(data, id);
 }
 
 export class TopBar {
@@ -78,7 +97,7 @@ export class TopBar {
     this.picker = h(
       'div.vp-picker.panel',
       {role: 'dialog', 'aria-label': t('All viewpoints')},
-      GROUPS.map(([title, ids]) =>
+      PICKER_COLUMNS.map(col => h('div.vp-picker-col', col.map(gi => GROUPS[gi]).map(([title, ids]) =>
         h(
           'section.vp-picker-group',
           h('h3.card-h', t(title)),
@@ -86,7 +105,7 @@ export class TopBar {
             const vp = data.vp[id];
             const b = h(
               'button.vp-picker-item',
-              {type: 'button', style: `--chip:${vp.color}`, onclick: () => {
+              {type: 'button', style: `--chip:${vp.color}`, title: pickerLine(data, id), onclick: () => {
                 this.pick(id);
                 this.closePicker();
               }},
@@ -94,14 +113,14 @@ export class TopBar {
               h(
                 'span.vp-picker-text',
                 h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)),
-                h('span.vp-picker-long', pickerLine(data, id)),
+                h('span.vp-picker-long', shortLine(data, id)),
               ),
             );
             this.pickerItems.set(id, b);
             return b;
           }),
         ),
-      ),
+      ))),
     );
     this.picker.hidden = true;
     this.moreBtn = h(

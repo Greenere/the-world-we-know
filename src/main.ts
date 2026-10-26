@@ -21,7 +21,7 @@ import type {FogLayerUniforms} from './fog/layer';
 import type {JourneyGeo} from './journey-geo';
 import {atYear, buildJourneyGeo, km, legDuration, placeAt, progressForYear, span, stepCount, travelled, yearAt} from './journey-geo';
 import {createMap} from './map/basemap';
-import {type CityView, cityStatus, clampLat, type InventionView, OverlayModel, type Traveller} from './map/overlay';
+import {type CityView, cityStatus, clampLat, type InventionView, OverlayModel, type RouteView, type Traveller} from './map/overlay';
 import {Sight} from './sight';
 import {DEFAULT_STATE, readUrl, type State, Store, writeUrl} from './state';
 import {formatRange, formatYear} from './time';
@@ -39,7 +39,7 @@ import {momentsFor, scaleFor, Timeline} from './ui/timeline';
 import {TopBar} from './ui/topbar';
 
 const PAPER_FOG = '#efe7d3';
-const PICKABLE = ['others', 'inventions', 'inventions-globe', 'cities', 'cities-globe', 'journey-stops'];
+const PICKABLE = ['others', 'routes', 'inventions', 'inventions-globe', 'cities', 'cities-globe', 'journey-stops'];
 const EDGE = '#8a6a43';
 const HIGHLIGHT = '#9b2f20';
 /** Seconds to play the whole timeline at 1×. */
@@ -367,7 +367,7 @@ class App {
       this.needsLayers = false;
       const others = this.travellers(st, geo);
       if (geo) this.ui.journey.setMeanwhile(others);
-      this.overlay.setProps({layers: this.model.layers({state: st, fogUniforms: this.uniforms(st), geo, vpColor: this.data.vp[geo?.journey.viewpoint ?? st.vps[0]].color, now, others})});
+      this.overlay.setProps({layers: this.model.layers({state: st, fogUniforms: this.uniforms(st), geo, vpColor: this.data.vp[geo?.journey.viewpoint ?? st.vps[0]].color, now, others, routes: this.routeViews(st, geo)})});
     }
     if (geo || st.year >= 1957) this.ui.inset.update(st, geo, now);
     if (geo && st.follow) this.followCamera(st, geo, false);
@@ -422,6 +422,24 @@ class App {
   }
 
   private announced = NaN;
+  private routeCache: {key: string; views: RouteView[]} = {key: '', views: []};
+
+  /** The journey list's matches, drawn whole while the list is open and nothing is being followed. */
+  private routeViews(s: State, geo: JourneyGeo | null): RouteView[] {
+    if (!s.routes || geo || s.panel !== 'journeys') return [];
+    const key = `${s.routes.join(',')}|${getLang()}`;
+    if (key !== this.routeCache.key) {
+      const views = s.routes.flatMap(id => {
+        const g = this.geo(id);
+        if (!g) return [];
+        const j = g.journey;
+        const paths = g.legs.filter(l => l.onMap).map(l => l.points);
+        return paths.length ? [{id, name: tx.journey(id, 'name', j.name), years: tx.journey(id, 'years', j.years), color: hexToRgb(this.data.vp[j.viewpoint].color), paths}] : [];
+      });
+      this.routeCache = {key, views};
+    }
+    return this.routeCache.views;
+  }
 
   private journeyUnderWay(year: number) {
     return this.data.journeys.some(j => year >= j.t[0] && year <= j.t[j.t.length - 1] + FADE_YEARS);
@@ -728,6 +746,10 @@ class App {
         this.startJourney((pick.object as Traveller).id, this.store.state.year);
         return;
       }
+      if (pick?.layer?.id === 'routes') {
+        this.startJourney((pick.object as {r: RouteView}).r.id);
+        return;
+      }
       if (pick?.layer?.id.startsWith('inventions')) {
         this.store.set({invention: (pick.object as InventionView).inv.id});
         return;
@@ -786,6 +808,10 @@ class App {
     if (pick?.layer?.id === 'others') {
       const o = pick.object as Traveller & {where: string};
       text = h('div', h('strong', o.name), h('span.tip-sub', ` · ${o.where}`), h('div.tip-level', t(s.journey ? 'Click to follow instead' : 'Click to follow')));
+      canvas.style.cursor = 'pointer';
+    } else if (pick?.layer?.id === 'routes') {
+      const r = (pick.object as {r: RouteView}).r;
+      text = h('div', h('strong', r.name), h('span.tip-sub', ` · ${r.years}`), h('div.tip-level', t('Click to follow')));
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id.startsWith('inventions')) {
       const x = (pick.object as InventionView).inv;
