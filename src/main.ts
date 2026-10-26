@@ -101,15 +101,6 @@ class App {
   private flightUntil = 0;
   private urlTimer = 0;
   private uiNodes: HTMLElement[] = [];
-  private mergeNote: string | null = null;
-
-  /** The viewpoint that speaks for `vp` in a year: a forerunner after it joins, or before the successor existed. */
-  private vpAt(vp: VpId, year: number): VpId {
-    const d = this.data.vp[vp];
-    if (d.joins && year >= d.joins.year) return d.joins.viewpoint;
-    if (d.before && year < d.before.year) return d.before.viewpoint;
-    return vp;
-  }
   private highlightFor: number | null = null;
   private highlightMask: Uint8Array | null = null;
 
@@ -264,18 +255,6 @@ class App {
       }
     }
     if (!n.compare && n.vps.length > 1) n.vps = [n.vps[0]];
-    // Forerunners merge as time passes: Persia after 651 is the Islamic world; the Islamic world before 622 is Arabia.
-    const merged = n.vps.map(v => this.vpAt(v, n.year));
-    if (merged.join() !== n.vps.join()) {
-      const changed = merged.find((v, i) => v !== n.vps[i]);
-      const from = n.vps[merged.indexOf(changed!)];
-      n.vps = [...new Set(merged)];
-      if (n.vps.length < 2) n.compare = false;
-      const j = this.data.vp[from].joins;
-      if (j && j.viewpoint === changed && n.year >= j.year) {
-        this.mergeNote = t('{from} joins {to}', {from: tx.viewpoint(from, 'name', this.data.vp[from].name), to: tx.viewpoint(changed!, 'longName', this.data.vp[changed!].longName)});
-      }
-    }
     const sc = scaleFor(n);
     n.year = Math.max(sc.min, Math.min(sc.max, n.year));
     return n;
@@ -296,10 +275,6 @@ class App {
   private onChange(s: State, p: State) {
     const geo = this.geo(s.journey);
     this.ui.top.update(s);
-    if (this.mergeNote) {
-      this.ui.timeline.showCaption(this.mergeNote, this.data.vp[s.vps[0]].color);
-      this.mergeNote = null;
-    }
     this.ui.timeline.update(s, geo);
     this.ui.cards.update(s);
     this.ui.journey.update(s, geo);

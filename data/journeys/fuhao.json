@@ -1,0 +1,24 @@
+{
+  "id": "fuhao",
+  "name": "Fu Hao's campaigns",
+  "traveler": "Fu Hao, consort of King Wu Ding",
+  "years": "c. 1200 BCE",
+  "kind": "military",
+  "viewpoint": "china",
+  "summary": "Fu Hao, a wife of the Shang king Wu Ding, leads armies of thousands against the Tufang in the north, the Qiang in the west and the Ba in the south, as the oracle bones record. Her tomb at Anyang, found intact in 1976, held 130 bronze weapons.",
+  "source": "keightley",
+  "confidence": "medium",
+  "by": "land",
+  "stops": [
+    {"year": -1200, "place": "Anyang", "lat": 36.1, "lon": 114.35, "note": "The Shang king divines whether Fu Hao should lead the army.", "city": "anyang"},
+    {"year": -1200, "place": "The Tufang", "lat": 38.6, "lon": 112.6, "note": "North into the Shanxi highlands against the Tufang raiders."},
+    {"year": -1199, "place": "Anyang", "lat": 36.1, "lon": 114.35, "note": "Home to the capital.", "city": "anyang"},
+    {"year": -1199, "place": "The Qiang", "lat": 34.4, "lon": 107.4, "note": "West up the Wei valley against the Qiang."},
+    {"year": -1198, "place": "The Ba", "lat": 32.4, "lon": 109.0, "note": "South to the Han river against the Ba."},
+    {"year": -1197, "place": "Anyang", "lat": 36.1, "lon": 114.35, "note": "She dies before the king and is buried with her weapons, jades and sixteen companions.", "city": "anyang"}
+  ],
+  "informs": [
+    {"region": "mongolia", "level": 2, "homeKnows": -1197, "confidence": "medium", "note": "The Tufang lands of the north"},
+    {"region": "sichuan", "level": 2, "homeKnows": -1197, "confidence": "low", "note": "The Ba"}
+  ]
+}

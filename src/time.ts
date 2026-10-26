@@ -3,6 +3,8 @@
 import {isZh} from './i18n';
 
 export const PRESENT = 2026;
+/** Where the main timeline begins: the Bronze Age world of Egypt, Babylon and the Shang. */
+export const START = -2000;
 
 const grouped = (n: number) => n.toLocaleString('en-US');
 
@@ -66,7 +68,7 @@ export interface TimeScale {
   ticks(): Tick[];
 }
 
-/** 500 BCE to today, with extra room per year for the crowded recent centuries. */
+/** 2000 BCE to today: the Bronze and Iron Ages compressed, extra room per year for the crowded recent centuries. */
 function piecewise(knots: [number, number][]): Pick<TimeScale, 'toX' | 'fromX'> {
   const total = knots[knots.length - 1][1];
   return {
@@ -92,25 +94,29 @@ function piecewise(knots: [number, number][]): Pick<TimeScale, 'toX' | 'fromX'> 
 }
 
 const mainMap = piecewise([
-  [-500, 0],
-  [1400, 1900],
-  [1800, 2540],
-  [1900, 2790],
-  [PRESENT, 3420],
+  [START, 0],
+  [-500, 600],
+  [1400, 2500],
+  [1800, 3140],
+  [1900, 3390],
+  [PRESENT, 4020],
 ]);
 
 export const mainScale: TimeScale = {
   kind: 'main',
-  min: -500,
+  min: START,
   max: PRESENT,
   ...mainMap,
   ticks() {
     const t: Tick[] = [];
+    for (let y = START; y < -500; y += 250) t.push({year: y, major: y % 1000 === 0});
     for (let y = -500; y < 1800; y += 100) t.push({year: y, major: y % 500 === 0});
     for (let y = 1800; y < 1900; y += 25) t.push({year: y, major: y === 1800});
     for (let y = 1900; y <= 2020; y += 10) t.push({year: y, major: y % 50 === 0});
     const zh = isZh();
     const labels: Record<number, string> = {
+      [-2000]: zh ? '前2000' : '2000 BCE',
+      [-1000]: zh ? '前1000' : '1000 BCE',
       [-500]: zh ? '前500' : '500 BCE',
       0: zh ? '公元1' : '1 CE',
       500: '500',

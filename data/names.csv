@@ -757,8 +757,33 @@ region,greece,persia,Yauna,,,,hoc
 region,indus,persia,Hindush,,,,hoc
 region,pontic-steppe,persia,Saka,,,,hoc
 region,italy,persia,Hrōm,,224,,daryaee
-region,china-north,persia,Čīnistān,,224,,daryaee
+region,china-north,persia,Čīnistān,,224,1249,daryaee
 region,upper-nile,egypt,Kush,,,,hoc
 region,horn,egypt,Punt,,,,hoc
 region,arabia-felix,arabia,Saba,,,,hoc
 region,ethiopia,arabia,Ḥabashat,,,,hoc
+region,china-north,persia,Khitāy,,1250,,rashid-al-din
+region,europe,persia,Farang,,1250,,rashid-al-din
+region,iberia,maghreb,al-Andalus,الأندلس,711,1492,al-baladhuri
+region,iberia,maghreb,Ispania,,-500,710,lancel
+region,canaries,maghreb,the Fortunate Isles,,-25,1400,pliny
+region,bilad-al-sudan,maghreb,Bilād al-Sūdān,بلاد السودان,700,,levtzion-hopkins
+region,east-africa-coast,arabia,Bilād al-Zanj,بلاد الزنج,700,,ibn-majid
+city,erlitou,*,Erlitou,二里头,,,
+city,zhengzhou-shang,*,Zhengzhou Shang city,郑州商城,,,
+city,haojing,*,Haojing,镐京,,,
+city,sanxingdui,*,Sanxingdui,三星堆,,,
+city,mari,*,Mari,,,,
+city,assur,*,Assur,,,,
+city,dilmun,*,Dilmun,,,,
+city,akhetaten,*,Akhetaten,,,,
+city,pi-ramesses,*,Pi-Ramesses,,,,
+city,lothal,*,Lothal,,,,
+city,dholavira,*,Dholavira,,,,
+city,pylos,*,Pylos,Πύλος,,,
+city,sidon,*,Sidon,,,,
+city,rajagriha,*,Rajagriha,राजगृह,,,
+city,la-venta,*,La Venta,,,,
+city,san-lorenzo,*,San Lorenzo,,,,
+city,poverty-point,*,Poverty Point,,,,
+city,dhar-tichitt,*,Dhar Tichitt,,,,

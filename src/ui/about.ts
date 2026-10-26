@@ -50,7 +50,7 @@ export class About {
         ),
         h(
           'p',
-          t('Twelve cultural viewpoints: Europe, China, Persia, Egypt, Arabia, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. Persia, Egypt and Arabia join the Islamic world in the seventh century, and the map follows it from then on. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
+          t('Thirteen cultural viewpoints: Europe, China, the Islamic world, Arabia, Egypt, Persia, the Maghreb, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. The Islamic world is a knowledge community: Arabia, Egypt, Persia and the Maghreb each share what they know from the year they join it, and each still keeps its own view. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.'),
         ),
         h(
           'p',

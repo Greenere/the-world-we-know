@@ -1,0 +1,41 @@
+{
+  "id": "necho-africa",
+  "name": "Necho's Phoenicians sail round Africa",
+  "traveler": "Phoenician sailors, for Pharaoh Necho II",
+  "years": "c. 600 BCE",
+  "kind": "sailor",
+  "viewpoint": "egypt",
+  "summary": "Pharaoh Necho sends Phoenician ships south from the Red Sea with orders to come home by the Pillars of Heracles. Each autumn they land, sow and wait for the harvest; in the third year they reach Egypt again. Herodotus did not believe their report that the noon sun stood on their right, which is the best evidence they told the truth.",
+  "source": "herodotus",
+  "confidence": "low",
+  "stops": [
+    {"year": -600, "place": "The Red Sea coast", "lat": 29.95, "lon": 32.55, "note": "Necho, who has also begun a canal from the Nile to the Red Sea, sends them south."},
+    {"waypoint": true, "lat": 20.0, "lon": 38.6},
+    {"waypoint": true, "lat": 12.6, "lon": 43.5},
+    {"waypoint": true, "lat": 11.8, "lon": 51.4},
+    {"year": -600, "place": "The coast of the Zanj", "lat": -6.5, "lon": 39.6, "note": "Down the coast of eastern Africa."},
+    {"waypoint": true, "lat": -15.0, "lon": 41.5},
+    {"year": -599, "place": "First autumn", "lat": -24.0, "lon": 35.7, "note": "They land, sow grain and wait for the harvest before sailing on."},
+    {"waypoint": true, "lat": -34.9, "lon": 25.0},
+    {"year": -599, "place": "The southern cape", "lat": -34.4, "lon": 18.5, "note": "Sailing west round the continent, they see the noon sun to the north, on their right hand."},
+    {"waypoint": true, "lat": -28.0, "lon": 14.5},
+    {"waypoint": true, "lat": -16.0, "lon": 11.0},
+    {"waypoint": true, "lat": -6.0, "lon": 11.0},
+    {"waypoint": true, "lat": 3.0, "lon": 4.0},
+    {"year": -598, "place": "Second autumn", "lat": 5.0, "lon": -2.0, "note": "Another landing, another harvest, on the Guinea coast."},
+    {"waypoint": true, "lat": 4.5, "lon": -9.5},
+    {"waypoint": true, "lat": 12.0, "lon": -18.0},
+    {"waypoint": true, "lat": 21.0, "lon": -17.5},
+    {"waypoint": true, "lat": 30.0, "lon": -10.5},
+    {"year": -597, "place": "The Pillars of Heracles", "lat": 35.95, "lon": -5.6, "note": "Into the Mediterranean in the third year."},
+    {"year": -597, "place": "Sais", "lat": 31.4, "lon": 30.4, "note": "Home to Egypt. Their story reaches Herodotus a century and a half later."}
+  ],
+  "informs": [
+    {"region": "east-africa-coast", "level": 1, "homeKnows": -597, "confidence": "low"},
+    {"region": "southern-africa", "level": 1, "homeKnows": -597, "confidence": "low"},
+    {"region": "cape", "level": 1, "homeKnows": -597, "confidence": "low", "note": "The sun on their right"},
+    {"region": "angola", "level": 1, "homeKnows": -597, "confidence": "low"},
+    {"region": "guinea-coast", "level": 1, "homeKnows": -597, "confidence": "low"},
+    {"region": "senegambia", "level": 1, "homeKnows": -597, "confidence": "low"}
+  ]
+}

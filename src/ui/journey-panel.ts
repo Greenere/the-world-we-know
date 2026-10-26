@@ -3,7 +3,7 @@ import {loadPictures, shortCitation} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
 import type {State, Store} from '../state';
-import {formatRange, formatYear, mainScale} from '../time';
+import {formatRange, formatYear, mainScale, START} from '../time';
 import type {Journey, VpId} from '../types';
 import {MAIN_VPS} from '../types';
 import {t, tx} from '../i18n';
@@ -142,12 +142,19 @@ export class JourneyPanel {
     return s;
   }
 
+  /** A journey belongs to its viewpoint, and to a knowledge community its viewpoint is a member of once it has joined. */
+  private inViewpoint(j: Journey, vp: VpId): boolean {
+    if (j.viewpoint === vp) return true;
+    const m = this.data.vp[vp].community?.members.find(x => x.viewpoint === j.viewpoint);
+    return !!m && j.t[j.t.length - 1] >= m.from;
+  }
+
   /** Which of an entry's journeys pass the filters and the search (empty: the entry is hidden). */
   private matching(e: Entry): Journey[] {
     const f = FILTERS.find(x => x.id === this.filter) ?? FILTERS[0];
     const q = fold(this.query.trim());
     return e.members.filter(
-      j => (f.id === 'all' || f.kinds.includes(j.kind)) && (!this.vpFilter || j.viewpoint === this.vpFilter) && (!q || this.searchText(j).includes(q)),
+      j => (f.id === 'all' || f.kinds.includes(j.kind)) && (!this.vpFilter || this.inViewpoint(j, this.vpFilter)) && (!q || this.searchText(j).includes(q)),
     );
   }
 
@@ -187,7 +194,7 @@ export class JourneyPanel {
     const vpChips = chips(
       'jp-vps',
       t('Viewpoint'),
-      [{id: null, label: t('All'), n: all.length}, ...MAIN_VPS.map(v => ({id: v, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => j.viewpoint === v).length, color: this.data.vp[v].color}))],
+      [{id: null, label: t('All'), n: all.length}, ...MAIN_VPS.map(v => ({id: v, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(j => this.inViewpoint(j, v)).length, color: this.data.vp[v].color}))],
       this.vpFilter,
       id => (this.vpFilter = id as VpId | null),
     );
@@ -257,7 +264,7 @@ export class JourneyPanel {
     const openAll = searching || total <= 12;
     const out: Node[] = [];
     const year = this.store.state.year;
-    if (!searching && year >= -500) {
+    if (!searching && year >= START) {
       // A century either side in antiquity, a generation or two in the crowded centuries since; the nearest eight.
       const span = year > 1500 ? 40 : 100;
       const near = entries
@@ -373,12 +380,12 @@ export class JourneyPanel {
     svg.setAttribute('height', String(H));
     svg.setAttribute('class', 'jp-gantt');
     const parts: string[] = [];
-    for (const [y, label] of [[-500, formatYear(-500)], [0, formatYear(1)], [500, '500'], [1000, '1000'], [1500, '1500'], [1800, '1800'], [1900, '1900']] as [number, string][]) {
+    for (const [y, label] of [[START, formatYear(START)], [-1000, formatYear(-1000)], [0, formatYear(1)], [500, '500'], [1000, '1000'], [1500, '1500'], [1800, '1800'], [1900, '1900']] as [number, string][]) {
       const x = X(y);
       parts.push(`<line x1="${x}" x2="${x}" y1="14" y2="${H}" class="g-grid"/><text x="${x}" y="10" class="g-axis" text-anchor="middle">${label}</text>`);
     }
     const now = this.store.state.year;
-    if (now >= -500) parts.push(`<line x1="${X(now)}" x2="${X(now)}" y1="12" y2="${H}" class="g-now"/>`);
+    if (now >= START) parts.push(`<line x1="${X(now)}" x2="${X(now)}" y1="12" y2="${H}" class="g-now"/>`);
     svg.innerHTML = parts.join('');
     const NS = 'http://www.w3.org/2000/svg';
     const mk = (tag: string, attrs: Record<string, string | number>) => {

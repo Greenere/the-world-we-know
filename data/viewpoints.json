@@ -8,6 +8,24 @@
     "seal": "europe",
     "homes": [
       {
+        "from": -2000,
+        "place": "Knossos",
+        "lat": 35.3,
+        "lon": 25.16
+      },
+      {
+        "from": -1450,
+        "place": "Mycenae",
+        "lat": 37.73,
+        "lon": 22.76
+      },
+      {
+        "from": -1100,
+        "place": "Athens",
+        "lat": 37.97,
+        "lon": 23.73
+      },
+      {
         "from": -500,
         "place": "Athens",
         "lat": 37.97,
@@ -45,6 +63,31 @@
       }
     ],
     "moments": [
+      {
+        "year": -1700,
+        "label": "The Minoan palaces at their height",
+        "source": "cline-1177"
+      },
+      {
+        "year": -1400,
+        "label": "Mycenaean Greeks write in Linear B",
+        "source": "cline-1177"
+      },
+      {
+        "year": -1177,
+        "label": "The Bronze Age collapse",
+        "source": "cline-1177"
+      },
+      {
+        "year": -750,
+        "label": "Homer's world",
+        "source": "homer"
+      },
+      {
+        "year": -650,
+        "label": "Greek colonies from Sicily to the Black Sea",
+        "source": "boardman"
+      },
       {
         "year": -430,
         "label": "Herodotus writes the Histories",
@@ -116,6 +159,36 @@
     "seal": "china",
     "homes": [
       {
+        "from": -2000,
+        "place": "Erlitou",
+        "lat": 34.7,
+        "lon": 112.69
+      },
+      {
+        "from": -1600,
+        "place": "Zhengzhou",
+        "lat": 34.76,
+        "lon": 113.68
+      },
+      {
+        "from": -1300,
+        "place": "Anyang",
+        "lat": 36.1,
+        "lon": 114.35
+      },
+      {
+        "from": -1046,
+        "place": "Haojing",
+        "lat": 34.23,
+        "lon": 108.77
+      },
+      {
+        "from": -771,
+        "place": "Luoyang",
+        "lat": 34.62,
+        "lon": 112.45
+      },
+      {
         "from": -500,
         "place": "Luoyang",
         "lat": 34.62,
@@ -171,6 +244,26 @@
       }
     ],
     "moments": [
+      {
+        "year": -1900,
+        "label": "Erlitou, the first palace city",
+        "source": "liu-chen"
+      },
+      {
+        "year": -1250,
+        "label": "Shang kings divine on oracle bones",
+        "source": "keightley"
+      },
+      {
+        "year": -1046,
+        "label": "The Zhou conquer the Shang",
+        "source": "shaughnessy"
+      },
+      {
+        "year": -771,
+        "label": "The Zhou court flees east to Luoyang",
+        "source": "shaughnessy"
+      },
       {
         "year": -126,
         "label": "Zhang Qian returns from the west",
@@ -240,14 +333,28 @@
     "adjective": "Islamic",
     "color": "#2b7a57",
     "seal": "islam",
+    "community": {
+      "members": [
+        {
+          "viewpoint": "arabia",
+          "from": 622
+        },
+        {
+          "viewpoint": "egypt",
+          "from": 641
+        },
+        {
+          "viewpoint": "persia",
+          "from": 651
+        },
+        {
+          "viewpoint": "maghreb",
+          "from": 670
+        }
+      ]
+    },
+    "startNote": "The Islamic world is a knowledge community. It begins with the hijra in 622; Arabia, Egypt, Persia and the Maghreb each share what they know as they join, and what one knows, all keep.",
     "homes": [
-      {
-        "from": -500,
-        "place": "Mecca",
-        "lat": 21.42,
-        "lon": 39.83,
-        "note": "pre-Islamic"
-      },
       {
         "from": 622,
         "place": "Medina",
@@ -336,11 +443,7 @@
         "label": "Piri Reis's world map",
         "source": "piri-reis"
       }
-    ],
-    "before": {
-      "viewpoint": "arabia",
-      "year": 622
-    }
+    ]
   },
   {
     "id": "polynesia",
@@ -352,6 +455,18 @@
     "oral": true,
     "startNote": "Polynesian knowledge lived in navigation lore and oral tradition, not on written maps. Its dates come from archaeology and genetics, so its edges are wide.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Bismarck Archipelago",
+        "lat": -4.0,
+        "lon": 151.5
+      },
+      {
+        "from": -1000,
+        "place": "Fiji",
+        "lat": -17.8,
+        "lon": 178.0
+      },
       {
         "from": -500,
         "place": "Tonga and Samoa",
@@ -372,6 +487,16 @@
       }
     ],
     "moments": [
+      {
+        "year": -1500,
+        "label": "Lapita potters appear in the Bismarcks",
+        "source": "kirch"
+      },
+      {
+        "year": -900,
+        "label": "Lapita voyagers settle Tonga and Samoa",
+        "source": "kirch"
+      },
       {
         "year": -850,
         "label": "Lapita settlers already in Tonga and Samoa",
@@ -428,6 +553,30 @@
     "seal": "india",
     "homes": [
       {
+        "from": -2000,
+        "place": "Mohenjo-daro",
+        "lat": 27.33,
+        "lon": 68.14
+      },
+      {
+        "from": -1500,
+        "place": "The Punjab",
+        "lat": 31.0,
+        "lon": 74.0
+      },
+      {
+        "from": -1100,
+        "place": "Kurukshetra",
+        "lat": 29.97,
+        "lon": 76.85
+      },
+      {
+        "from": -600,
+        "place": "Rajagriha",
+        "lat": 25.03,
+        "lon": 85.42
+      },
+      {
         "from": -500,
         "place": "Pataliputra",
         "lat": 25.61,
@@ -459,6 +608,26 @@
       }
     ],
     "moments": [
+      {
+        "year": -2000,
+        "label": "The Indus cities trade with Sumer",
+        "source": "possehl"
+      },
+      {
+        "year": -1800,
+        "label": "The Indus cities decline",
+        "source": "possehl"
+      },
+      {
+        "year": -1300,
+        "label": "The Rigveda's land of seven rivers",
+        "source": "rigveda"
+      },
+      {
+        "year": -600,
+        "label": "The sixteen great kingdoms",
+        "source": "allchin"
+      },
       {
         "year": -260,
         "label": "Ashoka's missions go to Sri Lanka and the Greek kings",
@@ -513,8 +682,14 @@
     "adjective": "Japanese",
     "color": "#4f5b78",
     "seal": "japan",
-    "startNote": "Before about 300 CE this view follows the Yayoi peoples of Kyushu and the Inland Sea, known mainly from archaeology and Chinese records.",
+    "startNote": "Before about 300 CE this view follows the Yayoi peoples of Kyushu and the Inland Sea, and before them the Jōmon, known only from archaeology and from Chinese histories.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Jōmon Honshu",
+        "lat": 36.0,
+        "lon": 138.5
+      },
       {
         "from": -500,
         "place": "Northern Kyushu",
@@ -559,6 +734,11 @@
       }
     ],
     "moments": [
+      {
+        "year": -2000,
+        "label": "Jōmon villages trade obsidian across the sea",
+        "source": "habu"
+      },
       {
         "year": 57,
         "label": "The king of Na receives a gold seal from the Han",
@@ -609,7 +789,8 @@
         "label": "Inō Tadataka's survey maps every coast of Japan",
         "source": "ino"
       }
-    ]
+    ],
+    "noteUntil": 300
   },
   {
     "id": "sahel",
@@ -618,8 +799,14 @@
     "adjective": "Sahelian",
     "color": "#7a5230",
     "seal": "sahel",
-    "startNote": "Before the rise of Ghana this view follows the towns of the middle Niger, such as Jenné-jeno, known from archaeology.",
+    "startNote": "Before the rise of Ghana this view follows the towns of the middle Niger, such as Jenné-jeno, and before them the stone villages of Dhar Tichitt, known from archaeology.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Dhar Tichitt",
+        "lat": 18.45,
+        "lon": -9.52
+      },
       {
         "from": -500,
         "place": "Jenné-jeno",
@@ -658,6 +845,11 @@
       }
     ],
     "moments": [
+      {
+        "year": -1800,
+        "label": "The stone villages of Dhar Tichitt",
+        "source": "mcintosh"
+      },
       {
         "year": -250,
         "label": "Jenné-jeno trades along the middle Niger",
@@ -708,7 +900,8 @@
         "label": "Al-Saʿdi writes the Tarikh al-Sudan in Timbuktu",
         "source": "tarikh-al-sudan"
       }
-    ]
+    ],
+    "noteUntil": 300
   },
   {
     "id": "mexica",
@@ -717,8 +910,14 @@
     "adjective": "Mexica",
     "color": "#1d8a8f",
     "seal": "mexica",
-    "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule.",
+    "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Tlatilco in the Olmec age, then Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Tlatilco",
+        "lat": 19.49,
+        "lon": -99.23
+      },
       {
         "from": -500,
         "place": "Cuicuilco",
@@ -745,6 +944,11 @@
       }
     ],
     "moments": [
+      {
+        "year": -1200,
+        "label": "Olmec goods reach the Basin of Mexico",
+        "source": "pool-olmec"
+      },
       {
         "year": 378,
         "label": "Teotihuacan's envoys arrive at Tikal",
@@ -790,7 +994,8 @@
         "label": "Chimalpahin records a Japanese embassy in Mexico City",
         "source": "chimalpahin"
       }
-    ]
+    ],
+    "noteUntil": 1325
   },
   {
     "id": "inca",
@@ -799,8 +1004,20 @@
     "adjective": "Andean",
     "color": "#c4652a",
     "seal": "inca",
-    "startNote": "Before the Inca, this view follows the Andean states they inherited from: Chavín, Tiwanaku and Wari. After 1533 it follows Andean chroniclers under Spanish rule.",
+    "startNote": "Before the Inca, this view follows the Andean societies they inherited from: Caral, Chavín, Tiwanaku and Huari. After 1533 it follows Andean chroniclers under Spanish rule.",
     "homes": [
+      {
+        "from": -2000,
+        "place": "Caral",
+        "lat": -10.89,
+        "lon": -77.52
+      },
+      {
+        "from": -900,
+        "place": "Chavín de Huántar",
+        "lat": -9.59,
+        "lon": -77.18
+      },
       {
         "from": -500,
         "place": "Chavín de Huántar",
@@ -827,6 +1044,16 @@
       }
     ],
     "moments": [
+      {
+        "year": -2000,
+        "label": "Caral's pyramids on the desert coast",
+        "source": "burger-chavin"
+      },
+      {
+        "year": -900,
+        "label": "The temple at Chavín de Huántar",
+        "source": "burger-chavin"
+      },
       {
         "year": -500,
         "label": "Chavín's shrine draws pilgrims from coast and jungle",
@@ -872,7 +1099,8 @@
         "label": "Garcilaso de la Vega's Royal Commentaries",
         "source": "garcilaso"
       }
-    ]
+    ],
+    "noteUntil": 1438
   },
   {
     "id": "persia",
@@ -881,11 +1109,43 @@
     "adjective": "Persian",
     "color": "#6e7d2c",
     "seal": "persia",
-    "joins": {
-      "viewpoint": "islam",
-      "year": 651
-    },
     "homes": [
+      {
+        "from": -2000,
+        "place": "Ur",
+        "lat": 30.96,
+        "lon": 46.1
+      },
+      {
+        "from": -1792,
+        "place": "Babylon",
+        "lat": 32.54,
+        "lon": 44.42
+      },
+      {
+        "from": -1365,
+        "place": "Assur",
+        "lat": 35.46,
+        "lon": 43.26
+      },
+      {
+        "from": -705,
+        "place": "Nineveh",
+        "lat": 36.36,
+        "lon": 43.15
+      },
+      {
+        "from": -612,
+        "place": "Babylon",
+        "lat": 32.54,
+        "lon": 44.42
+      },
+      {
+        "from": -550,
+        "place": "Pasargadae",
+        "lat": 30.2,
+        "lon": 53.18
+      },
       {
         "from": -500,
         "place": "Persepolis",
@@ -903,17 +1163,83 @@
         "place": "Ctesiphon",
         "lat": 33.09,
         "lon": 44.58
+      },
+      {
+        "from": 762,
+        "place": "Baghdad",
+        "lat": 33.31,
+        "lon": 44.36
+      },
+      {
+        "from": 900,
+        "place": "Bukhara",
+        "lat": 39.77,
+        "lon": 64.42
+      },
+      {
+        "from": 1265,
+        "place": "Tabriz",
+        "lat": 38.08,
+        "lon": 46.29
+      },
+      {
+        "from": 1405,
+        "place": "Herat",
+        "lat": 34.35,
+        "lon": 62.2
+      },
+      {
+        "from": 1598,
+        "place": "Isfahan",
+        "lat": 32.65,
+        "lon": 51.67
+      },
+      {
+        "from": 1786,
+        "place": "Tehran",
+        "lat": 35.69,
+        "lon": 51.39
       }
     ],
     "moments": [
       {
-        "year": -500,
-        "label": "The royal road runs from Susa to Sardis",
-        "source": "herodotus"
+        "year": -1900,
+        "label": "Assyrian merchants trade at Kanesh",
+        "source": "van-de-mieroop"
+      },
+      {
+        "year": -1792,
+        "label": "Hammurabi rules Babylon",
+        "source": "van-de-mieroop"
+      },
+      {
+        "year": -1350,
+        "label": "Babylon writes to Pharaoh",
+        "source": "amarna"
+      },
+      {
+        "year": -671,
+        "label": "Assyria conquers Egypt",
+        "source": "esarhaddon"
+      },
+      {
+        "year": -600,
+        "label": "The Babylonian Map of the World",
+        "source": "babylonian-world-map"
+      },
+      {
+        "year": -550,
+        "label": "Cyrus founds the Persian empire",
+        "source": "van-de-mieroop"
       },
       {
         "year": -515,
         "label": "Scylax sails down the Indus for Darius",
+        "source": "herodotus"
+      },
+      {
+        "year": -500,
+        "label": "The royal road runs from Susa to Sardis",
         "source": "herodotus"
       },
       {
@@ -953,8 +1279,43 @@
       },
       {
         "year": 651,
-        "label": "Persia becomes part of the Islamic world",
+        "label": "Persia joins the Islamic world",
         "source": "al-tabari"
+      },
+      {
+        "year": 762,
+        "label": "Baghdad is founded on the Tigris",
+        "source": "hoc"
+      },
+      {
+        "year": 982,
+        "label": "The Regions of the World, in Persian",
+        "source": "hudud-al-alam"
+      },
+      {
+        "year": 1030,
+        "label": "Al-Biruni's India",
+        "source": "al-biruni"
+      },
+      {
+        "year": 1310,
+        "label": "Rashid al-Din's history of the world",
+        "source": "rashid-al-din"
+      },
+      {
+        "year": 1598,
+        "label": "Isfahan becomes the Safavid capital",
+        "source": "matthee"
+      },
+      {
+        "year": 1819,
+        "label": "Mirza Saleh's journal of England",
+        "source": "mirza-saleh"
+      },
+      {
+        "year": 1873,
+        "label": "Naser al-Din Shah tours Europe",
+        "source": "nasir-al-din-shah"
       }
     ]
   },
@@ -965,11 +1326,37 @@
     "adjective": "Egyptian",
     "color": "#2f8fb5",
     "seal": "egypt",
-    "joins": {
-      "viewpoint": "islam",
-      "year": 641
-    },
     "homes": [
+      {
+        "from": -2000,
+        "place": "Thebes",
+        "lat": 25.7,
+        "lon": 32.64
+      },
+      {
+        "from": -1346,
+        "place": "Akhetaten",
+        "lat": 27.65,
+        "lon": 30.9
+      },
+      {
+        "from": -1279,
+        "place": "Pi-Ramesses",
+        "lat": 30.8,
+        "lon": 31.83
+      },
+      {
+        "from": -1070,
+        "place": "Tanis",
+        "lat": 30.98,
+        "lon": 31.88
+      },
+      {
+        "from": -664,
+        "place": "Sais",
+        "lat": 30.96,
+        "lon": 30.77
+      },
       {
         "from": -500,
         "place": "Memphis",
@@ -981,9 +1368,56 @@
         "place": "Alexandria",
         "lat": 31.2,
         "lon": 29.92
+      },
+      {
+        "from": 641,
+        "place": "Fustat",
+        "lat": 30.01,
+        "lon": 31.23
+      },
+      {
+        "from": 969,
+        "place": "Cairo",
+        "lat": 30.04,
+        "lon": 31.24
       }
     ],
     "moments": [
+      {
+        "year": -1950,
+        "label": "Ships sail from Mersa Gawasis for Punt",
+        "source": "shaw-egypt"
+      },
+      {
+        "year": -1470,
+        "label": "Hatshepsut's fleet reaches Punt",
+        "source": "hatshepsut-punt"
+      },
+      {
+        "year": -1350,
+        "label": "The Amarna letters",
+        "source": "amarna"
+      },
+      {
+        "year": -1160,
+        "label": "The Turin papyrus map",
+        "source": "turin-map"
+      },
+      {
+        "year": -1075,
+        "label": "Wenamun sails to Byblos",
+        "source": "wenamun"
+      },
+      {
+        "year": -730,
+        "label": "Kushite pharaohs rule Egypt",
+        "source": "shaw-egypt"
+      },
+      {
+        "year": -600,
+        "label": "Necho's Phoenicians sail round Africa",
+        "source": "herodotus"
+      },
       {
         "year": -497,
         "label": "Darius completes the canal from the Nile to the Red Sea",
@@ -1031,23 +1465,72 @@
       },
       {
         "year": 641,
-        "label": "Egypt becomes part of the Islamic world",
+        "label": "Egypt joins the Islamic world",
         "source": "al-baladhuri"
+      },
+      {
+        "year": 969,
+        "label": "The Fatimids found Cairo",
+        "source": "hoc"
+      },
+      {
+        "year": 1140,
+        "label": "Geniza merchants write home from India",
+        "source": "goitein-india"
+      },
+      {
+        "year": 1338,
+        "label": "Al-Umari describes Mali",
+        "source": "al-umari"
+      },
+      {
+        "year": 1412,
+        "label": "Al-Qalqashandi's manual of the known world",
+        "source": "qalqashandi"
+      },
+      {
+        "year": 1798,
+        "label": "Napoleon's army in Egypt",
+        "source": "al-jabarti"
+      },
+      {
+        "year": 1834,
+        "label": "Al-Tahtawi's account of Paris",
+        "source": "tahtawi"
+      },
+      {
+        "year": 1869,
+        "label": "The Suez Canal opens",
+        "source": "hoc"
       }
     ]
   },
   {
     "id": "arabia",
     "name": "Arabia",
-    "longName": "Arabia before Islam",
+    "longName": "Arabia",
     "adjective": "Arabian",
     "color": "#a0704a",
     "seal": "arabia",
-    "joins": {
-      "viewpoint": "islam",
-      "year": 632
-    },
     "homes": [
+      {
+        "from": -2000,
+        "place": "Dilmun",
+        "lat": 26.23,
+        "lon": 50.52
+      },
+      {
+        "from": -1000,
+        "place": "Tayma",
+        "lat": 27.63,
+        "lon": 38.55
+      },
+      {
+        "from": -750,
+        "place": "Marib",
+        "lat": 15.42,
+        "lon": 45.33
+      },
       {
         "from": -500,
         "place": "Marib",
@@ -1065,9 +1548,54 @@
         "place": "Mecca",
         "lat": 21.42,
         "lon": 39.83
+      },
+      {
+        "from": 622,
+        "place": "Medina",
+        "lat": 24.47,
+        "lon": 39.61
+      },
+      {
+        "from": 661,
+        "place": "Mecca",
+        "lat": 21.42,
+        "lon": 39.83
+      },
+      {
+        "from": 1229,
+        "place": "Aden",
+        "lat": 12.79,
+        "lon": 45.03
+      },
+      {
+        "from": 1650,
+        "place": "Muscat",
+        "lat": 23.59,
+        "lon": 58.41
+      },
+      {
+        "from": 1902,
+        "place": "Riyadh",
+        "lat": 24.71,
+        "lon": 46.68
       }
     ],
     "moments": [
+      {
+        "year": -2000,
+        "label": "Dilmun trades between Sumer and the Indus",
+        "source": "potts-gulf"
+      },
+      {
+        "year": -1000,
+        "label": "The camel opens the incense road",
+        "source": "hoyland"
+      },
+      {
+        "year": -750,
+        "label": "Saba builds the dam at Marib",
+        "source": "hoyland"
+      },
       {
         "year": -500,
         "label": "Saba grows rich on the incense road",
@@ -1112,8 +1640,161 @@
         "year": 632,
         "label": "Arabia is united in the new faith",
         "source": "al-tabari"
+      },
+      {
+        "year": 1360,
+        "label": "A Yemeni king's six-language dictionary",
+        "source": "rasulid-hexaglot"
+      },
+      {
+        "year": 1490,
+        "label": "Ibn Majid writes his book of the sea",
+        "source": "ibn-majid"
+      },
+      {
+        "year": 1698,
+        "label": "Oman takes Mombasa and Zanzibar",
+        "source": "sheriff-zanzibar"
+      },
+      {
+        "year": 1845,
+        "label": "Zanzibar caravans reach Lake Tanganyika",
+        "source": "sheriff-zanzibar"
       }
     ]
+  },
+  {
+    "id": "maghreb",
+    "name": "Maghreb",
+    "longName": "The Maghreb and al-Andalus",
+    "adjective": "Maghrebi",
+    "color": "#4b4aa6",
+    "seal": "maghreb",
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Tyre",
+        "lat": 33.27,
+        "lon": 35.2
+      },
+      {
+        "from": -814,
+        "place": "Carthage",
+        "lat": 36.85,
+        "lon": 10.32
+      },
+      {
+        "from": -500,
+        "place": "Carthage",
+        "lat": 36.85,
+        "lon": 10.32
+      },
+      {
+        "from": -146,
+        "place": "Cirta",
+        "lat": 36.37,
+        "lon": 6.61
+      },
+      {
+        "from": 1,
+        "place": "Carthage",
+        "lat": 36.85,
+        "lon": 10.32
+      },
+      {
+        "from": 670,
+        "place": "Kairouan",
+        "lat": 35.68,
+        "lon": 10.1
+      },
+      {
+        "from": 756,
+        "place": "Córdoba",
+        "lat": 37.88,
+        "lon": -4.78
+      },
+      {
+        "from": 1070,
+        "place": "Marrakesh",
+        "lat": 31.63,
+        "lon": -7.99
+      },
+      {
+        "from": 1250,
+        "place": "Fez",
+        "lat": 34.03,
+        "lon": -4.98
+      }
+    ],
+    "moments": [
+      {
+        "year": -1100,
+        "label": "Phoenician ships reach Gadir",
+        "source": "aubet"
+      },
+      {
+        "year": -814,
+        "label": "Elissa founds Carthage",
+        "source": "aubet"
+      },
+      {
+        "year": -500,
+        "label": "Hanno sails down the coast of Africa",
+        "source": "hanno"
+      },
+      {
+        "year": -480,
+        "label": "Himilco sails north for tin",
+        "source": "pliny"
+      },
+      {
+        "year": -218,
+        "label": "Hannibal crosses the Alps",
+        "source": "lancel"
+      },
+      {
+        "year": -146,
+        "label": "Rome destroys Carthage",
+        "source": "lancel"
+      },
+      {
+        "year": -25,
+        "label": "Juba II sends ships to the Fortunate Isles",
+        "source": "pliny"
+      },
+      {
+        "year": 670,
+        "label": "Kairouan is founded; the Maghreb joins the Islamic world",
+        "source": "al-baladhuri"
+      },
+      {
+        "year": 711,
+        "label": "Tariq crosses into Iberia",
+        "source": "al-baladhuri"
+      },
+      {
+        "year": 1154,
+        "label": "Al-Idrisi's world map",
+        "source": "al-idrisi"
+      },
+      {
+        "year": 1355,
+        "label": "Ibn Battuta's Rihla is written down in Fez",
+        "source": "ibn-battuta"
+      },
+      {
+        "year": 1526,
+        "label": "Al-Wazzan describes Africa",
+        "source": "leo-africanus"
+      },
+      {
+        "year": 1591,
+        "label": "Morocco's army crosses the Sahara to Timbuktu",
+        "source": "tarikh-al-sudan"
+      }
+    ],
+    "startNote": "Before Carthage was founded in 814 BCE, this view follows its mother city, Tyre, whose Phoenician sailors opened the western Mediterranean.",
+    "noteUntil": -814
   },
   {
     "id": "humanity",

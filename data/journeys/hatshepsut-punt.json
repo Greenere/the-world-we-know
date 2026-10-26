@@ -1,0 +1,28 @@
+{
+  "id": "hatshepsut-punt",
+  "name": "Hatshepsut's expedition to Punt",
+  "traveler": "Nehesy, for Queen Hatshepsut",
+  "years": "c. 1470 BCE",
+  "kind": "sailor",
+  "viewpoint": "egypt",
+  "summary": "Five ships sail down the Red Sea to Punt, the land of incense, and come home with living myrrh trees, ebony, gold, baboons and the chief of Punt's portrait. The queen has it all carved on the walls of her temple.",
+  "source": "hatshepsut-punt",
+  "confidence": "medium",
+  "stops": [
+    {"year": -1471, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "The queen's treasurer Nehesy leads the expedition.", "city": "thebes"},
+    {"year": -1471, "place": "Koptos", "lat": 26.0, "lon": 32.82, "note": "Along the Nile to the start of the desert road.", "by": "river"},
+    {"year": -1471, "place": "Mersa Gawasis", "lat": 26.55, "lon": 34.04, "note": "Across the Wadi Hammamat to the Red Sea, where ships are assembled from parts carried over the desert.", "by": "land"},
+    {"waypoint": true, "lat": 22.0, "lon": 37.3},
+    {"waypoint": true, "lat": 18.0, "lon": 38.9},
+    {"year": -1470, "place": "Punt", "lat": 15.4, "lon": 39.6, "note": "Houses on stilts, incense trees and a chief with his large wife. Punt was probably on the coast of Eritrea or Sudan.", "by": "sea"},
+    {"waypoint": true, "lat": 18.0, "lon": 38.9},
+    {"waypoint": true, "lat": 22.0, "lon": 37.3},
+    {"year": -1470, "place": "Mersa Gawasis", "lat": 26.55, "lon": 34.04, "note": "The ships return laden with thirty-one myrrh trees in baskets.", "by": "sea"},
+    {"year": -1469, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "The trees are planted at Deir el-Bahari and the voyage carved on its walls.", "by": "land", "city": "thebes"}
+  ],
+  "informs": [
+    {"region": "horn", "level": 3, "homeKnows": -1469, "confidence": "medium", "note": "Punt seen again after centuries"},
+    {"region": "red-sea", "level": 4, "homeKnows": -1469, "confidence": "medium"},
+    {"region": "ethiopia", "level": 2, "homeKnows": -1469, "confidence": "low"}
+  ]
+}

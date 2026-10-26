@@ -115,6 +115,11 @@ export function sealSvg(id: string, color: string, size = 18) {
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M8.4 12.2h7.2v3.4H8.4zM9.6 15.6h4.8l.8 2H8.8z" fill="#f6f0e2"/><path d="M11 11c-1-1.4.6-2.2 0-3.6M13 11c-.8-1.6.8-2.4.2-4" stroke="#f6f0e2" stroke-width="1" fill="none" stroke-linecap="round"/>`,
       );
+    case 'maghreb':
+      // A horseshoe arch.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M7.4 18V11a4.6 4.6 0 0 1 9.2 0v7h-2.2v-6.6a2.4 2.4 0 0 0-4.8 0V18z" fill="#f6f0e2"/><path d="M6 18.2h12" stroke="#f6f0e2" stroke-width="1.2"/>`,
+      );
     case 'inca':
       // Inti, the sun.
       return s(

@@ -651,67 +651,67 @@ islam,maldives,800,3,medium,hoc,
 islam,central-sahel,800,1,low,levtzion-hopkins,
 islam,sicily,827..902,4,high,hoc,
 islam,italy,846,3,medium,hoc,
-islam,bay-of-bengal,851,4,high,akhbar-sin,
-islam,india-north,851,3,medium,akhbar-sin,
-islam,bengal,851,2,medium,akhbar-sin,
-islam,burma,851,2,low,akhbar-sin,
-islam,malacca-strait,851,4,high,akhbar-sin,
-islam,malay-peninsula,851,3,high,akhbar-sin,Kalah
-islam,sumatra,851,3,high,akhbar-sin,Zabaj
-islam,java,851,2,medium,akhbar-sin,
-islam,south-china-sea,851,4,high,akhbar-sin,
-islam,khmer,851,2,medium,akhbar-sin,Qimar
-islam,annam,851,3,medium,akhbar-sin,Sanf (Champa)
-islam,lingnan,851,4,high,akhbar-sin,"Khanfu (Guangzhou), home to many Muslim merchants"
-islam,china-south,851,3,medium,akhbar-sin,
-islam,china-north,851,2,medium,akhbar-sin,
-islam,sri-lanka,851,4,high,akhbar-sin,
-islam,tamilakam,851,3,high,akhbar-sin,
-islam,korea,870,1,medium,ibn-khurradadhbih,Al-Sila
-islam,rus,870,1,medium,ibn-khurradadhbih,Rus merchants
-islam,balkans,870,2,medium,ibn-khurradadhbih,
-islam,italy,870,3,medium,ibn-khurradadhbih,
-islam,gaul,870,2,medium,ibn-khurradadhbih,
-islam,germania,870,1,low,ibn-khurradadhbih,
+persia,bay-of-bengal,851,4,high,akhbar-sin,
+persia,india-north,851,3,medium,akhbar-sin,
+persia,bengal,851,2,medium,akhbar-sin,
+persia,burma,851,2,low,akhbar-sin,
+persia,malacca-strait,851,4,high,akhbar-sin,
+persia,malay-peninsula,851,3,high,akhbar-sin,Kalah
+persia,sumatra,851,3,high,akhbar-sin,Zabaj
+persia,java,851,2,medium,akhbar-sin,
+persia,south-china-sea,851,4,high,akhbar-sin,
+persia,khmer,851,2,medium,akhbar-sin,Qimar
+persia,annam,851,3,medium,akhbar-sin,Sanf (Champa)
+persia,lingnan,851,4,high,akhbar-sin,"Khanfu (Guangzhou), home to many Muslim merchants"
+persia,china-south,851,3,medium,akhbar-sin,
+persia,china-north,851,2,medium,akhbar-sin,
+persia,sri-lanka,851,4,high,akhbar-sin,
+persia,tamilakam,851,3,high,akhbar-sin,
+persia,korea,870,1,medium,ibn-khurradadhbih,Al-Sila
+persia,rus,870,1,medium,ibn-khurradadhbih,Rus merchants
+persia,balkans,870,2,medium,ibn-khurradadhbih,
+persia,italy,870,3,medium,ibn-khurradadhbih,
+persia,gaul,870,2,medium,ibn-khurradadhbih,
+persia,germania,870,1,low,ibn-khurradadhbih,
 islam,east-africa-coast,947,4,high,al-masudi,The gold of Sofala
 islam,zambezi,947,1,low,al-masudi,
 islam,madagascar,947,1,low,al-masudi,Qumr
-islam,germania,965,2,medium,al-bakri,Ibrahim ibn Yaqub travels to Prague
-islam,baltic,965,1,low,al-bakri,
-islam,alps-danube,965,2,medium,al-bakri,
+maghreb,germania,965,2,medium,al-bakri,Ibrahim ibn Yaqub travels to Prague
+maghreb,baltic,965,1,low,al-bakri,
+maghreb,alps-danube,965,2,medium,al-bakri,
 # Scholars of the eleventh and twelfth centuries
-islam,india-north,1030,4,high,al-biruni,
-islam,indus,1030,4,high,al-biruni,
-islam,deccan,1030,3,high,al-biruni,
-islam,himalaya,1030,3,medium,al-biruni,Kashmir
-islam,bengal,1030,3,medium,al-biruni,
-islam,bilad-al-sudan,1068,3,high,al-bakri,Ghana and its capital
-islam,sahara,1068,3,high,al-bakri,
-islam,atlantic-sahara,1068,2,medium,al-bakri,
-islam,senegambia,1068,2,medium,al-bakri,Takrur
-islam,central-sahel,1068,2,medium,al-bakri,
-islam,britain,1154,3,high,al-idrisi,Inkiltara
-islam,ireland,1154,2,medium,al-idrisi,
-islam,scandinavia,1154,2,medium,al-idrisi,
-islam,baltic,1154,2,medium,al-idrisi,
-islam,germania,1154,3,high,al-idrisi,
-islam,gaul,1154,3,high,al-idrisi,
-islam,italy,1154,4,high,al-idrisi,
-islam,balkans,1154,3,high,al-idrisi,
-islam,rus,1154,2,medium,al-idrisi,
-islam,north-atlantic-east,1154,1,medium,al-idrisi,The Sea of Darkness
-islam,canaries,1154,1,low,al-idrisi,The Eternal Isles
-islam,upper-nile,1154,3,high,al-idrisi,
-islam,great-lakes,1154,1,low,al-idrisi,The lakes of the Nile from Ptolemy
-islam,china-south,1154,3,medium,al-idrisi,
-islam,tarim,1154,3,medium,al-idrisi,
-islam,tibet,1154,2,medium,al-idrisi,
-islam,europe,1154,2,medium,al-idrisi,
-islam,asia,1154,1,medium,al-idrisi,Asia's far north and east by report
-islam,africa,1154,1,medium,al-idrisi,Africa south of the Zanj coast by report
+persia,india-north,1030,4,high,al-biruni,
+persia,indus,1030,4,high,al-biruni,
+persia,deccan,1030,3,high,al-biruni,
+persia,himalaya,1030,3,medium,al-biruni,Kashmir
+persia,bengal,1030,3,medium,al-biruni,
+maghreb,bilad-al-sudan,1068,3,high,al-bakri,Ghana and its capital
+maghreb,sahara,1068,3,high,al-bakri,
+maghreb,atlantic-sahara,1068,2,medium,al-bakri,
+maghreb,senegambia,1068,2,medium,al-bakri,Takrur
+maghreb,central-sahel,1068,2,medium,al-bakri,
+maghreb,britain,1154,3,high,al-idrisi,Inkiltara
+maghreb,ireland,1154,2,medium,al-idrisi,
+maghreb,scandinavia,1154,2,medium,al-idrisi,
+maghreb,baltic,1154,2,medium,al-idrisi,
+maghreb,germania,1154,3,high,al-idrisi,
+maghreb,gaul,1154,3,high,al-idrisi,
+maghreb,italy,1154,4,high,al-idrisi,
+maghreb,balkans,1154,3,high,al-idrisi,
+maghreb,rus,1154,2,medium,al-idrisi,
+maghreb,north-atlantic-east,1154,1,medium,al-idrisi,The Sea of Darkness
+maghreb,canaries,1154,1,low,al-idrisi,The Eternal Isles
+maghreb,upper-nile,1154,3,high,al-idrisi,
+maghreb,great-lakes,1154,1,low,al-idrisi,The lakes of the Nile from Ptolemy
+maghreb,china-south,1154,3,medium,al-idrisi,
+maghreb,tarim,1154,3,medium,al-idrisi,
+maghreb,tibet,1154,2,medium,al-idrisi,
+maghreb,europe,1154,2,medium,al-idrisi,
+maghreb,asia,1154,1,medium,al-idrisi,Asia's far north and east by report
+maghreb,africa,1154,1,medium,al-idrisi,Africa south of the Zanj coast by report
 # Mamluk Cairo, the Ottomans and after
-islam,bilad-al-sudan,1338,4,high,al-umari,Al-Umari's account of Mali
-islam,sahara,1338,4,high,al-umari,
+egypt,bilad-al-sudan,1338,4,high,al-umari,Al-Umari's account of Mali
+egypt,sahara,1338,4,high,al-umari,
 islam,caribbean,1513,1,high,piri-reis,From a copy of Columbus's map
 islam,brazil-coast,1513,2,high,piri-reis,
 islam,south-atlantic,1513,2,high,piri-reis,
@@ -726,8 +726,8 @@ islam,north-america,1732,2,high,katip-celebi,
 islam,south-america,1732,2,high,katip-celebi,
 islam,japan,1732,2,high,katip-celebi,
 islam,china-north,1732,3,high,katip-celebi,
-islam,gaul,1834,4,high,tahtawi,Al-Tahtawi's account of Paris
-islam,britain,1834,4,medium,tahtawi,
+egypt,gaul,1834,4,high,tahtawi,Al-Tahtawi's account of Paris
+egypt,britain,1834,4,medium,tahtawi,
 
 # ═══ Polynesia ════════════════════════════════════════════════════════════
 polynesia,tonga,-500,4,medium,kirch,Home islands of the Lapita descendants
@@ -1304,27 +1304,7 @@ inca,europe,1609,3,high,garcilaso,Garcilaso writes in Spain
 inca,iberia,1560,2,medium,garcilaso,
 inca,iberia,1609,3,medium,garcilaso,
 inca,mexico,1533,1,medium,hoc,News of New Spain
-# The Islamic world begins in 622 from what Arabia knew; Persia and Egypt join it in 651 and 641
-islam,arabia-hejaz,622,4,low,hoc,
-islam,arabia-felix,622,4,low,hoc,
-islam,arabia-interior,622,3,low,hoc,
-islam,oman,622,3,low,hoc,
-islam,persian-gulf,622,3,low,hoc,
-islam,red-sea,622,3,low,hoc,
-islam,levant,622,3,low,hoc,
-islam,mesopotamia,622,2,low,hoc,
-islam,egypt,622,2,low,hoc,
-islam,persia,622,2,low,hoc,
-islam,ethiopia,622,2,low,hoc,
-islam,horn,622,2,low,hoc,
-islam,east-africa-coast,622,1,low,hoc,
-islam,arabian-sea,622,2,low,hoc,
-islam,west-india-coast,622,1,low,hoc,
-islam,east-africa-coast,622,2,low,periplus,
-islam,malabar,622,2,low,periplus,
-islam,west-india-coast,622,2,low,periplus,
-islam,ethiopia,622,3,medium,al-baladhuri,
-# ════ Persia (with Mesopotamia), until it joins the Islamic world in 651 ════
+# ════ Persia (with Mesopotamia); it joins the Islamic world in 651 ════
 persia,persia,-500,5,high,behistun,"The Achaemenid heartland, measured by the royal road and its stations"
 persia,mesopotamia,-500,5,high,behistun,Babylon: a royal capital
 persia,anatolia,-500,4,high,herodotus,The royal road to Sardis
@@ -1375,7 +1355,7 @@ persia,china-south,600,1,low,hoc,Bosi merchants in Guangzhou
 persia,east-africa-coast,550,1,low,hoc,
 persia,horn,550,2,low,cosmas,
 persia,ethiopia,550,2,medium,cosmas,Aksum
-# ════ Egypt, until it joins the Islamic world in 641 ════
+# ════ Egypt; it joins the Islamic world in 641 ════
 egypt,egypt,-500,5,high,herodotus,"The Nile valley, measured field by field for tax"
 egypt,upper-nile,-500,3,high,herodotus,Kush and Meroë
 egypt,upper-nile,-250,4,medium,bagnall,Ptolemaic hunting expeditions up the Nile
@@ -1413,10 +1393,396 @@ egypt,arabia-hejaz,-200,2,medium,bagnall,
 egypt,iberia,-100,1,medium,strabo,
 egypt,britain,150,1,medium,ptolemy,Ptolemy's Geography reaches the edge of the world
 egypt,china-north,150,1,medium,ptolemy,Serica and Sinae
-# ════ Arabia, until it joins the Islamic world in 632 (rows moved from the Islamic world before 622) ════
+# ════ Arabia before Islam (rows moved from the Islamic world before 622); it joins the Islamic world in 622 ════
 arabia,levant,-300,4,medium,hoyland,The Nabataean caravan trade
 arabia,egypt,-300,3,medium,hoyland,
 arabia,italy,50,2,medium,hoyland,
 arabia,persia,250,3,medium,hoyland,
 arabia,ethiopia,525,4,high,hoyland,Aksum conquers Himyar
 arabia,arabia-felix,570,4,high,hoyland,
+# ════ Persia after it joins the Islamic world in 651 ════
+persia,mesopotamia,762,5,high,hoc,Baghdad: the round city of the caliphs
+persia,transoxiana,982,5,high,hudud-al-alam,"The Regions of the World, written in Persian in Guzgan"
+persia,bactria,982,5,high,hudud-al-alam,
+persia,caspian,982,4,high,hudud-al-alam,
+persia,tarim,982,4,medium,hudud-al-alam,Kashghar and the Toghuzghuz
+persia,zhetysu,982,4,medium,hudud-al-alam,
+persia,kazakh-steppe,982,3,medium,hudud-al-alam,
+persia,mongolia,982,2,low,hudud-al-alam,
+persia,china-north,982,3,medium,hudud-al-alam,
+persia,china-south,982,2,medium,hudud-al-alam,
+persia,tibet,982,3,medium,hudud-al-alam,
+persia,india-north,982,3,medium,hudud-al-alam,
+persia,indus,982,4,high,hudud-al-alam,
+persia,sri-lanka,982,3,medium,hudud-al-alam,
+persia,rus,982,3,medium,hudud-al-alam,The Rus and their towns
+persia,volga,982,3,medium,hudud-al-alam,Bulghar on the Volga
+persia,lower-volga,982,4,high,hudud-al-alam,The Khazars
+persia,pontic-steppe,982,2,medium,hudud-al-alam,
+persia,caucasus,982,4,high,hudud-al-alam,
+persia,anatolia,982,4,high,hudud-al-alam,Rum
+persia,balkans,982,2,medium,hudud-al-alam,
+persia,levant,982,4,high,hudud-al-alam,
+persia,egypt,982,4,high,hudud-al-alam,
+persia,maghreb,982,3,medium,hudud-al-alam,
+persia,ifriqiya,982,3,medium,hudud-al-alam,
+persia,iberia,982,3,medium,hudud-al-alam,Al-Andalus
+persia,arabia-hejaz,982,4,high,hudud-al-alam,
+persia,arabia-felix,982,3,medium,hudud-al-alam,
+persia,east-africa-coast,982,3,medium,hudud-al-alam,The land of the Zanj
+persia,ethiopia,982,3,medium,hudud-al-alam,
+persia,upper-nile,982,3,medium,hudud-al-alam,Nubia
+persia,china-north,1310,4,high,rashid-al-din,"Khitay, described with Chinese help for the Compendium of Chronicles"
+persia,china-south,1310,4,high,rashid-al-din,Manzi
+persia,lingnan,1310,3,medium,rashid-al-din,
+persia,mongolia,1310,4,high,rashid-al-din,The homeland of the Mongols
+persia,manchuria,1310,2,medium,rashid-al-din,
+persia,korea,1310,2,medium,rashid-al-din,Kawli
+persia,tibet,1310,3,high,rashid-al-din,
+persia,india-north,1310,4,high,rashid-al-din,
+persia,kazakh-steppe,1310,4,high,rashid-al-din,
+persia,siberia-west,1310,2,medium,rashid-al-din,
+persia,rus,1310,3,high,rashid-al-din,
+persia,europe,1310,3,medium,rashid-al-din,A History of the Franks
+persia,italy,1310,3,medium,rashid-al-din,The pope and the emperor
+persia,gaul,1310,2,medium,rashid-al-din,
+persia,germania,1310,2,medium,rashid-al-din,
+persia,britain,1310,1,medium,rashid-al-din,
+persia,ireland,1310,1,low,rashid-al-din,An island with no snakes
+persia,iberia,1515,3,high,matthee,The Portuguese take Hormuz
+persia,europe,1600,3,high,matthee,Envoys and merchants at the Safavid court
+persia,britain,1622,3,high,matthee,English ships help retake Hormuz
+persia,rus,1650,4,high,matthee,Silk goes north by the Volga and Archangel
+persia,volga,1650,4,high,matthee,
+persia,britain,1819,4,high,mirza-saleh,Mirza Saleh's journal of England
+persia,europe,1819,4,high,mirza-saleh,
+persia,gaul,1873,4,high,nasir-al-din-shah,Naser al-Din Shah in Paris
+persia,germania,1873,4,high,nasir-al-din-shah,
+persia,italy,1873,4,high,nasir-al-din-shah,
+persia,alps-danube,1873,4,high,nasir-al-din-shah,
+persia,north-america,1876,2,high,hajj-sayyah,"Hajj Sayyah, the first Iranian to live in America"
+persia,eastern-woodlands,1876,3,high,hajj-sayyah,
+# ════ Egypt after it joins the Islamic world in 641 ════
+egypt,ifriqiya,969,5,high,hoc,The Fatimids come to Egypt from Ifriqiya
+egypt,maghreb,969,4,high,hoc,
+egypt,sicily,969,4,high,hoc,
+egypt,levant,969,5,high,hoc,
+egypt,arabia-hejaz,969,4,high,hoc,
+egypt,red-sea,1140,5,high,goitein-india,"Merchants' letters from the India trade, kept in the Cairo Geniza"
+egypt,arabia-felix,1140,4,high,goitein-india,Aden
+egypt,arabian-sea,1140,4,high,goitein-india,
+egypt,west-india-coast,1140,4,high,goitein-india,
+egypt,malabar,1140,4,high,goitein-india,Mangalore and the pepper coast
+egypt,sri-lanka,1140,3,medium,goitein-india,
+egypt,iberia,1140,3,high,goitein-india,
+egypt,bilad-al-sudan,1412,4,high,qalqashandi,
+egypt,central-sahel,1412,3,high,qalqashandi,"A letter from the king of Bornu, 1391"
+egypt,ethiopia,1412,4,high,qalqashandi,
+egypt,italy,1412,4,high,qalqashandi,Venice and Genoa
+egypt,gaul,1412,3,medium,qalqashandi,
+egypt,iberia,1412,4,high,qalqashandi,
+egypt,cyprus,1412,4,high,qalqashandi,
+egypt,lower-volga,1412,4,high,qalqashandi,"The Golden Horde, the Mamluks' ally"
+egypt,kazakh-steppe,1412,3,medium,qalqashandi,
+egypt,india-north,1412,4,high,qalqashandi,
+egypt,china-north,1412,3,medium,qalqashandi,
+egypt,mongolia,1412,3,medium,qalqashandi,
+egypt,rus,1412,2,medium,qalqashandi,
+egypt,anatolia,1412,4,high,qalqashandi,
+egypt,balkans,1412,3,medium,qalqashandi,
+egypt,gaul,1798,3,high,al-jabarti,The French army arrives in Egypt
+egypt,europe,1798,3,high,al-jabarti,
+egypt,upper-nile,1821,5,high,hoc,Muhammad Ali's armies take the Sudan
+egypt,mexico,1867,3,high,hill-hogg,A Sudanese battalion from Egypt fights in Mexico
+egypt,gulf-of-mexico,1867,3,high,hill-hogg,
+egypt,caribbean,1867,2,medium,hill-hogg,
+egypt,great-lakes,1874,3,high,baker-ismailia,Equatoria: the Khedive's province reaches the great lakes
+# ════ Arabia after it joins the Islamic world in 622 ════
+arabia,arabia-hejaz,632,5,high,hoc,"Mecca and Medina, the heart of the faith"
+arabia,arabia-interior,632,4,high,hoc,
+arabia,mongolia,1360,2,medium,rasulid-hexaglot,Mongol words in a Yemeni king's dictionary
+arabia,anatolia,1360,3,medium,rasulid-hexaglot,
+arabia,greece,1360,3,medium,rasulid-hexaglot,
+arabia,caucasus,1360,2,medium,rasulid-hexaglot,"Armenian, one of the six languages"
+arabia,persia,1360,4,high,rasulid-hexaglot,
+arabia,china-south,1421,3,medium,ma-huan,Zheng He's fleets call at Aden
+arabia,arabian-sea,1490,5,high,ibn-majid,Ibn Majid's rutters of the monsoon sea
+arabia,red-sea,1490,5,high,ibn-majid,
+arabia,persian-gulf,1490,5,high,ibn-majid,
+arabia,west-india-coast,1490,5,high,ibn-majid,
+arabia,malabar,1490,5,high,ibn-majid,
+arabia,east-africa-coast,1490,5,high,ibn-majid,
+arabia,madagascar,1490,3,medium,ibn-majid,
+arabia,maldives,1490,4,high,ibn-majid,
+arabia,sri-lanka,1490,4,high,ibn-majid,
+arabia,bay-of-bengal,1490,4,high,ibn-majid,
+arabia,malacca-strait,1490,4,high,ibn-majid,
+arabia,sumatra,1490,3,medium,ibn-majid,
+arabia,java,1490,3,medium,ibn-majid,
+arabia,south-china-sea,1490,2,medium,ibn-majid,
+arabia,indian-ocean,1490,2,medium,ibn-majid,
+arabia,iberia,1507,2,high,hoc,The Portuguese seize Muscat
+arabia,east-africa-coast,1698,5,high,sheriff-zanzibar,Oman takes Mombasa and Zanzibar
+arabia,great-lakes,1845,3,high,sheriff-zanzibar,Caravans from Zanzibar reach Lake Tanganyika
+arabia,congo,1870,2,medium,sheriff-zanzibar,Tippu Tip's trading state on the upper Congo
+# ════ The Maghreb and al-Andalus: Carthage, Numidia and Roman Africa until 670, then in the Islamic world ════
+maghreb,ifriqiya,-500,5,high,lancel,Carthage and its hinterland
+maghreb,maghreb,-500,3,medium,lancel,
+maghreb,libya,-500,4,high,lancel,
+maghreb,sicily,-500,4,high,lancel,The Punic west of Sicily
+maghreb,med-west,-500,4,high,lancel,
+maghreb,iberia,-500,4,high,lancel,Gadir and the Punic south
+maghreb,med-east,-500,3,high,lancel,
+maghreb,levant,-500,4,high,lancel,"Tyre, the mother city"
+maghreb,egypt,-500,3,medium,lancel,
+maghreb,greece,-500,3,medium,lancel,
+maghreb,italy,-500,3,high,lancel,The treaties with Rome
+maghreb,gaul,-500,2,medium,lancel,
+maghreb,sahara,-500,2,medium,herodotus,The Garamantes
+maghreb,atlantic-sahara,-500,3,medium,hanno,
+maghreb,senegambia,-500,2,low,hanno,
+maghreb,guinea-coast,-500,1,low,hanno,"Hanno's ""Chariot of the Gods"", perhaps Mount Cameroon"
+maghreb,canaries,-500,1,low,hanno,
+maghreb,britain,-480,1,low,pliny,Himilco sails north for tin
+maghreb,north-atlantic-east,-480,2,low,pliny,
+maghreb,italy,-218,4,high,lancel,Hannibal in Italy
+maghreb,alps-danube,-218,2,high,lancel,
+maghreb,gaul,-218,3,high,lancel,
+maghreb,maghreb,-200,4,high,lancel,The Numidian kingdoms
+maghreb,guinea-coast,-146,0,low,lancel,Hanno's report survives only in Greek
+maghreb,senegambia,-146,1,low,lancel,
+maghreb,maghreb,-25,5,high,pliny,Mauretania under Juba II
+maghreb,canaries,-25,2,medium,pliny,Juba II's expedition to the Fortunate Isles
+maghreb,britain,100,2,medium,hoc,
+maghreb,gaul,100,3,medium,hoc,
+maghreb,anatolia,100,3,medium,hoc,
+maghreb,canaries,439,1,low,hoc,After the Vandal conquest the Fortunate Isles fade into legend
+maghreb,britain,439,1,low,hoc,
+maghreb,north-atlantic-east,439,1,low,hoc,
+maghreb,iberia,711,5,high,al-baladhuri,Al-Andalus
+maghreb,senegambia,1054,4,high,levtzion-hopkins,The Almoravids rise among the desert Sanhaja
+maghreb,atlantic-sahara,1054,4,high,levtzion-hopkins,
+maghreb,sahara,1054,4,high,levtzion-hopkins,
+maghreb,sicily,1185,5,high,ibn-jubayr,Ibn Jubayr in Norman Palermo
+maghreb,arabia-hejaz,1185,4,high,ibn-jubayr,
+maghreb,levant,1185,4,high,ibn-jubayr,Crusader Acre
+maghreb,mesopotamia,1185,3,high,ibn-jubayr,
+maghreb,bilad-al-sudan,1526,5,high,leo-africanus,Timbuktu described by al-Wazzan
+maghreb,central-sahel,1526,3,medium,leo-africanus,
+maghreb,sahara,1526,5,high,leo-africanus,
+maghreb,italy,1526,4,high,leo-africanus,Al-Wazzan writes in Rome
+maghreb,bilad-al-sudan,1591,5,high,tarikh-al-sudan,Morocco's army takes Timbuktu
+maghreb,britain,1600,3,high,matar,A Moroccan embassy in London
+maghreb,caribbean,1600,2,medium,matar,Al-Mansur proposes a joint conquest of the Indies
+maghreb,north-america,1600,1,medium,matar,
+maghreb,south-america,1600,1,medium,matar,
+maghreb,gaul,1611,4,high,al-hajari,A Morisco envoy in France and the Netherlands
+maghreb,europe,1611,4,high,al-hajari,
+# ════ Before 500 BCE: Europe (the Aegean, from the Minoans to the Greek colonies) ════
+europe,greece,-2000,3,medium,cline-1177,The Aegean of the Minoans
+europe,crete,-2000,4,medium,cline-1177,The palaces of Minoan Crete
+europe,cyprus,-2000,2,low,cline-1177,
+europe,med-east,-2000,3,medium,cline-1177,
+europe,egypt,-2000,2,medium,cline-1177,Keftiu ships trade with Egypt
+europe,levant,-2000,2,low,cline-1177,
+europe,anatolia,-2000,2,low,cline-1177,
+europe,sicily,-2000,1,low,cline-1177,
+europe,greece,-1400,4,high,cline-1177,"Mycenae, Pylos and Thebes keep records in Linear B"
+europe,cyprus,-1400,3,medium,cline-1177,
+europe,anatolia,-1400,3,medium,cline-1177,Ahhiyawa in the Hittite letters
+europe,levant,-1400,3,medium,cline-1177,Ugarit
+europe,egypt,-1400,3,medium,cline-1177,
+europe,italy,-1400,2,medium,cline-1177,Mycenaean pottery in southern Italy
+europe,sicily,-1400,2,medium,cline-1177,
+europe,med-west,-1400,1,low,cline-1177,Sardinia
+europe,greece,-1180,3,high,cline-1177,The palaces burn and writing is forgotten
+europe,crete,-1180,3,medium,cline-1177,
+europe,cyprus,-1180,2,medium,cline-1177,
+europe,levant,-1180,2,medium,cline-1177,
+europe,egypt,-1180,2,medium,cline-1177,
+europe,anatolia,-1180,2,medium,cline-1177,
+europe,italy,-1180,1,low,cline-1177,
+europe,sicily,-1180,1,low,cline-1177,
+europe,med-west,-1180,0,low,cline-1177,
+europe,greece,-750,4,high,homer,Homer's Greece
+europe,egypt,-750,3,medium,homer,Pharos and the river Aigyptos
+europe,levant,-750,3,medium,homer,Phoenician traders
+europe,sicily,-750,2,medium,homer,The island of the Cyclopes
+europe,italy,-750,2,medium,homer,
+europe,black-sea,-750,1,low,homer,"Colchis, land of the Golden Fleece"
+europe,libya,-750,1,low,homer,The Lotus-eaters
+europe,sicily,-650,4,high,boardman,Greek colonies in Sicily
+europe,italy,-650,3,high,boardman,
+europe,black-sea,-650,3,high,boardman,
+europe,libya,-631,3,high,boardman,Cyrene founded
+europe,med-west,-600,3,medium,boardman,
+europe,gaul,-600,2,medium,boardman,Massalia founded
+europe,pontic-steppe,-600,2,medium,boardman,
+# ════ Before 500 BCE: China (Erlitou, Shang and Zhou) ════
+china,china-north,-2000,3,low,liu-chen,The middle Yellow River: Erlitou and its neighbours
+china,china-south,-2000,1,low,liu-chen,
+china,sichuan,-2000,1,low,liu-chen,
+china,mongolia,-2000,1,low,liu-chen,
+china,china-north,-1250,4,high,keightley,"Shang divinations name the lands all round, the fang"
+china,china-south,-1250,2,medium,keightley,Copper and tin from the Yangzi
+china,mongolia,-1250,1,medium,keightley,The Tufang and Guifang raiders
+china,hexi,-1250,1,low,keightley,The Qiang to the west
+china,sichuan,-1046,2,medium,shaughnessy,Shu fights for the Zhou at Muye
+china,china-south,-1046,2,medium,shaughnessy,
+china,manchuria,-1046,1,low,shaughnessy,The Sushen bring arrows of hu wood
+china,mongolia,-771,2,medium,shaughnessy,The Quanrong sack the Zhou capital
+china,china-south,-650,3,medium,zuozhuan,"Chu, Wu and Yue join the world of the states"
+china,east-china-sea,-650,2,medium,zuozhuan,
+china,lingnan,-650,1,low,zuozhuan,
+china,korea,-650,1,low,zuozhuan,
+# ════ Before 500 BCE: Persia and Mesopotamia (Sumer, Babylon and Assyria) ════
+persia,mesopotamia,-2000,5,high,van-de-mieroop,"The land between the rivers, city by city"
+persia,persia,-2000,3,medium,van-de-mieroop,Elam and the Iranian plateau
+persia,persian-gulf,-2000,4,high,potts-gulf,The sea road to Dilmun
+persia,oman,-2000,3,medium,potts-gulf,"Magan, the copper land"
+persia,indus,-2000,2,medium,potts-gulf,Meluhha: ships from the Indus
+persia,arabian-sea,-2000,2,low,potts-gulf,
+persia,levant,-2000,3,medium,van-de-mieroop,
+persia,anatolia,-1900,3,high,van-de-mieroop,Assyrian merchants at Kanesh
+persia,bactria,-2000,1,low,van-de-mieroop,Lapis lazuli from the far mountains
+persia,caucasus,-2000,1,low,van-de-mieroop,
+persia,egypt,-2000,1,low,van-de-mieroop,
+persia,crete,-1760,1,low,van-de-mieroop,Kaptara in the Mari letters
+persia,cyprus,-1760,1,low,van-de-mieroop,Alashiya
+persia,indus,-1750,1,low,potts-gulf,Meluhha fades from the texts
+persia,egypt,-1350,3,high,amarna,Babylon and Assyria write to Pharaoh
+persia,anatolia,-1350,3,high,amarna,
+persia,cyprus,-1350,2,medium,amarna,
+persia,egypt,-1100,2,medium,van-de-mieroop,
+persia,anatolia,-1100,2,medium,van-de-mieroop,
+persia,cyprus,-1100,1,low,van-de-mieroop,
+persia,levant,-850,4,high,van-de-mieroop,Assyrian armies reach the Mediterranean
+persia,anatolia,-850,3,high,van-de-mieroop,Urartu and the Anatolian kingdoms
+persia,caucasus,-850,2,medium,van-de-mieroop,
+persia,persia,-850,4,high,van-de-mieroop,The Medes and Persians
+persia,arabia-interior,-850,2,medium,van-de-mieroop,Arab queens pay tribute in camels
+persia,cyprus,-707,3,high,van-de-mieroop,Seven kings of Cyprus send tribute
+persia,med-east,-707,3,medium,van-de-mieroop,
+persia,arabia-hejaz,-552,3,high,van-de-mieroop,Nabonidus spends ten years at Tayma
+# ════ Before 500 BCE: Egypt (the Middle and New Kingdoms, Kush and the Saite revival) ════
+egypt,egypt,-2000,5,high,shaw-egypt,The Middle Kingdom: the Nile from the delta to the second cataract
+egypt,upper-nile,-2000,3,high,shaw-egypt,Nubia and the forts of the second cataract
+egypt,levant,-2000,3,medium,shaw-egypt,
+egypt,red-sea,-1950,3,medium,shaw-egypt,Ships sail for Punt from Mersa Gawasis
+egypt,horn,-1950,2,medium,shaw-egypt,"Punt, the land of incense"
+egypt,libya,-2000,2,medium,shaw-egypt,
+egypt,sahara,-2000,1,low,shaw-egypt,
+egypt,crete,-2000,2,medium,shaw-egypt,Keftiu
+egypt,med-east,-2000,2,medium,shaw-egypt,
+egypt,levant,-1450,4,high,shaw-egypt,Thutmose III campaigns to the Euphrates
+egypt,mesopotamia,-1450,2,medium,shaw-egypt,
+egypt,anatolia,-1450,2,medium,shaw-egypt,Hatti
+egypt,upper-nile,-1450,4,high,shaw-egypt,Kush conquered to the fourth cataract
+egypt,crete,-1450,3,medium,shaw-egypt,
+egypt,greece,-1380,2,medium,shaw-egypt,Mycenae and Knossos on Amenhotep III's Aegean list
+egypt,mesopotamia,-1350,3,high,amarna,Letters from Babylon and Assyria
+egypt,anatolia,-1350,3,high,amarna,
+egypt,cyprus,-1350,3,high,amarna,Alashiya and its copper
+egypt,levant,-1100,3,medium,shaw-egypt,The empire in Canaan is lost
+egypt,anatolia,-1100,1,low,shaw-egypt,
+egypt,cyprus,-1100,2,medium,shaw-egypt,
+egypt,mesopotamia,-1100,2,medium,shaw-egypt,
+egypt,crete,-1100,1,low,shaw-egypt,
+egypt,greece,-1100,1,low,shaw-egypt,
+egypt,horn,-1100,1,low,shaw-egypt,Punt passes into legend
+egypt,red-sea,-1100,3,medium,shaw-egypt,
+egypt,upper-nile,-1070,3,high,shaw-egypt,Kush goes its own way
+egypt,upper-nile,-730,4,high,shaw-egypt,Kushite pharaohs rule Egypt
+egypt,upper-nile,-656,3,high,shaw-egypt,The Kushites withdraw south
+egypt,mesopotamia,-671,3,high,shaw-egypt,
+egypt,greece,-620,3,high,boardman,Greek traders at Naukratis
+# ════ Before 500 BCE: India (the Indus cities, the Vedic Punjab, the great kingdoms) ════
+india,indus,-2000,4,medium,possehl,The cities of the Indus
+india,west-india-coast,-2000,3,medium,possehl,Gujarat and the port of Lothal
+india,india-north,-2000,2,low,possehl,
+india,bactria,-2000,2,low,possehl,Shortugai: an outpost for lapis lazuli
+india,persian-gulf,-2000,2,medium,possehl,Ships to Dilmun and Magan
+india,oman,-2000,2,medium,possehl,
+india,arabian-sea,-2000,2,medium,possehl,
+india,mesopotamia,-2000,1,low,possehl,Distant Sumer
+india,persia,-2000,1,low,possehl,
+india,persian-gulf,-1800,1,low,possehl,The western trade fades as the cities decline
+india,oman,-1800,1,low,possehl,
+india,mesopotamia,-1800,0,low,possehl,
+india,west-india-coast,-1800,2,low,possehl,
+india,indus,-1300,4,medium,rigveda,The land of the seven rivers
+india,india-north,-1300,2,medium,rigveda,
+india,himalaya,-1300,1,low,rigveda,
+india,india-north,-1000,3,medium,allchin,Kuru and Panchala on the Ganges and Yamuna
+india,himalaya,-1000,2,medium,allchin,
+india,bengal,-1000,1,low,allchin,
+india,deccan,-1000,1,low,allchin,
+india,india-north,-600,4,high,allchin,The sixteen great kingdoms
+india,bengal,-600,2,medium,allchin,
+india,deccan,-600,2,medium,allchin,
+# ════ Before 500 BCE: Arabia (Dilmun and Magan, the camel and the incense road) ════
+arabia,persian-gulf,-2000,4,medium,potts-gulf,"Dilmun, the trading island"
+arabia,oman,-2000,4,medium,potts-gulf,The copper mines of Magan
+arabia,arabia-interior,-2000,1,low,potts-gulf,
+arabia,mesopotamia,-2000,3,medium,potts-gulf,Sumer and Babylon to the north
+arabia,indus,-2000,2,medium,potts-gulf,The ships of Meluhha
+arabia,persia,-2000,2,low,potts-gulf,
+arabia,arabian-sea,-2000,2,low,potts-gulf,
+arabia,indus,-1700,1,low,potts-gulf,
+arabia,arabia-felix,-1000,3,medium,hoyland,Camel caravans open the incense road
+arabia,arabia-hejaz,-1000,3,medium,hoyland,
+arabia,arabia-interior,-1000,2,medium,hoyland,
+arabia,levant,-1000,2,medium,hoyland,
+arabia,red-sea,-1000,2,medium,hoyland,
+arabia,arabia-felix,-750,4,medium,hoyland,Saba and the dam at Marib
+arabia,horn,-700,2,medium,hoyland,Sabaean settlers across the Red Sea
+arabia,ethiopia,-700,2,medium,hoyland,
+# ════ Before 500 BCE: the Maghreb follows Tyre, its mother city, until Carthage is founded in 814 BCE ════
+maghreb,levant,-2000,4,medium,aubet,Tyre and the Canaanite coast
+maghreb,egypt,-2000,3,medium,aubet,Cedar for Egypt from Byblos
+maghreb,cyprus,-2000,3,medium,aubet,
+maghreb,med-east,-2000,3,medium,aubet,
+maghreb,mesopotamia,-2000,2,medium,aubet,
+maghreb,anatolia,-2000,2,low,aubet,
+maghreb,crete,-2000,2,low,aubet,
+maghreb,egypt,-1180,2,medium,cline-1177,
+maghreb,cyprus,-1100,4,high,aubet,Kition
+maghreb,med-east,-1100,4,high,aubet,
+maghreb,crete,-1100,3,medium,aubet,
+maghreb,greece,-1100,2,medium,aubet,
+maghreb,med-west,-900,3,medium,aubet,Phoenician ships sail to the far west
+maghreb,iberia,-900,3,medium,aubet,"Gadir, beyond the Pillars"
+maghreb,sicily,-900,2,medium,aubet,
+maghreb,italy,-900,2,medium,aubet,
+maghreb,ifriqiya,-900,2,medium,aubet,Utica
+maghreb,libya,-900,2,medium,aubet,
+maghreb,maghreb,-900,1,low,aubet,
+maghreb,north-atlantic-east,-900,1,low,aubet,
+# ════ Before 500 BCE: Polynesia's Lapita ancestors ════
+polynesia,near-oceania,-2000,2,low,kirch,The islands of the Bismarck Sea
+polynesia,near-oceania,-1500,3,medium,kirch,Lapita potters of the Bismarcks
+polynesia,remote-melanesia,-1100,3,medium,kirch,Lapita voyagers settle Vanuatu and New Caledonia
+polynesia,fiji,-1000,3,medium,kirch,
+polynesia,tonga,-900,3,medium,kirch,Lapita voyagers reach Tonga and Samoa
+polynesia,samoa,-900,3,medium,kirch,
+polynesia,west-polynesia-sea,-900,3,medium,kirch,
+polynesia,near-oceania,-800,1,low,kirch,
+# ════ Before 500 BCE: Japan's Jōmon ════
+japan,japan,-2000,2,low,habu,Jōmon villages and their obsidian trade
+japan,sea-of-japan,-2000,1,low,habu,
+japan,korea,-2000,1,low,habu,
+japan,ryukyu-taiwan,-2000,1,low,habu,
+# ════ Before 500 BCE: the Sahel's Dhar Tichitt ════
+sahel,sahara,-2000,3,low,mcintosh,Dhar Tichitt's stone villages on the desert edge
+sahel,bilad-al-sudan,-2000,2,low,mcintosh,The inland delta of the Niger
+sahel,senegambia,-2000,1,low,mcintosh,
+# ════ Before 500 BCE: the Mexica view follows Tlatilco and the Olmec world ════
+mexica,mexico,-2000,2,low,pool-olmec,
+mexica,mexico,-1200,3,medium,pool-olmec,Tlatilco and the villages of the Basin of Mexico
+mexica,gulf-of-mexico,-1200,2,medium,pool-olmec,Olmec goods from the Gulf coast
+mexica,maya,-1200,1,low,pool-olmec,
+# ════ Before 500 BCE: the Inca view follows Caral and Chavín ════
+inca,peru,-2000,3,low,burger-chavin,Caral and the coastal valleys
+inca,peru,-900,3,medium,burger-chavin,
+inca,amazon,-900,1,low,burger-chavin,
+inca,andes-north,-900,1,low,burger-chavin,

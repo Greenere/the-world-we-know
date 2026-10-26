@@ -2,7 +2,7 @@
 
 A browser atlas of how much of the world a civilization knew in any year, and of the travellers who pushed that knowledge outward. Fog covers what a viewpoint did not know; it lifts when a traveller's news reaches home, and it comes back when knowledge is lost.
 
-This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): twelve cultural viewpoints (Mediterranean / Europe, China, Persia, Egypt and Arabia, which join the Islamic world in the seventh century, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca) plus Humanity, 500 BCE to today (Humanity back to 70,000 years ago), 90 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 23 inventions that changed how people saw the world, 386 cities and 221 regions.
+This is v1 of the [spec](docs/The%20World%20We%20Know%20—%20v1%20Spec.md): thirteen cultural viewpoints (Mediterranean / Europe, China, the Islamic world — a knowledge community of Arabia, Egypt, Persia and the Maghreb, each also a viewpoint of its own — Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca) plus Humanity, 2000 BCE to today (Humanity back to 70,000 years ago), 97 journeys (voyages, travellers, military campaigns, scientific expeditions and the last frontiers), 29 inventions that changed how people saw the world, 404 cities and 221 regions.
 
 ## Run it
 

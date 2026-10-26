@@ -1144,6 +1144,11 @@ kbd {
   color: var(--ink-3);
 }
 
+.shared.via {
+  display: block;
+  color: color-mix(in srgb, var(--via) 70%, var(--ink-2));
+}
+
 .event-note {
   font-size: 14px;
   color: var(--ink-2);

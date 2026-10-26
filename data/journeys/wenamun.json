@@ -1,0 +1,23 @@
+{
+  "id": "wenamun",
+  "name": "Wenamun's voyage to Byblos",
+  "traveler": "Wenamun",
+  "years": "c. 1075 BCE",
+  "kind": "envoy",
+  "viewpoint": "egypt",
+  "summary": "A priest of Amun is sent to buy cedar for the god's sacred boat. He is robbed at Dor, kept waiting for months at Byblos, where the prince reminds him that Egypt no longer commands, and blown to Cyprus, where the papyrus breaks off.",
+  "source": "wenamun",
+  "confidence": "medium",
+  "stops": [
+    {"year": -1076, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "Sent by the high priest Herihor to fetch cedar for Amun's barque.", "city": "thebes"},
+    {"year": -1076, "place": "Tanis", "lat": 30.98, "lon": 31.88, "note": "Smendes, ruler of the north, puts him on a Syrian ship.", "by": "river"},
+    {"year": -1075, "place": "Dor", "lat": 32.61, "lon": 34.92, "note": "A sailor runs off with his silver; the prince of the Tjeker will not help.", "by": "sea"},
+    {"year": -1075, "place": "Tyre", "lat": 33.27, "lon": 35.2, "note": "He seizes silver from a Tjeker ship in return.", "by": "sea", "city": "tyre"},
+    {"year": -1075, "place": "Byblos", "lat": 34.12, "lon": 35.65, "note": "Prince Zakar-Baal makes him wait a month a day and asks for payment first: Egypt's word is no longer enough.", "by": "sea", "city": "byblos"},
+    {"year": -1074, "place": "Alashiya", "lat": 34.92, "lon": 33.63, "note": "Driven by the wind to Cyprus, where the queen Hatiba saves him from a mob. The story ends here.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "cyprus", "level": 3, "homeKnows": -1074, "confidence": "low", "note": "Alashiya and its queen"},
+    {"region": "levant", "level": 4, "homeKnows": -1074, "confidence": "medium", "note": "The Phoenician ports, where Egypt is no longer obeyed"}
+  ]
+}

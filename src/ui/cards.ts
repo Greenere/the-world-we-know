@@ -3,7 +3,7 @@ import {dataUrl, loadPictures, nameFor, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
-import {formatRange, formatYear, mainScale} from '../time';
+import {formatRange, formatYear, mainScale, START} from '../time';
 import type {City, Depiction, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
@@ -225,7 +225,7 @@ export class Cards {
       conf.hidden = state.level === 0;
       swap(conf, String(state.conf), () => [t('{level} confidence', {level: t(CONFIDENCE_NAMES[state.conf])})]);
       if (now) {
-        const x = ribbonX(Math.max(-500, y));
+        const x = ribbonX(Math.max(START, y));
         now.setAttribute('x1', String(x));
         now.setAttribute('x2', String(x));
       }
@@ -234,19 +234,37 @@ export class Cards {
   }
 
   private events(r: Region, vp: VpId): Node[] {
-    const rows: {e: RegionEvent; shared: boolean}[] = [];
+    const y = (e: RegionEvent) => (typeof e.y === 'number' ? e.y : (e.y[0] + e.y[1]) / 2);
+    const rows: {e: RegionEvent; shared: boolean; via?: VpId; at?: number}[] = [];
     for (const e of r.events[vp] ?? []) rows.push({e, shared: false});
     if (vp !== 'humanity') for (const e of r.events['*'] ?? []) rows.push({e, shared: true});
-    const y = (e: RegionEvent) => (typeof e.y === 'number' ? e.y : (e.y[0] + e.y[1]) / 2);
-    rows.sort((a, b) => y(a.e) - y(b.e));
-    return rows.map(({e, shared}) => {
+    // A community also knows what its members know: what each brought when it joined, and all it learned after.
+    for (const {viewpoint, from} of this.data.vp[vp].community?.members ?? []) {
+      const evs = r.events[viewpoint] ?? [];
+      const before = evs.filter(e => y(e) < from).pop();
+      if (before && before.level > 0) rows.push({e: before, shared: false, via: viewpoint, at: from});
+      for (const e of evs) if (y(e) >= from) rows.push({e, shared: false, via: viewpoint});
+    }
+    rows.sort((a, b) => (a.at ?? y(a.e)) - (b.at ?? y(b.e)));
+    return rows.map(({e, shared, via, at}) => {
       const j = e.journey ? this.data.journeyById.get(e.journey) : null;
+      const member = via ? this.data.vp[via] : null;
       return h(
         'li.event',
-        h('span.event-year', formatRange(e.y)),
+        h('span.event-year', at !== undefined ? formatYear(at) : formatRange(e.y)),
         h(
           'div.event-body',
-          h('div.event-level', h('span.level-dot', {style: `--a:${LEVEL_ALPHA[e.level]}`}), e.cap ? t('held at {level}', {level: isZh() ? levelName(vp, e.level) : levelName(vp, e.level).toLowerCase()}) : levelName(vp, e.level), shared ? h('span.shared', t(' · shared modern map')) : null),
+          h(
+            'div.event-level',
+            h('span.level-dot', {style: `--a:${LEVEL_ALPHA[e.level]}`}),
+            e.cap ? t('held at {level}', {level: isZh() ? levelName(vp, e.level) : levelName(vp, e.level).toLowerCase()}) : levelName(vp, e.level),
+            shared ? h('span.shared', t(' · shared modern map')) : null,
+            member
+              ? h('span.shared.via', {style: `--via:${member.color}`}, at !== undefined
+                ? t('{vp} brings it, known since {year}', {vp: vpName(this.data, via!), year: formatRange(e.y)})
+                : t('through {vp}', {vp: vpName(this.data, via!)}))
+              : null,
+          ),
           e.note ? h('div.event-note', tx.note(e.note)) : null,
           j ? h('button.linkish.event-journey', {type: 'button', onclick: () => this.actions.openJourney(j.id)}, tx.journey(j.id, 'name', j.name)) : null,
           h('div.event-src', {title: this.data.sources[e.source]?.citation ?? e.source}, shortCitation(this.data.sources, e.source), ` · ${t(CONFIDENCE_NAMES[e.conf])}`),
@@ -270,25 +288,26 @@ export class Cards {
         const [yy, lvl] = hist[k];
         if (lvl === 0) continue;
         const end = k + 1 < hist.length ? hist[k + 1][0] : 2026;
-        const a = X(Math.max(-500, yy));
+        const a = X(Math.max(START, yy));
         const b = X(end);
         if (b <= a) continue;
         parts.push(`<rect x="${a}" y="${y0}" width="${b - a}" height="12" rx="1.5" fill="${vpd.color}" fill-opacity="${LEVEL_ALPHA[lvl]}"/>`);
       }
       const first = hist.find(([, l]) => l > 0);
       if (first) {
-        const when = t(first[0] < -500 ? 'since {year}' : 'first known {year}', {year: formatYear(first[0])});
+        const when = t(first[0] < START ? 'since {year}' : 'first known {year}', {year: formatYear(first[0])});
         parts.push(`<title>${vpName(this.data, vp)}: ${when}</title>`);
       }
     });
     parts.push(`<line x1="${L}" x2="${L}" y1="0" y2="${H - 14}" class="rb-now"/>`);
     for (const [y, label] of [
+      [START, '2000 BCE'],
       [-500, '500 BCE'],
       [1000, '1000'],
       [1500, '1500'],
       [1900, '1900'],
     ] as [number, string][]) {
-      parts.push(`<text x="${X(y)}" y="${H - 2}" class="rb-axis" text-anchor="${y === -500 ? 'start' : 'middle'}">${label}</text>`);
+      parts.push(`<text x="${X(y)}" y="${H - 2}" class="rb-axis" text-anchor="${y === START ? 'start' : 'middle'}">${label}</text>`);
     }
     const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     el.setAttribute('viewBox', `0 0 ${W} ${H}`);

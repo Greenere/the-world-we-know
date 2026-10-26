@@ -11,16 +11,32 @@ import {icons, sealSvg} from './icons';
 /** The viewpoints always in the bar; the others are a tap away in the picker, and join the bar while chosen. */
 const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
 
-/** The picker's groups, by where each viewpoint's home was. */
+/** The picker's groups: the knowledge communities that span many lands, then each viewpoint by where its home was. */
 const GROUPS: [string, VpId[]][] = [
-  ['Europe and the Mediterranean', ['europe']],
-  ['Asia', ['china', 'india', 'japan']],
-  ['The Near East', ['arabia', 'persia', 'egypt', 'islam']],
-  ['Africa', ['sahel']],
+  ['Knowledge communities', ['islam', 'humanity']],
+  ['Europe', ['europe']],
+  ['Asia', ['arabia', 'persia', 'india', 'china', 'japan']],
+  ['Africa', ['egypt', 'maghreb', 'sahel']],
   ['The Americas', ['mexica', 'inca']],
   ['Oceania', ['polynesia']],
-  ['Everyone', ['humanity']],
 ];
+
+/** The second line of a picker entry: who is in a knowledge community, or which one a viewpoint joins. */
+function pickerLine(data: AppData, id: VpId): string {
+  const vp = data.vp[id];
+  const name = (v: VpId) => tx.viewpoint(v, 'name', data.vp[v].name);
+  if (vp.community) return t('Shared by {members}', {members: vp.community.members.map(m => name(m.viewpoint)).join(t(', '))});
+  if (vp.special) return t('When people first arrived');
+  // The long name only when it says more than the name (not "India / India").
+  const long = vp.longName !== vp.name ? tx.viewpoint(id, 'longName', vp.longName) : '';
+  const of = ALL_VPS.find(c => data.vp[c].community?.members.some(m => m.viewpoint === id));
+  const m = of && data.vp[of].community!.members.find(x => x.viewpoint === id)!;
+  if (of && m) {
+    const joined = t('in the {community} from {year}', {community: name(of), year: formatYear(m.from)});
+    return long ? `${long} · ${joined}` : joined.charAt(0).toUpperCase() + joined.slice(1);
+  }
+  return long;
+}
 
 export class TopBar {
   el: HTMLElement;
@@ -74,11 +90,7 @@ export class TopBar {
               h(
                 'span.vp-picker-text',
                 h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)),
-                h('span.vp-picker-long', vp.joins
-                  ? t('until {year}, then the {to}', {year: formatYear(vp.joins.year), to: tx.viewpoint(vp.joins.viewpoint, 'longName', data.vp[vp.joins.viewpoint].longName)})
-                  : vp.before
-                    ? t('from {year}; before that, {from}', {year: formatYear(vp.before.year), from: tx.viewpoint(vp.before.viewpoint, 'name', data.vp[vp.before.viewpoint].name)})
-                    : tx.viewpoint(id, 'longName', vp.longName)),
+                h('span.vp-picker-long', pickerLine(data, id)),
               ),
             );
             this.pickerItems.set(id, b);
@@ -244,7 +256,10 @@ export class TopBar {
     const showNote =
       !s.compare &&
       vp.startNote &&
-      ((vp.id === 'islam' && s.year < 622) || vp.id === 'polynesia' || (vp.id === 'humanity' && s.year < 1500));
+      ((vp.community && s.year < Math.min(...vp.community.members.map(m => m.from))) ||
+        (vp.noteUntil !== undefined && s.year < vp.noteUntil) ||
+        vp.id === 'polynesia' ||
+        (vp.id === 'humanity' && s.year < 1500));
     this.note.textContent = showNote ? tx.viewpoint(vp.id, 'startNote', vp.startNote!) : '';
     this.note.hidden = !showNote;
   }

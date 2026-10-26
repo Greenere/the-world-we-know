@@ -52,8 +52,8 @@ export const zhUi: Record<string, string> = {
   Viewpoints: '视角',
   'A viewpoint is a culture’s shared knowledge, not one person’s. Knowledge counts once it reaches home: through a returning envoy, a merchant’s report, a book or a map. After about 1900 the cultural viewpoints share one map, and fog marks the last places no one had reached: the poles, the highest peak, the deepest sea, and space.':
     '视角是一种文化共有的知识，而不是某一个人的见闻。知识要传回故乡才算数：通过归来的使节、商人的报告、一本书或一幅地图。大约1900年以后，各文化视角共用同一幅地图，迷雾只标出最后无人到达的地方：两极、最高的山峰、最深的海沟，以及太空。',
-  'Twelve cultural viewpoints: Europe, China, Persia, Egypt, Arabia, the Islamic world, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. Persia, Egypt and Arabia join the Islamic world in the seventh century, and the map follows it from then on. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.':
-    '十二个文化视角：欧洲、中国、波斯、埃及、阿拉伯、伊斯兰世界、波利尼西亚、印度、日本、西非萨赫勒、墨西加与印加。波斯、埃及与阿拉伯在七世纪并入伊斯兰世界，此后地图跟随伊斯兰世界。没有视角会终结：在被征服或殖民统治之后，一个视角仍跟随它自己人民的知识，由《佛罗伦萨手抄本》的纳瓦作者或安第斯编年史家瓜曼·波马这样的学者写下。',
+  'Thirteen cultural viewpoints: Europe, China, the Islamic world, Arabia, Egypt, Persia, the Maghreb, Polynesia, India, Japan, the West African Sahel, the Mexica and the Inca. The Islamic world is a knowledge community: Arabia, Egypt, Persia and the Maghreb each share what they know from the year they join it, and each still keeps its own view. No viewpoint ends: after conquest or colonial rule, a viewpoint follows its own people’s knowledge, written by scholars such as the Nahua authors of the Florentine Codex or the Andean chronicler Guamán Poma.':
+    '十三个文化视角：欧洲、中国、伊斯兰世界、阿拉伯、埃及、波斯、马格里布、波利尼西亚、印度、日本、西非萨赫勒、墨西加与印加。伊斯兰世界是一个知识共同体：阿拉伯、埃及、波斯与马格里布自加入之年起分享各自所知，同时各自保有自己的视角。没有视角会终结：在被征服或殖民统治之后，一个视角仍跟随它自己人民的知识，由《佛罗伦萨手抄本》的纳瓦作者或安第斯编年史家瓜曼·波马这样的学者写下。',
   'The Humanity layer is different: it shows when modern humans first arrived. We say “first known to” a viewpoint, never “discovered”. Someone was usually already there.':
     '“人类”一层与众不同：它显示现代人类最早抵达各地的时间。我们说某地“最早为某个视角所知”，从不说“被发现”——那里通常早已有人居住。',
   Keys: '快捷键',
@@ -226,17 +226,19 @@ export const zhUi: Record<string, string> = {
   'All viewpoints': '全部视角',
   'More viewpoints': '更多视角',
   More: '更多',
-  'Europe and the Mediterranean': '欧洲与地中海',
+  Europe: '欧洲',
   Asia: '亚洲',
   Africa: '非洲',
   'The Americas': '美洲',
   Oceania: '大洋洲',
-  Everyone: '全人类',
 
-  'The Near East': '近东',
-  '{from} joins {to}': '{from}并入{to}',
-  'until {year}, then the {to}': '至{year}，此后并入{to}',
-  'from {year}; before that, {from}': '始于{year}；此前为{from}',
+  'Knowledge communities': '知识共同体',
+  'Shared by {members}': '由{members}共享',
+  ', ': '、',
+  'in the {community} from {year}': '{year}起属于{community}',
+  'When people first arrived': '人类最早抵达之时',
+  'through {vp}': '经由{vp}',
+  '{vp} brings it, known since {year}': '由{vp}带来，{year}起已知',
 
   // Journeys list tools
   'Find a journey, a traveller or a place…': '查找旅程、旅人或地点……',

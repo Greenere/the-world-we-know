@@ -1,0 +1,21 @@
+{
+  "id": "elissa",
+  "name": "Elissa founds Carthage",
+  "traveler": "Elissa (Dido) of Tyre",
+  "years": "814 BCE",
+  "kind": "group voyage",
+  "viewpoint": "maghreb",
+  "summary": "A princess of Tyre flees her brother, King Pygmalion, with a band of nobles. They stop in Cyprus and sail on to Africa, where she buys as much land as an oxhide will cover, cuts it into strips and founds Qart-hadasht, the New City. The story is legend; the date fits the archaeology.",
+  "source": "aubet",
+  "confidence": "low",
+  "stops": [
+    {"year": -814, "place": "Tyre", "lat": 33.27, "lon": 35.2, "note": "Elissa's husband is murdered by her brother; she gathers his treasure and her followers.", "city": "tyre"},
+    {"year": -814, "place": "Kition", "lat": 34.92, "lon": 33.63, "note": "In Cyprus the priest of Astarte joins them, with eighty young women."},
+    {"waypoint": true, "lat": 34.0, "lon": 26.0},
+    {"waypoint": true, "lat": 36.0, "lon": 15.0},
+    {"year": -814, "place": "Carthage", "lat": 36.85, "lon": 10.32, "note": "The oxhide is cut into one long strip around the hill of Byrsa. Qart-hadasht, the New City.", "city": "carthage"}
+  ],
+  "informs": [
+    {"region": "ifriqiya", "level": 4, "homeKnows": -813, "confidence": "medium", "note": "The New City in Africa"}
+  ]
+}

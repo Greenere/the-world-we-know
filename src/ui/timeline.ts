@@ -24,7 +24,13 @@ export interface MomentRef extends Moment {
 
 export function momentsFor(data: AppData, s: State): MomentRef[] {
   const out: MomentRef[] = [];
-  for (const vp of s.vps) for (const m of data.vp[vp].moments) out.push({...m, vp});
+  for (const vp of s.vps) {
+    for (const m of data.vp[vp].moments) out.push({...m, vp});
+    // A community marks the year each member joins with that member's own moment.
+    for (const {viewpoint, from} of data.vp[vp].community?.members ?? []) {
+      for (const m of data.vp[viewpoint].moments) if (m.year === from && !out.some(o => o.label === m.label)) out.push({...m, vp: viewpoint});
+    }
+  }
   return out.sort((a, b) => a.year - b.year);
 }
 

@@ -41,7 +41,7 @@ NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/
 NE_FILES = ["ne_50m_land", "ne_50m_lakes", "ne_50m_rivers_lake_centerlines", "ne_50m_antarctic_ice_shelves_polys"]
 
 RES = 3
-MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia"]
+MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb"]
 ALL_VPS = MAIN_VPS + ["humanity"]
 CONFIDENCE = {"high": 0, "medium": 1, "low": 2}
 BODIES = {"orbit", "moon"}
@@ -456,6 +456,10 @@ class Event:
     journey: str | None = field(compare=False, default=None)
 
 
+def vp_by_id(viewpoints: list[dict], vp: str) -> dict:
+    return next((v for v in viewpoints if v["id"] == vp), {})
+
+
 def load_sources() -> dict[str, dict]:
     out = {}
     for row in read_csv(DATA / "sources.csv"):
@@ -569,8 +573,9 @@ def evaluate(timelines: list[Timeline], t: float) -> tuple[int, int, bool]:
     return floor_level, floor_conf, False
 
 
-def cell_timelines(vp: str, member, regions, events, grid: Grid):
-    """Per cell, a list of change points [(year, level, conf)] for one viewpoint."""
+def cell_timelines(vp: str, member, regions, events, grid: Grid, raw: bool = False):
+    """Per cell, a list of change points [(year, level, conf)] for one viewpoint. `raw` skips the coast rule
+    and returns (year, level, conf, capped) with whether an exact row decides each point."""
     tls_by_region: dict[int, list[Timeline]] = {}
     for r in regions:
         tls = []
@@ -588,17 +593,47 @@ def cell_timelines(vp: str, member, regions, events, grid: Grid):
         if sig not in cache:
             tls = [tl for i in sig for tl in tls_by_region[i]]
             years = sorted({y for tl in tls for y in tl.years})
-            changes, prev, any_cap = [], (0, 0), False
+            changes, prev, any_cap = [], None, False
             for y in years:
                 lvl, conf, capped = evaluate(tls, y)
                 any_cap |= capped
-                if (lvl, conf) != prev:
-                    changes.append((y, lvl, conf))
-                    prev = (lvl, conf)
+                key = (lvl, conf, capped) if raw else (lvl, conf)
+                if key != (prev or (0, 0, False)[:len(key)]):
+                    changes.append((y, lvl, conf, capped) if raw else (y, lvl, conf))
+                    prev = key
             cache[sig] = (changes, any_cap)
         changes, any_cap = cache[sig]
         out.append(changes)
         has_cap[c] = any_cap
+    if raw:
+        return out, has_cap
+    return coast_rule(out, grid, has_cap)
+
+
+def community_timelines(vp: str, members: list[dict], fog_tls: dict, member, regions, events, grid: Grid):
+    """A knowledge community (the Islamic world): its own rows, plus whatever each member knows from the
+    year it joins. What one member brings stays known to all, unless the community's own exact ('=n') row
+    says it was lost."""
+    own, has_cap = cell_timelines(vp, member, regions, events, grid, raw=True)
+    out = []
+    for c in range(len(grid.cells)):
+        tls = [(m["from"], fog_tls[m["viewpoint"]][c]) for m in members]
+        years = sorted({y for y, *_ in own[c]} | {max(y, start) for start, tl in tls for y, *_ in tl} | {start for start, tl in tls if tl})
+        held = [(0, 0)] * len(tls)
+        changes, prev, k = [], (0, 0), 0
+        cur = (0, 0, False)
+        for y in years:
+            while k < len(own[c]) and own[c][k][0] <= y:
+                cur = own[c][k][1:]
+                k += 1
+            for i, (start, tl) in enumerate(tls):
+                if y >= start:
+                    held[i] = max(held[i], level_at(tl, y))
+            best = (cur[0], cur[1]) if cur[2] else max([(cur[0], cur[1]), *held])
+            if best != prev:
+                changes.append((y, best[0], best[1]))
+                prev = best
+        out.append(changes)
     return coast_rule(out, grid, has_cap)
 
 
@@ -1114,11 +1149,15 @@ def main() -> int:
     vp_ids = {v["id"] for v in viewpoints}
     if vp_ids != set(ALL_VPS):
         fail(f"viewpoints.json must define exactly {ALL_VPS}")
+    communities = {}
     for v in viewpoints:
-        # A forerunner joins another viewpoint in a given year (Persia into the Islamic world in 651).
-        for key in ("joins", "before"):
-            if key in v and (v[key].get("viewpoint") not in vp_ids or not isinstance(v[key].get("year"), int)):
-                fail(f"viewpoints.json: {v['id']} {key} must name a viewpoint and a year")
+        # A knowledge community shares what its members know from the year each joins (the Islamic world).
+        if "community" in v:
+            ms = v["community"].get("members", [])
+            if not ms or any(m.get("viewpoint") not in MAIN_VPS or m.get("viewpoint") == v["id"] or "community" in vp_by_id(viewpoints, m.get("viewpoint"))
+                             or not isinstance(m.get("from"), int) for m in ms):
+                fail(f"viewpoints.json: {v['id']} community members must be other viewpoints, each with a 'from' year")
+            communities[v["id"]] = ms
         if v["id"] in MAIN_VPS and len(v.get("moments", [])) < 8:
             fail(f"viewpoints.json: {v['id']} needs at least 8 key moments")
         for m in v.get("moments", []):
@@ -1147,8 +1186,11 @@ def main() -> int:
 
     print("  fog …")
     fog_tls = {}
-    for vp in ALL_VPS:
-        tls = cell_timelines(vp, member, regions, events, grid)
+    for vp in sorted(ALL_VPS, key=lambda v: v in communities):
+        if vp in communities:
+            tls = community_timelines(vp, communities[vp], fog_tls, member, regions, events, grid)
+        else:
+            tls = cell_timelines(vp, member, regions, events, grid)
         fog_tls[vp] = tls
         doc, pats = encode_fog(vp, tls)
         sizes[f"fog/{vp}.json"] = write_json(f"fog/{vp}.json", doc)

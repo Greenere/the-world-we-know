@@ -1,0 +1,24 @@
+{
+  "id": "kolaios",
+  "name": "Kolaios is blown to Tartessos",
+  "traveler": "Kolaios of Samos",
+  "years": "c. 638 BCE",
+  "kind": "sailor",
+  "viewpoint": "europe",
+  "summary": "A Samian merchant bound for Egypt is driven west by an east wind, all the way through the Pillars of Heracles to Tartessos, a market no Greek had traded with. He came home with the richest cargo any Greek had ever carried, and dedicated a tenth of it at the temple of Hera.",
+  "source": "herodotus",
+  "confidence": "medium",
+  "stops": [
+    {"year": -638, "place": "Samos", "lat": 37.69, "lon": 26.95, "note": "Bound for Egypt."},
+    {"year": -638, "place": "Platea", "lat": 32.4, "lon": 23.1, "note": "An island off Libya, where he leaves supplies for colonists from Thera."},
+    {"waypoint": true, "lat": 34.5, "lon": 15.0},
+    {"waypoint": true, "lat": 37.3, "lon": 2.0},
+    {"waypoint": true, "lat": 36.0, "lon": -5.4},
+    {"year": -638, "place": "Tartessos", "lat": 37.25, "lon": -6.95, "note": "An east wind that will not stop carries him through the Pillars to Tartessos, rich in silver."},
+    {"year": -637, "place": "Samos", "lat": 37.69, "lon": 26.95, "note": "Home with sixty talents; a bronze cauldron with griffin heads is made for Hera's temple."}
+  ],
+  "informs": [
+    {"region": "iberia", "level": 2, "homeKnows": -636, "confidence": "medium", "note": "Tartessos and its silver"},
+    {"region": "north-atlantic-east", "level": 1, "homeKnows": -636, "confidence": "low"}
+  ]
+}
