@@ -9,6 +9,7 @@ import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../t
 import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons} from './icons';
+import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
 
@@ -56,6 +57,7 @@ export class Cards {
   private key = '';
   /** Updates the year-dependent parts of the current card. */
   private live: ((s: State) => void) | null = null;
+  private scenePlate: Plate | null = null;
   private lightbox: HTMLElement | null = null;
   /** For each journey with pictures, the stops that have a scene (once loaded). */
   private sceneStops = new Map<string, number[]>();
@@ -100,6 +102,11 @@ export class Cards {
     this.update(this.store.state);
   }
 
+  /** Hold travel while the visible stop's sketchbook pages are being read. */
+  advanceSketch(dt: number, s: State): boolean {
+    return s.playing && !this.el.hidden && !!this.scenePlate?.advance(dt, s.progress, s.speed);
+  }
+
   /** `journey:stop` of the scene for where the traveller is now, or null when the journey has no pictures. */
   private sceneKey(s: State): string | null {
     const j = s.journey ? this.data.journeyById.get(s.journey) : null;
@@ -129,6 +136,7 @@ export class Cards {
     if (!subject) {
       this.key = '';
       this.live = null;
+      this.scenePlate = null;
       return;
     }
     const key = `${subject}|${s.vps.join()}`;
@@ -136,6 +144,7 @@ export class Cards {
       const sameSubject = this.key.split('|')[0] === subject;
       this.key = key;
       this.live = null;
+      this.scenePlate = null;
       let nodes: Node[] = [];
       if (subject.startsWith('scene:')) {
         nodes = this.scenes(this.data.journeyById.get(s.journey!)!, s);
@@ -456,12 +465,7 @@ export class Cards {
       {
         kind: 'journey',
         id: j.id,
-        pick: (items, at) => {
-          const k = Math.floor(at + 1e-6);
-          let best = items[0];
-          for (const x of items) if ((x.stop ?? 0) <= k) best = x;
-          return best;
-        },
+        pick: (items, at) => journeySceneAt(items, at),
         label: d => shortPlace(tx.stop(j.id, d.stop ?? 0, 'place', d.place ?? '')),
         range: stopLabel,
         jump: d => this.store.set({progress: d.stop ?? 0, playing: false}),
@@ -474,6 +478,7 @@ export class Cards {
       (d, title, caption, range) => this.openLightbox(d, title, caption, range),
     );
     plate.el.classList.add('scene');
+    this.scenePlate = plate;
     this.live = st => plate.show(st.progress);
     return [
       h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), t('From the sketchbook')),
@@ -578,10 +583,19 @@ class Plate {
   private text: HTMLElement;
   private src: HTMLElement;
   private strip: HTMLElement;
+  private pager: HTMLElement;
+  private previousPage: HTMLElement;
+  private nextPage: HTMLElement;
+  private pageCount: HTMLElement;
   private items: Depiction[] | null = null;
   private shown: Depiction | null = null;
+  private selected: Depiction | null = null;
   private at = NaN;
   private token = 0;
+  private playback = new JourneySketchPlayback<Depiction>();
+  private ready = false;
+  private loadingTime = 0;
+  private loaded = false;
 
   constructor(
     private data: AppData,
@@ -597,9 +611,14 @@ class Plate {
     this.cap = h('figcaption.plate-cap');
     this.text = h('p.plate-text');
     this.strip = h('div.plate-eras', {role: 'group', 'aria-label': t(order.kind === 'city' ? 'Other eras' : 'Other scenes')});
+    this.previousPage = h('button', {type: 'button', 'aria-label': t('Previous sketch'), title: t('Previous sketch'), onclick: () => this.turnPage(-1)}, '←');
+    this.nextPage = h('button', {type: 'button', 'aria-label': t('Next sketch'), title: t('Next sketch'), onclick: () => this.turnPage(1)}, '→');
+    this.pageCount = h('span', {'aria-live': 'polite'});
+    this.pager = h('div.plate-pages', {hidden: true}, this.previousPage, this.pageCount, this.nextPage);
     this.src = h('p.plate-src');
-    this.el = h('figure.plate.loading', this.frame, this.cap, this.text, this.strip, this.src);
+    this.el = h('figure.plate.loading', this.frame, this.pager, this.cap, this.text, this.strip, this.src);
     loadPictures(data, order.kind, order.id).then(doc => {
+      this.loaded = true;
       const items = doc?.eras ?? doc?.scenes;
       if (!items?.length) {
         this.el.remove();
@@ -612,9 +631,9 @@ class Plate {
         ...items.map(x =>
           h(
             'button.plate-era-btn',
-            {type: 'button', 'data-id': x.id, title: `${this.title(x)} (${order.label(x)})`, onclick: () => order.jump(x)},
-            h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async'}),
-            h('span', order.label(x)),
+            {type: 'button', 'data-id': x.id, title: `${this.title(x)} (${order.label(x)})`, 'aria-label': `${this.title(x)} (${order.label(x)})`, onclick: () => this.select(x)},
+            h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async', loading: 'lazy'}),
+            h('span', order.kind === 'journey' ? this.title(x) : order.label(x)),
           ),
         ),
       );
@@ -634,10 +653,43 @@ class Plate {
     return tx.depiction(this.subject, d.id, 'caption', d.captions?.[this.vp] ?? d.caption, this.vp);
   }
 
+  private select(d: Depiction) {
+    this.playback.visit(d.stop ?? 0);
+    this.playback.reset(d);
+    this.selected = d;
+    this.order.jump(d);
+    // Another page at the same stop need not trigger a store update.
+    this.show(this.order.kind === 'journey' ? d.stop ?? 0 : this.at);
+  }
+
+  advance(dt: number, progress: number, speed: number): boolean {
+    if (!this.loaded) {
+      this.loadingTime += dt;
+      return this.loadingTime < 12;
+    }
+    if (!this.items) return false;
+    const result = this.playback.tick(this.items, progress, dt, speed, this.ready);
+    if (result.page && result.page !== this.shown) {
+      this.selected = result.page;
+      this.show(progress);
+    }
+    return result.hold;
+  }
+
+  private turnPage(delta: -1 | 1) {
+    if (!this.items || !this.shown) return;
+    const next = journeyPageStep(this.items, this.shown, delta);
+    if (next) this.select(next);
+  }
+
   show(at: number) {
     this.at = at;
+    this.playback.visit(at);
     if (!this.items) return;
-    const d = this.order.pick(this.items, at);
+    const d = this.order.kind === 'journey'
+      ? journeySceneAt(this.items, at, this.selected)
+      : this.order.pick(this.items, at);
+    if (this.selected && this.selected !== d) this.selected = null;
     this.el.hidden = !d;
     this.order.shown?.(d, at);
     if (!d || d === this.shown) return;
@@ -646,6 +698,11 @@ class Plate {
     const range = this.order.range(d);
     const caption = this.caption(d);
     this.frame.setAttribute('aria-label', t('Enlarge: {title}', {title: this.title(d)}));
+    const pages = this.order.kind === 'journey' ? this.items.filter(x => x.stop === d.stop) : [];
+    this.pager.hidden = pages.length < 2;
+    this.pageCount.textContent = pages.length > 1 ? t('Sketch {n} of {total}', {n: pages.indexOf(d) + 1, total: pages.length}) : '';
+    this.previousPage.toggleAttribute('disabled', pages.indexOf(d) <= 0);
+    this.nextPage.toggleAttribute('disabled', pages.indexOf(d) >= pages.length - 1);
     swap(this.cap, d.id, () => [h('span.plate-era', this.title(d)), h('span.plate-range', range)]);
     swap(this.text, `${d.id}|${this.vp}`, () => [caption]);
     swap(this.src, d.id, () => [
@@ -656,6 +713,12 @@ class Plate {
       const on = b.dataset.id === d.id;
       b.classList.toggle('active', on);
       b.setAttribute('aria-pressed', String(on));
+      if (on) {
+        // Keep the current page visible in long sketchbooks without scrolling the card or document.
+        const box = b.getBoundingClientRect();
+        const strip = this.strip.getBoundingClientRect();
+        this.strip.scrollLeft += box.left - strip.left - (this.strip.clientWidth - box.width) / 2;
+      }
     }
     this.crossfade(d, first);
     // Warm the neighbours so playing on into the next picture doesn't wait for the network.
@@ -664,11 +727,13 @@ class Plate {
   }
 
   private crossfade(d: Depiction, first: boolean) {
+    this.ready = false;
     const token = ++this.token;
     const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${this.title(d)}, ${this.order.range(d)}: ${t('imagined sketch')}`, decoding: 'async'});
     const tag = d.placeholder ? h('span.plate-tag', t('Placeholder')) : null;
     const reveal = () => {
       if (token !== this.token) return;
+      this.ready = true;
       for (const old of this.frame.querySelectorAll('.plate-tag')) old.remove();
       if (tag) this.frame.append(tag);
       // Fade over the picture currently on top; anything older is already hidden beneath it.

@@ -23,6 +23,7 @@ jobs:
           cache: npm
       - uses: astral-sh/setup-uv@v6
       - run: npm ci
+      - run: npm test
       # Validates every source, confidence and journey, then writes public/data.
       - run: npm run data
       - run: npm run build

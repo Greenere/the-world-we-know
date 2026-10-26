@@ -98,7 +98,7 @@ data/depictions/
 | Field | Meaning |
 |---|---|
 | `id` | Short scene id (`gnomon`), unique within the journey |
-| `stop`, `place` | The stop the scene shows: its index among the journey's stops, counting from 0 and skipping waypoints, and its `place`, which the build checks against the journey file |
+| `stop`, `place` | Multiple scenes may share a stop; their authored order gives the page order within that stop. The stop the scene shows: its index among the journey's stops, counting from 0 and skipping waypoints, and its `place`, which the build checks against the journey file |
 | `title`, `caption`, `captions`, `sources`, `confidence`, `prompt` | As for a city |
 | `ref` | Optional: another scene whose accepted picture is attached as a reference for style and for the traveller's face, without copying its composition. Usually every scene refers to the first one |
 | `traveller` | Optional, `false` for a page of what the party saw (a harbour, a fortress, a market) with none of the party in it. Without it the model tends to copy the reference page's people into the scene |
@@ -159,6 +159,18 @@ They took 14 calls in all. Two eras needed a sharper prompt: the tidal island fi
 These are illustrations of a poem, not reconstructions of observed events. Use plausible late Bronze Age ships, clothing and buildings for the material setting, while keeping the supernatural episodes recognisably literary. The character description and the departure page provide continuity; vary the action and composition at each stop. Three observation pages omit the main character: the Laestrygonian harbour, Elpenor’s grave and the strait of Scylla and Charybdis. They set `traveller: false` and use no character reference. In particular, avoid medieval Troy, later multi-bank triremes, mermaid Sirens presented as Homer’s description, and an invented modern botanical identification for the lotus.
 
 The accepted pages were made with the built-in image generation tool. Their adjacent JSON files record the prompts and method. The normal data build produces the thumbnail, card and enlarged WebP sizes and attaches the sketchbook automatically; open `?journey=odyssey` to follow it.
+
+### Multiple pages at a journey stop
+
+Journey scenes are sorted by `stop`, preserving their authored order within each stop. Several pages can share one stop and must each have a unique `id`. Playback holds at an illustrated stop and shows every page in authored order, including the first and final stops. Each decoded image receives at least eight seconds at normal speed (longer for longer captions), with a four-second floor at faster speeds. Pause preserves reading time; failed image loads have a bounded wait. Hidden cards do not hold travel. Clicking a thumbnail selects that page and pauses at its stop, even when the traveller is already there; the choice stays visible until a different illustrated stop is reached. Multi-page stops display a page counter and previous/next controls that stay within the stop, including on phones where the thumbnail strip is hidden. Existing one-page-per-stop sketchbooks keep the same behaviour.
+
+### Ibn Battuta: 69 pages across 54 stops
+
+`journey/ibnbattuta/subject.json` alternates fourteen scenes featuring the traveller with architectural views, landscapes, local work, transport, hospitality and close object studies. Cairo, Damascus, Tabriz, Jeddah, Mogadishu, Konya, the Golden Horde camp, Delhi, Calicut, the Maldives and Sumatra have companion pages at the same stop. `traveller: false` deliberately excludes a recognisable Ibn Battuta from the observation pages.
+
+Captions prefer plain third-person paraphrases of the traveller’s recorded descriptions. For contextual scenes, use natural wording such as “he would have found”, supported by the place and period. Avoid second-person invitations and lyrical embellishment. Each scene records an editorial `evidence` note identifying its basis and passage; the existing Imagined sketch credit identifies the illustrations. Substantive route uncertainty belongs in the journey summary, confidence metadata and [research audit](ibn-battuta-sketchbook-research.md). Object arrangements, viewpoints and weather remain interpretive; Mali does not assert an exact capital site. The final Fez page describes dictation after the last route stop, with completion in 1355. Chinese titles and captions live in `data/i18n/zh/depictions.json`; adjacent generation records preserve the complete built-in-tool prompts.
+
+Do not introduce later landmarks: no Ottoman monuments in Byzantine Constantinople, no Timurid Registan in Samarkand, no Mughal court in Delhi, no Portuguese forts in Mombasa or Kilwa, and no modern sanctuary expansions in Medina or Mecca. Alternate broad, middle-distance and close views rather than repeating the same traveller-centred composition.
 
 ## 5. Reviewing a picture
 

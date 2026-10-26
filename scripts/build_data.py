@@ -1004,10 +1004,8 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
                 if a.get("to", math.inf) >= b["from"]:
                     fail(f"{where}: eras {a['id']} and {b['id']} overlap in time")
         else:
+            # Python's stable sort preserves authored page order within each stop.
             items.sort(key=lambda r: r["stop"])
-            for a, b in zip(items, items[1:]):
-                if a["stop"] == b["stop"]:
-                    fail(f"{where}: scenes {a['id']} and {b['id']} are at the same stop")
         if items:
             write_json(f"depictions/{kind}/{sid}.json", {"kind": kind, "id": sid, list_key: items})
             written.add(out_root / kind / f"{sid}.json")

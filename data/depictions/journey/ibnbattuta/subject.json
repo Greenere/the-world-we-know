@@ -1,0 +1,1192 @@
+{
+  "traveller": "Ibn Battuta, a North African Moroccan scholar with warm olive-brown skin, an oval face, dark attentive eyes and a neatly kept dark beard; plain cream turban, undyed linen tunic and a muted brown wool cloak, simple leather shoes. Age twenty-one in1325, gradually older through the journey, with greying beard by1355. Keep him a modest human presence, never a generic royal portrait.",
+  "scenes": [
+    {
+      "id": "departure",
+      "stop": 0,
+      "place": "Tangier",
+      "title": "Leaving Tangier",
+      "caption": "In 1325, he left Tangier to make the pilgrimage to Mecca and visit Medina. He recalled setting out without a companion and finding the separation from his parents difficult.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate view from inside a modest doorway, parents in shadow, young Ibn Battuta turning back while lifting a small travel bundle, bright Tangier lane beyond. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Departure from Tangier; Gibb selections, pp. 43–44."
+      }
+    },
+    {
+      "id": "bijaya",
+      "stop": 2,
+      "place": "Bijaya",
+      "title": "Rest beside the road",
+      "caption": "At Bijaya, he developed a fever but decided to continue. A companion advised him to sell his donkey and heavy baggage so that he could travel more lightly.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate side view in modest shaded lodging at Bijaya1325: young Moroccan traveller seated tired against wall, companion reducing travel bundle beside a clay water jug. Bright empty doorway, no sickbed melodrama. Ibn Battuta age21 cream turban brown cloak dark neat beard. Close human scale, sparse graphite.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Bijaya fever and companion’s advice; Gibb selections, pp. 43–45."
+      }
+    },
+    {
+      "id": "caravan",
+      "stop": 3,
+      "place": "Tunis",
+      "title": "A place in the caravan",
+      "caption": "In Tunis, he joined the caravan travelling to the Hijaz and was chosen as its judge. The party left in November 1325, following the North African coast toward Tripoli.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level diagonal composition through kneeling camels and bundles, local handlers checking lashings while Ibn Battuta helps lift a pack; Tunis 1325, no grand palace. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Departure of the Tunis pilgrim caravan; Gibb selections, pp. 45–46."
+      }
+    },
+    {
+      "id": "coast-road",
+      "stop": 4,
+      "place": "Tripoli",
+      "title": "The road beside the sea",
+      "caption": "He followed the coastal road toward Tripoli with the pilgrimage caravan. For part of the journey, mounted escorts and archers accompanied the travellers to protect them from raiders.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide landscape from a low rocky rise near Tripoli, narrow caravan silhouettes between pale Mediterranean and dry scrub, wind-bent vegetation, no foreground protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Coastal journey and armed escort; Gibb selections, pp. 45–46."
+      }
+    },
+    {
+      "id": "lighthouse",
+      "stop": 5,
+      "place": "Alexandria",
+      "title": "Alexandria’s lighthouse",
+      "caption": "At Alexandria, he entered the lighthouse and found one side already ruined. He described its high doorway and the wooden bridge that gave access to the interior.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Dramatic low view beside weathered huge square masonry of partly ruined Pharos, a simple raised timber access bridge and tiny visitors, broken upper masonry, Alexandria 1326. No intact gleaming classical tower, no later Qaitbay fort. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Fordham Gibb excerpt, The famous lighthouse: visits of 1326 and 1349."
+      }
+    },
+    {
+      "id": "nile-city",
+      "stop": 6,
+      "place": "Cairo",
+      "title": "Cairo from the water",
+      "caption": "Cairo impressed him with its size, crowds and traffic on the Nile. From the river, he would have seen boats carrying passengers and supplies along the city’s waterfront.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Broad view from the low bow of a riverboat toward medieval Cairo riverfront, layered modest buildings and Mamluk minarets in haze, sail edges framing sky, no Ottoman domes or modern bridges. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Cairo and Nile traffic in the account; river-level composition is contextual."
+      }
+    },
+    {
+      "id": "cairo-lane",
+      "stop": 6,
+      "place": "Cairo",
+      "title": "The city at walking pace",
+      "caption": "He described Cairo as a crowded city with many markets. In its lanes, he would have encountered food sellers, porters and residents buying their daily provisions.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Eye-level view under a cloth awning in a narrow Mamluk Cairo lane, bread seller, porter and neighbours exchanging goods, foreground hands passing bread, rich depth, no protagonist, no readable shop signs. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Cairo’s population and commerce; particular street exchange is contextual."
+      }
+    },
+    {
+      "id": "nile-rigging",
+      "stop": 6,
+      "place": "Cairo",
+      "title": "A boatman’s equipment",
+      "caption": "On the Nile, boatmen would have used wooden steering oars, fibre ropes and cloth sails. These fittings needed regular adjustment and repair during everyday river travel.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Close oblique study of an Egyptian wooden riverboat steering oar, coiled natural-fibre rope, cleat and patched linen sail edge; boatman's hands working a knot, one small separate joinery study. No people portraits, no modern hardware. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "context",
+        "passage": "Material study of medieval river transport; no particular recorded inspection."
+      }
+    },
+    {
+      "id": "damascus-court",
+      "stop": 7,
+      "place": "Damascus",
+      "title": "Shade in Damascus",
+      "caption": "In Damascus, he visited the Umayyad Mosque and admired its architecture. Its courtyard and arcades provided spaces for worship, teaching and rest within the busy city.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Architectural perspective through a dark stone arch into Umayyad Mosque courtyard circa1326, ablution fountain and a few small worshippers, restrained surviving mosaic suggestion, no Ottoman additions, no close traveller. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Description of the Damascus mosque; the courtyard viewpoint is contextual."
+      }
+    },
+    {
+      "id": "waterskins",
+      "stop": 7,
+      "place": "Damascus",
+      "title": "Water for the road",
+      "caption": "Before leaving Damascus for the Hijaz, the caravan would have prepared water and provisions for the desert. Leather waterskins could be carried on pack saddles and refilled along the route.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Sparse object page, goatskin waterskins suspended from a simple wooden pack saddle, stitching, wooden stopper and cord details, soft shadow on bare paper, small hand tightening a strap, no portrait or writing. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "context",
+        "passage": "Caravan equipment associated with the recorded Damascus–Hijaz journey."
+      }
+    },
+    {
+      "id": "medina",
+      "stop": 8,
+      "place": "Medina",
+      "title": "Approaching Medina",
+      "caption": "He travelled to Medina to visit the Prophet’s mosque and tomb, one of his purposes in leaving Morocco. The town stood among date-palm gardens in an otherwise dry landscape.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Long view across dusty approach to walled medieval Medina1326 with date palms, small arriving pilgrims; historically modest mosque silhouette, no green dome, no modern umbrella courts, no depiction of the Prophet. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Visit to Medina; the approach through its oasis is contextual."
+      }
+    },
+    {
+      "id": "first-hajj",
+      "stop": 9,
+      "place": "Mecca",
+      "title": "Among the pilgrims",
+      "caption": "He reached Mecca for his first hajj in 1326. His account describes the sanctuary, the Kaaba and the practices of the pilgrims who gathered there.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Human eye-height view from shade of a modest medieval sanctuary arcade toward Kaaba and circulating pilgrims, respectful distance, simple white pilgrimage garments, no modern multi-storey expansions or clock towers, no recognisable protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "First hajj and description of Mecca."
+      }
+    },
+    {
+      "id": "najaf",
+      "stop": 10,
+      "place": "Najaf",
+      "title": "The markets near the shrine",
+      "caption": "In Najaf, he passed through markets for food, fruit, cloth and perfumes on his way to the shrine of Ali. He also described a college where visitors received bread, meat and dates for three days.",
+      "sources": [
+        "ibn-battuta-najaf"
+      ],
+      "confidence": "medium",
+      "prompt": "Najaf1327 Iraq, eye level inside a busy but orderly narrow medieval bazaar lane approaching the shrine precinct. Foreground bread seller setting flatbreads beside a pot of cooked food and bowl of dates; visitors in plain robes, cloth merchant farther away; perspective recedes toward a modest brick courtyard gateway with restrained turquoise tile patches. No recognisable Ibn Battuta needed. Close social scene framed by cloth awning, lived-in brick shops. Do not show the later huge golden dome or gilded minarets, no Ottoman or Safavid portal, no legible writing.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Arabic Rihla, Dar al-Turath edition, p. 172: markets approaching the shrine and three-day hospitality."
+      }
+    },
+    {
+      "id": "basra",
+      "stop": 11,
+      "place": "Basra",
+      "title": "Waterways of Basra",
+      "caption": "At Basra, he travelled by a small boat toward Ubulla. He described a waterway lined with gardens and date palms, with settlements connected by boats.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Low bank-side view of Basra canal with date palms and mudbrick buildings, one laden wooden boat slipping beneath palm shadows, fishermen small and occupied,1327, no modern harbour. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Basra–Ubulla boat passage; Gibb selections, pp. 86–87."
+      }
+    },
+    {
+      "id": "isfahan-fruit",
+      "stop": 12,
+      "place": "Isfahan",
+      "title": "Fruit in Isfahan",
+      "caption": "He praised Isfahan’s apricots, quinces, grapes and melons. Although he found much of the city damaged by fighting, he described orchards, streams and pigeon towers on the approach.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "Isfahan1327 close oblique view of a fruit sellers low wooden stall, woven baskets of small yellow apricots with one split fruit and visible stone, golden quinces, bunches of grapes, one small melon. One local merchants hand weighing fruit on a simple balance. Blurred humble baked-brick bazaar wall and arch in far background, no monumental architecture, no protagonist. Fruit textures and a few loose graphite botanical studies dominate, not a lavish cornucopia. Fourteenth century Iran. No blue Safavid mosque, no modern crates or signs.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Gibb (1929), p. 91: approach to Isfahan, damage and fruit."
+      }
+    },
+    {
+      "id": "shiraz",
+      "stop": 13,
+      "place": "Shiraz",
+      "title": "An orchard outside Shiraz",
+      "caption": "He described Shiraz as a well-built city surrounded by orchards and crossed by streams. He travelled there especially to meet the scholar Majd al-Din Ismail.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "Landscape viewed through orchard branches near Shiraz1327, irrigation rill and dusty path leading to low distant brick city and modest walls, a tiny donkey walker. No protagonist, no Safavid architecture, no ornamental palace. Botanical foreground large, city small.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Shiraz and Majd al-Din; Gibb (1929), pp. 92–93."
+      }
+    },
+    {
+      "id": "baghdad",
+      "stop": 14,
+      "place": "Baghdad",
+      "title": "Baghdad across the Tigris",
+      "caption": "In Baghdad, he found inhabited quarters alongside extensive ruins. His account describes the city on both sides of the Tigris, where boats linked the riverbanks.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide view across Tigris1327, low inhabited brick quarters interspersed with ruined walls and open ground, small ferry in foreground, no fantasy intact Abbasid golden metropolis, no Ottoman skyline. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Baghdad’s surviving quarters and ruined districts in the account."
+      }
+    },
+    {
+      "id": "jewellers",
+      "stop": 15,
+      "place": "Tabriz",
+      "title": "At the jewellers’ stalls",
+      "caption": "At Tabriz, he visited the jewellers’ bazaar and was struck by the ornaments and precious stones on display. He also described the fine clothing worn by the women who came to buy there.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "View from behind a jeweller's shoulder across a low stall toward Ibn Battuta leaning in to examine a small ornament, bazaar roof receding,1327; tools visible, focus on exchange rather than posed portrait. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Tabriz jewellers’ bazaar; Gibb (1929), pp. 100–101."
+      }
+    },
+    {
+      "id": "jewellery",
+      "stop": 15,
+      "place": "Tabriz",
+      "title": "Weight and workmanship",
+      "caption": "At the jewellers’ stalls in Tabriz, balances and small tools would have been used to weigh and work precious materials. Such equipment supported the trade in the ornaments he admired.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead still-life on worn cloth: small silver ornaments, loose coloured stones, tiny balance with two pans and plain weights, jeweller's pliers, one hand steadying pan. No huge treasure pile, readable inscriptions or protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait. Leave the background as bare paper: no city, ships, water or harbour; Tabriz is inland.",
+      "traveller": false,
+      "evidence": {
+        "basis": "context",
+        "passage": "Object study associated with the recorded Tabriz bazaar; not his purchases."
+      }
+    },
+    {
+      "id": "study",
+      "stop": 16,
+      "place": "Mecca",
+      "title": "Staying to learn",
+      "caption": "After further travels, he returned to Mecca and remained there to study. Lessons and conversations with scholars were an important part of his time in the city.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet close interior1328, Ibn Battuta seated sideways on a woven mat listening to an older scholar, open manuscript angled away so no legible script, oil lamp and reed pens, strong empty wall space. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Period of study in Mecca; this particular lesson is illustrative."
+      }
+    },
+    {
+      "id": "jeddah",
+      "stop": 17,
+      "place": "Jeddah",
+      "title": "Taking ship at Jeddah",
+      "caption": "He reached Jeddah after his stay in Mecca and took ship on the Red Sea. At the port, passengers and supplies would have been transferred to vessels preparing to sail south.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "From shaded quay looking down into a wooden Indian Ocean vessel as porters lower baskets and Ibn Battuta steps down a plank, Jeddah1330, rough pale buildings, no later Ottoman houses or modern cranes. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Jeddah embarkation; particular loading scene is contextual."
+      }
+    },
+    {
+      "id": "aboard",
+      "stop": 17,
+      "place": "Jeddah",
+      "title": "A passage under sail",
+      "caption": "During the Red Sea passage, the crew would have adjusted the sail and rigging as the wind changed. He recalled difficult winds and the discomforts of this early sea journey.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "View upward from deck level beneath a triangular lateen sail, sailors' hands hauling natural-fibre rope, curved timber ribs and a narrow band of Red Sea, sparse sky, no Ibn Battuta, no European square-rigged galleon. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Red Sea passage and changing winds; sailors’ individual actions are contextual."
+      }
+    },
+    {
+      "id": "aden",
+      "stop": 18,
+      "place": "Aden",
+      "title": "Aden beneath the rock",
+      "caption": "He described Aden as a busy trading port in a hot, dry setting. Ships arrived from India, and its merchants depended on trade across the Indian Ocean.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Very wide shoreline panorama Aden1330, dark volcanic ridges dwarf low port buildings and tiny sailing craft, dusty ochre against faded-blue water, eye level from opposite shore, no modern breakwater. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Aden and its merchants; Gibb selections, pp. 109–110."
+      }
+    },
+    {
+      "id": "mogadishu-meal",
+      "stop": 19,
+      "place": "Mogadishu",
+      "title": "A guest at the meal",
+      "caption": "In Mogadishu, he was received as a guest and served several meals a day. His account gives particular attention to the large portions and the hospitality shown to visiting merchants.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Seated guest viewpoint in a shaded Somali courtyard1331, hosts arranging a communal rice dish and offering food, Ibn Battuta in profile at edge listening, local woven cotton garments, respectful social warmth, no exotic palace clichés. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Mogadishu hospitality and meals; Gibb selections, pp. 110–112."
+      }
+    },
+    {
+      "id": "serving-vessels",
+      "stop": 19,
+      "place": "Mogadishu",
+      "title": "What is set before a guest",
+      "caption": "His description of meals in Mogadishu includes rice and accompanying dishes. Bowls and shared serving vessels would have been part of the hospitality he experienced there.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Close tabletop study of a broad rice dish, fish, small bowls and a simple water vessel on a woven mat, hands setting a bowl at edge, Somali port1331; no labelled ingredients, no European cutlery or modern crockery. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Mogadishu meals; exact vessels and arrangement are contextual."
+      }
+    },
+    {
+      "id": "mombasa",
+      "stop": 20,
+      "place": "Mombasa",
+      "title": "An island’s green edge",
+      "caption": "He described Mombasa as an island with fruit trees and well-built wooden mosques. Bananas and fish were important foods, while grain had to be brought from elsewhere.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "View at tideline through overhanging tropical foliage toward a small medieval island settlement and fishermen with dugout boats, banana plants inland, Mombasa1331, no Fort Jesus or colonial stone waterfront. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Mombasa; Gibb selections, pp. 112–113."
+      }
+    },
+    {
+      "id": "kilwa",
+      "stop": 21,
+      "place": "Kilwa",
+      "title": "Kilwa from the channel",
+      "caption": "He admired Kilwa as a well-built town and praised its ruler’s generosity. Approaching by sea, he would have seen waterfront buildings and the vessels serving this trading settlement.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Broad water-level approach to Kilwa1331, low mixed timber and coral-built settlement, restrained mosque silhouette and sailing boats, clear shallows, no Portuguese fort, no giant fantasy palace, no main character. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Kilwa and its ruler; harbour viewpoint is contextual."
+      }
+    },
+    {
+      "id": "dhofar-groves",
+      "stop": 22,
+      "place": "Zafar (Dhofar)",
+      "title": "The groves outside Dhofar",
+      "caption": "Outside Dhofar, he saw banana groves, coconut palms and betel vines. He recorded the size and sweetness of the bananas, and described betel climbing on cane supports or up the palms.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Dhofar near medieval Zafar1332 southern Oman. Quiet close botanical landscape seen from a low footpath inside a cultivated coastal grove: large banana leaves and a hanging small bunch of bananas at left, slender coconut palm trunks, heart-shaped betel vine leaves trained on simple cane supports in foreground. Glimpse of pale dry limestone foothills beyond garden, tiny unadorned mud plaster boundary wall, irrigation furrow. No people, no ship, no equatorial rainforest, no tropical mountains, no ornate garden pavilion. Observational loose graphite plants with green watercolor, one separate coconut and betel leaf study in blank margin.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Gibb selections, pp. 113–115: Dhofar, bananas, betel and coconut palms."
+      }
+    },
+    {
+      "id": "hormuz",
+      "stop": 23,
+      "place": "Hormuz",
+      "title": "Water for an island port",
+      "caption": "At Hormuz, he noted that fresh water was valuable. He described residents fetching it from wells and rainwater reservoirs outside the town, then carrying it back by boat.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Low viewpoint at island Hormuz quay1332: porters unloading plain large earthenware water jars from small wooden boat, sunbleached bare rocky island behind. Foreground jars dominate, no traveller, no Portuguese fort, no modern harbor, modest Islamic port buildings.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "New Hormuz water supply; Gibb selections, pp. 118–119. Water came from elsewhere on the island, not necessarily the mainland."
+      }
+    },
+    {
+      "id": "konya-hosts",
+      "stop": 25,
+      "place": "Konya",
+      "title": "Welcomed at the lodge",
+      "caption": "In Anatolia, he often stayed with the Akhi brotherhoods, whose members offered travellers food and lodging. At Konya, he encountered this network of local hospitality again.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior viewed from a low seated guest position, Anatolian craftspeople bring fresh bread and bowls to Ibn Battuta, worn rugs and an oil lamp, Konya1332, lively natural gestures, no Ottoman fez. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Akhi hospitality in Anatolia and Konya."
+      }
+    },
+    {
+      "id": "lodge-objects",
+      "stop": 25,
+      "place": "Konya",
+      "title": "A room made ready",
+      "caption": "At an Anatolian lodge, guests would have found mats or rugs, lamps and food prepared by their hosts. Such rooms supported the hospitality he repeatedly described along this part of the route.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet oblique corner of a modest Anatolian lodge: folded wool rugs, pierced metal oil lamp, bread on a wooden tray, ceramic jug and cushions, doorway light, no people, no modern furniture. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "context",
+        "passage": "Room and objects associated with recorded Akhi hospitality."
+      }
+    },
+    {
+      "id": "sinop",
+      "stop": 26,
+      "place": "Sinop",
+      "title": "Waiting to sail at Sinop",
+      "caption": "At Sinop, he waited about forty days for sailing weather. After hiring a Greek vessel, he waited another eleven days for a favourable wind before crossing the Black Sea.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "Sinop Black Sea1332, medium landscape composition from seated height under a simple timber quayside shelter. Foreground coiled natural rope, tied travel bundles and folded wool cloak on a low bench; beyond shelter upright posts, a modest Greek medieval wooden merchant sailing vessel tied up with furled sail and lowered yard, two tiny sailors checking lines. In background strong medieval stone walls of a compact peninsula port beneath overcast blue-grey sky, sea glimpsed either side of distant headland. Emphasis on waiting rather than action; no storm shipwreck, no Ottoman mosque domes, no modern lighthouse, no huge galleon or junk. Traveller absent, view grounded in port shelter.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Gibb (1929), p. 141: Sinop, forty-day stay, Greek vessel and eleven further days waiting."
+      }
+    },
+    {
+      "id": "caffa",
+      "stop": 27,
+      "place": "Caffa",
+      "title": "Bells above the harbour",
+      "caption": "At Caffa, he heard church bells and visited a harbour crowded with vessels. He described the town as a major Genoese trading port with busy markets.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "View from a gently rocking small boat toward Caffa1332, merchant ships and modest stone church bell tower, Genoese trading buildings, limited medieval fortification; no enormous later fort walls or Ottoman minarets. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Caffa after the Black Sea crossing; Gibb (1929), pp. 142–143."
+      }
+    },
+    {
+      "id": "steppe-camp",
+      "stop": 28,
+      "place": "Özbeg Khan’s camp",
+      "title": "A city on the move",
+      "caption": "He described Özbeg Khan’s travelling camp as a large settlement of tents and wagons. The court, its households and their belongings moved together across the steppe.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Very wide view from a low grassy ridge across steppe, dispersed felt tents and covered wagons, horses grazing and tiny people pitching camp,1332, pale vast sky, no foreground protagonist or permanent fantasy palace. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "The moving camp of the Golden Horde in the Rihla."
+      }
+    },
+    {
+      "id": "wagon-felt",
+      "stop": 28,
+      "place": "Özbeg Khan’s camp",
+      "title": "Wood, wheel and felt",
+      "caption": "In the Golden Horde, he travelled in wagons and described portable dwellings. Wooden wheels, frames and felt coverings would have required regular maintenance on long journeys.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Close low angle beside wooden wagon wheel, felt cover being fastened by a local craftsperson whose hands dominate, rawhide ties and wood joinery; small separate felt-fold study, steppe1332, no metal suspension or protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Wagons and mobile dwellings; construction details are illustrative."
+      }
+    },
+    {
+      "id": "constantinople",
+      "stop": 29,
+      "place": "Constantinople",
+      "title": "Across the Golden Horn",
+      "caption": "He visited Constantinople while accompanying Princess Bayalun. His account describes a city divided by water, with churches, markets and a separate settlement across the Golden Horn.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Grounded view from Galata shoreline across Golden Horn1332 toward Byzantine Constantinople, Hagia Sophia without minarets, modest waterfront and patches of open land; no Blue Mosque, Topkapi or1348 Galata Tower. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Constantinople, Istanbul and Galata in the account."
+      }
+    },
+    {
+      "id": "bukhara",
+      "stop": 31,
+      "place": "Bukhara",
+      "title": "Through the broken arcade",
+      "caption": "In Bukhara, he found a once-celebrated centre of learning badly damaged. He described ruined mosques, colleges and markets left by the Mongol conquest.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Architectural eye level from inside ruined brick madrasa arcade Bukhara1333: broken vault open to pale sky, surviving plain baked brick arches, dust, weeds, two tiny local passersby in distance. No protagonist, no blue Timurid tile domes or restored modern ensembles. Strong light shadow geometry, unfinished empty paper.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Bukhara in the Central Asian itinerary."
+      }
+    },
+    {
+      "id": "samarkand",
+      "stop": 32,
+      "place": "Samarkand",
+      "title": "A city with empty spaces",
+      "caption": "He praised Samarkand’s size and setting but also recorded ruined buildings. The city he passed through combined surviving neighbourhoods with areas still damaged by earlier conquest.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level Samarkand1333: weathered brick walls, broken courtyard gateway and active modest stalls, orchard visible through ruined opening; no Timurid Registan monuments, no giant blue Timurid domes, no traveller portrait. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Samarkand in the Central Asian itinerary."
+      }
+    },
+    {
+      "id": "hindu-kush",
+      "stop": 34,
+      "place": "Kabul",
+      "title": "Across the Hindu Kush",
+      "caption": "On the way toward India, he crossed the Hindu Kush. He described the difficulty of travelling through the cold mountain country with pack animals and supplies.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Sweeping view from a narrow rocky mountain path, tiny pack caravan including a small indistinct traveller traverses below huge snow-streaked Hindu Kush ridges,1333; cold grey-blue washes, no scenic modern road. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Hindu Kush crossing before the Kabul stage."
+      }
+    },
+    {
+      "id": "multan",
+      "stop": 35,
+      "place": "Multan",
+      "title": "Waiting at the gate",
+      "caption": "After crossing the Indus, he reached Multan and waited to continue to Delhi. Officials there handled the arrival of foreign visitors seeking the sultan’s court.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "View from within shaded brick gateway Multan1333 looking out at arriving travellers and camel packs, official sitting at low desk in near foreground with manuscript illegible, traveller faces incidental. Modest medieval brick defenses, no Mughal domes, no stereotyped lavish costume. Frame through doorway, no protagonist.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Multan and reception of foreign arrivals before Delhi."
+      }
+    },
+    {
+      "id": "delhi-court",
+      "stop": 36,
+      "place": "Delhi",
+      "title": "Before the sultan",
+      "caption": "In Delhi, Sultan Muhammad bin Tughluq appointed him as a judge. He described elaborate court ceremonies, generous rewards and the risks of losing the ruler’s favour.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "View from behind seated courtiers inside a restrained stone-and-timber Tughluq audience hall1334, distant ruler on raised seat, Ibn Battuta kneeling at middle distance, no Mughal peacock throne, no Taj Mahal styling or bulbous domes. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Delhi appointment and court service."
+      }
+    },
+    {
+      "id": "judge",
+      "stop": 36,
+      "place": "Delhi",
+      "title": "Listening to a case",
+      "caption": "He spent several years serving as a judge in Delhi. In that role, he would have heard petitions and disputes, working with other officials and religious scholars.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate side view under a shaded Delhi veranda, Ibn Battuta now in his thirties sits listening to two petitioners, clerk's hands with reed pen at edge, sparse manuscripts without legible writing, no modern gavel or courtroom benches. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait. Behind the veranda show only modest low stone-and-plaster buildings, a simple sloping rubble-stone wall and trees; no Mughal architecture, bulbous domes or grand mosque skyline.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Judicial appointment is recorded; this hearing is not a particular documented case."
+      }
+    },
+    {
+      "id": "gifts",
+      "stop": 36,
+      "place": "Delhi",
+      "title": "Gifts at court",
+      "caption": "He received money, clothing and other gifts while seeking and serving court patrons. Such exchanges helped support his travels but also tied him to the rulers who employed him.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead sparse still life of folded fine woven cloth, modest silver coins turned with markings indistinct, leather pouch, small brass vessel and a hand unrolling textile; Delhi1340, no gemstones piled as treasure, no readable inscriptions. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Gifts and patronage in the account; the depicted set is contextual."
+      }
+    },
+    {
+      "id": "calicut-ships",
+      "stop": 38,
+      "place": "Calicut",
+      "title": "Ships waiting offshore",
+      "caption": "At Calicut, he found Chinese ships preparing for the eastward voyage. His account describes thirteen large vessels in the port and the smaller craft that served them.",
+      "sources": [
+        "ibn-battuta-ships"
+      ],
+      "confidence": "medium",
+      "prompt": "Low viewpoint from Calicut beach1342, local boatmen launching narrow craft through surf, large medieval Chinese ocean-going junk with battened sails at anchor beyond, no European caravels or modern harbour. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Lee, The ships of Kalikut and the storm."
+      }
+    },
+    {
+      "id": "junk-details",
+      "stop": 38,
+      "place": "Calicut",
+      "title": "A closer look at the junks",
+      "caption": "He described the Chinese ships at Calicut in some detail, including their mat sails, large oars and wooden cabins. He identified China as the place where these vessels were built.",
+      "sources": [
+        "ibn-battuta-ships"
+      ],
+      "confidence": "medium",
+      "prompt": "Close observational page of a medieval Chinese junk's timber deck edge, battened sail folded against mast, wooden rudder fitting and ropes, separate small joinery detail; no people, lettering, modern winches or steel fittings. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Lee, The ships of Kalikut; construction centres, sails, oars and cabins."
+      }
+    },
+    {
+      "id": "calicut-storm",
+      "stop": 38,
+      "place": "Calicut",
+      "title": "After the storm at Calicut",
+      "caption": "He was ashore when the storm struck Calicut. Two ships were wrecked, while the vessel carrying his belongings sailed away; he was left unable to continue the embassy as planned.",
+      "sources": [
+        "ibn-battuta-ships"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate low seated viewpoint on Calicut beach at daybreak1342 after storm. Ibn Battuta age38 Moroccan man with olive brown skin dark beard plain cream turban and damp brown wool cloak sits exhausted in left foreground, hands empty resting on knees, looking sideways out to sea. Portrait and hands occupy most of frame; only distant tiny broken ship silhouette on horizon at far right, wet sand and a frayed rope near him. He was stranded ASHORE, not onboard the wreck. No epic wide shipwreck panorama, no duplicate harbour view. Quiet loss, pale dawn and a single watery grey wash, loose unfinished graphite.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Lee, A terrible storm disrupts the China expedition."
+      }
+    },
+    {
+      "id": "maldives-life",
+      "stop": 39,
+      "place": "Maldives",
+      "title": "Life at the lagoon",
+      "caption": "In the Maldives, he lived among island households and served as a judge. Fishing, coconut products and travel between islands would have been part of the daily life around him.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Eye-level from shaded coconut grove toward Maldivian lagoon1343, women and men carrying baskets, preparing fish and tending modest palm-thatch houses, culturally respectful natural dress, no resorts or empty tropical postcard. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Maldivian residence and judicial work; household scene is contextual."
+      }
+    },
+    {
+      "id": "boatbuilders",
+      "stop": 39,
+      "place": "Maldives",
+      "title": "A hull takes shape",
+      "caption": "In the Maldives, wooden boats connected the inhabited islands. Builders would have used local timber and coconut-fibre cordage when constructing and maintaining these vessels.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Close diagonal view along a small wooden hull on a Maldivian beach1343, local boatbuilders fitting planks and natural-fibre lashings with hand tools; bodies engaged in different actions, no Ibn Battuta, no electric tools or modern yacht. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "context",
+        "passage": "Material reconstruction of island transport; not a recorded shipyard visit."
+      }
+    },
+    {
+      "id": "cowries-coir",
+      "stop": 39,
+      "place": "Maldives",
+      "title": "Small things that travel far",
+      "caption": "He noted the importance of cowrie shells and coconut fibre in the islands’ trade. Cowries circulated as money elsewhere, while fibre from coconut husks was made into useful cordage.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Top-down unpeopled study: a small scatter of cowrie shells, an opened fibrous coconut husk, hand-twisted coir rope and woven container, subtle separate shell underside drawing, no labels or currency numerals. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Maldivian cowrie trade and uses of coconut fibre."
+      }
+    },
+    {
+      "id": "adams-peak",
+      "stop": 40,
+      "place": "Adam's Peak, Sri Lanka",
+      "title": "The ascent",
+      "caption": "In Sri Lanka, he climbed the mountain associated with the sacred footprint. He described steep sections where chains helped travellers make the ascent.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Steep upward view from a misty Sri Lankan mountain path1344, Ibn Battuta gripping a handhold while a local guide leads above, wet rock and forest dropping away, no modern railings, concrete stairs or summit tourism complex. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Sri Lankan pilgrimage and chains on the ascent."
+      }
+    },
+    {
+      "id": "bengal-river",
+      "stop": 43,
+      "place": "Chittagong, Bengal",
+      "title": "Bengal by boat",
+      "caption": "In Bengal, he travelled through river country and visited the religious teacher Shah Jalal. He described plentiful, inexpensive food and settlements linked by waterways.",
+      "sources": [
+        "ibn-battuta-asia"
+      ],
+      "confidence": "medium",
+      "prompt": "Broad river-level panorama near Bengal1345, reed-fringed bank, small wooden cargo boats with woven shelters, rice fields and low village beyond, humid pale sky, local boatman at work near frame edge, no protagonist or steamships. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Lee, Bengal: inland visit, plentiful provisions and river passage."
+      }
+    },
+    {
+      "id": "sumatra-rain",
+      "stop": 44,
+      "place": "Samudra, Sumatra",
+      "title": "A waterfront in the rain",
+      "caption": "In Samudra, he stayed as a guest before continuing toward China. Around the port, timber buildings and covered landings would have sheltered people and cargo during rain.",
+      "sources": [
+        "ibn-battuta-lee",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "View from beneath a timber shelter toward a rain-soaked Samudra waterfront1345, local merchants moving bundles and boats in estuary, tropical vegetation, steep plain timber roofs, no later monumental mosque domes or colonial structures. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Recorded Samudra stay; this weather and waterfront arrangement are contextual."
+      }
+    },
+    {
+      "id": "sumatra-court",
+      "stop": 44,
+      "place": "Samudra, Sumatra",
+      "title": "Conversation after prayer",
+      "caption": "He met Samudra’s sultan at the mosque. After prayer, the ruler sat with scholars to discuss religious questions, an exchange that continued into the evening.",
+      "sources": [
+        "ibn-battuta-lee",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior of modest timber mosque Samudra Pasai1345, after Friday prayer, Malay sultan in plain scholar clothing seated on woven mats at same level among scholars discussing with quiet gestures, Moroccan Ibn Battuta age41 cream turban brown cloak listening at side. Open timber posts show greenery, no throne, no Mughal or Ottoman domes, no legible text. Medium view intimate circle.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Lee (1829), pp. 200–201: meeting and discussion after prayer."
+      }
+    },
+    {
+      "id": "quanzhou",
+      "stop": 45,
+      "place": "Zaytun (Quanzhou)",
+      "title": "A forest of masts",
+      "caption": "His account describes Zaytun, usually identified as Quanzhou, as an exceptionally large port. He noted the many junks at anchor and the smaller vessels gathered around them.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "low",
+      "prompt": "Wide harbour view from a low coastal lookout toward Yuan Quanzhou1345, Chinese battened-sail junks, warehouses and diverse small working figures, layered estuary, no European colonial port or modern skyline, no protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Rihla’s Zaytun description; retain existing confidence for the China itinerary."
+      }
+    },
+    {
+      "id": "hangzhou",
+      "stop": 46,
+      "place": "al-Khansa (Hangzhou)",
+      "title": "Canals in Hangzhou",
+      "caption": "His account describes al-Khansa, generally identified as Hangzhou, as an immense city. Canals, bridges and closely built waterfront neighbourhoods would have shaped travel through it.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "low",
+      "prompt": "Low view from under a simple stone canal bridge toward Yuan Hangzhou1346, timber waterside houses, modest cargo boats and an arched bridge farther away, local people occupied with work, no modern West Lake tourist skyline or protagonist. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Rihla’s al-Khansa narrative; canal viewpoint is contextual and visit remains debated."
+      }
+    },
+    {
+      "id": "return-sumatra",
+      "stop": 48,
+      "place": "Samudra, Sumatra",
+      "title": "Packing for the westward sea",
+      "caption": "On the return from China, he stopped at Samudra again and stayed with its ruler. He then continued west toward India before beginning the longer journey back to Morocco.",
+      "sources": [
+        "ibn-battuta-lee",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Close view downward from ship rail at Samudra1347: Malay dock workers passing woven provision baskets and tied cloth bundles from small launch into larger wooden junk; water visible in narrow gap. No hero, no shipbuilding, no cranes, no modern objects. Focus hands cargo textures, minimal distant coast.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Return visit to Samudra; Lee’s return narrative."
+      }
+    },
+    {
+      "id": "dhofar-return",
+      "stop": 50,
+      "place": "Zafar (Dhofar)",
+      "title": "Land after the long crossing",
+      "caption": "On his westward return, he reached Dhofar after crossing from India. He then continued toward Hormuz and the route through Persia.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide natural landscape seen from low ship bow approaching Dhofar1347: grey-green foothills behind pale coastal plain, monsoon haze, tiny shore settlement, foreground only curving wood edge and splash. No hero, no dramatic fantasy mountains, restrained blue green wash with broad blank sky.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Westward crossing to Dhofar and onward travel to Hormuz."
+      }
+    },
+    {
+      "id": "plague",
+      "stop": 52,
+      "place": "Damascus",
+      "title": "A city prays together",
+      "caption": "During the plague in Damascus, he witnessed a public gathering for prayer. He described Muslims, Christians and Jews taking part with their sacred books.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Respectful distant street view Damascus1348, subdued mixed groups walking together in prayer carrying closed books, neighbours offering water at doorway, worn medieval stone buildings, no corpses, plague-doctor beak masks or legible text. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Fordham Gibb excerpt, The Plague of 1348; Gibb (1929), Damascus chapter."
+      }
+    },
+    {
+      "id": "cairo-return",
+      "stop": 55,
+      "place": "Cairo",
+      "title": "The Nile again",
+      "caption": "After his last pilgrimage, he returned to Cairo on the way west. From Egypt, he continued to Alexandria and took ship toward North Africa.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet high oblique view from simple upper window Cairo1349 down onto Nile landing with a few small riverboats, mooring posts and folded sail, foreground window ledge and water jar, river as large negative space. No protagonist, no modern bridge or Ottoman buildings, restrained reflective mood.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Return to Egypt and Mediterranean departure, 1349."
+      }
+    },
+    {
+      "id": "alexandria-return",
+      "stop": 56,
+      "place": "Alexandria",
+      "title": "The lighthouse, twenty-three years later",
+      "caption": "When he returned to Alexandria in 1349, he found the lighthouse much more ruined than before. He reported that it was no longer possible to enter it or reach its doorway.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "traveller": false,
+      "prompt": "Alexandria1349 low close viewpoint among fallen massive pale limestone masonry of ruined Pharos lighthouse: foreground broken blocks and weathered inaccessible square wall, blue Mediterranean visible through rubble gap. No complete tower, no later Qaitbay fortress, no people needed. Strong near stone texture and distant empty sea, irregular vignette with much bare paper.",
+      "evidence": {
+        "basis": "account",
+        "passage": "Fordham Gibb excerpt, The famous lighthouse: visits of 1326 and 1349."
+      }
+    },
+    {
+      "id": "fez-return",
+      "stop": 59,
+      "place": "Fez",
+      "title": "Back in Fez",
+      "caption": "After returning to Tangier in 1349, he travelled to Fez and the Marinid court. He had been away from Morocco for roughly twenty-four years.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Close rear three-quarter view of older Moroccan traveller age45 Ibn Battuta cream turban muted brown cloak pausing at plain carved wooden doorway in narrow Marinid Fez lane1349. One hand near worn door jamb, quiet reflected warm light, no grand palace, restrained intimate human sketch, no large crowd.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Return to Morocco and the court at Fez."
+      }
+    },
+    {
+      "id": "granada",
+      "stop": 60,
+      "place": "Granada",
+      "title": "Granada and the Alhambra",
+      "caption": "He visited Granada during the reign of Yusuf I and praised the gardens, orchards and streams around the city. Its hillside neighbourhoods would have offered views across the Darro valley toward the Alhambra.",
+      "sources": [
+        "ibn-battuta-gibb",
+        "alhambra-setting"
+      ],
+      "confidence": "medium",
+      "prompt": "Granada circa1350, a closer architectural city view from a modest elevated Albaicin roof terrace across the narrow Darro ravine toward the Alhambra on the opposite Sabika hill. Major focus is the connected red-brown Nasrid fortification walls and blocky Alcazaba towers on the ridge, clearly grounded in the real topography, close enough to read masonry and wall rhythm. In lower foreground a diagonal cascade of tightly packed medieval houses: rough pale plaster, clay roof tiles, simple timber eaves, small enclosed courtyards and a fig tree, not a vast empty orchard. Trace of river far below, mountain slopes very lightly washed behind, no invented grand river bridge. An empty plain terracotta water jug at terrace edge establishes human viewing height; no protagonist. Daylight, restrained red ochre against faded grey-blue and dusty green. Do not show modern Granada, cathedral, Christian church towers, modern bell tower atop Torre de la Vela, flags, Charles V palace or later Court of Lions. Show a fourteenth-century fortification, not a fantasy castle or modern tourist panorama. Strong large-scale architectural observation and deep perspective, plenty of unfinished graphite edges and bare paper; no decorative border or lettering.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Gibb (1929), pp. 315–316: Granada under Yusuf I, gardens and streams. Albaicin–Sabika topography checked against the Patronato; this particular viewpoint is contextual."
+      }
+    },
+    {
+      "id": "sijilmasa",
+      "stop": 61,
+      "place": "Sijilmasa",
+      "title": "Before the desert opens",
+      "caption": "At Sijilmasa, he bought camels and provisions for the Sahara crossing. He praised the town’s dates and stayed with a local scholar before joining the southbound caravan.",
+      "sources": [
+        "ibn-battuta-gibb"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead diagonal view from mudbrick roof Sijilmasa1352 caravan yard: handlers balancing camel loads, waterskins and dates in baskets, palms cast patterned shadows, arid distance through gate. No hero, no modern jerry cans, no theatrical palace. Elevated working scene with close material details.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Sijilmasa and preparations; Gibb (1929), pp. 317–318."
+      }
+    },
+    {
+      "id": "salt-town",
+      "stop": 62,
+      "place": "Taghaza",
+      "title": "Walls made of salt",
+      "caption": "At Taghaza, he found buildings made from salt slabs and a settlement supported by salt mining. Caravans carried the salt south to markets beyond the desert.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Low wide view across pale Saharan salt ground to small rough salt-slab buildings Taghaza1352, flat roofs and tiny camel caravan, separate close study of crystalline salt block and slab joint, no white marble fantasy city. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Taghaza salt buildings, mining and caravan trade."
+      }
+    },
+    {
+      "id": "walata",
+      "stop": 63,
+      "place": "Walata",
+      "title": "Shelter beyond the sands",
+      "caption": "Walata was his first major stop after crossing the Sahara. In its houses, he would have found shaded rooms, mats and water vessels suited to everyday life in the hot climate.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Unpeopled intimate interior threshold Walata1352, simple mud plaster walls, reed mat, clay water pot beside wooden door, sunlit sandy lane beyond. Low seated viewpoint, warm reflected earthen color, no modern highly ornate painted facade assumed, no written markings. Architectural object study, much bare paper.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Arrival at Walata; this interior and its objects are contextual."
+      }
+    },
+    {
+      "id": "mali-court",
+      "stop": 64,
+      "place": "Capital of Mali",
+      "title": "Waiting at the court",
+      "caption": "He stayed for several months at the court of Mansa Sulayman. His account describes public audiences, attendants, clothing and the formal behaviour expected around the ruler.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "low",
+      "prompt": "View from behind a seated West African audience toward a shaded modest royal pavilion1352, local interpreter gesturing and attendants holding simple staffs, varied cotton and fine textiles, no Ibn Battuta foreground, no fantasy stone castle or imported Orientalist palace. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Mali court observations; exact capital site and architectural layout are not established."
+      }
+    },
+    {
+      "id": "niger",
+      "stop": 66,
+      "place": "Gao",
+      "title": "A river passage to Gao",
+      "caption": "From Timbuktu, he travelled toward Gao in a boat hollowed from a single piece of wood. He called the river the Nile, although this part of his journey followed the Niger.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Low inside-bow view of a dugout canoe on Niger1353, local paddler's hands and paddle at edge, broad water with sandy banks, reeds and small settlement, open sky, no recognisable protagonist, no Nile pyramids or motorboats. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Dugout passage from Timbuktu toward Gao; his river identification differs from modern geography."
+      }
+    },
+    {
+      "id": "takedda",
+      "stop": 67,
+      "place": "Takedda",
+      "title": "Copper rods at Takedda",
+      "caption": "At Takedda, he described copper production and rods of different thicknesses used in exchange. The pieces circulated locally as a means of payment.",
+      "sources": [
+        "ibn-battuta",
+        "ibn-battuta-orias"
+      ],
+      "confidence": "medium",
+      "prompt": "Unpeopled close still life of copper currency at Takedda1353: thin reddish copper rods of two different thicknesses arranged on a woven mat beside a simple clay casting mold, no people or tools. Separate small rod detail on blank cream paper, loose red ochre wash.\nFourteenth century only. No legible writing, signatures, borders or labels. Varied composition and extensive bare cream paper, not a polished painting.",
+      "traveller": false,
+      "evidence": {
+        "basis": "account",
+        "passage": "Takedda copper and rod currency in the Rihla."
+      }
+    },
+    {
+      "id": "rihla",
+      "stop": 68,
+      "place": "Fez",
+      "title": "A journey becomes a book",
+      "caption": "After his return to Fez, he dictated his travels to Ibn Juzayy at the sultan’s request. The resulting work, known as the Rihla, was completed in 1355.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet oblique interior Fez1355, Ibn Battuta now about fifty with grey in beard speaking thoughtfully with one hand open, younger Ibn Juzayy writing with reed pen across low desk, blank-looking manuscript surfaces angled away, soft window light, no printing press. Historical scene in the setting of Ibn Battuta’s travels. This is an imagined journal observation, not a period artwork. Keep architecture, clothing and equipment appropriate to the fourteenth century. Vary scale and viewpoint as described; do not add an unrelated traveller portrait.",
+      "traveller": true,
+      "evidence": {
+        "basis": "account",
+        "passage": "Commission and completion of the Rihla."
+      }
+    }
+  ]
+}

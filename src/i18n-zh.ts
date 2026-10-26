@@ -133,6 +133,9 @@ export const zhUi: Record<string, string> = {
   'At stop {n} of {total}': '第{n}站，共{total}站',
   'Last sketch at stop {n} of {total}': '最近的速写在第{n}站，共{total}站',
   'Sketch: {title}': '速写：{title}',
+  'Sketch {n} of {total}': '第{n}幅，共{total}幅',
+  'Previous sketch': '上一幅速写',
+  'Next sketch': '下一幅速写',
   'Show the sketch: {title}': '查看速写：{title}',
 
   // Inventions

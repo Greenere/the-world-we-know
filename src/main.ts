@@ -402,6 +402,8 @@ class App {
     }
     const max = stepCount(geo) - 1;
     const target = this.travelTarget ?? max;
+    // Also run at the first and final stop, before the end-of-journey check.
+    if (this.ui.cards.advanceSketch(dt, s)) return;
     if (s.progress >= target - 1e-6) {
       this.travelTarget = null;
       if (s.playing && s.progress >= max - 1e-6) this.store.set({playing: false, progress: max});
