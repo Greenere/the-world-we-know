@@ -1,0 +1,85 @@
+{
+  "traveller": "Admiral Zheng He, about forty-five: a tall, broad-shouldered Hui Muslim court eunuch of the Ming, clean-shaven with a strong round face, in a red Ming official's robe with a square embroidered rank badge on the chest, a black gauze winged official hat and a jade belt; often beside him his interpreter Ma Huan, a slight Muslim scholar in a plain blue robe and black cap, holding a writing brush and a folded notebook.",
+  "scenes": [
+    {
+      "id": "shipyard",
+      "stop": 0,
+      "place": "Nanjing",
+      "title": "The treasure ships at Longjiang",
+      "caption": "The fleets were built and fitted out at the Longjiang shipyard outside Nanjing, where an 11-metre rudder post was dug up in 1957. The largest 'treasure ships' carried nine masts of red-brown matting sails; how long they really were is still argued over.",
+      "sources": [
+        "liujiagang",
+        "church-treasure-ships"
+      ],
+      "confidence": "medium",
+      "prompt": "The Longjiang shipyard outside Nanjing, 1417. A huge Chinese treasure junk is being fitted out in a long dry dock beside the river: a high squared stern with a painted bird motif, several masts with stiff battened red-brown matting sails partly raised, workmen on bamboo scaffolding. In the foreground an enormous wooden rudder lies on trestles with carpenters working on it, and Zheng He stands inspecting it with a shipwright who points at a plan on paper (only lines, no writing). A small separate study on the page shows the battened matting sail and its rigging."
+    },
+    {
+      "id": "calicut",
+      "stop": 2,
+      "place": "Calicut",
+      "title": "Weighing pepper at Calicut",
+      "caption": "At Calicut, Ma Huan writes, the price of goods was agreed by striking hands before the king's officials and Chinese factors; pepper was weighed by the bahar and counted on fingers and toes without an abacus, 'without the slightest error'.",
+      "sources": [
+        "ma-huan"
+      ],
+      "confidence": "high",
+      "ref": "shipyard",
+      "prompt": "A pepper market at Calicut on the Malabar coast, 1418. Under a palm-thatched shed, Malayali merchants in white mundu cloths and Chinese officials in Ming robes clasp hands to seal a bargain; a large balance beam scale weighs black peppercorns heaped in baskets; a Nair officer of the king watches. Ma Huan sits on a mat writing in his notebook. Coconut palms and the masts of junks in the roadstead behind. A small separate study on the page shows a sprig of pepper vine with berries."
+    },
+    {
+      "id": "hormuz",
+      "stop": 3,
+      "place": "Hormuz",
+      "title": "The market at Hormuz",
+      "caption": "Hormuz, 'where merchants from every land gather', had no fresh water or crops of its own but grew rich on trade: pearls from the Gulf, horses from Persia and Arabia, carpets, rubies and lapis lazuli. Ma Huan admired its stone houses and its people's honesty in trade.",
+      "sources": [
+        "ma-huan"
+      ],
+      "confidence": "high",
+      "ref": "shipyard",
+      "prompt": "The island market of Hormuz at the mouth of the Persian Gulf, 1418. Persian and Arab merchants in turbans and long robes show Arabian horses on a bare sandy square in front of flat-roofed stone houses with wind-catcher towers; a pearl merchant pours pearls from a cloth onto a tray; carpets hang over a wall. Zheng He and Ma Huan examine a horse's teeth with a groom. Dhows and a Chinese junk in the bay behind. A small separate study on the page shows a few pearls and a piece of lapis lazuli."
+    },
+    {
+      "id": "aden",
+      "stop": 4,
+      "place": "Aden",
+      "title": "Gifts from the king of Aden",
+      "caption": "The king of Aden received the emperor's envoys with ceremony and sent back his own: 'giraffes, lions, zebras, ostriches and white pigeons', in Ma Huan's list. To Ming eyes the giraffe was a qilin, the gentle beast that appears only under a virtuous ruler.",
+      "sources": [
+        "ma-huan"
+      ],
+      "confidence": "high",
+      "ref": "shipyard",
+      "prompt": "The harbour of Aden below dark volcanic crags, 1418. On the stone quay, grooms in Yemeni dress lead a tall giraffe on a rope and a zebra towards a Chinese treasure junk; an ostrich in a wooden crate; a lion in a cage. Zheng He, with a court official of the King of Aden in a turban and robe, watches the loading; sailors rig a sling. A small separate study on the page shows a giraffe's head in profile with its ossicones."
+    },
+    {
+      "id": "malindi",
+      "stop": 6,
+      "place": "Malindi",
+      "title": "Malindi's envoys come aboard",
+      "caption": "Malindi's envoys had brought a giraffe to Nanjing in 1415; the fifth fleet took them home and returned with more. At the Swahili towns of the coast, coral-stone houses stood above beaches of outrigger canoes, and the Chinese bought ambergris, ivory and rhinoceros horn.",
+      "sources": [
+        "ming-shilu",
+        "fei-xin"
+      ],
+      "confidence": "medium",
+      "ref": "shipyard",
+      "prompt": "The beach at Malindi on the Swahili coast of East Africa, 1418. Swahili envoys in white kanzu robes and embroidered caps, with attendants carrying elephant tusks, walk down to a ship's boat to be rowed out to a Chinese treasure junk anchored offshore; outrigger canoes on the sand; coral-stone houses and a small mosque with a pillar tomb under coconut palms behind. Zheng He greets the chief envoy with a bow. A small separate study on the page shows an elephant tusk and a lump of ambergris."
+    },
+    {
+      "id": "qilin",
+      "stop": 7,
+      "place": "Nanjing",
+      "title": "The qilin at court",
+      "caption": "The giraffes were received at Nanjing as qilin, proof of heaven's favour. Shen Du of the Hanlin Academy wrote an ode and painted one; his picture survives. The emperor, wary of flattery, told his officials not to offer congratulations.",
+      "sources": [
+        "shen-du",
+        "ming-shilu"
+      ],
+      "confidence": "high",
+      "ref": "shipyard",
+      "prompt": "A courtyard of the Ming palace in Nanjing, 1419. A tall giraffe, led by an African keeper in a white robe holding a rope, stands on the stone paving before red-lacquered halls with yellow-tiled roofs; Ming officials in red and green robes with black gauze hats crowd to look, some bowing; a Hanlin scholar sits at a low table painting the animal on a long silk scroll with a brush (only brushstrokes, no writing). Zheng He stands to one side. A small separate study on the page shows the scholar's brush, inkstone and seal."
+    }
+  ]
+}
