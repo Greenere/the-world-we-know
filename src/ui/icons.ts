@@ -160,6 +160,31 @@ export function sealSvg(id: string, color: string, size = 18) {
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M12 5.6c.6 1.6 3.7 3 3.7 5.9 0 1.4-1.3 2.2-3.7 2.2s-3.7-.8-3.7-2.2c0-2.9 3.1-4.3 3.7-5.9z"/><rect x="9.3" y="13.2" width="5.4" height="4.4"/><rect x="7.6" y="17.4" width="8.8" height="1" rx=".3"/></g><path d="M12 3.4v2.4M11 4.3h2M11 17.6v-2.2a1 1 0 0 1 2 0v2.2" stroke="#f6f0e2" stroke-width=".8" fill="none"/><path d="M11 17.6v-2.2a1 1 0 0 1 2 0v2.2" stroke="${color}" stroke-width=".8" fill="none"/>`,
       );
+    case 'inuit':
+      // An inukshuk, the stone figure that marks the way.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><rect x="10.2" y="5.2" width="3.6" height="2.8" rx=".5"/><rect x="6.4" y="8.6" width="11.2" height="2.2" rx=".5"/><rect x="9.4" y="11.4" width="5.2" height="2.6" rx=".5"/><rect x="8.2" y="14.6" width="2.6" height="3.8" rx=".5"/><rect x="13.2" y="14.6" width="2.6" height="3.8" rx=".5"/></g>`,
+      );
+    case 'zimbabwe':
+      // The conical tower of Great Zimbabwe.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M8.6 18V9.6q3.4-3.2 6.8 0V18z" fill="#f6f0e2"/><path d="M8.6 11.6h6.8M8.6 13.6h6.8M8.6 15.6h6.8" stroke="${color}" stroke-width=".7"/><path d="M6 18.2h12" stroke="#f6f0e2" stroke-width="1.2"/>`,
+      );
+    case 'ethiopia':
+      // An Aksum stele, carved with doors and windows.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M9.4 18.4V7.2Q12 3.6 14.6 7.2v11.2z" fill="#f6f0e2"/><path d="M10.6 9h2.8M10.6 11.6h2.8M10.6 14.2h2.8M11.2 18.4v-2h1.6v2" stroke="${color}" stroke-width=".8" fill="none"/><path d="M7 18.6h10" stroke="#f6f0e2" stroke-width="1.2"/>`,
+      );
+    case 'swahili':
+      // A dhow under its lateen sail.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M5 14.2h14l-2 3H7.4z"/><path d="M12.6 4.8L18 13.4H8.2z"/></g><path d="M12.4 4.6l-1 9.6M6.4 7.4l7.8-3" stroke="#f6f0e2" stroke-width=".9" stroke-linecap="round"/>`,
+      );
+    case 'nusantara':
+      // A stupa of Borobudur.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M12 4.6v2.4"/><rect x="11.3" y="5" width="1.4" height="3" rx=".4"/><path d="M7.6 13.4q0-5.4 4.4-5.6 4.4.2 4.4 5.6z"/><rect x="6.6" y="13.6" width="10.8" height="1.6" rx=".3"/><rect x="5.4" y="15.6" width="13.2" height="1.8" rx=".3"/></g><path d="M9.6 11.2h.01M12 10.6h.01M14.4 11.2h.01" stroke="${color}" stroke-width="1.1" stroke-linecap="round"/>`,
+      );
     case 'inca':
       // Inti, the sun.
       return s(

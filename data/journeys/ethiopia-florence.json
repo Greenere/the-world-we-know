@@ -1,0 +1,24 @@
+{
+  "id": "ethiopia-florence",
+  "name": "Ethiopian monks at the Council of Florence",
+  "traveler": "Abba Nikodimos and the monks of the Ethiopian house in Jerusalem",
+  "years": "1441–1442",
+  "kind": "envoy",
+  "viewpoint": "ethiopia",
+  "summary": "Monks of the Ethiopian community in Jerusalem travel to the council where the pope hoped to unite the churches. In Florence and Rome they meet the Latin church face to face, and Europe meets Ethiopians rather than the legend of Prester John.",
+  "source": "salvadore",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1441, "place": "Jerusalem", "lat": 31.78, "lon": 35.23, "note": "The abbot of the Ethiopian monks in Jerusalem answers the pope's invitation.", "city": "jerusalem"},
+    {"year": 1441, "place": "Rhodes", "lat": 36.43, "lon": 28.22, "note": "By sea through the islands of the Knights.", "by": "sea"},
+    {"year": 1441, "place": "Venice", "lat": 45.44, "lon": 12.33, "note": "Up the Adriatic to the city of the Doge.", "by": "sea", "city": "venice"},
+    {"year": 1441, "place": "Florence", "lat": 43.77, "lon": 11.25, "note": "At the council, Abba Nikodimos speaks for the Ethiopian church before the pope.", "by": "land"},
+    {"year": 1441, "place": "Rome", "lat": 41.89, "lon": 12.49, "note": "To Rome, where an Ethiopian house would stand for centuries.", "by": "land", "city": "rome"},
+    {"year": 1442, "place": "Jerusalem", "lat": 31.78, "lon": 35.23, "note": "Back to Jerusalem, and news sent south to the emperor.", "by": "sea", "city": "jerusalem"}
+  ],
+  "informs": [
+    {"region": "italy", "level": 3, "homeKnows": 1443, "confidence": "medium", "note": "The Latin church seen from within"},
+    {"region": "med-east", "level": 3, "homeKnows": 1443, "confidence": "medium"},
+    {"region": "greece", "level": 2, "homeKnows": 1443, "confidence": "low"}
+  ]
+}

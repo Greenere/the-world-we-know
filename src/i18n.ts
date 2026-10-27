@@ -13,7 +13,7 @@ export interface ZhContent {
   regions: Record<string, string>;
   journeys: Record<string, {name?: string; traveler?: string; years?: string; summary?: string; stops?: Record<string, {place?: string; note?: string; date?: string}>}>;
   inventions: Record<string, {name?: string; place?: string; culture?: string; summary?: string; changed?: string}>;
-  viewpoints: Record<string, {name?: string; longName?: string; adjective?: string; startNote?: string}>;
+  viewpoints: Record<string, {name?: string; longName?: string; adjective?: string; tagline?: string; startNote?: string}>;
   moments: Record<string, string>;
   depictions: Record<string, Record<string, {title?: string; caption?: string; captions?: Record<string, string>; place?: string}>>;
   stories: Record<string, string>;
@@ -93,7 +93,7 @@ export const tx = {
   invention(id: string, field: 'name' | 'place' | 'culture' | 'summary' | 'changed', en: string): string {
     return (lang === 'zh' && zh?.inventions[id]?.[field]) || en;
   },
-  viewpoint(id: string, field: 'name' | 'longName' | 'adjective' | 'startNote', en: string): string {
+  viewpoint(id: string, field: 'name' | 'longName' | 'adjective' | 'tagline' | 'startNote', en: string): string {
     return (lang === 'zh' && zh?.viewpoints[id]?.[field]) || en;
   },
   series(id: string, en: string): string {

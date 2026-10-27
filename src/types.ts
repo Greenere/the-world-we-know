@@ -1,7 +1,7 @@
 // Shapes of the files written by scripts/build_data.py.
 
-export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'india' | 'japan' | 'sahel' | 'mexica' | 'inca' | 'persia' | 'egypt' | 'arabia' | 'maghreb' | 'greece' | 'rome' | 'iberia' | 'france' | 'britain' | 'germany' | 'norse' | 'russia' | 'humanity';
-export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'india', 'japan', 'sahel', 'mexica', 'inca', 'persia', 'egypt', 'arabia', 'maghreb', 'greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia'];
+export type VpId = 'europe' | 'china' | 'islam' | 'polynesia' | 'india' | 'japan' | 'sahel' | 'mexica' | 'inca' | 'persia' | 'egypt' | 'arabia' | 'maghreb' | 'greece' | 'rome' | 'iberia' | 'france' | 'britain' | 'germany' | 'norse' | 'russia' | 'inuit' | 'zimbabwe' | 'ethiopia' | 'swahili' | 'nusantara' | 'humanity';
+export const MAIN_VPS: VpId[] = ['europe', 'china', 'islam', 'polynesia', 'india', 'japan', 'sahel', 'mexica', 'inca', 'persia', 'egypt', 'arabia', 'maghreb', 'greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia', 'inuit', 'zimbabwe', 'ethiopia', 'swahili', 'nusantara'];
 export const ALL_VPS: VpId[] = [...MAIN_VPS, 'humanity'];
 
 export interface Home {
@@ -23,6 +23,8 @@ export interface Viewpoint {
   name: string;
   longName: string;
   adjective: string;
+  /** One sentence on who this viewpoint is, for the picker. */
+  tagline: string;
   color: string;
   seal: string;
   homes: Home[];

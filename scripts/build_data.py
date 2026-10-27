@@ -41,7 +41,7 @@ NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/
 NE_FILES = ["ne_50m_land", "ne_50m_lakes", "ne_50m_rivers_lake_centerlines", "ne_50m_antarctic_ice_shelves_polys"]
 
 RES = 3
-MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia"]
+MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "inuit", "zimbabwe", "ethiopia", "swahili", "nusantara"]
 ALL_VPS = MAIN_VPS + ["humanity"]
 CONFIDENCE = {"high": 0, "medium": 1, "low": 2}
 BODIES = {"orbit", "moon"}
@@ -1108,6 +1108,9 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
     for k in vps:
         if k not in vp_ids:
             fail(f"i18n/zh/viewpoints.json: unknown viewpoint {k!r}")
+    for k in vp_ids:
+        if not vps.get(k, {}).get("tagline"):
+            warn(f"i18n/zh/viewpoints.json: {k} has no Chinese tagline")
     moments = rd("moments.json")
     all_moments = {m["label"] for v in viewpoints for m in v.get("moments", [])}
     for k in moments:
@@ -1201,6 +1204,8 @@ def main() -> int:
                              or not isinstance(m.get("from"), int) or not isinstance(m.get("until", 0), int) for m in ms):
                 fail(f"viewpoints.json: {v['id']} community members must be other viewpoints, each with a 'from' year")
             communities[v["id"]] = ms
+        if not v.get("tagline"):
+            fail(f"viewpoints.json: {v['id']} needs a one-sentence tagline")
         if v["id"] in MAIN_VPS and len(v.get("moments", [])) < 8:
             fail(f"viewpoints.json: {v['id']} needs at least 8 key moments")
         for m in v.get("moments", []):

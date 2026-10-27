@@ -4,6 +4,7 @@
     "name": "Europe",
     "longName": "Europe",
     "adjective": "European",
+    "tagline": "The Greek and Latin learned world, from Homer to the age of surveys.",
     "color": "#34588f",
     "seal": "europe",
     "community": {
@@ -201,6 +202,7 @@
     "name": "China",
     "longName": "China",
     "adjective": "Chinese",
+    "tagline": "Dynastic histories and travellers, from the Shang to the Qing.",
     "color": "#b4432c",
     "seal": "china",
     "homes": [
@@ -377,6 +379,7 @@
     "name": "Islamic world",
     "longName": "the Islamic world",
     "adjective": "Islamic",
+    "tagline": "Scholars, pilgrims and merchants who wrote in Arabic and Persian.",
     "color": "#2b7a57",
     "seal": "islam",
     "community": {
@@ -532,6 +535,7 @@
     "name": "Polynesia",
     "longName": "Polynesia",
     "adjective": "Polynesian",
+    "tagline": "Navigators who found the islands of the Pacific.",
     "color": "#b07a24",
     "seal": "polynesia",
     "oral": true,
@@ -631,6 +635,7 @@
     "name": "India",
     "longName": "India",
     "adjective": "Indian",
+    "tagline": "The subcontinent's Sanskrit, Tamil and Persian learning.",
     "color": "#a3466a",
     "seal": "india",
     "homes": [
@@ -762,6 +767,7 @@
     "name": "Japan",
     "longName": "Japan",
     "adjective": "Japanese",
+    "tagline": "The islands, looking out through China, Korea and the Dutch.",
     "color": "#4f5b78",
     "seal": "japan",
     "startNote": "Before about 300 CE this view follows the Yayoi peoples of Kyushu and the Inland Sea, and before them the Jōmon, known only from archaeology and from Chinese histories.",
@@ -879,6 +885,7 @@
     "name": "Sahel",
     "longName": "West African Sahel (Ghana, Mali, Songhay)",
     "adjective": "Sahelian",
+    "tagline": "The empires of Ghana, Mali and Songhay on the Niger.",
     "color": "#7a5230",
     "seal": "sahel",
     "startNote": "Before the rise of Ghana this view follows the towns of the middle Niger, such as Jenné-jeno, and before them the stone villages of Dhar Tichitt, known from archaeology.",
@@ -990,6 +997,7 @@
     "name": "Mexica",
     "longName": "Mexica (Central Mexico)",
     "adjective": "Mexica",
+    "tagline": "The Valley of Mexico, from Teotihuacan to Tenochtitlan.",
     "color": "#1d8a8f",
     "seal": "mexica",
     "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Tlatilco in the Olmec age, then Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule.",
@@ -1084,6 +1092,7 @@
     "name": "Inca",
     "longName": "Inca (Andes)",
     "adjective": "Andean",
+    "tagline": "The Andes, from Chavín to Cusco.",
     "color": "#c4652a",
     "seal": "inca",
     "startNote": "Before the Inca, this view follows the Andean societies they inherited from: Caral, Chavín, Tiwanaku and Huari. After 1533 it follows Andean chroniclers under Spanish rule.",
@@ -1189,6 +1198,7 @@
     "name": "Persia",
     "longName": "Persia and Mesopotamia",
     "adjective": "Persian",
+    "tagline": "The empires and scholars of Iran and Mesopotamia.",
     "color": "#6e7d2c",
     "seal": "persia",
     "homes": [
@@ -1406,6 +1416,7 @@
     "name": "Egypt",
     "longName": "Egypt",
     "adjective": "Egyptian",
+    "tagline": "The Nile valley, from the pharaohs to the khedives.",
     "color": "#2f8fb5",
     "seal": "egypt",
     "homes": [
@@ -1592,6 +1603,7 @@
     "name": "Arabia",
     "longName": "Arabia",
     "adjective": "Arabian",
+    "tagline": "The incense road, the holy cities and the monsoon sailors.",
     "color": "#a0704a",
     "seal": "arabia",
     "homes": [
@@ -1750,6 +1762,7 @@
     "name": "Maghreb",
     "longName": "The Maghreb and al-Andalus",
     "adjective": "Maghrebi",
+    "tagline": "Carthage, the Maghreb and al-Andalus.",
     "color": "#4b4aa6",
     "seal": "maghreb",
     "homes": [
@@ -1883,6 +1896,7 @@
     "name": "Greece",
     "longName": "Greece and Byzantium",
     "adjective": "Greek",
+    "tagline": "Greek geographers, from Homer to Byzantium.",
     "color": "#3f86b0",
     "seal": "greece",
     "homes": [
@@ -1986,6 +2000,7 @@
     "name": "Rome",
     "longName": "Rome and Italy",
     "adjective": "Roman",
+    "tagline": "Rome, then Italy's popes, merchants and humanists.",
     "color": "#8b2232",
     "seal": "rome",
     "startNote": "Before Rome was founded in 753 BCE, this view follows the peoples of Italy: the villages of the Bronze Age, then the Etruscan cities.",
@@ -2091,6 +2106,7 @@
     "name": "Iberia",
     "longName": "Spain and Portugal",
     "adjective": "Iberian",
+    "tagline": "The kingdoms of Spain and Portugal that sailed the oceans.",
     "color": "#c49a2c",
     "seal": "iberia",
     "startNote": "Before Rome, this view follows the peoples of Iberia: El Argar in the Bronze Age, then Tartessos, the silver kingdom the Phoenicians and Greeks traded with. From 711 to 1492 it follows the Christian kingdoms of the north; al-Andalus belongs to the Maghreb.",
@@ -2203,6 +2219,7 @@
     "name": "France",
     "longName": "France and Gaul",
     "adjective": "French",
+    "tagline": "Gaul, the Franks, and France's travellers and savants.",
     "color": "#3a4fa0",
     "seal": "france",
     "startNote": "Before Caesar's conquest, this view follows the Celtic peoples of Gaul, with the Greek city of Massalia on their coast.",
@@ -2291,6 +2308,7 @@
     "name": "Britain",
     "longName": "Britain and Ireland",
     "adjective": "British",
+    "tagline": "The isles, from Bronze Age traders to Cook and the Admiralty.",
     "color": "#7a3f5c",
     "seal": "britain",
     "startNote": "Before the Roman conquest, this view follows the peoples of Britain and Ireland, known from archaeology and from what Greek and Roman travellers wrote.",
@@ -2380,6 +2398,7 @@
     "name": "Germany",
     "longName": "Germany and the Low Countries",
     "adjective": "German",
+    "tagline": "The Germans and the Dutch, from the Hanse to Humboldt.",
     "color": "#55606b",
     "seal": "germany",
     "startNote": "Before Charlemagne, this view follows the peoples of Germania and the Low Countries: Bronze Age farmers, then the Germanic tribes Rome fought and the peoples of the migrations.",
@@ -2487,6 +2506,7 @@
     "name": "Norse",
     "longName": "Norse and Scandinavia",
     "adjective": "Norse",
+    "tagline": "Viking sailors and the Scandinavian north.",
     "color": "#3e7a76",
     "seal": "norse",
     "startNote": "Before the Viking age, this view follows the peoples of Scandinavia, known from archaeology: the ship-builders of the Bronze Age and the farmers of the Iron Age.",
@@ -2581,6 +2601,7 @@
     "name": "Russia",
     "longName": "Rus and Russia",
     "adjective": "Russian",
+    "tagline": "Rus and Russia, from the river routes to Siberia and Alaska.",
     "color": "#23415f",
     "seal": "russia",
     "startNote": "Before the Rus, this view follows the peoples of the steppe and forest from whom Russia grew: the chariot-builders of Sintashta, the Scythians and the early Slavs.",
@@ -2705,10 +2726,557 @@
     ]
   },
   {
+    "id": "inuit",
+    "name": "Inuit",
+    "longName": "The Inuit and their forerunners",
+    "adjective": "Inuit",
+    "tagline": "Hunters who knew the Arctic from Alaska to Greenland.",
+    "color": "#7c93ab",
+    "seal": "inuit",
+    "oral": true,
+    "startNote": "Before about 1000 this view follows the Paleo-Inuit of the Arctic, the Saqqaq and Dorset peoples, and the hunters of the Bering Strait from whom the Inuit came. Inuit knowledge lived in memory, story and carved maps; the early dates come from archaeology.",
+    "noteUntil": 1000,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Disko Bay",
+        "lat": 69.0,
+        "lon": -51.0
+      },
+      {
+        "from": -500,
+        "place": "Igloolik",
+        "lat": 69.38,
+        "lon": -81.8
+      },
+      {
+        "from": 900,
+        "place": "Bering Strait",
+        "lat": 65.6,
+        "lon": -168.1
+      },
+      {
+        "from": 1250,
+        "place": "Avanersuaq",
+        "lat": 76.53,
+        "lon": -68.7
+      },
+      {
+        "from": 1700,
+        "place": "Nuuk",
+        "lat": 64.18,
+        "lon": -51.7
+      },
+      {
+        "from": 1999,
+        "place": "Iqaluit",
+        "lat": 63.75,
+        "lon": -68.52
+      }
+    ],
+    "moments": [
+      {
+        "year": -2000,
+        "label": "Saqqaq hunters in western Greenland",
+        "source": "friesen-mason"
+      },
+      {
+        "year": -500,
+        "label": "The Dorset people of the eastern Arctic",
+        "source": "friesen-mason"
+      },
+      {
+        "year": 1000,
+        "label": "The Thule people set out from Bering Strait",
+        "source": "mcghee"
+      },
+      {
+        "year": 1250,
+        "label": "Thule hunters meet the Norse in Greenland",
+        "source": "mcghee"
+      },
+      {
+        "year": 1500,
+        "label": "Inuit reach East Greenland",
+        "source": "mcghee"
+      },
+      {
+        "year": 1724,
+        "label": "Pooq returns from Copenhagen",
+        "source": "mcghee"
+      },
+      {
+        "year": 1853,
+        "label": "Hans Hendrik joins Kane's expedition",
+        "source": "hendrik"
+      },
+      {
+        "year": 1863,
+        "label": "Qitdlarssuaq's people reach Greenland",
+        "source": "mcghee"
+      },
+      {
+        "year": 1884,
+        "label": "Kunit carves the Ammassalik maps",
+        "source": "ammassalik-maps"
+      },
+      {
+        "year": 1924,
+        "label": "Rasmussen reaches Alaska by dog sledge",
+        "source": "rasmussen"
+      }
+    ]
+  },
+  {
+    "id": "zimbabwe",
+    "name": "Southern Africa",
+    "longName": "Southern Africa: Mapungubwe, Great Zimbabwe and Mutapa",
+    "adjective": "Southern African",
+    "tagline": "The gold kingdoms of the Zimbabwe plateau and their neighbours.",
+    "color": "#9a7b2f",
+    "seal": "zimbabwe",
+    "oral": true,
+    "startNote": "Before Mapungubwe rose about 1220, this view follows the San, southern Africa's ancient painters, and the farmers who settled the Limpopo and Zambezi valleys. Its knowledge was carried in memory; the dates come from archaeology and from Arab and Portuguese reports.",
+    "noteUntil": 1220,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The Drakensberg",
+        "lat": -29.3,
+        "lon": 29.4
+      },
+      {
+        "from": 300,
+        "place": "The Limpopo valley",
+        "lat": -22.2,
+        "lon": 29.4
+      },
+      {
+        "from": 1220,
+        "place": "Mapungubwe",
+        "lat": -22.19,
+        "lon": 29.24
+      },
+      {
+        "from": 1300,
+        "place": "Great Zimbabwe",
+        "lat": -20.27,
+        "lon": 30.93
+      },
+      {
+        "from": 1450,
+        "place": "Mount Fura (Mutapa)",
+        "lat": -16.77,
+        "lon": 31.58
+      },
+      {
+        "from": 1690,
+        "place": "Danangombe",
+        "lat": -19.87,
+        "lon": 29.29
+      },
+      {
+        "from": 1824,
+        "place": "Thaba Bosiu",
+        "lat": -29.35,
+        "lon": 27.65
+      },
+      {
+        "from": 1895,
+        "place": "Palapye",
+        "lat": -22.55,
+        "lon": 27.12
+      }
+    ],
+    "moments": [
+      {
+        "year": -2000,
+        "label": "San painters in the Drakensberg",
+        "source": "lewis-williams"
+      },
+      {
+        "year": 300,
+        "label": "Farmers settle the Limpopo valley",
+        "source": "huffman"
+      },
+      {
+        "year": 1220,
+        "label": "Mapungubwe's golden rhinoceros",
+        "source": "huffman"
+      },
+      {
+        "year": 1300,
+        "label": "Great Zimbabwe's walls rise",
+        "source": "pikirayi"
+      },
+      {
+        "year": 1450,
+        "label": "Mutapa rules the plateau",
+        "source": "beach"
+      },
+      {
+        "year": 1505,
+        "label": "The Portuguese build a fort at Sofala",
+        "source": "beach"
+      },
+      {
+        "year": 1652,
+        "label": "The Dutch settle at the Cape",
+        "source": "hoc"
+      },
+      {
+        "year": 1824,
+        "label": "Moshoeshoe at Thaba Bosiu",
+        "source": "hoc"
+      },
+      {
+        "year": 1895,
+        "label": "Three Tswana kings in London",
+        "source": "parsons-kings"
+      }
+    ]
+  },
+  {
+    "id": "ethiopia",
+    "name": "Ethiopia",
+    "longName": "Aksum and Ethiopia",
+    "adjective": "Ethiopian",
+    "tagline": "The Christian highlands between the Red Sea and the Nile.",
+    "color": "#8e3e7c",
+    "seal": "ethiopia",
+    "startNote": "Before Aksum, this view follows the farmers of the northern highlands and the kingdom of D'mt, which traded across the Red Sea with Saba.",
+    "noteUntil": 50,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The Tigray highlands",
+        "lat": 14.1,
+        "lon": 38.7
+      },
+      {
+        "from": -800,
+        "place": "Yeha",
+        "lat": 14.29,
+        "lon": 39.02
+      },
+      {
+        "from": 1,
+        "place": "Aksum",
+        "lat": 14.13,
+        "lon": 38.72
+      },
+      {
+        "from": 1150,
+        "place": "Lalibela",
+        "lat": 12.03,
+        "lon": 39.04
+      },
+      {
+        "from": 1456,
+        "place": "Debre Berhan",
+        "lat": 9.68,
+        "lon": 39.53
+      },
+      {
+        "from": 1636,
+        "place": "Gondar",
+        "lat": 12.6,
+        "lon": 37.47
+      },
+      {
+        "from": 1886,
+        "place": "Addis Ababa",
+        "lat": 9.03,
+        "lon": 38.74
+      }
+    ],
+    "moments": [
+      {
+        "year": -800,
+        "label": "D'mt trades with Saba",
+        "source": "munro-hay"
+      },
+      {
+        "year": 50,
+        "label": "Adulis in the Periplus",
+        "source": "periplus"
+      },
+      {
+        "year": 340,
+        "label": "Ezana becomes Christian",
+        "source": "munro-hay"
+      },
+      {
+        "year": 525,
+        "label": "Kaleb crosses to Yemen",
+        "source": "munro-hay"
+      },
+      {
+        "year": 615,
+        "label": "The first Muslims shelter at Aksum",
+        "source": "munro-hay"
+      },
+      {
+        "year": 1200,
+        "label": "The churches of Lalibela",
+        "source": "tamrat"
+      },
+      {
+        "year": 1306,
+        "label": "Ethiopian envoys reach Europe",
+        "source": "salvadore"
+      },
+      {
+        "year": 1320,
+        "label": "The Kebra Nagast",
+        "source": "kebra-nagast"
+      },
+      {
+        "year": 1441,
+        "label": "Ethiopian monks at the Council of Florence",
+        "source": "salvadore"
+      },
+      {
+        "year": 1520,
+        "label": "A Portuguese embassy reaches the emperor",
+        "source": "salvadore"
+      },
+      {
+        "year": 1896,
+        "label": "Victory at Adwa",
+        "source": "hoc"
+      },
+      {
+        "year": 1924,
+        "label": "Ras Tafari tours Europe",
+        "source": "hoc"
+      }
+    ]
+  },
+  {
+    "id": "swahili",
+    "name": "Swahili coast",
+    "longName": "The Swahili coast",
+    "adjective": "Swahili",
+    "tagline": "Stone towns of the East African coast, facing the monsoon.",
+    "color": "#c06c84",
+    "seal": "swahili",
+    "startNote": "Before the Swahili towns rose about 800, this view follows the coast's fishing and farming peoples, the Azania of Greek merchants, known mostly from archaeology.",
+    "noteUntil": 800,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Azania",
+        "lat": -5.0,
+        "lon": 39.5
+      },
+      {
+        "from": 800,
+        "place": "Shanga",
+        "lat": -2.28,
+        "lon": 40.9
+      },
+      {
+        "from": 1100,
+        "place": "Kilwa",
+        "lat": -8.96,
+        "lon": 39.51
+      },
+      {
+        "from": 1500,
+        "place": "Malindi",
+        "lat": -3.22,
+        "lon": 40.12
+      },
+      {
+        "from": 1600,
+        "place": "Mombasa",
+        "lat": -4.04,
+        "lon": 39.67
+      },
+      {
+        "from": 1840,
+        "place": "Zanzibar",
+        "lat": -6.16,
+        "lon": 39.19
+      }
+    ],
+    "moments": [
+      {
+        "year": 50,
+        "label": "Rhapta in the Periplus",
+        "source": "periplus"
+      },
+      {
+        "year": 800,
+        "label": "Stone towns rise at Shanga and Manda",
+        "source": "horton-middleton"
+      },
+      {
+        "year": 1100,
+        "label": "The sultans of Kilwa",
+        "source": "kilwa-chronicle"
+      },
+      {
+        "year": 1331,
+        "label": "Ibn Battuta at Kilwa",
+        "source": "ibn-battuta"
+      },
+      {
+        "year": 1415,
+        "label": "A giraffe from Malindi reaches the Ming court",
+        "source": "ming-shilu"
+      },
+      {
+        "year": 1498,
+        "label": "Da Gama at Malindi",
+        "source": "velho-roteiro"
+      },
+      {
+        "year": 1505,
+        "label": "The Portuguese sack Kilwa",
+        "source": "kilwa-chronicle"
+      },
+      {
+        "year": 1698,
+        "label": "Oman takes Mombasa",
+        "source": "sheriff-zanzibar"
+      },
+      {
+        "year": 1840,
+        "label": "Zanzibar becomes the sultan's capital",
+        "source": "sheriff-zanzibar"
+      },
+      {
+        "year": 1880,
+        "label": "Tippu Tip on the upper Congo",
+        "source": "tippu-tip"
+      }
+    ]
+  },
+  {
+    "id": "nusantara",
+    "name": "Nusantara",
+    "longName": "Nusantara: the Malay world",
+    "adjective": "Malay",
+    "tagline": "Malay seafarers between India, China and Madagascar.",
+    "color": "#4f8a3c",
+    "seal": "nusantara",
+    "startNote": "Before Srivijaya rose in the 7th century, this view follows the Austronesian seafarers who spread from Taiwan through the islands, known from archaeology, language and genetics.",
+    "noteUntil": 670,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Luzon",
+        "lat": 16.5,
+        "lon": 121.0
+      },
+      {
+        "from": -500,
+        "place": "Java",
+        "lat": -7.5,
+        "lon": 110.0
+      },
+      {
+        "from": 670,
+        "place": "Palembang (Srivijaya)",
+        "lat": -2.99,
+        "lon": 104.76
+      },
+      {
+        "from": 1293,
+        "place": "Trowulan (Majapahit)",
+        "lat": -7.56,
+        "lon": 112.38
+      },
+      {
+        "from": 1400,
+        "place": "Malacca",
+        "lat": 2.19,
+        "lon": 102.25
+      },
+      {
+        "from": 1511,
+        "place": "Aceh",
+        "lat": 5.55,
+        "lon": 95.32
+      },
+      {
+        "from": 1945,
+        "place": "Jakarta",
+        "lat": -6.2,
+        "lon": 106.85
+      }
+    ],
+    "moments": [
+      {
+        "year": -2000,
+        "label": "Austronesian voyagers leave Taiwan",
+        "source": "bellwood"
+      },
+      {
+        "year": 500,
+        "label": "Sailors from the islands settle Madagascar",
+        "source": "adelaar"
+      },
+      {
+        "year": 671,
+        "label": "Yijing studies at Srivijaya",
+        "source": "yijing"
+      },
+      {
+        "year": 825,
+        "label": "Borobudur is completed",
+        "source": "hall-kr"
+      },
+      {
+        "year": 1025,
+        "label": "The Chola raid on Srivijaya",
+        "source": "hall-kr"
+      },
+      {
+        "year": 1293,
+        "label": "Majapahit is founded",
+        "source": "nagarakretagama"
+      },
+      {
+        "year": 1365,
+        "label": "Prapanca writes the Nagarakretagama",
+        "source": "nagarakretagama"
+      },
+      {
+        "year": 1405,
+        "label": "Zheng He's fleets at Malacca",
+        "source": "ma-huan"
+      },
+      {
+        "year": 1511,
+        "label": "The Portuguese take Malacca",
+        "source": "reid"
+      },
+      {
+        "year": 1596,
+        "label": "The Dutch at Banten",
+        "source": "reid"
+      },
+      {
+        "year": 1612,
+        "label": "The Malay Annals",
+        "source": "sejarah-melayu"
+      },
+      {
+        "year": 1849,
+        "label": "Hikayat Abdullah",
+        "source": "abdullah-munshi"
+      }
+    ]
+  },
+  {
     "id": "humanity",
     "name": "Humanity",
     "longName": "Humanity",
     "adjective": "human",
+    "tagline": "Where people first arrived, from Africa to the last islands.",
     "color": "#6d4f86",
     "seal": "humanity",
     "special": true,

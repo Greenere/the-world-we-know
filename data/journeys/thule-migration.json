@@ -1,0 +1,29 @@
+{
+  "id": "thule-migration",
+  "name": "The Thule migration",
+  "traveler": "The Thule people, ancestors of the Inuit",
+  "years": "c. 1000–1300",
+  "kind": "group voyage",
+  "viewpoint": "inuit",
+  "summary": "Whale hunters of the Bering Strait, with umiaks, dog sledges and harpoons, move east along the Arctic coast in a few generations, across Canada to Greenland. They displace or absorb the Dorset people and meet the Norse in Greenland. Every Inuit community from Alaska to Greenland descends from them.",
+  "source": "friesen-mason",
+  "confidence": "low",
+  "by": "direct",
+  "stops": [
+    {"year": 1000, "place": "Bering Strait", "lat": 65.6, "lon": -168.1, "note": "Thule culture grows on both sides of the strait, hunting bowhead whales from skin boats."},
+    {"year": 1050, "place": "Point Barrow", "lat": 71.29, "lon": -156.79, "note": "North along the Alaskan coast."},
+    {"year": 1100, "place": "Amundsen Gulf", "lat": 70.5, "lon": -124.0, "note": "East along the Arctic coast in the warm centuries, when the whales range farther."},
+    {"year": 1150, "place": "Cambridge Bay", "lat": 69.1, "lon": -105.1, "note": "Across the islands of the central Arctic."},
+    {"year": 1200, "place": "Somerset Island", "lat": 73.0, "lon": -93.0, "note": "Whale-bone houses on the shores of Lancaster Sound."},
+    {"year": 1250, "place": "Smith Sound", "lat": 78.3, "lon": -74.0, "note": "Across the narrow ice to Greenland, where they meet the last Dorset."},
+    {"year": 1250, "place": "Avanersuaq", "lat": 76.53, "lon": -68.7, "note": "The Thule district, which gave the culture its name."},
+    {"year": 1300, "place": "Disko Bay", "lat": 69.2, "lon": -51.1, "note": "South along Greenland's west coast, toward the Norse farms."}
+  ],
+  "informs": [
+    {"region": "greenland-northwest", "level": 4, "homeKnows": 1300, "confidence": "low", "note": "The Thule spread across the Arctic"},
+    {"region": "baffin-bay", "level": 4, "homeKnows": 1300, "confidence": "low"},
+    {"region": "greenland", "level": 3, "homeKnows": 1300, "confidence": "low"},
+    {"region": "hudson-bay", "level": 4, "homeKnows": 1300, "confidence": "low"},
+    {"region": "arctic-canada", "level": 4, "homeKnows": 1300, "confidence": "low"}
+  ]
+}

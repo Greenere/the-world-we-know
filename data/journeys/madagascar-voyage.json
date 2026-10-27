@@ -1,0 +1,24 @@
+{
+  "id": "madagascar-voyage",
+  "name": "Sailing to Madagascar",
+  "traveler": "Austronesian sailors from the islands",
+  "years": "c. 500",
+  "kind": "group voyage",
+  "viewpoint": "nusantara",
+  "summary": "Sailors from the islands, whose language was closest to that of the Ma'anyan of southern Borneo, cross or skirt the Indian Ocean and settle Madagascar, 6,000 kilometres away. Malagasy is still an Austronesian language. How they went, and how many voyages it took, is unknown.",
+  "source": "adelaar",
+  "confidence": "low",
+  "stops": [
+    {"year": 500, "place": "South Borneo", "lat": -3.32, "lon": 114.59, "note": "The home of the language closest to Malagasy."},
+    {"year": 500, "place": "The Sunda Strait", "lat": -6.0, "lon": 105.8, "note": "Out between Java and Sumatra into the Indian Ocean.", "by": "sea"},
+    {"waypoint": true, "lat": -8.0, "lon": 90.0},
+    {"waypoint": true, "lat": -10.0, "lon": 70.0},
+    {"year": 550, "place": "The Comoros", "lat": -11.7, "lon": 43.3, "note": "Perhaps by way of the African coast and the islands.", "by": "sea"},
+    {"year": 550, "place": "Northwest Madagascar", "lat": -15.72, "lon": 46.32, "note": "A new home across the ocean.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "madagascar", "level": 3, "homeKnows": 600, "confidence": "low", "note": "The first Austronesians on Madagascar"},
+    {"region": "east-africa-coast", "level": 2, "homeKnows": 600, "confidence": "low"},
+    {"region": "indian-ocean", "level": 2, "homeKnows": 600, "confidence": "low"}
+  ]
+}

@@ -2683,3 +2683,189 @@ polynesia,britain,1824,3,high,hoc,Liholiho of Hawaii in London
 japan,britain,1600,2,high,hoc,William Adams at Ieyasu's court
 japan,germania,1600,2,high,hoc,The Dutch ship Liefde reaches Bungo
 india,anatolia,1250,2,medium,hoc,"Rum, in the Persian histories of the Delhi sultanate"
+# ════ The Inuit and their forerunners: Paleo-Inuit, Bering Strait cultures, the Thule and the Inuit ════
+inuit,arctic-canada,-2000,3,low,friesen-mason,"The Arctic Small Tool tradition, from Alaska to Greenland"
+inuit,greenland,-2000,2,low,friesen-mason,Saqqaq hunters on Greenland's west coast
+inuit,greenland-northwest,-2000,2,low,friesen-mason,
+inuit,greenland-north,-2000,2,low,friesen-mason,Independence hunters in Peary Land
+inuit,baffin-bay,-2000,2,low,friesen-mason,
+inuit,alaska-arctic,-2000,2,low,friesen-mason,
+inuit,bering-sea,-2000,1,low,friesen-mason,
+inuit,hudson-bay,-2000,1,low,friesen-mason,
+inuit,hudson-bay,-500,3,medium,friesen-mason,The Dorset people
+inuit,baffin-bay,-500,3,medium,friesen-mason,
+inuit,greenland-northwest,-500,3,medium,friesen-mason,
+inuit,canada-east,-500,2,medium,friesen-mason,The Labrador coast
+inuit,bering-sea,1,4,medium,friesen-mason,Old Bering Sea hunters on both sides of the strait
+inuit,alaska-arctic,1,4,medium,friesen-mason,
+inuit,siberia-east,1,2,medium,friesen-mason,Chukotka across the strait
+inuit,alaska,1,3,medium,friesen-mason,
+inuit,alaska-interior,1,1,low,friesen-mason,
+inuit,kamchatka,1,1,low,friesen-mason,
+inuit,helluland-markland,1000,2,low,mcghee,Strangers from the east in Labrador
+inuit,greenland,1250,4,medium,mcghee,The Norse farms in the south of Greenland
+inuit,greenland-northeast,1400,2,low,mcghee,Round the north of Greenland to the east coast
+inuit,greenland-southeast,1500,3,medium,mcghee,
+inuit,scandinavia,1725,3,medium,mcghee,Pooq returns from Copenhagen with stories of the Danes
+inuit,britain,1840,3,medium,mcghee,Eenoolooapik returns from Aberdeen
+inuit,north-atlantic-east,1840,2,medium,mcghee,
+inuit,greenland-north,1871,3,high,hendrik,"Hans Hendrik with Kane, Hall and Nares"
+inuit,arctic-ocean,1871,2,high,hendrik,
+inuit,sverdrup-islands,1855,2,medium,hendrik,
+inuit,greenland-northwest,1863,4,high,mcghee,Qitdlarssuaq leads his people from Baffin Island to Greenland
+inuit,greenland-southeast,1884,4,high,ammassalik-maps,Kunit's wooden maps of the Ammassalik coast
+inuit,alaska-arctic,1924,5,high,rasmussen,Rasmussen's sledge journey from Greenland to Alaska
+inuit,arctic-canada,1924,5,high,rasmussen,
+inuit,hudson-bay,1924,5,high,rasmussen,
+inuit,siberia-east,1924,3,high,rasmussen,
+# ════ Southern Africa: the San, the Limpopo farmers, Mapungubwe, Great Zimbabwe, Mutapa and after ════
+zimbabwe,southern-africa,-2000,4,low,lewis-williams,The San: hunters who knew every waterhole
+zimbabwe,cape,-2000,3,low,lewis-williams,
+zimbabwe,zambezi,-2000,2,low,lewis-williams,
+zimbabwe,zambezi,300,3,medium,huffman,Farmers settle the Limpopo and Zambezi valleys
+zimbabwe,great-lakes,300,1,low,huffman,
+zimbabwe,east-africa-coast,300,1,low,huffman,
+zimbabwe,east-africa-coast,900,2,medium,huffman,Ivory and gold go down to the coast
+zimbabwe,indian-ocean,900,1,low,huffman,Glass beads from across the sea
+zimbabwe,east-africa-coast,1220,3,medium,huffman,Mapungubwe trades through Sofala and Kilwa
+zimbabwe,zambezi,1220,4,medium,huffman,
+zimbabwe,west-india-coast,1220,1,low,huffman,Glass beads from India
+zimbabwe,madagascar,1300,1,low,pikirayi,
+zimbabwe,china-south,1300,1,low,pikirayi,Chinese celadon on the hill at Great Zimbabwe
+zimbabwe,arabia-felix,1300,1,low,pikirayi,
+zimbabwe,iberia,1505,2,high,beach,The Portuguese at Sofala and Sena
+zimbabwe,west-india-coast,1560,2,medium,beach,
+zimbabwe,germania,1652,2,medium,hoc,The Dutch at the Cape
+zimbabwe,britain,1806,2,medium,hoc,
+zimbabwe,gaul,1833,2,medium,hoc,French missionaries with Moshoeshoe
+# ════ Ethiopia: the northern highlands, D'mt, Aksum, Zagwe and Solomonic Ethiopia ════
+ethiopia,ethiopia,-2000,3,low,munro-hay,The northern highlands
+ethiopia,horn,-2000,2,low,munro-hay,
+ethiopia,red-sea,-2000,2,low,munro-hay,
+ethiopia,upper-nile,-2000,1,low,munro-hay,
+ethiopia,arabia-felix,-800,3,medium,munro-hay,D'mt and Saba across the Red Sea
+ethiopia,red-sea,-800,3,medium,munro-hay,
+ethiopia,egypt,-800,1,low,munro-hay,
+ethiopia,red-sea,50,4,high,periplus,"Adulis, Aksum's port"
+ethiopia,egypt,50,3,high,periplus,
+ethiopia,arabian-sea,50,3,medium,periplus,
+ethiopia,west-india-coast,50,2,medium,periplus,
+ethiopia,arabia-felix,50,4,high,periplus,
+ethiopia,east-africa-coast,50,2,medium,periplus,
+ethiopia,levant,50,2,medium,periplus,
+ethiopia,levant,340,3,high,munro-hay,Ezana's Aksum turns to the church of Alexandria and Jerusalem
+ethiopia,egypt,340,4,high,munro-hay,
+ethiopia,upper-nile,340,3,high,munro-hay,Ezana's campaign against Meroë
+ethiopia,anatolia,340,2,medium,munro-hay,
+ethiopia,sri-lanka,550,2,medium,cosmas,Aksumite traders at Taprobane
+ethiopia,malabar,550,2,medium,cosmas,
+ethiopia,persia,570,2,medium,munro-hay,Persia takes Yemen from Aksum's allies
+ethiopia,arabia-hejaz,615,3,high,munro-hay,The first Muslims take refuge at Aksum
+ethiopia,arabian-sea,800,2,medium,munro-hay,Aksum declines and the sea trade passes to others
+ethiopia,west-india-coast,800,1,low,munro-hay,
+ethiopia,levant,1200,4,high,tamrat,Ethiopian monks in Jerusalem; Lalibela's new Jerusalem
+ethiopia,gaul,1306,2,medium,salvadore,Ethiopian envoys at Avignon
+ethiopia,iberia,1306,2,medium,salvadore,
+ethiopia,italy,1306,2,medium,salvadore,
+ethiopia,italy,1480,3,high,salvadore,"Santo Stefano dei Mori, the Ethiopian house in Rome"
+ethiopia,iberia,1520,3,high,salvadore,A Portuguese embassy reaches the emperor
+ethiopia,west-india-coast,1520,3,high,salvadore,
+ethiopia,germania,1652,2,high,ludolf,Abba Gorgoryos works with Ludolf in Germany
+ethiopia,britain,1868,3,high,hoc,A British army marches on Magdala
+ethiopia,rus,1895,2,medium,hoc,Russian missions to Menelik's court
+ethiopia,gaul,1897,3,high,hoc,
+ethiopia,europe,1924,4,high,hoc,Ras Tafari tours Europe
+ethiopia,britain,1924,4,high,hoc,
+ethiopia,gaul,1924,4,high,hoc,
+ethiopia,italy,1924,4,high,hoc,
+ethiopia,scandinavia,1924,2,medium,hoc,
+# ════ The Swahili coast: Azania, the stone towns, Kilwa, Mombasa, Zanzibar ════
+swahili,east-africa-coast,-2000,2,low,horton-middleton,Fishing and farming peoples of the coast
+swahili,great-lakes,-500,2,low,horton-middleton,Bantu-speaking farmers from the great lakes
+swahili,arabia-felix,50,2,medium,periplus,Arab traders from Muza at Rhapta
+swahili,red-sea,50,1,low,periplus,
+swahili,arabian-sea,50,1,low,periplus,
+swahili,east-africa-coast,800,4,medium,horton-middleton,"Shanga, Manda and the stone towns"
+swahili,arabian-sea,800,3,medium,horton-middleton,
+swahili,persian-gulf,800,3,medium,horton-middleton,Ships from Siraf and Basra
+swahili,arabia-felix,800,3,medium,horton-middleton,
+swahili,oman,800,3,medium,horton-middleton,
+swahili,madagascar,800,2,medium,horton-middleton,The Comoros and Madagascar
+swahili,west-india-coast,800,2,medium,horton-middleton,
+swahili,zambezi,800,2,medium,horton-middleton,
+swahili,mesopotamia,1000,2,medium,horton-middleton,
+swahili,persia,1000,2,medium,horton-middleton,The Shirazi founders of legend
+swahili,egypt,1000,2,medium,horton-middleton,
+swahili,zambezi,1100,3,medium,kilwa-chronicle,Sofala's gold
+swahili,southern-africa,1100,2,medium,kilwa-chronicle,Gold from the plateau beyond Sofala
+swahili,madagascar,1100,3,medium,kilwa-chronicle,
+swahili,arabia-hejaz,1100,3,medium,kilwa-chronicle,
+swahili,maghreb,1331,1,medium,ibn-battuta,Ibn Battuta of Tangier visits Kilwa
+swahili,iberia,1498,2,high,velho-roteiro,The Portuguese arrive
+swahili,iberia,1505,3,high,kilwa-chronicle,The Portuguese sack Kilwa
+swahili,west-india-coast,1510,3,high,kilwa-chronicle,
+swahili,cape,1510,2,medium,kilwa-chronicle,
+swahili,oman,1698,4,high,sheriff-zanzibar,Oman takes Mombasa
+swahili,great-lakes,1850,4,high,sheriff-zanzibar,Caravans to Lake Tanganyika
+swahili,west-india-coast,1850,4,high,sheriff-zanzibar,Gujarati merchants of Zanzibar
+swahili,north-america,1840,2,medium,sheriff-zanzibar,Salem ships trade for cloves and ivory
+swahili,britain,1850,2,medium,sheriff-zanzibar,
+swahili,congo,1880,3,high,tippu-tip,Tippu Tip's state on the upper Congo
+swahili,germania,1885,2,high,tippu-tip,
+# ════ Nusantara: Austronesian seafarers, Srivijaya, Majapahit, Malacca and after ════
+nusantara,ryukyu-taiwan,-2000,3,low,bellwood,The homeland in Taiwan
+nusantara,philippines,-2000,3,low,bellwood,
+nusantara,borneo,-2000,2,low,bellwood,
+nusantara,south-china-sea,-2000,2,low,bellwood,
+nusantara,java,-1000,3,low,bellwood,Austronesian settlers through the islands
+nusantara,sumatra,-1000,3,low,bellwood,
+nusantara,java-sea,-1000,3,low,bellwood,
+nusantara,borneo,-1000,3,low,bellwood,
+nusantara,malay-peninsula,-1000,2,low,bellwood,
+nusantara,moluccas,-1000,2,low,bellwood,
+nusantara,lesser-sunda,-1000,2,low,bellwood,
+nusantara,new-guinea,-1000,1,low,bellwood,
+nusantara,annam,-500,2,medium,bellwood,Bronze drums from Dong Son
+nusantara,khmer,-500,1,low,bellwood,
+nusantara,tamilakam,1,2,medium,hall-kr,Traders from India
+nusantara,bay-of-bengal,1,3,medium,hall-kr,
+nusantara,sri-lanka,1,2,medium,hall-kr,
+nusantara,china-south,1,2,medium,hall-kr,
+nusantara,malacca-strait,1,4,medium,hall-kr,
+nusantara,khmer,1,3,medium,hall-kr,Funan on the Mekong
+nusantara,india-north,671,3,high,yijing,Srivijaya's monks study at Nalanda
+nusantara,bengal,671,3,high,yijing,
+nusantara,china-south,671,3,high,yijing,
+nusantara,lingnan,671,3,high,yijing,
+nusantara,sri-lanka,671,3,high,yijing,
+nusantara,china-north,800,2,medium,hall-kr,
+nusantara,persian-gulf,800,2,medium,hall-kr,Persian and Arab ships at Srivijaya
+nusantara,tamilakam,1025,4,high,hall-kr,The Chola raid on Srivijaya
+nusantara,china-north,1293,3,high,nagarakretagama,Kublai Khan's fleet attacks Java
+nusantara,mongolia,1293,2,medium,nagarakretagama,
+nusantara,moluccas,1365,3,high,nagarakretagama,The lands Majapahit names as its own
+nusantara,lesser-sunda,1365,4,high,nagarakretagama,
+nusantara,borneo,1365,4,high,nagarakretagama,
+nusantara,malay-peninsula,1365,4,high,nagarakretagama,
+nusantara,new-guinea,1365,2,medium,nagarakretagama,"Wanin, on the coast of New Guinea"
+nusantara,philippines,1365,3,medium,nagarakretagama,
+nusantara,khmer,1365,3,high,nagarakretagama,
+nusantara,annam,1365,3,high,nagarakretagama,Champa
+nusantara,china-south,1405,4,high,ma-huan,Zheng He's fleets at Malacca
+nusantara,china-north,1411,3,high,ming-shilu,Malacca's ruler visits the Ming court
+nusantara,arabia-hejaz,1450,3,high,reid,Malacca's rulers turn to Islam; pilgrims to Mecca
+nusantara,west-india-coast,1450,3,high,reid,Gujarati merchants in Malacca
+nusantara,persia,1450,2,medium,reid,
+nusantara,egypt,1450,2,medium,reid,
+nusantara,mesopotamia,1450,2,medium,reid,
+nusantara,iberia,1511,3,high,reid,The Portuguese take Malacca
+nusantara,anatolia,1566,3,high,reid,Aceh's envoys to the Ottoman sultan
+nusantara,germania,1596,3,high,reid,The Dutch at Banten
+nusantara,britain,1602,2,high,reid,
+nusantara,mexico,1600,2,medium,reid,The Manila galleon sails for Acapulco
+nusantara,japan,1600,2,medium,reid,
+nusantara,britain,1849,3,high,abdullah-munshi,Abdullah Munshi on the English of Singapore
+ethiopia,greece,530,2,medium,munro-hay,Justinian's envoys to King Kaleb
+ethiopia,mesopotamia,340,2,medium,munro-hay,Babylon and the lands of the Bible
+ethiopia,britain,1770,2,high,hoc,James Bruce at Gondar
+swahili,anatolia,1585,2,high,horton-middleton,The Ottoman galleys of Mir Ali Bey

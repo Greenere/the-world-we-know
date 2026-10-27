@@ -1,0 +1,28 @@
+{
+  "id": "malindi-china",
+  "name": "Malindi's envoys to the Ming court",
+  "traveler": "Envoys of the king of Malindi",
+  "years": "1414–1419",
+  "kind": "envoy",
+  "viewpoint": "swahili",
+  "summary": "Envoys from Malindi sail across the Indian Ocean with a giraffe, which the Yongle emperor's court greets as a qilin, the auspicious beast of Chinese legend. They come home in 1419 with Zheng He's fifth voyage.",
+  "source": "ming-shilu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1414, "place": "Malindi", "lat": -3.22, "lon": 40.12, "note": "The king of Malindi sends envoys, with a giraffe, to the emperor of China."},
+    {"year": 1414, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "Across the monsoon sea to the pepper port of the Malabar coast."},
+    {"year": 1415, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "Through the straits with the Ming ships."},
+    {"year": 1415, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "The giraffe is received at the palace gate as a qilin; poems and paintings celebrate it."},
+    {"year": 1417, "place": "Malacca", "lat": 2.19, "lon": 102.25, "note": "Homeward with Zheng He's fifth voyage."},
+    {"year": 1418, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "The fleet divides; ships sail on for Africa."},
+    {"year": 1419, "place": "Malindi", "lat": -3.22, "lon": 40.12, "note": "Home with Chinese silk and porcelain, and news of the Ming."}
+  ],
+  "informs": [
+    {"region": "china-south", "level": 3, "homeKnows": 1419, "confidence": "medium", "note": "A giraffe for the Yongle emperor"},
+    {"region": "south-china-sea", "level": 3, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "malacca-strait", "level": 3, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "sumatra", "level": 2, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "bay-of-bengal", "level": 2, "homeKnows": 1419, "confidence": "medium"},
+    {"region": "malabar", "level": 3, "homeKnows": 1419, "confidence": "medium"}
+  ]
+}

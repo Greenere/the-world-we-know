@@ -15,14 +15,14 @@ const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
 export const GROUPS: [string, VpId[]][] = [
   ['Knowledge communities', ['europe', 'islam', 'humanity']],
   ['Europe', ['greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia']],
-  ['Asia', ['arabia', 'persia', 'india', 'china', 'japan']],
-  ['Africa', ['egypt', 'maghreb', 'sahel']],
-  ['The Americas', ['mexica', 'inca']],
+  ['Asia', ['arabia', 'persia', 'india', 'china', 'japan', 'nusantara']],
+  ['Africa', ['egypt', 'maghreb', 'sahel', 'ethiopia', 'swahili', 'zimbabwe']],
+  ['The Americas and the Arctic', ['inuit', 'mexica', 'inca']],
   ['Oceania', ['polynesia']],
 ];
 
 /** The picker's columns, by group index, chosen so the three come out about the same height. */
-const PICKER_COLUMNS = [[0, 4, 5], [1], [2, 3]];
+const PICKER_COLUMNS = [[0, 3], [1, 5], [2, 4]];
 
 /** The second line of a picker entry: who is in a knowledge community, or which one a viewpoint joins. */
 function pickerLine(data: AppData, id: VpId): string {
@@ -31,7 +31,8 @@ function pickerLine(data: AppData, id: VpId): string {
   if (vp.community) return t('Shared by {members}', {members: vp.community.members.map(m => name(m.viewpoint)).join(t(', '))});
   if (vp.special) return t('When people first arrived');
   // The long name only when it says more than the name (not "India / India").
-  const long = vp.longName !== vp.name ? tx.viewpoint(id, 'longName', vp.longName) : '';
+  const same = vp.longName.replace(/^The /, '').toLowerCase() === vp.name.toLowerCase();
+  const long = same ? '' : tx.viewpoint(id, 'longName', vp.longName);
   // Every community it belonged to, in order: Egypt is part of Europe from 331 BCE to 641, then of the Islamic world.
   const spans = memberships(data, id);
   if (!spans.length) return long;
@@ -48,17 +49,6 @@ function memberships(data: AppData, id: VpId): string[] {
       if (until !== undefined) return t('part of {community} {from}–{until}', {community, from: formatYear(from), until: formatYear(until)});
       return from <= START ? t('part of {community} from the start', {community}) : t('joins {community} in {year}', {community, year: formatYear(from)});
     });
-}
-
-/** The picker's one-line version (the full line is its tooltip): a long community by its first members ("Greece, Egypt,
- * Rome and 7 more"), a member by the community it belongs to last ("Joins the Islamic world in 641 CE"). */
-function shortLine(data: AppData, id: VpId): string {
-  const ms = data.vp[id].community?.members;
-  const name = (v: VpId) => tx.viewpoint(v, 'name', data.vp[v].name);
-  if (ms && ms.length > 4) return t('{first} and {n} more', {first: ms.slice(0, 3).map(m => name(m.viewpoint)).join(t(', ')), n: ms.length - 3});
-  if (ms) return ms.map(m => name(m.viewpoint)).join(t(', '));
-  const last = memberships(data, id).pop();
-  return last ? last.charAt(0).toUpperCase() + last.slice(1) : pickerLine(data, id);
 }
 
 export class TopBar {
@@ -107,7 +97,7 @@ export class TopBar {
             const vp = data.vp[id];
             const b = h(
               'button.vp-picker-item',
-              {type: 'button', style: `--chip:${vp.color}`, title: pickerLine(data, id), onclick: () => {
+              {type: 'button', style: `--chip:${vp.color}`, title: [pickerLine(data, id), tx.viewpoint(id, 'longName', vp.longName)].filter((x, i, a) => x && a.indexOf(x) === i).join('\n'), onclick: () => {
                 this.pick(id);
                 this.closePicker();
               }},
@@ -115,7 +105,7 @@ export class TopBar {
               h(
                 'span.vp-picker-text',
                 h('span.vp-picker-name', tx.viewpoint(id, 'name', vp.name)),
-                h('span.vp-picker-long', shortLine(data, id)),
+                h('span.vp-picker-long', tx.viewpoint(id, 'tagline', vp.tagline)),
               ),
             );
             this.pickerItems.set(id, b);

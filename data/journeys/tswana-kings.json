@@ -1,0 +1,27 @@
+{
+  "id": "tswana-kings",
+  "name": "Three Tswana kings in London",
+  "traveler": "Khama III, Sebele I and Bathoen I",
+  "years": "1895",
+  "kind": "envoy",
+  "viewpoint": "zimbabwe",
+  "summary": "Three kings of the Bechuanaland Protectorate sail to Britain to stop Cecil Rhodes's company from taking their lands. They tour the country speaking to crowds and win a meeting with the colonial secretary; their lands stay outside the company's rule.",
+  "source": "parsons-kings",
+  "confidence": "high",
+  "stops": [
+    {"year": 1895, "place": "Palapye", "lat": -22.55, "lon": 27.12, "note": "Khama's capital. The kings resolve to go to the Queen themselves."},
+    {"year": 1895, "place": "Mafeking", "lat": -25.86, "lon": 25.64, "note": "South by wagon and rail.", "by": "land"},
+    {"year": 1895, "place": "Cape Town", "lat": -33.92, "lon": 18.42, "note": "They board the mail steamer.", "by": "land"},
+    {"year": 1895, "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "Three weeks up the Atlantic.", "by": "sea"},
+    {"year": 1895, "place": "London", "lat": 51.51, "lon": -0.12, "note": "Audiences, newspapers and Joseph Chamberlain at the Colonial Office.", "by": "land"},
+    {"year": 1895, "place": "Birmingham", "lat": 52.48, "lon": -1.9, "note": "Speaking to packed halls across the country.", "by": "land"},
+    {"year": 1895, "place": "Manchester", "lat": 53.48, "lon": -2.24, "note": "The industrial north.", "by": "land"},
+    {"year": 1895, "place": "London", "lat": 51.51, "lon": -0.12, "note": "Queen Victoria receives them at Windsor.", "by": "land"},
+    {"year": 1896, "place": "Palapye", "lat": -22.55, "lon": 27.12, "note": "Home, their lands still their own.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 4, "homeKnows": 1896, "confidence": "high", "note": "The kings see Victorian Britain"},
+    {"region": "south-atlantic", "level": 2, "homeKnows": 1896, "confidence": "high"},
+    {"region": "north-atlantic-east", "level": 2, "homeKnows": 1896, "confidence": "high"}
+  ]
+}
