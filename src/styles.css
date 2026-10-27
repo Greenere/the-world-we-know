@@ -1346,6 +1346,16 @@ kbd {
   background: color-mix(in srgb, var(--chip) 16%, var(--paper));
 }
 
+.chip-meta {
+  margin-left: 2px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+
+.wonder-chip {
+  --chip: var(--brass);
+}
+
 .chip-icon {
   display: inline-flex;
   color: var(--chip);

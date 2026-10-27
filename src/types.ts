@@ -106,6 +106,9 @@ export interface DepictionDoc {
   studies?: Depiction[];
 }
 
+/** How a landmark's course is drawn: a wall, a canal, or a canyon's river. */
+export type PathStyle = 'wall' | 'canal' | 'river';
+
 /** One age of a landmark built, abandoned and rebuilt along new lines (the Great Wall under each dynasty). */
 export interface Phase {
   id: string;
@@ -130,19 +133,32 @@ export interface City {
   /** A landmark rather than a city: something built (a pyramid, a canal) or a natural wonder. */
   kind?: 'built' | 'natural';
   /** A natural landmark's map sign; water has none, its name is lettered on the water. */
-  subtype?: 'peak' | 'volcano' | 'falls' | 'gorge' | 'rock' | 'water';
+  subtype?: 'peak' | 'volcano' | 'falls' | 'gorge' | 'rock' | 'pool' | 'water';
   /** The course of a landmark that runs along a line, and how to draw it: a wall, a canal, a canyon's river. */
   path?: {
-    style: 'wall' | 'canal' | 'river';
+    style: PathStyle;
     points?: [number, number][];
     phases?: Phase[];
     /** When an age ends its works stand as fading ruins (a wall), or vanish (a canal silts up and is gone). */
     ended?: 'fade' | 'vanish';
   };
+  /** A landmark that covers ground (a desert, a delta, a lake the basemap lacks): how it is engraved, its outline
+   * (dated outlines for one that changes, like the shrinking Aral Sea), and the stipple of a land texture. */
+  area?: {
+    texture: 'sand' | 'salt' | 'marsh' | 'upland' | 'water';
+    outlines: {from?: number; polygons: [number, number][][]}[];
+    stipple?: [number, number][];
+  };
+  /** A reef that is many reefs (the Great Barrier Reef): each one's traced line. */
+  reefs?: [number, number][][];
   /** For a landmark: the year a viewpoint came upon the place itself, when long after it knew the land around it. */
   found?: Partial<Record<VpId, number>>;
   /** For a landmark: when it became known beyond its neighbours, so that mere contact with the land sufficed. */
   widely?: number;
+  /** For a wonder within a city (the Alhambra): that city, whose mark and card carry it. */
+  host?: string;
+  /** For a city: the wonders that stand in it. */
+  wonders?: string[];
   cell: number;
   dates: Partial<Record<CityDateKey, number | [number, number]>>;
   source: string;

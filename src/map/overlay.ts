@@ -1,6 +1,6 @@
 import type {Layer} from '@deck.gl/core';
 import {PathStyleExtension, type PathStyleExtensionProps} from '@deck.gl/extensions';
-import {IconLayer, PathLayer, ScatterplotLayer, TextLayer} from '@deck.gl/layers';
+import {IconLayer, PathLayer, PolygonLayer, ScatterplotLayer, TextLayer} from '@deck.gl/layers';
 import {LngLat as MlLngLat, type Map as MlMap} from 'maplibre-gl';
 import type {AppData} from '../data';
 import {communityOf, historicalName, landmarkKnown, nameFor, phaseAt} from '../data';
@@ -10,7 +10,7 @@ import {FogLayer, type FogLayerUniforms} from '../fog/layer';
 import type {JourneyGeo, LngLat} from '../journey-geo';
 import {cleanPath, currentStopIndex, travelled} from '../journey-geo';
 import type {State} from '../state';
-import type {City, Invention, VpId} from '../types';
+import type {City, Invention, PathStyle, VpId} from '../types';
 import {tx} from '../i18n';
 import {hexToRgb} from '../ui/color';
 import {horizonCull, SURFACE_PARAMETERS} from './horizon';
@@ -58,7 +58,7 @@ interface Atlas {
 
 function buildAtlas(): Atlas {
   const S = 64;
-  const names = ['city1', 'city2', 'city3', 'ruin', 'rediscovered', 'lost', 'invention', 'built', 'natural', 'peak', 'volcano', 'falls', 'gorge', 'rock'];
+  const names = ['city1', 'city2', 'city3', 'ruin', 'rediscovered', 'lost', 'invention', 'built', 'natural', 'peak', 'volcano', 'falls', 'gorge', 'rock', 'pool', 'wonder'];
   const canvas = document.createElement('canvas');
   canvas.width = S * names.length;
   canvas.height = S;
@@ -129,7 +129,7 @@ function buildAtlas(): Atlas {
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
-    } else if (['natural', 'peak', 'volcano', 'falls', 'gorge', 'rock'].includes(name)) {
+    } else if (['natural', 'peak', 'volcano', 'falls', 'gorge', 'rock', 'pool'].includes(name)) {
       // Natural wonders in moss green, each in the old map sign for its kind, on a paper ground.
       ctx.fillStyle = paper;
       ctx.beginPath();
@@ -166,6 +166,13 @@ function buildAtlas(): Atlas {
         // Stepped walls falling to a river.
         line(-21, -13, -12, -13, -10, -3, -5, -3, -2, 14);
         line(21, -13, 12, -13, 10, -3, 5, -3, 2, 14);
+      } else if (name === 'pool') {
+        // A small water: ripples in an oval, for a lake too small for the basemap (Itasca) or a narrow sound.
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, 20, 13, 0, 0, Math.PI * 2);
+        ctx.stroke();
+        line(-11, -2, -4, -5, 4, -1, 11, -4);
+        line(-11, 5, -4, 2, 4, 6, 11, 3);
       } else if (name === 'rock') {
         // A lone domed rock on the plain.
         ctx.beginPath();
@@ -182,6 +189,22 @@ function buildAtlas(): Atlas {
         ctx.quadraticCurveTo(cx + 8, cy + 22, cx + 16, cy + 16);
         ctx.stroke();
       }
+    } else if (name === 'wonder') {
+      // A small brass star on a paper ground, worn at a city's shoulder: wonders stand here.
+      const brass = 'rgb(138,102,40)';
+      ctx.fillStyle = paper;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 25, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = brass;
+      ctx.beginPath();
+      for (let k = 0; k < 10; k++) {
+        const a = (k * Math.PI) / 5 - Math.PI / 2;
+        const r = k % 2 ? 9 : 21;
+        ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r);
+      }
+      ctx.closePath();
+      ctx.fill();
     } else if (name === 'invention') {
       // A brass compass rose in a ring: where an instrument or idea was first made.
       const brass = 'rgb(138,102,40)';
@@ -227,6 +250,8 @@ export interface CityView {
   label: string;
   pos: LngLat;
   appearedAt: number;
+  /** The wonders standing in this city that are built and known this year, by name (the Alhambra in Granada). */
+  wonders?: string[];
 }
 
 export function tierAt(c: City, year: number): 1 | 2 | 3 {
@@ -323,7 +348,15 @@ export class OverlayModel {
     const labelVp: VpId = state.vps[0];
     const sharedVp = communityOf(data, labelVp, year);
     const views: CityView[] = [];
+    // Wonders within a city have no mark of their own: gather those built and known, for their city's ornament.
+    const wonders = new Map<string, string[]>();
     for (const c of data.cities) {
+      if (!c.host || cityStatus(c, year) === 'unborn') continue;
+      if (!humanity && state.vps.every(vp => landmarkKnown(data, field, c, vp) > year)) continue;
+      wonders.set(c.host, [...(wonders.get(c.host) ?? []), tx.name(nameFor(c.names, labelVp, year, c.id, sharedVp)!.name)]);
+    }
+    for (const c of data.cities) {
+      if (c.host) continue;
       const status = cityStatus(c, year);
       if (status === 'unborn') continue;
       if (status === 'lost' && !humanity) continue;
@@ -343,7 +376,7 @@ export class OverlayModel {
       // A landmark rebuilt age after age (the Great Wall) marks the works of the age, and is a ruin in one that let it fall.
       const phase = phaseAt(c, year);
       const shown = phase?.idle ? 'ruin' : status;
-      views.push({city: c, status: shown, tier: tierAt(c, year), label: tx.name(name.name), pos: phase ? phase.anchor : [c.lon, c.lat], appearedAt});
+      views.push({city: c, status: shown, tier: tierAt(c, year), label: tx.name(name.name), pos: phase ? phase.anchor : [c.lon, c.lat], appearedAt, wonders: wonders.get(c.id)});
     }
     const shown = new Set(views.map(v => v.city.id));
     for (const id of [...this.appeared.keys()]) if (!shown.has(id)) this.appeared.delete(id);
@@ -393,18 +426,8 @@ export class OverlayModel {
     const hit = (b: Box, tier = 0) =>
       boxes.some(({b: o, tier: t}) => (tier === 0 || t <= tier) && b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
     const minTier = zoom >= 3.6 ? 3 : zoom >= 2.4 ? 2 : 1;
-    // Water is lettered across the lake itself, ahead of any city label.
-    const waters: CityView[] = [];
-    for (const v of this.cityViews) {
-      if (v.city.subtype !== 'water' || hidden(v.pos[0], v.pos[1])) continue;
-      const p = map.project([v.pos[0], clampLat(v.pos[1], state.globe)]);
-      const w = ems(v.label) * waterSize(v) * 0.9;
-      if (p.x < -w || p.y < -20 || p.x > W + w || p.y > H + 20) continue;
-      boxes.push({b: [p.x - w / 2, p.y - waterSize(v) * 0.7, p.x + w / 2, p.y + waterSize(v) * 0.7], tier: 0});
-      waters.push(v);
-    }
     const cand = this.cityViews
-      .filter(v => v.city.subtype !== 'water')
+      .filter(v => !lettered(v))
       .filter(v => v.tier <= minTier || journeyCities.has(v.city.id) || v.city.id === homeCity || v.city.id === state.city)
       .sort((a, b) => prio(a) - prio(b));
     function prio(v: CityView) {
@@ -416,7 +439,7 @@ export class OverlayModel {
     // Every visible dot is an obstacle, so no label is printed across another city.
     const screen = new Map<CityView, {x: number; y: number}>();
     for (const v of this.cityViews) {
-      if (v.city.subtype === 'water' || hidden(v.pos[0], v.pos[1])) continue;
+      if (lettered(v) || hidden(v.pos[0], v.pos[1])) continue;
       const p = map.project([v.pos[0], clampLat(v.pos[1], state.globe)]);
       if (p.x < -40 || p.y < -20 || p.x > W + 40 || p.y > H + 20) continue;
       screen.set(v, p);
@@ -432,6 +455,19 @@ export class OverlayModel {
       if (hit(b, v.tier)) continue;
       boxes.push({b, tier: 0});
       cities.push(v);
+    }
+    // Lakes, bays and areas are lettered across themselves, where no city's label is already set: Tenochtitlan
+    // keeps its name on its island, and "Lake Texcoco" yields.
+    const waters: CityView[] = [];
+    for (const v of this.cityViews) {
+      if (!lettered(v) || hidden(v.pos[0], v.pos[1])) continue;
+      const p = map.project([v.pos[0], clampLat(v.pos[1], state.globe)]);
+      const w = ems(v.label) * waterSize(v) * 0.9;
+      if (p.x < -w || p.y < -20 || p.x > W + w || p.y > H + 20) continue;
+      const b: Box = [p.x - w / 2, p.y - waterSize(v) * 0.7, p.x + w / 2, p.y + waterSize(v) * 0.7];
+      if (hit(b)) continue;
+      boxes.push({b, tier: 0});
+      waters.push(v);
     }
     const regions: RegionLabel[] = [];
     const cellPx = (512 * 2 ** zoom) / 360 / 1.0;
@@ -488,7 +524,7 @@ export class OverlayModel {
     const paper = `rgba(${PAPER.join(',')},0.85)`;
     // Landmark and ruin signs first, so every label prints over them.
     for (const v of this.cityViews) {
-      const icon = isLow(v) && v.city.subtype !== 'water' ? markIcon(v) : null;
+      const icon = isLow(v) && !lettered(v) ? markIcon(v) : null;
       if (!icon || hidden(v.pos[0], v.pos[1])) continue;
       const m = this.atlas.mapping[icon];
       const p = map.project(v.pos);
@@ -497,6 +533,13 @@ export class OverlayModel {
       ctx.drawImage(this.atlas.sheet, m.x, m.y, m.width, m.height, p.x - size / 2, p.y - size / 2, size, size);
     }
     ctx.globalAlpha = 1;
+    for (const v of this.cityViews) {
+      if (!v.wonders?.length || hidden(v.pos[0], v.pos[1])) continue;
+      const m = this.atlas.mapping.wonder;
+      const p = map.project(v.pos);
+      const d = citySize(v.tier) * 0.38 + 3;
+      ctx.drawImage(this.atlas.sheet, m.x, m.y, m.width, m.height, p.x + d - 5, p.y - d - 5, 10, 10);
+    }
     for (const r of this.labels.regions) {
       if (hidden(r.pos[0], r.pos[1])) continue;
       const p = map.project(r.pos);
@@ -621,7 +664,7 @@ export class OverlayModel {
       );
     }
 
-    layers.push(...this.landmarkPathLayers(state, P));
+    layers.push(...this.areaLayers(state, P), ...this.landmarkPathLayers(state, P));
     if (globe) {
       layers.push(
         // Landmark and ruin signs are drawn on the label canvas beneath the labels (deck's globe cannot draw
@@ -673,6 +716,21 @@ export class OverlayModel {
             autoHighlight: false,
           }),
       ),
+      // The ornament of a city with wonders, at its upper right; part of the city, so it opens the city's card.
+      new IconLayer<CityView>({
+        id: 'cities-wonders',
+        parameters: SURFACE_PARAMETERS,
+        extensions: [horizonCull],
+        data: this.marks.filter(v => v.wonders?.length),
+        iconAtlas: this.atlas.url,
+        iconMapping: this.atlas.mapping,
+        getIcon: () => 'wonder',
+        getPosition: d => P(d.pos),
+        getSize: 10,
+        getPixelOffset: d => [citySize(d.tier) * 0.38 + 3, -(citySize(d.tier) * 0.38 + 3)],
+        sizeUnits: 'pixels',
+        pickable: true,
+      }),
       new TextLayer<CityView>({
         id: 'city-labels',
         parameters: SURFACE_PARAMETERS,
@@ -722,14 +780,72 @@ export class OverlayModel {
 
   /** Everything with a mark on the map: water is lettered instead. */
   private get marks(): CityView[] {
-    return this.cityViews.filter(v => v.city.subtype !== 'water');
+    return this.cityViews.filter(v => !lettered(v));
+  }
+
+  /** Landmarks that cover ground: an engraved wash and edge over the area, stippled for sand, marsh or upland,
+   * and for a lake the basemap lacks (the Aral Sea), water in the basemap's own colours, its outline for the year. */
+  private areaLayers(state: State, P: (p: LngLat) => LngLat): Layer[] {
+    type Shape = CityView & {polygon: LngLat[]; texture: string};
+    const shapes: Shape[] = [];
+    const dots: {pos: LngLat; texture: string}[] = [];
+    for (const v of this.cityViews) {
+      const o = v.city.area ? outlineAt(v.city, state.year) : null;
+      if (!o) continue;
+      for (const poly of o.polygons) shapes.push({...v, polygon: (poly as LngLat[]).map(P), texture: v.city.area!.texture});
+      for (const p of v.city.area!.stipple ?? []) dots.push({pos: P(p as LngLat), texture: v.city.area!.texture});
+    }
+    // A reef is many reefs (the Great Barrier Reef): each traced line a small dotted mark, as charts show them.
+    type Reef = CityView & {line: LngLat[]};
+    const reefs: Reef[] = this.cityViews.flatMap(v => (v.city.reefs ?? []).map(r => ({...v, line: (r as LngLat[]).map(P)})));
+    if (!shapes.length && !reefs.length) return [];
+    const style = (t: string) => AREA_STYLE[t] ?? AREA_STYLE.sand;
+    return [
+      new PathLayer<Reef>({
+        id: 'cities-reefs',
+        parameters: SURFACE_PARAMETERS,
+        data: reefs,
+        getPath: d => d.line,
+        getColor: [...CANAL, 215],
+        getWidth: 1.8,
+        widthUnits: 'pixels',
+        getDashArray: [0.6, 1.1],
+        dashJustified: true,
+        capRounded: true,
+        pickable: true,
+        extensions: [DASHED],
+      } as ConstructorParameters<typeof PathLayer<Reef>>[0]),
+      new PolygonLayer<Shape>({
+        id: 'cities-area',
+        parameters: SURFACE_PARAMETERS,
+        data: shapes,
+        getPolygon: d => d.polygon,
+        getFillColor: d => style(d.texture).fill,
+        getLineColor: d => style(d.texture).line ?? [0, 0, 0, 0],
+        getLineWidth: 0.9,
+        lineWidthUnits: 'pixels',
+        stroked: true,
+        pickable: true,
+        updateTriggers: {getPolygon: state.year},
+      }),
+      new ScatterplotLayer<(typeof dots)[number]>({
+        id: 'area-stipple',
+        parameters: SURFACE_PARAMETERS,
+        extensions: [horizonCull],
+        data: dots,
+        getPosition: d => d.pos,
+        getRadius: 1.1,
+        getFillColor: d => style(d.texture).dot ?? [0, 0, 0, 0],
+        radiusUnits: 'pixels',
+      }),
+    ];
   }
 
   /** Landmarks that run along a line, drawn along it on a paper casing: a wall in ink with battlement ticks, a
    * canal as a fine ink line, a canyon's river in moss. Shown with the landmark's mark, and clickable like it. */
   private landmarkPathLayers(state: State, P: (p: LngLat) => LngLat): Layer[] {
     /** `fade`: 1 for a standing course; for a fallen one, less the longer it has lain in ruin. */
-    type Course = {points: LngLat[]; style: 'wall' | 'canal' | 'river'; ruin: boolean; fade: number};
+    type Course = {points: LngLat[]; style: PathStyle; ruin: boolean; fade: number};
     // Each course a landmark has drawn by this year: a plain one while it stands; for a phased one, every age's
     // works so far, in ink while that age lasts and faint once it has passed.
     const courses = (v: CityView): Course[] => {
@@ -750,7 +866,7 @@ export class OverlayModel {
     };
     const copies = (path: LngLat[]) => (state.globe ? [path] : [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
     const split = state.globe ? (paths: LngLat[][]) => this.splitAtHorizon(paths) : (paths: LngLat[][]) => paths;
-    type Line = CityView & {line: LngLat[]; style: Course['style']; ruin: boolean; fade: number};
+    type Line = CityView & {line: LngLat[]; style: PathStyle; ruin: boolean; fade: number};
     const data: Line[] = this.cityViews
       .filter(v => v.city.path)
       .flatMap(v => courses(v).flatMap(c => split(copies(c.points.map(P))).map(path => ({...v, line: cleanPath(path), style: c.style, ruin: c.ruin, fade: c.fade}))))
@@ -1118,6 +1234,28 @@ function journeyLayers(
   }
   return out;
 }
+
+/** A place whose name is lettered across it instead of set beside a mark: a lake or bay, or an area (a desert). */
+function lettered(v: CityView) {
+  return v.city.subtype === 'water' || !!v.city.area;
+}
+
+/** The outline an area has in a year: the latest of its dated outlines (the Aral Sea as it shrinks). */
+function outlineAt(c: City, year: number) {
+  let cur = null;
+  for (const o of c.area?.outlines ?? []) if ((o.from ?? -Infinity) <= year) cur = o;
+  return cur;
+}
+
+/** How each kind of area is engraved: its wash, its edge, and the stipple of its texture. */
+// Land areas have no drawn edge, as on old maps: a light wash and the stipple are enough. Water and salt keep a shore.
+const AREA_STYLE: Record<string, {fill: [number, number, number, number]; line?: [number, number, number, number]; dot?: [number, number, number, number]}> = {
+  water: {fill: [198, 207, 191, 255], line: [79, 63, 43, 200]},
+  salt: {fill: [250, 248, 241, 235], line: [125, 112, 92, 140]},
+  sand: {fill: [214, 186, 128, 40], dot: [150, 112, 58, 170]},
+  marsh: {fill: [140, 170, 140, 55], dot: [72, 94, 58, 170]},
+  upland: {fill: [160, 128, 88, 32], dot: [110, 84, 52, 160]},
+};
 
 /** Landmarks and ruins: drawn in their own lower layer, beneath the living cities. */
 function isLow(v: CityView) {

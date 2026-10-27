@@ -27,7 +27,7 @@ from pathlib import Path
 import h3
 import numpy as np
 import shapely
-from shapely.geometry import Point, mapping, shape
+from shapely.geometry import Point, Polygon, mapping, shape
 from shapely.geometry.polygon import orient
 from shapely.ops import unary_union
 
@@ -889,6 +889,27 @@ def load_names(regions_by_id, city_ids, vp_ids, sources):
     return names
 
 
+def stipple(polys, step: float = 0.3) -> list[list[float]]:
+    """Evenly scattered points inside an area, the engraver's texture for sand, marsh or upland. A fixed jitter
+    keeps it from looking like a grid while staying the same from build to build."""
+    shape_ = shapely.unary_union(polys)
+    x0, y0, x1, y1 = shape_.bounds
+    out = []
+    i = 0
+    y = y0 + step / 2
+    while y < y1:
+        x = x0 + step / 2 + (step / 2 if i % 2 else 0)
+        while x < x1:
+            jx = ((hash((round(x, 2), round(y, 2))) % 1000) / 1000 - 0.5) * step * 0.6
+            jy = ((hash((round(y, 2), round(x, 2))) % 1000) / 1000 - 0.5) * step * 0.6
+            if shape_.contains(Point(x + jx, y + jy)):
+                out.append([round(x + jx, 3), round(y + jy, 3)])
+            x += step
+        y += step
+        i += 1
+    return out
+
+
 def haversine_km(lat1, lon1, lat2, lon2):
     p1, p2 = math.radians(lat1), math.radians(lat2)
     dp, dl = p2 - p1, math.radians(lon2 - lon1)
@@ -937,8 +958,8 @@ def load_cities(sources, grid: Grid):
         if kind:
             city["kind"] = kind
         subtype = row.get("subtype") or None
-        if subtype and (kind != "natural" or subtype not in ("peak", "volcano", "falls", "gorge", "rock", "water")):
-            fail(f"{where}: subtype must be peak, volcano, falls, gorge, rock or water, on a natural landmark")
+        if subtype and (kind != "natural" or subtype not in ("peak", "volcano", "falls", "gorge", "rock", "pool", "water")):
+            fail(f"{where}: subtype must be peak, volcano, falls, gorge, rock, pool or water, on a natural landmark")
         elif subtype:
             city["subtype"] = subtype
         # found: "europe 1855 russia 1643". A landmark one viewpoint came upon only long after it knew the
@@ -949,6 +970,8 @@ def load_cities(sources, grid: Grid):
                 fail(f"{where}: a landmark needs a 'widely' year, when it became known beyond its neighbours")
             else:
                 city["widely"] = round(widely.mid)
+            if row.get("city"):
+                city["host"] = row["city"]
         if row.get("found"):
             parts = row["found"].split()
             if len(parts) % 2 or not kind:
@@ -1311,14 +1334,49 @@ def main() -> int:
     journeys = load_journeys(sources, vp_ids)
     events = load_events(regions_by_id, sources, journeys)
     cities = load_cities(sources, grid)
-    # Landmarks that run along a line (a wall, a canal) carry their course.
     by_id = {c["id"]: c for c in cities}
+    # Wonders that stand in a city (the Alhambra in Granada): the city lists them, and they draw no mark of their own.
+    for c in cities:
+        host = by_id.get(c.get("host", ""))
+        if "host" not in c:
+            continue
+        if not host or host.get("kind"):
+            fail(f"landmarks.csv: {c['id']} stands in unknown city {c['host']!r}")
+        elif haversine_km(c["lat"], c["lon"], host["lat"], host["lon"]) > 60:
+            fail(f"landmarks.csv: {c['id']} is more than 60 km from {c['host']}")
+        else:
+            host.setdefault("wonders", []).append(c["id"])
+    # Landmarks that run along a line (a wall, a canal) carry their course.
     good = lambda path: len(path) >= 2 and all(len(p) == 2 for p in path)
     rounded = lambda path: [[round(x, 3) for x in p] for p in path]
     for lid, line in json.loads((DATA / "landmark-paths.json").read_text(encoding="utf-8")).items():
         where = f"landmark-paths.json: {lid}"
         if not by_id.get(lid, {}).get("kind"):
             fail(f"{where} is not a landmark")
+        elif "area" in line:
+            # A landmark that covers ground (a desert, a delta, a lake the basemap lacks): its outline, or dated
+            # outlines for one that changes (the shrinking Aral Sea), and a stipple to texture a land area.
+            area = line["area"]
+            outlines = []
+            for k, o in enumerate(area.get("outlines", [])):
+                # A later outline may be empty: the lake has dried away (Lop Nur from 1972).
+                if (not o.get("polygons") and k == 0) or not all(len(poly) >= 3 and all(len(p) == 2 for p in poly) for poly in o.get("polygons", [])):
+                    fail(f"{where}: every outline needs polygons of three or more [lon, lat] points (only a later one may be empty)")
+                    continue
+                outlines.append({**({"from": o["from"]} if "from" in o else {}), "polygons": [rounded(poly) for poly in o["polygons"]]})
+            if area.get("texture") not in ("sand", "salt", "marsh", "upland", "water"):
+                fail(f"{where}: texture must be sand, salt, marsh, upland or water")
+            elif outlines:
+                doc = {"texture": area["texture"], "outlines": outlines}
+                if area["texture"] in ("sand", "marsh", "upland"):
+                    doc["stipple"] = stipple([Polygon(p) for p in outlines[0]["polygons"]])
+                by_id[lid]["area"] = doc
+        elif "reefs" in line:
+            # A reef is many reefs: each traced line drawn as its own small mark (the Great Barrier Reef).
+            if not all(good(r) for r in line["reefs"]):
+                fail(f"{where}: every reef needs two or more [lon, lat] points")
+            else:
+                by_id[lid]["reefs"] = [rounded(r) for r in line["reefs"]]
         elif line.get("style") not in ("wall", "canal", "river"):
             fail(f"{where} style must be wall, canal or river")
         elif "phases" in line:

@@ -150,6 +150,7 @@ class App {
       openRegion: (id: string) => this.openRegion(id, true),
       openJourney: (id: string) => this.startJourney(id),
       openInvention: (id: string) => this.openInvention(id),
+      openCity: (id: string) => this.openCity(id, false),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),
     };
     const ui = {
@@ -836,7 +837,12 @@ class App {
     } else if (pick?.layer?.id.startsWith('cities')) {
       const v = pick.object as CityView;
       const status = cityStatus(v.city, s.year);
-      text = h('div', h('strong', v.label), status === 'living' ? null : h('span.tip-sub', ` · ${t(status === 'rediscovered' ? 'rediscovered ruin' : status)}`));
+      text = h(
+        'div',
+        h('strong', v.label),
+        status === 'living' ? null : h('span.tip-sub', ` · ${t(status === 'rediscovered' ? 'rediscovered ruin' : status)}`),
+        v.wonders?.length ? h('span.tip-sub', ` · ${t('with {wonders}', {wonders: v.wonders.join(isZh() ? '、' : ', ')})}`) : null,
+      );
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id === 'journey-stops') {
       const g = this.geo(s.journey)!;

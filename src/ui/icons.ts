@@ -62,6 +62,7 @@ export const naturalIcons: Record<string, string> = {
   falls: wrap('<path d="M3.5 4.5h13M7 4.5v8M10 4.5v9M13 4.5v8"/><path d="M4 16.5c2-.8 4 .8 6 0s4 .8 6 0"/>'),
   gorge: wrap('<path d="M2 5h3.5l1 4h2l1.3 7M18 5h-3.5l-1 4h-2l-1.3 7"/>'),
   rock: wrap('<path d="M3.5 14c.4-6.5 12.6-6.5 13 0z"/><path d="M2 16.5h16"/>'),
+  pool: wrap('<ellipse cx="10" cy="10" rx="7.5" ry="5"/><path d="M5.5 9.3c1.5-.9 3 .9 4.5 0s3 .9 4.5 0"/>'),
   water: wrap('<path d="M3 8c2.3-1.2 4.7 1.2 7 0s4.7 1.2 7 0M3 12c2.3-1.2 4.7 1.2 7 0s4.7 1.2 7 0"/>'),
 };
 

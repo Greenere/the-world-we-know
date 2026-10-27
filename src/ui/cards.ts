@@ -8,7 +8,7 @@ import type {City, Depiction, DepictionKind, Invention, Journey, NameEntry, Regi
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
-import {icons, inventionIcons, kindIcons} from './icons';
+import {icons, inventionIcons, kindIcons, naturalIcons} from './icons';
 import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
@@ -75,6 +75,7 @@ export class Cards {
       openRegion(id: string): void;
       openJourney(id: string): void;
       openInvention(id: string): void;
+      openCity(id: string): void;
       flyTo(lng: number, lat: number, zoom?: number): void;
     },
   ) {
@@ -371,6 +372,25 @@ export class Cards {
     );
   }
 
+  private wonderChips(ids: string[]): HTMLElement {
+    const vp = this.store.state.vps[0];
+    return h(
+      'div.chips',
+      ids.map(id => {
+        const w = this.data.cityById.get(id);
+        if (!w) return null;
+        const built = w.dates.founded;
+        return h(
+          'button.chip.wonder-chip',
+          {type: 'button', onclick: () => this.actions.openCity(id)},
+          h('span.chip-icon', {html: w.kind === 'natural' ? naturalIcons[w.subtype ?? ''] ?? icons.natural : icons.built}),
+          tx.name(nameFor(w.names, vp, this.store.state.year, w.id)!.name),
+          built !== undefined ? h('span.chip-meta', formatRange(built)) : null,
+        );
+      }),
+    );
+  }
+
   // ── City ─────────────────────────────────────────────────────────────────
 
   private city(c: City, s: State): Node[] {
@@ -443,9 +463,21 @@ export class Cards {
     const names = c.names;
     if (names.length > 1) out.push(h('h3.card-h', t('Names over time')), namesList(this.data, names));
     if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys));
-    if (c.region !== null) {
-      const r = this.data.regions[c.region];
-      out.push(h('p.card-part', t('In '), h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(r.id)}, tx.region(r.id, r.name))));
+    // A city's wonders, too close to draw apart, are listed here; a wonder's card leads back to its city.
+    if (c.wonders?.length) out.push(h('h3.card-h', t('Wonders here')), this.wonderChips(c.wonders));
+    // Where it is: the city a wonder stands in, then the region ("In Granada, Iberia").
+    const host = c.host ? this.data.cityById.get(c.host) : undefined;
+    const r = c.region !== null ? this.data.regions[c.region] : undefined;
+    if (host || r) {
+      out.push(
+        h(
+          'p.card-part',
+          t('In '),
+          host ? h('button.linkish', {type: 'button', onclick: () => this.actions.openCity(host.id)}, tx.name(nameFor(host.names, vp, s.year, host.id)!.name)) : null,
+          host && r ? t(', ') : null,
+          r ? h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(r.id)}, tx.region(r.id, r.name)) : null,
+        ),
+      );
     }
     out.push(
       h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `${t('Source:')} ${shortCitation(this.data.sources, c.source)} · ${t('{level} confidence', {level: t(c.confidence)})}`),

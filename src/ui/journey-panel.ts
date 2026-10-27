@@ -697,6 +697,8 @@ export class JourneyPanel {
         meta = t('Found again {year}', {year: formatYear(from)});
       } else continue;
       const name = tx.name(nameFor(c.names, '*' as VpId, PRESENT, c.id)!.name);
+      const host = c.host ? this.data.cityById.get(c.host) : undefined;
+      if (host) meta += ` · ${t('in {city}', {city: tx.name(nameFor(host.names, vp, PRESENT, host.id)!.name)})}`;
       const hay = [name, ...c.names.flatMap(n => [n.name, tx.name(n.name), n.native ?? ''])].join(' ').toLowerCase();
       out.push({c, group, from, name, meta, hay});
     }
