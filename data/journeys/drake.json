@@ -1,0 +1,34 @@
+{
+  "id": "drake",
+  "name": "Francis Drake round the world",
+  "traveler": "Francis Drake",
+  "years": "1577–1580",
+  "kind": "sailor",
+  "viewpoint": "britain",
+  "summary": "Drake sails for the Pacific with five ships on a raiding voyage the queen backs in secret. Through the Strait of Magellan only the Golden Hind survives, and a storm drives it south into open water beyond Tierra del Fuego, showing that no southern continent lay just below. He plunders the Spanish coast as far as Peru, careens his ship in a land he calls Nova Albion, crosses the Pacific to the Moluccas, and comes home the first captain to sail his own ship round the world.",
+  "source": "drake-world-encompassed",
+  "confidence": "high",
+  "stops": [
+    {"year": 1577, "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "Five ships sail in December, their goal kept secret even from the crews."},
+    {"year": 1578, "place": "Cape Verde Islands", "lat": 14.92, "lon": -23.6, "note": "He seizes a Portuguese ship and its pilot, Nuno da Silva.", "by": "sea"},
+    {"year": 1578, "place": "Port San Julián", "lat": -49.3, "lon": -67.7, "note": "Where Magellan had hanged mutineers, Drake beheads Thomas Doughty.", "by": "sea"},
+    {"year": 1578, "place": "Strait of Magellan", "lat": -53.5, "lon": -70.9, "note": "Through in sixteen days, a record that stood for decades.", "by": "sea"},
+    {"year": 1578, "place": "South of Tierra del Fuego", "lat": -57.0, "lon": -70.0, "note": "A storm drives the Golden Hind south into open sea: the passage still bears his name.", "by": "sea"},
+    {"year": 1578, "place": "Valparaíso", "lat": -33.05, "lon": -71.62, "note": "The raids on the Spanish Pacific coast begin.", "by": "sea"},
+    {"year": 1579, "place": "Callao", "lat": -12.05, "lon": -77.15, "note": "The port of Lima; he learns of a treasure ship ahead.", "by": "sea"},
+    {"year": 1579, "place": "Off Esmeraldas", "lat": 0.9, "lon": -80.2, "note": "He takes the Cacafuego and its silver.", "by": "sea"},
+    {"year": 1579, "date": "June 1579", "place": "Nova Albion", "lat": 38.03, "lon": -122.95, "note": "Five weeks on the Californian coast repairing the ship among the Coast Miwok.", "by": "sea"},
+    {"waypoint": true, "lat": 15.0, "lon": -150.0},
+    {"waypoint": true, "lat": 9.0, "lon": 170.0},
+    {"waypoint": true, "lat": 7.0, "lon": 140.0},
+    {"year": 1579, "place": "Ternate", "lat": 0.8, "lon": 127.38, "note": "The sultan sells him cloves; the ship nearly founders on a reef.", "by": "sea"},
+    {"year": 1580, "place": "Java", "lat": -7.7, "lon": 109.0, "note": "Provisions on the south coast of Java.", "by": "sea"},
+    {"year": 1580, "place": "Cape of Good Hope", "lat": -34.36, "lon": 18.47, "note": "\"The most stately thing and the fairest cape we saw in the whole circumference of the earth.\"", "by": "sea"},
+    {"year": 1580, "place": "Sierra Leone", "lat": 8.48, "lon": -13.23, "note": "Water and fruit for the last leg.", "by": "sea"},
+    {"year": 1580, "date": "26 September 1580", "place": "Plymouth", "lat": 50.37, "lon": -4.14, "note": "Home rich enough to pay off the crown's debts; the queen knights him on deck.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "southern-ocean", "level": 2, "homeKnows": 1580, "confidence": "medium", "note": "Open sea south of Tierra del Fuego"},
+    {"region": "moluccas", "level": 4, "homeKnows": 1580, "confidence": "medium"}
+  ]
+}

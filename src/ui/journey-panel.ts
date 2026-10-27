@@ -39,6 +39,10 @@ export class JourneyPanel {
   /** Draw every journey the filters match on the map. */
   private onMap = false;
   private openEras = new Set<string>();
+  /** Where the list was scrolled when a journey was opened from it, and the entry clicked, so that coming back
+   * puts that entry where it was on screen even if the year (and so the "under way" section) has changed. */
+  private listScroll = 0;
+  private anchor: {id: string; near: boolean; offset: number} | null = null;
   private resultsEl: HTMLElement | null = null;
   private haystack = new Map<string, string>();
   private listEl: HTMLElement | null = null;
@@ -78,26 +82,45 @@ export class JourneyPanel {
     this.body = h('div.jp-body');
     this.el = h('aside.journey-panel.panel', this.body);
     this.el.hidden = true;
+    this.el.addEventListener('click', e => {
+      const li = this.key === 'list' ? (e.target as Element).closest<HTMLElement>('[data-entry]') : null;
+      if (li) this.anchor = {id: li.dataset.entry!, near: !!li.closest('.jp-near'), offset: li.getBoundingClientRect().top - this.el.getBoundingClientRect().top};
+    }, true);
   }
 
   update(s: State, geo: JourneyGeo | null) {
     const mode = geo ? `j:${geo.journey.id}` : s.panel === 'journeys' ? 'list' : 'none';
     this.el.hidden = mode === 'none';
     if (mode !== this.key) {
+      // Coming back from a journey opened from the list: the list as it was left, filters and place in it.
+      const returning = mode === 'list' && this.key.startsWith('j:');
+      if (this.key === 'list') this.listScroll = this.el.scrollTop;
       this.key = mode;
       this.body.replaceChildren();
       this.stopEls = [];
       this.meanwhileEl = null;
       this.meanwhileKey = '';
       if (geo) this.body.append(...(this.journey(geo).filter(Boolean) as Node[]));
-      else if (mode === 'list') this.body.append(...this.list());
-      this.el.scrollTop = 0;
+      else if (mode === 'list') this.body.append(...this.list(returning));
+      this.el.scrollTop = returning ? this.listScroll : 0;
+      // After the timeline-following section has filled (it is queued the same way), before anything is drawn.
+      if (returning) queueMicrotask(() => this.restoreAnchor());
     }
     if (geo) this.progress(s, geo);
     else if (mode === 'list' && s.shelf === 'landmarks' && s.vps[0] !== this.landmarkVp) this.listEl?.replaceChildren(...this.landmarkList(s));
     if (mode === 'list') this.refreshNear(s.year);
     for (const [id, els] of this.landmarkItems) for (const el of els) el.classList.toggle('current', id === s.city);
     for (const [id, el] of this.invItems) el.classList.toggle('current', id === s.invention);
+  }
+
+  /** Bring the entry a journey was opened from back to where it sat, once the list has settled for the new year. */
+  private restoreAnchor() {
+    const a = this.anchor;
+    this.anchor = null;
+    if (!a || this.key !== 'list') return;
+    const rows = [...this.el.querySelectorAll<HTMLElement>(`[data-entry="${CSS.escape(a.id)}"]`)];
+    const row = rows.find(r => !!r.closest('.jp-near') === a.near) ?? rows.find(r => !r.closest('.jp-near'));
+    if (row) this.el.scrollTop += row.getBoundingClientRect().top - this.el.getBoundingClientRect().top - a.offset;
   }
 
   /** Keep the timeline-following section in step with the year: its heading always, its rows when they change. */
@@ -121,7 +144,7 @@ export class JourneyPanel {
     return host;
   }
 
-  private list(): Node[] {
+  private list(returning = false): Node[] {
     this.near = null;
     const shelf = this.store.state.shelf;
     const tab = (id: Shelf, label: string) =>
@@ -145,7 +168,7 @@ export class JourneyPanel {
     this.listEl = h('div.jp-list-body');
     this.invItems.clear();
     this.landmarkItems.clear();
-    if (shelf === 'journeys') this.listEl.append(...this.journeyList());
+    if (shelf === 'journeys') this.listEl.append(...this.journeyList(returning));
     else if (shelf === 'inventions') this.listEl.append(...this.inventionList());
     else this.listEl.append(...this.landmarkList(this.store.state));
     return [
@@ -299,8 +322,9 @@ export class JourneyPanel {
     this.el.scrollBy({top: section.getBoundingClientRect().top - this.el.getBoundingClientRect().top - 8, behavior: 'smooth'});
   }
 
-  private journeyList(): Node[] {
-    this.vpFilter = null; // always open on every viewpoint's journeys
+  private journeyList(returning = false): Node[] {
+    // A fresh opening shows every viewpoint's journeys; coming back from one keeps the filter that was set.
+    if (!returning) this.vpFilter = null;
     const all = this.data.journeys;
     const vpItems = (ids: VpId[]) =>
       ids
@@ -472,10 +496,11 @@ export class JourneyPanel {
         ),
       ),
     );
-    if (e.members.length === 1) return h('li', main);
+    if (e.members.length === 1) return h('li', {'data-entry': e.id}, main);
     const searching = !!this.query.trim();
     return h(
       'li.jp-series',
+      {'data-entry': e.id},
       main,
       h(
         'div.jp-series-chips',

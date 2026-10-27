@@ -93,6 +93,8 @@ class App {
   private needsLayers = true;
   private last = performance.now();
   private travelTarget: number | null = null;
+  /** A journey opened from the journey list goes back to that list when it is closed. */
+  private backToList = false;
   private dwell = 0;
   private sightCache = new Map<string, Sight>();
   /** Follow camera: paused while the reader drags the map, resumed when the traveller moves. */
@@ -515,6 +517,8 @@ class App {
     const g = this.geo(id);
     if (!g) return;
     this.travelTarget = null;
+    // Opened from the list, or hopping from one journey to another that was: the way back stays the list.
+    if (!this.store.state.journey) this.backToList = this.store.state.panel === 'journeys';
     this.store.set({
       journey: id,
       progress: year === undefined ? 0 : progressForYear(g, year, false),
@@ -585,7 +589,8 @@ class App {
 
   closeJourney() {
     this.travelTarget = null;
-    this.store.set({journey: null, playing: false, progress: 0});
+    this.store.set({journey: null, playing: false, progress: 0, ...(this.backToList ? {panel: 'journeys' as const} : {})});
+    this.backToList = false;
   }
 
   private fitJourney(g: JourneyGeo) {

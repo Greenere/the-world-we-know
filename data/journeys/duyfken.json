@@ -1,0 +1,23 @@
+{
+  "id": "duyfken",
+  "name": "The Duyfken to Cape York",
+  "traveler": "Willem Janszoon",
+  "years": "1605–1606",
+  "kind": "sailor",
+  "viewpoint": "germany",
+  "summary": "Looking for gold and trade south of New Guinea, the small Dutch ship Duyfken follows the coast into what Willem Janszoon takes for part of New Guinea. It is the west coast of Cape York: the first recorded European landfall in Australia. After clashes with the people of the Wenlock River, where a sailor is killed, he turns back at a cape he calls Keerweer, Turn Again.",
+  "source": "duyfken",
+  "confidence": "high",
+  "stops": [
+    {"year": 1605, "place": "Bantam", "lat": -6.02, "lon": 106.15, "note": "The Duyfken sails in November."},
+    {"year": 1605, "place": "Banda", "lat": -4.52, "lon": 129.9, "note": "The nutmeg islands, the Company's eastern base.", "by": "sea"},
+    {"year": 1606, "place": "South coast of New Guinea", "lat": -8.0, "lon": 139.0, "note": "Along a low, swampy coast past the Torres Strait without seeing it.", "by": "sea"},
+    {"year": 1606, "date": "February 1606", "place": "Pennefather River", "lat": -12.22, "lon": 141.73, "note": "The first recorded European landing on Australia; men going ashore are attacked.", "by": "sea"},
+    {"year": 1606, "place": "Cape Keerweer", "lat": -13.9, "lon": 141.47, "note": "Turn Again: Janszoon turns back.", "by": "sea"},
+    {"year": 1606, "place": "Banda", "lat": -4.52, "lon": 129.9, "note": "He reports the land barren and its people hostile.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "australia", "level": 2, "homeKnows": 1606, "confidence": "high", "note": "The Duyfken on Cape York"},
+    {"region": "arafura-timor", "level": 3, "homeKnows": 1606, "confidence": "high"}
+  ]
+}

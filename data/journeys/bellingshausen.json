@@ -1,0 +1,31 @@
+{
+  "id": "bellingshausen",
+  "name": "Bellingshausen and Lazarev round Antarctica",
+  "traveler": "Fabian Gottlieb von Bellingshausen and Mikhail Lazarev",
+  "years": "1819–1821",
+  "kind": "sailor",
+  "viewpoint": "russia",
+  "summary": "Two Russian sloops, the Vostok and the Mirny, sail round the world in the far south to finish what Cook began. On 28 January 1820 they see a wall of ice stretching to the horizon off what is now Dronning Maud Land: the first sighting of the Antarctic continent, three days before Bransfield sights the peninsula. A year later they find Peter I Island and the coast of Alexander I Land.",
+  "source": "bellingshausen",
+  "confidence": "high",
+  "stops": [
+    {"year": 1819, "place": "Kronstadt", "lat": 59.99, "lon": 29.77, "note": "The Vostok and the Mirny sail in July."},
+    {"year": 1819, "place": "Rio de Janeiro", "lat": -22.9, "lon": -43.17, "note": "Across the Atlantic to the last port before the south.", "by": "sea"},
+    {"year": 1819, "place": "South Georgia", "lat": -54.28, "lon": -36.5, "note": "They chart its southern coast, which Cook had left unfinished.", "by": "sea"},
+    {"year": 1820, "place": "South Sandwich Islands", "lat": -57.8, "lon": -26.4, "note": "The chain is charted and found to be islands, not a cape of a southern land.", "by": "sea"},
+    {"year": 1820, "date": "28 January 1820", "place": "The ice shelf", "lat": -69.4, "lon": -2.3, "note": "A solid wall of ice, rising towards the south: the first sight of the Antarctic continent.", "by": "sea"},
+    {"waypoint": true, "lat": -62.0, "lon": 40.0},
+    {"waypoint": true, "lat": -60.0, "lon": 95.0},
+    {"waypoint": true, "lat": -50.0, "lon": 140.0},
+    {"year": 1820, "place": "Port Jackson", "lat": -33.86, "lon": 151.21, "note": "Along the edge of the pack ice to Sydney for the southern winter.", "by": "sea"},
+    {"year": 1820, "place": "Tahiti", "lat": -17.53, "lon": -149.57, "note": "A winter cruise among the Tuamotus, where they chart new islands, and Tahiti.", "by": "sea"},
+    {"year": 1821, "date": "21 January 1821", "place": "Peter I Island", "lat": -68.8, "lon": -90.6, "note": "The southernmost land yet found, named for the founder of the Russian navy.", "by": "sea"},
+    {"year": 1821, "date": "28 January 1821", "place": "Alexander I Land", "lat": -69.5, "lon": -72.0, "note": "Mountains behind the ice, which they take for a coast.", "by": "sea"},
+    {"year": 1821, "place": "South Shetland Islands", "lat": -62.0, "lon": -58.4, "note": "They meet the American sealer Nathaniel Palmer among the islands.", "by": "sea"},
+    {"year": 1821, "place": "Kronstadt", "lat": 59.99, "lon": 29.77, "note": "Home after 751 days, having circled the continent without being sure they had seen it.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "dronning-maud-land", "level": 2, "homeKnows": 1821, "confidence": "high", "note": "The first sight of the Antarctic ice"},
+    {"region": "antarctica-west-coast", "level": 2, "homeKnows": 1821, "confidence": "high", "note": "Peter I Island and Alexander I Land"}
+  ]
+}

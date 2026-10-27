@@ -1,0 +1,29 @@
+{
+  "id": "tasman",
+  "name": "Abel Tasman to Van Diemen's Land and New Zealand",
+  "traveler": "Abel Tasman",
+  "years": "1642–1643",
+  "kind": "sailor",
+  "viewpoint": "germany",
+  "summary": "The Dutch East India Company sends Abel Tasman from Batavia to find the great southern land. Sailing far south of Australia without seeing it, he comes on the coast he names Van Diemen's Land, then the mountains of a land he calls Staten Landt, where Māori canoes attack a boat in Golden Bay. He goes home by Tonga and Fiji, having sailed right round Australia and proved it was not joined to a southern continent.",
+  "source": "tasman",
+  "confidence": "high",
+  "stops": [
+    {"year": 1642, "place": "Batavia", "lat": -6.13, "lon": 106.81, "note": "The Heemskerck and the Zeehaen sail in August."},
+    {"year": 1642, "place": "Mauritius", "lat": -20.16, "lon": 57.5, "note": "West to the Company's island to pick up the westerlies.", "by": "sea"},
+    {"waypoint": true, "lat": -45.0, "lon": 100.0},
+    {"waypoint": true, "lat": -45.5, "lon": 135.0},
+    {"year": 1642, "date": "24 November 1642", "place": "Van Diemen's Land", "lat": -42.85, "lon": 147.95, "note": "A coast no European had seen; a carpenter swims ashore to plant the flag.", "by": "sea"},
+    {"year": 1642, "date": "18 December 1642", "place": "Golden Bay", "lat": -40.8, "lon": 172.8, "note": "Māori canoes ram a boat and kill four sailors; Tasman names it Murderers' Bay and sails on.", "by": "sea"},
+    {"year": 1643, "place": "Three Kings Islands", "lat": -34.15, "lon": 172.13, "note": "The northern tip of the land he calls Staten Landt.", "by": "sea"},
+    {"year": 1643, "place": "Tongatapu", "lat": -21.13, "lon": -175.2, "note": "A friendly welcome, and the first European account of Tonga.", "by": "sea"},
+    {"year": 1643, "place": "Fiji", "lat": -16.5, "lon": -179.5, "note": "Through the reefs of the eastern islands.", "by": "sea"},
+    {"year": 1643, "place": "New Ireland", "lat": -3.0, "lon": 152.0, "note": "North of the Solomons and along New Guinea.", "by": "sea"},
+    {"year": 1643, "place": "Batavia", "lat": -6.13, "lon": 106.81, "note": "Home in June; the Company judges the voyage unprofitable.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "tonga", "level": 3, "homeKnows": 1643, "confidence": "high", "note": "Tonga's islands charted"},
+    {"region": "fiji", "level": 2, "homeKnows": 1643, "confidence": "high"},
+    {"region": "aotearoa", "level": 2, "homeKnows": 1643, "confidence": "high", "note": "Staten Landt, the west coast of New Zealand"}
+  ]
+}

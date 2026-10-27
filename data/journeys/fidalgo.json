@@ -1,0 +1,23 @@
+{
+  "id": "fidalgo",
+  "name": "Salvador Fidalgo to Valdez",
+  "traveler": "Salvador Fidalgo",
+  "years": "1790",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "lifts": false,
+  "summary": "Sent from the new Spanish post at Nootka to watch the Russians, Salvador Fidalgo sails the San Carlos into the Gulf of Alaska. In Prince William Sound he takes possession for Spain and names Puerto Córdova and Puerto de Valdés, the Valdez and Cordova of today, then visits the Russian posts on Cook Inlet and Kodiak. Cook had charted these coasts in 1778, and Spain kept its own charts in its archives, so the voyage added little to what the world knew; its names are what remain.",
+  "source": "fidalgo",
+  "confidence": "high",
+  "stops": [
+    {"year": 1790, "place": "San Blas", "lat": 21.54, "lon": -105.29, "note": "The naval base on the Pacific coast of New Spain."},
+    {"year": 1790, "place": "Nootka", "lat": 49.59, "lon": -126.62, "note": "The Spanish post on Vancouver Island, at the heart of the crisis with Britain.", "by": "sea"},
+    {"year": 1790, "place": "Puerto Córdova", "lat": 60.54, "lon": -145.76, "note": "He names the bay for the commander of the fleet at Cádiz.", "by": "sea"},
+    {"year": 1790, "date": "June 1790", "place": "Puerto de Valdés", "lat": 61.12, "lon": -146.35, "note": "The deep arm of the sound named for Antonio Valdés, Spain's minister of the navy: Valdez.", "by": "sea"},
+    {"year": 1790, "place": "Cook Inlet", "lat": 59.35, "lon": -151.83, "note": "He finds a Russian post at English Bay and claims the land for Spain all the same.", "by": "sea"},
+    {"year": 1790, "place": "Kodiak", "lat": 57.13, "lon": -153.5, "note": "Shelikhov's settlement at Three Saints Bay.", "by": "sea"},
+    {"year": 1790, "place": "Monterey", "lat": 36.6, "lon": -121.9, "note": "South to the capital of Alta California.", "by": "sea"},
+    {"year": 1790, "place": "San Blas", "lat": 21.54, "lon": -105.29, "note": "Home in November.", "by": "sea"}
+  ],
+  "informs": []
+}
