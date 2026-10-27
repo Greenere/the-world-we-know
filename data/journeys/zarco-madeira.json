@@ -1,0 +1,20 @@
+{
+  "id": "zarco-madeira",
+  "name": "Zarco and Teixeira to Madeira",
+  "traveler": "João Gonçalves Zarco and Tristão Vaz Teixeira",
+  "years": "1419–1420",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "Two squires of Prince Henry, blown off course on a voyage down the African coast, find shelter at Porto Santo. The next year they return with settlers and cross to the great wooded island they can see from it, Madeira, the island of wood. Burned clear and planted with sugar, it became Portugal's first Atlantic colony and the model for the rest.",
+  "source": "zurara",
+  "confidence": "high",
+  "stops": [
+    {"year": 1419, "place": "Lagos", "lat": 37.1, "lon": -8.67, "note": "Prince Henry's ships sail from the Algarve."},
+    {"year": 1419, "place": "Porto Santo", "lat": 33.06, "lon": -16.34, "note": "A storm drives them to a small island; they name it Holy Port for their deliverance.", "by": "sea"},
+    {"year": 1420, "place": "Madeira", "lat": 32.65, "lon": -16.91, "note": "Across to the island of dense forest; Zarco founds Funchal, where wild fennel grows.", "by": "sea"},
+    {"year": 1420, "place": "Lagos", "lat": 37.1, "lon": -8.67, "note": "Back to report a fertile, empty island.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "madeira", "level": 4, "homeKnows": "1419..1420", "confidence": "high", "note": "Madeira and Porto Santo settled"}
+  ]
+}

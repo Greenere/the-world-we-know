@@ -1,0 +1,23 @@
+{
+  "id": "martim-afonso",
+  "name": "Martim Afonso de Sousa to the Plate and São Vicente",
+  "traveler": "Martim Afonso de Sousa",
+  "years": "1530–1532",
+  "kind": "fleet",
+  "viewpoint": "iberia",
+  "summary": "Sent to drive the French from Brazil and settle it, Martim Afonso de Sousa sails the length of the coast to the Río de la Plata, while his brother Pero Lopes charts the estuary and goes up the Paraná. On the way back he founds São Vicente, the first Portuguese town in Brazil, and with the help of the castaway João Ramalho and his Tupi kin climbs to the plateau where São Paulo would grow.",
+  "source": "pero-lopes",
+  "confidence": "high",
+  "stops": [
+    {"year": 1530, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Five ships sail in December."},
+    {"year": 1531, "place": "Pernambuco", "lat": -8.05, "lon": -34.9, "note": "He captures three French ships loading brazilwood.", "by": "sea"},
+    {"year": 1531, "place": "Rio de Janeiro", "lat": -22.9, "lon": -43.17, "note": "Three months building ships in Guanabara Bay.", "by": "sea"},
+    {"year": 1531, "place": "Río de la Plata", "lat": -34.6, "lon": -58.4, "note": "Pero Lopes charts the estuary and sails up the Paraná.", "by": "sea"},
+    {"year": 1532, "place": "São Vicente", "lat": -23.96, "lon": -46.39, "note": "The first town of Portuguese Brazil, founded in January.", "by": "sea"},
+    {"year": 1532, "place": "Piratininga", "lat": -23.55, "lon": -46.63, "note": "Up the escarpment to the plateau, where João Ramalho lives among the Tupi.", "by": "land"},
+    {"year": 1533, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Home; Brazil is soon divided into hereditary captaincies.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "pampas", "level": 3, "homeKnows": 1532, "confidence": "high", "note": "The Plate estuary charted by Pero Lopes"}
+  ]
+}

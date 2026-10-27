@@ -1,0 +1,21 @@
+{
+  "id": "gil-eanes",
+  "name": "Gil Eanes passes Cape Bojador",
+  "traveler": "Gil Eanes",
+  "years": "1434",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "For years Prince Henry's captains had turned back at Cape Bojador, where sailors said the sea boiled and no ship could return. On his second attempt Gil Eanes stands out to sea, passes the cape, and finds beyond it a quiet coast where he gathers wild rosemary to show the prince. The way down Africa was open.",
+  "source": "zurara",
+  "confidence": "high",
+  "stops": [
+    {"year": 1434, "place": "Lagos", "lat": 37.1, "lon": -8.67, "note": "Sent again after turning back the year before."},
+    {"year": 1434, "place": "Canary Islands", "lat": 29.0, "lon": -13.6, "note": "The last familiar waters.", "by": "sea"},
+    {"year": 1434, "place": "Cape Bojador", "lat": 26.13, "lon": -14.5, "note": "He swings out into the ocean and rounds the cape that had stopped everyone before him.", "by": "sea"},
+    {"year": 1434, "place": "Beyond Bojador", "lat": 25.6, "lon": -14.8, "note": "A calm shore; he lands and picks plants called the roses of Saint Mary.", "by": "sea"},
+    {"year": 1434, "place": "Lagos", "lat": 37.1, "lon": -8.67, "note": "Home to tell the prince the cape could be passed.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "atlantic-sahara", "level": 3, "homeKnows": 1434, "confidence": "high", "note": "The coast beyond Bojador"}
+  ]
+}

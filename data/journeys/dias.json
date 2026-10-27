@@ -1,0 +1,24 @@
+{
+  "id": "dias",
+  "name": "Bartolomeu Dias rounds the Cape",
+  "traveler": "Bartolomeu Dias",
+  "years": "1487–1488",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "Bartolomeu Dias sails past Cão's last pillar, and a storm drives him south out of sight of land for thirteen days. When he turns north he finds the coast running east: he has rounded Africa without seeing its tip. At the Great Fish River his exhausted crew make him turn back, and only on the way home does he see the cape he had passed, which the king renames the Cape of Good Hope.",
+  "source": "barros",
+  "confidence": "high",
+  "stops": [
+    {"year": 1487, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Three ships, one a store ship, sail in August."},
+    {"year": 1487, "place": "Walvis Bay", "lat": -22.95, "lon": 14.5, "note": "Past Cão's last pillar; he leaves the store ship here.", "by": "sea"},
+    {"waypoint": true, "lat": -38.0, "lon": 10.0},
+    {"year": 1488, "place": "Mossel Bay", "lat": -34.18, "lon": 22.14, "note": "After thirteen days blown south, land again, running east: the cattle bay of the Khoikhoi.", "by": "sea"},
+    {"year": 1488, "place": "Kwaaihoek", "lat": -33.7, "lon": 26.6, "note": "His crew refuse to go further; he raises a padrão and turns back.", "by": "sea"},
+    {"year": 1488, "place": "Cape of Good Hope", "lat": -34.36, "lon": 18.47, "note": "Seen at last on the way home: the cape of storms.", "by": "sea"},
+    {"year": 1488, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Home in December with the way to India open.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "cape", "level": 3, "homeKnows": 1488, "confidence": "high", "note": "The southern tip of Africa rounded"},
+    {"region": "south-atlantic", "level": 2, "homeKnows": 1488, "confidence": "high"}
+  ]
+}

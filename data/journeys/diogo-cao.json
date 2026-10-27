@@ -1,0 +1,26 @@
+{
+  "id": "diogo-cao",
+  "name": "Diogo Cão to the Congo and Namibia",
+  "traveler": "Diogo Cão",
+  "years": "1482–1486",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "On two voyages Diogo Cão pushes the known coast of Africa twenty degrees further south. At the mouth of a great river he raises a stone pillar, a padrão, and learns of the kingdom of Kongo inland; he carves his name on the rocks at the Yellala falls upriver. On the second voyage he reaches Cape Cross on the coast of Namibia, sets up his last pillar, and vanishes from the record.",
+  "source": "barros",
+  "confidence": "high",
+  "stops": [
+    {"year": 1482, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "The first voyage sails with stone pillars carved with the arms of Portugal."},
+    {"year": 1482, "place": "São Jorge da Mina", "lat": 5.08, "lon": -1.35, "note": "The new castle on the Gold Coast.", "by": "sea"},
+    {"year": 1482, "place": "Mouth of the Congo", "lat": -6.1, "lon": 12.35, "note": "A river so strong it freshens the sea far offshore; the first padrão, at Shark Point.", "by": "sea"},
+    {"year": 1483, "place": "Cape Santa Maria", "lat": -13.4, "lon": 12.53, "note": "The second padrão, on the coast of Angola.", "by": "sea"},
+    {"year": 1484, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "He brings back Kongo men to learn Portuguese.", "by": "sea"},
+    {"year": 1485, "place": "Mouth of the Congo", "lat": -6.1, "lon": 12.35, "note": "Back with the envoys to the king of Kongo.", "by": "sea"},
+    {"year": 1485, "place": "Yellala Falls", "lat": -5.75, "lon": 13.4, "note": "Up the river to the rapids, where his men carve their names on a rock.", "by": "river"},
+    {"year": 1486, "place": "Cape Cross", "lat": -21.77, "lon": 13.95, "note": "The last padrão, on the desert coast of Namibia; after this Cão disappears.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "angola", "level": 3, "homeKnows": "1482..1486", "confidence": "high", "note": "The coast of Kongo and Angola charted"},
+    {"region": "congo", "level": 1, "homeKnows": 1485, "confidence": "medium"},
+    {"region": "southern-africa", "level": 2, "homeKnows": 1486, "confidence": "high", "note": "The desert coast to Cape Cross"}
+  ]
+}

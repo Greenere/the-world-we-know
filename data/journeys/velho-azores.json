@@ -1,0 +1,21 @@
+{
+  "id": "velho-azores",
+  "name": "Gonçalo Velho Cabral to the Azores",
+  "traveler": "Gonçalo Velho Cabral",
+  "years": "1431–1432",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "Sent by Prince Henry far out into the Atlantic, Gonçalo Velho finds the rocks of the Formigas and, the next year, the island of Santa Maria, a third of the way to America. The Azores, nine islands strung across a thousand kilometres of ocean, gave Portuguese ships a landfall on the long loop home from Africa, the volta do mar.",
+  "source": "zurara",
+  "confidence": "high",
+  "stops": [
+    {"year": 1431, "place": "Sagres", "lat": 37.0, "lon": -8.94, "note": "Prince Henry's headland, looking out on the open Atlantic."},
+    {"waypoint": true, "lat": 36.5, "lon": -15.0},
+    {"year": 1431, "place": "Formigas", "lat": 37.27, "lon": -24.78, "note": "Bare rocks and reefs in the middle of the ocean.", "by": "sea"},
+    {"year": 1432, "place": "Santa Maria", "lat": 36.97, "lon": -25.1, "note": "The first island of the Azores to be settled.", "by": "sea"},
+    {"year": 1432, "place": "Sagres", "lat": 37.0, "lon": -8.94, "note": "Home with news of islands far to the west.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "azores", "level": 3, "homeKnows": "1427..1432", "confidence": "high", "note": "The Azores reached and charted"}
+  ]
+}

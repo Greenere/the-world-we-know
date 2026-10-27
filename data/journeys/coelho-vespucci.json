@@ -1,0 +1,24 @@
+{
+  "id": "coelho-vespucci",
+  "name": "Coelho and Vespucci along Brazil",
+  "traveler": "Gonçalo Coelho and Amerigo Vespucci",
+  "years": "1501–1502",
+  "kind": "sailor",
+  "viewpoint": "iberia",
+  "summary": "A small fleet sent to see what Cabral had found sails some three thousand kilometres along the coast of Brazil, naming its capes and bays for the saints' days on which they reach them: All Saints' Bay, the River of January. Aboard is the Florentine Amerigo Vespucci, whose letter Mundus Novus told Europe that this was not Asia but a new world, and a German mapmaker put his name on it.",
+  "source": "vespucci",
+  "confidence": "high",
+  "stops": [
+    {"year": 1501, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Three caravels sail in May."},
+    {"year": 1501, "place": "Bezeguiche", "lat": 14.67, "lon": -17.43, "note": "They meet Cabral's fleet coming home from India.", "by": "sea"},
+    {"year": 1501, "place": "Cape São Roque", "lat": -5.48, "lon": -35.26, "note": "Landfall at the north-eastern shoulder of Brazil.", "by": "sea"},
+    {"year": 1501, "date": "1 November 1501", "place": "All Saints' Bay", "lat": -12.97, "lon": -38.51, "note": "Named for the day they enter it, 1 November.", "by": "sea"},
+    {"year": 1501, "place": "Cabo Frio", "lat": -22.88, "lon": -42.02, "note": "Where the coast turns west.", "by": "sea"},
+    {"year": 1502, "date": "1 January 1502", "place": "Rio de Janeiro", "lat": -22.9, "lon": -43.17, "note": "A great bay they take for a river's mouth: the River of January.", "by": "sea"},
+    {"year": 1502, "place": "Cananéia", "lat": -25.0, "lon": -47.93, "note": "The southernmost point they mark.", "by": "sea"},
+    {"year": 1502, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Home with brazilwood and the outline of a continent.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "brazil-coast", "level": 3, "homeKnows": 1502, "confidence": "high", "note": "Three thousand kilometres of the coast charted"}
+  ]
+}

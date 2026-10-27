@@ -1,0 +1,26 @@
+{
+  "id": "raposo-tavares",
+  "name": "Raposo Tavares's great bandeira",
+  "traveler": "Antônio Raposo Tavares",
+  "years": "1648–1651",
+  "kind": "traveler",
+  "viewpoint": "iberia",
+  "summary": "The bandeirantes of São Paulo were slavers and prospectors who walked the interior of South America. In the longest bandeira of all, Raposo Tavares and a column of Paulistas and Tupi set out to attack the Jesuit missions of Itatim and keep going: across the Chaco to the foothills of the Andes, then down the Guaporé, Mamoré and Madeira to the Amazon and Belém, about ten thousand kilometres in three years. He came home so changed that his family did not know him.",
+  "source": "raposo-tavares",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1648, "place": "São Paulo", "lat": -23.55, "lon": -46.63, "note": "Some two hundred Paulistas and a thousand Tupi set out in May."},
+    {"year": 1648, "place": "Down the Tietê", "lat": -20.7, "lon": -51.6, "note": "By canoe down the Tietê to the Paraná.", "by": "river"},
+    {"year": 1648, "place": "Itatim missions", "lat": -20.5, "lon": -56.5, "note": "They fall on the Jesuit missions on the Paraguay.", "by": "land"},
+    {"year": 1649, "place": "Chiquitos", "lat": -16.5, "lon": -60.5, "note": "West across the swamps and scrub of the Chaco.", "by": "land"},
+    {"year": 1649, "place": "Andean foothills", "lat": -17.8, "lon": -63.2, "note": "To the edge of Spanish Peru, at the foot of the Andes.", "by": "land"},
+    {"year": 1650, "place": "The Mamoré", "lat": -11.5, "lon": -65.3, "note": "North by river into the forest.", "by": "river"},
+    {"year": 1650, "place": "The Madeira", "lat": -8.76, "lon": -63.9, "note": "Down the Madeira's rapids.", "by": "river"},
+    {"year": 1651, "place": "The Amazon", "lat": -3.14, "lon": -58.44, "note": "Out onto the great river.", "by": "river"},
+    {"year": 1651, "place": "Gurupá", "lat": -1.4, "lon": -51.65, "note": "The Portuguese fort near the mouth.", "by": "river"},
+    {"year": 1651, "place": "Belém", "lat": -1.46, "lon": -48.5, "note": "The survivors, a few dozen, reach the city at the mouth of the Amazon.", "by": "river"}
+  ],
+  "informs": [
+    {"region": "brazil-interior", "level": 3, "homeKnows": 1651, "confidence": "medium", "note": "The interior crossed from São Paulo to the Andes and the Amazon"}
+  ]
+}

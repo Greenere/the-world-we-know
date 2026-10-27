@@ -1,0 +1,26 @@
+{
+  "id": "cabral",
+  "name": "Pedro Álvares Cabral to Brazil and India",
+  "traveler": "Pedro Álvares Cabral",
+  "years": "1500–1501",
+  "kind": "fleet",
+  "viewpoint": "iberia",
+  "summary": "The second fleet to India, thirteen ships, swings so far west into the Atlantic to catch the winds that on 22 April 1500 it sights a mountain: Brazil. Cabral claims the land for Portugal and sends a ship home with the news and Pero Vaz de Caminha's letter describing its people. Then he sails on: four ships are lost off the Cape, Bartolomeu Dias among the drowned, and at Calicut a fight with Arab merchants turns into a bombardment of the city.",
+  "source": "caminha",
+  "confidence": "high",
+  "stops": [
+    {"year": 1500, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Thirteen ships sail in March, the largest fleet yet."},
+    {"year": 1500, "place": "Cape Verde Islands", "lat": 16.6, "lon": -24.3, "note": "South to the islands, then far out to the west.", "by": "sea"},
+    {"year": 1500, "date": "22 April 1500", "place": "Porto Seguro", "lat": -16.9, "lon": -39.0, "note": "A mountain on the horizon, which he names Monte Pascoal; Tupinikin people meet them on the beach.", "by": "sea"},
+    {"year": 1500, "place": "Cape of Good Hope", "lat": -34.4, "lon": 18.5, "note": "A storm sinks four ships; Bartolomeu Dias drowns off the cape he discovered.", "by": "sea"},
+    {"year": 1500, "place": "Mozambique Island", "lat": -15.03, "lon": 40.73, "note": "Up the east coast of Africa.", "by": "sea"},
+    {"year": 1500, "place": "Kilwa", "lat": -8.96, "lon": 39.51, "note": "The sultan refuses an alliance.", "by": "sea"},
+    {"year": 1500, "place": "Malindi", "lat": -3.22, "lon": 40.12, "note": "Pilots for the crossing to India.", "by": "sea"},
+    {"year": 1500, "place": "Calicut", "lat": 11.25, "lon": 75.78, "note": "A factory is attacked; Cabral bombards the city in reply.", "by": "sea"},
+    {"year": 1501, "place": "Cochin", "lat": 9.97, "lon": 76.27, "note": "A friendlier king, and full cargoes of pepper.", "by": "sea"},
+    {"year": 1501, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Home with half his fleet and a fortune in spice.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "brazil-coast", "level": 2, "homeKnows": 1500, "confidence": "high", "note": "Brazil sighted and claimed"}
+  ]
+}
