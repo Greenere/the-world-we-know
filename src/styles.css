@@ -333,20 +333,9 @@ kbd {
   font-size: 15px;
 }
 
-/* Star on GitHub: the mark in ink, a small star beside it. */
+/* Star on GitHub: the mark alone, in ink. */
 .tool-github .tool-icon {
   color: var(--ink);
-}
-
-.tool-star {
-  display: inline-flex;
-  margin-left: -3px;
-  color: var(--brass);
-}
-
-.tool-star svg {
-  width: 15px;
-  height: 15px;
 }
 
 /* Not open yet: quiet, inert, with a tooltip saying so. */

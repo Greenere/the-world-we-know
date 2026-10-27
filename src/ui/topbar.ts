@@ -176,11 +176,9 @@ export class TopBar {
         // Star on GitHub. Until the repository is public it is a link without a destination, with its own tooltip
         // (a disabled button would show none); give it an href and drop `soon` once it opens.
         h(
-          'a.tool.tool-wide.tool-github.soon',
+          'a.tool.tool-github.soon',
           {role: 'link', tabindex: '0', 'aria-disabled': 'true', 'aria-label': `${t('Star on GitHub')}: ${t('To be open-sourced…')}`, 'data-tip': t('To be open-sourced…')},
           h('span.tool-icon', {html: icons.github}),
-          h('span.tool-star', {html: icons.star}),
-          h('span.tool-label', t('Star')),
         ),
       ),
     );
