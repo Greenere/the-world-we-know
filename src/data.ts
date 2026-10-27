@@ -163,8 +163,8 @@ export function shortCitation(sources: Record<string, Source>, id: string): stri
 }
 
 /** When a viewpoint came to know a landmark. Knowing a region is not knowing what is in it: people living near
- * it, or who knew its land closely (interior mapped or better), knew it; those with mere contact heard of it no
- * sooner than it became known beyond its neighbours (`widely`); a recorded encounter (`found`) overrides all.
+ * it knew it; others heard of it no sooner than it became known beyond its neighbours (`widely`) and they had
+ * contact with the land; a recorded encounter (`found`) overrides both.
  * Never before it was built, and for one lost before the viewpoint knew it, only once it was found again.
  * Every viewpoint knows every landmark in the end: we can only speak of them because the world came to. */
 export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId): number {
@@ -175,12 +175,9 @@ export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId)
   if (vp === 'humanity') known = field.firstKnown(vp, c.cell, 3);
   else if (own !== undefined) known = own;
   else {
-    // Interior knowledge counts only from a viewpoint's own mapping: the world map everyone shares from 1900
-    // (knowledge.csv, world-land) is not knowing every waterfall on it.
-    const own4 = field.firstKnown(vp, c.cell, 4);
-    const mapped = own4 !== null && own4 < SHARED_MAP ? own4 : null;
-    const near = nearHome(data, vp, c.lat, c.lon);
-    const close = mapped === null ? near : near === null ? mapped : Math.min(mapped, near);
+    // Having mapped the land is not knowing a place in it (Bactria mapped since Alexander, Bamiyan unheard of in
+    // Europe until 1824), so beyond its neighbours a viewpoint needs a recorded encounter or the place's fame.
+    const close = nearHome(data, vp, c.lat, c.lon);
     const contact = field.firstKnown(vp, c.cell, 2);
     const far = contact === null || widely === undefined ? null : Math.max(contact, widely);
     known = close === null ? far : far === null ? close : Math.min(close, far);

@@ -732,14 +732,18 @@ export class OverlayModel {
     // works so far, in ink while that age lasts and faint once it has passed.
     const courses = (v: CityView): Course[] => {
       const path = v.city.path!;
-      if (!path.phases) return v.status === 'living' ? [{points: path.points as LngLat[], style: path.style, ruin: false, fade: 1}] : [];
+      // A wall just abandoned still stands out; one left two thousand years is barely a trace.
+      const fade = (fallen: number) => (fallen < 0 ? 1 : 0.28 + 0.72 * Math.exp(-fallen / 600));
+      if (!path.phases) {
+        const end = v.city.dates.abandoned;
+        const fallen = end === undefined ? -1 : state.year - (typeof end === 'number' ? end : end[0]);
+        return [{points: path.points as LngLat[], style: path.style, ruin: fallen >= 0, fade: fade(fallen)}];
+      }
       return path.phases
         .filter(ph => ph.from <= state.year)
         .flatMap(ph => {
           const fallen = state.year - (ph.to ?? Infinity);
-          // A wall just abandoned still stands out; one left two thousand years is barely a trace.
-          const fade = fallen < 0 ? 1 : 0.28 + 0.72 * Math.exp(-fallen / 600);
-          return ph.paths.map(points => ({points: points as LngLat[], style: path.style, ruin: fallen >= 0, fade}));
+          return ph.paths.map(points => ({points: points as LngLat[], style: path.style, ruin: fallen >= 0, fade: fade(fallen)}));
         });
     };
     const copies = (path: LngLat[]) => (state.globe ? [path] : [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
