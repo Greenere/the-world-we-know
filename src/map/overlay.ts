@@ -41,6 +41,8 @@ const BRASS: [number, number, number] = [138, 102, 40];
 const RUBRIC: [number, number, number] = [155, 47, 32];
 /** Natural landmarks: a muted moss green, apart from the ink of what people built. */
 const MOSS: [number, number, number] = [72, 94, 58];
+/** Canals: the blue-grey of deep water. */
+const CANAL: [number, number, number] = [62, 98, 116];
 // Chinese labels fall through to Noto Serif SC glyph by glyph.
 const FONT_TEXT = '"IM Fell English", "EB Garamond", "Noto Serif SC", Georgia, serif';
 const FONT_SC = '"IM Fell English SC", "IM Fell English", "Noto Serif SC", Georgia, serif';
@@ -740,7 +742,7 @@ export class OverlayModel {
         return [{points: path.points as LngLat[], style: path.style, ruin: fallen >= 0, fade: fade(fallen)}];
       }
       return path.phases
-        .filter(ph => ph.from <= state.year)
+        .filter(ph => ph.from <= state.year && (path.ended !== 'vanish' || state.year < (ph.to ?? Infinity)))
         .flatMap(ph => {
           const fallen = state.year - (ph.to ?? Infinity);
           return ph.paths.map(points => ({points: points as LngLat[], style: path.style, ruin: fallen >= 0, fade: fade(fallen)}));
@@ -777,8 +779,9 @@ export class OverlayModel {
         ...common,
         id: 'cities-path',
         data: standing,
-        getColor: d => (d.style === 'river' ? [...MOSS, 220] : [...INK, d.style === 'wall' ? 200 : 190]),
-        getWidth: d => (d.style === 'river' ? 2.2 : d.style === 'wall' ? 1.6 : 1.4),
+        // A canal is water: a deep blue-grey, not the ink of a road or wall.
+        getColor: d => (d.style === 'river' ? [...MOSS, 220] : d.style === 'canal' ? [...CANAL, 230] : [...INK, 200]),
+        getWidth: d => (d.style === 'river' ? 2.2 : d.style === 'wall' ? 1.6 : 2),
         capRounded: true,
         pickable: true,
       }),

@@ -456,7 +456,8 @@ export class Cards {
       if (phase && status === 'living') {
         // The age the wall is in: a frontier being built and manned, or one left to fall.
         const name = tx.phase(c.id, phase.id, 'name', phase.name);
-        swap(kicker, phase.id, () => [`${t(phase.idle ? 'Abandoned' : 'Frontier wall')} · ${name}`]);
+        const label = phase.idle ? 'Abandoned' : c.path?.style === 'canal' ? 'Waterway' : 'Frontier wall';
+        swap(kicker, phase.id, () => [`${t(label)} · ${name}`]);
         ageEls.forEach((el, i) => el.firstElementChild!.classList.toggle('current', phases[i] === phase));
       } else swap(kicker, status, () => [statusText[status]]);
       const name = nameFor(c.names, vp, st.year, c.id)!;

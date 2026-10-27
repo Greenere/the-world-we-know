@@ -1334,7 +1334,10 @@ def main() -> int:
                 phases.append({**ph, "paths": [rounded(p) for p in ph.get("paths", [])]})
             if [p["from"] for p in phases] != sorted(p["from"] for p in phases):
                 fail(f"{where}: phases must run in order")
-            by_id[lid]["path"] = {"style": line["style"], "phases": phases}
+            # What becomes of an age's works when it ends: walls stand as fading ruins, a canal silts up and is gone.
+            if line.get("ended", "fade") not in ("fade", "vanish"):
+                fail(f"{where}: ended must be fade or vanish")
+            by_id[lid]["path"] = {"style": line["style"], "ended": line.get("ended", "fade"), "phases": phases}
         elif not good(line.get("path", [])):
             fail(f"{where} needs two or more [lon, lat] points")
         else:

@@ -132,7 +132,13 @@ export interface City {
   /** A natural landmark's map sign; water has none, its name is lettered on the water. */
   subtype?: 'peak' | 'volcano' | 'falls' | 'gorge' | 'rock' | 'water';
   /** The course of a landmark that runs along a line, and how to draw it: a wall, a canal, a canyon's river. */
-  path?: {style: 'wall' | 'canal' | 'river'; points?: [number, number][]; phases?: Phase[]};
+  path?: {
+    style: 'wall' | 'canal' | 'river';
+    points?: [number, number][];
+    phases?: Phase[];
+    /** When an age ends its works stand as fading ruins (a wall), or vanish (a canal silts up and is gone). */
+    ended?: 'fade' | 'vanish';
+  };
   /** For a landmark: the year a viewpoint came upon the place itself, when long after it knew the land around it. */
   found?: Partial<Record<VpId, number>>;
   /** For a landmark: when it became known beyond its neighbours, so that mere contact with the land sufficed. */

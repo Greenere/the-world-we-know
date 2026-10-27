@@ -96,6 +96,7 @@ export const zhUi: Record<string, string> = {
   'Natural wonder': '自然奇观',
   'Through the ages': '历代',
   'Frontier wall': '边墙',
+  Waterway: '水道',
   'from {year}': '{year}起',
   Everyone: '通用',
   Landmark: '地标',
