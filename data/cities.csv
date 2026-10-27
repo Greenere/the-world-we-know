@@ -416,3 +416,77 @@ la-venta,18.1,-94.04,2,-1200,-600,-400,-300,1925,draft-urban,medium,
 san-lorenzo,17.75,-94.76,3,-1500,-1150,-900,-800,1945,draft-urban,medium,
 poverty-point,32.64,-91.41,3,-1700,-1400,-1100,-1000,1953,draft-urban,medium,
 dhar-tichitt,18.45,-9.52,3,-1800,-1300,-500,-300,1965,draft-urban,medium,
+
+# ═══ More cities (2026-10-27) ═══
+belgrade,44.82,20.46,2,-279,,,,,draft-urban,medium,
+edirne,41.68,26.56,2,125,1450,,,,draft-urban,high,"Hadrian's city in Thrace. The Ottomans took it in 1361 and made it their capital until Constantinople fell, the base from which they crossed into the Balkans."
+bursa,40.19,29.06,3,-200,1350,,,,draft-urban,medium,
+konya,37.87,32.48,2,-1000,1220,,,,draft-urban,medium,"Iconium of Paul's journeys; from 1097 the capital of the Seljuk sultans of Rum, and the city where Rumi taught and is buried."
+nicosia,35.17,33.36,3,-700,1400,,,,draft-urban,medium,
+salamis,35.18,33.9,3,-1100,-400,648,,,draft-urban,medium,
+riga,56.95,24.11,2,1201,1600,,,,draft-urban,high,
+vilnius,54.69,25.28,2,1323,1600,,,,draft-urban,high,
+uppsala,59.9,17.63,3,500,1000,,,,draft-urban,medium,
+visby,57.64,18.29,3,900,1300,,,,draft-urban,high,"A Baltic island town grown rich in the Hanseatic trade, still ringed by its thirteenth-century walls and the ruins of its churches."
+stockholm,59.33,18.07,2,1252,1700,,,,draft-urban,high,
+trondheim,63.43,10.39,3,997,1200,,,,draft-urban,high,
+palermo,38.12,13.36,1,-734,1150,,,,draft-urban,high,"Phoenician, Greek, Roman, Arab and Norman in turn; under the Kalbid emirs and the Norman kings it was among the largest cities in Europe, where al-Idrisi drew his map of the world."
+pisa,43.72,10.4,3,-600,1150,,,,draft-urban,medium,
+aachen,50.78,6.08,2,795,800,,,,draft-urban,high,"Charlemagne's capital, where he built his palace chapel and was buried; German kings were crowned there for six centuries."
+avignon,43.95,4.81,3,-500,1350,,,,draft-urban,high,"Seat of the popes from 1309 to 1377, when the papacy left Rome for the Rhône."
+ebla,35.8,36.8,3,-3000,-2400,-1600,-1600,1964,draft-urban,high,"A Syrian kingdom whose palace archive of some seventeen thousand clay tablets, found in 1974, revealed a forgotten language and a great power of the third millennium BCE."
+kumasi,6.69,-1.62,2,1680,1820,,,,draft-urban,high,"Capital of the Asante, whose kings sat on the Golden Stool; British envoys in 1817 described a city of broad streets and painted houses."
+mozambique-island,-15.03,40.73,3,900,1600,,,,draft-urban,medium,
+antananarivo,-18.91,47.52,2,1610,1850,,,,draft-urban,high,
+kampala,0.3,32.57,2,1750,1880,,,,draft-urban,medium,"The hills of the kings of Buganda, whose capitals moved from hill to hill; Speke reached Mutesa's court here in 1862."
+sennar,13.55,33.63,3,1504,1650,1821,,,draft-urban,high,"Capital of the Funj sultanate on the Blue Nile, which ruled the middle Nile for three centuries until the Egyptian conquest of 1821."
+goree,14.67,-17.4,3,1444,1780,,,,draft-urban,high,
+cidade-velha,14.92,-23.6,3,1462,1550,1770,,,draft-urban,high,"The first European town in the tropics, on Santiago in the Cape Verde islands, and an early hub of the Atlantic slave trade."
+las-palmas,28.1,-15.41,3,1478,1900,,,,draft-urban,high,
+angra,38.65,-27.22,3,1534,1600,,,,draft-urban,high,
+katsina,12.99,7.6,2,1100,1600,,,,draft-urban,medium,
+kandy,7.29,80.63,2,1470,1700,,,,draft-urban,high,"Capital of the last Sinhalese kingdom, which held the hills against the Portuguese and Dutch and kept the Tooth Relic of the Buddha until 1815."
+banda-aceh,5.55,95.32,2,1496,1630,,,,draft-urban,high,
+brunei,4.89,114.94,2,1400,1550,,,,draft-urban,medium,
+banjarmasin,-3.32,114.59,3,1526,1700,,,,draft-urban,medium,
+yogyakarta,-7.8,110.36,2,1755,1800,,,,draft-urban,high,
+thanjavur,10.79,79.14,2,850,1010,,,,draft-urban,high,"Capital of the Chola kings, whose great temple of 1010 crowned the empire that sent fleets to Srivijaya."
+colombo,6.93,79.85,2,1000,1900,,,,draft-urban,high,
+surat,21.17,72.83,2,1500,1650,,,,draft-urban,high,
+ouro-preto,-20.39,-43.5,3,1698,1750,,,,draft-urban,high,
+brasilia,-15.79,-47.88,2,1960,,,,,draft-urban,high,"A capital drawn on an empty plateau and built in four years, to turn Brazil inward from its coast."
+punta-arenas,-53.16,-70.91,3,1848,1900,,,,draft-urban,high,
+denver,39.74,-104.99,3,1858,,,,,draft-urban,high,
+salt-lake-city,40.76,-111.89,3,1847,,,,,draft-urban,high,
+apia,-13.83,-171.76,3,1850,,,,,draft-urban,medium,
+levuka,-17.68,178.84,3,1820,1874,,,,draft-urban,medium,
+port-moresby,-9.44,147.18,3,1873,,,,,draft-urban,medium,
+qufu,35.6,116.99,3,-1100,-500,,,,draft-urban,high,"Capital of the state of Lu and home of Confucius, whose descendants lived beside his temple for more than two thousand years."
+linzi,36.86,118.35,2,-859,-300,,,,draft-urban,high,"Capital of Qi, perhaps the largest city of the Warring States, home of the Jixia Academy where the philosophers of the age debated."
+handan,36.6,114.48,3,-386,-260,,,,draft-urban,high,
+jiangling,30.35,112.19,2,-689,-300,,,,draft-urban,high,
+taiyuan,37.87,112.55,2,-497,,,,,draft-urban,high,
+changsha,28.2,112.97,2,-202,,,,,draft-urban,high,
+wuchang,30.55,114.3,2,223,,,,,draft-urban,high,
+ningbo,29.87,121.55,2,738,1200,,,,draft-urban,high,
+fuzhou,26.07,119.3,2,-202,,,,,draft-urban,high,
+jingdezhen,29.29,117.21,3,1004,1700,,,,draft-urban,high,"The porcelain capital, named for the Jingde reign; its blue-and-white was shipped to the Ottoman court, Persia, Africa and Europe."
+guilin,25.27,110.29,3,-214,,,,,draft-urban,high,
+dali,25.6,100.2,2,738,1000,,,,draft-urban,high,"Capital of Nanzhao and then the kingdom of Dali, which ruled Yunnan for five centuries until the Mongols took it in 1253."
+kunming,25.04,102.7,2,765,,,,,draft-urban,high,
+xining,36.62,101.78,3,-121,,,,,draft-urban,medium,
+yinchuan,38.47,106.27,2,1020,1100,,,,draft-urban,high,"Xingqing, capital of the Tangut Western Xia, sacked by the Mongols in 1227 as Genghis Khan lay dying."
+shigatse,29.27,88.88,3,1447,,,,,draft-urban,high,
+tianjin,39.13,117.2,2,1404,1900,,,,draft-urban,high,
+shenyang,41.8,123.43,2,1625,1640,,,,draft-urban,high,
+harbin,45.8,126.53,3,1898,,,,,draft-urban,high,
+tainan,22.99,120.2,3,1624,1680,,,,draft-urban,high,
+buyeo,36.28,126.91,3,538,600,660,,,draft-urban,high,
+busan,35.1,129.04,2,1407,,,,,draft-urban,high,
+hiraizumi,38.99,141.11,3,1100,1180,1189,,,draft-urban,high,
+hiroshima,34.39,132.46,3,1589,,,,,draft-urban,high,
+sapporo,43.06,141.35,3,1869,,,,,draft-urban,high,
+shuri,26.22,127.72,3,1429,1600,,,,draft-urban,high,"Capital of the Ryukyu kingdom, a trading state between China, Japan, Korea and Southeast Asia until Japan annexed it in 1879."
+urga,47.92,106.92,2,1639,,,,,draft-urban,high,
+khara-khoto,41.76,101.07,3,1032,1226,1372,1400,1908,draft-urban,high,"A Tangut garrison city on the Etsin river, abandoned after the Ming cut its water in 1372; Kozlov dug thousands of Tangut books from its sand in 1908."
+vijaya,13.9,109.1,3,1000,1300,1471,,,draft-urban,medium,

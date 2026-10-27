@@ -855,8 +855,8 @@ def load_journeys(sources: dict, vp_ids: set[str]) -> list[dict]:
             places.add(s["place"])
         if j.get("by") not in (None, *MODES):
             fail(f"{where}: 'by' must be one of {', '.join(MODES)}")
-        if not j.get("informs"):
-            fail(f"{where}: must inform at least one viewpoint about at least one region")
+        if not j.get("informs") and j.get("lifts") is not False:
+            fail(f"{where}: must inform at least one viewpoint about at least one region (or say \"lifts\": false)")
         journeys.append(j)
     return journeys
 
@@ -1417,8 +1417,10 @@ def main() -> int:
                 if level_at(tl, y.mid)[0] > level_at(tl, y.mid - 0.01)[0]:
                     lifted.append(r.id)
                     break
-        if not lifted:
-            fail(f"journeys/{j['id']}.json: no 'informs' entry lifts any fog")
+        # A journey of ideas through lands already known (Confucius among the states), or one whose findings
+        # stayed unpublished for generations (Xu Xiake's diaries), says so with "lifts": false.
+        if not lifted and j.get("lifts") is not False:
+            fail(f"journeys/{j['id']}.json: no 'informs' entry lifts any fog (set \"lifts\": false if none should)")
         j["_lifts"] = sorted(set(lifted))
 
     print("  cards, cities, search …")

@@ -1,0 +1,21 @@
+{
+  "id": "boas",
+  "name": "Franz Boas among the Inuit of Baffin Island",
+  "traveler": "Franz Boas",
+  "years": "1883–1884",
+  "kind": "scientific",
+  "viewpoint": "germany",
+  "summary": "A young German physicist goes to Baffin Island to study the colour of sea ice and spends a year living with the Inuit of Cumberland Sound, travelling by dog sledge, learning the language and mapping the coast from their knowledge. He came home believing that each people must be understood in its own terms, and went on to found modern anthropology.",
+  "source": "boas",
+  "confidence": "high",
+  "stops": [
+    {"year": 1883, "place": "Hamburg", "lat": 53.55, "lon": 9.99, "note": "Sails on a ship supplying the German polar station."},
+    {"year": 1883, "place": "Kekerten", "lat": 65.7, "lon": -65.8, "note": "A whaling station in Cumberland Sound; he lives among the Inuit families there.", "by": "sea"},
+    {"year": 1884, "place": "Qikiqtarjuaq coast", "lat": 67.0, "lon": -64.5, "note": "By sledge with Inuit guides up the coast to Davis Strait, mapping as they go.", "by": "land"},
+    {"year": 1884, "place": "Kekerten", "lat": 65.7, "lon": -65.8, "note": "Back to Cumberland Sound before the ice breaks.", "by": "land"},
+    {"year": 1884, "place": "St John's", "lat": 47.56, "lon": -52.71, "note": "Takes ship for home, carrying maps drawn with his hosts.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "helluland-markland", "level": 4, "homeKnows": 1885, "confidence": "high", "note": "Baffin Island's coasts and inland routes, mapped with Inuit guides"}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "confucius",
+  "name": "Confucius among the states",
+  "traveler": "Confucius (Kong Qiu)",
+  "years": "497–484 BCE",
+  "kind": "traveler",
+  "viewpoint": "china",
+  "lifts": false,
+  "summary": "Disappointed in Lu, Confucius leaves home at fifty-five with a few disciples to find a ruler who will put his teaching into practice. For fourteen years he moves between the courts of Wei, Song, Chen and Cai, mistaken for an enemy at Kuang, threatened in Song, starving between Chen and Cai, and is never given office. He returns to Lu to teach. The journey crossed lands China already knew; what it spread was a way of thinking.",
+  "source": "analects",
+  "confidence": "medium",
+  "stops": [
+    {"year": -497, "place": "Qufu, Lu", "lat": 35.6, "lon": 116.99, "note": "He leaves Lu when the duke neglects government for dancing girls sent by Qi."},
+    {"year": -497, "place": "Diqiu, Wei", "lat": 35.7, "lon": 115.0, "note": "Ten months at the court of Duke Ling of Wei."},
+    {"year": -496, "place": "Kuang", "lat": 35.05, "lon": 114.55, "note": "Mistaken for the tyrant Yang Hu, he is surrounded for five days."},
+    {"year": -492, "place": "Shangqiu, Song", "lat": 34.42, "lon": 115.65, "note": "The minister Huan Tui tries to kill him by felling a tree on him."},
+    {"year": -492, "place": "Xinzheng, Zheng", "lat": 34.4, "lon": 113.74, "note": "Separated from his disciples, he is described at the east gate as standing like a lost dog."},
+    {"year": -491, "place": "Wanqiu, Chen", "lat": 33.73, "lon": 114.88, "note": "Three years in Chen."},
+    {"year": -489, "place": "Between Chen and Cai", "lat": 33.5, "lon": 114.6, "note": "Cut off, the party runs out of food for seven days; he goes on teaching and playing the zither."},
+    {"year": -489, "place": "Fuhan, Ye", "lat": 33.4, "lon": 113.3, "note": "On the border of Chu he talks with the Duke of She about good government."},
+    {"year": -488, "place": "Diqiu, Wei", "lat": 35.7, "lon": 115.0, "note": "Back in Wei for some years."},
+    {"year": -484, "place": "Qufu, Lu", "lat": 35.6, "lon": 116.99, "note": "Invited home at sixty-eight, he spends his last years teaching and editing the classics."}
+  ],
+  "informs": []
+}

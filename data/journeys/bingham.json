@@ -1,0 +1,21 @@
+{
+  "id": "bingham",
+  "name": "Hiram Bingham to Machu Picchu",
+  "traveler": "Hiram Bingham",
+  "years": "1911",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "A Yale lecturer looking for Vilcabamba, the last refuge of the Incas, follows the Urubamba gorge below Cusco. A local farmer, Melchor Arteaga, leads him up to Machu Picchu, where families still farmed the terraces; National Geographic's photographs of 1913 made it famous. He went on to find the real Vilcabamba at Espíritu Pampa without knowing it.",
+  "source": "bingham",
+  "confidence": "high",
+  "stops": [
+    {"year": 1911, "place": "Cusco", "lat": -13.53, "lon": -71.97, "note": "The expedition sets out down the Urubamba."},
+    {"year": 1911, "place": "Mandor Pampa", "lat": -13.15, "lon": -72.52, "note": "Melchor Arteaga offers to show him ruins on the ridge above.", "by": "river"},
+    {"year": 1911, "date": "24 July 1911", "place": "Machu Picchu", "lat": -13.16, "lon": -72.55, "note": "Two farming families are living among the terraces; a boy leads him to the temples."},
+    {"year": 1911, "place": "Vitcos", "lat": -13.1, "lon": -72.95, "note": "The palace of Manco Inca and the sacred rock of Ñusta Hispana."},
+    {"year": 1911, "place": "Espíritu Pampa", "lat": -12.92, "lon": -73.22, "note": "Overgrown ruins he dismisses; they were Vilcabamba itself."}
+  ],
+  "informs": [
+    {"region": "peru", "level": 5, "homeKnows": 1913, "confidence": "high", "note": "The Vilcabamba ranges surveyed; Machu Picchu photographed for the world"}
+  ]
+}

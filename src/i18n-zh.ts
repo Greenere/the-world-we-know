@@ -3,7 +3,8 @@
 
 export const zhUi: Record<string, string> = {
   // Title and top bar
-  'The World We Know': '我们如何认识世界',
+  'The World We Know': '山海所知',
+  'Pick a viewpoint and a year to see how much of the world it knew.': '选一个视角和年份，看它所知晓的世界有多大。',
   'Humanity: when people first arrived': '人类：人们最早抵达的时间',
   'What {vp} knew': '{vp}所知的世界',
   'Compare two viewpoints': '比较两个视角',
@@ -237,6 +238,7 @@ export const zhUi: Record<string, string> = {
   'and {n} more': '等{n}处',
   'Crossed paths': '相遇与交错',
   ' was at {other}, {km} km from {place}.': '当时在{other}，距{place} {km}公里。',
+  ' was {km} km from {place}.': '当时距{place} {km}公里。',
   ' had passed through {other} in {year}.': '已于{year}经过{other}。',
   ' would pass through {other} in {year}.': '将于{year}经过{other}。',
   'Go to this moment': '前往这一时刻',

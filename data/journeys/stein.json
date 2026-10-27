@@ -1,0 +1,24 @@
+{
+  "id": "stein",
+  "name": "Aurel Stein to Dunhuang",
+  "traveler": "Aurel Stein",
+  "years": "1906–1908",
+  "kind": "scientific",
+  "viewpoint": "britain",
+  "summary": "Working for British India, the Hungarian-born archaeologist excavates the buried towns of the southern Silk Road, from Khotan to Niya and Miran, and follows the Han wall into the desert. At Dunhuang he persuades the monk Wang Yuanlu to open the sealed library cave, and carries away thousands of manuscripts, among them the Diamond Sutra of 868, the oldest dated printed book; a loss still mourned in China.",
+  "source": "stein",
+  "confidence": "high",
+  "stops": [
+    {"year": 1906, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "Over the Hindu Kush from India."},
+    {"year": 1906, "place": "Khotan", "lat": 37.1, "lon": 79.93, "note": "Excavates the oasis kingdom's ruined shrines."},
+    {"year": 1906, "place": "Niya", "lat": 37.95, "lon": 82.7, "note": "Wooden tablets in Kharoshthi script from a town buried for sixteen centuries."},
+    {"year": 1907, "place": "Miran", "lat": 39.2, "lon": 88.95, "note": "Wall paintings of winged figures in a Buddhist shrine, in a Roman-influenced hand."},
+    {"year": 1907, "place": "Loulan", "lat": 40.5, "lon": 89.9, "note": "He follows Hedin to the ruined city."},
+    {"year": 1907, "place": "Han wall west of Dunhuang", "lat": 40.1, "lon": 93.5, "note": "Traces the Han frontier wall and its watchtowers into the desert."},
+    {"year": 1907, "place": "Mogao Caves", "lat": 40.04, "lon": 94.8, "note": "Wang Yuanlu opens the library cave; Stein leaves with twenty-four cases of manuscripts."},
+    {"year": 1908, "place": "Khotan", "lat": 37.1, "lon": 79.93, "note": "Back across the south of the desert, losing toes to frostbite in the Kunlun."}
+  ],
+  "informs": [
+    {"region": "tarim", "level": 5, "homeKnows": 1909, "confidence": "high", "note": "The buried towns of the southern Silk Road excavated and mapped"}
+  ]
+}

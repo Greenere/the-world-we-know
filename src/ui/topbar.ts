@@ -155,6 +155,8 @@ export class TopBar {
       h(
         'div.cartouche.panel',
         h('h1.cartouche-title', t('The World We Know')),
+        // What the map is and how to read it, in a line, for someone arriving cold.
+        h('p.cartouche-lede', t('Pick a viewpoint and a year to see how much of the world it knew.')),
         this.subtitle,
         this.legendSlot,
         this.note,

@@ -155,7 +155,8 @@ kbd {
   /* The left column's width, shared with the journey panel below it, so the two cards line up. */
   width: var(--left-w);
   max-width: calc(100vw - 2 * var(--gutter));
-  padding: 9px 18px 10px;
+  /* A little more room above the title than below the legend, close to the margin at the sides. */
+  padding: 11px 16px 9px;
   text-align: left;
 }
 
@@ -168,8 +169,32 @@ kbd {
   letter-spacing: 0.005em;
 }
 
+.cartouche-lede {
+  margin: 3px 0 0;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--ink-3);
+}
+
+/* One line: what the map shows and how to use it. */
+.cartouche-lede {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* A full row of levels spreads across the card, lining up with the text at both edges; Humanity's three stay
+   together. */
+.cartouche-legend .legend-levels:has(li:nth-child(5)) {
+  justify-content: space-between;
+}
+
+.cartouche-legend .legend-levels:not(:has(li:nth-child(5))) {
+  gap: 4px 18px;
+}
+
 .cartouche-sub {
-  margin-top: 3px;
+  margin-top: 2px;
   font-size: 13.5px;
   color: var(--ink-2);
   font-style: italic;
@@ -740,8 +765,8 @@ kbd {
 
 /* The legend: a row in the title card, under the subtitle. */
 .cartouche-legend {
-  margin-top: 7px;
-  padding-top: 7px;
+  margin-top: 5px;
+  padding-top: 6px;
   border-top: 1px solid var(--rule);
 }
 
@@ -777,7 +802,7 @@ kbd {
 
 .legend-levels .fog-swatch {
   width: 26px;
-  height: 15px;
+  height: 13px;
 }
 
 .legend-name {
@@ -2229,6 +2254,12 @@ kbd {
   }
   :root {
     --top-h: 122px;
+  }
+}
+
+@media (max-width: 760px) {
+  .cartouche-lede {
+    display: none;
   }
 }
 

@@ -1,0 +1,22 @@
+{
+  "id": "andrews",
+  "name": "Roy Chapman Andrews in the Gobi",
+  "traveler": "Roy Chapman Andrews",
+  "years": "1922–1925",
+  "kind": "scientific",
+  "viewpoint": "europe",
+  "summary": "The American Museum's Central Asiatic Expeditions take motor cars, supplied by camel caravans, deep into the Gobi in search of early humans. They find none, but at the Flaming Cliffs they find the first known dinosaur eggs, the bones of Velociraptor and Protoceratops, and the stone tools of people who lived there in the Stone Age.",
+  "source": "andrews",
+  "confidence": "high",
+  "stops": [
+    {"year": 1922, "place": "Kalgan", "lat": 40.82, "lon": 114.88, "note": "Cars and a camel caravan leave from the gate in the Great Wall."},
+    {"year": 1922, "place": "Iren Dabasu", "lat": 43.65, "lon": 111.98, "note": "The first fossils, in the bed of an old lake."},
+    {"year": 1922, "place": "Urga", "lat": 47.92, "lon": 106.92, "note": "The Mongolian capital, today's Ulaanbaatar."},
+    {"year": 1923, "place": "Flaming Cliffs", "lat": 44.14, "lon": 103.73, "note": "Red sandstone bluffs full of fossils: the first dinosaur eggs known to science."},
+    {"year": 1925, "place": "Shabarakh Usu", "lat": 44.2, "lon": 103.6, "note": "Stone tools of the people they name the Dune Dwellers."},
+    {"year": 1925, "place": "Kalgan", "lat": 40.82, "lon": 114.88, "note": "Back to China with crates of fossils."}
+  ],
+  "informs": [
+    {"region": "mongolia", "level": 5, "homeKnows": 1926, "confidence": "high", "note": "The Gobi crossed by car, its geology and fossils mapped"}
+  ]
+}

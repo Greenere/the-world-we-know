@@ -904,7 +904,9 @@ export class JourneyPanel {
           const place = this.stopName(j, c.place);
           const text =
             c.kind === 'meanwhile'
-              ? [h('em', otherName), t(' was at {other}, {km} km from {place}.', {other: otherPlace, km: Math.round(c.km / 10) * 10, place})]
+              ? [h('em', otherName), c.otherPlace
+                  ? t(' was at {other}, {km} km from {place}.', {other: otherPlace, km: Math.round(c.km / 10) * 10, place})
+                  : t(' was {km} km from {place}.', {km: Math.round(c.km / 10) * 10, place})]
               : [h('em', otherName), t(c.otherT < c.t ? ' had passed through {other} in {year}.' : ' would pass through {other} in {year}.', {other: otherPlace, year: formatYear(c.otherT)})];
           return h(
             'li.jp-cross',

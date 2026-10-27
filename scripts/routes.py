@@ -670,8 +670,10 @@ def crossings(journeys: list[dict]) -> dict[str, list[dict]]:
             if best:
                 d, y, pa, pb = best
                 rec = {"kind": "meanwhile", "t": round(y, 3), "km": round(d)}
-                out[A["id"]].append({**rec, "journey": B["id"], "place": nearest_place(real[A["id"]], pa), "otherPlace": nearest_place(real[B["id"]], pb), "otherT": round(y, 3)})
-                out[B["id"]].append({**rec, "journey": A["id"], "place": nearest_place(real[B["id"]], pb), "otherPlace": nearest_place(real[A["id"]], pa), "otherT": round(y, 3)})
+                # Each party is named by its own nearest stop, but only when it is really there: a fleet at sea
+                # near Malacca, with no stop of its own nearby, is not "at Calicut".
+                out[A["id"]].append({**rec, "journey": B["id"], "place": nearest_place(real[A["id"]], pa), "otherPlace": nearest_place(real[B["id"]], pb, NEAR_STOP_KM), "otherT": round(y, 3)})
+                out[B["id"]].append({**rec, "journey": A["id"], "place": nearest_place(real[B["id"]], pb), "otherPlace": nearest_place(real[A["id"]], pa, NEAR_STOP_KM), "otherT": round(y, 3)})
                 continue
             near = None
             for i, s in enumerate(real[A["id"]]):
@@ -695,6 +697,12 @@ def crossings(journeys: list[dict]) -> dict[str, list[dict]]:
     return out
 
 
-def nearest_place(stops, p):
+# How near a stop must be to say a party was at it.
+NEAR_STOP_KM = 300
+
+
+def nearest_place(stops, p, within: float = float("inf")):
     best = min((s for s in stops if "lat" in s and not s.get("body")), key=lambda s: km((s["lon"], s["lat"]), p), default=None)
-    return best.get("place", "") if best else ""
+    if not best or km((best["lon"], best["lat"]), p) > within:
+        return ""
+    return best.get("place", "")

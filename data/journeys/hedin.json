@@ -1,0 +1,24 @@
+{
+  "id": "hedin",
+  "name": "Sven Hedin in the Taklamakan and Tibet",
+  "traveler": "Sven Hedin",
+  "years": "1899–1902",
+  "kind": "scientific",
+  "viewpoint": "norse",
+  "summary": "The Swedish explorer floats down the Tarim River, crosses the Taklamakan, and in the dunes near Lop Nur stumbles on the buried city of Loulan, abandoned for fifteen centuries. Then he tries to reach Lhasa in disguise as a Buryat pilgrim and is turned back by Tibetan soldiers. His maps of the shifting Lop Nur and of northern Tibet were the most exact yet made.",
+  "source": "hedin",
+  "confidence": "high",
+  "stops": [
+    {"year": 1899, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "Sets out from the last Russian consulate."},
+    {"year": 1899, "place": "Yarkand River", "lat": 39.5, "lon": 78.5, "note": "Builds a ferry and drifts down the Yarkand and Tarim for months, mapping as he goes.", "by": "river"},
+    {"year": 1899, "place": "Tarim River", "lat": 40.9, "lon": 84.0, "note": "The river's course across the north of the desert, measured for the first time.", "by": "river"},
+    {"year": 1900, "place": "Loulan", "lat": 40.5, "lon": 89.9, "note": "Going back for a lost spade, his man finds wooden houses and carved beams: the ruined city of Loulan.", "by": "land"},
+    {"year": 1901, "place": "Lop Nur", "lat": 40.3, "lon": 90.5, "note": "He maps the wandering lake, which he argues has shifted with the river."},
+    {"year": 1901, "place": "Nagqu", "lat": 31.47, "lon": 92.05, "note": "Disguised as a pilgrim, he is stopped by Tibetan troops four days from Lhasa.", "by": "land"},
+    {"year": 1902, "place": "Leh", "lat": 34.16, "lon": 77.58, "note": "Across western Tibet to Ladakh and British India.", "by": "land"}
+  ],
+  "informs": [
+    {"region": "tarim", "level": 5, "homeKnows": 1903, "confidence": "high", "note": "Hedin's survey of the Tarim and the find of Loulan"},
+    {"region": "tibet", "level": 4, "homeKnows": 1903, "confidence": "high", "note": "Northern Tibet crossed and mapped"}
+  ]
+}

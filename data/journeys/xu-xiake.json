@@ -1,0 +1,25 @@
+{
+  "id": "xu-xiake",
+  "name": "Xu Xiake's journey to the south-west",
+  "traveler": "Xu Xiake",
+  "years": "1636–1640",
+  "kind": "traveler",
+  "viewpoint": "china",
+  "lifts": false,
+  "summary": "At fifty, after thirty years of shorter trips, Xu Xiake sets out on foot for the far south-west, with a monk and a servant. Robbed, ill and often alone, he climbs the karst towers of Guangxi and Guizhou, explores more than a hundred caves, and traces the rivers of Yunnan to show that the Jinsha, not the Min, is the true source of the Yangtze. Carried home crippled in 1640, he died the next year; his diaries, the first systematic account of karst anywhere, were not printed until 1776.",
+  "source": "xu-xiake-youji",
+  "confidence": "high",
+  "stops": [
+    {"year": 1636, "place": "Jiangyin", "lat": 31.92, "lon": 120.28, "note": "He leaves home in the autumn with the monk Jingwen and a servant."},
+    {"year": 1636, "place": "Huangshan", "lat": 30.13, "lon": 118.17, "note": "Through Zhejiang and Jiangxi by way of the mountains he loves."},
+    {"year": 1637, "place": "Hengshan", "lat": 27.25, "lon": 112.7, "note": "Robbed on the Xiang River, he climbs the southern sacred mountain."},
+    {"year": 1637, "place": "Guilin", "lat": 25.27, "lon": 110.29, "note": "Months among the karst peaks and caves, measuring and describing them."},
+    {"year": 1638, "place": "Huangguoshu falls", "lat": 25.99, "lon": 105.67, "note": "He describes the great waterfall of Guizhou."},
+    {"year": 1638, "place": "Kunming", "lat": 25.04, "lon": 102.7, "note": "Into Yunnan. Jingwen has died on the way; Xu carries his ashes."},
+    {"year": 1639, "place": "Jizu Shan", "lat": 25.97, "lon": 100.38, "note": "Buries the monk's ashes on Chicken Foot Mountain and writes its gazetteer."},
+    {"year": 1639, "place": "Lijiang", "lat": 26.87, "lon": 100.23, "note": "Guest of the Naxi chieftain Mu Zeng; he follows the Jinsha's great bend."},
+    {"year": 1639, "place": "Tengchong", "lat": 25.02, "lon": 98.5, "note": "The far west, by the Burmese border, among volcanic hot springs."},
+    {"year": 1640, "place": "Jiangyin", "lat": 31.92, "lon": 120.28, "note": "Too ill to walk, he is carried home and dies the next year.", "by": "river"}
+  ],
+  "informs": []
+}
