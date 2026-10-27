@@ -1,0 +1,28 @@
+{
+  "id": "long-march",
+  "name": "The Long March",
+  "traveler": "The Central Red Army (the First Front Army of the Chinese Workers' and Peasants' Red Army)",
+  "years": "1934–1935",
+  "kind": "military",
+  "viewpoint": "china",
+  "lifts": false,
+  "summary": "Encircled by the Nationalist armies, some 86,000 men and women of the Central Red Army break out of their base in Jiangxi and march for a year, about 10,000 kilometres, across eighteen mountain ranges and twenty-four rivers to the far north-west. At Zunyi Mao Zedong wins the leadership; at Luding they seize a chain bridge under fire; they cross snow mountains and the swamps of the grasslands. Fewer than eight thousand reach northern Shaanxi. The lands were long known; what the march made was a legend and a leader, and Edgar Snow's book carried it to the world.",
+  "source": "long-march",
+  "confidence": "high",
+  "stops": [
+    {"year": 1934, "date": "16 October 1934", "place": "Yudu", "lat": 25.95, "lon": 115.41, "note": "The army slips across the Yudu River at night and begins the march."},
+    {"year": 1934, "place": "Xiang River", "lat": 25.61, "lon": 110.67, "note": "Running battle at the crossing of the Xiang; the army loses more than half its men.", "by": "land"},
+    {"year": 1934, "place": "Tongdao", "lat": 26.16, "lon": 109.78, "note": "The leaders debate where to go, and turn west into Guizhou.", "by": "land"},
+    {"year": 1935, "date": "January 1935", "place": "Zunyi", "lat": 27.7, "lon": 106.93, "note": "The Zunyi Conference: Mao Zedong takes the leadership of the army.", "by": "land"},
+    {"year": 1935, "place": "Chishui River", "lat": 28.15, "lon": 105.68, "note": "Four crossings of the Chishui, doubling back to lose the pursuing armies.", "by": "land"},
+    {"year": 1935, "date": "May 1935", "place": "Jiaopingdu", "lat": 26.43, "lon": 102.44, "note": "Across the Jinsha, the upper Yangtze, in seven small boats over nine days.", "by": "land"},
+    {"year": 1935, "place": "Mianning", "lat": 28.55, "lon": 102.17, "note": "Liu Bocheng swears brotherhood with the Yi chief Xiaoyedan, opening the way through Yi country.", "by": "land"},
+    {"year": 1935, "date": "29 May 1935", "place": "Luding Bridge", "lat": 29.91, "lon": 102.23, "note": "Men cross the chains of the bridge under fire, its planks torn up, and take the Dadu River crossing.", "by": "land"},
+    {"year": 1935, "place": "Jiajin Mountain", "lat": 30.85, "lon": 102.75, "note": "Over the first of the snow mountains in summer clothes; many die of cold and thin air.", "by": "land"},
+    {"year": 1935, "place": "Maogong", "lat": 30.99, "lon": 102.36, "note": "The army meets Zhang Guotao's Fourth Front Army.", "by": "land"},
+    {"year": 1935, "place": "The grasslands", "lat": 33.58, "lon": 102.96, "note": "A week across the swamps of Zoigê, where men sink into the bog and live on boiled leather.", "by": "land"},
+    {"year": 1935, "date": "September 1935", "place": "Lazikou Pass", "lat": 34.15, "lon": 103.88, "note": "The pass into Gansu, stormed up the cliff face.", "by": "land"},
+    {"year": 1935, "date": "19 October 1935", "place": "Wuqi", "lat": 36.93, "lon": 108.18, "note": "Some eight thousand survivors reach the Red base in northern Shaanxi.", "by": "land"}
+  ],
+  "informs": []
+}

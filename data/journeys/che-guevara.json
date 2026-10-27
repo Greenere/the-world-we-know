@@ -1,0 +1,33 @@
+{
+  "id": "che-guevara",
+  "name": "Che Guevara's motorcycle journey",
+  "traveler": "Ernesto Guevara and Alberto Granado",
+  "years": "1952",
+  "kind": "traveler",
+  "viewpoint": "iberia",
+  "lifts": false,
+  "summary": "A twenty-three-year-old medical student and his friend, a biochemist, set out from Buenos Aires on an old Norton 500 they call La Poderosa, the Mighty One, to see the continent. The bike gives out in Chile; they go on by lorry, raft and on foot, past the copper mine of Chuquicamata, through the Andes to Cusco and Machu Picchu, and down to a leper colony on the Amazon. Guevara's diary records a continent of poverty that he came to see as one country; it made him, in time, Che.",
+  "source": "motorcycle-diaries",
+  "confidence": "high",
+  "stops": [
+    {"year": 1952, "date": "4 January 1952", "place": "Buenos Aires", "lat": -34.6, "lon": -58.38, "note": "They leave on La Poderosa, a 1939 Norton."},
+    {"year": 1952, "place": "Miramar", "lat": -38.27, "lon": -57.84, "note": "A detour to see Ernesto's girlfriend, Chichina, who will not wait for him.", "by": "land"},
+    {"year": 1952, "place": "Bahía Blanca", "lat": -38.72, "lon": -62.27, "note": "South-west across the pampas.", "by": "land"},
+    {"year": 1952, "place": "San Carlos de Bariloche", "lat": -41.13, "lon": -71.31, "note": "Into the lakes of the Andes.", "by": "land"},
+    {"year": 1952, "place": "Temuco", "lat": -38.74, "lon": -72.6, "note": "Over the Andes by lake and boat into Chile.", "by": "land"},
+    {"year": 1952, "place": "Los Ángeles", "lat": -37.47, "lon": -72.35, "note": "La Poderosa breaks down for good; they go on by lorry.", "by": "land"},
+    {"year": 1952, "place": "Valparaíso", "lat": -33.05, "lon": -71.62, "note": "They stow away on a ship north.", "by": "land"},
+    {"year": 1952, "place": "Antofagasta", "lat": -23.65, "lon": -70.4, "note": "Discovered as stowaways, they work their passage north.", "by": "sea"},
+    {"year": 1952, "place": "Chuquicamata", "lat": -22.3, "lon": -68.9, "note": "The great copper mine, and a communist miner and his wife on the road.", "by": "land"},
+    {"year": 1952, "place": "Cusco", "lat": -13.53, "lon": -71.97, "note": "The Inca capital, its walls under colonial churches.", "by": "land"},
+    {"year": 1952, "place": "Machu Picchu", "lat": -13.16, "lon": -72.55, "note": "Guevara writes of the stones of a people who built without the Spanish.", "by": "land"},
+    {"year": 1952, "place": "Lima", "lat": -12.05, "lon": -77.04, "note": "With Dr Hugo Pesce, the leprosy specialist who sends them to the Amazon.", "by": "land"},
+    {"year": 1952, "place": "Pucallpa", "lat": -8.38, "lon": -74.55, "note": "By lorry over the Andes and down to the edge of the forest.", "by": "land"},
+    {"year": 1952, "place": "Iquitos", "lat": -3.75, "lon": -73.25, "note": "Down the Ucayali by riverboat to the Amazon.", "by": "river"},
+    {"year": 1952, "place": "San Pablo", "lat": -3.92, "lon": -70.5, "note": "Weeks at a leper colony on the Amazon; on his birthday Ernesto swims the river to the patients' side.", "by": "river"},
+    {"year": 1952, "place": "Leticia", "lat": -4.21, "lon": -69.94, "note": "Down the river on a raft they call the Mambo-Tango.", "by": "river"},
+    {"year": 1952, "place": "Bogotá", "lat": 4.71, "lon": -74.07, "note": "A Colombia at war with itself; they are arrested and released.", "by": "land"},
+    {"year": 1952, "date": "July 1952", "place": "Caracas", "lat": 10.49, "lon": -66.88, "note": "Granado stays to work; Guevara flies home to finish his degree.", "by": "land"}
+  ],
+  "informs": []
+}
