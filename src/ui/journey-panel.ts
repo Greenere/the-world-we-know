@@ -1,13 +1,14 @@
 import type {AppData} from '../data';
-import {loadPictures, shortCitation} from '../data';
+import {landmarkKnown, loadPictures, nameFor, shortCitation} from '../data';
+import type {FogField} from '../fog/field';
 import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
-import type {State, Store} from '../state';
-import {formatRange, formatYear, mainScale, START} from '../time';
-import type {Journey, VpId} from '../types';
+import type {Shelf, State, Store} from '../state';
+import {ERAS, formatRange, formatYear, mainScale, PRESENT, START} from '../time';
+import type {City, Journey, VpId} from '../types';
 import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
-import {icons, inventionIcons, kindIcons} from './icons';
+import {icons, inventionIcons, kindIcons, naturalIcons} from './icons';
 import {GROUPS} from './topbar';
 
 /** Journey kinds grouped into the list's filters. */
@@ -20,7 +21,7 @@ const FILTERS: {id: string; label: string; kinds: string[]}[] = [
   {id: 'frontier', label: 'Frontiers', kinds: ['polar', 'mountaineering', 'deep dive', 'spaceflight']},
 ];
 
-/** Left panel: the list of journeys and inventions, or the journey being followed. */
+/** Left panel: the list of journeys, inventions or landmarks, or the journey being followed. */
 export class JourneyPanel {
   el: HTMLElement;
   private body: HTMLElement;
@@ -30,7 +31,6 @@ export class JourneyPanel {
   private playBtn: HTMLButtonElement | null = null;
   private viewBtns: {follow: HTMLButtonElement; route: HTMLButtonElement} | null = null;
   private epilogueEl: HTMLElement | null = null;
-  private tab: 'journeys' | 'inventions' = 'journeys';
   private filter = 'all';
   /** Viewpoint filter: null for all journeys (where the list always opens). */
   private vpFilter: VpId | null = null;
@@ -45,16 +45,30 @@ export class JourneyPanel {
   private meanwhileEl: HTMLElement | null = null;
   private meanwhileKey = '';
   private invItems = new Map<string, HTMLElement>();
+  /** A landmark's rows: one in its era, and another while it is among those built around the current year. */
+  private landmarkItems = new Map<string, HTMLElement[]>();
+  /** The section at the top of a list that follows the timeline (journeys under way, landmarks built around the
+   * year): where it goes, how to fill it for a year, and which entries it holds now. */
+  private near: {host: HTMLElement; fill: (year: number) => {ids: string; title: string; rows: () => Node[]}; ids: string; head: HTMLElement | null} | null = null;
+  /** The viewpoint the landmarks list was built for; it is rebuilt when the viewpoint changes. */
+  private landmarkVp = '';
+  private landmarks: LandmarkEntry[] = [];
+  private landmarkQuery = '';
+  private landmarkKind: LandmarkEntry['group'] | null = null;
+  private landmarkEras = new Set<string>();
+  private landmarkResults: HTMLElement | null = null;
 
   constructor(
     private data: AppData,
     private store: Store,
+    private field: FogField,
     private actions: {
       start(id: string): void;
       step(dir: -1 | 1): void;
       close(): void;
       openRegion(id: string): void;
       openInvention(id: string): void;
+      openCity(id: string): void;
       switchTo(id: string, year: number): void;
       showSketch(stop: number): void;
       jumpTo(year: number): void;
@@ -80,23 +94,49 @@ export class JourneyPanel {
       this.el.scrollTop = 0;
     }
     if (geo) this.progress(s, geo);
+    else if (mode === 'list' && s.shelf === 'landmarks' && s.vps[0] !== this.landmarkVp) this.listEl?.replaceChildren(...this.landmarkList(s));
+    if (mode === 'list') this.refreshNear(s.year);
+    for (const [id, els] of this.landmarkItems) for (const el of els) el.classList.toggle('current', id === s.city);
     for (const [id, el] of this.invItems) el.classList.toggle('current', id === s.invention);
   }
 
+  /** Keep the timeline-following section in step with the year: its heading always, its rows when they change. */
+  private refreshNear(year: number) {
+    const near = this.near;
+    if (!near?.host.isConnected) return;
+    const now = near.fill(year);
+    if (now.ids !== near.ids) {
+      near.ids = now.ids;
+      near.head = now.ids ? h('h3.card-h') : null;
+      near.host.replaceChildren(...(near.head ? [h('section.jp-group.jp-near', near.head, h('ul.jp-list', now.rows()))] : []));
+    }
+    if (near.head && near.head.textContent !== now.title) near.head.textContent = now.title;
+  }
+
+  /** A timeline-following section for the list about to be drawn; it fills itself for the current year. */
+  private nearSection(fill: (year: number) => {ids: string; title: string; rows: () => Node[]}): HTMLElement {
+    const host = h('div.jp-near-host');
+    this.near = {host, fill, ids: '', head: null};
+    queueMicrotask(() => this.refreshNear(this.store.state.year));
+    return host;
+  }
+
   private list(): Node[] {
-    const tab = (id: 'journeys' | 'inventions', label: string) =>
+    this.near = null;
+    const shelf = this.store.state.shelf;
+    const tab = (id: Shelf, label: string) =>
       h(
         'button.jp-tab',
         {
           type: 'button',
           role: 'tab',
-          'aria-selected': String(this.tab === id),
-          class: this.tab === id ? 'active' : '',
+          'aria-selected': String(shelf === id),
+          class: shelf === id ? 'active' : '',
           onclick: () => {
-            if (this.tab === id) return;
-            this.tab = id;
-            if (id === 'inventions') this.publishRoutes(null);
+            if (shelf === id) return;
+            if (id !== 'journeys') this.publishRoutes(null);
             this.key = '';
+            this.store.set({shelf: id});
             this.update(this.store.state, null);
           },
         },
@@ -104,12 +144,14 @@ export class JourneyPanel {
       );
     this.listEl = h('div.jp-list-body');
     this.invItems.clear();
-    if (this.tab === 'journeys') this.listEl.append(...this.journeyList());
-    else this.listEl.append(...this.inventionList());
+    this.landmarkItems.clear();
+    if (shelf === 'journeys') this.listEl.append(...this.journeyList());
+    else if (shelf === 'inventions') this.listEl.append(...this.inventionList());
+    else this.listEl.append(...this.landmarkList(this.store.state));
     return [
       h(
         'div.jp-head',
-        h('div.jp-tabs', {role: 'tablist'}, tab('journeys', 'Journeys'), tab('inventions', 'Inventions')),
+        h('div.jp-tabs', {role: 'tablist'}, tab('journeys', 'Journeys'), tab('landmarks', 'Landmarks'), tab('inventions', 'Inventions')),
         h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: () => this.store.set({panel: 'none'}), html: icons.close}),
       ),
       this.listEl,
@@ -170,6 +212,7 @@ export class JourneyPanel {
     groups: {title: string | null; items: {id: string | null; label: string; n: number; color?: string}[]}[],
     get: () => string | null,
     set: (id: string | null) => void,
+    rerender = () => this.renderResults(),
   ): HTMLElement {
     const flat = groups.flatMap(g => g.items);
     const value = h('span.jp-drop-value');
@@ -197,7 +240,7 @@ export class JourneyPanel {
                 set(x.id);
                 show();
                 close();
-                this.renderResults();
+                rerender();
               },
             },
             x.color ? h('span.jp-filter-dot') : h('span.jp-menu-blank'),
@@ -243,6 +286,17 @@ export class JourneyPanel {
     const wrap = h('div.jp-drop', btn, menu);
     show();
     return wrap;
+  }
+
+  /** Open the list at an era (from the timeline): unfold its group and bring it to the top of the panel. */
+  openEra(id: string) {
+    if (this.store.state.journey) return;
+    if (this.store.state.panel !== 'journeys') this.store.set({panel: 'journeys'});
+    const section = this.listEl?.querySelector<HTMLElement>(`[data-era="${id}"]`);
+    if (!section) return;
+    const head = section.querySelector<HTMLElement>('.jp-era');
+    if (head?.getAttribute('aria-expanded') === 'false') head.click();
+    this.el.scrollBy({top: section.getBoundingClientRect().top - this.el.getBoundingClientRect().top - 8, behavior: 'smooth'});
   }
 
   private journeyList(): Node[] {
@@ -356,29 +410,25 @@ export class JourneyPanel {
     const total = entries.reduce((n, x) => n + x.hits.length, 0);
     const openAll = searching || total <= 12;
     const out: Node[] = [];
-    const year = this.store.state.year;
-    if (!searching && year >= START) {
-      // A century either side in antiquity, a generation or two in the crowded centuries since; the nearest eight.
-      const span = year > 1500 ? 40 : 100;
-      const near = entries
-        .filter(({e}) => e.t0 <= year + span && e.t1 >= year - span)
-        .sort((a, b) => Math.abs((a.e.t0 + a.e.t1) / 2 - year) - Math.abs((b.e.t0 + b.e.t1) / 2 - year))
-        .slice(0, 8);
-      if (near.length) {
-        out.push(h('section.jp-group.jp-near', h('h3.card-h', t('Under way around {year}', {year: formatYear(year)})), h('ul.jp-list', near.map(x => this.row(x.e, x.hits)))));
-      }
+    if (!searching) {
+      out.push(
+        this.nearSection(year => {
+          if (year < START) return {ids: '', title: '', rows: () => []};
+          // A century either side in antiquity, a generation or two in the crowded centuries since; the nearest eight.
+          const span = year > 1500 ? 40 : 100;
+          const near = entries
+            .filter(({e}) => e.t0 <= year + span && e.t1 >= year - span)
+            .sort((a, b) => Math.abs((a.e.t0 + a.e.t1) / 2 - year) - Math.abs((b.e.t0 + b.e.t1) / 2 - year))
+            .slice(0, 8);
+          return {ids: near.map(x => x.e.id).join(), title: t('Under way around {year}', {year: formatYear(Math.round(year))}), rows: () => near.map(x => this.row(x.e, x.hits))};
+        }),
+      );
     }
-    const eras: [string, number, number][] = [
-      ['Antiquity', -Infinity, 500],
-      ['500 – 1400', 500, 1400],
-      ['1400 – 1800', 1400, 1800],
-      ['The last frontiers', 1800, Infinity],
-    ];
-    for (const [title, a, b] of eras) {
-      const list = entries.filter(({e}) => e.t0 >= a && e.t0 < b);
+    for (const era of ERAS) {
+      const list = entries.filter(({e}) => e.t0 >= era.from && e.t0 < era.to);
       if (!list.length) continue;
       const n = list.reduce((k, x) => k + x.hits.length, 0);
-      const open = openAll || this.openEras.has(title);
+      const open = openAll || this.openEras.has(era.id);
       const body = h('ul.jp-list', {hidden: !open}, open ? list.map(x => this.row(x.e, x.hits)) : []);
       const head = h(
         'button.jp-era',
@@ -390,15 +440,15 @@ export class JourneyPanel {
             if (now && !body.childElementCount) body.append(...list.map(x => this.row(x.e, x.hits)));
             body.hidden = !now;
             head.setAttribute('aria-expanded', String(now));
-            if (now) this.openEras.add(title);
-            else this.openEras.delete(title);
+            if (now) this.openEras.add(era.id);
+            else this.openEras.delete(era.id);
           },
         },
-        h('span.jp-era-title', t(title)),
+        h('span.jp-era-title', t(era.name)),
         h('span.jp-era-n', String(n)),
         h('span.jp-era-caret', {html: icons.next}),
       );
-      out.push(h('section.jp-group', head, body));
+      out.push(h('section.jp-group', {'data-era': era.id}, head, body));
     }
     return out;
   }
@@ -511,20 +561,15 @@ export class JourneyPanel {
   }
 
   private inventionList(): Node[] {
-    const groups: [string, number, number][] = [
-      ['Before paper maps', -Infinity, 500],
-      ['500 – 1400', 500, 1400],
-      ['1400 – 1800', 1400, 1800],
-      ['Machines and satellites', 1800, Infinity],
-    ];
     return [
       h('p.jp-intro', t('Instruments and ideas that let people see, reach or record more of the world. Each marks its place of origin on the map for a century.')),
-      ...groups.map(([title, a, b]) => {
-        const list = this.data.inventions.filter(x => x.mid >= a && x.mid < b);
+      ...ERAS.map(era => {
+        const list = this.data.inventions.filter(x => x.mid >= era.from && x.mid < era.to);
         if (!list.length) return null;
         return h(
           'section.jp-group',
-          h('h3.card-h', t(title)),
+          {'data-era': era.id},
+          h('h3.card-h', t(era.name)),
           h(
             'ul.jp-list',
             list.map(x => {
@@ -542,6 +587,175 @@ export class JourneyPanel {
         );
       }),
     ].filter(Boolean) as Node[];
+  }
+
+  /** Open a place's card at the year the viewpoint came to know it. */
+  private openAt(c: City, year: number) {
+    this.store.set({year: Math.max(START, Math.min(PRESENT, Math.round(year))), playing: false});
+    this.actions.openCity(c.id);
+  }
+
+  /** When a viewpoint found a lost city again: its rediscovery, or later, once the viewpoint heard of it. */
+  private foundAgain(c: City, vp: VpId): number {
+    const d = c.dates.rediscovered!;
+    return Math.max(typeof d === 'number' ? d : (d[0] + d[1]) / 2, landmarkKnown(this.data, this.field, c, vp));
+  }
+
+  /** Places a viewpoint comes to know (landmarks people built, natural wonders, lost cities found again),
+   * grouped into eras by the year each entered this viewpoint's world. The grouping depends only on the
+   * viewpoint, so a click that jumps the timeline leaves the list in place. */
+  private landmarkList(s: State): Node[] {
+    const vp = s.vps[0];
+    this.landmarkVp = vp;
+    this.landmarks = this.landmarkEntries(vp);
+    const all = this.landmarks;
+    const kinds: [LandmarkEntry['group'], string][] = [['built', 'Built'], ['natural', 'Natural wonders'], ['found', 'Found again']];
+    const kindDrop = this.dropdown(
+      t('Kind'),
+      [{title: null, items: [{id: null, label: t('All'), n: all.length}, ...kinds.map(([id, label]) => ({id, label: t(label), n: all.filter(e => e.group === id).length}))]}],
+      () => this.landmarkKind,
+      id => (this.landmarkKind = id as LandmarkEntry['group'] | null),
+      () => this.renderLandmarks(),
+    );
+    const search = h('input.jp-search', {
+      type: 'search',
+      placeholder: t('Find a landmark or a lost city…'),
+      'aria-label': t('Find a landmark'),
+      value: this.landmarkQuery,
+      autocomplete: 'off',
+      spellcheck: 'false',
+    });
+    search.addEventListener('input', () => {
+      this.landmarkQuery = search.value;
+      this.renderLandmarks();
+    });
+    search.addEventListener('keydown', e => e.stopPropagation());
+    this.landmarkResults = h('div.jp-results');
+    this.renderLandmarks();
+    return [
+      h('p.jp-intro', t('Wonders people built, wonders they found, and lost cities found again, by when {vp} came to know them.', {vp: tx.viewpoint(vp, 'name', this.data.vp[vp].name)})),
+      h('div.jp-tools', h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search)),
+      h('div.jp-filter-row', kindDrop),
+      this.landmarkResults,
+    ];
+  }
+
+  /** Every landmark and lost city with the year it entered a viewpoint's world. */
+  private landmarkEntries(vp: VpId): LandmarkEntry[] {
+    const humanity = vp === 'humanity';
+    const vpName = tx.viewpoint(vp, 'name', this.data.vp[vp].name);
+    const mid = (d: number | [number, number]) => (typeof d === 'number' ? d : (d[0] + d[1]) / 2);
+    const out: LandmarkEntry[] = [];
+    for (const c of this.data.cities) {
+      let group: LandmarkEntry['group'];
+      let from: number;
+      let meta: string;
+      if (c.kind) {
+        const known = landmarkKnown(this.data, this.field, c, vp);
+        group = c.kind;
+        if (c.kind === 'built') {
+          // A built landmark enters the viewpoint's world once it stands and the viewpoint knows the land.
+          from = known;
+          // Built long before this viewpoint knew of it (Borobudur, for Europe): say both.
+          meta = from - mid(c.dates.founded!) > 50
+            ? t('Built {built}, known from {year}', {built: formatRange(c.dates.founded!), year: formatYear(from)})
+            : t('Built {year}', {year: formatRange(c.dates.founded!)});
+        } else {
+          from = known;
+          meta = humanity ? t('Reached {year}', {year: formatYear(known)})
+            : t('Known to {vp} from {year}', {vp: vpName, year: known <= START ? t('before {year}', {year: formatYear(START)}) : formatYear(known)});
+        }
+      } else if (c.dates.forgotten !== undefined && c.dates.rediscovered !== undefined) {
+        // Cities truly lost and found again; landmarks that were lost (Borobudur) are already among the built.
+        group = 'found';
+        from = this.foundAgain(c, vp);
+        meta = t('Found again {year}', {year: formatYear(from)});
+      } else continue;
+      const name = tx.name(nameFor(c.names, '*' as VpId, PRESENT, c.id)!.name);
+      const hay = [name, ...c.names.flatMap(n => [n.name, tx.name(n.name), n.native ?? ''])].join(' ').toLowerCase();
+      out.push({c, group, from, name, meta, hay});
+    }
+    return out.sort((a, b) => a.from - b.from || a.name.localeCompare(b.name));
+  }
+
+  private renderLandmarks() {
+    const el = this.landmarkResults;
+    if (!el) return;
+    const q = this.landmarkQuery.trim().toLowerCase();
+    const list = this.landmarks.filter(e => (!this.landmarkKind || e.group === this.landmarkKind) && (!q || e.hay.includes(q)));
+    if (!list.length) {
+      el.replaceChildren(h('p.jp-empty', t('No landmark matches.')));
+      return;
+    }
+    const openAll = !!q || list.length <= 12;
+    this.landmarkItems.clear();
+    const out: Node[] = [];
+    if (!q) {
+      const built = list.filter(e => e.group === 'built');
+      // How far a landmark's building lies from a year; a rebuilt one (the Great Wall) was raised in each of its ages.
+      const apart = (e: LandmarkEntry, year: number) => {
+        const d = e.c.dates.founded!;
+        const starts = [typeof d === 'number' ? d : (d[0] + d[1]) / 2, ...(e.c.path?.phases ?? []).filter(p => !p.idle).map(p => p.from)];
+        return Math.min(...starts.map(y => Math.abs(y - year)));
+      };
+      out.push(
+        this.nearSection(year => {
+          // As for journeys: what was being raised within a century, or a generation or two, of the year.
+          const span = year > 1500 ? 40 : 100;
+          const near = built
+            .filter(e => apart(e, year) <= span)
+            .sort((a, b) => apart(a, year) - apart(b, year))
+            .slice(0, 8);
+          // A rebuilt landmark says which age was building it then: "Ming · built 1368".
+          const meta = (e: LandmarkEntry) => {
+            const age = (e.c.path?.phases ?? []).filter(p => !p.idle).sort((a, b) => Math.abs(a.from - year) - Math.abs(b.from - year))[0];
+            const founded = e.c.dates.founded!;
+            if (!age || Math.abs((typeof founded === 'number' ? founded : founded[0]) - year) <= Math.abs(age.from - year)) return undefined;
+            return `${tx.phase(e.c.id, age.id, 'name', age.name)} · ${t('built {year}', {year: formatYear(age.from)})}`;
+          };
+          return {ids: near.map(e => e.c.id).join(), title: t('Built around {year}', {year: formatYear(Math.round(year))}), rows: () => near.map(e => this.landmarkRow(e, meta(e)))};
+        }),
+      );
+    }
+    for (const era of ERAS) {
+      const group = list.filter(e => e.from >= era.from && e.from < era.to);
+      if (!group.length) continue;
+      const open = openAll || this.landmarkEras.has(era.id);
+      const body = h('ul.jp-list', {hidden: !open}, open ? group.map(e => this.landmarkRow(e)) : []);
+      const head = h(
+        'button.jp-era',
+        {
+          type: 'button',
+          'aria-expanded': String(open),
+          onclick: () => {
+            const now = body.hidden;
+            if (now && !body.childElementCount) body.append(...group.map(e => this.landmarkRow(e)));
+            body.hidden = !now;
+            head.setAttribute('aria-expanded', String(now));
+            if (now) this.landmarkEras.add(era.id);
+            else this.landmarkEras.delete(era.id);
+          },
+        },
+        h('span.jp-era-title', t(era.name)),
+        h('span.jp-era-n', String(group.length)),
+        h('span.jp-era-caret', {html: icons.next}),
+      );
+      out.push(h('section.jp-group', {'data-era': era.id}, head, body));
+    }
+    el.replaceChildren(...out);
+  }
+
+  private landmarkRow(e: LandmarkEntry, meta = e.meta): HTMLElement {
+    const c = e.c;
+    const btn = h(
+      'button.jp-item.landmark-item',
+      {type: 'button', class: `landmark-${e.group}`, onclick: () => this.openAt(c, e.from)},
+      h('span.jp-item-icon', {html: e.group === 'natural' ? naturalIcons[c.subtype ?? ''] ?? icons.natural : e.group === 'built' ? icons.built : icons.ruin}),
+      h('span.jp-item-text', h('span.jp-item-name', e.name), h('span.jp-item-meta', meta)),
+    );
+    btn.classList.toggle('current', c.id === this.store.state.city);
+    this.landmarkItems.set(c.id, [...(this.landmarkItems.get(c.id) ?? []), btn]);
+    return h('li', btn);
   }
 
   private journey(geo: JourneyGeo): (Node | null)[] {
@@ -821,3 +1035,14 @@ function entryOf(id: string, name: string, members: Journey[]): Entry {
 
 /** Lower case, accents and ʻokina dropped, so "ibn battuta" finds "Ibn Baṭṭūṭa". */
 const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f'ʻʼ’]/g, '').toLowerCase();
+
+/** A place in the landmarks list, with the year it entered the viewpoint's world. */
+interface LandmarkEntry {
+  c: City;
+  group: 'built' | 'natural' | 'found';
+  from: number;
+  name: string;
+  meta: string;
+  /** Every name it went by, for search. */
+  hay: string;
+}

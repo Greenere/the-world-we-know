@@ -897,10 +897,16 @@ def haversine_km(lat1, lon1, lat2, lon2):
 
 
 def load_cities(sources, grid: Grid):
+    """Cities, then landmarks: built or natural places that share the cities' lifecycle, names and cards."""
     cities = []
     seen = set()
-    for row in read_csv(DATA / "cities.csv"):
-        where = f"cities.csv:{row['_line']}"
+    rows = [("cities.csv", r) for r in read_csv(DATA / "cities.csv")]
+    rows += [("landmarks.csv", r) for r in read_csv(DATA / "landmarks.csv")]
+    for file, row in rows:
+        where = f"{file}:{row['_line']}"
+        kind = row.get("kind") or None
+        if kind not in (None, "built", "natural"):
+            fail(f"{where}: kind must be built or natural")
         cid = row["id"]
         if cid in seen:
             fail(f"{where}: duplicate city {cid}")
@@ -914,7 +920,8 @@ def load_cities(sources, grid: Grid):
             y = parse_year(row.get(key, ""), f"{where} {key}")
             if y is not None:
                 dates[key] = y
-        if "founded" not in dates:
+        # Only a natural landmark has always been there.
+        if "founded" not in dates and kind != "natural":
             fail(f"{where}: missing founded date")
         order = [dates[k].mid for k in ("founded", "abandoned", "forgotten", "rediscovered") if k in dates]
         if order != sorted(order):
@@ -927,6 +934,27 @@ def load_cities(sources, grid: Grid):
             "mid": {k: v.mid for k, v in dates.items()},
             "source": row["source"], "confidence": row["confidence"],
         }
+        if kind:
+            city["kind"] = kind
+        subtype = row.get("subtype") or None
+        if subtype and (kind != "natural" or subtype not in ("peak", "volcano", "falls", "gorge", "rock", "water")):
+            fail(f"{where}: subtype must be peak, volcano, falls, gorge, rock or water, on a natural landmark")
+        elif subtype:
+            city["subtype"] = subtype
+        # found: "europe 1855 russia 1643". A landmark one viewpoint came upon only long after it knew the
+        # country around it (Victoria Falls, in a Zambezi Europe had heard of since the Portuguese).
+        if kind:
+            widely = parse_year(row.get("widely", ""), f"{where} widely")
+            if widely is None:
+                fail(f"{where}: a landmark needs a 'widely' year, when it became known beyond its neighbours")
+            else:
+                city["widely"] = round(widely.mid)
+        if row.get("found"):
+            parts = row["found"].split()
+            if len(parts) % 2 or not kind:
+                fail(f"{where}: found must be pairs of 'viewpoint year', on a landmark")
+            else:
+                city["found"] = {parts[i]: int(parts[i + 1]) for i in range(0, len(parts), 2)}
         if row.get("story"):
             city["story"] = row["story"]
         cities.append(city)
@@ -1186,6 +1214,12 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
         if k not in city_ids:
             fail(f"i18n/zh/stories.json: unknown city {k!r}")
 
+    phases = rd("phases.json")
+    for k in phases:
+        lid, _, pid = k.partition("/")
+        if lid not in city_ids:
+            fail(f"i18n/zh/phases.json: unknown landmark {lid!r}")
+
     notes = rd("notes.json")
     all_notes = {e.note for d in events.values() for lst in d.values() for e in lst if e.note}
     for k in notes:
@@ -1199,7 +1233,7 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
     print("    中文: " + " · ".join(f"{k} {a}/{b}" for k, (a, b) in stats.items()))
     series = rd("series.json")
     return {"series": series, "names": names, "regions": regions, "journeys": jz, "inventions": inv, "viewpoints": vps, "moments": moments,
-            "depictions": dep, "stories": stories, "notes": notes, "chars": chars}
+            "depictions": dep, "stories": stories, "phases": phases, "notes": notes, "chars": chars}
 
 
 INVENTION_CATEGORIES = ("navigation", "measurement", "mapping", "communication", "transport", "imaging")
@@ -1277,6 +1311,44 @@ def main() -> int:
     journeys = load_journeys(sources, vp_ids)
     events = load_events(regions_by_id, sources, journeys)
     cities = load_cities(sources, grid)
+    # Landmarks that run along a line (a wall, a canal) carry their course.
+    by_id = {c["id"]: c for c in cities}
+    good = lambda path: len(path) >= 2 and all(len(p) == 2 for p in path)
+    rounded = lambda path: [[round(x, 3) for x in p] for p in path]
+    for lid, line in json.loads((DATA / "landmark-paths.json").read_text(encoding="utf-8")).items():
+        where = f"landmark-paths.json: {lid}"
+        if not by_id.get(lid, {}).get("kind"):
+            fail(f"{where} is not a landmark")
+        elif line.get("style") not in ("wall", "canal", "river"):
+            fail(f"{where} style must be wall, canal or river")
+        elif "phases" in line:
+            # A landmark built, abandoned and rebuilt along new lines (the Great Wall): each phase has its years,
+            # the courses it built (none, if it let the old ones fall), and where its mark stands.
+            phases = []
+            for ph in line["phases"]:
+                if not all(k in ph for k in ("id", "name", "from", "anchor", "note")) or not all(good(p) for p in ph.get("paths", [])):
+                    fail(f"{where}: each phase needs id, name, from, anchor, note, and [lon, lat] paths")
+                    continue
+                if ph.get("idle") == bool(ph.get("paths")):
+                    fail(f"{where} {ph['id']}: a phase either builds paths or is idle")
+                phases.append({**ph, "paths": [rounded(p) for p in ph.get("paths", [])]})
+            if [p["from"] for p in phases] != sorted(p["from"] for p in phases):
+                fail(f"{where}: phases must run in order")
+            by_id[lid]["path"] = {"style": line["style"], "phases": phases}
+        elif not good(line.get("path", [])):
+            fail(f"{where} needs two or more [lon, lat] points")
+        else:
+            by_id[lid]["path"] = {"style": line["style"], "points": rounded(line["path"])}
+    for c in cities:
+        found = c.get("found", {})
+        for vp in found:
+            if vp not in vp_ids:
+                fail(f"landmarks.csv: {c['id']} found by unknown viewpoint {vp!r}")
+        # What a knowledge community came upon, its members learned with it, unless they have a date of their own.
+        for v in viewpoints:
+            if v["id"] in found:
+                for m in v.get("community", {}).get("members", []):
+                    found.setdefault(m["viewpoint"], found[v["id"]])
     inventions = load_inventions(sources, vp_ids)
     names = load_names(regions_by_id, {c["id"] for c in cities}, vp_ids, sources)
     for c in cities:

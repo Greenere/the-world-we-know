@@ -14,7 +14,9 @@ import type {
   Source,
   Viewpoint,
   VpId,
+  Phase,
 } from './types';
+import type {FogField} from './fog/field';
 import type {ZhContent} from './i18n';
 import {ALL_VPS} from './types';
 
@@ -158,4 +160,70 @@ export function shortCitation(sources: Record<string, Source>, id: string): stri
   const c = sources[id]?.citation ?? id;
   const cut = c.search(/[,(]/);
   return cut > 0 ? c.slice(0, cut).trim() : c;
+}
+
+/** When a viewpoint came to know a landmark. Knowing a region is not knowing what is in it: people living near
+ * it, or who knew its land closely (interior mapped or better), knew it; those with mere contact heard of it no
+ * sooner than it became known beyond its neighbours (`widely`); a recorded encounter (`found`) overrides all.
+ * Never before it was built, and for one lost before the viewpoint knew it, only once it was found again.
+ * Every viewpoint knows every landmark in the end: we can only speak of them because the world came to. */
+export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId): number {
+  let known: number | null;
+  // A lost city became known beyond its neighbours when it was found again.
+  const widely = c.widely ?? (c.dates.rediscovered === undefined ? undefined : mid(c.dates.rediscovered));
+  const own = c.found?.[vp];
+  if (vp === 'humanity') known = field.firstKnown(vp, c.cell, 3);
+  else if (own !== undefined) known = own;
+  else {
+    // Interior knowledge counts only from a viewpoint's own mapping: the world map everyone shares from 1900
+    // (knowledge.csv, world-land) is not knowing every waterfall on it.
+    const own4 = field.firstKnown(vp, c.cell, 4);
+    const mapped = own4 !== null && own4 < SHARED_MAP ? own4 : null;
+    const near = nearHome(data, vp, c.lat, c.lon);
+    const close = mapped === null ? near : near === null ? mapped : Math.min(mapped, near);
+    const contact = field.firstKnown(vp, c.cell, 2);
+    const far = contact === null || widely === undefined ? null : Math.max(contact, widely);
+    known = close === null ? far : far === null ? close : Math.min(close, far);
+  }
+  // Out of reach until the world shared one map, and no sooner than it became known beyond its neighbours.
+  if (known === null) known = Math.max(SHARED_MAP, widely ?? SHARED_MAP);
+  if (c.kind === 'built' && c.dates.founded !== undefined) known = Math.max(known, mid(c.dates.founded));
+  const lost = c.dates.forgotten;
+  const found = c.dates.rediscovered;
+  if (lost === undefined || found === undefined || known < mid(lost)) return known;
+  return Math.max(known, mid(found));
+}
+
+/** The year of the one shared world map (knowledge.csv: *,world-land,1900). */
+const SHARED_MAP = 1900;
+
+/** Within this distance of a viewpoint's home, a landmark is its own: Stonehenge for Britain, Fuji for Japan. */
+const NEAR_KM = 1000;
+
+/** The first year a viewpoint (or, for a knowledge community, one of its members) had a home near a place. */
+function nearHome(data: AppData, vp: VpId, lat: number, lon: number): number | null {
+  const homes = [
+    ...data.vp[vp].homes.map(h => ({h, from: h.from})),
+    ...(data.vp[vp].community?.members ?? []).flatMap(m => data.vp[m.viewpoint].homes.map(h => ({h, from: Math.max(h.from, m.from)}))),
+  ];
+  let first: number | null = null;
+  for (const {h, from} of homes) if (km(h.lat, h.lon, lat, lon) < NEAR_KM && (first === null || from < first)) first = from;
+  return first;
+}
+
+function km(lat1: number, lon1: number, lat2: number, lon2: number) {
+  const r = Math.PI / 180;
+  const a = Math.sin(((lat2 - lat1) * r) / 2) ** 2 + Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.sin(((lon2 - lon1) * r) / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(a));
+}
+
+function mid(d: number | [number, number]) {
+  return typeof d === 'number' ? d : (d[0] + d[1]) / 2;
+}
+
+/** The age a phased landmark is in (the Great Wall under the Yuan), or null before its first. */
+export function phaseAt(c: City, year: number): Phase | null {
+  let cur: Phase | null = null;
+  for (const p of c.path?.phases ?? []) if (p.from <= year) cur = p;
+  return cur;
 }

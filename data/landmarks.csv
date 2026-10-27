@@ -1,0 +1,49 @@
+id,kind,subtype,lat,lon,tier,founded,peak,abandoned,forgotten,rediscovered,source,confidence,found,widely,story
+# Landmarks, built and natural. They join the cities: the same lifecycle (a built landmark can fall to ruin,
+# be lost and be found again), the same names, cards and pictures. A natural landmark has no founding date.
+# kind: built | natural. subtype (natural only) picks the map sign: peak, volcano, falls, gorge, rock, or water;
+# water has no sign, its name is lettered on the lake or bay the basemap draws. tier sets how prominent the mark
+# and label are (1 the most). A landmark that runs along a line (a wall, a canal) has its course in
+# landmark-paths.json; the mark stays at its best-known point.
+# Knowing a region is not knowing what is in it. A viewpoint that knew the land closely (interior mapped or
+# better) knew its landmarks. One with mere contact heard of a landmark no sooner than `widely`, the year it
+# became known beyond its neighbours (Herodotus for the pyramids, Stein and Pelliot for the Mogao Caves).
+# found: "europe 1855 china -100" records an encounter that overrides both, earlier or later; a community's
+# date holds for its members.
+
+# ═══ Built ═══
+giza,built,,29.98,31.13,1,-2560,,,,,draft,high,,-450,"The tomb of the pharaoh Khufu, the tallest building on Earth for nearly four thousand years. Herodotus heard its story from priests two thousand years after it was raised, and it was already ancient to them."
+stonehenge,built,,51.18,-1.83,2,-2500,,-1500,,,draft,medium,,1136,"A ring of great sarsens raised on Salisbury Plain, aligned with the midsummer sunrise. Its builders left no writing; by the Middle Ages it was said Merlin had flown the stones from Ireland."
+gobekli-tepe,built,,37.22,38.92,3,-9500,,-8000,-8000,1994,draft,medium,,1994,"Carved stone pillars raised by hunter-gatherers some seven thousand years before the pyramids, then deliberately buried. Its age was recognised only in 1994."
+abu-simbel,built,,22.34,31.63,2,-1264,,500,600,1813,draft,high,greece -591,1813,"Ramesses II's temples cut into a Nubian cliff, facing the sunrise down the Nile. Sand buried them to the shoulders; Burckhardt glimpsed a colossal head above the dune in 1813."
+great-wall,built,,39.97,119.79,1,-650,,,,,draft,medium,,1563,"Not one wall but many: for two thousand years dynasty after dynasty walled the northern frontier, each along its own line, while the walls of the last fell to ruin. The mark follows the wall of the age; the faint lines are the walls that went before."
+terracotta-army,built,,34.38,109.27,2,-210,,-206,-200,1974,shiji,high,,1974,"Some eight thousand clay soldiers buried to guard the First Emperor's tomb. Rebels burned the pits within a few years of his death, and they lay forgotten until farmers digging a well struck them in 1974."
+borobudur,built,,-7.61,110.20,1,800,825,1050,1500,1814,draft,medium,europe 1814,1814,"The largest Buddhist monument in the world, a mountain of carved terraces in central Java. Deserted as the island's courts moved east, it vanished under ash and jungle until Raffles had it cleared in 1814."
+sigiriya,built,,7.96,80.76,2,477,495,1300,,1831,draft,medium,,1831,"A palace on a granite rock rising two hundred metres from the plain, with frescoed maidens painted on its face. The king who built it reigned only eighteen years; monks kept the rock for centuries after."
+ajanta,built,,20.55,75.70,2,-200,500,650,1000,1819,draft,medium,europe 1819,1819,"Buddhist halls cut into a river gorge, painted with the finest surviving murals of ancient India. Forgotten for a millennium, they were stumbled on by a British officer hunting a tiger in 1819."
+rapa-nui-moai,built,,-27.13,-109.28,2,1250,1500,1700,,1722,draft,medium,europe 1722 polynesia 1250,1722,Nearly a thousand stone figures carved from the crater of Rano Raraku and stood on platforms facing inland. When Roggeveen landed in 1722 many still stood; within a century and a half all had been pulled down.
+nazca-lines,built,,-14.74,-75.13,2,-200,300,700,800,1927,draft,medium,,1927,"Lines and figures scraped into the desert floor across hundreds of square kilometres: a hummingbird, a monkey, a spider. From the ground they are faint paths; they were first studied in 1927 and seen whole from the air."
+mogao-caves,built,,40.04,94.80,2,366,800,1524,,,draft,high,persia 1420,1907,"Some five hundred painted cave temples cut into a cliff outside Dunhuang. In 1900 a monk found a sealed library of tens of thousands of manuscripts, among them the oldest dated printed book."
+suez-canal,built,,30.58,32.27,1,1869,,,,,draft,high,,1869,"A sea-level canal from the Mediterranean to the Red Sea. Pharaohs and caliphs had cut canals from the Nile; this one, opened in 1869, cut the voyage from London to Bombay by nearly half."
+panama-canal,built,,9.08,-79.68,1,1914,,,,,draft,high,,1914,Locks lift ships across the isthmus that Balboa crossed on foot in 1513. Its opening in 1914 ended the long passage around Cape Horn.
+
+# ═══ Natural ═══
+victoria-falls,natural,falls,-17.92,25.86,1,,,,,,draft,high,europe 1855,1857,"The Zambezi drops a hundred metres into a chasm a mile and a half wide. Its name here was Mosi-oa-Tunya, the smoke that thunders; Livingstone, shown it in 1855, named it for his queen."
+kilimanjaro,natural,volcano,-3.07,37.36,1,,,,,,draft,high,europe 1848,1848,"A snow-capped volcano three degrees from the equator. When the missionary Rebmann reported snow on it in 1848, London geographers refused to believe him."
+grand-canyon,natural,gorge,36.10,-112.11,1,,,,,,draft,high,europe 1540,1869,"The Colorado River's gorge, a mile deep, home to the Havasupai. García López de Cárdenas reached the rim in 1540 and could find no way down."
+uluru,natural,rock,-25.35,131.04,2,,,,,,draft,high,europe 1873,1873,"A sandstone monolith in the centre of Australia, sacred to the Anangu for tens of thousands of years. William Gosse reached it in 1873 and named it Ayers Rock."
+mount-fuji,natural,volcano,35.36,138.73,1,,,,,,draft,high,china 1565,1691,"Japan's highest and most sacred mountain, a near-perfect volcanic cone last erupting in 1707. Pilgrims climbed it for centuries; Hokusai drew it thirty-six times."
+niagara-falls,natural,falls,43.08,-79.07,2,,,,,,draft,high,europe 1678,1683,"The outflow of the Great Lakes pours over a broad ledge on its way to Lake Ontario. The friar Louis Hennepin, who saw it in 1678, gave Europe its first description."
+iguazu-falls,natural,falls,-25.69,-54.44,2,,,,,,draft,high,europe 1541,1882,"Some 275 cascades along a horseshoe of the Iguazu, named for great water in Guarani. Cabeza de Vaca came upon it in 1541."
+lake-baikal,natural,water,53.50,108.20,1,,,,,,draft,high,russia 1643 europe 1687 china -100,1700,"The deepest and oldest lake on Earth, holding a fifth of the world's fresh surface water. Russian Cossacks under Kurbat Ivanov reached its shore in 1643."
+dead-sea,natural,water,31.50,35.50,2,,,,,,draft,high,,-500,"A salt lake at the lowest point on land, so dense a swimmer floats. It figures in Genesis, and Aristotle had heard that nothing could sink in it."
+mount-kailash,natural,peak,31.07,81.31,2,,,,,,draft,high,europe 1715 india -500,1715,"A pyramid of rock and snow in western Tibet, sacred to Hindus, Buddhists, Jains and Bon. Pilgrims walk around it rather than climb it; no one has stood on its summit."
+krakatoa,natural,volcano,-6.10,105.42,2,,,,,,draft,high,europe 1596,1883,"A volcanic island in the Sunda Strait. Its eruption in 1883 was heard nearly five thousand kilometres away, and telegraph cables carried the news around the world within hours."
+ha-long-bay,natural,water,20.91,107.18,2,,,,,,draft,high,europe 1625,1900,"Some two thousand limestone pillars rising from the Gulf of Tonkin. Its name, the bay of the descending dragon, comes from a legend of dragons spitting jewels to wall off invaders."
+lake-victoria,natural,water,-1.00,33.00,1,,,,,,draft,high,europe 1858,1858,"Africa's largest lake, known around its shores as Nalubaale and Nyanza. Speke reached it in 1858 and declared it the source of the Nile, a claim argued for twenty years."
+blue-nile-falls,natural,falls,11.49,37.59,3,,,,,,draft,high,europe 1618,1790,"The Blue Nile thunders out of Lake Tana into a gorge. The Jesuit Pedro Páez, who saw the source in 1618, was the first European to describe it; Bruce claimed the honour in 1770."
+mont-blanc,natural,peak,45.83,6.87,2,,,,,,draft,high,,1786,"The highest peak in the Alps, long called the Accursed Mountain. Its first ascent, by Balmat and Paccard in 1786, is often taken as the birth of mountaineering."
+mount-ararat,natural,volcano,39.70,44.30,2,,,,,,draft,high,,-500,A volcano on the Armenian highlands where tradition grounded Noah's ark. Friedrich Parrot first climbed it in 1829.
+mount-tai,natural,peak,36.25,117.10,2,,,,,,shiji,high,europe 1655 japan 700,1655,"The most honoured of China's five sacred mountains. Emperors climbed it to report to Heaven, the First Emperor among them in 219 BCE."
+mount-sinai,natural,peak,28.54,33.98,3,,,,,,draft,medium,,550,"A granite peak in the south of the Sinai, held to be where Moses received the law. St Catherine's Monastery has stood at its foot since the sixth century."
+angel-falls,natural,falls,5.97,-62.54,3,,,,,,draft,high,europe 1933 inca 1937,1937,"The world's highest waterfall, falling nearly a kilometre from the flat top of Auyán-tepui. The Pemón call it Kerepakupai Merú; outsiders learned of it from the pilot Jimmie Angel in 1933."

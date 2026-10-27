@@ -492,6 +492,42 @@ kbd {
 }
 
 /* Inventions: brass instrument marks on the axis itself. */
+/* Era names along the top edge of the axis, the current one set darker. */
+.tl-era {
+  position: absolute;
+  top: -1px;
+  transform: translateX(-50%);
+  padding: 0 4px;
+  font-family: var(--font-sc);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 13px;
+  white-space: nowrap;
+  color: var(--ink-3);
+  opacity: 0.75;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.tl-era:hover {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.tl-era.current {
+  color: var(--ink-2);
+  opacity: 1;
+}
+
+.lang-zh .tl-era {
+  font-family: inherit;
+  letter-spacing: 0.15em;
+}
+
+.tl-era-rule {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
 .tl-invention {
   position: absolute;
   top: 23px;
@@ -1310,6 +1346,72 @@ kbd {
 }
 
 .inv-item.current {
+  background: color-mix(in srgb, var(--chip) 11%, transparent);
+}
+
+/* A landmark's ages (the Great Wall by dynasty): name and years, a line of what that age did. */
+.ages {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.age {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  padding: 5px 8px 6px;
+  border-left: 2px solid var(--rule-2);
+  text-align: left;
+}
+
+.age:hover {
+  background: rgba(64, 46, 24, 0.05);
+}
+
+.age.idle .age-name {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+.age.current {
+  border-left-color: var(--rubric);
+  background: rgba(155, 47, 32, 0.06);
+}
+
+.age-name {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.age-years {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.age-note {
+  grid-column: 1 / -1;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* Landmarks: ink for what people built, moss green for natural wonders. */
+.landmark-built {
+  --chip: var(--ink-2);
+}
+
+.landmark-natural {
+  --chip: #485e3a;
+}
+
+/* Lost cities found again take the map's sign for a rediscovered ruin. */
+.landmark-found {
+  --chip: var(--rubric);
+}
+
+.landmark-item.current {
   background: color-mix(in srgb, var(--chip) 11%, transparent);
 }
 

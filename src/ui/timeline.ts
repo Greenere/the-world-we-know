@@ -2,7 +2,7 @@ import type {AppData} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import {stepCount} from '../journey-geo';
 import type {State, Store} from '../state';
-import {deepScale, formatYear, mainScale, type TimeScale, yearParts} from '../time';
+import {deepScale, ERAS, formatYear, mainScale, type TimeScale, yearParts} from '../time';
 import type {Moment, VpId} from '../types';
 import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
@@ -55,12 +55,15 @@ export class Timeline {
   private captionTimer = 0;
   private geo: JourneyGeo | null = null;
   private selected: string | null = null;
+  /** The era the current year falls in, marked on the axis. */
+  private eraKey = '';
 
   constructor(
     private data: AppData,
     private store: Store,
     onStep: (dir: -1 | 1) => void,
     private onInvention: (id: string) => void,
+    private onEra: (id: string) => void,
   ) {
     this.playBtn = h('button.tl-play', {type: 'button', 'aria-label': t('Play'), onclick: () => store.set({playing: !store.state.playing})});
     this.speedBtn = h('button.tl-speed', {
@@ -127,7 +130,7 @@ export class Timeline {
     };
     let dragging = false;
     this.track.addEventListener('pointerdown', e => {
-      if ((e.target as Element).closest('.tl-moment, .tl-invention')) return;
+      if ((e.target as Element).closest('.tl-moment, .tl-invention, .tl-era')) return;
       dragging = true;
       this.track.setPointerCapture(e.pointerId);
       this.store.set({scrubbing: true, playing: false, ...patchAt(fraction(e))});
@@ -201,6 +204,11 @@ export class Timeline {
     this.allBtn.hidden = !!s.journey;
     this.allBtn.classList.toggle('active', s.allJourneys);
     this.allBtn.setAttribute('aria-pressed', String(s.allJourneys));
+    const era = this.geo ? '' : (ERAS.find(e => s.year >= e.from && s.year < e.to)?.id ?? '');
+    if (era !== this.eraKey) {
+      this.eraKey = era;
+      for (const el of this.track.querySelectorAll<HTMLElement>('.tl-era')) el.classList.toggle('current', el.dataset.era === era);
+    }
     if (s.invention !== this.selected) {
       this.selected = s.invention;
       for (const el of this.track.querySelectorAll<HTMLElement>('.tl-invention')) el.classList.toggle('selected', el.dataset.id === s.invention);
@@ -222,6 +230,11 @@ export class Timeline {
     // The recent, crowded centuries get a light wash so the stretched scale reads as deliberate.
     if (!geo && sc.kind === 'main') {
       parts.push(`<rect x="${X(1800)}" y="${base - 22}" width="${X(2026) - X(1800)}" height="22" class="tl-wash"/>`);
+    }
+    // Hairlines between the eras, along the top edge above the markers.
+    if (!geo) for (const era of ERAS.slice(1)) {
+      const x = X(era.from);
+      if (x > 0 && x < W) parts.push(`<line x1="${x}" x2="${x}" y1="1" y2="11" class="tl-era-rule"/>`);
     }
     parts.push(`<line x1="0" x2="${W}" y1="${base}" y2="${base}" class="tl-axis"/>`);
     // Labels never overlap: each must start past the previous one's right edge.
@@ -253,7 +266,50 @@ export class Timeline {
     }
     svg.innerHTML = parts.join('');
 
-    for (const el of this.track.querySelectorAll('.tl-moment, .tl-invention')) el.remove();
+    for (const el of this.track.querySelectorAll('.tl-moment, .tl-invention, .tl-era')) el.remove();
+    // Era names, centred on their span; a narrow era (1800–1900) may spill past its edges, its neighbours easing
+    // aside within their own spans to make room. A click opens that era in the list beside the map.
+    if (!geo) {
+      const marks = ERAS.map(era => {
+        const a = Math.max(0, sc.toX(Math.max(era.from, -1e6))) * W;
+        const b = Math.min(1, sc.toX(Math.min(era.to, 1e6))) * W;
+        const name = t(era.name);
+        const w = [...name].reduce((n, ch) => n + (ch.charCodeAt(0) > 0x2e80 ? 11 : 6.2), 0) + 10;
+        return {era, name, a, b, w, x: (a + b) / 2};
+      }).filter(m => m.b - m.a > 4);
+      const gap = 10;
+      // A name's centre stays within its own era, and the whole name within the track.
+      const clamp = (m: (typeof marks)[number], x: number) => Math.max(m.a, m.w / 2, Math.min(m.b, W - m.w / 2, x));
+      // Push names right past their left neighbours, then left away from their right neighbours, each name's
+      // centre kept within its own era.
+      for (let i = 1; i < marks.length; i++) {
+        const p = marks[i - 1];
+        marks[i].x = clamp(marks[i], Math.max(marks[i].x, p.x + p.w / 2 + gap + marks[i].w / 2));
+      }
+      for (let i = marks.length - 2; i >= 0; i--) {
+        const n = marks[i + 1];
+        marks[i].x = clamp(marks[i], Math.min(marks[i].x, n.x - n.w / 2 - gap - marks[i].w / 2));
+      }
+      let right = -Infinity;
+      for (const m of marks) {
+        const l = m.x - m.w / 2;
+        if (l < right + gap - 1 || l < 0 || m.x + m.w / 2 > W) continue;
+        right = m.x + m.w / 2;
+        this.track.appendChild(
+          h('button.tl-era', {
+            type: 'button',
+            style: `left:${(m.x / W) * 100}%`,
+            'data-era': m.era.id,
+            title: t('Show this era in the list'),
+            onclick: (e: Event) => {
+              e.stopPropagation();
+              this.onEra(m.era.id);
+            },
+          }, m.name),
+        );
+      }
+      this.eraKey = '';
+    }
     // Inventions sit on the axis as small brass rings, under the viewpoint's own key moments.
     if (!geo) {
       for (const inv of this.data.inventions) {

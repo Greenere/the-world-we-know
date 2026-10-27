@@ -71,6 +71,14 @@ export class FogField {
     return patternAt(d.patterns[d.ids[cell]], year);
   }
 
+  /** The first year a viewpoint knew the cell at `level` or better (a landmark appears at contact), or null. */
+  firstKnown(vp: VpId, cell: number, level: number): number | null {
+    const d = this.decoded.get(vp)!;
+    const p = d.patterns[d.ids[cell]];
+    for (let i = 0; i < p.length; i += 3) if (p[i + 1] >= level) return p[i];
+    return null;
+  }
+
   /** The cell's whole history: [year, level, conf][]. */
   cellHistory(vp: VpId, cell: number): [number, number, number][] {
     const d = this.decoded.get(vp)!;

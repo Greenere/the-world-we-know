@@ -4,6 +4,9 @@ import {ALL_VPS} from './types';
 
 export type Panel = 'none' | 'journeys' | 'about';
 
+/** Which list the left panel shows. */
+export type Shelf = 'journeys' | 'landmarks' | 'inventions';
+
 export interface State {
   /** One viewpoint, or two in compare mode. */
   vps: VpId[];
@@ -28,6 +31,7 @@ export interface State {
   invention: string | null;
   globe: boolean;
   panel: Panel;
+  shelf: Shelf;
   search: boolean;
 }
 
@@ -87,6 +91,7 @@ export const DEFAULT_STATE: State = {
   invention: null,
   globe: false,
   panel: 'none',
+  shelf: 'journeys',
   search: false,
 };
 

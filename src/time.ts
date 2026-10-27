@@ -6,6 +6,22 @@ export const PRESENT = 2026;
 /** Where the main timeline begins: the Bronze Age world of Egypt, Babylon and the Shang. */
 export const START = -2000;
 
+/** The atlas's eras, shared by the journey, invention and landmark lists and marked on the timeline. They are cut
+ * where the history thickens, and named for what was known rather than for any one region's periods. */
+export const ERAS: {id: string; name: string; from: number; to: number}[] = [
+  // Deep time, reached only by humanity's timeline and lists.
+  {id: 'africa', name: 'Out of Africa', from: -Infinity, to: -43000},
+  {id: 'ice', name: 'The Ice Age', from: -43000, to: -10000},
+  {id: 'farmers', name: 'First farmers', from: -10000, to: -3000},
+  {id: 'early', name: 'Early kingdoms', from: -3000, to: -500},
+  {id: 'classical', name: 'Classical empires', from: -500, to: 500},
+  {id: 'caravans', name: 'Caravans and monsoons', from: 500, to: 1400},
+  {id: 'discovery', name: 'Age of discovery', from: 1400, to: 1800},
+  {id: 'steam', name: 'Steam and telegraph', from: 1800, to: 1900},
+  // From 1900 every viewpoint shares one world map (knowledge.csv, world-land).
+  {id: 'shared', name: 'One shared map', from: 1900, to: Infinity},
+];
+
 const grouped = (n: number) => n.toLocaleString('en-US');
 
 /** Chinese: 4.5万年前 rather than 45,000. */

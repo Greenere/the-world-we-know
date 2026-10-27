@@ -106,11 +106,37 @@ export interface DepictionDoc {
   studies?: Depiction[];
 }
 
+/** One age of a landmark built, abandoned and rebuilt along new lines (the Great Wall under each dynasty). */
+export interface Phase {
+  id: string;
+  name: string;
+  from: number;
+  /** Open-ended for the last. */
+  to?: number;
+  /** An age that built nothing and let the old works fall. */
+  idle?: boolean;
+  /** Where the landmark's mark stands in this age. */
+  anchor: [number, number];
+  note: string;
+  /** The courses this age built; drawn in ink while it lasts, faint after. */
+  paths: [number, number][][];
+}
+
 export interface City {
   id: string;
   lat: number;
   lon: number;
   tier: 1 | 2 | 3;
+  /** A landmark rather than a city: something built (a pyramid, a canal) or a natural wonder. */
+  kind?: 'built' | 'natural';
+  /** A natural landmark's map sign; water has none, its name is lettered on the water. */
+  subtype?: 'peak' | 'volcano' | 'falls' | 'gorge' | 'rock' | 'water';
+  /** The course of a landmark that runs along a line, and how to draw it: a wall, a canal, a canyon's river. */
+  path?: {style: 'wall' | 'canal' | 'river'; points?: [number, number][]; phases?: Phase[]};
+  /** For a landmark: the year a viewpoint came upon the place itself, when long after it knew the land around it. */
+  found?: Partial<Record<VpId, number>>;
+  /** For a landmark: when it became known beyond its neighbours, so that mere contact with the land sufficed. */
+  widely?: number;
   cell: number;
   dates: Partial<Record<CityDateKey, number | [number, number]>>;
   source: string;

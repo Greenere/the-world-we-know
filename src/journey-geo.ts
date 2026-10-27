@@ -55,14 +55,18 @@ export function km(a: LngLat, b: LngLat) {
 
 /**
  * Drop repeated and non-finite points. A zero-length segment gives deck.gl's path joints no direction, and it
- * can draw a stray spike from that vertex toward the edge of the screen.
+ * can draw a stray spike from that vertex toward the edge of the screen. "Repeated" means within about ten
+ * metres: the GPU holds positions as 32-bit floats, so a traveller a hair past a route point (progress landing
+ * just after a vertex) still makes a segment too short to have a direction there.
  */
+const SAME_POINT = 1e-4;
+
 export function cleanPath(points: LngLat[]): LngLat[] {
   const out: LngLat[] = [];
   for (const p of points) {
     if (!Number.isFinite(p[0]) || !Number.isFinite(p[1])) continue;
     const q = out[out.length - 1];
-    if (q && Math.abs(p[0] - q[0]) < 1e-7 && Math.abs(p[1] - q[1]) < 1e-7) continue;
+    if (q && Math.abs(p[0] - q[0]) < SAME_POINT && Math.abs(p[1] - q[1]) < SAME_POINT) continue;
     out.push(p);
   }
   return out;

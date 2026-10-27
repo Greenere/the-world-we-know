@@ -3,7 +3,7 @@ import {PathStyleExtension, type PathStyleExtensionProps} from '@deck.gl/extensi
 import {IconLayer, PathLayer, ScatterplotLayer, TextLayer} from '@deck.gl/layers';
 import {LngLat as MlLngLat, type Map as MlMap} from 'maplibre-gl';
 import type {AppData} from '../data';
-import {communityOf, historicalName, nameFor} from '../data';
+import {communityOf, historicalName, landmarkKnown, nameFor, phaseAt} from '../data';
 import type {FogField} from '../fog/field';
 import {cellAt, type Grid} from '../fog/grid';
 import {FogLayer, type FogLayerUniforms} from '../fog/layer';
@@ -39,6 +39,8 @@ const PAPER: [number, number, number] = [244, 237, 220];
 const SEPIA: [number, number, number] = [104, 80, 52];
 const BRASS: [number, number, number] = [138, 102, 40];
 const RUBRIC: [number, number, number] = [155, 47, 32];
+/** Natural landmarks: a muted moss green, apart from the ink of what people built. */
+const MOSS: [number, number, number] = [72, 94, 58];
 // Chinese labels fall through to Noto Serif SC glyph by glyph.
 const FONT_TEXT = '"IM Fell English", "EB Garamond", "Noto Serif SC", Georgia, serif';
 const FONT_SC = '"IM Fell English SC", "IM Fell English", "Noto Serif SC", Georgia, serif';
@@ -47,12 +49,14 @@ const FONT_SC = '"IM Fell English SC", "IM Fell English", "Noto Serif SC", Georg
 
 interface Atlas {
   url: string;
+  /** The sprite sheet itself, for drawing the same signs on the globe's label canvas. */
+  sheet: HTMLCanvasElement;
   mapping: Record<string, {x: number; y: number; width: number; height: number; anchorY: number; mask: boolean}>;
 }
 
 function buildAtlas(): Atlas {
   const S = 64;
-  const names = ['city1', 'city2', 'city3', 'ruin', 'rediscovered', 'lost', 'invention'];
+  const names = ['city1', 'city2', 'city3', 'ruin', 'rediscovered', 'lost', 'invention', 'built', 'natural', 'peak', 'volcano', 'falls', 'gorge', 'rock'];
   const canvas = document.createElement('canvas');
   canvas.width = S * names.length;
   canvas.height = S;
@@ -107,6 +111,75 @@ function buildAtlas(): Atlas {
         ctx.arc(cx, cy, 5, 0, Math.PI * 2);
         ctx.fill();
       }
+    } else if (name === 'built') {
+      // A small pyramid on a paper ground: something people raised.
+      ctx.fillStyle = paper;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 27, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = ink;
+      ctx.fillStyle = 'rgb(214,196,160)';
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - 18);
+      ctx.lineTo(cx + 19, cy + 14);
+      ctx.lineTo(cx - 19, cy + 14);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    } else if (['natural', 'peak', 'volcano', 'falls', 'gorge', 'rock'].includes(name)) {
+      // Natural wonders in moss green, each in the old map sign for its kind, on a paper ground.
+      ctx.fillStyle = paper;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 27, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = 'rgb(72,94,58)';
+      ctx.lineWidth = 5;
+      ctx.lineCap = 'round';
+      const line = (...pts: number[]) => {
+        ctx.beginPath();
+        ctx.moveTo(cx + pts[0], cy + pts[1]);
+        for (let k = 2; k < pts.length; k += 2) ctx.lineTo(cx + pts[k], cy + pts[k + 1]);
+        ctx.stroke();
+      };
+      if (name === 'peak') {
+        // Two summits, the higher with a snowline.
+        line(-20, 14, -5, -15, 3, -3, 8, -9, 20, 14);
+        line(-10, -5, -5, -2, 0, -6);
+      } else if (name === 'volcano') {
+        // A truncated cone, smoke curling from the crater.
+        line(-20, 15, -6, -7, 6, -7, 20, 15);
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - 10);
+        ctx.bezierCurveTo(cx - 6, cy - 14, cx + 6, cy - 18, cx, cy - 23);
+        ctx.stroke();
+      } else if (name === 'falls') {
+        // A ledge, water falling from it, spray below.
+        line(-19, -14, 19, -14);
+        line(-8, -14, -8, 8);
+        line(0, -14, 0, 11);
+        line(8, -14, 8, 8);
+        line(-15, 17, -7, 15, 0, 18, 7, 15, 15, 17);
+      } else if (name === 'gorge') {
+        // Stepped walls falling to a river.
+        line(-21, -13, -12, -13, -10, -3, -5, -3, -2, 14);
+        line(21, -13, 12, -13, 10, -3, 5, -3, 2, 14);
+      } else if (name === 'rock') {
+        // A lone domed rock on the plain.
+        ctx.beginPath();
+        ctx.moveTo(cx - 19, cy + 10);
+        ctx.bezierCurveTo(cx - 18, cy - 14, cx + 18, cy - 14, cx + 19, cy + 10);
+        ctx.closePath();
+        ctx.stroke();
+        line(-23, 15, 23, 15);
+      } else {
+        line(-19, 6, -5, -16, 3, -5, 8, -11, 19, 6);
+        ctx.beginPath();
+        ctx.moveTo(cx - 16, cy + 16);
+        ctx.quadraticCurveTo(cx - 8, cy + 10, cx, cy + 16);
+        ctx.quadraticCurveTo(cx + 8, cy + 22, cx + 16, cy + 16);
+        ctx.stroke();
+      }
     } else if (name === 'invention') {
       // A brass compass rose in a ring: where an instrument or idea was first made.
       const brass = 'rgb(138,102,40)';
@@ -139,7 +212,7 @@ function buildAtlas(): Atlas {
     ctx.restore();
     mapping[name] = {x: i * S, y: 0, width: S, height: S, anchorY: S / 2, mask: false};
   });
-  return {url: canvas.toDataURL(), mapping};
+  return {url: canvas.toDataURL(), sheet: canvas, mapping};
 }
 
 // ── Overlay state ──────────────────────────────────────────────────────────
@@ -202,7 +275,8 @@ export class OverlayModel {
   cityViews: CityView[] = [];
   private visibleKey = '';
   private appeared = new Map<string, number>();
-  private labels: {cities: CityView[]; regions: RegionLabel[]} = {cities: [], regions: []};
+  /** Names to print: cities and landmarks beside their marks, lakes and bays lettered on the water, regions. */
+  private labels: {cities: CityView[]; waters: CityView[]; regions: RegionLabel[]} = {cities: [], waters: [], regions: []};
   private regionLabels: RegionLabel[] = [];
   private travellerLabels: Traveller[] = [];
   /** Whole turns of 360° added to journey geometry so it lands on the world copy the camera is looking at. */
@@ -231,7 +305,7 @@ export class OverlayModel {
   relabel() {
     this.charset = this.baseCharset + tx.chars();
     this.visibleKey = '';
-    this.labels = {cities: [], regions: []};
+    this.labels = {cities: [], waters: [], regions: []};
   }
 
   updateVisibility(state: State, now: number, seen: Float32Array | null) {
@@ -252,6 +326,8 @@ export class OverlayModel {
       if (status === 'unborn') continue;
       if (status === 'lost' && !humanity) continue;
       if (!humanity && !levels.some(l => l[c.cell] >= 2) && !(seen && seen[c.cell] >= 0.6)) continue;
+      // A landmark stays off a viewpoint's map until that viewpoint knew the place itself, not just the land.
+      if (c.kind && !humanity && state.vps.every(vp => landmarkKnown(data, field, c, vp) > year)) continue;
       const name = nameFor(c.names, labelVp, year, c.id, sharedVp)!;
       const prev = this.appeared.get(c.id);
       let appearedAt = prev ?? (first ? -1e9 : now);
@@ -262,7 +338,10 @@ export class OverlayModel {
         appearedAt = now;
         this.appeared.set(c.id, now);
       }
-      views.push({city: c, status, tier: tierAt(c, year), label: tx.name(name.name), pos: [c.lon, c.lat], appearedAt});
+      // A landmark rebuilt age after age (the Great Wall) marks the works of the age, and is a ruin in one that let it fall.
+      const phase = phaseAt(c, year);
+      const shown = phase?.idle ? 'ruin' : status;
+      views.push({city: c, status: shown, tier: tierAt(c, year), label: tx.name(name.name), pos: phase ? phase.anchor : [c.lon, c.lat], appearedAt});
     }
     const shown = new Set(views.map(v => v.city.id));
     for (const id of [...this.appeared.keys()]) if (!shown.has(id)) this.appeared.delete(id);
@@ -312,19 +391,30 @@ export class OverlayModel {
     const hit = (b: Box, tier = 0) =>
       boxes.some(({b: o, tier: t}) => (tier === 0 || t <= tier) && b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
     const minTier = zoom >= 3.6 ? 3 : zoom >= 2.4 ? 2 : 1;
+    // Water is lettered across the lake itself, ahead of any city label.
+    const waters: CityView[] = [];
+    for (const v of this.cityViews) {
+      if (v.city.subtype !== 'water' || hidden(v.pos[0], v.pos[1])) continue;
+      const p = map.project([v.pos[0], clampLat(v.pos[1], state.globe)]);
+      const w = ems(v.label) * waterSize(v) * 0.9;
+      if (p.x < -w || p.y < -20 || p.x > W + w || p.y > H + 20) continue;
+      boxes.push({b: [p.x - w / 2, p.y - waterSize(v) * 0.7, p.x + w / 2, p.y + waterSize(v) * 0.7], tier: 0});
+      waters.push(v);
+    }
     const cand = this.cityViews
+      .filter(v => v.city.subtype !== 'water')
       .filter(v => v.tier <= minTier || journeyCities.has(v.city.id) || v.city.id === homeCity || v.city.id === state.city)
       .sort((a, b) => prio(a) - prio(b));
     function prio(v: CityView) {
       if (v.city.id === state.city) return -3;
       if (journeyCities.has(v.city.id)) return -2;
       if (v.city.id === homeCity) return -1;
-      return v.tier * 10 + (v.status === 'living' ? 0 : 5) - (placed.has(v.city.id) ? 4 : 0);
+      return v.tier * 10 + (isLow(v) ? 5 : 0) - (placed.has(v.city.id) ? 4 : 0);
     }
     // Every visible dot is an obstacle, so no label is printed across another city.
     const screen = new Map<CityView, {x: number; y: number}>();
     for (const v of this.cityViews) {
-      if (hidden(v.pos[0], v.pos[1])) continue;
+      if (v.city.subtype === 'water' || hidden(v.pos[0], v.pos[1])) continue;
       const p = map.project([v.pos[0], clampLat(v.pos[1], state.globe)]);
       if (p.x < -40 || p.y < -20 || p.x > W + 40 || p.y > H + 20) continue;
       screen.set(v, p);
@@ -355,7 +445,7 @@ export class OverlayModel {
       boxes.push({b, tier: 0});
       regions.push(r);
     }
-    this.labels = {cities, regions};
+    this.labels = {cities, waters, regions};
   }
 
   /** Cut paths where they pass behind the globe, so no segment is drawn across the horizon. */
@@ -394,6 +484,17 @@ export class OverlayModel {
     const hidden = (lng: number, lat: number) => !!transform?.isLocationOccluded?.(new MlLngLat(((lng + 540) % 360) - 180, lat));
     ctx.lineJoin = 'round';
     const paper = `rgba(${PAPER.join(',')},0.85)`;
+    // Landmark and ruin signs first, so every label prints over them.
+    for (const v of this.cityViews) {
+      const icon = isLow(v) && v.city.subtype !== 'water' ? markIcon(v) : null;
+      if (!icon || hidden(v.pos[0], v.pos[1])) continue;
+      const m = this.atlas.mapping[icon];
+      const p = map.project(v.pos);
+      const size = markSize(v);
+      ctx.globalAlpha = markAlpha(v) / 255;
+      ctx.drawImage(this.atlas.sheet, m.x, m.y, m.width, m.height, p.x - size / 2, p.y - size / 2, size, size);
+    }
+    ctx.globalAlpha = 1;
     for (const r of this.labels.regions) {
       if (hidden(r.pos[0], r.pos[1])) continue;
       const p = map.project(r.pos);
@@ -406,17 +507,29 @@ export class OverlayModel {
       ctx.fillStyle = `rgba(${SEPIA.join(',')},0.85)`;
       ctx.fillText(r.text, p.x, p.y);
     }
+    for (const v of this.labels.waters) {
+      if (hidden(v.pos[0], v.pos[1])) continue;
+      const p = map.project(v.pos);
+      ctx.font = `italic ${waterSize(v)}px ${FONT_TEXT}`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = paper;
+      ctx.strokeText(v.label, p.x, p.y);
+      ctx.fillStyle = `rgba(${MOSS.join(',')},0.9)`;
+      ctx.fillText(v.label, p.x, p.y);
+    }
     for (const v of this.labels.cities) {
       if (hidden(v.pos[0], v.pos[1])) continue;
       const p = map.project(v.pos);
       ctx.font = `${citySize(v.tier)}px ${FONT_TEXT}`;
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
-      const x = p.x + (v.status === 'living' ? 7 + (3 - v.tier) : 8);
+      const x = p.x + (v.city.kind ? 9 : v.status === 'living' ? 7 + (3 - v.tier) : 8);
       ctx.lineWidth = 3.5;
       ctx.strokeStyle = paper;
       ctx.strokeText(v.label, x, p.y);
-      ctx.fillStyle = `rgba(${INK.join(',')},${v.status === 'living' ? 0.96 : v.status === 'lost' ? 0.47 : 0.65})`;
+      ctx.fillStyle = `rgba(${(v.city.kind === 'natural' ? MOSS : INK).join(',')},${v.status === 'living' ? 0.96 : v.status === 'lost' ? 0.47 : 0.65})`;
       ctx.fillText(v.label, x, p.y);
     }
     for (const o of this.travellerLabels) {
@@ -506,18 +619,32 @@ export class OverlayModel {
       );
     }
 
+    layers.push(...this.landmarkPathLayers(state, P));
     if (globe) {
       layers.push(
+        // Landmark and ruin signs are drawn on the label canvas beneath the labels (deck's globe cannot draw
+        // icons); a near-invisible disc keeps each clickable.
+        new ScatterplotLayer<CityView>({
+          id: 'cities-globe-low',
+          parameters: SURFACE_PARAMETERS,
+          extensions: [horizonCull],
+          data: this.cityViews.filter(isLow),
+          getPosition: d => d.pos,
+          getRadius: 7,
+          getFillColor: [...PAPER, 1],
+          radiusUnits: 'pixels',
+          pickable: true,
+        }),
         new ScatterplotLayer<CityView>({
           id: 'cities-globe',
           parameters: SURFACE_PARAMETERS,
           extensions: [horizonCull],
-          data: this.cityViews,
+          data: this.cityViews.filter(v => !isLow(v)),
           getPosition: d => d.pos,
-          getRadius: d => (d.status === 'living' ? citySize(d.tier) * 0.3 : 3.6),
-          getFillColor: d => (d.status === 'living' ? [...INK, 255] : [...PAPER, d.status === 'lost' ? 120 : 230]),
-          getLineColor: d => (d.status === 'living' ? [...PAPER, 255] : d.status === 'rediscovered' ? [155, 47, 32, 230] : [...INK, d.status === 'lost' ? 110 : 200]),
-          getLineWidth: d => (d.status === 'living' ? 1.6 : 1.4),
+          getRadius: d => citySize(d.tier) * 0.3,
+          getFillColor: [...INK, 255],
+          getLineColor: [...PAPER, 255],
+          getLineWidth: 1.6,
           stroked: true,
           radiusUnits: 'pixels',
           lineWidthUnits: 'pixels',
@@ -525,21 +652,25 @@ export class OverlayModel {
         }),
       );
     } else layers.push(
-      new IconLayer<CityView>({
-        id: 'cities',
-        parameters: SURFACE_PARAMETERS,
-        extensions: [horizonCull],
-        data: this.cityViews,
-        iconAtlas: this.atlas.url,
-        iconMapping: this.atlas.mapping,
-        getIcon: d => (d.status === 'living' ? `city${d.tier}` : d.status),
-        getPosition: d => P(d.pos),
-        getSize: d => (d.status === 'living' ? citySize(d.tier) * 0.82 : 11),
-        getColor: d => [255, 255, 255, d.status === 'living' ? 255 : d.status === 'lost' ? 130 : 210],
-        sizeUnits: 'pixels',
-        pickable: true,
-        autoHighlight: false,
-      }),
+      // Landmarks and ruins lie beneath the living cities, so a town is never hidden under a sign.
+      ...(['cities-low', 'cities'] as const).map(
+        id =>
+          new IconLayer<CityView>({
+            id,
+            parameters: SURFACE_PARAMETERS,
+            extensions: [horizonCull],
+            data: this.marks.filter(v => isLow(v) === (id === 'cities-low')),
+            iconAtlas: this.atlas.url,
+            iconMapping: this.atlas.mapping,
+            getIcon: d => markIcon(d),
+            getPosition: d => P(d.pos),
+            getSize: d => markSize(d),
+            getColor: d => [255, 255, 255, markAlpha(d)],
+            sizeUnits: 'pixels',
+            pickable: true,
+            autoHighlight: false,
+          }),
+      ),
       new TextLayer<CityView>({
         id: 'city-labels',
         parameters: SURFACE_PARAMETERS,
@@ -548,16 +679,35 @@ export class OverlayModel {
         getText: d => d.label,
         getPosition: d => P(d.pos),
         getSize: d => citySize(d.tier),
-        getColor: d => (d.status === 'living' ? [...INK, 245] : [...INK, d.status === 'lost' ? 120 : 165]),
+        getColor: d => (d.city.kind === 'natural' ? [...MOSS, 240] : d.status === 'living' ? [...INK, 245] : [...INK, d.status === 'lost' ? 120 : 165]),
         getTextAnchor: 'start',
         getAlignmentBaseline: 'center',
-        getPixelOffset: d => [d.status === 'living' ? 7 + (3 - d.tier) : 8, 0],
+        getPixelOffset: d => [d.city.kind ? 9 : d.status === 'living' ? 7 + (3 - d.tier) : 8, 0],
         fontFamily: FONT_TEXT,
         characterSet: this.charset,
         fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
         outlineWidth: 4,
         outlineColor: [...PAPER, 215],
         sizeUnits: 'pixels',
+      }),
+      new TextLayer<CityView>({
+        id: 'cities-water',
+        parameters: SURFACE_PARAMETERS,
+        extensions: [horizonCull],
+        data: this.labels.waters,
+        getText: d => d.label,
+        getPosition: d => P(d.pos),
+        getSize: d => waterSize(d),
+        getColor: [...MOSS, 225],
+        fontFamily: FONT_TEXT,
+        // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
+        fontWeight: 'italic',
+        characterSet: this.charset,
+        fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
+        outlineWidth: 3,
+        outlineColor: [...PAPER, 170],
+        sizeUnits: 'pixels',
+        pickable: true,
       }),
     );
 
@@ -566,6 +716,80 @@ export class OverlayModel {
     layers.push(...this.travellerLayers(others, state, PJ));
     if (geo) layers.push(...journeyLayers(geo, state, vpColor, now, PJ, globe ? paths => this.splitAtHorizon(paths) : paths => paths));
     return layers;
+  }
+
+  /** Everything with a mark on the map: water is lettered instead. */
+  private get marks(): CityView[] {
+    return this.cityViews.filter(v => v.city.subtype !== 'water');
+  }
+
+  /** Landmarks that run along a line, drawn along it on a paper casing: a wall in ink with battlement ticks, a
+   * canal as a fine ink line, a canyon's river in moss. Shown with the landmark's mark, and clickable like it. */
+  private landmarkPathLayers(state: State, P: (p: LngLat) => LngLat): Layer[] {
+    /** `fade`: 1 for a standing course; for a fallen one, less the longer it has lain in ruin. */
+    type Course = {points: LngLat[]; style: 'wall' | 'canal' | 'river'; ruin: boolean; fade: number};
+    // Each course a landmark has drawn by this year: a plain one while it stands; for a phased one, every age's
+    // works so far, in ink while that age lasts and faint once it has passed.
+    const courses = (v: CityView): Course[] => {
+      const path = v.city.path!;
+      if (!path.phases) return v.status === 'living' ? [{points: path.points as LngLat[], style: path.style, ruin: false, fade: 1}] : [];
+      return path.phases
+        .filter(ph => ph.from <= state.year)
+        .flatMap(ph => {
+          const fallen = state.year - (ph.to ?? Infinity);
+          // A wall just abandoned still stands out; one left two thousand years is barely a trace.
+          const fade = fallen < 0 ? 1 : 0.28 + 0.72 * Math.exp(-fallen / 600);
+          return ph.paths.map(points => ({points: points as LngLat[], style: path.style, ruin: fallen >= 0, fade}));
+        });
+    };
+    const copies = (path: LngLat[]) => (state.globe ? [path] : [-360, 0, 360].map(d => (d ? path.map(([x, y]) => [x + d, y] as LngLat) : path)));
+    const split = state.globe ? (paths: LngLat[][]) => this.splitAtHorizon(paths) : (paths: LngLat[][]) => paths;
+    type Line = CityView & {line: LngLat[]; style: Course['style']; ruin: boolean; fade: number};
+    const data: Line[] = this.cityViews
+      .filter(v => v.city.path)
+      .flatMap(v => courses(v).flatMap(c => split(copies(c.points.map(P))).map(path => ({...v, line: cleanPath(path), style: c.style, ruin: c.ruin, fade: c.fade}))))
+      .filter(d => d.line.length > 1)
+      // Oldest ruins first, so newer works are drawn over the ones they follow.
+      .sort((a, b) => a.fade - b.fade);
+    if (!data.length) return [];
+    const common = {parameters: SURFACE_PARAMETERS, getPath: (d: Line) => d.line, widthUnits: 'pixels' as const, jointRounded: true};
+    const standing = data.filter(d => !d.ruin);
+    return [
+      new PathLayer<Line>({...common, id: 'cities-path-casing', data: standing, getColor: [...PAPER, 200], getWidth: d => (d.style === 'wall' ? 7 : 4.5), capRounded: true}),
+      // Fallen works: a faint broken line, like the ruin sign.
+      new PathLayer<Line>({
+        ...common,
+        id: 'cities-path-ruin',
+        data: data.filter(d => d.ruin),
+        getColor: d => [...INK, Math.round(130 * d.fade)],
+        getWidth: d => 1 + 0.8 * d.fade,
+        getDashArray: [2.5, 2],
+        dashJustified: true,
+        extensions: [DASHED],
+        pickable: true,
+        updateTriggers: {getColor: state.year, getWidth: state.year},
+      } as ConstructorParameters<typeof PathLayer<Line>>[0]),
+      new PathLayer<Line>({
+        ...common,
+        id: 'cities-path',
+        data: standing,
+        getColor: d => (d.style === 'river' ? [...MOSS, 220] : [...INK, d.style === 'wall' ? 200 : 190]),
+        getWidth: d => (d.style === 'river' ? 2.2 : d.style === 'wall' ? 1.6 : 1.4),
+        capRounded: true,
+        pickable: true,
+      }),
+      // Battlements: a wide line cut into short dashes, so small teeth stand out on either side of the wall.
+      new PathLayer<Line>({
+        ...common,
+        id: 'cities-path-teeth',
+        data: standing.filter(d => d.style === 'wall'),
+        getColor: [...INK, 190],
+        getWidth: 5,
+        getDashArray: [0.35, 0.9],
+        dashJustified: true,
+        extensions: [DASHED],
+      } as ConstructorParameters<typeof PathLayer<Line>>[0]),
+    ];
   }
 
   /** Every route the journey list matches, drawn whole and thin; the one under the pointer stands out. */
@@ -886,6 +1110,30 @@ function journeyLayers(
     );
   }
   return out;
+}
+
+/** Landmarks and ruins: drawn in their own lower layer, beneath the living cities. */
+function isLow(v: CityView) {
+  return !!v.city.kind || v.status !== 'living';
+}
+
+/** The sign for a place on the map; water has none (its name is lettered on it instead). */
+function markIcon(v: CityView): string {
+  if (v.status !== 'living') return v.status;
+  return v.city.kind ? v.city.subtype ?? v.city.kind : `city${v.tier}`;
+}
+
+function markSize(v: CityView) {
+  return v.city.kind && v.status === 'living' ? 15 - v.tier : v.status === 'living' ? citySize(v.tier) * 0.82 : 11;
+}
+
+function markAlpha(v: CityView) {
+  return v.status === 'living' ? 255 : v.status === 'lost' ? 130 : 210;
+}
+
+/** Lakes and bays are lettered a little larger than towns, the greatest largest. */
+function waterSize(v: CityView) {
+  return v.tier === 1 ? 14 : 12.5;
 }
 
 export function citySize(tier: number) {

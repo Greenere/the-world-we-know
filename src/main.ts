@@ -152,14 +152,15 @@ class App {
     };
     const ui = {
       top: new TopBar(data, this.store, () => this.setLanguage(isZh() ? 'en' : 'zh')),
-      timeline: new Timeline(data, this.store, d => this.step(d), id => this.openInvention(id)),
+      timeline: new Timeline(data, this.store, d => this.step(d), id => this.openInvention(id), id => this.ui.journey.openEra(id)),
       cards: new Cards(data, this.store, this.field, actions),
-      journey: new JourneyPanel(data, this.store, {
+      journey: new JourneyPanel(data, this.store, this.field, {
         start: id => this.startJourney(id),
         step: d => this.step(d),
         close: () => this.closeJourney(),
         openRegion: id => this.openRegion(id, true),
         openInvention: id => this.openInvention(id),
+        openCity: id => this.openCity(id, true),
         switchTo: (id, year) => this.startJourney(id, year),
         showSketch: i => {
           this.travelTarget = null;
@@ -662,7 +663,7 @@ class App {
   openCity(id: string, fly: boolean) {
     const c = this.data.cityById.get(id);
     if (!c) return;
-    this.store.set({city: id, region: null, regionCell: null});
+    this.store.set({city: id, region: null, regionCell: null, invention: null});
     if (fly) this.map.flyTo({center: [c.lon, c.lat], zoom: Math.max(this.map.getZoom(), 4.2), duration: 1400});
   }
 

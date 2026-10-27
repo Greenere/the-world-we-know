@@ -27,6 +27,9 @@ export const icons = {
   more: wrap('<circle cx="5" cy="5" r="1.6"/><circle cx="10" cy="5" r="1.6"/><circle cx="15" cy="5" r="1.6"/><circle cx="5" cy="10" r="1.6"/><circle cx="10" cy="10" r="1.6"/><circle cx="15" cy="10" r="1.6"/><circle cx="5" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/><circle cx="15" cy="15" r="1.6"/>'),
   list: wrap('<path d="M7 5.5h9.5M7 10h9.5M7 14.5h9.5"/><circle cx="4" cy="5.5" r=".9" fill="currentColor" stroke="none"/><circle cx="4" cy="10" r=".9" fill="currentColor" stroke="none"/><circle cx="4" cy="14.5" r=".9" fill="currentColor" stroke="none"/>'),
   timeline: wrap('<path d="M3 4v12M3 16h14"/><path d="M5.5 6.5h5M8 9.5h7M6 12.5h4" stroke-width="2.2"/>'),
+  built: wrap('<path d="M10 4.2l6.3 11.3H3.7z"/><path d="M10 4.2l1.8 11.3"/>'),
+  natural: wrap('<path d="M3 13l5-8 2.6 4 1.6-2.3L17 13"/><path d="M4.5 16.3c1.8-1.3 3.7-1.3 5.5 0s3.7 1.3 5.5 0"/>'),
+  ruin: wrap('<path d="M3.5 16.5h13M6 16.5V8.8M10 16.5v-6M14 16.5V10.2"/><path d="M4.5 8.8h3.2l1-1.1 1.6.9 1.3-.8"/>'),
   invention: wrap('<circle cx="10" cy="10" r="7"/><path d="M10 4.6l1.3 4.1 4.1 1.3-4.1 1.3L10 15.4l-1.3-4.1L4.6 10l4.1-1.3z"/>'),
   link: wrap('<path d="M8.5 11.5l3-3M7 9.5l-1.8 1.8a2.5 2.5 0 0 0 3.5 3.5L10.5 13M13 10.5l1.8-1.8a2.5 2.5 0 0 0-3.5-3.5L9.5 7"/>'),
 };
@@ -47,6 +50,16 @@ export const kindIcons: Record<string, string> = {
   military: wrap('<path d="M4 4l9.5 9.5M16 4l-9.5 9.5M3.5 3.5l2 .2.2 2M16.5 3.5l-2 .2-.2 2M11.8 15.2l3.4-3.4M8.2 15.2l-3.4-3.4M14 14l2.5 2.5M6 14l-2.5 2.5"/>'),
   scientific: wrap('<path d="M10 3.5v2M10 5.5l-5 10.5M10 5.5l5 10.5M6.2 13.4a8 8 0 0 0 7.6 0"/><circle cx="10" cy="5.5" r="1.1" fill="currentColor" stroke="none"/><path d="M10 5.5l2.2 6.6"/>'),
   spaceflight: wrap('<path d="M10 2.5c2.5 2 3.5 5 3.2 8.5H6.8C6.5 7.5 7.5 4.5 10 2.5z"/><path d="M6.8 11l-2 3.5 3-.7M13.2 11l2 3.5-3-.7M9 14.5l1 3 1-3"/>'),
+};
+
+/** The map signs for natural wonders, one per kind. */
+export const naturalIcons: Record<string, string> = {
+  peak: wrap('<path d="M2.5 15.5l5.5-10 3 4.5 2-3 4.5 8.5"/><path d="M6.3 9.2l1.7 1 1.8-1.3"/>'),
+  volcano: wrap('<path d="M2.5 16l5-8h5l5 8"/><path d="M10 6.5c-2-1.3 2-2.6 0-4.5"/>'),
+  falls: wrap('<path d="M3.5 4.5h13M7 4.5v8M10 4.5v9M13 4.5v8"/><path d="M4 16.5c2-.8 4 .8 6 0s4 .8 6 0"/>'),
+  gorge: wrap('<path d="M2 5h3.5l1 4h2l1.3 7M18 5h-3.5l-1 4h-2l-1.3 7"/>'),
+  rock: wrap('<path d="M3.5 14c.4-6.5 12.6-6.5 13 0z"/><path d="M2 16.5h16"/>'),
+  water: wrap('<path d="M3 8c2.3-1.2 4.7 1.2 7 0s4.7 1.2 7 0M3 12c2.3-1.2 4.7 1.2 7 0s4.7 1.2 7 0"/>'),
 };
 
 /** One mark per invention category. */

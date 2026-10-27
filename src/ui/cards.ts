@@ -1,5 +1,5 @@
 import type {AppData} from '../data';
-import {dataUrl, loadPictures, nameFor, shortCitation} from '../data';
+import {dataUrl, landmarkKnown, loadPictures, nameFor, phaseAt, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
@@ -379,7 +379,7 @@ export class Cards {
     const title = h('h2.card-title');
     const statusText: Record<string, string> = {
       unborn: t('Not yet founded'),
-      living: t(c.tier === 1 ? 'Great city' : c.tier === 2 ? 'City' : 'Town'),
+      living: t(c.kind === 'natural' ? 'Natural wonder' : c.kind === 'built' ? 'Landmark' : c.tier === 1 ? 'Great city' : c.tier === 2 ? 'City' : 'Town'),
       ruin: t('Ruin'),
       lost: t('Lost'),
       rediscovered: t('Rediscovered ruin'),
@@ -403,13 +403,21 @@ export class Cards {
     if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', tx.story(c.id, c.story)));
     const labels: Record<string, string> = {
-      founded: t('Founded'),
+      founded: t(c.kind === 'built' ? 'Built' : 'Founded'),
       peak: t('At its height'),
       abandoned: t('Abandoned'),
       forgotten: t('Forgotten'),
       rediscovered: t('Rediscovered'),
     };
     const dl = h('dl.dates');
+    if (c.kind) {
+      // A landmark was there to be found: when this viewpoint first came to know its surroundings.
+      const known = landmarkKnown(this.data, this.field, c, vp);
+      dl.append(
+        h('dt', t(vp === 'humanity' ? 'First reached' : 'Known to {vp}', {vp: vpName(this.data, vp)})),
+        h('dd', known <= START ? t('since {year}', {year: formatYear(known)}) : formatYear(known)),
+      );
+    }
     for (const k of ['founded', 'peak', 'abandoned', 'forgotten', 'rediscovered'] as const) {
       const d = c.dates[k];
       if (d === undefined) continue;
@@ -417,6 +425,21 @@ export class Cards {
       dl.append(h('dt', labels[k]), h('dd', v));
     }
     out.push(h('h3.card-h', t('Dates')), dl);
+    // A landmark built, abandoned and rebuilt (the Great Wall): its ages, the current one marked.
+    const phases = c.path?.phases ?? [];
+    const ageEls = phases.map(p =>
+      h(
+        'li',
+        h(
+          'button.age',
+          {type: 'button', class: p.idle ? 'idle' : '', onclick: () => this.store.set({year: Math.max(START, p.from), playing: false})},
+          h('span.age-name', tx.phase(c.id, p.id, 'name', p.name)),
+          h('span.age-years', p.to === undefined ? t('from {year}', {year: formatYear(p.from)}) : formatRange([p.from, p.to])),
+          h('span.age-note', tx.phase(c.id, p.id, 'note', p.note)),
+        ),
+      ),
+    );
+    if (phases.length) out.push(h('h3.card-h', t('Through the ages')), h('ol.ages', ageEls));
     const names = c.names;
     if (names.length > 1) out.push(h('h3.card-h', t('Names over time')), namesList(this.data, names));
     if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys));
@@ -429,7 +452,13 @@ export class Cards {
     );
     this.live = st => {
       const status = cityStatus(c, st.year);
-      swap(kicker, status, () => [statusText[status]]);
+      const phase = phaseAt(c, st.year);
+      if (phase && status === 'living') {
+        // The age the wall is in: a frontier being built and manned, or one left to fall.
+        const name = tx.phase(c.id, phase.id, 'name', phase.name);
+        swap(kicker, phase.id, () => [`${t(phase.idle ? 'Abandoned' : 'Frontier wall')} · ${name}`]);
+        ageEls.forEach((el, i) => el.firstElementChild!.classList.toggle('current', phases[i] === phase));
+      } else swap(kicker, status, () => [statusText[status]]);
       const name = nameFor(c.names, vp, st.year, c.id)!;
       const shown = shownName(name);
       swap(title, `${name.name}|${name.native ?? ''}`, () => [shown.name, shown.native ? h('span.native', ` ${shown.native}`) : null]);
@@ -816,7 +845,7 @@ function namesList(data: AppData, names: NameEntry[]): HTMLElement {
   return h(
     'dl.names',
     [...groups].map(([vp, list]) => [
-      h('dt', {style: vp === '*' ? '' : `color:${data.vp[vp as VpId].color}`}, vp === '*' ? 'Everyone' : data.vp[vp as VpId].name),
+      h('dt', {style: vp === '*' ? '' : `color:${data.vp[vp as VpId].color}`}, vp === '*' ? t('Everyone') : vpName(data, vp as VpId)),
       h(
         'dd',
         list.map((n, i) => [

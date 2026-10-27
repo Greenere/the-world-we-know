@@ -17,6 +17,8 @@ export interface ZhContent {
   moments: Record<string, string>;
   depictions: Record<string, Record<string, {title?: string; caption?: string; captions?: Record<string, string>; place?: string}>>;
   stories: Record<string, string>;
+  /** Keyed "landmark/phase". */
+  phases: Record<string, {name?: string; note?: string}>;
   notes: Record<string, string>;
   /** Every character used, for the map's label font atlas. */
   chars: string;
@@ -111,6 +113,9 @@ export const tx = {
     return (lang === 'zh' && zh?.stories[cityId]) || en;
   },
   /** A knowledge event's note. */
+  phase(landmark: string, phase: string, field: 'name' | 'note', en: string): string {
+    return (lang === 'zh' && zh?.phases?.[`${landmark}/${phase}`]?.[field]) || en;
+  },
   note(en: string): string {
     return (lang === 'zh' && zh?.notes[en]) || en;
   },
