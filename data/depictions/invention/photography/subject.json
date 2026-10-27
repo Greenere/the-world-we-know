@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Photography",
+      "caption": "Daguerre's process is made public by the French Academy of Sciences.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "high",
+      "prompt": "Close tabletop scene in Paris1839: early wooden box daguerreotype camera with brass lens beside an open small case containing a reflective silvered plate portrait, cloth and simple plate holder. Window light, focus on materials, no glass film negatives, roll film or modern camera."
+    }
+  ]
+}

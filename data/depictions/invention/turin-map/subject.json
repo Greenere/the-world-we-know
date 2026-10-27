@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Turin papyrus map",
+      "caption": "The scribe Amennakhte draws the Wadi Hammamat for an expedition to its quarries, with roads, hills coloured by rock and the gold mines marked.",
+      "sources": [
+        "turin-map"
+      ],
+      "confidence": "high",
+      "prompt": "Overhead close study of an ancient Egyptian scribe painting a long papyrus strip around1160BCE, red-brown and dark hills, narrow winding wadi routes and quarry marks; reed brush and simple pigment dishes beside it. A sketch of cartographic practice, not a facsimile; no modern map grid or modern labels."
+    }
+  ]
+}

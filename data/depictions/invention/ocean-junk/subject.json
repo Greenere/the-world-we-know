@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The ocean-going junk",
+      "caption": "Song shipyards build large seagoing junks with watertight bulkheads, several masts and battened sails.",
+      "sources": [
+        "needham"
+      ],
+      "confidence": "medium",
+      "prompt": "View inside a Song shipyard near Quanzhou about1150CE over an unfinished wooden hull, several transverse bulkhead partitions dividing its interior visibly; shipwrights fitting planks, a completed batten-sailed junk in distant harbor. No massive Ming treasure ship, no metal welding."
+    }
+  ]
+}

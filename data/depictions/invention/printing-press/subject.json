@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The printing press",
+      "caption": "Gutenberg combines metal type, oil-based ink and a press.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level close workshop view in Mainz about1450CE: a printer operates a heavy timber screw press while another inks a bed of movable metal type; drying sheets hang nearby. Emphasize screw, platen and type bed, no industrial cylinder press, no readable text."
+    }
+  ]
+}

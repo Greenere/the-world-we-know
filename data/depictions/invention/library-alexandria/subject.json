@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Library of Alexandria",
+      "caption": "The Ptolemies gather every book they can find, copying the scrolls of ships in the harbour, into a library beside the Museum.",
+      "sources": [
+        "bagnall"
+      ],
+      "confidence": "high",
+      "prompt": "Interior working room in Hellenistic Alexandria about290BCE, a seated copyist unrolling papyrus on a low table, pigeonholes of cylindrical scrolls, another attendant carrying a bundle. Intimate side view; plain plaster and columns, no modern library shelves, bound books, or invented monumental hall."
+    }
+  ]
+}

@@ -47,11 +47,18 @@ Pictures are organised **by subject**: one folder for each thing that has pictur
 - **A city** has **eras**: the same view redrawn as the city changes over time.
 - **A journey** has **scenes**: illustrative moments at particular stops, drawn close enough to show people, tools and what was traded, measured or found. The traveller is the same person throughout; the view is not.
 
-Regions and inventions can become kinds later with no change to the layout.
+- **An invention** has **studies**: standalone sketches of the object, process or idea. One study accompanies each invention card, with the existing sourced summary as its caption.
+
+Regions can become a kind later with no change to the layout.
 
 ```
 data/depictions/
-  style.json                     the drawing style for each kind ({"styles": {"city": …, "journey": …}})
+  style.json                     the drawing style for each kind (city, journey, invention)
+  invention/
+    paper/
+      subject.json               studies, with one entry named sketch
+      sketch.webp                accepted sketch
+      sketch.json                complete prompt and generation method
   journey/
     pytheas/
       subject.json               the traveller, and one entry per scene
@@ -66,7 +73,7 @@ data/depictions/
   _candidates/                   generated candidates awaiting review (git-ignored)
 ```
 
-**`style.json`** holds one style per kind. Both describe an explorer's field-sketchbook page: pencil underdrawing, quick ink, uneven washes, edges fading into paper, and no writing. The city style is a landscape from one view. The journey style is a close, illustrated scene of one moment, with room for small separate studies of an object, a tool or a creature. Keep the styles fixed so the atlas looks like one set of notebooks.
+**`style.json`** holds one style per kind. All describe an explorer's field-sketchbook page: pencil underdrawing, quick ink, uneven washes, edges fading into paper, and no writing. The city style is a landscape from one view. The journey style is a close, illustrated scene of one moment, with room for small separate studies of an object, a tool or a creature. Invention studies alternate between close objects, workshops, people using a tool, and larger settings. Keep the styles fixed so the atlas looks like one set of notebooks.
 
 **`subject.json`** has two parts:
 - **`view`** says where the artist stands and what is where in the frame. Every era of the subject is drawn from this one view, so the pictures line up when you step through time.

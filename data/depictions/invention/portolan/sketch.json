@@ -1,0 +1,8 @@
+{
+  "subject": "invention/portolan",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: historical-scene. Asset: invention card sketch in a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nSubject: Overhead study of a thirteenth-century Mediterranean mariners parchment chart, recognizable Mediterranean shoreline in fine ink crossed by many straight rhumb lines radiating from several points; dividers and folded vellum nearby. No modern coordinate grid, no text labels or modern compass instrument."
+}

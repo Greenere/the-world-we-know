@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Carved wooden maps",
+      "caption": "Kunit carves pieces of driftwood whose bumps and notches follow the coast of East Greenland, fjord by fjord.",
+      "sources": [
+        "ammassalik-maps"
+      ],
+      "confidence": "high",
+      "prompt": "Intimate close study of a Greenlandic carvers hands holding a small irregular driftwood coastal map with a sequence of deep notches and projections, second narrow carved piece beside it, simple knife and weathered wood. East Greenland1884, practical skin sleeves, no inked modern map."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Coordinates of latitude and longitude",
+      "caption": "Ptolemy's Geography lists some 8,000 places by latitude and longitude, so that a map can be redrawn by anyone from the numbers alone.",
+      "sources": [
+        "ptolemy"
+      ],
+      "confidence": "high",
+      "prompt": "Over-shoulder view of a scholar in Roman Alexandria about150CE plotting points with a straightedge and dividers on a papyrus sheet with a simple geographic grid; rolled manuscripts nearby. Unreadable tiny handwritten marks, not Arabic numerals, no modern printed atlas or blue globe."
+    }
+  ]
+}

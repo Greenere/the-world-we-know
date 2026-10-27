@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The marine chronometer",
+      "caption": "John Harrison's H4 keeps time at sea to within seconds a day on a voyage to Jamaica.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Close three-quarter object study of Harrisons H4 marine timekeeper in1761: a large silver pocket-watch-shaped case, white dial with dark Roman numeral-like marks and delicate hands, hinged outer case open, resting on dark cloth with a plain wooden carrying box. It is a watch, not a later box-mounted marine chronometer."
+    }
+  ]
+}

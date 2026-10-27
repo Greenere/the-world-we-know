@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Ino Tadataka's survey of Japan",
+      "caption": "A retired merchant walks Japan's coasts for seventeen years, measuring by pacing, rope and stars, and his team finishes the map after his death.",
+      "sources": [
+        "ino"
+      ],
+      "confidence": "high",
+      "prompt": "Low side view on a Japanese coastal road about1810: Edo-period survey team laying a measuring rope along the shore, observer with a simple sighting instrument on a portable stand, pine trees and inlet beyond. Practical robes and straw hats, no modern theodolite or motor vehicles."
+    }
+  ]
+}

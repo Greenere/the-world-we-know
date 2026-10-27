@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The hot-air balloon",
+      "caption": "The Montgolfier brothers' balloon carries the first people into the air.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "high",
+      "prompt": "Ground-level view of an early1783 French hot-air balloon rising above a field and small period crowd, round blue-and-ochre paper-and-fabric envelope, decorative garlands suggested, small circular passenger gallery at bottom and visible fire basket. No modern sport balloon burner or wicker tourist basket."
+    }
+  ]
+}

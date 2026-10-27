@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The dog sledge and the umiak",
+      "caption": "Thule hunters harness teams of dogs to sledges and build open skin boats large enough for a whole family and a whale hunt.",
+      "sources": [
+        "friesen-mason"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low Arctic shore scene about1100CE: Thule travellers loading a light wooden sled with dog team in foreground, an open skin-covered umiak resting on supports on shore behind. Sea ice and low tundra, practical skin clothing, no metal runners or modern kayak gear."
+    }
+  ]
+}

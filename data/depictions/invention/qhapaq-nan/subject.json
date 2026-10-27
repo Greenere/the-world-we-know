@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch-v2",
+      "title": "The Inca road",
+      "caption": "Some 40,000 kilometres of roads, with stairways, suspension bridges and waystations a day apart, run from Ecuador to Chile.",
+      "sources": [
+        "hyslop"
+      ],
+      "confidence": "high",
+      "prompt": "View along the woven-grass deck of an Inca suspension bridge around1500CE. A traveller walks away from the camera down the centre, physically inside the two side railings, with a sandalled foot planted on the deck and one hand on the right handrail. The bridge joins stone paths across an Andean gorge; braided plant-fibre cables and a continuous walkable surface remain clearly visible."
+    }
+  ]
+}

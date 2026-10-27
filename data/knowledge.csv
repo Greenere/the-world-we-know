@@ -996,6 +996,26 @@ polynesia,north-america,1830,1,medium,kirch,
 
 # ═══ Humanity: first arrival of modern humans ═════════════════════════════
 humanity,africa,-70000,5,high,bae-2017,"Homo sapiens has lived in Africa for some 300,000 years"
+humanity,egypt,-70000,5,high,bae-2017,
+humanity,upper-nile,-70000,5,high,bae-2017,
+humanity,ethiopia,-70000,5,high,bae-2017,
+humanity,horn,-70000,5,high,bae-2017,
+humanity,east-africa-coast,-70000,5,high,bae-2017,
+humanity,great-lakes,-70000,5,high,bae-2017,
+humanity,zambezi,-70000,5,high,bae-2017,
+humanity,southern-africa,-70000,5,high,bae-2017,
+humanity,cape,-70000,5,high,bae-2017,
+humanity,angola,-70000,5,high,bae-2017,
+humanity,congo,-70000,5,high,bae-2017,
+humanity,guinea-coast,-70000,5,high,bae-2017,
+humanity,senegambia,-70000,5,high,bae-2017,
+humanity,atlantic-sahara,-70000,5,high,bae-2017,
+humanity,maghreb,-70000,5,high,bae-2017,
+humanity,ifriqiya,-70000,5,high,bae-2017,
+humanity,libya,-70000,5,high,bae-2017,
+humanity,sahara,-70000,5,high,bae-2017,
+humanity,bilad-al-sudan,-70000,5,high,bae-2017,
+humanity,central-sahel,-70000,5,high,bae-2017,
 humanity,red-sea,-70000..-60000,5,medium,bae-2017,Crossing at the Bab-el-Mandeb
 humanity,arabia-felix,-70000..-60000,5,medium,bae-2017,
 humanity,arabia-hejaz,-70000..-60000,5,medium,bae-2017,
@@ -1078,7 +1098,20 @@ humanity,kamchatka,-15000..-13000,5,medium,draft,
 humanity,sea-of-okhotsk,-15000,4,low,draft,
 humanity,bering-sea,-25000..-15000,4,low,bennett-2021,Beringia: a land bridge
 humanity,alaska,-15000..-13000,5,medium,bennett-2021,
+humanity,alaska-arctic,-15000..-13000,5,medium,bennett-2021,
+humanity,alaska-interior,-15000..-13000,5,medium,bennett-2021,
 humanity,north-america,-23000..-14000,5,low,bennett-2021,Footprints at White Sands date to the Last Glacial Maximum
+humanity,california,-23000..-14000,5,low,bennett-2021,
+humanity,north-america-west,-23000..-14000,5,low,bennett-2021,
+humanity,great-plains,-23000..-14000,5,low,bennett-2021,
+humanity,mississippi,-23000..-14000,5,low,bennett-2021,
+humanity,eastern-woodlands,-23000..-14000,5,low,bennett-2021,
+humanity,mexico,-23000..-14000,5,low,bennett-2021,
+humanity,maya,-23000..-14000,5,low,bennett-2021,
+humanity,central-america,-23000..-14000,5,low,bennett-2021,
+humanity,rio-grande-pueblos,-23000..-14000,5,low,bennett-2021,
+humanity,colorado-plateau,-23000..-14000,5,low,bennett-2021,
+humanity,great-basin,-23000..-14000,5,low,bennett-2021,
 humanity,canadian-shield,-23000,=0,medium,draft,Under the ice sheet
 humanity,canadian-shield,-9000..-7000,5,medium,draft,The ice retreats
 humanity,hudson-bay,-23000,=0,medium,draft,
@@ -1097,6 +1130,17 @@ humanity,greenland-ice,1949..1951,=4,medium,draft,Research stations on the ice
 humanity,baffin-bay,-2500,4,medium,raghavan-2014,
 humanity,arctic-ocean,-2500,3,low,raghavan-2014,Hunters on the sea ice
 humanity,south-america,-16000..-14500,5,medium,dillehay-2008,Monte Verde
+humanity,andes-north,-16000..-14500,5,medium,dillehay-2008,
+humanity,peru,-16000..-14500,5,medium,dillehay-2008,
+humanity,atacama-chile,-16000..-14500,5,medium,dillehay-2008,
+humanity,amazon,-16000..-14500,5,medium,dillehay-2008,
+humanity,amazon-river,-16000..-14500,5,medium,dillehay-2008,
+humanity,amazon-forest,-16000..-14500,5,medium,dillehay-2008,
+humanity,orinoco,-16000..-14500,5,medium,dillehay-2008,
+humanity,rondonia,-16000..-14500,5,medium,dillehay-2008,
+humanity,brazil-coast,-16000..-14500,5,medium,dillehay-2008,
+humanity,brazil-interior,-16000..-14500,5,medium,dillehay-2008,
+humanity,pampas,-16000..-14500,5,medium,dillehay-2008,
 humanity,patagonia,-13000..-11000,5,medium,dillehay-2008,
 humanity,magellan-strait,-11000..-10000,5,medium,draft,
 humanity,caribbean,-5000..-4000,5,medium,keegan-hofman,
@@ -1286,6 +1330,10 @@ europe,tasmania,1642..1643,=2,high,tasman,Tasman sights and names Van Diemen's L
 europe,tasmania,1798..1799,3,high,hoc,Bass and Flinders sail around it and prove it an island
 humanity,tasmania,-70000,=0,low,clarkson-2017,
 humanity,tasmania,-41000..-39000,5,medium,draft,People walk in while it is joined to the mainland
+humanity,australia-south,-60000..-50000,5,low,clarkson-2017,With the rest of Australia
+humanity,sverdrup-islands,-2500..-2000,5,medium,raghavan-2014,Independence I hunters in the High Arctic
+humanity,taymyr,-45000..-40000,4,low,pitulko-2016,"A butchered mammoth at Sopochnaya Karga, on the Yenisei Gulf"
+humanity,taymyr,-2000..-1000,5,low,draft,Ancestors of the Nganasan
 europe,australia-desert,-500,=0,high,tasman,
 europe,australia-desert,1840..1841,=1,high,hoc,Eyre skirts the deserts' southern edge
 europe,australia-desert,1873..1876,4,high,hoc,"Warburton, Forrest and Giles cross the western deserts"

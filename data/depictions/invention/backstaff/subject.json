@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The backstaff",
+      "caption": "John Davis's quadrant measures the Sun's height by the shadow it casts, with the navigator's back to the Sun.",
+      "sources": [
+        "davis-seamans"
+      ],
+      "confidence": "high",
+      "prompt": "Close three-quarter object study of a wooden Davis backstaff on a weathered shipboard table: unequal graduated arcs on opposite sides of a long strut, triangular braces and small sight, horizon and shadow vanes. One hand steadies the frame; sea and rigging behind. No observer sighting through it, no visible sun, no later glass lens, no readable inscriptions. The instrument structure follows Royal Museums Greenwich NAV0045; this is an interpretive study of the device, not a scene dated to a specific voyage."
+    }
+  ]
+}

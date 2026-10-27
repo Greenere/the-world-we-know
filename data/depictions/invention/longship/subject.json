@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Viking longship",
+      "caption": "A long, light, clinker-built ship with a keel and a square sail, shallow enough to row up rivers and strong enough for the open Atlantic.",
+      "sources": [
+        "brink-price"
+      ],
+      "confidence": "high",
+      "prompt": "Low waterline view along the clinker planking of an early Viking longship about800CE in Oslofjord, overlapping oak strakes clear, oars partly shipped, one square wool sail against wooded coast. No horned helmets, no huge fantasy dragon, restrained working vessel."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Radio across the ocean",
+      "caption": "Guglielmo Marconi's station in Cornwall sends the letter S in Morse across the Atlantic to Newfoundland, with no wire.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Interior close scene at Newfoundland1901, a wireless experimenter listening through an early telephone earpiece beside simple receiver apparatus and wire connections on a rough table, cable rising toward window. Plain early electrical equipment, no broadcast microphone, transistor radio or modern display."
+    }
+  ]
+}

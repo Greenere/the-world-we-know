@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Satellite positioning (GPS)",
+      "caption": "A constellation of satellites lets a receiver fix its position anywhere to within metres; it is fully operational from 1995.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Close field scene about1995 of a surveyor holding a bulky early handheld GPS receiver with a small monochrome display and protruding antenna beside a paper field map; open hillside and distant coast. A small separate study of a GPS satellite with twin solar wings, no smartphone or modern touchscreen."
+    }
+  ]
+}

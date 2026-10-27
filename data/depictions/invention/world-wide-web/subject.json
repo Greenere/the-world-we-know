@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The World Wide Web",
+      "caption": "Tim Berners-Lee at CERN publishes the first website: documents linked across the internet that anyone can read and write.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Quiet close office view at CERN1991: black cubic NeXT workstation beside a square deep CRT monitor, black keyboard and wired mouse, early text-only browser window represented by small illegible lines. Papers and desk cables, no laptop, smartphone, colorful modern browser or readable labels."
+    }
+  ]
+}

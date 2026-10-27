@@ -1,0 +1,15 @@
+{
+  "subject": "invention/aeroplane",
+  "era": "sketch-v2",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "replaces": "sketch",
+  "prompt": "Use case: historical-scene. Create a corrected 3:2 landscape ink-and-watercolour field sketch of the Wright Flyer on its first powered flight, December17,1903. INPUT ROLES: Image1 is the PRIMARY GEOMETRY AND COMPOSITION REFERENCE, the actual first-flight photograph. Image2 is a supporting period photograph showing the airframe and propulsion structure. Image3 is ONLY a reference for the atlas's pencil/sepia/watercolour style and paper; its aircraft is inaccurate and MUST NOT be copied. Faithfully translate image1's aircraft geometry and arrangement into a hand-drawn sketch rather than inventing an airplane. Preserve the photographic perspective, relative scale, exact silhouettes and positions: two broad shallow rectangular MAIN wings stacked parallel, connected by regularly spaced slender vertical wooden struts and fine cross-bracing wires; a much smaller double horizontal canard ELEVATOR ahead of the main wings on a light projecting frame; paired upright rear RUDDER surfaces behind the main wings; two separate two-bladed PUSHER PROPELLERS behind the wings spaced apart across the span, driven by slender chains from a single low engine on the lower wing. Do not move propellers to the nose or inside a fictitious fuselage. Where components are occluded in image1, respect that occlusion instead of spreading them out to show everything. Pilot Orville lies prone low on the lower wing beside the engine, matching the photograph: a SMALL human figure relative to the approximately40-foot wingspan, not a giant lying across most of the aircraft. No enclosed fuselage, no upright cockpit, no wheels, no modern tailplane, no extra wings, no oversized gears or invented mechanical towers. Preserve the first-flight photograph's launch rail receding over flat sandy ground, aircraft just clear of the sand, and Wilbur at right with his feet on the ground, SEPARATED from the airplane and not clutching its wing. The whole airframe fits inside the page with generous margins. Keep the landscape simple and flat as in the photograph, not the steep dunes or waterline from image3. Artist's medium: visible graphite underdrawing, quick fine sepia ink and loose hatching, light muted ochre and grey-blue watercolour, cream sketchbook paper, irregular unfinished vignette edges. Clear structural drawing, not an oil painting or photorealistic colourisation. No text, labels, arrows, inset diagrams, dates, signature or watermark.",
+  "reference_sources": [
+    "https://www.nps.gov/articles/wrightflyer.htm",
+    "https://www.nps.gov/common/uploads/stories/images/nri/20160615/articles/4B361435-1DD8-B71B-0B8F7BFA3D5F7F36/4B361435-1DD8-B71B-0B8F7BFA3D5F7F36.jpg",
+    "https://www.nps.gov/common/uploads/stories/images/nri/20160615/articles/4C8670D6-1DD8-B71B-0B08DE3A0476FE63/4C8670D6-1DD8-B71B-0B08DE3A0476FE63.jpg"
+  ],
+  "revision_note": "Airframe proportions, component placement and human scale redrawn from period photographs."
+}

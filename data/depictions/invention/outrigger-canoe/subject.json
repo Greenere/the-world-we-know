@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The outrigger canoe",
+      "caption": "Austronesian boatbuilders lash a float to a dugout hull on outrigger booms, making a narrow canoe stable in open water.",
+      "sources": [
+        "bellwood"
+      ],
+      "confidence": "medium",
+      "prompt": "Water-level side view beside an Austronesian dugout canoe in Island Southeast Asia about1200BCE; one slender stabilizing float connected to the main hull by two bent wooden booms with fiber lashings clearly visible. A paddler crosses a small channel; forested islands beyond. No modern hardware."
+    }
+  ]
+}

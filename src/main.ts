@@ -666,7 +666,7 @@ class App {
     if (fly) this.map.flyTo({center: [c.lon, c.lat], zoom: Math.max(this.map.getZoom(), 4.2), duration: 1400});
   }
 
-  /** Open an invention's card at its year, and bring its birthplace into view if it is off screen. */
+  /** Open an invention at its year and centre its birthplace, even when already visible. */
   openInvention(id: string) {
     const x = this.data.inventionById.get(id);
     if (!x) return;
@@ -674,9 +674,13 @@ class App {
     if (s.journey) this.closeJourney();
     const narrow = innerWidth < 760;
     this.store.set({invention: id, year: x.mid, playing: false, ...(narrow ? {panel: 'none' as const} : {})});
-    const b = this.map.getBounds();
-    const inView = [0, 360, -360].some(d => b.contains([x.lon + d, x.lat]));
-    if (!inView) this.map.flyTo({center: [x.lon, clampLat(x.lat - 4, this.store.state.globe)], duration: 1500, essential: true});
+    this.map.flyTo({
+      center: [x.lon, clampLat(x.lat, this.store.state.globe)],
+      zoom: Math.max(this.map.getZoom(), 3),
+      padding: narrow ? this.cameraPadding() : {top: 0, bottom: 0, left: 0, right: 0},
+      duration: 1200,
+      essential: true,
+    });
   }
 
   private choose(e: SearchEntry) {
@@ -695,7 +699,11 @@ class App {
     }
     if (s.invention) {
       const x = this.data.inventionById.get(s.invention)!;
-      this.map.jumpTo({center: [x.lon, clampLat(x.lat - 4, s.globe)], zoom: Math.max(this.map.getZoom(), 3)});
+      this.map.jumpTo({
+        center: [x.lon, clampLat(x.lat, s.globe)],
+        zoom: Math.max(this.map.getZoom(), 3),
+        padding: innerWidth < 760 ? this.cameraPadding() : {top: 0, bottom: 0, left: 0, right: 0},
+      });
     } else if (s.city) {
       const c = this.data.cityById.get(s.city)!;
       this.map.jumpTo({center: [c.lon, c.lat], zoom: 4});
@@ -753,7 +761,7 @@ class App {
         return;
       }
       if (pick?.layer?.id.startsWith('inventions')) {
-        this.store.set({invention: (pick.object as InventionView).inv.id});
+        this.openInvention((pick.object as InventionView).inv.id);
         return;
       }
       if (pick?.layer?.id.startsWith('cities')) {
@@ -857,9 +865,28 @@ class App {
   }
 
   private bindKeys() {
+    const editing = (e: KeyboardEvent) => {
+      const target = e.target;
+      return target instanceof HTMLElement && (target.isContentEditable || !!target.closest('input, textarea, select'));
+    };
+    const blocked = (e: KeyboardEvent) => e.defaultPrevented || e.isComposing || e.altKey || e.ctrlKey || e.metaKey || editing(e);
+    const overlayOpen = () => this.store.state.search || this.store.state.panel === 'about' || !!document.querySelector('.lightbox');
+
+    // Capture invention arrows before MapLibre can use them to pan a focused map.
+    document.addEventListener('keydown', e => {
+      if (blocked(e) || e.shiftKey || overlayOpen() || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+      const id = this.store.state.invention;
+      if (!id) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const i = this.data.inventions.findIndex(x => x.id === id);
+      const next = i < 0 ? undefined : this.data.inventions[i + (e.key === 'ArrowLeft' ? -1 : 1)];
+      if (next) this.openInvention(next.id);
+    }, true);
+
     document.addEventListener('keydown', e => {
       const t = e.target as HTMLElement;
-      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA')) return;
+      if (blocked(e)) return;
       const s = this.store.state;
       if (e.key === '/') {
         e.preventDefault();
@@ -869,6 +896,7 @@ class App {
         e.preventDefault();
         this.store.set({playing: !s.playing});
       } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        if (overlayOpen()) return;
         e.preventDefault();
         const dir = e.key === 'ArrowLeft' ? -1 : 1;
         if (e.shiftKey) this.store.set({year: s.year + dir, playing: false});

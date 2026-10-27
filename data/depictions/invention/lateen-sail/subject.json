@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The lateen sail",
+      "caption": "A triangular sail set on a long slanting yard, the rig of the dhows of the Red Sea and the Indian Ocean.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "low",
+      "prompt": "Clear low shoreline view near Aden about500CE of a modest wooden trading craft with a triangular sail on a long sloping yard; sailors trimming rope in a crosswind. The sail and its attachment remain structurally legible; no European galleon, metal winch, or modern fittings."
+    }
+  ]
+}

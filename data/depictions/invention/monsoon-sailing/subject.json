@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Sailing on the monsoon",
+      "caption": "Greek pilots from Egypt learn what Arab and Indian sailors knew: the summer wind blows steadily from the southwest, the winter wind back again.",
+      "sources": [
+        "periplus"
+      ],
+      "confidence": "medium",
+      "prompt": "Broad stern-quarter view of an ancient merchant sailing ship crossing open Arabian Sea around the first centuryCE with steady seasonal wind filling a square sail, amphora cargo secured below gunwale, experienced sailors working ropes. Deep open water and cloud bands, no compass or modern rigging."
+    }
+  ]
+}

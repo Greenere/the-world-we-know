@@ -1,0 +1,8 @@
+{
+  "subject": "invention/balloon",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: historical-scene. Asset: invention card sketch in a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nSubject: Ground-level view of an early1783 French hot-air balloon rising above a field and small period crowd, round blue-and-ochre paper-and-fabric envelope, decorative garlands suggested, small circular passenger gallery at bottom and visible fire basket. No modern sport balloon burner or wicker tourist basket."
+}

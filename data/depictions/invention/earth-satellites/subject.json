@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Earth-observing satellites",
+      "caption": "Landsat 1 begins photographing the whole land surface every 18 days. The same year Apollo 17's crew photographs the whole Earth.",
+      "sources": [
+        "landsat"
+      ],
+      "confidence": "high",
+      "prompt": "Orbital observation study of Landsat1 in1972, compact Nimbus-derived Earth Resources Technology Satellite with two rectangular solar panel wings and a boxlike sensor platform aimed down at curving Earth, blue-green land and cloud bands. No giant space station, no modern telescope or six-wing GPS satellite."
+    }
+  ]
+}

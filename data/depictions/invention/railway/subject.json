@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The railway",
+      "caption": "The Liverpool and Manchester Railway opens: steam locomotives pulling passengers and goods on a schedule.",
+      "sources": [
+        "headrick"
+      ],
+      "confidence": "high",
+      "prompt": "Low trackside view of an early Liverpool-Manchester passenger train in1830: small steam locomotive with tall chimney, exposed wheels, short four-wheeled open and enclosed carriages, light steam, rural cutting. No late Victorian huge locomotive, no modern tracks or electric wires."
+    }
+  ]
+}

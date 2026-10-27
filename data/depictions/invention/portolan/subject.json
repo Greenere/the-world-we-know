@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Portolan charts",
+      "caption": "Sea charts drawn from compass bearings and sailing distances, criss-crossed by rhumb lines; the Carta Pisana is the oldest to survive.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead study of a thirteenth-century Mediterranean mariners parchment chart, recognizable Mediterranean shoreline in fine ink crossed by many straight rhumb lines radiating from several points; dividers and folded vellum nearby. No modern coordinate grid, no text labels or modern compass instrument."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Radiocarbon dating",
+      "caption": "Willard Libby shows that the decay of carbon-14 can date bones, wood and charcoal.",
+      "sources": [
+        "libby"
+      ],
+      "confidence": "high",
+      "prompt": "Close1949 laboratory workbench, scientist handling a small charcoal sample beside glass vacuum lines, valves and shielded radiation counting apparatus, analog meter. Quiet practical scene, no dinosaur bones or glowing radioactive objects, no modern mass spectrometer."
+    }
+  ]
+}

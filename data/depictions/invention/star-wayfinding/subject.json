@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Wayfinding by stars and swells",
+      "caption": "Navigators steer by the rising and setting points of stars, read ocean swells through the hull and watch birds and clouds for land, all held in memory, not on paper.",
+      "sources": [
+        "finney"
+      ],
+      "confidence": "low",
+      "prompt": "View from the low deck of an early Polynesian voyaging canoe near Tonga about1000BCE at twilight: navigator seated studying a few rising stars above the horizon, parallel long swells visible below, woven sail at edge; no compass, telescope, written star map, or fantasy constellations."
+    }
+  ]
+}

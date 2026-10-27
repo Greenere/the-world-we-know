@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Pei Xiu's six principles of map-making",
+      "caption": "Pei Xiu sets out scale, a rectangular grid, true distances and corrections for height and bends in roads.",
+      "sources": [
+        "pei-xiu"
+      ],
+      "confidence": "high",
+      "prompt": "Birds-eye view of a third-century Chinese mapmakers worktable in Luoyang: brush-drawn rectangular grid with winding rivers and hills on a scroll, straightedge and cords, one hand comparing distances. Inkstone and brush, plain Han-Jin sleeves. No modern surveying tripod or printed graph paper."
+    }
+  ]
+}

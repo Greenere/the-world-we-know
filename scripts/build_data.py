@@ -438,6 +438,56 @@ def fill_container_gaps(grid: Grid, regions: list[Region], member: list[list[int
             frontier = nxt
     if total:
         print(f"    {total} land cells between regions joined their neighbours")
+    # The reverse gap: coastal regions reach past the continents' coarse outlines (Libya's shore, the coast of
+    # Brazil), and open water lies past the named seas (the Great Australian Bight). Those cells join their
+    # continent or the nearest sea, or a continent-wide or ocean-wide row would leave them unknown.
+    lands = [k for k, cnt in held.items() if cnt >= 2 and regions[k].surface != "sea"]
+    # The continents are the outermost containers.
+    continents = [k for k in lands if not any(j in lands for j in within.get(k, []))]
+    seas = [r.idx for r in regions if r.surface == "sea" and not r.hidden and r.geom is not None]
+    # Land only a continent claims (the Pechora shore, between Europe's regions and Asia's) joins the
+    # nearest region of either.
+    parts = [r.idx for r in regions if r.surface != "sea" and not r.hidden and r.body is None
+             and r.geom is not None and r.idx not in containers]
+    edges = 0
+    # Land past a continent's outline joins the continent that holds the rest of its region; a region no
+    # continent holds any of (Iceland) stays out, rather than joining its nearest neighbour (Greenland).
+    in_continent = {k: set(int(c) for c in regions[k].cells) for k in continents}
+    for c in range(len(member)):
+        if not grid.land[c] or any(k in in_continent for k in member[c]):
+            continue
+        vis = [i for i in member[c] if not regions[i].hidden and regions[i].body is None]
+        if not vis:
+            continue
+        t = min(vis, key=lambda i: regions[i].area)
+        share = {k: len(in_continent[k].intersection(int(x) for x in regions[t].cells if grid.land[x])) for k in continents}
+        k = max(share, key=share.get)
+        if share[k]:
+            member[c].append(k)
+            regions[k].cells = np.append(regions[k].cells, c)
+            edges += 1
+    # Water inside a coastal region (the Cape, the Persian Gulf) follows that region; only water no region
+    # but a continent claims joins the nearest sea.
+    for pool, on_land, skip, reach in ((seas, False, seas + parts, 12.0), (parts, True, parts, 1.0)):
+        tree = shapely.STRtree([regions[k].geom for k in pool])
+        skip = set(skip)
+        for c in range(len(member)):
+            if grid.land[c] != on_land or any(k in skip for k in member[c]):
+                continue
+            # Outlines across the antimeridian run past 180°, so look from the shifted points as well.
+            near = []
+            for shift in (0.0, 360.0, -360.0):
+                pt = Point(grid.lon[c] + shift, grid.lat[c])
+                if (j := tree.nearest(pt)) is not None:
+                    near.append((regions[pool[int(j)]].geom.distance(pt), pool[int(j)]))
+            if not near or min(near)[0] > reach:
+                continue
+            k = min(near)[1]
+            member[c].append(k)
+            regions[k].cells = np.append(regions[k].cells, c)
+            edges += 1
+    if edges:
+        print(f"    {edges} cells beyond the continents' and seas' outlines joined the nearest one")
 
 
 # ── Knowledge ──────────────────────────────────────────────────────────────
@@ -887,8 +937,8 @@ DEPICTION_FORMATS = (".webp", ".png", ".jpg", ".jpeg")
 # The sizes the site serves: the strip of eras, the card, and the enlarged view.
 DEPICTION_SIZES = {"thumb": 200, "card": 720, "full": 1280}
 # What each kind of subject holds: a city has eras in time, from one fixed view; a journey has scenes,
-# each pinned to one of its stops. Later: regions, inventions.
-DEPICTION_KINDS = {"city": "eras", "journey": "scenes"}
+# each pinned to one of its stops; inventions have standalone studies.
+DEPICTION_KINDS = {"city": "eras", "journey": "scenes", "invention": "studies"}
 
 
 def depiction_image(src: Path, out_dir: Path, item: str) -> dict[str, str]:
@@ -914,11 +964,12 @@ def depiction_image(src: Path, out_dir: Path, item: str) -> dict[str, str]:
 
 
 def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]]:
-    """Imagined sketches: a city through its eras, or scenes along a journey.
+    """Imagined sketches: city eras, journey scenes, or standalone invention studies.
 
     data/depictions/style.json                     the drawing style for each kind
     data/depictions/<kind>/<id>/subject.json       city: the fixed `view` and `eras` (from/to years)
                                                    journey: the `traveller` and `scenes` (each at a stop)
+                                                   invention: `studies` of the object or process
     data/depictions/<kind>/<id>/<item>.webp|png|jpg  the accepted picture (or <item>.placeholder.svg)
     data/depictions/<kind>/<id>/<item>.json          how it was made
 
@@ -956,7 +1007,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
         ids = [e.get("id") for e in entries]
         for k, e in enumerate(entries):
             w = f"{where} {list_key}[{k}] {e.get('id')!r}"
-            needed = ("id", "title", "caption", "sources", "confidence", "prompt") + (("from",) if kind == "city" else ("stop", "place"))
+            needed = ("id", "title", "caption", "sources", "confidence", "prompt") + ({"city": ("from",), "journey": ("stop", "place"), "invention": ()}[kind])
             for key in needed:
                 if key not in e:
                     fail(f"{w}: missing {key}")
@@ -1003,7 +1054,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
             for a, b in zip(items, items[1:]):
                 if a.get("to", math.inf) >= b["from"]:
                     fail(f"{where}: eras {a['id']} and {b['id']} overlap in time")
-        else:
+        elif kind == "journey":
             # Python's stable sort preserves authored page order within each stop.
             items.sort(key=lambda r: r["stop"])
         if items:
@@ -1125,7 +1176,7 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
             fail(f"i18n/zh/depictions.json: unknown subject {subj!r}")
             continue
         doc = json.loads(sf.read_text(encoding="utf-8"))
-        ids = {e["id"] for e in doc.get("eras", []) + doc.get("scenes", [])}
+        ids = {e["id"] for e in doc.get("eras", []) + doc.get("scenes", []) + doc.get("studies", [])}
         for k in items:
             if k not in ids:
                 fail(f"i18n/zh/depictions.json: {subj} has no {k!r}")
@@ -1356,7 +1407,11 @@ def main() -> int:
     pictured = load_depictions(sources, vp_ids, {
         "city": {c["id"] for c in cities},
         "journey": {j["id"]: [st for st in j["stops"] if not st.get("waypoint")] for j in journeys},
+        "invention": {inv["id"] for inv in inventions},
     })
+    for inv in inventions:
+        if inv["id"] in pictured["invention"]:
+            inv["pictures"] = pictured["invention"][inv["id"]]
     city_docs = []
     for c in cities:
         doc = {k: v for k, v in c.items() if k != "mid"}

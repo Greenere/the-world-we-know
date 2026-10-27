@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Painted maps of the Valley of Mexico",
+      "caption": "Painters draw land and history together on bark paper and cloth: footprints for journeys, glyphs for towns, rivers and lakes around them.",
+      "sources": [
+        "mundy"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead scene in the Valley of Mexico about1450CE: an Indigenous map painter uses a fine brush on bark paper, showing a blue lake, winding paths marked by footprints, stylized hill and town glyphs. Mineral pigments in small dishes, no European compass rose or Latin writing."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The sternpost rudder",
+      "caption": "Han shipwrights hang a rudder on the centre of the stern, as a pottery ship model from a Guangzhou tomb shows.",
+      "sources": [
+        "needham"
+      ],
+      "confidence": "medium",
+      "prompt": "Low close view from behind a modest Han wooden river vessel near Guangzhou about100CE: a broad steering blade mounted centrally at the stern extends into water, helmsman controlling its tiller above. Make the centered rudder the clear focal object, no European medieval ship or ship wheel."
+    }
+  ]
+}

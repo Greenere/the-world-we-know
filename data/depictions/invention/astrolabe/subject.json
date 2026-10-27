@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The astrolabe in the Islamic world",
+      "caption": "Astronomers of Abbasid Baghdad build and refine the astrolabe, a brass model of the sky for telling time and measuring the height of stars.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "medium",
+      "prompt": "Large close oblique study of a small brass planispheric astrolabe suspended by its top ring, finely cut openwork star-pointer rete and nested circular plates; an Abbasid scholar handles it carefully at a Baghdad window about800CE. No telescope, no fantasy gears, no readable labels."
+    }
+  ]
+}

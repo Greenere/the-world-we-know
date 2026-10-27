@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The kamal",
+      "caption": "A wooden card on a knotted string: held at arm's length against the Pole Star, the knot shows the ship's latitude.",
+      "sources": [
+        "ibn-majid"
+      ],
+      "confidence": "low",
+      "prompt": "Side profile close view of an Indian Ocean navigator near Julfar about1400CE holding a small rectangular wooden board at arms length on a cord from his mouth, aligning its bottom with the sea horizon and top with the low Pole Star; knots on cord visible. No sextant or telescope."
+    }
+  ]
+}

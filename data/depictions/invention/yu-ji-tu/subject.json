@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "A gridded map in stone",
+      "caption": "The Map of the Tracks of Yu is carved on a stele on a grid of squares a hundred li across, with rivers and coasts strikingly accurate.",
+      "sources": [
+        "needham"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique close view in twelfth-century Xian of a dark rectangular stone stele incised with a fine square grid, dense river network and Chinese coastline; one artisan taking an ink rubbing with a sheet and pad. Marks suggested without readable labels; no modern political borders."
+    }
+  ]
+}

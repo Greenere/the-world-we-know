@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Charts of sticks and shells",
+      "caption": "Marshallese navigators tie palm ribs and shells into frames that show how ocean swells bend and cross around islands.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "medium",
+      "prompt": "Close overhead view of a Marshallese navigator teaching on shore around1850, fingers resting on a rectangular open lattice of thin curved palm ribs lashed together, a few small shells tied at intersections. Pattern encodes swells, not a geographic map; no chart being used while steering at sea."
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 
 export const zhUi: Record<string, string> = {
   // Title and top bar
-  'The World We Know': '我们所知的世界',
+  'The World We Know': '我们如何认识世界',
   'Humanity: when people first arrived': '人类：人们最早抵达的时间',
   'What {vp} knew': '{vp}所知的世界',
   'Compare two viewpoints': '比较两个视角',

@@ -4,7 +4,7 @@ import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale, START} from '../time';
-import type {City, Depiction, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {City, Depiction, DepictionKind, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
@@ -58,6 +58,9 @@ export class Cards {
   /** Updates the year-dependent parts of the current card. */
   private live: ((s: State) => void) | null = null;
   private scenePlate: Plate | null = null;
+  private inventionPlate: Plate | null = null;
+  /** The pending swap from one invention's words to the next. */
+  private leaving = 0;
   private lightbox: HTMLElement | null = null;
   /** For each journey with pictures, the stops that have a scene (once loaded). */
   private sceneStops = new Map<string, number[]>();
@@ -134,14 +137,18 @@ export class Cards {
     this.el.classList.toggle('scene-card', subject.startsWith('scene:'));
     document.body.classList.toggle('has-card', !!subject);
     if (!subject) {
+      clearTimeout(this.leaving);
       this.key = '';
       this.live = null;
       this.scenePlate = null;
+      this.inventionPlate = null;
       return;
     }
     const key = `${subject}|${s.vps.join()}`;
     if (key !== this.key) {
       const sameSubject = this.key.split('|')[0] === subject;
+      const changingInvention = !sameSubject && this.key.startsWith('invention:') && subject.startsWith('invention:');
+      if (!subject.startsWith('invention:')) this.inventionPlate = null;
       this.key = key;
       this.live = null;
       this.scenePlate = null;
@@ -158,15 +165,30 @@ export class Cards {
         const r = this.data.regionById.get(s.region);
         if (r) nodes = this.region(r, s);
       }
-      this.body.replaceChildren(...nodes);
-      // A new subject starts at the top; a new viewpoint on the same one keeps the reader's place.
-      if (!sameSubject) {
-        this.scroller.scrollTop = 0;
-        this.el.classList.remove('scrolled');
-      }
+      const enter = () => {
+        this.body.replaceChildren(...nodes);
+        // A new subject starts at the top; a new viewpoint on the same one keeps the reader's place.
+        if (!sameSubject) {
+          this.scroller.scrollTop = 0;
+          this.el.classList.remove('scrolled');
+        }
+      };
+      clearTimeout(this.leaving);
       this.body.classList.remove('card-enter');
-      void this.body.offsetWidth;
-      this.body.classList.add('card-enter');
+      if (changingInvention) {
+        // The old words fade out before the new ones fade in, so no text ever cuts to half-tone;
+        // the sketch stays put and crossfades on its own once the new one has decoded.
+        const words = (list: Iterable<Node>) => [...list].filter((n): n is Element => n instanceof Element && !n.classList.contains('plate'));
+        for (const node of words(this.body.children)) node.classList.add('leave');
+        this.leaving = window.setTimeout(() => {
+          enter();
+          for (const node of words(nodes)) node.classList.add('arrive');
+        }, 140);
+      } else {
+        enter();
+        void this.body.offsetWidth;
+        this.body.classList.add('card-enter');
+      }
     }
     this.live?.(s);
   }
@@ -500,13 +522,25 @@ export class Cards {
       imaging: t('Seeing from afar'),
     };
     const vp = x.vp ? this.data.vp[x.vp] : null;
+    const plate = x.pictures ? new Plate(this.data, {
+      kind: 'invention', id: x.id,
+      pick: items => items[0] ?? null,
+      label: () => formatRange(x.year),
+      range: () => formatRange(x.year),
+      jump: () => {},
+    }, x.vp ?? this.store.state.vps[0], (d, title, caption, range) => this.openLightbox(d, title, caption, range), this.inventionPlate ?? undefined) : null;
+    this.inventionPlate = plate;
+    if (plate) {
+      plate.el.classList.add('plate-invention');
+      plate.show(x.mid);
+    }
     const all = this.data.inventions;
     const i = all.indexOf(x);
     const nav = (other: Invention | undefined, dir: string) =>
       other
         ? h(
             'button.inv-nav-btn',
-            {type: 'button', title: tx.invention(other.id, 'name', other.name), onclick: () => this.actions.openInvention(other.id)},
+            {type: 'button', title: tx.invention(other.id, 'name', other.name), 'aria-keyshortcuts': dir === 'prev' ? 'ArrowLeft' : 'ArrowRight', onclick: () => this.actions.openInvention(other.id)},
             dir === 'prev' ? h('span', {html: icons.prev}) : null,
             h('span.inv-nav-text', h('span.inv-nav-when', formatRange(other.year)), h('span.inv-nav-name', tx.invention(other.id, 'name', other.name))),
             dir === 'next' ? h('span', {html: icons.next}) : null,
@@ -523,6 +557,7 @@ export class Cards {
         ' · ',
         vp ? h('span', {style: `color:${vp.color}`}, tx.viewpoint(vp.id, 'longName', vp.longName)) : tx.invention(x.id, 'culture', x.culture ?? ''),
       ),
+      ...(plate ? [plate.el] : []),
       h('p.card-story', tx.invention(x.id, 'summary', x.summary)),
       h('h3.card-h', t('What it changed')),
       h('p.inv-changed', tx.invention(x.id, 'changed', x.changed)),
@@ -559,7 +594,7 @@ function eraAt(eras: Depiction[], year: number): Depiction | null {
 
 /** How a plate walks its pictures: by year through a city's eras, or by stop along a journey. */
 interface PlateOrder {
-  kind: 'city' | 'journey';
+  kind: DepictionKind;
   id: string;
   /** The picture for a position (a year, or journey progress). */
   pick(items: Depiction[], at: number): Depiction | null;
@@ -602,12 +637,22 @@ class Plate {
     private order: PlateOrder,
     private vp: VpId,
     private enlarge: (d: Depiction, title: string, caption: string, range: string) => void,
+    previous?: Plate,
   ) {
     this.frame = h('button.plate-img', {
       type: 'button',
       title: t('Enlarge'),
       onclick: () => this.shown && this.enlarge(this.shown, this.title(this.shown), this.caption(this.shown), this.order.range(this.shown)),
     });
+    // A fresh subject gets its own loading state, but keeps the last decoded
+    // image underneath. Cloning isolates it from the old plate's async callbacks.
+    const visible = previous?.frame.querySelectorAll<HTMLImageElement>('.plate-layer.in');
+    const last = visible?.[visible.length - 1];
+    if (last) {
+      const under = last.cloneNode(true) as HTMLImageElement;
+      under.classList.add('instant');
+      this.frame.append(under);
+    }
     this.cap = h('figcaption.plate-cap');
     this.text = h('p.plate-text');
     this.strip = h('div.plate-eras', {role: 'group', 'aria-label': t(order.kind === 'city' ? 'Other eras' : 'Other scenes')});
@@ -619,7 +664,7 @@ class Plate {
     this.el = h('figure.plate.loading', this.frame, this.pager, this.cap, this.text, this.strip, this.src);
     loadPictures(data, order.kind, order.id).then(doc => {
       this.loaded = true;
-      const items = doc?.eras ?? doc?.scenes;
+      const items = doc?.eras ?? doc?.scenes ?? doc?.studies;
       if (!items?.length) {
         this.el.remove();
         return;
@@ -693,7 +738,7 @@ class Plate {
     this.el.hidden = !d;
     this.order.shown?.(d, at);
     if (!d || d === this.shown) return;
-    const first = !this.shown;
+    const first = !this.frame.querySelector('.plate-layer.in');
     this.shown = d;
     const range = this.order.range(d);
     const caption = this.caption(d);
@@ -745,10 +790,16 @@ class Plate {
         under?.remove();
         return;
       }
-      requestAnimationFrame(() => img.classList.add('in'));
       const done = () => under.remove();
-      img.addEventListener('transitionend', done, {once: true});
-      setTimeout(done, 1600);
+      // A plate can decode before its card is on the page, and a detached image would skip its transition.
+      const fade = (tries: number) => {
+        if (token !== this.token) return;
+        if (!img.isConnected && tries < 30) return void requestAnimationFrame(() => fade(tries + 1));
+        requestAnimationFrame(() => img.classList.add('in'));
+        img.addEventListener('transitionend', done, {once: true});
+        setTimeout(done, 1600);
+      };
+      fade(0);
     };
     this.frame.append(img);
     img.decode().then(reveal, reveal);

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The ocean icebreaker",
+      "caption": "Admiral Makarov's Yermak, the first icebreaker built to work in the open polar sea, reaches Kronstadt.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Low view at sea of Yermak around1899, heavy dark steel hull riding onto and crushing sea ice at its sloping bow, steam funnels and simple masts, broken slabs in foreground. No modern nuclear icebreaker deck or helicopter, no enormous fantasy ice cliff."
+    }
+  ]
+}

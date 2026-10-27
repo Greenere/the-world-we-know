@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The transatlantic telegraph",
+      "caption": "A lasting cable between Ireland and Newfoundland carries messages in minutes rather than weeks.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "high",
+      "prompt": "Close deck-level scene on an1866 cable-laying ship, thick insulated telegraph cable passing over a large stern sheave into the sea, workers watching the tension, coiled cable and heavy iron machinery. Small inset-like cut end reveals protective wire layers; no modern fiber optic cable."
+    }
+  ]
+}

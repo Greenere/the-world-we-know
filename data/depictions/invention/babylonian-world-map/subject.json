@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Babylonian Map of the World",
+      "caption": "A clay tablet shows Babylon on the Euphrates inside a ring of 'bitter river', with far islands beyond where the sun is never seen.",
+      "sources": [
+        "babylonian-world-map"
+      ],
+      "confidence": "high",
+      "prompt": "Close archaeological-style oblique study of a small buff clay tablet about600BCE on a scribal work surface. Its upper portion carries tiny wedge marks, lower portion a circular double-ring world diagram with a river through the central land and triangular regions outside. Stylus and thumb convey scale, no modern continents, no modern globe."
+    }
+  ]
+}

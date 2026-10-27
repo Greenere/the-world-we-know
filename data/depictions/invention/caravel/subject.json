@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The caravel",
+      "caption": "A small, light ship with lateen sails that can beat into the wind.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide offshore view of a small Portuguese fifteenth-century caravel rounding a rocky headland, two slender masts with triangular lateen sails, low hull and modest stern. Wind and bow wave clearly sketched, no galleon towers or huge square-rigged warship."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Steamships across the ocean",
+      "caption": "The Great Western crosses from Bristol to New York in fifteen days under steam, on a regular service.",
+      "sources": [
+        "headrick"
+      ],
+      "confidence": "high",
+      "prompt": "Low three-quarter harbor view of Great Western in1838, long wooden hull, large side paddle boxes and central funnel, four masts with sails mostly furled; modest coal smoke, workers on quay. Side-wheel paddle propulsion, not screw propeller or twentieth-century ocean liner."
+    }
+  ]
+}

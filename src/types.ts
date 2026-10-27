@@ -76,8 +76,7 @@ export interface Region {
 
 export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'rediscovered';
 
-/** An imagined sketch of a subject (a city, for now) in one era, with what that era was like and how each
- * viewpoint saw it. Fetched per subject when its card opens. */
+/** An imagined city era, journey scene or invention study. Fetched per subject when its card opens. */
 export interface Depiction {
   id: string;
   /** A city's era: the years it covers. */
@@ -96,14 +95,15 @@ export interface Depiction {
   made?: {provider?: string; model?: string; date?: string};
 }
 
-export type DepictionKind = 'city' | 'journey';
+export type DepictionKind = 'city' | 'journey' | 'invention';
 
 export interface DepictionDoc {
   kind: DepictionKind;
   id: string;
-  /** A city's eras, or a journey's scenes, in order. */
+  /** A city's eras, a journey's scenes, or standalone invention studies, in order. */
   eras?: Depiction[];
   scenes?: Depiction[];
+  studies?: Depiction[];
 }
 
 export interface City {
@@ -227,6 +227,8 @@ export type InventionCategory = 'navigation' | 'measurement' | 'mapping' | 'comm
 
 export interface Invention {
   id: string;
+  /** Number of standalone sketches in depictions/invention/<id>.json. */
+  pictures?: number;
   year: number | [number, number];
   /** Midpoint of `year`, for placing on the timeline. */
   mid: number;

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Echo sounding",
+      "caption": "Reginald Fessenden's oscillator sends sound to the sea floor and times the echo; the German Meteor expedition of 1925–27 makes 67,000 soundings with it.",
+      "sources": [
+        "heezen-tharp"
+      ],
+      "confidence": "medium",
+      "prompt": "Close cabin view aboard a1920s survey ship, operator monitoring an early electromechanical echo-sounding apparatus with analog dials and paper recording, a small adjoining pencil study of hull-mounted transducer and sound path down to sea floor. No digital sonar monitor or multicolor bathymetry."
+    }
+  ]
+}

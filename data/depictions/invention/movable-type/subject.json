@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Movable type",
+      "caption": "Bi Sheng prints with individual characters of baked clay, as recorded by Shen Kuo.",
+      "sources": [
+        "shen-kuo"
+      ],
+      "confidence": "high",
+      "prompt": "Overhead close view of a Song Chinese printing workbench about1045CE: a hand sets small separate baked-clay character blocks into an iron frame on a board, spare clay types in shallow trays, ink and paper nearby. Uneven hand-cut glyph-like marks, no Latin alphabet or Gutenberg screw press."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The first modern atlas",
+      "caption": "Abraham Ortelius gathers maps of every region, drawn to one style and bound in one book, with a list of the cartographers he used.",
+      "sources": [
+        "ortelius"
+      ],
+      "confidence": "high",
+      "prompt": "Close three-quarter view in Antwerp1570 of a large atlas open to a hand-colored regional map within a simple engraved ornamental margin; another loose copperplate map and pigments behind, reader turning a heavy page. No modern spiral binding, no legible text, no giant fantasy globe."
+    }
+  ]
+}

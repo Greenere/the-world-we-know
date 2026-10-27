@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The spherical Earth",
+      "caption": "Aristotle argues the Earth is a sphere: the curved shadow it casts on the Moon in an eclipse, and stars that rise or vanish as a traveller goes north or south.",
+      "sources": [
+        "aristotle"
+      ],
+      "confidence": "high",
+      "prompt": "Restrained ancient Greek observation scene near Athens about350BCE: two observers on a rocky terrace watch a partially eclipsed moon with a visibly curved dark shadow. Broad night sky, small human scale, no telescopes, no globe covered with modern continents, no labelled diagrams."
+    }
+  ]
+}

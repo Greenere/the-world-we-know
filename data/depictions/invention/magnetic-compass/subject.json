@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The magnetic compass",
+      "caption": "Shen Kuo describes a magnetized needle and notes that it points a little east of true south; by 1119 Zhu Yu reports pilots using it at sea in overcast weather.",
+      "sources": [
+        "shen-kuo"
+      ],
+      "confidence": "high",
+      "prompt": "Intimate still-life study in Song China about1088CE of a fine magnetized iron needle suspended horizontally by a nearly invisible silk thread from a small wooden stand; inkstone and brush in background, a scholar watches. No modern compass card or brass pocket compass, no lettering."
+    }
+  ]
+}

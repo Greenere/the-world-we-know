@@ -1023,6 +1023,15 @@ kbd {
   color: var(--rubric);
 }
 
+/* Drop caps are a Latin convention; in Chinese a giant first character (一 becomes a stray red stroke) only confuses. */
+.lang-zh .card-story::first-letter {
+  float: none;
+  font: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
+
 .card-note,
 .card-part,
 .card-src {
@@ -2339,6 +2348,22 @@ kbd {
   animation: swap-in 0.35s ease both;
 }
 
+/* Moving between inventions: the old words fade right out, then the new ones fade up from nothing. */
+.leave {
+  opacity: 0;
+  transition: opacity 0.14s ease-in;
+}
+
+.arrive {
+  animation: arrive 0.32s ease-out both;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+  }
+}
+
 .plate-tag {
   position: absolute;
   top: 12px;
@@ -3059,4 +3084,10 @@ kbd {
 .jp-menu-item .jp-filter-dot {
   width: 8px;
   height: 8px;
+}
+
+/* Invention cards already show these details; retain them in the enlarged view. */
+.plate-invention .plate-cap,
+.plate-invention .plate-text {
+  display: none;
 }

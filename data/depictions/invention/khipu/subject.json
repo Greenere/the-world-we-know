@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Khipu, the knotted record",
+      "caption": "Cords of coloured cotton, knotted in a decimal code, record census counts, tribute and perhaps narratives; specialists read them aloud.",
+      "sources": [
+        "urton-khipu"
+      ],
+      "confidence": "medium",
+      "prompt": "Extreme close study of an Andean record keeper holding a cotton khipu about1450CE: one main cord with many hanging colored subsidiary cords, grouped knots at different levels clearly visible; woven tunic behind, stone wall soft in distance. No written ledger or modern beads."
+    }
+  ]
+}

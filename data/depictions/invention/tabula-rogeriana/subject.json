@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Al-Idrisi's world map",
+      "caption": "At the court of Roger II of Sicily, al-Idrisi combines Arabic geography with the reports of travellers questioned at the port into seventy sectional maps and a silver planisphere.",
+      "sources": [
+        "al-idrisi"
+      ],
+      "confidence": "high",
+      "prompt": "Over-shoulder scene at Palermo in1154CE: a geographer compares hand-drawn sectional maps and traveller notes on a low worktable, one large circular silver map disk partly visible at side. South-oriented medieval mapping rather than modern Mercator continents, no fantasy throne scene or printed atlas."
+    }
+  ]
+}

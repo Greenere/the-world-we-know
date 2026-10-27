@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Writing on oracle bones",
+      "caption": "Shang diviners carve questions and answers into turtle shell and ox bone: the earliest Chinese writing to survive.",
+      "sources": [
+        "keightley"
+      ],
+      "confidence": "high",
+      "prompt": "Close oblique tabletop study in Shang Anyang about1200BCE: one pale ox scapula and a turtle plastron with fine incisions and heat cracks; a diviner holds a pointed tool. Small angular inscription-like marks, not modern Chinese print; no paper books."
+    }
+  ]
+}

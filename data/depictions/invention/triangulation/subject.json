@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Triangulation",
+      "caption": "Willebrord Snellius measures a long distance by a chain of triangles from one measured baseline.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Broad low countryside view in the Netherlands1615, two surveyors measuring a straight baseline with a long chain, simple early angle-measuring instrument in foreground, church spires in distance as sighting points. No modern total station, no laser or fluorescent vests."
+    }
+  ]
+}

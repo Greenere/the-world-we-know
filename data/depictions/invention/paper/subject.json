@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Paper",
+      "caption": "Cai Lun reports a method of making paper from bark, hemp and rags to the Han court.",
+      "sources": [
+        "houhanshu"
+      ],
+      "confidence": "high",
+      "prompt": "Close workshop view in Han Luoyang about105CE: a papermaker lifts a rectangular bamboo screen holding wet fiber pulp above a shallow vat; dripping water, pale sheets drying nearby, bark and hemp bundles. Focus skilled hands and material transformation, no printing press or modern rollers."
+    }
+  ]
+}

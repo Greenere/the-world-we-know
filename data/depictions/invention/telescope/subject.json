@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The telescope",
+      "caption": "Hans Lipperhey applies for a patent on a spyglass; Galileo turns one to the sky the next year.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Close side view in a Dutch workshop around1608 of an early simple straight spyglass with leather-covered tube and two lens housings, hands fitting a small glass lens; leaded window and tools behind. No modern large astronomical mount or huge reflecting telescope."
+    }
+  ]
+}

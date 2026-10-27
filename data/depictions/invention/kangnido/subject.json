@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Kangnido map",
+      "caption": "Korean scholars combine Chinese maps of the Mongol era with their own and Japan's into one map of the world from Korea to Europe and Africa.",
+      "sources": [
+        "kangnido"
+      ],
+      "confidence": "high",
+      "prompt": "Three-quarter worktable scene in Joseon Korea about1402CE: scholars brush a large world map with a broad central East Asia, pronounced Korean peninsula at right, Japan lower right, smaller western lands and Africa toward left. No modern nation outlines or printed labels; rolled paper and brushwork."
+    }
+  ]
+}

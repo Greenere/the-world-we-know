@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Mercator projection",
+      "caption": "Gerardus Mercator draws the world so that any line of constant compass bearing is straight.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Close worktable view in Duisburg1569, cartographer drawing a world chart with straight perpendicular meridians and parallels spaced increasingly apart toward top and bottom; brass dividers and straightedge. Manuscript working sketch, no modern digital cartography or readable labels."
+    }
+  ]
+}

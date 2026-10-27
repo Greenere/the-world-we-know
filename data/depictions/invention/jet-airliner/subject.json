@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The jet airliner",
+      "caption": "Jet airliners enter service across the Atlantic and the Pacific, flying above the weather at 900 kilometres an hour.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Wide low airport-apron view of a1958 four-engine Boeing707-style swept-wing passenger jet, four slim engine nacelles below wings, mobile boarding stairs and a few period passengers. Bare metal and restrained colors without brand logos; no jumbo jet, jet bridge, or modern high-bypass engines."
+    }
+  ]
+}

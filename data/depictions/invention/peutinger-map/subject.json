@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Roman road map",
+      "caption": "A long roll draws the empire's roads from Britain to India as one strip, with distances between stations: the map we know as the Tabula Peutingeriana.",
+      "sources": [
+        "talbert-peutinger"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide close view of a long narrow Roman route-map roll partly unrolled across a table about350CE; parallel bands of land and water, thin red road network, tiny stylized towns. A traveller points at a route. No geographic modern projection, no legible invented Latin, no medieval bound atlas."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The spoked-wheel chariot",
+      "caption": "Herders of the Ural steppe build light chariots on spoked wheels, drawn by horses.",
+      "sources": [
+        "anthony"
+      ],
+      "confidence": "medium",
+      "prompt": "Low three-quarter view of a light wooden two-wheeled chariot on the Ural steppe about1900BCE, two small sturdy horses harnessed side by side, focus on thin spokes and rawhide lashings; a handler checks a wheel. No iron tires, Roman racing body or medieval harness."
+    }
+  ]
+}

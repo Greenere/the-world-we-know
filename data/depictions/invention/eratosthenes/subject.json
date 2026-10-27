@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Measuring the Earth",
+      "caption": "Eratosthenes compares the Sun's angle at noon in Alexandria and Syene and works out the Earth's circumference to within a few percent.",
+      "sources": [
+        "cleomedes"
+      ],
+      "confidence": "high",
+      "prompt": "Sunlit courtyard in Alexandria about240BCE, close view of a vertical gnomon casting a short distinct shadow on level ground while an observer uses a cord to measure it. A scroll and measuring tools nearby, distant plain colonnade. One coherent observation, not a labelled diagram or two cities squeezed together."
+    }
+  ]
+}

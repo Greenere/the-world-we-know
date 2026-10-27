@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Place-value numerals with zero",
+      "caption": "Brahmagupta sets out rules for calculating with zero in a place-value system of nine digits and a sign for nothing.",
+      "sources": [
+        "plofker"
+      ],
+      "confidence": "high",
+      "prompt": "Close study of a seventh-century Indian mathematicians hands arranging small counters in aligned place-value columns on a dust board, with an intentionally empty column; palm-leaf manuscript and stylus nearby. Modest setting in Bhinmal about628CE, no modern equations or modern Arabic printed numerals."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Catalan Atlas",
+      "caption": "Abraham Cresques's workshop paints a world map on vellum panels, joining the portolan coasts with Marco Polo's Asia and Mansa Musa holding his gold.",
+      "sources": [
+        "catalan-atlas"
+      ],
+      "confidence": "high",
+      "prompt": "Close angled view of a fourteenth-century Majorcan illuminators hands painting a map on joined vellum panels; deep blue Mediterranean, red and ochre settlements, one tiny seated West African ruler with a gold disk, delicate caravan figures inland. Rich but unfinished detail, no readable lettering."
+    }
+  ]
+}

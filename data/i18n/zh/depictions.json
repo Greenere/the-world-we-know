@@ -532,5 +532,365 @@
    "title": "在锡诺普候船",
    "caption": "在锡诺普，他等了约四十天，盼望适合出海的天气。租下一艘希腊船后，又等了十一天顺风，才启程横渡黑海。"
   }
+ },
+ "invention/chariot": {
+  "sketch": {
+   "title": "辐轮战车",
+   "caption": "乌拉尔草原上的牧人造出轻便的辐轮战车，用马牵引。"
+  }
+ },
+ "invention/outrigger-canoe": {
+  "sketch": {
+   "title": "舷外浮杆独木舟",
+   "caption": "南岛语族的造船人用横杆把一根浮木绑在独木舟船身旁，让狭长的独木舟在开阔海面上也能保持平稳。"
+  }
+ },
+ "invention/oracle-bones": {
+  "sketch": {
+   "title": "甲骨文",
+   "caption": "商代贞人在龟甲与牛骨上刻下问卜与结果，这是现存最早的汉字。"
+  }
+ },
+ "invention/star-wayfinding": {
+  "sketch": {
+   "title": "依星辰与涌浪导航",
+   "caption": "领航者依据星辰升落的方位掌舵，透过船体感受洋面涌浪，观察飞鸟与云朵来寻找陆地——这一切都记在心里，而不在纸上。"
+  }
+ },
+ "invention/turin-map": {
+  "sketch": {
+   "title": "都灵纸草地图",
+   "caption": "书吏阿蒙纳赫特为一支采石远征队画出哈马马特干河谷：道路、按岩石着色的山丘，还标出了金矿。"
+  }
+ },
+ "invention/camel": {
+  "sketch": {
+   "title": "驯化的骆驼",
+   "caption": "在阿拉伯为奶与肉而放养的骆驼，开始被骑乘、驮货，穿越漫长的沙漠。"
+  }
+ },
+ "invention/alphabet": {
+  "sketch": {
+   "title": "腓尼基字母",
+   "caption": "腓尼基书吏只用二十二个辅音字母书写，简单到商人也能学会。"
+  }
+ },
+ "invention/babylonian-world-map": {
+  "sketch": {
+   "title": "巴比伦世界地图",
+   "caption": "一块泥板画出幼发拉底河上的巴比伦，四周环绕着“苦河”，河外是看不见太阳的遥远岛屿。"
+  }
+ },
+ "invention/spherical-earth": {
+  "sketch": {
+   "title": "球形的大地",
+   "caption": "亚里士多德论证大地是球形的：月食时它投在月亮上的影子是弧形的；旅行者向南或向北走，有些星星会升起或消失。"
+  }
+ },
+ "invention/library-alexandria": {
+  "sketch": {
+   "title": "亚历山大图书馆",
+   "caption": "托勒密王朝搜集一切能找到的书籍，连港口船只上的书卷也要抄录，收藏在缪斯宫旁的图书馆里。"
+  }
+ },
+ "invention/eratosthenes": {
+  "sketch": {
+   "title": "测量地球",
+   "caption": "埃拉托色尼比较正午时太阳在亚历山大和赛伊尼的高度角，算出地球周长，误差只有百分之几。"
+  }
+ },
+ "invention/monsoon-sailing": {
+  "sketch": {
+   "title": "乘季风航行",
+   "caption": "来自埃及的希腊领航员学会了阿拉伯和印度水手早已知道的事：夏季的风稳定地从西南吹来，冬季的风再吹回去。"
+  }
+ },
+ "invention/sternpost-rudder": {
+  "sketch": {
+   "title": "船尾舵",
+   "caption": "汉代造船匠把舵装在船尾正中，广州一座汉墓出土的陶船模型便是证明。"
+  }
+ },
+ "invention/paper": {
+  "sketch": {
+   "title": "纸",
+   "caption": "蔡伦向汉廷奏报以树皮、麻头与破布造纸之法。"
+  }
+ },
+ "invention/latitude-longitude": {
+  "sketch": {
+   "title": "经纬坐标",
+   "caption": "托勒密的《地理学》用经度和纬度列出约八千个地点，任何人只凭这些数字就能重画地图。"
+  }
+ },
+ "invention/lateen-sail": {
+  "sketch": {
+   "title": "三角帆",
+   "caption": "挂在一根斜长帆桁上的三角形帆，是红海与印度洋上单桅帆船的帆装。"
+  }
+ },
+ "invention/pei-xiu-grid": {
+  "sketch": {
+   "title": "裴秀“制图六体”",
+   "caption": "裴秀提出分率、准望、道里、高下、方邪、迂直六条制图原则：比例尺、方格网、实际距离，以及对地势高低与道路曲折的校正。"
+  }
+ },
+ "invention/peutinger-map": {
+  "sketch": {
+   "title": "罗马道路图",
+   "caption": "一卷长图把帝国从不列颠到印度的道路画成一条长带，标出各站之间的距离——这就是《波伊廷格地图》。"
+  }
+ },
+ "invention/place-value-zero": {
+  "sketch": {
+   "title": "带零的位值记数",
+   "caption": "婆罗摩笈多在九个数字加一个表示“无”的符号构成的位值记数法中，给出了用零计算的法则。"
+  }
+ },
+ "invention/astrolabe": {
+  "sketch": {
+   "title": "伊斯兰世界的星盘",
+   "caption": "阿拔斯王朝巴格达的天文学家制作并改进星盘——一具用来计时和测量星辰高度的黄铜天空模型。"
+  }
+ },
+ "invention/longship": {
+  "sketch": {
+   "title": "维京长船",
+   "caption": "一种狭长轻便、搭接船板、有龙骨和方帆的船，吃水浅到能逆河划行，又坚固到能横渡大西洋。"
+  }
+ },
+ "invention/kamal": {
+  "sketch": {
+   "title": "卡迈勒测星板",
+   "caption": "一块系在打结绳子上的木板：伸直手臂对准北极星，绳结便显示出船所在的纬度。"
+  }
+ },
+ "invention/dog-sledge": {
+  "sketch": {
+   "title": "狗拉雪橇与皮艇",
+   "caption": "图勒猎人让成队的狗拉雪橇，并造出能载一家人、可以猎鲸的大型敞篷皮船。"
+  }
+ },
+ "invention/biruni-measure": {
+  "sketch": {
+   "title": "登山测地球",
+   "caption": "比鲁尼登上旁遮普平原边的一座山，测量地平线的俯角，算出地球的半径。"
+  }
+ },
+ "invention/movable-type": {
+  "sketch": {
+   "title": "活字印刷",
+   "caption": "据沈括记载，毕昇用一个个烧制的胶泥活字印书。"
+  }
+ },
+ "invention/magnetic-compass": {
+  "sketch": {
+   "title": "指南针",
+   "caption": "沈括记述了磁化的针，并指出它“常微偏东，不全南也”；到1119年，朱彧记载舟师在阴天用它在海上辨向。"
+  }
+ },
+ "invention/ocean-junk": {
+  "sketch": {
+   "title": "远洋帆船",
+   "caption": "宋代船厂建造大型远洋帆船，船内有水密隔舱，有多根桅杆和带撑条的帆。"
+  }
+ },
+ "invention/yu-ji-tu": {
+  "sketch": {
+   "title": "刻在石上的方格地图",
+   "caption": "《禹迹图》刻在石碑上，画在每格百里的方格网中，河流与海岸惊人地准确。"
+  }
+ },
+ "invention/tabula-rogeriana": {
+  "sketch": {
+   "title": "伊德里西的世界地图",
+   "caption": "在西西里国王罗杰二世的宫廷里，伊德里西把阿拉伯地理学与在港口询问旅人的报告结合起来，绘成七十幅分区地图和一面银质平面球图。"
+  }
+ },
+ "invention/portolan": {
+  "sketch": {
+   "title": "波特兰海图",
+   "caption": "根据罗盘方位与航行距离绘制、布满恒向线的海图；《比萨航海图》是现存最早的一幅。"
+  }
+ },
+ "invention/catalan-atlas": {
+  "sketch": {
+   "title": "加泰罗尼亚地图集",
+   "caption": "亚伯拉罕·克雷斯克斯的作坊在羊皮纸板上绘制世界地图，把航海图上的海岸、马可·波罗的亚洲和手持黄金的曼萨·穆萨画在一起。"
+  }
+ },
+ "invention/khipu": {
+  "sketch": {
+   "title": "奇普结绳",
+   "caption": "彩色棉绳按十进制编码打结，记录人口、贡赋，或许还有叙事；专门的人员把它们读出来。"
+  }
+ },
+ "invention/mesoamerican-maps": {
+  "sketch": {
+   "title": "墨西哥谷地的彩绘地图",
+   "caption": "画师在树皮纸和布上把土地与历史画在一起：脚印表示行程，字符表示城镇，周围是河流与湖泊。"
+  }
+ },
+ "invention/kangnido": {
+  "sketch": {
+   "title": "混一疆理图",
+   "caption": "朝鲜学者把蒙元时代的中国地图与本国及日本的地图合成一幅从朝鲜到欧洲和非洲的世界地图。"
+  }
+ },
+ "invention/caravel": {
+  "sketch": {
+   "title": "卡拉维尔帆船",
+   "caption": "一种装有三角帆、能逆风抢风航行的轻便小船。"
+  }
+ },
+ "invention/printing-press": {
+  "sketch": {
+   "title": "印刷机",
+   "caption": "古腾堡把金属活字、油性墨水和压印机结合在一起。"
+  }
+ },
+ "invention/qhapaq-nan": {
+  "sketch-v2": {
+   "title": "印加古道",
+   "caption": "约四万公里的道路，带有石阶、吊桥和相隔一日路程的驿站，从厄瓜多尔延伸到智利。"
+  }
+ },
+ "invention/mercator": {
+  "sketch": {
+   "title": "墨卡托投影",
+   "caption": "杰拉杜斯·墨卡托这样绘制世界：任何一条罗盘方位不变的航线在图上都是直线。"
+  }
+ },
+ "invention/ortelius-atlas": {
+  "sketch": {
+   "title": "第一部现代地图集",
+   "caption": "亚伯拉罕·奥特柳斯把各地区的地图按统一风格绘制、装订成一本书，并列出他所采用的制图者。"
+  }
+ },
+ "invention/backstaff": {
+  "sketch": {
+   "title": "背测杆",
+   "caption": "约翰·戴维斯的象限仪让领航员背对太阳，借太阳投下的影子测量太阳高度。"
+  }
+ },
+ "invention/telescope": {
+  "sketch": {
+   "title": "望远镜",
+   "caption": "汉斯·利伯希为一种小型望远镜申请专利；第二年伽利略把它对准了天空。"
+  }
+ },
+ "invention/triangulation": {
+  "sketch": {
+   "title": "三角测量",
+   "caption": "斯涅尔从一条实测的基线出发，用一连串三角形测出远距离。"
+  }
+ },
+ "invention/chronometer": {
+  "sketch": {
+   "title": "航海天文钟",
+   "caption": "约翰·哈里森的H4在驶往牙买加的航程中，每天误差只有几秒。"
+  }
+ },
+ "invention/balloon": {
+  "sketch": {
+   "title": "热气球",
+   "caption": "孟格菲兄弟的气球第一次把人带上天空。"
+  }
+ },
+ "invention/ino-survey": {
+  "sketch": {
+   "title": "伊能忠敬的日本测量",
+   "caption": "一位退休商人用十七年徒步走遍日本海岸，靠步测、绳尺和观星测量，他去世后由团队完成地图。"
+  }
+ },
+ "invention/stick-charts": {
+  "sketch": {
+   "title": "树枝与贝壳海图",
+   "caption": "马绍尔群岛的领航者用棕榈叶柄和贝壳绑成框架，表示洋流涌浪在岛屿周围如何弯折、交汇。"
+  }
+ },
+ "invention/railway": {
+  "sketch": {
+   "title": "铁路",
+   "caption": "利物浦至曼彻斯特铁路通车：蒸汽机车按时刻表牵引旅客与货物。"
+  }
+ },
+ "invention/steamship": {
+  "sketch": {
+   "title": "横渡大洋的蒸汽船",
+   "caption": "“大西方号”靠蒸汽动力用十五天从布里斯托尔驶到纽约，开辟了定期航线。"
+  }
+ },
+ "invention/photography": {
+  "sketch": {
+   "title": "摄影",
+   "caption": "法国科学院公布了达盖尔的摄影法。"
+  }
+ },
+ "invention/telegraph-cable": {
+  "sketch": {
+   "title": "跨大西洋电报",
+   "caption": "一条连接爱尔兰与纽芬兰的电缆持久运行，消息以分钟而非星期计算传递。"
+  }
+ },
+ "invention/ammassalik-maps": {
+  "sketch": {
+   "title": "木刻地图",
+   "caption": "库尼特把漂流木雕刻得凹凸起伏，顺着东格陵兰的海岸一个峡湾接一个峡湾。"
+  }
+ },
+ "invention/icebreaker": {
+  "sketch": {
+   "title": "远洋破冰船",
+   "caption": "马卡罗夫海军上将的“叶尔马克号”——第一艘为开阔极地海域设计的破冰船——驶抵喀琅施塔得。"
+  }
+ },
+ "invention/radio": {
+  "sketch": {
+   "title": "跨洋无线电",
+   "caption": "古列尔莫·马可尼在康沃尔的电台不用导线，把莫尔斯电码字母S发过大西洋，传到纽芬兰。"
+  }
+ },
+ "invention/aeroplane": {
+  "sketch-v2": {
+   "title": "动力飞行",
+   "caption": "莱特兄弟驾驶动力飞机飞行了十二秒。"
+  }
+ },
+ "invention/echo-sounding": {
+  "sketch": {
+   "title": "回声测深",
+   "caption": "费森登的振荡器向海底发出声波并测量回声时间；1925–27年德国“流星号”考察队用它测深六万七千次。"
+  }
+ },
+ "invention/radiocarbon": {
+  "sketch": {
+   "title": "放射性碳定年",
+   "caption": "威拉德·利比证明碳-14的衰变可以为骨头、木材和木炭测定年代。"
+  }
+ },
+ "invention/jet-airliner": {
+  "sketch": {
+   "title": "喷气式客机",
+   "caption": "喷气式客机投入跨大西洋和跨太平洋航线，在云层之上以每小时九百公里飞行。"
+  }
+ },
+ "invention/earth-satellites": {
+  "sketch": {
+   "title": "对地观测卫星",
+   "caption": "陆地卫星1号开始每18天拍摄一遍全球陆地。同年，阿波罗17号的宇航员拍下了完整的地球。"
+  }
+ },
+ "invention/gps": {
+  "sketch": {
+   "title": "卫星定位（GPS）",
+   "caption": "一组卫星让接收器在任何地方都能把位置测定到几米之内；1995年全面运行。"
+  }
+ },
+ "invention/world-wide-web": {
+  "sketch": {
+   "title": "万维网",
+   "caption": "蒂姆·伯纳斯-李在欧洲核子研究中心发布第一个网站：通过互联网相互链接、人人可读可写的文档。"
+  }
  }
 }

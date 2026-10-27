@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Measuring the Earth from a mountain",
+      "caption": "Al-Biruni climbs a hill above the Punjab plain, measures the dip of the horizon and works out the Earth's radius.",
+      "sources": [
+        "al-biruni"
+      ],
+      "confidence": "high",
+      "prompt": "Side view of a scholar at Nandana hilltop in1025CE carefully sighting a small angular measuring instrument toward a distant level plain and hazy horizon. Rock ledge and sparse notebook nearby, no telescope or modern theodolite; landscape dominates, gesture is precise."
+    }
+  ]
+}

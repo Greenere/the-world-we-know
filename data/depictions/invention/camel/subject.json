@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The domesticated camel",
+      "caption": "Camels, herded in Arabia for milk and meat, are now ridden and loaded for long desert crossings.",
+      "sources": [
+        "hoyland"
+      ],
+      "confidence": "medium",
+      "prompt": "Side-on view of a single-humped dromedary being loaded with balanced woven panniers in southeastern Arabia about1000BCE; hands tightening fiber lashings, sparse rocky desert and two distant animals. Early modest packs, no ornate tourist saddle or pyramids."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch-v2",
+      "title": "Powered flight",
+      "caption": "The Wright brothers fly a powered aircraft for twelve seconds.",
+      "sources": [
+        "fernandez-armesto"
+      ],
+      "confidence": "high",
+      "prompt": "The1903 Wright Flyer just airborne over flat sand, faithfully following the first-flight photograph reproduced by the National Park Service. Preserve the photograph’s wing proportions, stacked main wings, forward double elevator, rear rudders, rear pusher propellers, prone pilot and separate standing attendant. The small pilot is correctly scaled to the broad wingspan; no wheels or invented fuselage."
+    }
+  ]
+}
