@@ -36,6 +36,7 @@ export function setLang(l: Lang, content?: ZhContent | null) {
   if (content) zh = content;
   document.documentElement.lang = l === 'zh' ? 'zh-Hans' : 'en';
   document.documentElement.classList.toggle('lang-zh', l === 'zh');
+  document.title = t('The World We Know');
 }
 
 /** The language to start in: the link, then the reader's last choice, then the browser. */

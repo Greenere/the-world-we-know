@@ -19,6 +19,28 @@
         <div class="loading-sub">unrolling the map…</div>
       </div>
     </div>
+    <script>
+      // Before the app loads: the tab title and the loading card in the reader's language, chosen as the app
+      // chooses it (src/i18n.ts, initialLang): the link, then their last choice, then the browser. The Chinese
+      // title must match 'The World We Know' in src/i18n-zh.ts.
+      (function () {
+        var lang = new URLSearchParams(location.search).get('lang');
+        if (lang !== 'zh' && lang !== 'en') {
+          try {
+            lang = localStorage.getItem('lang');
+          } catch (e) {
+            lang = null;
+          }
+        }
+        if (lang !== 'zh' && lang !== 'en') lang = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        if (lang !== 'zh') return;
+        document.documentElement.lang = 'zh-Hans';
+        document.documentElement.classList.add('lang-zh');
+        document.title = '山海所知';
+        document.querySelector('.loading-title').textContent = '山海所知';
+        document.querySelector('.loading-sub').textContent = '正在展开地图……';
+      })();
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

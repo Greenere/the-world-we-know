@@ -2266,6 +2266,11 @@ kbd {
   color: var(--ink-2);
 }
 
+.lang-zh .loading-sub {
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
 .loading.error .loading-sub {
   color: var(--rubric);
   font-style: normal;
