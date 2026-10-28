@@ -19,11 +19,14 @@ export class About {
   el: HTMLElement;
 
   constructor(data: AppData, store: Store) {
-    const counts = t('{regions} regions, {cities} cities, {journeys} journeys and {inventions} inventions', {
+    // Landmarks are stored among the cities; they are counted apart.
+    const counts = t('{regions} regions, {cities} cities, {landmarks} landmarks, {journeys} journeys, {inventions} inventions and {living} plants and animals', {
       regions: data.regions.filter(r => !r.hidden).length,
-      cities: data.cities.length,
+      cities: data.cities.filter(c => !c.kind).length,
+      landmarks: data.cities.filter(c => c.kind).length,
       journeys: data.journeys.length,
       inventions: data.inventions.length,
+      living: data.living.length,
     });
     this.el = h(
       'div.modal-overlay',
@@ -70,12 +73,12 @@ export class About {
         h('h3.card-h', t('Sources and accuracy')),
         h(
           'p',
-          t('This first version holds {counts}. Every knowledge change, journey stop, city date and invention carries a source and a confidence rating, shown on its card. Dates are approximate until each viewpoint has been reviewed by a specialist; Polynesian dates in particular come from archaeology and genetics and carry wide ranges. The basemap is Natural Earth (public domain).', {counts}),
+          t('This first version holds {counts}. Every knowledge change, journey stop, city date, landmark, invention, and arrival of a plant or animal carries a source and a confidence rating, shown on its card. Dates are approximate until each viewpoint has been reviewed by a specialist; Polynesian dates in particular come from archaeology and genetics and carry wide ranges. The basemap is Natural Earth (public domain).', {counts}),
         ),
         h('h3.card-h', t('Pictures')),
         h(
           'p',
-          t('The sketches of cities and journeys are imagined: drawn by an image model from a sourced description of each era or scene, in the manner of an explorer’s sketchbook. They are illustrations, not period artworks.'),
+          t('The sketches of cities, journeys and inventions are imagined: drawn by an image model from a sourced description of each era, scene or object, in the manner of an explorer’s sketchbook. They are illustrations, not period artworks.'),
         ),
       ),
     );

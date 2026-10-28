@@ -16,15 +16,19 @@
   - **Greece, Rome, Iberia, France, Britain, Germany, the Norse, Russia.**
   - **Two knowledge communities,** Europe and the Islamic world. Each shares what its members knew.
   - **Humanity,** which traces where people first arrived, back 70,000 years.
-- **105 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks.
-- **70 landmarks and the lost cities found again.**
+- **143 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks.
+- **123 landmarks and 63 lost cities found again.**
   - Pyramids, walls, waterfalls and volcanoes, each known to a viewpoint only when it lived nearby, met the place itself, or the place became famous.
+  - Some cover ground: deserts, salt flats and lakes that shrink over the centuries, drawn in their real outlines.
   - Some change with time. The Great Wall is drawn through nine dynasties, each wall in ink while it stood and fading the longer it has lain in ruin. The Grand Canal re-routes age by age.
-- **60 inventions** that changed how people saw the world, from the spoked-wheel chariot to GPS.
-- **404 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
+  - Wonders within a city (the Alhambra in Granada) are listed on their city's card.
+- **82 inventions** that changed how people saw the world, from the spoked-wheel chariot to GPS. Those made in a city are listed on its card.
+- **35 plants and animals**, and how word of them spread: maize from Mexico to China, tea to Europe by caravan and by sea, the giraffe greeted as a qilin at the Ming court, the dodo and the moa lost. Each has the year every viewpoint came to know it, and its arrivals marked on the map.
+- **493 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
+- **Two panels.** Journeys holds the journeys and landmarks; Discoveries holds the inventions and the plants and animals.
 - **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map.
 
-Every view is a link: `?vp=china&year=1420`, `?vp=europe,china&year=1420`, `?journey=zhenghe&stop=4`, `?city=loulan`, `?invention=magnetic-compass`, `&globe=1`, `&lang=zh`.
+Every view is a link: `?vp=china&year=1420`, `?vp=europe,china&year=1420`, `?journey=zhenghe&stop=4`, `?city=loulan`, `?invention=magnetic-compass`, `?living=maize&vp=china`, `&globe=1`, `&lang=zh`.
 
 Keys: ← → key moments or journey stops · Shift ← → one year · Space play · `/` search · Esc close.
 
@@ -54,7 +58,7 @@ A few principles run through the data:
 
 - **Knowledge can be lost.** A level can drop. The Norse colonies in Greenland fall silent, and Europe's map of it goes back to rumour.
 - **Communities share, they don't conquer.** A member knows what its community knows while it belongs, and what it brought in stays known unless there is evidence it was forgotten.
-- **Knowing a region is not knowing what is in it.** A landmark is known to the people who lived near it, to those with a recorded encounter (Xuanzang at Bamiyan in 630, Livingstone at Victoria Falls in 1855), and to everyone else only once it became widely known.
+- **Knowing a region is not knowing what is in it.** A landmark is known to the people who lived near it, to those with a recorded encounter (Xuanzang at Bamiyan in 630, Livingstone at Victoria Falls in 1855), and to everyone else only once it became widely known. A plant or animal is known from where it was first grown or met, to each viewpoint from its own arrival or encounter, and to the rest once it became widely known.
 - **Every claim is sourced.** The build refuses events, stops, cities or landmarks without a source and a confidence.
 
 ## Running it locally
@@ -83,7 +87,7 @@ data/            everything the map shows, authored as plain text (the files to 
 scripts/         build_data.py (the data compiler), routes.py (journey routing), generate_images.py (sketches)
 src/fog/         the H3 mesh, the fog field and the custom fog layer
 src/map/         basemap style and the deck.gl overlay (cities, landmarks, routes, labels)
-src/ui/          top bar, timeline, cards, the journeys/landmarks/inventions panel, search
+src/ui/          top bar, timeline, cards, the Journeys and Discoveries panel, search
 src/main.ts      wiring: state, playback, camera, input, links
 public/data/     build output (generated, not committed)
 docs/            the original spec and guides for research and image generation
@@ -102,7 +106,8 @@ The map is drawn with [MapLibre GL](https://maplibre.org/) and [deck.gl](https:/
 | `cities.csv` | Founded, peak, abandoned, forgotten and rediscovered dates, with a story |
 | `landmarks.csv` | Built and natural landmarks: dates, first encounters (`found`), when each became widely known (`widely`), story |
 | `landmark-paths.json` | Courses of walls, canals and canyons, and the ages of those rebuilt over time |
-| `inventions.json` | Instruments and ideas: when, where, who, what they changed |
+| `inventions.json` | Instruments and ideas: when, where, who, what they changed, and the city they were made in |
+| `living.json` | Plants and animals: origin, which viewpoints knew them from the start, and dated arrivals and encounters |
 | `names.csv` | What each viewpoint called each place, and when |
 | `sources.csv` | Every source cited, with its full citation |
 | `depictions/` | The imagined sketches for cities, journeys and inventions, with their prompts and sources |
@@ -122,7 +127,7 @@ Corrections, sources and new material are all welcome. Good first contributions:
 
 - **Cite a source.** Find a `draft` row in `knowledge.csv`, `cities.csv` or `landmarks.csv`, add the work to `sources.csv`, and use its id.
 - **Correct a viewpoint.** If you know a culture's history well, check its timeline in the atlas against what you know. Every viewpoint would benefit from review by someone who knows it well, ideally from within that tradition.
-- **Add a journey, landmark or invention.** Copy an existing entry as a template, run `npm run data`, and the build will tell you what's missing.
+- **Add a journey, landmark, invention, plant or animal.** Copy an existing entry as a template, run `npm run data`, and the build will tell you what's missing.
 - **Translate.** Chinese coverage is complete; the structure in `data/i18n/` and `src/i18n-zh.ts` is the template for other languages.
 
 Please run `npm run data` and `npm run build` before opening a pull request; both must pass.
@@ -130,7 +135,7 @@ Please run `npm run data` and `npm run build` before opening a pull request; bot
 ## License
 
 - **Code:** [Apache License 2.0](LICENSE).
-- **The authored content of `data/`:** [CC BY 4.0](data/LICENSE.md). This covers the knowledge tables, journeys, landmarks, stories, translations and sketches. You may reuse it with attribution to "The World We Know".
+- **The authored content of `data/`:** [CC BY 4.0](data/LICENSE.md). This covers the knowledge tables, journeys, landmarks, inventions, plants and animals, stories, translations and sketches. You may reuse it with attribution to "The World We Know".
 
 Third-party material keeps its own terms:
 - **[Natural Earth](https://www.naturalearthdata.com/) (public domain):** coastlines, rivers and lakes, downloaded at build time.

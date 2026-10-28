@@ -2,7 +2,7 @@
 
 The authored content in this directory is licensed under the
 [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-It covers the knowledge tables, regions, journeys, cities, landmarks, inventions, names, stories, translations
+It covers the knowledge tables, regions, journeys, cities, landmarks, inventions, plants and animals, names, stories, translations
 and the imagined sketches in `depictions/`, to the extent they are protected by copyright.
 
 You may share and adapt it for any purpose, including commercially, as long as you give appropriate credit,
