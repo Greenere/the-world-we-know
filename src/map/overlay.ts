@@ -412,15 +412,15 @@ export class OverlayModel {
   /**
    * Greedy label placement in screen space: big cities first, then region names. While the camera
    * moves the labels ride along and are re-placed at most every 400 ms; labels already placed keep
-   * their place, so following a traveller does not make names flicker.
+   * their place, so following a traveller does not make names flicker. Says whether it placed them afresh.
    */
-  declutter(state: State, journeyCities: Set<string>, homeCity: string | null, now: number) {
+  declutter(state: State, journeyCities: Set<string>, homeCity: string | null, now: number): boolean {
     const {map} = this.ctx;
     const zoom = map.getZoom();
     const key = `${this.visibleKey}|${zoom.toFixed(2)}|${map.getCenter().lng.toFixed(2)},${map.getCenter().lat.toFixed(2)}|${state.globe}|${[...journeyCities].join()}`;
-    if (key === this.declutterKey) return;
+    if (key === this.declutterKey) return false;
     const dataChanged = !this.declutterKey.startsWith(`${this.visibleKey}|`);
-    if (!dataChanged && map.isMoving() && now - this.declutteredAt < 400) return;
+    if (!dataChanged && map.isMoving() && now - this.declutteredAt < 400) return false;
     this.declutterKey = key;
     this.declutteredAt = now;
     const placed = new Set<string>([...this.labels.cities.map(v => v.city.id), ...this.labels.regions.map(r => r.id)]);
@@ -491,6 +491,7 @@ export class OverlayModel {
       regions.push(r);
     }
     this.labels = {cities, waters, regions};
+    return true;
   }
 
   /** Cut paths where they pass behind the globe, so no segment is drawn across the horizon. */

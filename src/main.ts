@@ -387,7 +387,9 @@ class App {
     if (geo) for (const x of geo.stops) if (x.stop.city) journeyCities.add(x.stop.city);
     const home = homeAt(this.data.vp[st.vps[0]], st.year);
     const homeCity = this.data.cities.find(c => Math.abs(c.lat - home.lat) < 0.3 && Math.abs(c.lon - home.lon) < 0.3)?.id ?? null;
-    this.model.declutter(st, journeyCities, homeCity, now);
+    // The globe paints its labels when the map redraws; a new year or viewpoint changes them without moving
+    // the camera, so ask for that redraw or the old names stay up until the next drag.
+    if (this.model.declutter(st, journeyCities, homeCity, now) && st.globe) this.map.triggerRepaint();
     const pulsing = this.model.cityViews.some(v => now - v.appearedAt < 1400) || this.model.arrivalPulsing(now);
     this.ui.timeline.setPace(!geo && st.playing && this.journeyUnderWay(st.year), st);
     if (fogChanged || visChanged || this.needsLayers || pulsing || geo) {
