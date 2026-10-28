@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Etna",
+      "caption": "Old lava fields lead toward Etna’s smoking summit craters.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View up Mount Etna's broad slopes from dark old lava foreground, sparse hardy plants, distant multiple smoky summit craters rather than one perfect cone, subdued snow patches high up. No city, spectacular disaster or people on lava."
+    }
+  ]
+}

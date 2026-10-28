@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "North Cape",
+      "caption": "A dark, flat-topped cliff drops sharply into the sea at North Cape.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low offshore view toward North Cape's massive dark flat-topped cliff dropping abruptly to cold northern sea, sparse vegetation on top and layered rock at base, grey sky. No globe monument, visitor centre, ship or aurora."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Victoria Falls",
+      "caption": "A broad curtain of water drops into a narrow gorge, sending spray above the surrounding trees.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Diagonal view from the opposite forested rim across the Zambezi's very broad straight curtain of white water plunging into a narrow dark basalt fissure, spray rising above trees, wet leaves near viewer. No broad Niagara-style pool, no bridge or tourist platforms."
+    }
+  ]
+}

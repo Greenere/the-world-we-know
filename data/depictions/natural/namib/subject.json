@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Namib Desert",
+      "caption": "Wind-shaped dunes approach the Atlantic coast through a belt of sea mist.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low view from a sandy ridge where immense orange Namib dune slopes descend toward grey-blue Atlantic surf and coastal mist, asymmetric dune crest and wind ripples foreground. No pyramids, palms, invented towns or camel caravans."
+    }
+  ]
+}

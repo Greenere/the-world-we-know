@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Fuji",
+      "caption": "Fuji’s volcanic cone stands beyond a quiet lake, with its upper slopes reflected in the water.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Quiet shore of a Fuji Five Lakes lake with dark reeds and low pines at edges, Mount Fuji's broad symmetrical volcanic cone and restrained snow cap reflected in still water. Low eye level; no pagoda, modern town, power lines or cherry-blossom cliché."
+    }
+  ]
+}

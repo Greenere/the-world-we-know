@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Ngorongoro Crater",
+      "caption": "Grassland and shallow water fill the broad floor of the Ngorongoro caldera.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Broad view from wooded Ngorongoro rim down into the vast unbroken caldera, grassy flat floor, small alkaline lake and scattered dots of grazing herds, enclosing rim curving into distance. No erupting volcano, deep steep canyon, jeeps or hotels."
+    }
+  ]
+}

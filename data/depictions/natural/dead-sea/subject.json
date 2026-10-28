@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Dead Sea",
+      "caption": "Salt crusts line the shore of the Dead Sea beneath bare desert hills.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low quiet Dead Sea shoreline, white crusted salt deposits and pale rounded stones foreground, still muted blue water, barren ochre hills opposite. No swimmers, resort buildings, giant crystalline fantasy spires or recent industrial works."
+    }
+  ]
+}

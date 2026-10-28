@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Kinabalu",
+      "caption": "Bare granite ridges emerge above the cloud and forest of Mount Kinabalu.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View over Borneo montane vegetation toward Kinabalu's distinctive bare jagged granite summit plateau and steep pinnacles, clouds pooled below upper slabs. No snow cap, smooth Fuji cone or rainforest on summit stone."
+    }
+  ]
+}

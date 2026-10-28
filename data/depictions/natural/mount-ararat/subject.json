@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Ararat",
+      "caption": "Ararat’s snow-covered volcanic mass rises above the dry highland plain.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide view from dry Armenian highland plain of Greater Ararat's broad isolated snow-capped volcanic massif, smaller Little Ararat cone to side, sparse grass and stony ground foreground. No ark, cross, biblical figures or modern settlement."
+    }
+  ]
+}

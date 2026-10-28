@@ -58,7 +58,7 @@ def load_dotenv():
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
-LISTS = {"city": "eras", "journey": "scenes", "invention": "studies"}
+LISTS = {"city": "eras", "journey": "scenes", "invention": "studies", "natural": "studies"}
 
 
 def prompt_for(style: str, kind: str, subject: dict, item: dict, mode: str | None) -> str:
@@ -78,7 +78,7 @@ def prompt_for(style: str, kind: str, subject: dict, item: dict, mode: str | Non
         parts.insert(0, "Redraw the attached sketch from exactly the same viewpoint, framing and drawing style. "
                         "Change only what the description below says has changed in this era; keep the land, "
                         "the shoreline and the composition as they are.")
-    elif mode == "ref" and (kind == "invention" or not item.get("traveller", True)):
+    elif mode == "ref" and (kind in ("invention", "natural") or not item.get("traveller", True)):
         parts.insert(0, "The attached page is from the same journal. Draw a new, different scene as described below, "
                         "matching only its drawing style, paper and palette; none of its people. Do not copy its composition.")
     elif mode == "ref":

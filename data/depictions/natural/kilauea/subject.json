@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Kīlauea",
+      "caption": "Glowing lava appears within the dark floor of Kīlauea’s summit crater.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Safe distant rim view into Kilauea's broad low shield-volcano summit crater during a lava-lake phase, small orange incandescent patches deep within dark cracked basalt, pale rising gas, horizon low. No steep cone, giant fountain or visitors near lava."
+    }
+  ]
+}

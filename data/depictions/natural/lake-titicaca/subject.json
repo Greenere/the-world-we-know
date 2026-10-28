@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Titicaca",
+      "caption": "Reeds fringe the shore of Lake Titicaca, with highland hills beyond the open water.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low shore view of Lake Titicaca, golden totora reeds and one small traditional reed boat pulled onto shore, distant broad blue water and Andean uplands, no crowd or stereotyped ceremonial figures."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Angel Falls",
+      "caption": "A narrow stream falls from the edge of Auyán-tepui and breaks into mist above the forest.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low view from forested valley toward Angel Falls pouring as a slender vertical ribbon off the immense flat-topped sheer wall of Auyan-tepui, dispersing into mist before wooded lower slopes. Massive tabletop plateau, no pointed volcanic cone, no broad Niagara curtain."
+    }
+  ]
+}

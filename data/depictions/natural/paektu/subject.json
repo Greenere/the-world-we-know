@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Paektu Mountain",
+      "caption": "A blue lake fills the summit caldera beneath Paektu’s rugged crater walls.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from a dark volcanic rim down to Paektu's deep blue Heaven Lake, bowl of rugged pale and dark crater walls, patches of snow in sheltered gullies and clouds above. No temple, modern steps, active lava or cartoon perfect crater circle."
+    }
+  ]
+}

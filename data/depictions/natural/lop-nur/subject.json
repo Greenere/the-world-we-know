@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lop Nur · before 1972",
+      "caption": "Shallow water and reed beds at Lop Nur before the lake dried up in 1972.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Historical Lop Nur wetland BEFORE1972 drying, low Tarim basin shore with shallow still water, reed beds and white salt edges against tawny desert horizon. Not a deep mountain lake, no snowy peaks, modern installations or dry concentric satellite-view rings."
+    }
+  ]
+}

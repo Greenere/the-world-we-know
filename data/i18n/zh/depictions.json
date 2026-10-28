@@ -648,7 +648,7 @@
   }
  },
  "invention/astrolabe": {
-  "sketch": {
+  "sketch-v2": {
    "title": "伊斯兰世界的星盘",
    "caption": "阿拔斯王朝巴格达的天文学家制作并改进星盘——一具用来计时和测量星辰高度的黄铜天空模型。"
   }
@@ -891,6 +891,402 @@
   "sketch": {
    "title": "万维网",
    "caption": "蒂姆·伯纳斯-李在欧洲核子研究中心发布第一个网站：通过互联网相互链接、人人可读可写的文档。"
+  }
+ },
+ "natural/victoria-falls": {
+  "landscape": {
+   "title": "维多利亚瀑布",
+   "caption": "宽阔的水幕落入狭窄峡谷，水雾升过岸边的树林。"
+  }
+ },
+ "natural/kilimanjaro": {
+  "landscape": {
+   "title": "乞力马扎罗山",
+   "caption": "乞力马扎罗山宽阔的雪顶高出林木覆盖的山麓与周围平原。"
+  }
+ },
+ "natural/grand-canyon": {
+  "landscape": {
+   "title": "科罗拉多大峡谷",
+   "caption": "层层岩壁与支峡向下延伸，科罗拉多河深藏在谷底。"
+  }
+ },
+ "natural/uluru": {
+  "landscape": {
+   "title": "乌鲁鲁",
+   "caption": "乌鲁鲁圆缓的砂岩岩壁从红沙与低矮植被覆盖的平原上升起。"
+  }
+ },
+ "natural/mount-fuji": {
+  "landscape": {
+   "title": "富士山",
+   "caption": "富士山的火山锥立在静谧湖水之外，山顶倒映在水中。"
+  }
+ },
+ "natural/niagara-falls": {
+  "landscape": {
+   "title": "尼亚加拉瀑布",
+   "caption": "碧绿的水流越过马蹄瀑布弯曲的岩缘，消失在升腾的水雾中。"
+  }
+ },
+ "natural/iguazu-falls": {
+  "landscape": {
+   "title": "伊瓜苏瀑布",
+   "caption": "林木茂密的小岛把伊瓜苏河分成多道瀑布，水流随后汇入峡谷。"
+  }
+ },
+ "natural/lake-baikal": {
+  "landscape": {
+   "title": "贝加尔湖",
+   "caption": "贝加尔湖岸边的透明冰块向外延伸，接上宽广的封冻湖面。"
+  }
+ },
+ "natural/dead-sea": {
+  "landscape": {
+   "title": "死海",
+   "caption": "盐壳铺在死海岸边，远处是光秃的荒漠山丘。"
+  }
+ },
+ "natural/mount-kailash": {
+  "landscape": {
+   "title": "冈仁波齐峰",
+   "caption": "深色岩层与积雪在冈仁波齐陡峭的山壁上交错，下方是开阔的青藏高原。"
+  }
+ },
+ "natural/krakatoa": {
+  "landscape": {
+   "title": "喀拉喀托火山 · 1883年以前",
+   "caption": "1883年喷发改变岛屿形态之前的喀拉喀托火山。"
+  }
+ },
+ "natural/ha-long-bay": {
+  "landscape": {
+   "title": "下龙湾",
+   "caption": "石灰岩峰林从平静水面升起，长满植被的峰顶渐渐隐入薄雾。"
+  }
+ },
+ "natural/lake-victoria": {
+  "landscape": {
+   "title": "维多利亚湖",
+   "caption": "纸莎草生长在湖边避风的浅湾，远处是低缓的岬角。"
+  }
+ },
+ "natural/blue-nile-falls": {
+  "landscape": {
+   "title": "青尼罗河瀑布",
+   "caption": "丰水时节，青尼罗河分成几道水幕，越过宽阔的岩缘落下。"
+  }
+ },
+ "natural/mont-blanc": {
+  "landscape": {
+   "title": "勃朗峰",
+   "caption": "冰川与深色岩脊从勃朗峰宽阔的雪顶向下延伸。"
+  }
+ },
+ "natural/mount-ararat": {
+  "landscape": {
+   "title": "亚拉拉特山",
+   "caption": "亚拉拉特山覆雪的火山体耸立在干燥的高地平原上。"
+  }
+ },
+ "natural/mount-tai": {
+  "landscape": {
+   "title": "泰山",
+   "caption": "石阶在泰山坡面的花岗岩与松树之间蜿蜒而上。"
+  }
+ },
+ "natural/mount-sinai": {
+  "landscape": {
+   "title": "西奈山",
+   "caption": "裸露的花岗岩山脊高出西奈半岛南部干燥的山谷。"
+  }
+ },
+ "natural/angel-falls": {
+  "landscape": {
+   "title": "天使瀑布",
+   "caption": "细长的水流从奥扬特普伊山的台地边缘坠落，在森林上方散成水雾。"
+  }
+ },
+ "natural/great-barrier-reef": {
+  "landscape": {
+   "title": "大堡礁",
+   "caption": "珊瑚斑块隐现在清澈浅水之下，旁边是一道颜色更深的水道。"
+  }
+ },
+ "natural/matterhorn": {
+  "landscape": {
+   "title": "马特洪峰",
+   "caption": "马特洪峰棱角分明的山顶耸立在岩坡与小山湖上方。"
+  }
+ },
+ "natural/aconcagua": {
+  "landscape": {
+   "title": "阿空加瓜山",
+   "caption": "阿空加瓜山宽大的岩体高出干燥山谷与冰川融水形成的河道。"
+  }
+ },
+ "natural/popocatepetl": {
+  "landscape": {
+   "title": "波波卡特佩特火山",
+   "caption": "一缕烟气升在波波卡特佩特火山留有积雪的山坡之上。"
+  }
+ },
+ "natural/chimborazo": {
+  "landscape": {
+   "title": "钦博拉索山",
+   "caption": "钦博拉索山宽阔的冰雪山顶高出高原草地。"
+  }
+ },
+ "natural/denali": {
+  "landscape": {
+   "title": "德纳里峰",
+   "caption": "德纳里峰的雪山主体远远高出下方的苔原与河谷。"
+  }
+ },
+ "natural/yellowstone": {
+  "landscape": {
+   "title": "黄石",
+   "caption": "热泉边缘分布着浅色矿物沉积与彩色带，蒸汽从水面缓缓升起。"
+  }
+ },
+ "natural/okavango": {
+  "landscape": {
+   "title": "奥卡万戈三角洲",
+   "caption": "水道在芦苇与草岛之间分流，铺展在内陆三角洲上。"
+  }
+ },
+ "natural/mount-cameroon": {
+  "landscape": {
+   "title": "喀麦隆火山",
+   "caption": "喀麦隆火山从湿润的海岸地区升起，山顶隐在云层之中。"
+  }
+ },
+ "natural/aoraki": {
+  "landscape": {
+   "title": "奥拉基山",
+   "caption": "奥拉基山覆雪的山脊高出冰川雕刻出的谷地。"
+  }
+ },
+ "natural/kilauea": {
+  "landscape": {
+   "title": "基拉韦厄火山",
+   "caption": "发亮的熔岩出现在基拉韦厄山顶火山口深色的底部。"
+  }
+ },
+ "natural/huangshan": {
+  "landscape": {
+   "title": "黄山",
+   "caption": "松树扎根在狭窄的花岗岩岩台上，云雾填满黄山的谷地。"
+  }
+ },
+ "natural/mount-olympus": {
+  "landscape": {
+   "title": "奥林匹斯山",
+   "caption": "破碎的石灰岩山脊构成奥林匹斯山的高峰。"
+  }
+ },
+ "natural/gibraltar": {
+  "landscape": {
+   "title": "直布罗陀巨岩",
+   "caption": "直布罗陀陡峭的石灰岩岩壁立在海峡旁狭窄的岸线上。"
+  }
+ },
+ "natural/giants-causeway": {
+  "landscape": {
+   "title": "巨人之路",
+   "caption": "玄武岩石柱形成高低不齐的石面，逐级伸入海中。"
+  }
+ },
+ "natural/lake-titicaca": {
+  "landscape": {
+   "title": "的的喀喀湖",
+   "caption": "芦苇环绕的的喀喀湖岸，开阔水面的远处是高原山丘。"
+  }
+ },
+ "natural/lake-chad": {
+  "landscape": {
+   "title": "乍得湖 · 约1850年",
+   "caption": "十九世纪乍得湖岸边的浅水与芦苇小岛。"
+  }
+ },
+ "natural/tassili": {
+  "landscape": {
+   "title": "阿杰尔高原",
+   "caption": "风化的砂岩石塔与背风通道分布在高原上。"
+  }
+ },
+ "natural/klyuchevskaya": {
+  "landscape": {
+   "title": "克柳切夫火山",
+   "caption": "积雪与深色沟槽交错，覆盖克柳切夫火山陡峭的山锥。"
+  }
+ },
+ "natural/geysir": {
+  "landscape": {
+   "title": "盖锡尔间歇泉",
+   "caption": "热水柱从低矮的矿物泉池中喷出，升入冰岛清冷的空气。"
+  }
+ },
+ "natural/sognefjord": {
+  "landscape": {
+   "title": "松恩峡湾",
+   "caption": "陡峭的山坡围住松恩峡湾狭长而避风的水道。"
+  }
+ },
+ "natural/etna": {
+  "landscape": {
+   "title": "埃特纳火山",
+   "caption": "古老的熔岩地带向埃特纳冒烟的山顶火山口延伸。"
+  }
+ },
+ "natural/cappadocia": {
+  "landscape": {
+   "title": "卡帕多西亚",
+   "caption": "柔软的火山岩经风化形成圆锥、山脊与顶部带帽的石柱。"
+  }
+ },
+ "natural/tsodilo": {
+  "landscape": {
+   "title": "措迪洛山",
+   "caption": "措迪洛山群从周围干燥的灌木地带突然升起。"
+  }
+ },
+ "natural/erebus": {
+  "landscape": {
+   "title": "埃里伯斯火山",
+   "caption": "淡淡的烟羽升在罗斯岛埃里伯斯火山覆雪的山坡上。"
+  }
+ },
+ "natural/everest": {
+  "landscape": {
+   "title": "珠穆朗玛峰",
+   "caption": "珠穆朗玛峰的上部山坡高出由岩石、冰雪与冰碛组成的谷地。"
+  }
+ },
+ "natural/rwenzori": {
+  "landscape": {
+   "title": "鲁文佐里山",
+   "caption": "高山沼泽地的植物生长在鲁文佐里云雾缭绕、留有积雪的山脊下。"
+  }
+ },
+ "natural/mount-kenya": {
+  "landscape": {
+   "title": "肯尼亚山",
+   "caption": "锯齿状的岩峰高出肯尼亚山开阔的高山草甸。"
+  }
+ },
+ "natural/ngorongoro": {
+  "landscape": {
+   "title": "恩戈罗恩戈罗火山口",
+   "caption": "草地与浅水铺在恩戈罗恩戈罗火山口宽阔的底部。"
+  }
+ },
+ "natural/lake-tanganyika": {
+  "landscape": {
+   "title": "坦噶尼喀湖",
+   "caption": "岩石湖岸与林木覆盖的山丘环绕着狭长的坦噶尼喀湖。"
+  }
+ },
+ "natural/kinabalu": {
+  "landscape": {
+   "title": "京那巴鲁山",
+   "caption": "裸露的花岗岩山脊从京那巴鲁山的云层与森林上方显现。"
+  }
+ },
+ "natural/tambora": {
+  "landscape": {
+   "title": "坦博拉火山 · 1815年以后",
+   "caption": "1815年喷发后形成的坦博拉山顶深大破火山口。"
+  }
+ },
+ "natural/paektu": {
+  "landscape": {
+   "title": "长白山",
+   "caption": "蓝色湖水充满山顶破火山口，周围是长白山崎岖的火山口壁。"
+  }
+ },
+ "natural/aral-sea": {
+  "landscape": {
+   "title": "咸海 · 1960年以前",
+   "caption": "二十世纪六十年代大规模引河之前的咸海。"
+  }
+ },
+ "natural/stromboli": {
+  "landscape": {
+   "title": "斯特龙博利火山",
+   "caption": "一小团炽热物质喷出斯特龙博利黑暗的海岛火山锥。"
+  }
+ },
+ "natural/santorini": {
+  "landscape": {
+   "title": "圣托里尼",
+   "caption": "层层火山岩壁环绕着圣托里尼被海水淹没的破火山口。"
+  }
+ },
+ "natural/mount-athos": {
+  "landscape": {
+   "title": "阿索斯山",
+   "caption": "阿索斯山陡然升起，下方是林木覆盖的半岛与爱琴海。"
+  }
+ },
+ "natural/yosemite": {
+  "landscape": {
+   "title": "优胜美地山谷",
+   "caption": "花岗岩峭壁高出优胜美地山谷林木茂密的谷底。"
+  }
+ },
+ "natural/lake-itasca": {
+  "landscape": {
+   "title": "艾塔斯卡湖",
+   "caption": "浅浅的出水口把艾塔斯卡湖水送入密西西比河的源头。"
+  }
+ },
+ "natural/salar-de-uyuni": {
+  "landscape": {
+   "title": "乌尤尼盐沼",
+   "caption": "多边形盐壳铺满乌尤尼盐沼平坦的表面。"
+  }
+ },
+ "natural/milford-sound": {
+  "landscape": {
+   "title": "米尔福德峡湾",
+   "caption": "陡峭的林木山壁与米特峰直接耸立在米尔福德峡湾水面之上。"
+  }
+ },
+ "natural/north-cape": {
+  "landscape": {
+   "title": "北角",
+   "caption": "北角深色、顶部平坦的悬崖陡直地落入海中。"
+  }
+ },
+ "natural/namib": {
+  "landscape": {
+   "title": "纳米布沙漠",
+   "caption": "风塑的沙丘穿过海雾地带，伸向大西洋海岸。"
+  }
+ },
+ "natural/zhangjiajie": {
+  "landscape": {
+   "title": "张家界",
+   "caption": "砂岩石柱从林木覆盖的沟谷中升起，顶部生长着小片树木。"
+  }
+ },
+ "natural/torres-del-paine": {
+  "landscape": {
+   "title": "百内国家公园",
+   "caption": "三座花岗岩石塔高出碎石坡与冰川湖。"
+  }
+ },
+ "natural/lake-texcoco": {
+  "landscape": {
+   "title": "特斯科科湖 · 约1500年",
+   "caption": "约1500年的特斯科科湖，彼时改变墨西哥谷面貌的排水工程尚未开始。"
+  }
+ },
+ "natural/lop-nur": {
+  "landscape": {
+   "title": "罗布泊 · 1972年以前",
+   "caption": "1972年干涸之前，罗布泊的浅水与芦苇地。"
   }
  }
 }

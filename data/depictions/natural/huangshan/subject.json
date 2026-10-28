@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Huangshan",
+      "caption": "Pines grip narrow granite ledges above clouds that fill the valleys of Huangshan.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level view across a Huangshan granite ridge with one crooked pine rooted on a rock ledge, clusters of steep pale granite pinnacles emerge from a sea of cloud. Keep botanical trunks natural, no floating islands or giant gate."
+    }
+  ]
+}

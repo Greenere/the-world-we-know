@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Torres del Paine",
+      "caption": "Three granite towers rise above scree slopes and a glacial lake.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Ground-level view from a rocky glacial lake shore toward the three distinct bare granite towers of Torres del Paine, steep scree apron and muted turquoise water below, cloud behind jagged skyline. Three slender granite towers rather than generic snowy volcanoes, no hotel."
+    }
+  ]
+}

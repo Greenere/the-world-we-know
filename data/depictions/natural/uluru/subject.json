@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Uluru",
+      "caption": "Uluru’s rounded sandstone face rises from a plain of red sand and low vegetation.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low ground-level view across red sand and sparse spinifex toward Uluru's recognizable long low rounded sandstone mass, vertical weathering grooves, warm side light. No sharp mountain peak, climbing people, rock paintings or fabricated sacred ceremonies."
+    }
+  ]
+}

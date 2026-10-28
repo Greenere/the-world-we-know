@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Salar de Uyuni",
+      "caption": "Polygonal salt crust stretches across the level surface of the Salar de Uyuni.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Very low ground-level study across Salar de Uyuni, polygonal white salt crust crisp in foreground, immense level pale plain toward distant blue volcanic ridges, narrow strip of sky reflected in shallow seasonal water at one side. No vehicles or giant mirror fantasy people."
+    }
+  ]
+}

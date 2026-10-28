@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Ha Long Bay",
+      "caption": "Limestone towers rise from the sheltered water, with wooded tops fading into the haze.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low water-level view in Ha Long Bay, steep irregular limestone karst towers rising directly from green-grey water, weathered cliff bases and scrubby tree crowns, towers receding into haze. No symmetric fantasy cones, cruise ships or city skyline."
+    }
+  ]
+}

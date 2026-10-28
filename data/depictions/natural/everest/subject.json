@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Everest",
+      "caption": "Everest’s upper slopes rise above a valley of rock, ice and moraine.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from Tibetan north-side valley toward Everest's immense pyramidal summit and recognizable north face, layered dark rock bands, snow gullies and upper windblown snow plume, moraine foreground. No oversized summit flags, climbers or camp tents."
+    }
+  ]
+}

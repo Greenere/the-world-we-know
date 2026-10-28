@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mont Blanc",
+      "caption": "Glaciers and dark rocky ridges descend from Mont Blanc’s broad snowy summit.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View up a broad Alpine valley toward Mont Blanc's rounded heavily glaciated summit and rugged lower spurs, moraine and pale glacial stream foreground, no climbers or ski equipment. Distinct rounded snow dome, not Matterhorn pyramid."
+    }
+  ]
+}

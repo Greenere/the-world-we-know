@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Athos",
+      "caption": "Mount Athos rises steeply above its wooded peninsula and the Aegean Sea.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Sea-level view toward Mount Athos's steep limestone-marble peak rising from a long wooded peninsula into Aegean haze, rocky coast foreground at edge, no fantasy monasteries perched on summit or modern ships."
+    }
+  ]
+}

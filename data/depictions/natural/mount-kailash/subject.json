@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Kailash",
+      "caption": "Bands of dark rock and snow mark Kailash’s steep face above the open Tibetan plateau.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from a stony Tibetan valley toward Mount Kailash's distinctive steep nearly pyramidal layered rock face, horizontal strata and vertical snow-filled groove, snow on upper shoulders, sparse brown foreground. No climbers, summit flag or invented temple."
+    }
+  ]
+}

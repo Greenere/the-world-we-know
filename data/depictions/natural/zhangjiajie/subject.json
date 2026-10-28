@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Zhangjiajie",
+      "caption": "Sandstone pillars rise from forested ravines, their tops carrying small stands of trees.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique view from a forested ridge across many tall narrow quartz-sandstone pillars of Zhangjiajie, near-vertical fluted walls, small trees growing on flat uneven tops, cloud in deep ravines. No floating mountains, glass bridge, elevator or fantasy temples."
+    }
+  ]
+}

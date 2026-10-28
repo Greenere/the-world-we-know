@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Tai",
+      "caption": "Stone steps wind between granite outcrops and pines on the slopes of Mount Tai.",
+      "sources": [
+        "shiji"
+      ],
+      "confidence": "high",
+      "prompt": "Low view up rough stone steps between weathered granite outcrops and wind-shaped pines on Mount Tai, layered wooded Shandong hills beyond, small distant tiled mountain gate optional. No invented readable calligraphy, giant Tibetan snow peaks or cable car."
+    }
+  ]
+}

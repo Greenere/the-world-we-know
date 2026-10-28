@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Aconcagua",
+      "caption": "Aconcagua’s broad rocky mass rises beyond a dry valley and glacial stream.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide view from dry upper Andean valley toward Aconcagua's broad massive rocky summit and snow-streaked high faces, ochre scree and braided glacial stream in foreground. No symmetrical volcanic cone, no lush rainforest or expedition camp."
+    }
+  ]
+}

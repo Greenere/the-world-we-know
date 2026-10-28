@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Denali",
+      "caption": "Denali’s snowy massif rises far above the tundra and river valleys below.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low view across Alaskan tundra and a gravel riverbed toward Denali's huge glaciated massif with its two principal summits, dark foothills and alpine haze. No roads, cabins, polar bears or decorative aurora."
+    }
+  ]
+}

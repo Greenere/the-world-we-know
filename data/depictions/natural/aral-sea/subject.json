@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Aral Sea · before 1960",
+      "caption": "The Aral Sea before large-scale river diversion began in the 1960s.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Aral Sea historical shoreline BEFORE1960 water diversion: broad blue inland water meeting low sandy steppe shore, faint distant sail of a modest fishing boat, sparse reeds at a small inlet, no modern rusted stranded ships or current dry salt desert."
+    }
+  ]
+}

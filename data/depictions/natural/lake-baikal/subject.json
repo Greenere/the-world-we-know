@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Baikal",
+      "caption": "Clear ice along Baikal’s shore gives way to the broad frozen surface of the lake.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Shore-level winter study of Lake Baikal: clear blue broken lake-ice slabs in foreground, long frozen surface stretching toward low distant snow-dusted Siberian ridges, bare larch at one edge. Small restrained ice slabs, no towering Arctic icebergs."
+    }
+  ]
+}

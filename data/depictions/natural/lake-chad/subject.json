@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Chad · around 1850",
+      "caption": "A nineteenth-century view of shallow water and reed islands along Lake Chad’s shore.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Historic wetland shore of Lake Chad around1850, very flat low horizon, shallow water through dense reeds and scattered grassy islands, a small wooden canoe at shoreline. Not a deep blue Alpine basin, no mountains or modern dry-lake shipwrecks."
+    }
+  ]
+}

@@ -16,6 +16,15 @@ clear; the Flyer follows the [period photographs reproduced by the National Park
 Service](https://www.nps.gov/articles/wrightflyer.htm). Versioned asset names let
 previously opened cards load the replacements without reusing cached images.
 
+The astrolabe also uses `sketch-v2`, with a rigid flat disk, a consistent rim,
+coplanar plates and a straight rule. Its revised prompt is saved beside the image.
+
+Opening an invention centres its location. While its card is open, Left/Right
+browse the same chronological list as the card buttons, stopping at either end.
+Search, editable controls and enlarged-image dialogs keep their own key handling.
+Invention-to-invention transitions retain the previous decoded sketch beneath
+the next one, using the journey sketchbook's crossfade and text fade.
+
 The shared invention style is in `data/depictions/style.json`: graphite,
 sepia ink and restrained watercolour, with unfinished edges on cream paper.
 Compositions alternate between object studies, tools being used, workshops,

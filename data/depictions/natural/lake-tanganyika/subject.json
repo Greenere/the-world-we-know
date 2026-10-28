@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Tanganyika",
+      "caption": "Rocky shores and wooded hills border the long waters of Lake Tanganyika.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low shoreline view of Lake Tanganyika near a sheltered bay, clear water over rounded stones, wooded steep hills running into long hazy lake distance, one simple dugout resting ashore. No cities or snow mountains."
+    }
+  ]
+}

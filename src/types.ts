@@ -76,7 +76,7 @@ export interface Region {
 
 export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'rediscovered';
 
-/** An imagined city era, journey scene or invention study. Fetched per subject when its card opens. */
+/** An imagined city era, journey scene, invention or landscape study. Fetched when its card opens. */
 export interface Depiction {
   id: string;
   /** A city's era: the years it covers. */
@@ -95,12 +95,12 @@ export interface Depiction {
   made?: {provider?: string; model?: string; date?: string};
 }
 
-export type DepictionKind = 'city' | 'journey' | 'invention';
+export type DepictionKind = 'city' | 'journey' | 'invention' | 'natural';
 
 export interface DepictionDoc {
   kind: DepictionKind;
   id: string;
-  /** A city's eras, a journey's scenes, or standalone invention studies, in order. */
+  /** A city's eras, a journey's scenes, or standalone invention or landscape studies, in order. */
   eras?: Depiction[];
   scenes?: Depiction[];
   studies?: Depiction[];
@@ -169,7 +169,7 @@ export interface City {
   names: NameEntry[];
   journeys: string[];
   region: number | null;
-  /** Number of era pictures in depictions/city/<id>.json. */
+  /** Number of city eras or natural-wonder studies in depictions/<kind>/<id>.json. */
   pictures?: number;
 }
 

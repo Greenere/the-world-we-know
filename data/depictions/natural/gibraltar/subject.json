@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Rock of Gibraltar",
+      "caption": "Gibraltar’s steep limestone face rises above the narrow coast beside the strait.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low coastal view toward the long steep limestone Rock of Gibraltar, sheer pale eastern face with lower scrubby slopes meeting Mediterranean water. Before modern urban development, no skyscrapers or airport runway, no detached sea-stack island."
+    }
+  ]
+}

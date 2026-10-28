@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Krakatoa · before 1883",
+      "caption": "A view of Krakatoa before the 1883 eruption reshaped the island.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Historical landscape of Krakatoa BEFORE1883, viewed from a low boat-level vantage in Sunda Strait: forested volcanic island mass with a high irregular dark ridge and quiet tropical sea. No eruption, no modern Anak Krakatau cone, no modern vessels."
+    }
+  ]
+}

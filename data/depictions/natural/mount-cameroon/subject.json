@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Cameroon",
+      "caption": "Mount Cameroon rises from a humid coastal landscape toward a cloud-covered summit.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Sea-level view from Gulf of Guinea toward Mount Cameroon's broad volcanic ridge rising above humid coastal forest, cloud clinging to the upper slopes, restrained charcoal volcanic rock foreground. No permanent snow cap or giant flowing eruption."
+    }
+  ]
+}

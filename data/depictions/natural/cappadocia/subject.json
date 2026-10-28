@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Cappadocia",
+      "caption": "Soft volcanic rock has weathered into cones, ridges and capped stone pillars.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level view into Cappadocia valley of pale volcanic tuff cones and capped fairy chimneys, deeply eroded gullies, occasional small rock-cut opening subordinate to geology. No tourist balloons, hotels, exotic fantasy towers or implausible natural arches."
+    }
+  ]
+}

@@ -426,12 +426,12 @@ export class Cards {
       ? new Plate(
           this.data,
           {
-            kind: 'city',
+            kind: c.kind === 'natural' ? 'natural' : 'city',
             id: c.id,
-            pick: eraAt,
-            label: d => formatYear(d.from ?? 0),
-            range: eraRange,
-            jump: d => this.store.set({year: d.from ?? 0, playing: false}),
+            pick: c.kind === 'natural' ? items => items[0] ?? null : eraAt,
+            label: d => c.kind === 'natural' ? t('Landscape study') : formatYear(d.from ?? 0),
+            range: d => c.kind === 'natural' ? t('Landscape study') : eraRange(d),
+            jump: d => { if (c.kind !== 'natural') this.store.set({year: d.from ?? 0, playing: false}); },
           },
           vp,
           (d, title, caption, range) => this.openLightbox(d, title, caption, range),

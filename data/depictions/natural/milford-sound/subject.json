@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Milford Sound",
+      "caption": "Steep forested walls and Mitre Peak rise directly above the water of Milford Sound.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Water-level view toward Milford Sound's Mitre Peak sharp triangular summit rising from dark forested fjord slopes, smooth grey-green water, fine pale waterfall on one rain-wet cliff. Distinct steep Fiordland landscape, no cruise boat or resort."
+    }
+  ]
+}

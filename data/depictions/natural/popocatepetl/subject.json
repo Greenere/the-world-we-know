@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Popocatépetl",
+      "caption": "A thin plume rises above Popocatépetl’s snow-streaked volcanic slopes.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View across Mexican highland pines and open foothills toward Popocatepetl's steep snow-streaked volcanic cone with a thin modest plume above summit crater, muted daylight. No dramatic red lava rivers or modern city."
+    }
+  ]
+}

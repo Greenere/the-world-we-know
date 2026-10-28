@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Geysir",
+      "caption": "A jet of hot water rises from a low mineral basin into the cool Icelandic air.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Ground-level view of an erupting Icelandic geyser at Geysir, single irregular white jet rising from low mineral basin amid bare grassy geothermal field, steam drifting sideways, low rounded hills. No huge terraced tropical pool or people standing at vent."
+    }
+  ]
+}

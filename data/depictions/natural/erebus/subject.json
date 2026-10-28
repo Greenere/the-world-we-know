@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Erebus",
+      "caption": "A pale plume rises above Erebus’s snowy slopes on Ross Island.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View across frozen Ross Sea shoreline toward Mount Erebus, broad Antarctic volcanic cone covered in snow with dark exposed rock and a small pale summit plume. Low ice hummocks foreground, no tropical lava rivers or invented ice palace."
+    }
+  ]
+}

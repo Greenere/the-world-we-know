@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Kilimanjaro",
+      "caption": "Kilimanjaro’s broad snowy summit rises above wooded foothills and the surrounding plains.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low view across dry East African grassland with scattered acacias toward Kilimanjaro, immense broad Kibo dome and flatter snowy summit, smaller rugged Mawenzi to one side, clear layers of wooded foothills. No pointed Alpine Matterhorn, no safari vehicles."
+    }
+  ]
+}

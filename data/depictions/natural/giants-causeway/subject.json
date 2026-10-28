@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Giant's Causeway",
+      "caption": "Basalt columns form an uneven pavement that steps down into the sea.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Close low view across Giant's Causeway interlocking polygonal basalt columns stepping down toward grey Atlantic surf, irregular hexagonal tops and vertical joints, distant dark coastal headland. No perfect manufactured tiles or fantasy giant footprints."
+    }
+  ]
+}

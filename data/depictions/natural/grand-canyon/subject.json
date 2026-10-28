@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Grand Canyon",
+      "caption": "Layered cliffs and side canyons descend toward the Colorado River far below the rim.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View down into the Grand Canyon from an uneven rim ledge, immense stepped red and ochre horizontal strata, nested mesas and branching side canyons, tiny glimpse of Colorado River far below. Sparse twisted juniper foreground, no buildings or railings."
+    }
+  ]
+}

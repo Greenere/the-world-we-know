@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Iguazu Falls",
+      "caption": "Forested islands divide the Iguazu into many cascades before the water enters the gorge.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View between wet subtropical foliage toward Iguazu's multiple broad stepped cascades around a mist-filled horseshoe gorge, forested islands dividing flowing water. Several separate falls, not one impossible single vertical sheet; no boardwalks."
+    }
+  ]
+}

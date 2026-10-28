@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Matterhorn",
+      "caption": "The Matterhorn’s angular summit stands above rocky slopes and a small mountain tarn.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from a rocky Alpine slope across sparse grass and a small tarn toward Matterhorn's unmistakable asymmetrical sharp pyramidal summit, four steep faces, pale snow stripes, no generic rounded volcano or ski village."
+    }
+  ]
+}

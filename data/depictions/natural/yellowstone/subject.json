@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Yellowstone",
+      "caption": "Steam drifts above a hot spring edged by pale mineral deposits and coloured margins.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Ground-level geological study of a Yellowstone hot spring, pale mineral terraces around blue steaming water, ochre and muted orange margins, thin steam drifting across conifer woodland. No people at scalding edge, boardwalk or impossible simultaneous geyser panorama."
+    }
+  ]
+}

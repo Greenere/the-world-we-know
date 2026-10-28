@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Olympus",
+      "caption": "Broken limestone ridges form the high summits of Mount Olympus.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from rocky alpine shoulder toward Mount Olympus's jagged grey limestone summit group, broken scree and sparse low plants, wisps of cloud across ridges. No classical temples, gods, marble palace or permanent huge glacier."
+    }
+  ]
+}

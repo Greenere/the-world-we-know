@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Chimborazo",
+      "caption": "Chimborazo’s broad ice-covered summit rises above the high grasslands.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from Ecuadorian paramo grassland toward Chimborazo's immense broad double-humped glaciated massif, tussock grass and low cushions foreground, banks of cloud below snowy summit. No pointed Everest silhouette."
+    }
+  ]
+}

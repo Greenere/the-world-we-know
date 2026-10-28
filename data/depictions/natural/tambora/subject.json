@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Tambora · after 1815",
+      "caption": "Tambora’s deep summit caldera, formed by the eruption of 1815.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Rim-level view INTO Mount Tambora's huge deep caldera AFTER1815, broken dark reddish rock walls with sparse regrowth, wide crater floor far below, irregular horizon of remaining rim. No intact tall pre-eruption cone or giant eruption plume."
+    }
+  ]
+}

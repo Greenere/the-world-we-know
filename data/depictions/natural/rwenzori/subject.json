@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Rwenzori",
+      "caption": "High moorland plants stand beneath the misty, snow-marked ridges of the Rwenzori.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View through giant groundsels and lobelias of Rwenzori's high wet moorland toward rugged dark mountain ridges with small summit snowfields, mist drifting between plants. No single cone or savanna acacia backdrop."
+    }
+  ]
+}

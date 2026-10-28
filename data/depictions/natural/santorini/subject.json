@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Santorini",
+      "caption": "Layered volcanic cliffs surround the water-filled caldera of Santorini.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Sea-level view inside Santorini's flooded caldera toward towering layered red-black volcanic cliffs and low remnants of island rim, open blue water foreground. Focus caldera geology without white modern tourist towns, cruise ships or active catastrophe."
+    }
+  ]
+}

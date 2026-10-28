@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Klyuchevskaya Sopka",
+      "caption": "Snow and dark gullies stripe the steep cone of Klyuchevskaya Sopka.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low Kamchatka valley view toward Klyuchevskaya Sopka's tall steep near-symmetrical volcanic cone, long dark radial gullies alternating with snow, thin plume, sparse northern larch in foreground. No Himalayan jagged range or tropical palms."
+    }
+  ]
+}

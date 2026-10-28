@@ -1,0 +1,8 @@
+{
+  "subject": "natural/lake-baikal",
+  "era": "landscape",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: historical-scene. Asset: natural wonder card in a historical atlas.\nCreate ONE landscape 3:2 natural-history field sketchbook page. The real named landscape is the subject; preserve its characteristic landforms and plausible scale. Vary foreground and depth according to the scene. Use loose visible graphite construction lines, fine quick sepia ink and parallel hatching, restrained uneven watercolour washes of ochre, grey-green and faded blue, with colour concentrated on the landform. Irregular unfinished vignette edges dissolve into bare subtly worn warm cream paper. A working observational landscape sketch, not a photograph, digital render, fantasy illustration or glossy travel poster. No border, binding, captions, labels, dates, signature, watermark or readable writing. No modern tourist infrastructure, generic explorer portrait or invented landmarks. Do not merge several incompatible viewpoints into one scene.\nNamed place: Lake Baikal. Scene: Shore-level winter study of Lake Baikal: clear blue broken lake-ice slabs in foreground, long frozen surface stretching toward low distant snow-dusted Siberian ridges, bare larch at one edge. Small restrained ice slabs, no towering Arctic icebergs."
+}

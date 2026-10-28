@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Texcoco · around 1500",
+      "caption": "Lake Texcoco around 1500, before the drainage works that transformed the Valley of Mexico.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Historical landscape of Lake Texcoco around1500, view from a low eastern shoreline over broad shallow lake with reeds and water birds; Tenochtitlan a small distant island settlement linked by thin causeways at far LEFT, mountains hazy beyond. Water dominates, no gigantic floating pyramids, modern Mexico City or European churches."
+    }
+  ]
+}

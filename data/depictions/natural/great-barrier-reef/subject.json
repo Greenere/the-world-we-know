@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Great Barrier Reef",
+      "caption": "Coral patches lie beneath clear shallow water beside a deeper blue channel.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from a very low exposed coral-cay edge across shallow clear turquoise water showing submerged branching and rounded coral forms, darker reef patches and a deeper blue channel, distant ocean horizon. Natural subdued colours, no underwater glass cross-section, divers or boats."
+    }
+  ]
+}

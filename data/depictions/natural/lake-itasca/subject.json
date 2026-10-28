@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Itasca",
+      "caption": "A shallow outlet carries water from Lake Itasca into the beginning of the Mississippi.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Intimate shore-level view at Lake Itasca's modest outlet, shallow clear water passing among rounded stones into a small stream, northern pine and mixed woodland reflected in a quiet lake behind. No monumental waterfall or oversized Mississippi channel."
+    }
+  ]
+}

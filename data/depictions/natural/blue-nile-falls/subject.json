@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Blue Nile Falls",
+      "caption": "At high water, several curtains of the Blue Nile fall across a broad rocky ledge.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Across-gorge view of Blue Nile Falls during high water, broad broken white curtains over a dark basalt escarpment, lush green banks and mist, water regrouping into a river below. No modern dam, bridge or invented snow peaks."
+    }
+  ]
+}

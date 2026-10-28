@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Tassili n'Ajjer",
+      "caption": "Wind-worn sandstone towers and sheltered passages rise above the plateau.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Ground-level view among Tassili n'Ajjer's weathered sandstone towers, narrow sandy corridor, rounded wind-eroded arches and dark shelter overhang at side. Focus geology, no fabricated rock-art panels or caravans, no giant smooth red dunes."
+    }
+  ]
+}

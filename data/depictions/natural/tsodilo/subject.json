@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Tsodilo Hills",
+      "caption": "The Tsodilo Hills rise abruptly from the surrounding dry scrubland.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide view across dry Kalahari scrub toward Tsodilo's small group of rugged isolated reddish quartzite hills, low sandy foreground and sparse trees. No invented sacred paintings, ceremonies or people; emphasize quiet scale."
+    }
+  ]
+}

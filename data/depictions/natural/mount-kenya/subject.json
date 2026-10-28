@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Kenya",
+      "caption": "Jagged rock peaks rise above Mount Kenya’s open high moorland.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View across Mount Kenya's open high moorland with tussock grass toward the distinctive jagged twin rock peaks Batian and Nelion, sparse snow in gullies. No broad snowy Kilimanjaro dome, roads or climbers."
+    }
+  ]
+}

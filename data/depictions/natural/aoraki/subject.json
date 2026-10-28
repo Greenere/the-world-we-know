@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Aoraki",
+      "caption": "Aoraki’s snowy ridges rise beyond a valley shaped by glaciers.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View up a Southern Alps valley in New Zealand toward Aoraki's rugged snow-and-ice summit ridges, glacial rubble and pale turquoise stream in foreground, steep dark shoulders. No fjord immediately at the summit, no Alpine village."
+    }
+  ]
+}

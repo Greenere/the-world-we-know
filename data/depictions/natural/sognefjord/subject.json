@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Sognefjord",
+      "caption": "Steep mountain slopes enclose the long sheltered waterway of Sognefjord.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Water-level view along a branch of Sognefjord, very deep narrow blue-grey water enclosed by steep layered green and rocky mountain walls, low cloud trailing along slopes, calm foreground ripples. No cruise ships, paved roads or sheer tropical karst."
+    }
+  ]
+}

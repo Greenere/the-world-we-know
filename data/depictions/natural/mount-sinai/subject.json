@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Mount Sinai",
+      "caption": "Bare granite ridges rise above the dry valleys of southern Sinai.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Rock-level view over rough reddish granite ridges toward the jagged summit landscape of Mount Sinai, bare arid valleys, hazy desert distance, strong pale light. No supernatural figures, tablets, snow peaks or modern viewpoint structures."
+    }
+  ]
+}

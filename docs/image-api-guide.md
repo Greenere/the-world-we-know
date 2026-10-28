@@ -42,18 +42,24 @@ The script reads only `OPENAI_API_KEY` or `GEMINI_API_KEY`. It sends nothing els
 
 ## 3. How the data fits together
 
-Pictures are organised **by subject**: one folder for each thing that has pictures. There are two kinds:
+Pictures are organised **by subject**: one folder for each thing that has pictures. There are four kinds:
 
 - **A city** has **eras**: the same view redrawn as the city changes over time.
 - **A journey** has **scenes**: illustrative moments at particular stops, drawn close enough to show people, tools and what was traded, measured or found. The traveller is the same person throughout; the view is not.
 
 - **An invention** has **studies**: standalone sketches of the object, process or idea. One study accompanies each invention card, with the existing sourced summary as its caption.
+- **A natural wonder** has **studies** under `natural/<landmark-id>`: landscape sketches shown in its landmark card. These have no artificial era range; historical landscapes identify the period in their title and caption. See [Natural wonder sketchbook](natural-wonder-sketchbook.md).
 
 Regions can become a kind later with no change to the layout.
 
 ```
 data/depictions/
-  style.json                     the drawing style for each kind (city, journey, invention)
+  style.json                     the drawing style for each kind (city, journey, invention, natural)
+  natural/
+    mount-fuji/
+      subject.json               standalone landscape study and caption
+      landscape.webp            accepted sketch
+      landscape.json            complete prompt and generation method
   invention/
     paper/
       subject.json               studies, with one entry named sketch

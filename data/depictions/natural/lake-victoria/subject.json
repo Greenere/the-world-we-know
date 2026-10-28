@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Lake Victoria",
+      "caption": "Papyrus grows along a sheltered shore of the lake, with low headlands beyond.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level study of a broad Lake Victoria shore before modern urban development, dense papyrus at foreground water edge, gentle lake waves and low rounded green headlands receding into distance, one small grounded dugout without people. No alpine peaks."
+    }
+  ]
+}

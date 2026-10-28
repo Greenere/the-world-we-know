@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Okavango Delta",
+      "caption": "Channels spread between reeds and grassy islands across the inland delta.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Slightly raised view from a low termite mound over Okavango channels, green papyrus and reed islands surrounded by shallow reflective water, open floodplain distance, perhaps two tiny wading birds. No mountains, waterfall, ocean delta or safari vehicles."
+    }
+  ]
+}

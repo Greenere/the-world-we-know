@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Yosemite Valley",
+      "caption": "Granite walls rise above the forested floor of Yosemite Valley.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Yosemite valley overlook with El Capitan's immense pale vertical granite wall on LEFT, distant Half Dome at centre-right, conifer forest and Merced valley floor below, small Bridalveil Fall on RIGHT cliff. Clear recognizable geometry, no roads or buildings."
+    }
+  ]
+}

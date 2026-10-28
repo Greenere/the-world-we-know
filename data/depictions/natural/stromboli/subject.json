@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Stromboli",
+      "caption": "A small burst of incandescent material appears above Stromboli’s dark island cone.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Distant sea-level view of Stromboli island at dusk, dark steep volcanic island cone rising from Mediterranean, very small intermittent glowing spatter near summit with thin ash wisp, sea reflections subdued. No giant red lava curtain or modern village in foreground."
+    }
+  ]
+}

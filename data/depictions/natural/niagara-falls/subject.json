@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Niagara Falls",
+      "caption": "Green water rolls over the curved ledge of Horseshoe Falls and disappears into rising mist.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique view from a wooded upstream bank of Niagara's Horseshoe Falls, powerful green water curling over a broad curved limestone ledge, foaming drop into misty river below, low flat forested horizon. Before modern development; no towers, roads, railings or boats."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "subject": "invention/astrolabe",
+  "era": "sketch-v2",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "replaces": "sketch",
+  "prompt": "Use case: precise-object-edit. Edit the attached historical sketch to correct ONLY the astrolabe and the hands where necessary to hold it naturally. Preserve the scholar, framing, background, clothing, sepia pencil-and-ink linework, restrained watercolour and cream paper. The brass astrolabe must be a rigid FLAT circular disk, presented almost perfectly face-on to the viewer so the rim reads as a clean circle with just a very thin uniform edge. Replace the warped oval instrument with a geometrically coherent instrument: concentric outer rim and circular latitude plate, a flat pierced brass rete resting directly against that plate, one shared centre pivot and a perfectly straight thin rule across the face. All parts of the face lie in ONE plane. Keep engraved celestial curves fine and subtle, with modest pointed star pointers rather than decorative star cutouts; behind the pierced rete there is an unbroken solid engraved brass plate, not sky showing through. Its small suspension ring sits above the circular rim at twelve o'clock, supported by the existing upper hand; the lower hand lightly steadies the outside bottom rim without bending the instrument. No cupping, buckling, rippling, bowl shape, off-centre bulge, twisted perimeter, curved ruler, interlocking spherical hoops, transparent backing or fantasy gears. Use consistent flat-perspective geometry and simple shading along the narrow brass edge to communicate rigidity. Keep the instrument about the same size and location in the image. No added writing, labels, captions, signatures or watermarks. Landscape3:2.",
+  "reference_sources": [
+    "https://www.cabinet.ox.ac.uk/astrolabe"
+  ],
+  "revision_note": "Rigid, flat circular body with coplanar rete and plate, consistent rim and straight rule."
+}
