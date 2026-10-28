@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "helios-herds",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Pasture-level pastoral study of several healthy horned cattle grazing above a rocky Mediterranean cove, sheep farther along the slope. One modest ancient ship small offshore. Animals ordinary natural cattle, not glowing, no sun symbols, no huge statue, no god or hero, no attack. Bright restrained golden light, calm before consequences.\nNarrative context (not text to write in image): On Thrinacia, the cattle and sheep belong to Helios. Odysseus repeats the warning and makes his men swear to leave the herds alone, eating only the provisions aboard their ship. (Book 12)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

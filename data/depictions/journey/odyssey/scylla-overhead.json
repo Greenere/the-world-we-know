@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "scylla-overhead",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Dramatic upward view from near water toward a sheer immense cliff and a dark cave HIGH above a tiny passing oared ship. Exactly six long shadowy necks each ending in one toothed monstrous head emerge downwards from the cave, body hidden. Neither dog pack nor dragon wings. No victims in mouths, no gore. Creature remains partly concealed and is vertically above the ship, scale and looming height main focus.\nNarrative context (not text to write in image): While the men watch Charybdis, Scylla reaches down from her high cave and takes six of them. The ship escapes, but the loss follows Odysseus long after they leave the strait. (Book 12)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

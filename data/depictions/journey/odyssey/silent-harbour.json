@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "silent-harbour",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: High cliff-top oblique overview of a tightly enclosed calm harbour with narrow mouth: eleven small ancient ships clustered within, ONE separate ship clearly OUTSIDE mouth at open sea side moored to a rock. Still water inside versus wind-textured outer sea. Landscape geography the focus, no giant, no hero, no attack yet, no modern port.\nNarrative context (not text to write in image): The fleet enters a narrow harbour enclosed by steep cliffs and moors close together in the still water. Odysseus keeps his own ship outside, tied to a rock at the entrance. (Book 10)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

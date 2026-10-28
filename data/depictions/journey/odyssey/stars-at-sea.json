@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "stars-at-sea",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Wide quiet nocturnal sea with immense faded indigo sky and small scattered star clusters, no labelled constellations or drawn lines. Tiny single timber raft with one square sail and a low wicker side far below, lone steering figure just a dark mark. No moonlight spotlight, no modern navigation gear, no large ship, no land yet. Sparse wash leaves warm paper visible at edges.\nNarrative context (not text to write in image): At sea, Odysseus watches the Pleiades, Boötes and the Bear. Following Calypso’s instructions, he keeps the Bear on his left; on the eighteenth day he sees the mountains of Scheria. (Book 5)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

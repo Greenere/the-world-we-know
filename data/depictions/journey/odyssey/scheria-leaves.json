@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "scheria-leaves",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Close ground-level woodland shelter beneath two tightly intertwined olive bushes near a river mouth: deep dry leaf bed with a small human outline fully concealed under leaves. No visible naked body, no cloth from later hospitality, no raft or intact ship. Dawn beyond branches, leaf texture and protecting canopy main subject, quiet shelter rather than heroic pose.\nNarrative context (not text to write in image): Poseidon’s storm destroys the raft. After reaching a river mouth, Odysseus finds two intertwined olive bushes and covers himself with fallen leaves, hiding from the cold until morning. (Book 5)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

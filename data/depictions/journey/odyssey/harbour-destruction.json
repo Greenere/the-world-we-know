@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "harbour-destruction",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Low view looking back from OUTSIDE the harbour: sheer cliffs and narrow entrance frame broken small ships inside, several huge distant humanoid silhouettes on cliffs throw boulders. Foreground only a freshly severed mooring rope whipping past the edge of an escaping ship, no foreground person. Boulders' splashes and wrecked wood, no gore or visible victims. Different angle from overhead quiet harbour.\nNarrative context (not text to write in image): The Laestrygonians hurl rocks from the cliffs and destroy the ships inside the harbour. Odysseus cuts his mooring cable and orders his rowers out to sea; the rest of the fleet is lost. (Book 10)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

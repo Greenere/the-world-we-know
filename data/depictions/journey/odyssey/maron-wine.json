@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "maron-wine",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Intimate still life of a plain hammered silver bowl, one stoppered clay storage jar and a filled goatskin wineskin resting on coarse woven cloth beside rough wooden ship ribs. Focus ceramic, silver and leather textures. A few more jars fade into background; do not attempt twelve identical vessels. No people, no modern bottle or stemmed glass.\nNarrative context (not text to write in image): At Ismarus, Odysseus spares Maron, a priest of Apollo, and his family. Maron gives him gold, a silver bowl and twelve jars of strong wine—the wine he later takes into the Cyclops’s cave. (Book 9)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

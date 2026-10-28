@@ -1,0 +1,13 @@
+{
+  "subject": "journey/odyssey",
+  "era": "anticlea-embrace",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Intimate side view of kneeling Odysseus reaching with two open arms toward the translucent shade of his older mother in a plain long robe. Her form fades into paper-grey mist THROUGH the empty space between his hands; no solid bodily embrace. Emphasise hands and unbridgeable gap, quiet restrained grief, no horror or supernatural blue glow.\nNarrative context (not text to write in image): Anticlea tells him that Penelope is still waiting and that grief for her absent son ended her own life. Three times Odysseus tries to embrace her; three times the shade slips through his arms. (Book 11)\nCharacter continuity: Odysseus: weathered olive-skinned Aegean man around forty at departure, wiry strong build, curly dark hair, short square dark beard, prominent nose, short undyed wool tunic and faded rust-red cloak. In late scenes after Ogygia, greying hair and beard with older weathered features; change clothing only where scene specifies. No crown or ornate armour. The attached image is a reference ONLY for the main man’s face and the paper/ink treatment. Draw a wholly NEW composition described above; do not copy its rope-hauling pose, ship, skyline, giant foreground portrait or inset.",
+  "reference_role": "Odysseus identity and sketch treatment only",
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ],
+  "reference_image": "data/depictions/_references/odyssey-departure.webp"
+}

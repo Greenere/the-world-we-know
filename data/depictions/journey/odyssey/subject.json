@@ -1,238 +1,1016 @@
 {
-  "traveller": "Odysseus: a weathered olive-skinned Aegean man about forty, wiry and strong, curly dark hair, short square dark beard, prominent nose; short undyed wool tunic and faded rust-red cloak fastened at the shoulder. Later scenes show more grey and wear. No ornate crown or classical armour.",
+  "traveller": "Odysseus: weathered olive-skinned Aegean man around forty at departure, wiry strong build, curly dark hair, short square dark beard, prominent nose, short undyed wool tunic and faded rust-red cloak. In late scenes after Ogygia, greying hair and beard with older weathered features; change clothing only where scene specifies. No crown or ornate armour.",
   "scenes": [
     {
-      "id": "departure",
+      "id": "troy-fleet",
       "stop": 0,
       "place": "Troy",
-      "title": "Casting off from Troy",
-      "caption": "After Troy falls, Odysseus leaves with twelve ships, beginning the return he recounts to the Phaeacians. This page imagines the departure in Book 9.",
+      "title": "Twelve ships leave Troy",
+      "caption": "After the sack of Troy, Odysseus sets out for Ithaca. His twelve ships carry the surviving crews and their plunder; the journey home has only begun. (Book 9)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus leans forward hauling a mooring rope into a low wooden Aegean ship; other ships and distant ruined Troy lightly sketched behind. Separate study of a rope knot. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects."
+      "prompt": "Wide elevated shore view across the Trojan coastal plain toward a departing fleet of twelve modest low wooden oared vessels, staggered naturally across water. Low ruined sloping citadel walls far inland, open shoreline in foreground. Ships and geography are the subject, no foreground hero, no enormous castle at water's edge.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide elevated shore view across the Trojan coastal plain toward a departing fleet of twelve modest low wooden oared vessels, staggered naturally across water. Low ruined sloping citadel walls far inland, open shoreline in foreground. Ships and geography are the subject, no foreground hero, no enormous castle at water's edge."
+      }
     },
     {
-      "id": "ismarus",
+      "id": "maron-wine",
       "stop": 1,
       "place": "Ismarus",
-      "title": "Driven back to the ships",
-      "caption": "At Ismarus, the raiders linger over their plunder until the Cicones rally against them. Odysseus loses six men from each ship before escaping (Book 9).",
+      "title": "Maron’s gift",
+      "caption": "At Ismarus, Odysseus spares Maron, a priest of Apollo, and his family. Maron gives him gold, a silver bowl and twelve jars of strong wine—the wine he later takes into the Cyclops’s cave. (Book 9)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus braces knee-deep in surf, helping a weary companion climb into a departing wooden ship, other men pushing off behind; inland figures distant, no visible injuries or gore. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Intimate still life of a plain hammered silver bowl, one stoppered clay storage jar and a filled goatskin wineskin resting on coarse woven cloth beside rough wooden ship ribs. Focus ceramic, silver and leather textures. A few more jars fade into background; do not attempt twelve identical vessels. No people, no modern bottle or stemmed glass.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Intimate still life of a plain hammered silver bowl, one stoppered clay storage jar and a filled goatskin wineskin resting on coarse woven cloth beside rough wooden ship ribs. Focus ceramic, silver and leather textures. A few more jars fade into background; do not attempt twelve identical vessels. No people, no modern bottle or stemmed glass."
+      }
     },
     {
-      "id": "malea",
+      "id": "cicones-retreat",
+      "stop": 1,
+      "place": "Ismarus",
+      "title": "The cost of staying",
+      "caption": "Odysseus urges an immediate departure, but his men stay to feast on the shore. The Cicones return with reinforcements and drive them back to sea; six men from each ship are lost. (Book 9)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "View from inside the stern looking toward a beach: sailors drag an exhausted companion over the gunwale while others push the hull out through shallow surf. Emphasise collective hurried effort and empty places on benches, not a hero portrait. Distant spear-bearing pursuers on beach, no wounds, no corpses. Every foot supported by sand, water or boat, clear hull edge.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "crew",
+        "view": "View from inside the stern looking toward a beach: sailors drag an exhausted companion over the gunwale while others push the hull out through shallow surf. Emphasise collective hurried effort and empty places on benches, not a hero portrait. Distant spear-bearing pursuers on beach, no wounds, no corpses. Every foot supported by sand, water or boat, clear hull edge."
+      }
+    },
+    {
+      "id": "malea-headland",
       "stop": 2,
       "place": "Cape Malea",
-      "title": "The cape disappears in rain",
-      "caption": "Rounding Malea, a northerly wind and the current carry the ships away from their course for home. The storm opens the voyage into unfamiliar waters (Book 9).",
+      "title": "Blown past Cape Malea",
+      "caption": "Off Cape Malea, the north wind and current push the fleet away from its course to Ithaca. For nine days the ships are driven across unfamiliar water before reaching the Lotus-eaters. (Book 9)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Low onboard view of rain, steep waves and a dark headland disappearing behind. Odysseus crouches at a wooden steering oar while two sailors lower a single square sail. No modern rigging. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Sea-level wide landscape, jagged dark headland receding behind rain curtains and wind-creased waves, one small ancient ship off-centre with sail tightly reefed or lowered. Only tiny indistinct crew. Strong diagonal waves, generous grey sky, no foreground person, no tall fantasy cliffs.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Sea-level wide landscape, jagged dark headland receding behind rain curtains and wind-creased waves, one small ancient ship off-centre with sail tightly reefed or lowered. Only tiny indistinct crew. Strong diagonal waves, generous grey sky, no foreground person, no tall fantasy cliffs."
+      }
     },
     {
-      "id": "lotus",
+      "id": "lotus-offering",
       "stop": 3,
       "place": "Land of the Lotus-eaters",
-      "title": "The taste of forgetting",
-      "caption": "The Lotus-eaters offer food that makes the scouts forget their wish to go home. Odysseus brings them back by force and ties them beneath the rowing benches (Book 9).",
+      "title": "Food that makes them stay",
+      "caption": "The Lotus-eaters welcome the three scouts and share their food. Those who taste it no longer want to report back or return home; they want to remain and eat lotus. (Book 9)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. On a quiet shore, seated sailors reach dreamily for fruit offered in a shallow basket by a peacefully dressed local woman; Odysseus pulls one reluctant companion toward the waiting boat. Lotus food remains an unspecified fruit, no asserted botanical species. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Close seated eye-level view of two pairs of anonymous adult hands exchanging small indistinct edible morsels over a simple shallow woven basket, relaxed companions blurred behind in shore shade. No identifiable Odysseus. Food not assigned to any botanical species: no identifiable water-lily blossom, no psychedelic glow. Hands and quiet hospitality are focus.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Close seated eye-level view of two pairs of anonymous adult hands exchanging small indistinct edible morsels over a simple shallow woven basket, relaxed companions blurred behind in shore shade. No identifiable Odysseus. Food not assigned to any botanical species: no identifiable water-lily blossom, no psychedelic glow. Hands and quiet hospitality are focus."
+      }
     },
     {
-      "id": "cyclops",
+      "id": "lotus-departure",
+      "stop": 3,
+      "place": "Land of the Lotus-eaters",
+      "title": "Back beneath the benches",
+      "caption": "Odysseus brings the reluctant scouts back by force and secures them beneath the rowing benches. He orders everyone else aboard before they too can taste the lotus. (Book 9)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "High oblique view into a departing low open rowing boat: three discouraged scouts sit safely below the bench level, loosely secured with rope, rowers above bend to their oars. Clear hull and bench construction. No dramatic torture, no foreground hero; diminishing peaceful shore behind. Focus cramped boat organisation and crew, sail furled.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "crew",
+        "view": "High oblique view into a departing low open rowing boat: three discouraged scouts sit safely below the bench level, loosely secured with rope, rowers above bend to their oars. Clear hull and bench construction. No dramatic torture, no foreground hero; diminishing peaceful shore behind. Focus cramped boat organisation and crew, sail furled."
+      }
+    },
+    {
+      "id": "cyclops-stores",
       "stop": 4,
       "place": "Land of the Cyclopes",
-      "title": "Beneath the ram",
-      "caption": "Calling himself Nobody, Odysseus outwits Polyphemus. At dawn he clings beneath a ram while the blinded Cyclops feels the animals’ backs as they leave the cave (Book 9).",
+      "title": "Inside the shepherd’s cave",
+      "caption": "The cave holds racks of cheese, pens of lambs and kids, and vessels full of whey. The companions want to take supplies and leave, but Odysseus waits to meet the owner. (Book 9)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Low close view of Odysseus gripping thick fleece beneath a large ram walking out of a rocky cave. A huge seated Cyclops with a cloth covering his single eye feels the ram’s back; no gore. Separate small study of a wooden milk bowl. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "View from deep inside a cavern toward a small bright opening. In foreground rough wicker racks heavy with cheese, milk bowls and pails, separated pens of lambs and kids against rock. Earthy pastoral interior, sparse warm washes. Neither giant nor Odysseus visible. No stone throne, skeletons or treasure hoard.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "interior",
+        "view": "View from deep inside a cavern toward a small bright opening. In foreground rough wicker racks heavy with cheese, milk bowls and pails, separated pens of lambs and kids against rock. Earthy pastoral interior, sparse warm washes. Neither giant nor Odysseus visible. No stone throne, skeletons or treasure hoard."
+      }
     },
     {
-      "id": "aeolus",
+      "id": "nobody-cup",
+      "stop": 4,
+      "place": "Land of the Cyclopes",
+      "title": "The name Nobody",
+      "caption": "Odysseus calls himself Nobody and gives Polyphemus Maron’s wine. When the giant sleeps, the men blind his single eye with a sharpened stake; his neighbours hear that Nobody is hurting him. (Book 9)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Low side view from beside Odysseus as he holds out a simple two-handled wooden cup to an enormous seated single-eyed shepherd, Polyphemus. One intact central eye on forehead and no normal pair of eyes, shaggy hair, rough wool clothing; huge hand receiving cup conveys scale. Dark cave interior, door-stone background, no attack, no gore. Odysseus appears small and cautious, not fighting.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Low side view from beside Odysseus as he holds out a simple two-handled wooden cup to an enormous seated single-eyed shepherd, Polyphemus. One intact central eye on forehead and no normal pair of eyes, shaggy hair, rough wool clothing; huge hand receiving cup conveys scale. Dark cave interior, door-stone background, no attack, no gore. Odysseus appears small and cautious, not fighting."
+      }
+    },
+    {
+      "id": "ram-escape",
+      "stop": 4,
+      "place": "Land of the Cyclopes",
+      "title": "Out beneath the ram",
+      "caption": "At dawn, Polyphemus feels the sheep’s backs as they leave. Odysseus escapes beneath the largest ram, but later shouts his real name from the ship. The Cyclops calls on his father Poseidon to punish him. (Book 9)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Very low side-on view of ONE large ram stepping from cave shadow into daylight, four legs on ground correctly. Odysseus is entirely UNDER the ram belly, lying horizontally with back toward ground, hands gripping belly fleece and legs tucked clear of hooves. NOT riding its back, NOT lying beside it. Only the giant's enormous hand resting on ram's upper back and a bent knee at edge, no face or gore. Clear spatial separation of man and sheep.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Very low side-on view of ONE large ram stepping from cave shadow into daylight, four legs on ground correctly. Odysseus is entirely UNDER the ram belly, lying horizontally with back toward ground, hands gripping belly fleece and legs tucked clear of hooves. NOT riding its back, NOT lying beside it. Only the giant's enormous hand resting on ram's upper back and a bent knee at edge, no face or gore. Clear spatial separation of man and sheep."
+      }
+    },
+    {
+      "id": "aeolia-rampart",
       "stop": 5,
       "place": "Aeolia",
-      "title": "A bag full of winds",
-      "caption": "Aeolus closes the blustering winds inside an oxhide bag, leaving the west wind to carry the ships toward Ithaca (Book 10).",
+      "title": "Aeolus’s island",
+      "caption": "Aeolus lives on an island enclosed by a metal wall above a sheer rock face. He welcomes Odysseus for a month and asks him about Troy and the returning Greek fleet. (Book 10)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. On a rocky island terrace, Aeolus, an older bearded host in a plain ochre robe, hands a tightly bound oxhide sack to Odysseus, who bends to receive its weight. Small separate study of the silver binding cord. The bag is closed; no wind escaping yet. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Distant water-level view of a legendary rocky island with sheer sides and a low continuous dark bronze-like metal rampart catching a muted gleam. Sea mist makes base uncertain; do not levitate island in sky. Modest low roofline beyond wall, no medieval castle, no tall spires, no identifiable modern island. No people in foreground.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Distant water-level view of a legendary rocky island with sheer sides and a low continuous dark bronze-like metal rampart catching a muted gleam. Sea mist makes base uncertain; do not levitate island in sky. Modest low roofline beyond wall, no medieval castle, no tall spires, no identifiable modern island. No people in foreground."
+      }
     },
     {
-      "id": "winds",
+      "id": "sealed-winds",
+      "stop": 5,
+      "place": "Aeolia",
+      "title": "The sealed oxhide bag",
+      "caption": "Before they leave, Aeolus shuts the troublesome winds in an oxhide bag and ties it with a silver cord. Only the west wind remains free to carry the ships toward Ithaca. (Book 10)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Overhead close study of a heavy closed stitched oxhide sack lashed firmly inside a wooden boat, its gathered mouth bound tightly with a thin silver cord. Coarse leather creases, tight cord and worn planks are main subject. Small corner of folded sail and rope. No escaping wind, no coins, no hands, no face, no magical symbols.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Overhead close study of a heavy closed stitched oxhide sack lashed firmly inside a wooden boat, its gathered mouth bound tightly with a thin silver cord. Coarse leather creases, tight cord and worn planks are main subject. Small corner of folded sail and rope. No escaping wind, no coins, no hands, no face, no magical symbols."
+      }
+    },
+    {
+      "id": "ithaca-fires",
       "stop": 6,
       "place": "Within sight of Ithaca",
-      "title": "Home lost within sight",
-      "caption": "With Ithaca close enough for its fires to be seen, the crew opens the bag while Odysseus sleeps. The released winds drive them back across the sea (Book 10).",
+      "title": "Fires on the home shore",
+      "caption": "On the tenth day, Ithaca comes into view, close enough for the crew to see fires ashore. Odysseus, exhausted from steering without rest, finally falls asleep. (Book 10)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Aboard the same low wooden single-masted ship, two curious sailors loosen a leather sack; swirling ink-and-wash gusts wrench the square sail as sleeping Odysseus begins to wake beneath his rust-red cloak. Faint island shoreline far behind. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "View from ship's low bow across calm water toward a nearby rugged wooded island with a few small field fires and thin smoke threads visible on shore. Foreground only timber prow and loose rope, no people. Soft clear morning light, no town skyline, no lighthouses, no bonfire village. Land feels tantalisingly close.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "View from ship's low bow across calm water toward a nearby rugged wooded island with a few small field fires and thin smoke threads visible on shore. Foreground only timber prow and loose rope, no people. Soft clear morning light, no town skyline, no lighthouses, no bonfire village. Land feels tantalisingly close."
+      }
     },
     {
-      "id": "refusal",
+      "id": "windbag-opened",
+      "stop": 6,
+      "place": "Within sight of Ithaca",
+      "title": "They open the bag",
+      "caption": "Thinking the bag contains gold and silver, the crew opens it while Odysseus sleeps. The released winds drive the fleet away from Ithaca and back to Aeolus. (Book 10)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Tight over-shoulder view of two sailors untying a silver cord around an oxhide bag on planks, sudden gusts tug their coarse tunics and loose sailcloth diagonally. Sleeping Odysseus a small rust-red cloaked shape well behind them, not focal portrait. Winds suggested by loose ink strokes and flying cloth, not smoke monster or white tentacles. No visible treasure.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "crew",
+        "view": "Tight over-shoulder view of two sailors untying a silver cord around an oxhide bag on planks, sudden gusts tug their coarse tunics and loose sailcloth diagonally. Sleeping Odysseus a small rust-red cloaked shape well behind them, not focal portrait. Winds suggested by loose ink strokes and flying cloth, not smoke monster or white tentacles. No visible treasure."
+      }
+    },
+    {
+      "id": "aeolus-threshold",
       "stop": 7,
       "place": "Aeolia again",
-      "title": "Aeolus closes his door",
-      "caption": "Back on Aeolia, Odysseus asks for help again. Aeolus refuses to aid a man he believes the gods oppose (Book 10).",
+      "title": "A second request refused",
+      "caption": "Odysseus returns with a herald and a companion to ask for help. Aeolus sends him away, convinced that a man so unlucky must be hated by the gods. (Book 10)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus sits exhausted at a rough stone threshold with empty hands raised in appeal. Aeolus stands inside a modest Bronze Age timber doorway, arm extended toward the sea in refusal. Closed, still scene unlike earlier gift exchange. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "View from inside a dim household hall outward through a broad wooden doorway. Odysseus and two weary companions sit as suppliants outside threshold, small in lower frame. Aeolus seen from behind inside at edge gestures toward sea. Strong empty doorway and dark/light division, not another face-to-face gift scene. Rough stone, plaster and timber, no classical columns.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "View from inside a dim household hall outward through a broad wooden doorway. Odysseus and two weary companions sit as suppliants outside threshold, small in lower frame. Aeolus seen from behind inside at edge gestures toward sea. Strong empty doorway and dark/light division, not another face-to-face gift scene. Rough stone, plaster and timber, no classical columns."
+      }
     },
     {
-      "id": "laestrygonians",
+      "id": "silent-harbour",
       "stop": 8,
       "place": "Land of the Laestrygonians",
-      "title": "One ship outside the harbour",
-      "caption": "The Laestrygonians crush the ships trapped inside their enclosed harbour. Odysseus, who moored outside, cuts his cable and escapes with the only surviving vessel (Book 10).",
+      "title": "The harbour before the attack",
+      "caption": "The fleet enters a narrow harbour enclosed by steep cliffs and moors close together in the still water. Odysseus keeps his own ship outside, tied to a rock at the entrance. (Book 10)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. A view recorded by the fleeing crew, with none of the travelling party visible: a narrow enclosed harbour seen from the open sea, towering cliffs, giant silhouettes above hurling rocks, small shattered wooden ships trapped inside. Emphasise the shape of the enclosing harbour and the vast difference in scale. No Odysseus, no close-up human portrait, no gore. No modern objects, later triremes or medieval architecture.",
-      "traveller": false
+      "prompt": "High cliff-top oblique overview of a tightly enclosed calm harbour with narrow mouth: eleven small ancient ships clustered within, ONE separate ship clearly OUTSIDE mouth at open sea side moored to a rock. Still water inside versus wind-textured outer sea. Landscape geography the focus, no giant, no hero, no attack yet, no modern port.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "High cliff-top oblique overview of a tightly enclosed calm harbour with narrow mouth: eleven small ancient ships clustered within, ONE separate ship clearly OUTSIDE mouth at open sea side moored to a rock. Still water inside versus wind-textured outer sea. Landscape geography the focus, no giant, no hero, no attack yet, no modern port."
+      }
     },
     {
-      "id": "circe",
+      "id": "harbour-destruction",
+      "stop": 8,
+      "place": "Land of the Laestrygonians",
+      "title": "Only one ship gets away",
+      "caption": "The Laestrygonians hurl rocks from the cliffs and destroy the ships inside the harbour. Odysseus cuts his mooring cable and orders his rowers out to sea; the rest of the fleet is lost. (Book 10)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Low view looking back from OUTSIDE the harbour: sheer cliffs and narrow entrance frame broken small ships inside, several huge distant humanoid silhouettes on cliffs throw boulders. Foreground only a freshly severed mooring rope whipping past the edge of an escaping ship, no foreground person. Boulders' splashes and wrecked wood, no gore or visible victims. Different angle from overhead quiet harbour.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "event",
+        "view": "Low view looking back from OUTSIDE the harbour: sheer cliffs and narrow entrance frame broken small ships inside, several huge distant humanoid silhouettes on cliffs throw boulders. Foreground only a freshly severed mooring rope whipping past the edge of an escaping ship, no foreground person. Boulders' splashes and wrecked wood, no gore or visible victims. Different angle from overhead quiet harbour."
+      }
+    },
+    {
+      "id": "circe-beasts",
       "stop": 9,
       "place": "Aeaea — Circe’s island",
-      "title": "At Circe’s table",
-      "caption": "Circe turns the companions into swine. Protected by the herb Hermes gives him, Odysseus resists her magic and wins their release; the company stays a year (Book 10).",
+      "title": "Animals outside Circe’s house",
+      "caption": "In a forest clearing, the scouts find Circe’s stone house. Wolves and lions approach them without attacking, and from inside they hear her singing as she works at her loom. (Book 10)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Circe in a woven ochre dress holds a shallow cup and slender wand beside a rustic timber hall. Odysseus watches cautiously across the table, holding a small white-flowered dark-rooted herb. Several pigs gather at her feet, forest behind. No sexualized costume. Separate study of the magical herb, without botanical labels. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Animal-eye-level view of a calm lion and two wolves resting by the broad doorway of a cut-stone house in a dense woodland clearing. Loom dimly visible through doorway; a few cautious scouts very small far behind. No Odysseus, no goddess portrait. Natural animal anatomy, placid alert behaviour, no snarling attack, no castle or classical temple.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "animal",
+        "view": "Animal-eye-level view of a calm lion and two wolves resting by the broad doorway of a cut-stone house in a dense woodland clearing. Loom dimly visible through doorway; a few cautious scouts very small far behind. No Odysseus, no goddess portrait. Natural animal anatomy, placid alert behaviour, no snarling attack, no castle or classical temple."
+      }
     },
     {
-      "id": "dead",
+      "id": "hermes-moly",
+      "stop": 9,
+      "place": "Aeaea — Circe’s island",
+      "title": "The herb Hermes gives him",
+      "caption": "Hermes meets Odysseus on the way to Circe’s house and gives him moly. Homer describes a black root and a milk-white flower; the herb protects him from Circe’s drug. (Book 10)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Close botanical field study of one small whole fictional moly plant: visibly black root with fine rootlets, simple milk-white blossom, modest green stem, held across an anonymous open hand. Dusty forest ground at edge. NO modern botanical labels, no real species claimed, no glow, no giant bouquet, no faces. Delicate ink texture, plenty of bare paper.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Close botanical field study of one small whole fictional moly plant: visibly black root with fine rootlets, simple milk-white blossom, modest green stem, held across an anonymous open hand. Dusty forest ground at edge. NO modern botanical labels, no real species claimed, no glow, no giant bouquet, no faces. Delicate ink texture, plenty of bare paper."
+      }
+    },
+    {
+      "id": "circe-restores",
+      "stop": 9,
+      "place": "Aeaea — Circe’s island",
+      "title": "The companions restored",
+      "caption": "Circe’s drink and wand turn the men into pigs, though their minds remain human. After Odysseus resists her magic, she restores them; they stay on Aeaea for a year before asking to leave. (Book 10)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Quiet medium-wide scene AFTER restoration: reunited fully human sailors in simple tunics embrace one another beside empty pig pens, Odysseus among them in profile. Circe, dignified dark-haired adult in plain ochre woven dress, stands beside stone doorway holding small ointment vessel. No half-human pig hybrids, no magical explosion, no erotic clothing. View through fence rails, collective relief instead of a posed table scene.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          10
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Quiet medium-wide scene AFTER restoration: reunited fully human sailors in simple tunics embrace one another beside empty pig pens, Odysseus among them in profile. Circe, dignified dark-haired adult in plain ochre woven dress, stands beside stone doorway holding small ointment vessel. No half-human pig hybrids, no magical explosion, no erotic clothing. View through fence rails, collective relief instead of a posed table scene."
+      }
+    },
+    {
+      "id": "cimmerian-shore",
       "stop": 10,
       "place": "The edge of Ocean",
-      "title": "A voice at the edge of Ocean",
-      "caption": "In the Cimmerians’ mist, Odysseus summons the dead. Tiresias warns him to spare the Sun’s cattle, while his mother tells him of the home he has not seen (Book 11).",
+      "title": "A shore without sunlight",
+      "caption": "The ship reaches the land of the Cimmerians beside Ocean. Mist and darkness cover the shore; the crew beaches the vessel and follows the water to the place Circe described. (Book 11)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus kneels on a dark misty shore beside a small ritual trench, an untouched bronze sword across his knees; the translucent elderly prophet Tiresias leans on a staff across from him, other faint human shades receding into grey wash. Omit blood and sacrifices; solemn, quiet, no skeleton army. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Almost unpeopled misty shoreline at twilight-darkness with one beached low ancient ship, black poplar-like silhouettes and grey reeds, still broad water fading into blank paper. Tiny crew marks only if needed. No sun disc, sunset colours, volcano, infernal fire, skulls, cave gate or fantasy city. Landscape of muted greys and sepia.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          11
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Almost unpeopled misty shoreline at twilight-darkness with one beached low ancient ship, black poplar-like silhouettes and grey reeds, still broad water fading into blank paper. Tiny crew marks only if needed. No sun disc, sunset colours, volcano, infernal fire, skulls, cave gate or fantasy city. Landscape of muted greys and sepia."
+      }
     },
     {
-      "id": "elpenor",
+      "id": "tiresias-warning",
+      "stop": 10,
+      "place": "The edge of Ocean",
+      "title": "Tiresias’s warning",
+      "caption": "Tiresias warns Odysseus to leave the Sun’s cattle unharmed. If the crew kills them, their ship and lives will be lost; Odysseus may still reach home, but late and alone. (Book 11)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Over Odysseus's shoulder toward the faint elderly shade of Tiresias holding a narrow gold staff on misty shore, small ritual trench between them. Hero a dark cropped silhouette at edge, seer and space dominate. His bronze sword already sheathed or lowered. A clay libation vessel nearby, no blood, no slaughter, no skeletons. Golden staff subtle not giant wizard prop.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          11
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Over Odysseus's shoulder toward the faint elderly shade of Tiresias holding a narrow gold staff on misty shore, small ritual trench between them. Hero a dark cropped silhouette at edge, seer and space dominate. His bronze sword already sheathed or lowered. A clay libation vessel nearby, no blood, no slaughter, no skeletons. Golden staff subtle not giant wizard prop."
+      }
+    },
+    {
+      "id": "anticlea-embrace",
+      "stop": 10,
+      "place": "The edge of Ocean",
+      "title": "His mother’s shade",
+      "caption": "Anticlea tells him that Penelope is still waiting and that grief for her absent son ended her own life. Three times Odysseus tries to embrace her; three times the shade slips through his arms. (Book 11)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Intimate side view of kneeling Odysseus reaching with two open arms toward the translucent shade of his older mother in a plain long robe. Her form fades into paper-grey mist THROUGH the empty space between his hands; no solid bodily embrace. Emphasise hands and unbridgeable gap, quiet restrained grief, no horror or supernatural blue glow.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          11
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Intimate side view of kneeling Odysseus reaching with two open arms toward the translucent shade of his older mother in a plain long robe. Her form fades into paper-grey mist THROUGH the empty space between his hands; no solid bodily embrace. Emphasise hands and unbridgeable gap, quiet restrained grief, no horror or supernatural blue glow."
+      }
+    },
+    {
+      "id": "elpenor-oar",
       "stop": 11,
       "place": "Back to Aeaea",
-      "title": "An oar above the grave",
-      "caption": "Returning to Aeaea, the crew buries Elpenor and plants his oar above the mound, as his shade requested. Circe then explains the dangers ahead (Book 12).",
+      "title": "Elpenor’s oar",
+      "caption": "Back on Aeaea, the crew burns Elpenor’s body and armour, raises a burial mound, and plants his oar above it. They fulfil the request he made when they met his shade. (Book 12)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. An unpeopled memorial study on a quiet coastal headland at dawn: a single long wooden oar planted upright above a low mound of stones and earth, with sea and a few wind-bent grasses fading into paper. A small separate close study of the worn blade and its grain. No people, no Odysseus, no body, no lettering. No modern objects, later triremes or medieval architecture.",
-      "traveller": false
+      "prompt": "Quiet object-led landscape: one worn wooden rowing oar planted vertically in a low mound of earth and stones on a coastal headland, pale sea stretching behind. Close enough to see weathered blade grain, lower grasses unfinished. No people, no body, no cross, no inscription, no extra inset. Simple moving memorial, not a gigantic monument.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Quiet object-led landscape: one worn wooden rowing oar planted vertically in a low mound of earth and stones on a coastal headland, pale sea stretching behind. Close enough to see weathered blade grain, lower grasses unfinished. No people, no body, no cross, no inscription, no extra inset. Simple moving memorial, not a gigantic monument."
+      }
     },
     {
-      "id": "sirens",
+      "id": "circe-night-counsel",
+      "stop": 11,
+      "place": "Back to Aeaea",
+      "title": "Instructions for the next passage",
+      "caption": "While the crew sleeps beside the ship, Circe tells Odysseus about the Sirens, the two dangerous rocks and the Sun’s herds. She urges him to pass Scylla quickly instead of trying to fight her. (Book 12)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Wide night shoreline with Circe and Odysseus seated apart from a sleeping crew by one grounded ship. View from behind the two seated figures looking out to dark sea, small lamp or embers softly light their profile edges. Conversational gesture toward horizon. No map, no scroll, no diagram, no monsters actually on this shore. Modest woven clothing, quiet pause.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Wide night shoreline with Circe and Odysseus seated apart from a sleeping crew by one grounded ship. View from behind the two seated figures looking out to dark sea, small lamp or embers softly light their profile edges. Conversational gesture toward horizon. No map, no scroll, no diagram, no monsters actually on this shore. Modest woven clothing, quiet pause."
+      }
+    },
+    {
+      "id": "wax-and-rope",
       "stop": 12,
       "place": "The Sirens",
-      "title": "The song he must not follow",
-      "caption": "The rowers stop their ears with wax; Odysseus is bound upright to the mast so he can hear the Sirens without steering toward them (Book 12).",
+      "title": "Wax for the rowers",
+      "caption": "As the wind drops, the men stow the sail and take up their oars. Odysseus cuts and kneads wax for their ears, then has himself bound to the mast so he alone can hear the Sirens. (Book 12)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus tied upright at chest and ankles to the mast of a low ancient rowing ship, straining toward a distant rocky islet; seated sailors row steadily with wax visibly at their ears. Two small distant human-like singing figures on rocks, not mermaids; Homer does not specify their anatomy. Separate study of a lump of beeswax. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Overhead close view of anonymous strong hands kneading small pieces of warm yellow beeswax above a wooden rowing bench, a simple bronze blade laid safely beside a larger wax lump, coiled rope and furled sailcloth nearby. Sea glimpsed beyond gunwale. No face, no candles, no modern tools, no written diagram, no unfolded sail.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Overhead close view of anonymous strong hands kneading small pieces of warm yellow beeswax above a wooden rowing bench, a simple bronze blade laid safely beside a larger wax lump, coiled rope and furled sailcloth nearby. Sea glimpsed beyond gunwale. No face, no candles, no modern tools, no written diagram, no unfolded sail."
+      }
     },
     {
-      "id": "strait",
+      "id": "sirens-under-oars",
+      "stop": 12,
+      "place": "The Sirens",
+      "title": "Rowing past the singers",
+      "caption": "The Sirens offer Odysseus knowledge of Troy and the world. He signals to be released, but the crew tightens his bonds and rows on until the voices can no longer be heard. (Book 12)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "View from shore across a flowered grassy foreground toward a low ancient rowing ship passing sideways at medium distance. Odysseus stands bound upright to mast with both feet supported on a crosspiece, crew seated rowing, SAIL FULLY LOWERED AND STOWED, calm water. Only two faint distant singing silhouettes at edge of meadow, their anatomy indistinct; no mermaid tails, no explicit bird bodies. Ship and temptation across distance, no close-up hero.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "View from shore across a flowered grassy foreground toward a low ancient rowing ship passing sideways at medium distance. Odysseus stands bound upright to mast with both feet supported on a crosspiece, crew seated rowing, SAIL FULLY LOWERED AND STOWED, calm water. Only two faint distant singing silhouettes at edge of meadow, their anatomy indistinct; no mermaid tails, no explicit bird bodies. Ship and temptation across distance, no close-up hero."
+      }
+    },
+    {
+      "id": "charybdis-current",
       "stop": 13,
       "place": "Scylla and Charybdis",
-      "title": "Between rock and whirlpool",
-      "caption": "Following Circe’s warning, Odysseus steers away from Charybdis toward Scylla. Six companions are taken as the ship passes the monster’s cliff (Book 12).",
+      "title": "Water drawn into Charybdis",
+      "caption": "Charybdis draws the sea down beneath a low rock with a fig tree above it. Odysseus orders the helmsman away from the whirlpool and tells the frightened men to keep rowing. (Book 12)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, with a plausible late Bronze Age material setting. A page of things seen from the ship: a swirling whirlpool on one side and a sheer opposing cliff with a shadowy cave from which six long serpentine dog-headed necks emerge. One small ancient wooden rowing ship between them gives scale, with only tiny indistinct crew. No identifiable Odysseus, no foreground traveller or portrait. A separate small ink study of the circular current. Peril without attacks or gore. No modern objects, later triremes or medieval architecture.",
-      "traveller": false
+      "prompt": "Low viewpoint beside a ship's gunwale, swirling water dominates foreground as a broad powerful circular current beneath a LOW rocky ledge with leafy fig tree growing above it. One oar tip at bottom conveys observer position. No monster mouth, no huge waterfall, no tall cliff on whirlpool side, no foreground hero. Restrained natural water physics.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Low viewpoint beside a ship's gunwale, swirling water dominates foreground as a broad powerful circular current beneath a LOW rocky ledge with leafy fig tree growing above it. One oar tip at bottom conveys observer position. No monster mouth, no huge waterfall, no tall cliff on whirlpool side, no foreground hero. Restrained natural water physics."
+      }
     },
     {
-      "id": "shipwreck",
+      "id": "scylla-overhead",
+      "stop": 13,
+      "place": "Scylla and Charybdis",
+      "title": "The danger above them",
+      "caption": "While the men watch Charybdis, Scylla reaches down from her high cave and takes six of them. The ship escapes, but the loss follows Odysseus long after they leave the strait. (Book 12)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Dramatic upward view from near water toward a sheer immense cliff and a dark cave HIGH above a tiny passing oared ship. Exactly six long shadowy necks each ending in one toothed monstrous head emerge downwards from the cave, body hidden. Neither dog pack nor dragon wings. No victims in mouths, no gore. Creature remains partly concealed and is vertically above the ship, scale and looming height main focus.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "creature",
+        "view": "Dramatic upward view from near water toward a sheer immense cliff and a dark cave HIGH above a tiny passing oared ship. Exactly six long shadowy necks each ending in one toothed monstrous head emerge downwards from the cave, body hidden. Neither dog pack nor dragon wings. No victims in mouths, no gore. Creature remains partly concealed and is vertically above the ship, scale and looming height main focus."
+      }
+    },
+    {
+      "id": "helios-herds",
       "stop": 14,
       "place": "Thrinacia — the cattle of the Sun",
-      "title": "The last ship breaks",
-      "caption": "After the crew kills the Sun’s cattle on Thrinacia, Zeus shatters the ship with a thunderbolt. Odysseus lashes mast and keel together and survives alone (Book 12).",
+      "title": "The cattle of the Sun",
+      "caption": "On Thrinacia, the cattle and sheep belong to Helios. Odysseus repeats the warning and makes his men swear to leave the herds alone, eating only the provisions aboard their ship. (Book 12)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Odysseus alone in a storm, chest pressed to a lashed pair of heavy broken wooden timbers, clutching rope as waves rise behind him. A distant broken mast and faint branching lightning in a grey sky, no other people, no intact ship, no gore. Small study of the timber lashing. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Pasture-level pastoral study of several healthy horned cattle grazing above a rocky Mediterranean cove, sheep farther along the slope. One modest ancient ship small offshore. Animals ordinary natural cattle, not glowing, no sun symbols, no huge statue, no god or hero, no attack. Bright restrained golden light, calm before consequences.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "animal",
+        "view": "Pasture-level pastoral study of several healthy horned cattle grazing above a rocky Mediterranean cove, sheep farther along the slope. One modest ancient ship small offshore. Animals ordinary natural cattle, not glowing, no sun symbols, no huge statue, no god or hero, no attack. Bright restrained golden light, calm before consequences."
+      }
     },
     {
-      "id": "calypso",
+      "id": "thrinacia-empty-stores",
+      "stop": 14,
+      "place": "Thrinacia — the cattle of the Sun",
+      "title": "A month of contrary winds",
+      "caption": "Contrary winds keep them on the island for a month. When the food runs out, the men catch fish and birds; while Odysseus sleeps inland, Eurylochus persuades them to kill the sacred cattle. (Book 12)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Close still life in a bleak shore camp: empty coarse grain sack lying open, nearly empty clay provision jar, a simple fishing hook with hand-line and one small fish on a rough board. Wind bends grasses behind, grounded ship blurred far away. No feast, no cattle carcass, no Odysseus participating in slaughter, no modern fishing reel. Scarcity expressed through empty containers.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Close still life in a bleak shore camp: empty coarse grain sack lying open, nearly empty clay provision jar, a simple fishing hook with hand-line and one small fish on a rough board. Wind bends grasses behind, grounded ship blurred far away. No feast, no cattle carcass, no Odysseus participating in slaughter, no modern fishing reel. Scarcity expressed through empty containers."
+      }
+    },
+    {
+      "id": "last-mast-keel",
+      "stop": 14,
+      "place": "Thrinacia — the cattle of the Sun",
+      "title": "Mast and keel",
+      "caption": "After they sail again, Zeus strikes the ship with lightning. Odysseus lashes the mast and keel together and survives alone; the current carries him back past Charybdis before he reaches Calypso’s island. (Book 12)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Very wide oblique view of a dark storm sea: tiny solitary Odysseus astride TWO long heavy timbers lashed parallel with oxhide straps, not a complete raft, no deck or sail. The surrounding empty water dominates; just a few broken planks and distant fading lightning. Clear supported body on the wood. No intact ships, no other survivors, no gore.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          12
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "Very wide oblique view of a dark storm sea: tiny solitary Odysseus astride TWO long heavy timbers lashed parallel with oxhide straps, not a complete raft, no deck or sail. The surrounding empty water dominates; just a few broken planks and distant fading lightning. Clear supported body on the wood. No intact ships, no other survivors, no gore."
+      }
+    },
+    {
+      "id": "calypso-garden",
       "stop": 15,
       "place": "Ogygia — Calypso’s island",
-      "title": "Building a way off the island",
-      "caption": "On Ogygia, Odysseus longs for home despite Calypso’s promise of immortality. When the gods order his release, she gives tools and cloth for the raft he builds (Book 5).",
+      "title": "The cave and its four springs",
+      "caption": "Around Calypso’s cave grow alder, poplar, cypress and a grapevine; four streams water the meadows. Odysseus spends seven years on the island, still longing for Ithaca despite her offer of immortality. (Books 5, 7)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. An older, greying Odysseus kneels using a bronze adze on raft timbers on a wooded shore; coils of rope and a folded square sail nearby. Calypso in a simple muted green woven dress brings a roll of cloth from a vine-covered cave. Practical boatbuilding, no romantic embrace. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Lush intimate landscape looking across four narrow spring channels threading grass and violets toward a vine-covered cave, alder and poplar near water and slender cypress beyond. A loom faint in cool cave interior, no people required. Natural sheltered garden, no temple, no stone palace, NO SHIP OR BOAT, no waterfall paradise cliché. Fresh green accent within ochre sepia palette.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          5,
+          7
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Lush intimate landscape looking across four narrow spring channels threading grass and violets toward a vine-covered cave, alder and poplar near water and slender cypress beyond. A loom faint in cool cave interior, no people required. Natural sheltered garden, no temple, no stone palace, NO SHIP OR BOAT, no waterfall paradise cliché. Fresh green accent within ochre sepia palette."
+      }
     },
     {
-      "id": "phaeacians",
+      "id": "raft-carpentry",
+      "stop": 15,
+      "place": "Ogygia — Calypso’s island",
+      "title": "Making the raft",
+      "caption": "Ordered to release him, Calypso provides tools and sailcloth. Odysseus cuts twenty trees, shapes and joins the timbers, and adds a deck, mast, steering oar and wicker sides; he finishes in four days. (Book 5)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Close low side view of older greying Odysseus using a simple hand auger to bore a hole through a squared timber on the shore, wood supported firmly on another beam. The partly assembled substantial raft behind has squared joined timbers and low wicker edging, no boat hull. Bronze adze and wooden pegs laid nearby, joinery is focus. No intact ship anywhere, no Calypso posing with cloth, no modern drill or saw.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          5
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "craft",
+        "view": "Close low side view of older greying Odysseus using a simple hand auger to bore a hole through a squared timber on the shore, wood supported firmly on another beam. The partly assembled substantial raft behind has squared joined timbers and low wicker edging, no boat hull. Bronze adze and wooden pegs laid nearby, joinery is focus. No intact ship anywhere, no Calypso posing with cloth, no modern drill or saw."
+      }
+    },
+    {
+      "id": "stars-at-sea",
+      "stop": 15,
+      "place": "Ogygia — Calypso’s island",
+      "title": "Steering by the stars",
+      "caption": "At sea, Odysseus watches the Pleiades, Boötes and the Bear. Following Calypso’s instructions, he keeps the Bear on his left; on the eighteenth day he sees the mountains of Scheria. (Book 5)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Wide quiet nocturnal sea with immense faded indigo sky and small scattered star clusters, no labelled constellations or drawn lines. Tiny single timber raft with one square sail and a low wicker side far below, lone steering figure just a dark mark. No moonlight spotlight, no modern navigation gear, no large ship, no land yet. Sparse wash leaves warm paper visible at edges.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          5
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide quiet nocturnal sea with immense faded indigo sky and small scattered star clusters, no labelled constellations or drawn lines. Tiny single timber raft with one square sail and a low wicker side far below, lone steering figure just a dark mark. No moonlight spotlight, no modern navigation gear, no large ship, no land yet. Sparse wash leaves warm paper visible at edges."
+      }
+    },
+    {
+      "id": "scheria-leaves",
       "stop": 16,
       "place": "Scheria — the Phaeacians",
-      "title": "A stranger asks for help",
-      "caption": "Shipwrecked on Scheria, Odysseus meets Nausicaa beside the washing pools. She directs him toward her parents’ palace, where the Phaeacians will hear his story and arrange his return (Book 6).",
+      "title": "Shelter under the olives",
+      "caption": "Poseidon’s storm destroys the raft. After reaching a river mouth, Odysseus finds two intertwined olive bushes and covers himself with fallen leaves, hiding from the cold until morning. (Book 5)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. At a river mouth, weary greying Odysseus fully wrapped in a rough borrowed cloth asks for help from a respectful distance. Nausicaa stands beside baskets of washed linen, a wooden mule cart behind her, attendants near the river. Hands open, no nudity, no romantic staging. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Close ground-level woodland shelter beneath two tightly intertwined olive bushes near a river mouth: deep dry leaf bed with a small human outline fully concealed under leaves. No visible naked body, no cloth from later hospitality, no raft or intact ship. Dawn beyond branches, leaf texture and protecting canopy main subject, quiet shelter rather than heroic pose.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          5
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Close ground-level woodland shelter beneath two tightly intertwined olive bushes near a river mouth: deep dry leaf bed with a small human outline fully concealed under leaves. No visible naked body, no cloth from later hospitality, no raft or intact ship. Dawn beyond branches, leaf texture and protecting canopy main subject, quiet shelter rather than heroic pose."
+      }
     },
     {
-      "id": "homecoming",
-      "stop": 17,
-      "place": "Ithaca",
-      "title": "The secret of the olive bed",
-      "caption": "In Ithaca, Penelope tests the stranger by ordering their bed moved. Odysseus knows it was built around a living olive trunk; at that proof she recognises him (Book 23).",
+      "id": "nausicaa-laundry",
+      "stop": 16,
+      "place": "Scheria — the Phaeacians",
+      "title": "Nausicaa at the washing pools",
+      "caption": "Nausicaa and her attendants wash clothes by the river and then play ball. Their cries wake Odysseus; Nausicaa stays when the others run and arranges food, clothing and directions to the city. (Book 6)",
       "sources": [
         "homer"
       ],
       "confidence": "low",
-      "prompt": "Imagined episode from Homer’s Odyssey, in a plausible late Bronze Age Aegean material setting; the fantasy is literary, not a historical observation. Intimate quiet Bronze Age timber-and-plaster room. Greying Odysseus and Penelope, a mature woman in a simple woven cream dress and muted ochre mantle, clasp one another’s forearms beside a wooden bed built around a rooted living olive trunk. Soft oil-lamp light, relief and recognition. No battle, no classical columns, no modern furniture. Small separate study of the carved bedpost and living root. Use low wooden ships with one bank of oars and a single square sail; no triremes, Roman armour, medieval castles or modern objects.",
-      "ref": "departure"
+      "prompt": "Broad riverbank scene focusing on women spreading washed linen on smooth stones, baskets and mule cart in the shade, one small ball beside folded cloth. Nausicaa adult young woman in plain woven cream dress directs an attendant with a bundle of fresh clothing toward a distant sheltered boulder where traveller remains unseen. No Odysseus portrait, no nude figures, no romantic staging. Low view through hanging wet linen.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          6
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "daily-life",
+        "view": "Broad riverbank scene focusing on women spreading washed linen on smooth stones, baskets and mule cart in the shade, one small ball beside folded cloth. Nausicaa adult young woman in plain woven cream dress directs an attendant with a bundle of fresh clothing toward a distant sheltered boulder where traveller remains unseen. No Odysseus portrait, no nude figures, no romantic staging. Low view through hanging wet linen."
+      }
+    },
+    {
+      "id": "alcinous-orchard",
+      "stop": 16,
+      "place": "Scheria — the Phaeacians",
+      "title": "Fruit through every season",
+      "caption": "Outside Alcinous’s palace, pears, apples, pomegranates, figs and olives grow in a walled garden. Homer describes fruit ripening throughout the year, with streams watering the orchard and supplying the town. (Book 7)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Eye-level orchard view through fruit-laden pear and pomegranate branches into a walled garden: fig and olive trees, modest grapevine rows, two small irrigation channels, low plastered palace wall beyond. Fruit and water lead the eye, distant town roof hints only. No people, no Versailles palace or marble columns, no modern grafting labels. Gentle cultivated counterpart to Calypso's wild garden.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          7
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Eye-level orchard view through fruit-laden pear and pomegranate branches into a walled garden: fig and olive trees, modest grapevine rows, two small irrigation channels, low plastered palace wall beyond. Fruit and water lead the eye, distant town roof hints only. No people, no Versailles palace or marble columns, no modern grafting labels. Gentle cultivated counterpart to Calypso's wild garden."
+      }
+    },
+    {
+      "id": "demodocus-song",
+      "stop": 16,
+      "place": "Scheria — the Phaeacians",
+      "title": "The story behind his tears",
+      "caption": "When Demodocus sings about Troy, Odysseus hides his tears beneath his cloak. Alcinous notices and asks who he is; at last he gives his name and tells the Phaeacians about his wanderings. (Books 8–9)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "View from beside the seated older blind bard Demodocus, his hands and simple wooden lyre prominent foreground; across hall Odysseus small figure covering his face with edge of clean cloak, king Alcinous noticing. Timber benches, woven textiles, modest bronze wall accents, hearth. Listening household, not royal throne tableau, no modern harp, no sword fight. Older greying hero, clean guest clothing.",
+      "traveller": true,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          8,
+          9
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "character",
+        "view": "View from beside the seated older blind bard Demodocus, his hands and simple wooden lyre prominent foreground; across hall Odysseus small figure covering his face with edge of clean cloak, king Alcinous noticing. Timber benches, woven textiles, modest bronze wall accents, hearth. Listening household, not royal throne tableau, no modern harp, no sword fight. Older greying hero, clean guest clothing."
+      }
+    },
+    {
+      "id": "ithaca-shore",
+      "stop": 17,
+      "place": "Ithaca",
+      "title": "Home while he sleeps",
+      "caption": "The Phaeacians carry Odysseus to Ithaca asleep and lay him on the sand with his gifts nearby. When he wakes, Athena’s mist prevents him from recognising the harbour at first. (Book 13)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Wide tranquil dawn cove sheltered by two headlands, olive tree and small cave opening on shore. Sleeping figure fully wrapped in cloak very small on sand beside folded cloth and modest bronze vessels, low Phaeacian ship already receding beyond entrance. Light mist across water. Shoreline dominates, no hero landing triumphantly, no modern town or quay.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          13
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide tranquil dawn cove sheltered by two headlands, olive tree and small cave opening on shore. Sleeping figure fully wrapped in cloak very small on sand beside folded cloth and modest bronze vessels, low Phaeacian ship already receding beyond entrance. Light mist across water. Shoreline dominates, no hero landing triumphantly, no modern town or quay."
+      }
+    },
+    {
+      "id": "argos-recognises",
+      "stop": 17,
+      "place": "Ithaca",
+      "title": "Argos recognises him",
+      "caption": "Disguised as a beggar, Odysseus reaches his house with Eumaeus. His old dog Argos recognises him, lowers his ears and wags his tail, but can no longer rise; Odysseus turns aside to hide a tear. (Book 17)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Very low intimate portrait of an old lean Mediterranean hunting dog lying on straw-mixed stable refuse beside a rough courtyard gate, greying muzzle and tired alert eyes, ears lowered and tail subtly lifted. Two distant men's sandalled feet and walking staff at doorway, bodies cropped, no hero face. Neither pristine pet bed nor graphic neglect, no collar tag, no mournful cartoon expression.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          17
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "animal",
+        "view": "Very low intimate portrait of an old lean Mediterranean hunting dog lying on straw-mixed stable refuse beside a rough courtyard gate, greying muzzle and tired alert eyes, ears lowered and tail subtly lifted. Two distant men's sandalled feet and walking staff at doorway, bodies cropped, no hero face. Neither pristine pet bed nor graphic neglect, no collar tag, no mournful cartoon expression."
+      }
+    },
+    {
+      "id": "bow-string",
+      "stop": 17,
+      "place": "Ithaca",
+      "title": "The bow in his hands",
+      "caption": "The suitors fail to string Odysseus’s bow. Still dressed as a beggar, he examines it and strings it easily, then sends an arrow through the twelve axes; the contest turns into the struggle to reclaim his house. (Books 21–22)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Close cropped view of older calloused hands checking a traditional compact curved wooden bow, one taut string runs STRAIGHT between the TWO limb tips, fingers gently pluck string as a musician tests a lyre. Ragged sleeve edge only, no face. Blurred timber hall and seated spectators behind. Do not depict the disputed axe alignment or impossible arrow path. No arrow drawn, no modern pulley bow, no floating string or weapon ornament.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          21,
+          22
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Close cropped view of older calloused hands checking a traditional compact curved wooden bow, one taut string runs STRAIGHT between the TWO limb tips, fingers gently pluck string as a musician tests a lyre. Ragged sleeve edge only, no face. Blurred timber hall and seated spectators behind. Do not depict the disputed axe alignment or impossible arrow path. No arrow drawn, no modern pulley bow, no floating string or weapon ornament."
+      }
+    },
+    {
+      "id": "olive-bedpost",
+      "stop": 17,
+      "place": "Ithaca",
+      "title": "The bed that cannot be moved",
+      "caption": "After the suitors are defeated, Penelope tests him by asking for their bed to be moved. Odysseus explains that he built it around a rooted olive trunk, trimmed into a bedpost. She recognises the secret they share. (Book 23)",
+      "sources": [
+        "homer"
+      ],
+      "confidence": "low",
+      "prompt": "Quiet close architectural and furniture study in stone-and-plaster bedchamber: a low handmade wooden bed with woven straps and folded wool covers. ONE substantial upright olive-wood corner bedpost remains rooted exactly where it enters earthen floor; trunk top cut flat at ordinary bedpost height, all branches trimmed away, tool marks on dressed wood. Three other normal joined wooden bed legs. No leafy living tree through roof, no exposed tangled roots on mattress, no modern four-poster. Soft two-person shadows or clasped hands at far edge only, no dominant portraits. Intimate warm lamplight on joinery.",
+      "traveller": false,
+      "evidence": {
+        "basis": "Paraphrase of Homer’s Odyssey; composition is interpretive.",
+        "books": [
+          23
+        ],
+        "url": "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+      },
+      "composition": {
+        "focus": "object",
+        "view": "Quiet close architectural and furniture study in stone-and-plaster bedchamber: a low handmade wooden bed with woven straps and folded wool covers. ONE substantial upright olive-wood corner bedpost remains rooted exactly where it enters earthen floor; trunk top cut flat at ordinary bedpost height, all branches trimmed away, tool marks on dressed wood. Three other normal joined wooden bed legs. No leafy living tree through roof, no exposed tangled roots on mattress, no modern four-poster. Soft two-person shadows or clasped hands at far edge only, no dominant portraits. Intimate warm lamplight on joinery."
+      }
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "malea-headland",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Sea-level wide landscape, jagged dark headland receding behind rain curtains and wind-creased waves, one small ancient ship off-centre with sail tightly reefed or lowered. Only tiny indistinct crew. Strong diagonal waves, generous grey sky, no foreground person, no tall fantasy cliffs.\nNarrative context (not text to write in image): Off Cape Malea, the north wind and current push the fleet away from its course to Ithaca. For nine days the ships are driven across unfamiliar water before reaching the Lotus-eaters. (Book 9)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

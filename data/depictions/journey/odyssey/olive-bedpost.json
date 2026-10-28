@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "olive-bedpost",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Quiet close architectural and furniture study in stone-and-plaster bedchamber: a low handmade wooden bed with woven straps and folded wool covers. ONE substantial upright olive-wood corner bedpost remains rooted exactly where it enters earthen floor; trunk top cut flat at ordinary bedpost height, all branches trimmed away, tool marks on dressed wood. Three other normal joined wooden bed legs. No leafy living tree through roof, no exposed tangled roots on mattress, no modern four-poster. Soft two-person shadows or clasped hands at far edge only, no dominant portraits. Intimate warm lamplight on joinery.\nNarrative context (not text to write in image): After the suitors are defeated, Penelope tests him by asking for their bed to be moved. Odysseus explains that he built it around a rooted olive trunk, trimmed into a bedpost. She recognises the secret they share. (Book 23)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

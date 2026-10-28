@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "ithaca-shore",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Wide tranquil dawn cove sheltered by two headlands, olive tree and small cave opening on shore. Sleeping figure fully wrapped in cloak very small on sand beside folded cloth and modest bronze vessels, low Phaeacian ship already receding beyond entrance. Light mist across water. Shoreline dominates, no hero landing triumphantly, no modern town or quay.\nNarrative context (not text to write in image): The Phaeacians carry Odysseus to Ithaca asleep and lay him on the sand with his gifts nearby. When he wakes, Athena’s mist prevents him from recognising the harbour at first. (Book 13)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

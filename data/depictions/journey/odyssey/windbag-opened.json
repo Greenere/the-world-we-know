@@ -1,0 +1,21 @@
+{
+  "subject": "journey/odyssey",
+  "era": "windbag-opened",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Tight over-shoulder view of two sailors untying a silver cord around an oxhide bag on planks, sudden gusts tug their coarse tunics and loose sailcloth diagonally. Sleeping Odysseus a small rust-red cloaked shape well behind them, not focal portrait. Winds suggested by loose ink strokes and flying cloth, not smoke monster or white tentacles. No visible treasure.\nNarrative context (not text to write in image): Thinking the bag contains gold and silver, the crew opens it while Odysseus sleeps. The released winds drive the fleet away from Ithaca and back to Aeolus. (Book 10)\nCharacter continuity: Odysseus: weathered olive-skinned Aegean man around forty at departure, wiry strong build, curly dark hair, short square dark beard, prominent nose, short undyed wool tunic and faded rust-red cloak. In late scenes after Ogygia, greying hair and beard with older weathered features; change clothing only where scene specifies. No crown or ornate armour. The attached image is a reference ONLY for the main man’s face and the paper/ink treatment. Draw a wholly NEW composition described above; do not copy its rope-hauling pose, ship, skyline, giant foreground portrait or inset.",
+  "reference_role": "Odysseus identity and sketch treatment only",
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ],
+  "reference_image": "data/depictions/_references/odyssey-departure.webp",
+  "edits": [
+    {
+      "date": "2026-10-28",
+      "method": "built-in imagegen",
+      "prompt": "Edit this Odyssey sketch in one targeted way: change ONLY the foreground sailor on the LEFT who is opening the oxhide wind bag. He is an ordinary crewman, NOT Odysseus. Give him close-cropped straight dark hair, a clean-shaven angular face, and a plain faded muted green sleeveless wool tunic. Keep his body, hands, rope handling and exact pose anatomically sound and unchanged. Preserve the sleeping dark-curly-haired bearded Odysseus in his rust-red cloak at upper left BACKGROUND; preserve the grey-haired sailor on the right, ship, wind bag, silver cord, sea, wind, rigging, composition, graphite and sepia ink linework, uneven watercolour washes and unfinished cream paper edges. No writing. The awake foreground man and sleeping background man must clearly be different people.",
+      "revision_note": "Distinguish the awake sailor opening the bag from the sleeping Odysseus behind him."
+    }
+  ]
+}

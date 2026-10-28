@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "hermes-moly",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Close botanical field study of one small whole fictional moly plant: visibly black root with fine rootlets, simple milk-white blossom, modest green stem, held across an anonymous open hand. Dusty forest ground at edge. NO modern botanical labels, no real species claimed, no glow, no giant bouquet, no faces. Delicate ink texture, plenty of bare paper.\nNarrative context (not text to write in image): Hermes meets Odysseus on the way to Circe’s house and gives him moly. Homer describes a black root and a milk-white flower; the herb protects him from Circe’s drug. (Book 10)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

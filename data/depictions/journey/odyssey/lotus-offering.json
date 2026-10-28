@@ -1,0 +1,12 @@
+{
+  "subject": "journey/odyssey",
+  "era": "lotus-offering",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Close seated eye-level view of two pairs of anonymous adult hands exchanging small indistinct edible morsels over a simple shallow woven basket, relaxed companions blurred behind in shore shade. No identifiable Odysseus. Food not assigned to any botanical species: no identifiable water-lily blossom, no psychedelic glow. Hands and quiet hospitality are focus.\nNarrative context (not text to write in image): The Lotus-eaters welcome the three scouts and share their food. Those who taste it no longer want to report back or return home; they want to remain and eat lotus. (Book 9)\nDo not insert a foreground Odysseus portrait. Only include people explicitly specified in the scene.",
+  "reference_role": null,
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ]
+}

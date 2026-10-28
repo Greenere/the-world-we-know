@@ -1,0 +1,13 @@
+{
+  "subject": "journey/odyssey",
+  "era": "circe-restores",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-27",
+  "prompt": "Use case: illustration-story. Create ONE landscape 3:2 page for the Odyssey journey sketchbook. Loose visible graphite underdrawing, quick fine sepia ink, open parallel hatching, sparse uneven watercolour washes in muted ochre, grey-green and faded blue, small rust-red accents. Irregular unfinished edges fade into bare warm cream paper. A working sketch with selective detail, not glossy fantasy concept art, a photoreal image or an oil painting. One coherent scene, not a collage, no decorative inset repeated on every page. No writing, lettering, captions, labels, signature, watermark, border or book binding. Mythic scene as narrated by Homer, material details loosely late Bronze Age Aegean: simple wool and linen, stone/plaster/timber, bronze tools, low single-banked oared ships and one square sail when specified. No medieval castle, trireme, Viking dragon prow, Roman armour, classical marble temple, modern vessel or modern object. Prioritise readable spatial relationships and natural hands, bodies, animals and rigging.\nScene: Quiet medium-wide scene AFTER restoration: reunited fully human sailors in simple tunics embrace one another beside empty pig pens, Odysseus among them in profile. Circe, dignified dark-haired adult in plain ochre woven dress, stands beside stone doorway holding small ointment vessel. No half-human pig hybrids, no magical explosion, no erotic clothing. View through fence rails, collective relief instead of a posed table scene.\nNarrative context (not text to write in image): Circe’s drink and wand turn the men into pigs, though their minds remain human. After Odysseus resists her magic, she restores them; they stay on Aeaea for a year before asking to leave. (Book 10)\nCharacter continuity: Odysseus: weathered olive-skinned Aegean man around forty at departure, wiry strong build, curly dark hair, short square dark beard, prominent nose, short undyed wool tunic and faded rust-red cloak. In late scenes after Ogygia, greying hair and beard with older weathered features; change clothing only where scene specifies. No crown or ornate armour. The attached image is a reference ONLY for the main man’s face and the paper/ink treatment. Draw a wholly NEW composition described above; do not copy its rope-hauling pose, ship, skyline, giant foreground portrait or inset.",
+  "reference_role": "Odysseus identity and sketch treatment only",
+  "reference_sources": [
+    "https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+  ],
+  "reference_image": "data/depictions/_references/odyssey-departure.webp"
+}
