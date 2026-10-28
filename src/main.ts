@@ -21,11 +21,11 @@ import type {FogLayerUniforms} from './fog/layer';
 import type {JourneyGeo} from './journey-geo';
 import {atYear, buildJourneyGeo, km, legDuration, placeAt, progressForYear, span, stepCount, travelled, yearAt} from './journey-geo';
 import {createMap} from './map/basemap';
-import {type CityView, cityStatus, clampLat, type InventionView, OverlayModel, type RouteView, type Traveller} from './map/overlay';
+import {type CityView, cityStatus, clampLat, type InventionView, type LivingPoint, OverlayModel, type RouteView, type Traveller} from './map/overlay';
 import {Sight} from './sight';
-import {DEFAULT_STATE, readUrl, type State, Store, writeUrl} from './state';
-import {formatRange, formatYear} from './time';
-import type {SearchEntry, VpId} from './types';
+import {DEFAULT_STATE, isListPanel, type ListPanel, readUrl, type Shelf, SHELVES, type State, Store, writeUrl} from './state';
+import {formatRange, formatYear, PRESENT, START} from './time';
+import type {Living, SearchEntry, VpId} from './types';
 import {About} from './ui/about';
 import {Cards, levelName} from './ui/cards';
 import {hexToRgb, mixHex, rgb01} from './ui/color';
@@ -39,7 +39,7 @@ import {momentsFor, scaleFor, Timeline} from './ui/timeline';
 import {TopBar} from './ui/topbar';
 
 const PAPER_FOG = '#efe7d3';
-const PICKABLE = ['others', 'routes', 'inventions', 'inventions-globe', 'cities', 'cities-globe', 'journey-stops'];
+const PICKABLE = ['others', 'routes', 'living-points', 'inventions', 'inventions-globe', 'cities', 'cities-globe', 'journey-stops'];
 const EDGE = '#8a6a43';
 const HIGHLIGHT = '#9b2f20';
 /** Seconds to play the whole timeline at 1×. */
@@ -94,7 +94,10 @@ class App {
   private last = performance.now();
   private travelTarget: number | null = null;
   /** A journey opened from the journey list goes back to that list when it is closed. */
-  private backToList = false;
+  /** The list a journey was opened from, to return to when it closes. */
+  private backToList: ListPanel | null = null;
+  /** The list each face of the left panel last showed, so switching faces brings it back. */
+  private lastShelf: Record<ListPanel, Shelf> = {journeys: 'journeys', discoveries: 'inventions'};
   private dwell = 0;
   private sightCache = new Map<string, Sight>();
   /** Follow camera: paused while the reader drags the map, resumed when the traveller moves. */
@@ -150,6 +153,8 @@ class App {
       openRegion: (id: string) => this.openRegion(id, true),
       openJourney: (id: string) => this.startJourney(id),
       openInvention: (id: string) => this.openInvention(id),
+      openLiving: (id: string, year?: number) => this.openLiving(id, year),
+      pickArrival: (i: number) => this.pickArrival(i),
       openCity: (id: string) => this.openCity(id, false),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),
     };
@@ -163,11 +168,12 @@ class App {
         close: () => this.closeJourney(),
         openRegion: id => this.openRegion(id, true),
         openInvention: id => this.openInvention(id),
+        openLiving: id => this.openLiving(id),
         openCity: id => this.openCity(id, true),
         switchTo: (id, year) => this.startJourney(id, year),
         showSketch: i => {
           this.travelTarget = null;
-          this.store.set({progress: i, playing: false, city: null, region: null, regionCell: null, invention: null});
+          this.store.set({progress: i, playing: false, city: null, region: null, regionCell: null, invention: null, living: null});
           ui.cards.reopenScene();
         },
         jumpTo: year => {
@@ -227,6 +233,8 @@ class App {
     if (s.region && !this.data.regionById.has(s.region)) s.region = null;
     if (s.invention && !this.data.inventionById.has(s.invention)) s.invention = null;
     if (s.invention && url.year === undefined && !s.journey) s.year = this.data.inventionById.get(s.invention)!.mid;
+    if (s.living && !this.data.livingById.has(s.living)) s.living = null;
+    if (s.living && url.year === undefined && !s.journey) s.year = this.livingYear(this.data.livingById.get(s.living)!, s.vps[0]);
     if (s.journey) {
       const g = this.geo(s.journey)!;
       if (!url.vps) s.vps = [g.journey.viewpoint];
@@ -240,14 +248,29 @@ class App {
   }
 
   private normalize(n: State, p: State): State {
-    // One card at a time: an invention, a city or a region.
+    // Each face of the left panel shows one of its own lists: the last one it showed.
+    if (isListPanel(n.panel)) {
+      const own: readonly Shelf[] = SHELVES[n.panel];
+      if (!own.includes(n.shelf)) n.shelf = this.lastShelf[n.panel];
+      this.lastShelf[n.panel] = n.shelf;
+    }
+    // One card at a time: an invention, a plant or animal, a city or a region.
     if (n.invention && n.invention !== p.invention) {
       n.city = null;
       n.region = null;
       n.regionCell = null;
+      n.living = null;
+    } else if (n.living && n.living !== p.living) {
+      n.city = null;
+      n.region = null;
+      n.regionCell = null;
+      n.invention = null;
     } else if ((n.city && n.city !== p.city) || (n.region && n.region !== p.region)) {
       n.invention = null;
+      n.living = null;
     }
+    // A place picked on one plant or animal's way means nothing for another.
+    if (n.living !== p.living) n.arrival = null;
     if (n.journey) {
       const g = this.geo(n.journey)!;
       const max = stepCount(g) - 1;
@@ -287,7 +310,7 @@ class App {
     this.ui.about.update(s);
     this.ui.inset.update(s, geo, performance.now());
     document.documentElement.style.setProperty('--vp', this.data.vp[s.vps[0]].color);
-    document.body.classList.toggle('has-journey', !!s.journey || s.panel === 'journeys');
+    document.body.classList.toggle('has-journey', !!s.journey || isListPanel(s.panel));
 
     if (s.vps.join() !== p.vps.join()) {
       this.tau = 0.5;
@@ -365,7 +388,7 @@ class App {
     const home = homeAt(this.data.vp[st.vps[0]], st.year);
     const homeCity = this.data.cities.find(c => Math.abs(c.lat - home.lat) < 0.3 && Math.abs(c.lon - home.lon) < 0.3)?.id ?? null;
     this.model.declutter(st, journeyCities, homeCity, now);
-    const pulsing = this.model.cityViews.some(v => now - v.appearedAt < 1400);
+    const pulsing = this.model.cityViews.some(v => now - v.appearedAt < 1400) || this.model.arrivalPulsing(now);
     this.ui.timeline.setPace(!geo && st.playing && this.journeyUnderWay(st.year), st);
     if (fogChanged || visChanged || this.needsLayers || pulsing || geo) {
       this.needsLayers = false;
@@ -491,6 +514,12 @@ class App {
     for (const m of momentsFor(this.data, s)) {
       if (m.year > from && m.year <= to) this.ui.timeline.showCaption(tx.moment(m.label), this.data.vp[m.vp].color);
     }
+    // The plant or animal being followed: each viewpoint it reaches, as the years pass.
+    const lv = s.living ? this.data.livingById.get(s.living) : undefined;
+    for (const [i, a] of (lv?.spread ?? []).entries()) {
+      if (lv && a.vp && a.mid > from && a.mid <= to)
+        this.ui.timeline.showCaption(t('{thing} reaches {place}', {thing: tx.living(lv.id, 'name', lv.name), place: tx.arrival(lv.id, i, 'place', a.place)}), this.data.vp[a.vp].color);
+    }
     for (const x of this.data.inventions) {
       if (x.mid > from && x.mid <= to) this.ui.timeline.showCaption(isZh() ? `${t('Invented: ')}${tx.invention(x.id, 'name', x.name)}` : `Invented: ${x.name.charAt(0).toLowerCase()}${x.name.slice(1)}`, '#8a6628');
     }
@@ -519,7 +548,7 @@ class App {
     if (!g) return;
     this.travelTarget = null;
     // Opened from the list, or hopping from one journey to another that was: the way back stays the list.
-    if (!this.store.state.journey) this.backToList = this.store.state.panel === 'journeys';
+    if (!this.store.state.journey) this.backToList = isListPanel(this.store.state.panel) ? this.store.state.panel : null;
     this.store.set({
       journey: id,
       progress: year === undefined ? 0 : progressForYear(g, year, false),
@@ -531,6 +560,7 @@ class App {
       region: null,
       regionCell: null,
       invention: null,
+      living: null,
       globe: g.journey.globe ? true : this.store.state.globe,
     });
     if (this.store.state.follow) this.followCamera(this.store.state, g, true);
@@ -590,8 +620,8 @@ class App {
 
   closeJourney() {
     this.travelTarget = null;
-    this.store.set({journey: null, playing: false, progress: 0, ...(this.backToList ? {panel: 'journeys' as const} : {})});
-    this.backToList = false;
+    this.store.set({journey: null, playing: false, progress: 0, ...(this.backToList ? {panel: this.backToList} : {})});
+    this.backToList = null;
   }
 
   private fitJourney(g: JourneyGeo) {
@@ -669,7 +699,7 @@ class App {
   openCity(id: string, fly: boolean) {
     const c = this.data.cityById.get(id);
     if (!c) return;
-    this.store.set({city: id, region: null, regionCell: null, invention: null});
+    this.store.set({city: id, region: null, regionCell: null, invention: null, living: null});
     if (fly) this.map.flyTo({center: [c.lon, c.lat], zoom: Math.max(this.map.getZoom(), 4.2), duration: 1400});
   }
 
@@ -690,8 +720,54 @@ class App {
     });
   }
 
+  /** When a viewpoint came to know a plant or animal, on the timeline's scale. */
+  private livingYear(x: Living, vp: VpId): number {
+    return Math.max(START, Math.min(PRESENT, Math.round(x.known[vp] ?? x.origin.mid)));
+  }
+
+  /** Open a plant or animal at the year the viewpoint came to know it (or at `year`), framing where it spread. */
+  openLiving(id: string, year?: number) {
+    const x = this.data.livingById.get(id);
+    if (!x) return;
+    if (this.store.state.journey) this.closeJourney();
+    const narrow = innerWidth < 760;
+    this.store.set({living: id, year: year ?? this.livingYear(x, this.store.state.vps[0]), playing: false, ...(narrow ? {panel: 'none' as const} : {})});
+    this.frameLiving(x, true);
+  }
+
+  /** Go to a place on the followed plant or animal's way: its year, the map over it, its name and a pulse. */
+  pickArrival(i: number) {
+    const x = this.store.state.living ? this.data.livingById.get(this.store.state.living) : undefined;
+    const a = x?.spread[i];
+    if (!a) return;
+    this.store.set({arrival: i, year: Math.max(START, Math.round(a.mid)), playing: false});
+    this.model.pulseArrival(performance.now());
+    this.needsLayers = true;
+    this.map.flyTo({center: [a.lon, clampLat(a.lat, this.store.state.globe)], zoom: Math.max(this.map.getZoom(), 3.5), duration: 1200, essential: true});
+  }
+
+  /** Bring a plant or animal's origin to the middle of the open map: between the list and the card on a wide
+   * screen, above the card on a narrow one, close enough to see the land around it. */
+  private frameLiving(x: Living, animate: boolean) {
+    const s = this.store.state;
+    const narrow = innerWidth < 760;
+    const zoom = s.globe ? Math.max(this.map.getZoom(), 1.8) : Math.max(2.2, Math.min(this.map.getZoom(), 3));
+    // The left list and the right card are both 400px wide: offset by half of whatever one is open alone.
+    const left = !narrow && (s.panel === 'journeys' || s.panel === 'discoveries') ? 400 : 0;
+    const right = narrow ? 0 : 400;
+    const at = {
+      center: [x.origin.lon, clampLat(x.origin.lat, s.globe)] as [number, number],
+      zoom,
+      offset: [(left - right) / 2, 0] as [number, number],
+      padding: narrow ? this.cameraPadding() : {top: 0, bottom: 0, left: 0, right: 0},
+    };
+    // An instant fly rather than a jump, since only a fly takes an offset.
+    this.map.flyTo({...at, duration: animate ? 1200 : 0, essential: true});
+  }
+
   private choose(e: SearchEntry) {
-    if (e.t === 'invention') this.openInvention(e.id);
+    if (e.t === 'living') this.openLiving(e.id);
+    else if (e.t === 'invention') this.openInvention(e.id);
     else if (e.t === 'journey') this.startJourney(e.id);
     else if (e.t === 'city') this.openCity(e.id, true);
     else this.openRegion(e.id, true);
@@ -704,7 +780,8 @@ class App {
       if (s.follow) this.followCamera(s, g, true);
       else this.fitJourney(g);
     }
-    if (s.invention) {
+    if (s.living) this.frameLiving(this.data.livingById.get(s.living)!, false);
+    else if (s.invention) {
       const x = this.data.inventionById.get(s.invention)!;
       this.map.jumpTo({
         center: [x.lon, clampLat(x.lat, s.globe)],
@@ -767,6 +844,13 @@ class App {
         this.startJourney((pick.object as {r: RouteView}).r.id);
         return;
       }
+      if (pick?.layer?.id === 'living-points') {
+        // A place on the way: go there, in the year it arrived; the origin just centres the map on it.
+        const p = pick.object as LivingPoint;
+        if (p.index >= 0) this.pickArrival(p.index);
+        else this.map.flyTo({center: p.pos, zoom: Math.max(this.map.getZoom(), 3), duration: 1200, essential: true});
+        return;
+      }
       if (pick?.layer?.id.startsWith('inventions')) {
         this.openInvention((pick.object as InventionView).inv.id);
         return;
@@ -783,7 +867,7 @@ class App {
       const cell = cellAt(this.grid, e.lngLat.lat, e.lngLat.lng);
       const ri = cell >= 0 ? this.grid.region[cell] : 0xffff;
       if (ri === 0xffff) {
-        this.store.set({region: null, regionCell: null, city: null, invention: null});
+        this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
         return;
       }
       this.store.set({region: this.data.regions[ri].id, regionCell: cell, city: null});
@@ -829,6 +913,10 @@ class App {
     } else if (pick?.layer?.id === 'routes') {
       const r = (pick.object as {r: RouteView}).r;
       text = h('div', h('strong', r.name), h('span.tip-sub', ` · ${r.years}`), h('div.tip-level', t('Click to follow')));
+      canvas.style.cursor = 'pointer';
+    } else if (pick?.layer?.id === 'living-points') {
+      const p = pick.object as LivingPoint;
+      text = h('div', h('strong', p.label), h('span.tip-sub', ` · ${formatRange(p.year)}`), p.note ? h('div.tip-level', p.note) : null);
       canvas.style.cursor = 'pointer';
     } else if (pick?.layer?.id.startsWith('inventions')) {
       const x = (pick.object as InventionView).inv;
@@ -916,7 +1004,7 @@ class App {
       } else if (e.key === 'Escape') {
         if (s.search) this.store.set({search: false});
         else if (s.panel !== 'none') this.store.set({panel: 'none'});
-        else if (s.city || s.region || s.invention) this.store.set({city: null, region: null, regionCell: null, invention: null});
+        else if (s.city || s.region || s.invention || s.living) this.store.set({city: null, region: null, regionCell: null, invention: null, living: null});
         else if (s.journey) this.closeJourney();
       }
     });

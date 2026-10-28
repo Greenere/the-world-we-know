@@ -7,6 +7,7 @@ import type {
   GridDoc,
   Invention,
   Journey,
+  Living,
   NameEntry,
   Region,
   SearchEntry,
@@ -34,6 +35,8 @@ export interface AppData {
   series: Series[];
   inventions: Invention[];
   inventionById: Map<string, Invention>;
+  living: Living[];
+  livingById: Map<string, Living>;
   sources: Record<string, Source>;
   search: SearchEntry[];
   grid: GridDoc;
@@ -56,13 +59,14 @@ export function dataUrl(path: string): string {
 export async function loadData(): Promise<AppData> {
   const manifest = await get<{version: string}>('manifest.json', String(Date.now()));
   const v = manifest.version;
-  const [viewpoints, regions, cities, journeys, series, inventions, sources, search, grid, beyond, ...fogs] = await Promise.all([
+  const [viewpoints, regions, cities, journeys, series, inventions, living, sources, search, grid, beyond, ...fogs] = await Promise.all([
     get<Viewpoint[]>('viewpoints.json', v),
     get<Region[]>('regions.json', v),
     get<City[]>('cities.json', v),
     get<Journey[]>('journeys.json', v),
     get<Series[]>('series.json', v),
     get<Invention[]>('inventions.json', v),
+    get<Living[]>('living.json', v),
     get<Record<string, Source>>('sources.json', v),
     get<SearchEntry[]>('search.json', v),
     get<GridDoc>('grid.json', v),
@@ -84,6 +88,8 @@ export async function loadData(): Promise<AppData> {
     series,
     inventions,
     inventionById: new Map(inventions.map(x => [x.id, x])),
+    living,
+    livingById: new Map(living.map(x => [x.id, x])),
     sources,
     search,
     grid,

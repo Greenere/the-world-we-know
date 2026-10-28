@@ -3,12 +3,12 @@ import {landmarkKnown, loadPictures, nameFor, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import type {JourneyGeo} from '../journey-geo';
 import {currentStopIndex} from '../journey-geo';
-import type {Shelf, State, Store} from '../state';
+import {isListPanel, type Shelf, type State, type Store} from '../state';
 import {ERAS, formatRange, formatYear, mainScale, PRESENT, START} from '../time';
 import type {City, Journey, VpId} from '../types';
 import {t, tx} from '../i18n';
 import {h, setIcon} from './dom';
-import {icons, inventionIcons, kindIcons, naturalIcons} from './icons';
+import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
 import {GROUPS} from './topbar';
 
 /** Journey kinds grouped into the list's filters. */
@@ -49,6 +49,11 @@ export class JourneyPanel {
   private meanwhileEl: HTMLElement | null = null;
   private meanwhileKey = '';
   private invItems = new Map<string, HTMLElement>();
+  /** The list on show, so a switch to the panel's other face rebuilds it. */
+  private listShelf: Shelf | null = null;
+  private livingItems = new Map<string, HTMLElement>();
+  /** The viewpoint the plants and animals list was built for. */
+  private livingVp = '';
   /** A landmark's rows: one in its era, and another while it is among those built around the current year. */
   private landmarkItems = new Map<string, HTMLElement[]>();
   /** The section at the top of a list that follows the timeline (journeys under way, landmarks built around the
@@ -72,6 +77,7 @@ export class JourneyPanel {
       close(): void;
       openRegion(id: string): void;
       openInvention(id: string): void;
+      openLiving(id: string): void;
       openCity(id: string): void;
       switchTo(id: string, year: number): void;
       showSketch(stop: number): void;
@@ -89,9 +95,10 @@ export class JourneyPanel {
   }
 
   update(s: State, geo: JourneyGeo | null) {
-    const mode = geo ? `j:${geo.journey.id}` : s.panel === 'journeys' ? 'list' : 'none';
+    const mode = geo ? `j:${geo.journey.id}` : isListPanel(s.panel) ? 'list' : 'none';
     this.el.hidden = mode === 'none';
-    if (mode !== this.key) {
+    // Switching between the panel's faces (Journeys, Discoveries) changes the list too.
+    if (mode !== this.key || (mode === 'list' && s.shelf !== this.listShelf)) {
       // Coming back from a journey opened from the list: the list as it was left, filters and place in it.
       const returning = mode === 'list' && this.key.startsWith('j:');
       if (this.key === 'list') this.listScroll = this.el.scrollTop;
@@ -108,9 +115,11 @@ export class JourneyPanel {
     }
     if (geo) this.progress(s, geo);
     else if (mode === 'list' && s.shelf === 'landmarks' && s.vps[0] !== this.landmarkVp) this.listEl?.replaceChildren(...this.landmarkList(s));
+    else if (mode === 'list' && s.shelf === 'living' && s.vps[0] !== this.livingVp) this.listEl?.replaceChildren(...this.livingList(s));
     if (mode === 'list') this.refreshNear(s.year);
     for (const [id, els] of this.landmarkItems) for (const el of els) el.classList.toggle('current', id === s.city);
     for (const [id, el] of this.invItems) el.classList.toggle('current', id === s.invention);
+    for (const [id, el] of this.livingItems) el.classList.toggle('current', id === s.living);
   }
 
   /** Bring the entry a journey was opened from back to where it sat, once the list has settled for the new year. */
@@ -147,6 +156,7 @@ export class JourneyPanel {
   private list(returning = false): Node[] {
     this.near = null;
     const shelf = this.store.state.shelf;
+    this.listShelf = shelf;
     const tab = (id: Shelf, label: string) =>
       h(
         'button.jp-tab',
@@ -167,14 +177,16 @@ export class JourneyPanel {
       );
     this.listEl = h('div.jp-list-body');
     this.invItems.clear();
+    this.livingItems.clear();
     this.landmarkItems.clear();
     if (shelf === 'journeys') this.listEl.append(...this.journeyList(returning));
     else if (shelf === 'inventions') this.listEl.append(...this.inventionList());
+    else if (shelf === 'living') this.listEl.append(...this.livingList(this.store.state));
     else this.listEl.append(...this.landmarkList(this.store.state));
     return [
       h(
         'div.jp-head',
-        h('div.jp-tabs', {role: 'tablist'}, tab('journeys', 'Journeys'), tab('landmarks', 'Landmarks'), tab('inventions', 'Inventions')),
+        h('div.jp-tabs', {role: 'tablist'}, ...(this.store.state.panel === 'discoveries' ? [tab('inventions', 'Inventions'), tab('living', 'Species')] : [tab('journeys', 'Journeys'), tab('landmarks', 'Landmarks')])),
         h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: () => this.store.set({panel: 'none'}), html: icons.close}),
       ),
       this.listEl,
@@ -314,7 +326,7 @@ export class JourneyPanel {
   /** Open the list at an era (from the timeline): unfold its group and bring it to the top of the panel. */
   openEra(id: string) {
     if (this.store.state.journey) return;
-    if (this.store.state.panel !== 'journeys') this.store.set({panel: 'journeys'});
+    if (!isListPanel(this.store.state.panel)) this.store.set({panel: 'journeys'});
     const section = this.listEl?.querySelector<HTMLElement>(`[data-era="${id}"]`);
     if (!section) return;
     const head = section.querySelector<HTMLElement>('.jp-era');
@@ -606,6 +618,46 @@ export class JourneyPanel {
                 h('span.jp-item-text', h('span.jp-item-name', tx.invention(x.id, 'name', x.name)), h('span.jp-item-meta', `${formatRange(x.year)} · ${tx.invention(x.id, 'place', x.place)}`)),
               );
               this.invItems.set(x.id, btn);
+              return h('li', btn);
+            }),
+          ),
+        );
+      }),
+    ].filter(Boolean) as Node[];
+  }
+
+  /** Plants and animals, grouped into eras by when this viewpoint came to know each: maize for China in the
+   * age of discovery, the horse for China in its early kingdoms. A click opens it at that year. */
+  private livingList(s: State): Node[] {
+    const vp = s.vps[0];
+    this.livingVp = vp;
+    this.livingItems.clear();
+    const vpName = tx.viewpoint(vp, 'name', this.data.vp[vp].name);
+    const all = this.data.living
+      .map(x => ({x, from: Math.max(START, Math.min(PRESENT, x.known[vp] ?? x.origin.mid))}))
+      .sort((a, b) => a.from - b.from || a.x.name.localeCompare(b.x.name));
+    return [
+      h('p.jp-intro', t('Crops, beasts and wonders of nature, and how word of them spread: by when {vp} came to know each. Open one to watch it travel.', {vp: vpName})),
+      ...ERAS.map(era => {
+        const list = all.filter(e => e.from >= era.from && e.from < era.to);
+        if (!list.length) return null;
+        return h(
+          'section.jp-group',
+          {'data-era': era.id},
+          h('h3.card-h', t(era.name)),
+          h(
+            'ul.jp-list',
+            list.map(({x, from}) => {
+              const known = x.known[vp] ?? x.origin.mid;
+              const when = vp === 'humanity' ? t('Known to people from {year}', {year: formatYear(Math.round(known))})
+                : known <= START ? t('Known before {year}', {year: formatYear(START)}) : t('Known from {year}', {year: formatYear(Math.round(from))});
+              const btn = h(
+                'button.jp-item.living-item',
+                {type: 'button', class: `living-${x.kind}`, onclick: () => this.actions.openLiving(x.id)},
+                h('span.jp-item-icon', {html: livingIcons[x.kind]}),
+                h('span.jp-item-text', h('span.jp-item-name', tx.living(x.id, 'name', x.name)), h('span.jp-item-meta', `${when} · ${tx.living(x.id, 'place', x.origin.place)}`)),
+              );
+              this.livingItems.set(x.id, btn);
               return h('li', btn);
             }),
           ),

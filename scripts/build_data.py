@@ -1137,7 +1137,7 @@ def zh_date(text: str) -> str | None:
     return f"{year}{mo}月{int(m.group(1))}日" if m.group(1) else f"{year}{mo}月"
 
 
-def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, city_ids, events) -> dict | None:
+def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, city_ids, events, living) -> dict | None:
     """Chinese for the data (data/i18n/zh/): checked against what it translates, bundled into one file the
     app fetches when the reader switches to Chinese. Anything missing stays English in the app."""
     root = DATA / "i18n" / "zh"
@@ -1207,6 +1207,18 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
             fail(f"i18n/zh/inventions.json: unknown invention {k!r}")
     stats["inventions"] = (len(inv), len(inv_ids))
 
+    # Plants and animals: name, origin place and culture, summary, and each arrival's place and note by index.
+    lz = rd("living.json")
+    lby = {x["id"]: x for x in living}
+    for k, d in lz.items():
+        if k not in lby:
+            fail(f"i18n/zh/living.json: unknown plant or animal {k!r}")
+            continue
+        for i in d.get("spread", {}):
+            if not (i.isdigit() and int(i) < len(lby[k]["spread"])):
+                fail(f"i18n/zh/living.json: {k} has no arrival {i}")
+    stats["plants and animals"] = (len(lz), len(lby))
+
     vps = rd("viewpoints.json")
     for k in vps:
         if k not in vp_ids:
@@ -1253,10 +1265,11 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
 
     # Characters the map's labels can show, for its font atlas.
     label_text = list(names.values()) + list(regions.values()) + [x.get("name", "") for x in inv.values()] + [x.get("name", "") for x in jz.values()]
+    label_text += [e.get("place", "") for x in lz.values() for e in x.get("spread", {}).values()] + [x.get(k, "") for x in lz.values() for k in ("name", "place")]
     chars = "".join(sorted({ch for t in label_text for ch in t if ord(ch) > 0x2e80}))
     print("    中文: " + " · ".join(f"{k} {a}/{b}" for k, (a, b) in stats.items()))
     series = rd("series.json")
-    return {"series": series, "names": names, "regions": regions, "journeys": jz, "inventions": inv, "viewpoints": vps, "moments": moments,
+    return {"series": series, "names": names, "regions": regions, "journeys": jz, "inventions": inv, "living": lz, "viewpoints": vps, "moments": moments,
             "depictions": dep, "stories": stories, "phases": phases, "notes": notes, "chars": chars}
 
 
@@ -1292,6 +1305,91 @@ def load_inventions(sources, vp_ids):
             del doc["culture"]
         out.append(doc)
     out.sort(key=lambda d: d["mid"])
+    return out
+
+
+LIVING_KINDS = ("plant", "animal")
+SHARED_MAP = 1900
+
+
+def load_living(sources, viewpoints, journey_ids):
+    """Plants and animals and how knowledge of them spread: where each came from, which viewpoints knew it
+    from the start (`home`), and dated arrivals and encounters (`spread`), each drawn from the origin or from
+    an earlier arrival (`from`, by place). Every viewpoint gets the year it knew the thing: its own arrival,
+    its knowledge community's, or else when the thing became widely known (`widely`, default 1900)."""
+    vp_ids = {v["id"] for v in viewpoints}
+    communities = [v for v in viewpoints if v.get("community")]
+    out = []
+    seen = set()
+    for k, x in enumerate(json.loads((DATA / "living.json").read_text(encoding="utf-8"))):
+        where = f"living.json[{k}] {x.get('id')!r}"
+        for key in ("id", "kind", "name", "origin", "summary", "spread"):
+            if key not in x:
+                fail(f"{where}: missing {key}")
+                continue
+        if x.get("id") in seen:
+            fail(f"{where}: duplicate id")
+        seen.add(x.get("id"))
+        if x.get("kind") not in LIVING_KINDS:
+            fail(f"{where}: kind must be one of {', '.join(LIVING_KINDS)}")
+        check_ref(where, x.get("source"), x.get("confidence"), sources)
+        doc = dict(x)
+        origin = dict(x["origin"])
+        oy = parse_year(origin.get("year", ""), f"{where} origin")
+        if oy is None:
+            continue
+        origin["year"], origin["mid"] = oy.to_json(), oy.mid
+        doc["origin"] = origin
+        for vp in x.get("home", []):
+            if vp not in vp_ids:
+                fail(f"{where}: unknown home viewpoint {vp!r}")
+        places = {}
+        spread = []
+        for i, e in enumerate(x["spread"]):
+            w = f"{where} spread[{i}]"
+            for key in ("year", "place", "lat", "lon", "note"):
+                if key not in e:
+                    fail(f"{w}: missing {key}")
+            y = parse_year(e.get("year", ""), w)
+            if y is None:
+                continue
+            if e.get("vp") and e["vp"] not in vp_ids:
+                fail(f"{w}: unknown viewpoint {e['vp']!r}")
+            if e.get("via") and e["via"] not in journey_ids:
+                fail(f"{w}: unknown journey {e['via']!r}")
+            check_ref(w, e.get("source", x.get("source")), e.get("confidence", x.get("confidence")), sources)
+            src = -1
+            if e.get("from"):
+                if e["from"] not in places:
+                    fail(f"{w}: comes from {e['from']!r}, which is not an earlier place in its spread")
+                else:
+                    src = places[e["from"]]
+            places.setdefault(e["place"], i)
+            d = {kk: vv for kk, vv in e.items() if kk not in ("year", "from")}
+            d.update(year=y.to_json(), mid=y.mid, src=src)
+            spread.append(d)
+        doc["spread"] = spread
+        # When each viewpoint knew it: home from the origin, then its own arrivals, then its community's.
+        known = {vp: oy.mid for vp in x.get("home", [])}
+        for e in spread:
+            if e.get("vp"):
+                known[e["vp"]] = min(known.get(e["vp"], math.inf), e["mid"])
+        for c in communities:
+            cand = [max(known[m["viewpoint"]], m["from"]) for m in c["community"]["members"]
+                    if m["viewpoint"] in known and ("until" not in m or max(known[m["viewpoint"]], m["from"]) <= m["until"])]
+            if cand:
+                known[c["id"]] = min(known.get(c["id"], math.inf), min(cand))
+        for c in communities:
+            if c["id"] not in known:
+                continue
+            for m in c["community"]["members"]:
+                y = max(known[c["id"]], m["from"])
+                if "until" in m and y > m["until"]:
+                    continue
+                known[m["viewpoint"]] = min(known.get(m["viewpoint"], math.inf), y)
+        widely = max(x.get("widely", SHARED_MAP), oy.mid)
+        doc["known"] = {vp: (oy.mid if vp == "humanity" else min(known.get(vp, math.inf), widely)) for vp in sorted(vp_ids)}
+        out.append(doc)
     return out
 
 
@@ -1412,6 +1510,7 @@ def main() -> int:
                 for m in v.get("community", {}).get("members", []):
                     found.setdefault(m["viewpoint"], found[v["id"]])
     inventions = load_inventions(sources, vp_ids)
+    living = load_living(sources, viewpoints, {j["id"] for j in journeys})
     # Inventions made in a city (the printing press in Mainz): the city lists them, and they lead back to it.
     for inv in inventions:
         if "city" not in inv:
@@ -1611,6 +1710,8 @@ def main() -> int:
         search.append({"t": "journey", "id": j["id"], "label": j["name"], "alt": [j.get("traveler", ""), j.get("years", "")]})
     for inv in inventions:
         search.append({"t": "invention", "id": inv["id"], "label": inv["name"], "alt": [a for a in (inv.get("native"), inv["place"]) if a]})
+    for x in living:
+        search.append({"t": "living", "id": x["id"], "label": x["name"], "alt": [a for a in (x.get("native"), x["origin"]["place"]) if a]})
 
     flags = (grid.land.astype(np.uint8) | (grid.coastal.astype(np.uint8) << 1))
     grid_doc = {
@@ -1633,11 +1734,12 @@ def main() -> int:
             in_series.add(jid)
     sizes["series.json"] = write_json("series.json", series)
     sizes["inventions.json"] = write_json("inventions.json", inventions)
+    sizes["living.json"] = write_json("living.json", living)
     sizes["beyond.json"] = write_json("beyond.json", beyond)
     sizes["sources.json"] = write_json("sources.json", sources)
     sizes["viewpoints.json"] = write_json("viewpoints.json", viewpoints)
     sizes["search.json"] = write_json("search.json", search)
-    zh = load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, {c["id"] for c in cities}, events)
+    zh = load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, {c["id"] for c in cities}, events, living)
     if zh:
         sizes["i18n/zh.json"] = write_json("i18n/zh.json", zh)
 

@@ -6,7 +6,7 @@ import {formatYear, START} from '../time';
 import type {VpId} from '../types';
 import {ALL_VPS} from '../types';
 import {h, setIcon} from './dom';
-import {icons, sealSvg} from './icons';
+import {icons, livingIcons, sealSvg} from './icons';
 
 /** The viewpoints always in the bar; the others are a tap away in the picker, and join the bar while chosen. */
 const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
@@ -56,6 +56,9 @@ export class TopBar {
   private chips = new Map<VpId, HTMLButtonElement>();
   private compareBtn: HTMLButtonElement;
   private globeBtn: HTMLButtonElement;
+  /** The left panel's two faces: where people went, and what they came to know that travelled. */
+  private journeysBtn: HTMLButtonElement;
+  private discoveriesBtn: HTMLButtonElement;
   private subtitle: HTMLElement;
   private note: HTMLElement;
   /** Where the legend sits: a row under the subtitle. */
@@ -141,6 +144,18 @@ export class TopBar {
       h('span.vp-seal', {html: icons.compare}),
       h('span.vp-name', t('Compare')),
     );
+    this.journeysBtn = h(
+      'button.tool.tool-wide',
+      {type: 'button', title: t('Journeys and landmarks'), onclick: () => this.togglePanel('journeys')},
+      h('span.tool-icon', {html: icons.compass}),
+      h('span.tool-label', t('Journeys')),
+    );
+    this.discoveriesBtn = h(
+      'button.tool.tool-wide',
+      {type: 'button', title: t('Inventions, plants and animals'), onclick: () => this.togglePanel('discoveries')},
+      h('span.tool-icon', {html: livingIcons.plant}),
+      h('span.tool-label', t('Discoveries')),
+    );
     this.globeBtn = h('button.tool', {
       type: 'button',
       title: t('Globe view'),
@@ -164,7 +179,8 @@ export class TopBar {
       h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips, this.moreBtn), h('span.switcher-rule'), this.compareBtn, this.picker),
       h(
         'div.tools',
-        h('button.tool.tool-wide', {type: 'button', title: t('Journeys and inventions'), onclick: () => this.togglePanel('journeys')}, h('span.tool-icon', {html: icons.compass}), h('span.tool-label', t('Journeys'))),
+        this.journeysBtn,
+        this.discoveriesBtn,
         h('button.tool', {type: 'button', title: t('Search  /'), 'aria-label': t('Search'), onclick: () => store.set({search: true}), html: icons.search}),
         this.globeBtn,
         h(
@@ -222,7 +238,7 @@ export class TopBar {
     this.moreBtn.classList.remove('open');
   }
 
-  private togglePanel(p: 'journeys' | 'about') {
+  private togglePanel(p: 'journeys' | 'discoveries' | 'about') {
     this.store.set({panel: this.store.state.panel === p ? 'none' : p});
   }
 
@@ -256,6 +272,8 @@ export class TopBar {
     }
     for (const [id, b] of this.pickerItems) b.classList.toggle('active', s.vps.includes(id));
     this.compareBtn.classList.toggle('active', s.compare);
+    // Which face of the left panel is open, for screen readers; the panel itself shows it to the eye.
+    for (const [b, p] of [[this.journeysBtn, 'journeys'], [this.discoveriesBtn, 'discoveries']] as const) b.setAttribute('aria-expanded', String(s.panel === p));
     setIcon(this.globeBtn, s.globe ? icons.flat : icons.globe);
     this.globeBtn.title = s.globe ? t('Flat map') : t('Globe view');
     const vps = s.vps.map(v => this.data.vp[v]);

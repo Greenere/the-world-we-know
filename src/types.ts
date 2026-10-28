@@ -299,8 +299,46 @@ export interface Invention {
   confidence: string;
 }
 
+export type LivingKind = 'plant' | 'animal';
+
+/** A place a plant or animal reached, or where a viewpoint first met it. */
+export interface Arrival {
+  year: number | [number, number];
+  mid: number;
+  place: string;
+  lat: number;
+  lon: number;
+  /** The viewpoint that came to know it here; none for a place it simply spread to (maize on the Gold Coast). */
+  vp?: VpId;
+  /** Where it came from: an earlier arrival's index, or -1 for its origin. */
+  src: number;
+  /** The journey that carried it, when there is one. */
+  via?: string;
+  note: string;
+  source?: string;
+  confidence?: string;
+}
+
+/** A plant or animal, and how knowledge of it spread (data/living.json). */
+export interface Living {
+  id: string;
+  kind: LivingKind;
+  name: string;
+  native?: string;
+  origin: {year: number | [number, number]; mid: number; place: string; lat: number; lon: number; culture?: string};
+  /** Viewpoints that knew it from the start. */
+  home?: VpId[];
+  extinct?: {year: number; note: string};
+  summary: string;
+  source: string;
+  confidence: string;
+  spread: Arrival[];
+  /** The year each viewpoint came to know it. */
+  known: Record<VpId, number>;
+}
+
 export interface SearchEntry {
-  t: 'region' | 'city' | 'journey' | 'invention';
+  t: 'region' | 'city' | 'journey' | 'invention' | 'living';
   id: string;
   label: string;
   alt: string[];

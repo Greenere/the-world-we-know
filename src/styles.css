@@ -140,7 +140,8 @@ kbd {
   left: var(--gutter);
   right: var(--gutter);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  /* The switcher sits centred while there is room; when the tools need more than their half, it moves left. */
+  grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
   align-items: start;
   gap: 12px;
   pointer-events: none;
@@ -1436,6 +1437,61 @@ kbd {
   background: color-mix(in srgb, var(--chip) 11%, transparent);
 }
 
+/* Plants in moss green, animals in brass, as their arcs are drawn on the map. */
+.living-plant {
+  --chip: #485e3a;
+}
+
+.living-animal {
+  --chip: var(--brass);
+}
+
+.living-item.current {
+  background: color-mix(in srgb, var(--chip) 11%, transparent);
+}
+
+/* A plant or animal's card: when this viewpoint knew it, and each place it reached, with the viewpoint
+   that came to know it there in its colour; places not reached yet by the current year stay faint. */
+.living-known {
+  margin: 10px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid var(--vp);
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.living-extinct {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--rubric);
+}
+
+.arrival .arrival-vp {
+  color: var(--vp, var(--ink-3));
+  font-size: 13.5px;
+}
+
+.arrival.current {
+  border-left-color: var(--vp, var(--rubric));
+  background: color-mix(in srgb, var(--vp, var(--rubric)) 8%, transparent);
+}
+
+.arrival.picked {
+  border-left-color: var(--vp, var(--ink-2));
+  background: color-mix(in srgb, var(--vp, var(--ink-2)) 12%, transparent);
+  opacity: 1;
+}
+
+.arrival.later {
+  opacity: 0.45;
+}
+
+.arrival-via {
+  margin: 2px 0 6px 10px;
+  font-size: 13px;
+}
+
 /* A landmark's ages (the Great Wall by dynasty): name and years, a line of what that age did. */
 .ages {
   margin: 4px 0 0;
@@ -2234,13 +2290,19 @@ kbd {
     font-size: 14px;
   }
   .vp-compare .vp-name,
-  .vp-more .vp-name,
+  .vp-more .vp-name {
+    display: none;
+  }
+}
+
+/* Journeys and Discoveries go to their marks before the bar gets crowded; their titles still name them. */
+@media (max-width: 1400px) {
   .tool-wide .tool-label {
     display: none;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) auto;
   }

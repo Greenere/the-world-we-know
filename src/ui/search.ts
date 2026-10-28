@@ -2,7 +2,7 @@ import type {AppData} from '../data';
 import type {State, Store} from '../state';
 import type {SearchEntry} from '../types';
 import {h} from './dom';
-import {icons, inventionIcons, kindIcons} from './icons';
+import {icons, inventionIcons, kindIcons, livingIcons} from './icons';
 import {t, tx} from '../i18n';
 import {formatRange} from '../time';
 
@@ -39,7 +39,7 @@ export class Search {
     });
     this.input = h('input.search-input', {
       type: 'search',
-      placeholder: t('A place, a city, a traveller, an invention, or what someone called it…'),
+      placeholder: t('A place, a city, a traveller, an invention, a plant or animal, or what someone called it…'),
       'aria-label': t('Search'),
       autocomplete: 'off',
       spellcheck: 'false',
@@ -120,13 +120,16 @@ export class Search {
         const {entry} = hit;
         const j = entry.t === 'journey' ? this.data.journeyById.get(entry.id) : null;
         const inv = entry.t === 'invention' ? this.data.inventionById.get(entry.id) : null;
-        const icon = j ? kindIcons[j.kind] ?? '' : inv ? inventionIcons[inv.category] ?? icons.invention : entry.t === 'city' ? '<svg viewBox="0 0 20 20" width="20" height="20"><circle cx="10" cy="10" r="3.4" fill="currentColor"/><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>' : '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 6.5l4-2 4 2 4-2v9l-4 2-4-2-4 2z"/><path d="M8 4.5v9M12 6.5v9"/></svg>';
+        const lv = entry.t === 'living' ? this.data.livingById.get(entry.id) : null;
+        const icon = j ? kindIcons[j.kind] ?? '' : inv ? inventionIcons[inv.category] ?? icons.invention : lv ? livingIcons[lv.kind] : entry.t === 'city' ? '<svg viewBox="0 0 20 20" width="20" height="20"><circle cx="10" cy="10" r="3.4" fill="currentColor"/><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>' : '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 6.5l4-2 4 2 4-2v9l-4 2-4-2-4 2z"/><path d="M8 4.5v9M12 6.5v9"/></svg>';
         const meta =
           entry.t === 'journey'
             ? `${t('Journey')} · ${j ? [tx.journey(j.id, 'traveler', j.traveler ?? ''), tx.journey(j.id, 'years', j.years)].filter(Boolean).join(' · ') : ''}`
             : inv
               ? `${t('Invention')} · ${formatRange(inv.year)} · ${tx.invention(inv.id, 'place', inv.place)}`
-              : t(entry.t === 'city' ? 'City' : 'Region');
+              : lv
+                ? `${t(lv.kind === 'plant' ? 'Plant' : 'Animal')} · ${tx.living(lv.id, 'place', lv.origin.place)}`
+                : t(entry.t === 'city' ? 'City' : 'Region');
         const el = h(
           'li.search-item',
           {role: 'option', onclick: () => this.pick(entry), onmousemove: () => this.setActive(i)},
@@ -145,6 +148,7 @@ export class Search {
   private label(e: SearchEntry): string {
     if (e.t === 'journey') return tx.journey(e.id, 'name', e.label);
     if (e.t === 'invention') return tx.invention(e.id, 'name', e.label);
+    if (e.t === 'living') return tx.living(e.id, 'name', e.label);
     if (e.t === 'region') return tx.region(e.id, e.label);
     return tx.name(e.label);
   }

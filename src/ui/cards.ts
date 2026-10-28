@@ -4,11 +4,11 @@ import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale, START} from '../time';
-import type {City, Depiction, DepictionKind, Invention, Journey, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {City, Depiction, DepictionKind, Invention, Journey, Living, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
-import {icons, inventionIcons, kindIcons, naturalIcons} from './icons';
+import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
 import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
@@ -75,6 +75,8 @@ export class Cards {
       openRegion(id: string): void;
       openJourney(id: string): void;
       openInvention(id: string): void;
+      openLiving(id: string, year?: number): void;
+      pickArrival(index: number): void;
       openCity(id: string): void;
       flyTo(lng: number, lat: number, zoom?: number): void;
     },
@@ -93,7 +95,7 @@ export class Cards {
 
   private close() {
     const s = this.store.state;
-    if (s.invention || s.city || s.region) this.store.set({region: null, regionCell: null, city: null, invention: null});
+    if (s.invention || s.living || s.city || s.region) this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
     else {
       this.dismissed = this.sceneKey(s);
       this.update(s);
@@ -128,7 +130,7 @@ export class Cards {
   }
 
   update(s: State) {
-    let subject = s.invention ? `invention:${s.invention}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
+    let subject = s.invention ? `invention:${s.invention}` : s.living ? `living:${s.living}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
     if (!s.journey) this.dismissed = null;
     if (!subject) {
       const scene = this.sceneKey(s);
@@ -159,6 +161,9 @@ export class Cards {
       } else if (s.invention) {
         const x = this.data.inventionById.get(s.invention);
         if (x) nodes = this.invention(x);
+      } else if (s.living) {
+        const x = this.data.livingById.get(s.living);
+        if (x) nodes = this.living(x, s);
       } else if (s.city) {
         const c = this.data.cityById.get(s.city);
         if (c) nodes = this.city(c, s);
@@ -588,6 +593,79 @@ export class Cards {
       plate.el,
       h('p.scene-meta', counter),
     ];
+  }
+
+  // ── Plant or animal ──────────────────────────────────────────────────────
+
+  private living(x: Living, s: State): Node[] {
+    const vp = s.vps[0];
+    const known = x.known[vp] ?? x.origin.mid;
+    const name = tx.living(x.id, 'name', x.name);
+    const kicker = h('div.card-kicker.inv-kicker');
+    const culture = x.origin.culture ? tx.living(x.id, 'culture', x.origin.culture) : '';
+    // Every place it reached, oldest first: who came to know it there, and how.
+    const order = x.spread.map((a, i) => ({a, i})).sort((p, q) => p.a.mid - q.a.mid);
+    const rows = order.map(({a, i}) => {
+      const who = a.vp ? this.data.vp[a.vp] : null;
+      const via = a.via ? this.data.journeyById.get(a.via) : undefined;
+      return h(
+        'li',
+        h(
+          'button.age.arrival',
+          {type: 'button', style: who ? `--vp:${who.color}` : '', onclick: () => this.actions.pickArrival(i)},
+          h('span.age-name', tx.arrival(x.id, i, 'place', a.place), who ? h('span.arrival-vp', ` · ${vpName(this.data, who.id)}`) : null),
+          h('span.age-years', formatRange(a.year)),
+          h('span.age-note', tx.arrival(x.id, i, 'note', a.note)),
+        ),
+        via
+          ? h('button.chip.arrival-via', {type: 'button', style: `--chip:${this.data.vp[via.viewpoint].color}`, onclick: () => this.actions.openJourney(via.id)},
+              h('span.chip-icon', {html: kindIcons[via.kind] ?? kindIcons.traveler}), tx.journey(via.id, 'name', via.name))
+          : null,
+      );
+    });
+    const out: Node[] = [
+      kicker,
+      h('h2.card-title', name, x.native && x.native !== name ? h('span.native', ` ${x.native}`) : null),
+      h(
+        'p.inv-meta',
+        h('strong', x.origin.mid <= START && typeof x.origin.year === 'number' ? t('by {year}', {year: formatYear(x.origin.year)}) : formatRange(x.origin.year)),
+        ' · ',
+        h('button.linkish', {type: 'button', title: t('Show on the map'), onclick: () => this.actions.flyTo(x.origin.lon, x.origin.lat, 3)}, tx.living(x.id, 'place', x.origin.place)),
+        culture ? ` · ${culture}` : null,
+      ),
+      h('p.card-story', tx.living(x.id, 'summary', x.summary)),
+      h(
+        'p.living-known',
+        {style: `--vp:${this.data.vp[vp].color}`},
+        vp === 'humanity'
+          ? t('Known to people from {year}', {year: formatYear(Math.round(known))})
+          : t('Known to {vp} from {year}', {vp: vpName(this.data, vp), year: known <= START ? t('before {year}', {year: formatYear(START)}) : formatYear(Math.round(known))}),
+      ),
+    ];
+    if (x.extinct) out.push(h('p.living-extinct', `${t('Extinct')} · ${tx.living(x.id, 'extinct', x.extinct.note)}`));
+    if (rows.length) out.push(h('h3.card-h', t('How it spread')), h('ol.ages.arrivals', rows));
+    out.push(h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `${t('Source:')} ${shortCitation(this.data.sources, x.source)} · ${t('{level} confidence', {level: t(x.confidence)})}`));
+    let shownArrival: number | null = null;
+    this.live = st => {
+      const gone = !!x.extinct && st.year >= x.extinct.year;
+      swap(kicker, `${x.kind}|${gone}`, () => [h('span.kicker-icon', {html: livingIcons[x.kind]}), `${t(x.kind === 'plant' ? 'Plant' : 'Animal')}${gone ? ` · ${t('Extinct')}` : ''}`]);
+      // Places it has not reached yet stay faint; the latest it has reached is marked.
+      let latest = -1;
+      order.forEach(({a}, k) => {
+        if (a.mid <= st.year) latest = k;
+      });
+      rows.forEach((li, k) => {
+        const btn = li.firstElementChild!;
+        btn.classList.toggle('later', order[k].a.mid > st.year);
+        btn.classList.toggle('current', k === latest);
+        btn.classList.toggle('picked', order[k].i === st.arrival);
+      });
+      // A place picked on the map: bring its row into view.
+      const picked = rows[order.findIndex(o => o.i === st.arrival)];
+      if (picked && st.arrival !== shownArrival) picked.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+      shownArrival = st.arrival;
+    };
+    return out;
   }
 
   // ── Invention ────────────────────────────────────────────────────────────

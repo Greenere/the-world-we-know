@@ -75,6 +75,12 @@ export const inventionIcons: Record<string, string> = {
   imaging: wrap('<path d="M2.5 10s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/><circle cx="10" cy="10" r="2.4"/>'),
 };
 
+/** Plants and animals: a sprig and a paw print. */
+export const livingIcons: Record<string, string> = {
+  plant: wrap('<path d="M10 17.5V8"/><path d="M10 11.5c-4.2.4-6.3-2.2-6-6 3.8-.3 6.2 2 6 6zM10 9c.1-3.6 2.3-5.8 6-5.6.2 3.7-2.3 5.9-6 5.6z"/>'),
+  animal: wrap('<ellipse cx="10" cy="13.4" rx="3.6" ry="3"/><ellipse cx="5" cy="9" rx="1.5" ry="1.9"/><ellipse cx="8.2" cy="5.6" rx="1.5" ry="1.9"/><ellipse cx="11.8" cy="5.6" rx="1.5" ry="1.9"/><ellipse cx="15" cy="9" rx="1.5" ry="1.9"/>'),
+};
+
 /** The home seal for each viewpoint, used on the map and in the switcher. */
 export function sealSvg(id: string, color: string, size = 18) {
   const s = (body: string) =>

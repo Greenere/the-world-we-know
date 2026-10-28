@@ -13,6 +13,7 @@ export interface ZhContent {
   regions: Record<string, string>;
   journeys: Record<string, {name?: string; traveler?: string; years?: string; summary?: string; stops?: Record<string, {place?: string; note?: string; date?: string}>}>;
   inventions: Record<string, {name?: string; place?: string; culture?: string; summary?: string; changed?: string}>;
+  living: Record<string, {name?: string; place?: string; culture?: string; summary?: string; extinct?: string; spread?: Record<string, {place?: string; note?: string}>}>;
   viewpoints: Record<string, {name?: string; longName?: string; adjective?: string; tagline?: string; startNote?: string}>;
   moments: Record<string, string>;
   depictions: Record<string, Record<string, {title?: string; caption?: string; captions?: Record<string, string>; place?: string}>>;
@@ -94,6 +95,15 @@ export const tx = {
   },
   invention(id: string, field: 'name' | 'place' | 'culture' | 'summary' | 'changed', en: string): string {
     return (lang === 'zh' && zh?.inventions[id]?.[field]) || en;
+  },
+  /** A plant or animal: its name, its origin's place and culture, its story, or how it died out. */
+  living(id: string, field: 'name' | 'place' | 'culture' | 'summary' | 'extinct', en: string): string {
+    return (lang === 'zh' && zh?.living?.[id]?.[field]) || en;
+  },
+  arrival(id: string, index: number, field: 'place' | 'note', en: string): string {
+    const z = lang === 'zh' ? zh?.living?.[id]?.spread?.[index]?.[field] : undefined;
+    if (z) return z;
+    return field === 'place' ? tx.name(en) : en;
   },
   viewpoint(id: string, field: 'name' | 'longName' | 'adjective' | 'tagline' | 'startNote', en: string): string {
     return (lang === 'zh' && zh?.viewpoints[id]?.[field]) || en;

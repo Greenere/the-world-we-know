@@ -10,8 +10,9 @@ import {FogLayer, type FogLayerUniforms} from '../fog/layer';
 import type {JourneyGeo, LngLat} from '../journey-geo';
 import {cleanPath, currentStopIndex, travelled} from '../journey-geo';
 import type {State} from '../state';
-import type {City, Invention, PathStyle, VpId} from '../types';
-import {tx} from '../i18n';
+import type {City, Invention, Living, PathStyle, VpId} from '../types';
+import {formatYear} from '../time';
+import {isZh, tx} from '../i18n';
 import {hexToRgb} from '../ui/color';
 import {horizonCull, SURFACE_PARAMETERS} from './horizon';
 
@@ -43,8 +44,13 @@ const RUBRIC: [number, number, number] = [155, 47, 32];
 const MOSS: [number, number, number] = [72, 94, 58];
 /** Canals: the blue-grey of deep water. */
 const CANAL: [number, number, number] = [62, 98, 116];
+/** Italic labels in English. Chinese has no italic, and an italic face over every Chinese character overflows
+ * deck.gl's glyph atlas and draws as solid blocks, so Chinese labels stay upright. */
+const italic = () => (isZh() ? 'normal' : 'italic');
 // Chinese labels fall through to Noto Serif SC glyph by glyph.
 const FONT_TEXT = '"IM Fell English", "EB Garamond", "Noto Serif SC", Georgia, serif';
+/** Upright, for dates on the map: EB Garamond's figures stay legible at small sizes. */
+const FONT_NUM = '"EB Garamond", "Noto Serif SC", Georgia, serif';
 const FONT_SC = '"IM Fell English SC", "IM Fell English", "Noto Serif SC", Georgia, serif';
 
 // ── Icon atlas, drawn once at runtime ──────────────────────────────────────
@@ -319,6 +325,7 @@ export class OverlayModel {
     for (const c of ctx.data.cities) for (const n of c.names) for (const ch of n.name) chars.add(ch);
     for (const r of ctx.data.regions) for (const n of r.names) for (const ch of n.name) chars.add(ch);
     for (const x of ctx.data.inventions) for (const ch of x.name) chars.add(ch);
+    for (const x of ctx.data.living) for (const ch of [x.origin.place, ...x.spread.map(a => a.place)].join('')) chars.add(ch);
     for (const j of ctx.data.journeys) for (const ch of j.name) chars.add(ch);
     this.baseCharset = [...chars].join('');
     this.charset = this.baseCharset + tx.chars();
@@ -761,7 +768,7 @@ export class OverlayModel {
         getColor: [...MOSS, 225],
         fontFamily: FONT_TEXT,
         // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
-        fontWeight: 'italic',
+        fontWeight: italic(),
         characterSet: this.charset,
         fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
         outlineWidth: 3,
@@ -772,6 +779,7 @@ export class OverlayModel {
     );
 
     layers.push(...this.inventionLayers(state, P));
+    layers.push(...this.livingLayers(state, P, now));
     layers.push(...this.routeLayers(routes, state, P));
     layers.push(...this.travellerLayers(others, state, PJ));
     if (geo) layers.push(...journeyLayers(geo, state, vpColor, now, PJ, globe ? paths => this.splitAtHorizon(paths) : paths => paths));
@@ -996,7 +1004,7 @@ export class OverlayModel {
           getAlignmentBaseline: 'center',
           getPixelOffset: [9, 0],
           fontFamily: FONT_TEXT,
-          fontWeight: 'italic',
+          fontWeight: italic(),
           characterSet: this.charset,
           fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
           outlineWidth: 4,
@@ -1006,6 +1014,145 @@ export class OverlayModel {
       );
     }
     return out;
+  }
+
+  /** The plant or animal being followed: its origin, named, and a small dot at each place it has reached by this
+   * year. No routes: how it travelled is mostly guesswork, told in words on the card. The viewpoint's own arrival
+   * is ringed in its colour, and the place picked on the card or the map is named, with a pulse when picked. */
+  private livingLayers(state: State, P: (p: LngLat) => LngLat, now: number): Layer[] {
+    const x: Living | undefined = state.living ? this.ctx.data.livingById.get(state.living) : undefined;
+    if (!x) return [];
+    const ink = x.kind === 'plant' ? MOSS : BRASS;
+    const vp = state.vps[0];
+    const vpColor = hexToRgb(this.ctx.data.vp[vp].color);
+    const points: LivingPoint[] = [
+      {pos: P([x.origin.lon, x.origin.lat]), label: tx.living(x.id, 'place', x.origin.place), year: x.origin.year, mid: x.origin.mid, origin: true, color: ink, index: -1, named: true},
+    ];
+    x.spread.forEach((a, i) => {
+      if (a.mid > state.year && state.arrival !== i) return;
+      const own = a.vp === vp;
+      points.push({
+        pos: P([a.lon, a.lat]),
+        label: tx.arrival(x.id, i, 'place', a.place),
+        year: a.year,
+        mid: a.mid,
+        note: tx.arrival(x.id, i, 'note', a.note),
+        origin: false,
+        color: own ? vpColor : ink,
+        index: i,
+        named: own || state.arrival === i,
+      });
+    });
+    // The picked place last, so it draws over its neighbours.
+    points.sort((p, q) => Number(p.index === state.arrival) - Number(q.index === state.arrival));
+    // A place the map already names (Moscow, Amsterdam) keeps the city's label: the arrival adds only its year.
+    const cityNamed = (d: LivingPoint) =>
+      !d.origin && this.labels.cities.some(v => Math.abs(v.pos[1] - d.pos[1]) < 0.35 && Math.abs(v.pos[0] - d.pos[0]) * Math.cos((d.pos[1] * Math.PI) / 180) < 0.35);
+    const named = points.filter(d => d.named);
+    const ownLabel = named.filter(d => !cityNamed(d));
+    const key = `${x.id}|${vp}|${state.arrival}|${points.length}|${ownLabel.length}`;
+    const out: Layer[] = [
+      new ScatterplotLayer<LivingPoint>({
+        id: 'living-points',
+        parameters: SURFACE_PARAMETERS,
+        extensions: [horizonCull],
+        data: points,
+        getPosition: d => d.pos,
+        getRadius: d => (d.origin ? 6.5 : d.index === state.arrival ? 5.5 : d.color === ink ? 3.6 : 4.8),
+        getFillColor: d => (d.origin || d.index === state.arrival ? [...d.color, 255] : d.color === ink ? [...ink, 200] : [...PAPER, 255]),
+        getLineColor: d => (d.origin || d.index === state.arrival ? [...PAPER, 255] : [...d.color, 255]),
+        getLineWidth: d => (d.color === ink && !d.origin && d.index !== state.arrival ? 1 : 2),
+        stroked: true,
+        radiusUnits: 'pixels',
+        lineWidthUnits: 'pixels',
+        pickable: true,
+        updateTriggers: {getRadius: key, getFillColor: key, getLineColor: key, getLineWidth: key},
+      }),
+    ];
+    // A ring that spreads and fades from the place just picked.
+    const t = (now - this.arrivalAt) / LIVING_PULSE;
+    const picked = points.find(d => d.index === state.arrival && !d.origin);
+    if (picked && t >= 0 && t < 1) {
+      out.push(
+        new ScatterplotLayer<LivingPoint>({
+          id: 'living-pulse',
+          parameters: SURFACE_PARAMETERS,
+          extensions: [horizonCull],
+          data: [picked],
+          getPosition: d => d.pos,
+          getRadius: 6 + 22 * t,
+          getFillColor: [0, 0, 0, 0],
+          getLineColor: [...picked.color, Math.round(220 * (1 - t))],
+          getLineWidth: 2,
+          stroked: true,
+          filled: false,
+          radiusUnits: 'pixels',
+          lineWidthUnits: 'pixels',
+          updateTriggers: {getRadius: t, getLineColor: t},
+        }),
+      );
+    }
+    if (!state.globe && named.length) {
+      out.push(
+        new TextLayer<LivingPoint>({
+          id: 'living-labels',
+          parameters: SURFACE_PARAMETERS,
+          extensions: [horizonCull],
+          data: ownLabel,
+          getText: d => d.label,
+          getPosition: d => d.pos,
+          getSize: d => (d.origin ? 14 : 13),
+          getColor: d => [...d.color, 245],
+          getTextAnchor: 'start',
+          getAlignmentBaseline: 'center',
+          getPixelOffset: d => [d.origin ? 11 : 10, -1],
+          fontFamily: FONT_TEXT,
+          fontWeight: italic(),
+          characterSet: this.charset,
+          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
+          outlineWidth: 4,
+          outlineColor: [...PAPER, 225],
+          sizeUnits: 'pixels',
+          updateTriggers: {getText: key},
+        }),
+        // The year it arrived, upright beneath the name: the italic's old-style figures shrink to dots this small.
+        new TextLayer<LivingPoint>({
+          id: 'living-years',
+          parameters: SURFACE_PARAMETERS,
+          extensions: [horizonCull],
+          data: named.filter(d => !d.origin),
+          getText: d => formatYear(Math.round(d.mid)),
+          getPosition: d => d.pos,
+          getSize: 11.5,
+          getColor: d => [...d.color, 245],
+          getTextAnchor: 'start',
+          getAlignmentBaseline: 'top',
+          getPixelOffset: [11, 5],
+          fontFamily: FONT_NUM,
+          // Only what dates are written with: a second face over every Chinese character would not fit its atlas.
+          characterSet: 'auto',
+          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
+          outlineWidth: 4,
+          outlineColor: [...PAPER, 225],
+          sizeUnits: 'pixels',
+          updateTriggers: {getText: key},
+        }),
+      );
+    }
+    return out;
+  }
+
+  /** When a place on a plant or animal's way was last picked, for its pulse. */
+  private arrivalAt = -Infinity;
+
+  /** Start the pulse at the place just picked. */
+  pulseArrival(now: number) {
+    this.arrivalAt = now;
+  }
+
+  /** Whether the pulse is still running, so the map keeps redrawing until it fades. */
+  arrivalPulsing(now: number): boolean {
+    return now - this.arrivalAt < LIVING_PULSE;
   }
 
   /** Inventions mark their place of origin for a century after they appear, fading as they age. */
@@ -1034,12 +1181,16 @@ export class OverlayModel {
         }),
       ];
     }
-    // One made in a city sits at the city's upper-left shoulder (a wonder takes the right), clear of its mark.
+    // One made in a city sits at the city's upper-left shoulder (a wonder takes the right), clear of its mark;
+    // several there at once (the balloon and the semaphore in Paris) line up leftward, the newest nearest.
+    const inCity = new Map<string, InventionView[]>();
+    for (const d of shown) if (d.inv.city) inCity.set(d.inv.city, [...(inCity.get(d.inv.city) ?? []), d]);
+    for (const list of inCity.values()) list.sort((a, b) => b.inv.mid - a.inv.mid);
     const shoulder = (d: InventionView): [number, number] => {
       const host = d.inv.city ? this.ctx.data.cityById.get(d.inv.city) : undefined;
       if (!host) return [0, 0];
       const k = citySize(tierAt(host, state.year)) * 0.38 + 5;
-      return [-k, -k];
+      return [-k - 14 * inCity.get(host.id)!.indexOf(d), -k];
     };
     const out: Layer[] = [
       new IconLayer<InventionView>({
@@ -1056,10 +1207,15 @@ export class OverlayModel {
         getColor: d => [255, 255, 255, alpha(d)],
         sizeUnits: 'pixels',
         pickable: true,
-        updateTriggers: {getSize: key, getColor: key, getPixelOffset: state.year},
+        updateTriggers: {getSize: key, getColor: key, getPixelOffset: `${key}|${state.year}`},
       }),
     ];
-    const labelled = shown.filter(d => d.selected || d.age < 0.2);
+    // One label to a city: the selected invention, or else its newest.
+    const labelled = shown.filter(d => {
+      if (!d.selected && d.age >= 0.2) return false;
+      const list = d.inv.city ? inCity.get(d.inv.city)! : [d];
+      return d === (list.find(x => x.selected) ?? list[0]);
+    });
     if (labelled.length) {
       out.push(
         new TextLayer<InventionView>({
@@ -1079,19 +1235,37 @@ export class OverlayModel {
           },
           fontFamily: FONT_TEXT,
           // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
-          fontWeight: 'italic',
+          fontWeight: italic(),
           characterSet: this.charset,
           fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
           outlineWidth: 4,
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
-          updateTriggers: {getColor: key, getPixelOffset: state.year},
+          updateTriggers: {getColor: key, getPixelOffset: `${key}|${state.year}`},
         }),
       );
     }
     return out;
   }
 }
+
+/** A place on a plant or animal's way: its origin, or somewhere it reached. */
+export interface LivingPoint {
+  pos: LngLat;
+  label: string;
+  year: number | [number, number];
+  mid: number;
+  note?: string;
+  origin: boolean;
+  color: [number, number, number];
+  /** Its place in the spread, or -1 for the origin. */
+  index: number;
+  /** Named on the map: the origin, the viewpoint's own arrival, and the place picked. */
+  named: boolean;
+}
+
+/** How long the ring round a picked place takes to spread and fade, in ms. */
+const LIVING_PULSE = 1600;
 
 export interface InventionView {
   inv: Invention;
