@@ -1,0 +1,24 @@
+{
+  "id": "leo-africanus",
+  "name": "Leo Africanus to Timbuktu",
+  "traveler": "al-Ḥasan al-Wazzān (Leo Africanus)",
+  "years": "c. 1510–1513",
+  "kind": "traveler",
+  "viewpoint": "maghreb",
+  "summary": "A young diplomat of Fez travels with his uncle's embassy across the Sahara to the Songhay empire. Captured by Christian corsairs in 1518 and given to Pope Leo X, he wrote his Description of Africa in Rome, and for three centuries it was Europe's best account of the lands beyond the desert.",
+  "source": "leo-africanus",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1510, "place": "Fez", "lat": 34.03, "lon": -5.0, "note": "The embassy leaves the Marinid capital.", "city": "fez"},
+    {"year": 1510, "place": "Sijilmasa", "lat": 31.28, "lon": -4.27, "note": "South over the Atlas to the old caravan city of the Tafilalt.", "by": "land", "city": "sijilmasa"},
+    {"year": 1510, "place": "Taghaza", "lat": 23.6, "lon": -5.0, "note": "The salt mines, where houses are built of salt blocks.", "by": "land"},
+    {"year": 1510, "place": "Timbuktu", "lat": 16.77, "lon": -3.0, "note": "Its many judges, scholars and booksellers, and its king's store of gold.", "by": "land", "city": "timbuktu"},
+    {"year": 1511, "place": "Gao", "lat": 16.27, "lon": -0.05, "note": "Down the Niger to the Songhay capital.", "by": "river", "city": "gao", "confidence": "low"},
+    {"year": 1513, "place": "Fez", "lat": 34.03, "lon": -5.0, "note": "Home across the desert.", "by": "land", "city": "fez", "confidence": "low"}
+  ],
+  "informs": [
+    {"region": "bilad-al-sudan", "level": 3, "homeKnows": 1513, "confidence": "medium"},
+    {"viewpoint": "europe", "region": "bilad-al-sudan", "level": 3, "homeKnows": 1550, "confidence": "high", "note": "Leo Africanus printed by Ramusio"},
+    {"viewpoint": "europe", "region": "sahara", "level": 3, "homeKnows": 1550, "confidence": "high"}
+  ]
+}

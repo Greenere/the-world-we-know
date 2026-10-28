@@ -1,0 +1,26 @@
+{
+  "id": "rasmussen",
+  "name": "The Fifth Thule Expedition",
+  "traveler": "Knud Rasmussen, Arnarulunnguaq and Miteq",
+  "years": "1921–1924",
+  "kind": "scientific",
+  "viewpoint": "inuit",
+  "summary": "Knud Rasmussen, born in Greenland of Greenlandic and Danish parents, sets out to visit every Inuit people. With two Inughuit companions he crosses the whole of Arctic America by dog sledge, from Hudson Bay to Alaska, recording stories, songs and ways of life, and finds that he can talk with Inuit everywhere: one people and one language across the Arctic.",
+  "source": "rasmussen",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1921, "place": "Avanersuaq", "lat": 76.53, "lon": -68.7, "note": "The expedition sails from the Thule district of north Greenland."},
+    {"year": 1921, "place": "Danish Island", "lat": 65.8, "lon": -84.6, "note": "Winter quarters near Repulse Bay, among the Iglulik and Caribou Inuit.", "by": "sea", "date": "September 1921"},
+    {"year": 1923, "place": "King William Island", "lat": 69.0, "lon": -97.0, "note": "By sledge to the Netsilik.", "by": "land", "date": "1923"},
+    {"year": 1923, "place": "Coronation Gulf", "lat": 67.9, "lon": -112.0, "note": "Among the Copper Inuit.", "by": "direct"},
+    {"year": 1924, "place": "Herschel Island", "lat": 69.58, "lon": -139.1, "note": "Along the coast to the Mackenzie delta and beyond.", "by": "land"},
+    {"year": 1924, "place": "Point Barrow", "lat": 71.29, "lon": -156.79, "note": "Into Alaska.", "by": "land", "date": "May 1924"},
+    {"year": 1924, "place": "Nome", "lat": 64.5, "lon": -165.41, "note": "The end of the sledge journey, some eighteen thousand kilometres from Greenland.", "by": "land", "date": "1924"}
+  ],
+  "informs": [
+    {"region": "arctic-canada", "level": 4, "homeKnows": 1925, "confidence": "high", "note": "Rasmussen's Fifth Thule Expedition"},
+    {"region": "alaska-arctic", "level": 4, "homeKnows": 1925, "confidence": "high"},
+    {"region": "hudson-bay", "level": 4, "homeKnows": 1925, "confidence": "high"}
+  ]
+}

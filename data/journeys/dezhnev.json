@@ -1,0 +1,28 @@
+{
+  "id": "dezhnev",
+  "name": "Dezhnev round the end of Asia",
+  "traveler": "Semyon Dezhnev and Fedot Popov",
+  "years": "1648–1649",
+  "kind": "sailor",
+  "viewpoint": "russia",
+  "summary": "Seven boats of Cossacks and fur traders sail east from the Kolyma, round the eastern tip of Asia and pass through the strait between Asia and America, eighty years before Bering. Storms wreck all but Dezhnev's crew. His report lay in the archive at Yakutsk until the historian Gerhard Müller found it in 1736, so for most of a century Russia did not know what he had done.",
+  "source": "fisher-dezhnev",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1648, "place": "Nizhnekolymsk", "lat": 68.53, "lon": 160.92, "note": "Seven koches leave the mouth of the Kolyma.", "date": "June 1648"},
+    {"waypoint": true, "lat": 69.7, "lon": 161.9},
+    {"waypoint": true, "lat": 70.4, "lon": 166.0},
+    {"year": 1648, "place": "Chaun Bay", "lat": 69.8, "lon": 170.5, "note": "East along an ice-choked coast; two boats are lost.", "by": "direct"},
+    {"waypoint": true, "lat": 70.6, "lon": 172.0},
+    {"waypoint": true, "lat": 69.4, "lon": -179.5},
+    {"waypoint": true, "lat": 67.9, "lon": -176.0},
+    {"waypoint": true, "lat": 66.6, "lon": -170.8},
+    {"year": 1648, "place": "The Great Rocky Cape", "lat": 66.08, "lon": -169.66, "note": "Rounding the eastern end of Asia, now Cape Dezhnev; they meet Chukchi on the shore and see islands in the strait.", "by": "direct", "date": "September 1648"},
+    {"year": 1648, "place": "South of the Anadyr", "lat": 61.5, "lon": 174.0, "note": "A storm drives Dezhnev's boat ashore; twenty-four men are left.", "by": "sea", "confidence": "low"},
+    {"year": 1649, "place": "The Anadyr", "lat": 64.7, "lon": 170.4, "note": "Ten weeks' march north to the Anadyr river, where the survivors build a winter camp.", "by": "land"}
+  ],
+  "informs": [
+    {"region": "siberia-east", "level": 3, "homeKnows": 1655, "confidence": "medium", "note": "Dezhnev's report reaches Yakutsk"},
+    {"region": "bering-sea", "level": 2, "homeKnows": 1736, "confidence": "medium", "note": "Dezhnev's report found by Müller"}
+  ]
+}

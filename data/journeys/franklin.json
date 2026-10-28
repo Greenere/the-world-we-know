@@ -1,0 +1,34 @@
+{
+  "id": "franklin",
+  "name": "Franklin's lost expedition",
+  "traveler": "Sir John Franklin and the crews of the Erebus and Terror",
+  "years": "1845–1848",
+  "kind": "sailor",
+  "viewpoint": "britain",
+  "summary": "The best-equipped Arctic expedition Britain had sent sails to find the last link of the Northwest Passage and vanishes with all 129 men. The searches that followed mapped much of the Arctic archipelago. In 1854 John Rae learned from Inuit what had happened; in 1859 a note found at Victory Point told the rest, and the wrecks of the ships were found in 2014 and 2016.",
+  "source": "beattie-geiger",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1845, "place": "Greenhithe", "lat": 51.45, "lon": 0.28, "note": "The Erebus and Terror leave the Thames.", "date": "19 May 1845"},
+    {"year": 1845, "place": "Disko Bay", "lat": 68.9, "lon": -53.2, "note": "Supplies taken on; letters sent home for the last time.", "by": "sea", "date": "July 1845"},
+    {"waypoint": true, "lat": 70.5, "lon": -57.5},
+    {"waypoint": true, "lat": 73.5, "lon": -63.0},
+    {"waypoint": true, "lat": 74.2, "lon": -74.0},
+    {"year": 1845, "place": "Lancaster Sound", "lat": 74.3, "lon": -80.0, "note": "Last seen by two whalers, moored to an iceberg.", "by": "sea", "date": "26 July 1845"},
+    {"waypoint": true, "lat": 74.4, "lon": -86.0},
+    {"year": 1845, "place": "Beechey Island", "lat": 74.72, "lon": -91.85, "note": "The first winter; three men are buried here.", "by": "direct"},
+    {"waypoint": true, "lat": 74.2, "lon": -92.5},
+    {"waypoint": true, "lat": 73.3, "lon": -96.0},
+    {"waypoint": true, "lat": 72.2, "lon": -96.4},
+    {"waypoint": true, "lat": 71.6, "lon": -97.8},
+    {"waypoint": true, "lat": 70.6, "lon": -98.8},
+    {"year": 1846, "place": "Off King William Island", "lat": 70.0, "lon": -98.5, "note": "Beset in the ice of Victoria Strait, never to be freed.", "by": "direct", "date": "September 1846"},
+    {"year": 1847, "place": "Off King William Island", "lat": 70.0, "lon": -98.5, "note": "Franklin dies aboard the Erebus.", "by": "sea", "date": "11 June 1847"},
+    {"year": 1848, "place": "Victory Point", "lat": 69.6, "lon": -98.3, "note": "The survivors abandon the ships and leave a note in a cairn.", "by": "land", "date": "April 1848"},
+    {"year": 1848, "place": "Starvation Cove", "lat": 68.1, "lon": -97.8, "note": "The last of them die marching south.", "by": "land", "confidence": "medium"}
+  ],
+  "informs": [
+    {"region": "arctic-canada", "level": 3, "homeKnows": 1859, "confidence": "high", "note": "The fate of the Franklin expedition"}
+  ]
+}

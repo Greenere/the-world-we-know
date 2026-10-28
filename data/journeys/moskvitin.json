@@ -1,0 +1,24 @@
+{
+  "id": "moskvitin",
+  "name": "Moskvitin to the Pacific",
+  "traveler": "Ivan Moskvitin and his Cossacks",
+  "years": "1639–1641",
+  "kind": "traveler",
+  "viewpoint": "russia",
+  "summary": "Thirty-one Cossacks from the new fort at Yakutsk go up the Aldan and Maya, cross the coastal range on foot and come down the Ulya to the Sea of Okhotsk: the first Russians to reach the Pacific, fifty-eight years after Yermak crossed the Urals.",
+  "source": "lantzeff-pierce",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 1639, "place": "Yakutsk", "lat": 62.03, "lon": 129.73, "note": "Thirty-one Cossacks set out from the fort on the Lena.", "city": "yakutsk"},
+    {"year": 1639, "place": "The mouth of the Maya", "lat": 60.42, "lon": 134.54, "note": "Up the Aldan and into the Maya by boat.", "by": "river"},
+    {"year": 1639, "place": "The Dzhugdzhur range", "lat": 59.3, "lon": 139.6, "note": "Over the watershed on foot.", "by": "land"},
+    {"year": 1639, "place": "The mouth of the Ulya", "lat": 59.37, "lon": 141.97, "note": "Down the Ulya to the sea. They build a winter camp: the first Russian post on the Pacific.", "by": "river"},
+    {"year": 1640, "place": "The Uda coast", "lat": 54.7, "lon": 135.3, "note": "South along the coast by boat, where they hear of the Amur and its farming peoples.", "by": "sea"},
+    {"year": 1641, "place": "Yakutsk", "lat": 62.03, "lon": 129.73, "note": "Back with sables and the news of a southern sea.", "by": "land", "city": "yakutsk"}
+  ],
+  "informs": [
+    {"region": "sea-of-okhotsk", "level": 3, "homeKnows": 1641, "confidence": "medium", "note": "The Sea of Okhotsk reached"},
+    {"region": "siberia-east", "level": 3, "homeKnows": 1641, "confidence": "medium"}
+  ]
+}

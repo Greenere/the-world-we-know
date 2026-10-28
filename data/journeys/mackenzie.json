@@ -1,0 +1,23 @@
+{
+  "id": "mackenzie",
+  "name": "Mackenzie down his river to the Arctic",
+  "traveler": "Alexander Mackenzie and the English Chief",
+  "years": "1789",
+  "kind": "traveler",
+  "viewpoint": "britain",
+  "summary": "A fur trader of the North West Company, guided by the Dene leader known as the English Chief, follows the great river flowing out of Great Slave Lake in the hope that it reaches the Pacific. In 102 days he travels it to the Arctic Ocean and back. He is said to have called it the River of Disappointment; it now bears his name.",
+  "source": "mackenzie",
+  "confidence": "high",
+  "stops": [
+    {"year": 1789, "place": "Fort Chipewyan", "lat": 58.71, "lon": -111.15, "note": "Four canoes set out from Lake Athabasca.", "date": "3 June 1789"},
+    {"year": 1789, "place": "Great Slave Lake", "lat": 61.17, "lon": -113.67, "note": "Down the Slave River; the lake is still half frozen.", "by": "river"},
+    {"year": 1789, "place": "The Mackenzie", "lat": 62.0, "lon": -121.0, "note": "Into the great river flowing west out of the lake.", "by": "river"},
+    {"year": 1789, "place": "Fort Good Hope", "lat": 66.26, "lon": -128.63, "note": "The river turns north, not west to the Pacific.", "by": "river"},
+    {"year": 1789, "place": "Whale Island", "lat": 69.4, "lon": -135.0, "note": "Tides and white whales: the Arctic Ocean.", "by": "river", "date": "14 July 1789"},
+    {"year": 1789, "place": "Fort Chipewyan", "lat": 58.71, "lon": -111.15, "note": "Back upstream against the current.", "by": "river", "date": "12 September 1789"}
+  ],
+  "informs": [
+    {"region": "canadian-shield", "level": 4, "homeKnows": 1790, "confidence": "high", "note": "Mackenzie's river"},
+    {"region": "arctic-canada", "level": 3, "homeKnows": 1790, "confidence": "high"}
+  ]
+}

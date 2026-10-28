@@ -1,0 +1,26 @@
+{
+  "id": "caillie",
+  "name": "Caillié to Timbuktu and across the Sahara",
+  "traveler": "René Caillié",
+  "years": "1827–1828",
+  "kind": "traveler",
+  "viewpoint": "france",
+  "summary": "A baker's son from Poitou, travelling alone and disguised as a Muslim returning to Egypt, walks from the Guinea coast to Djenné, takes a boat down the Niger to Timbuktu, and crosses the Sahara with a salt caravan to Morocco: the first European to come back from Timbuktu alive. He found a modest town of mud houses, not the city of gold Europe had imagined.",
+  "source": "caillie",
+  "confidence": "high",
+  "stops": [
+    {"year": 1827, "place": "Boké", "lat": 10.94, "lon": -14.3, "note": "Caillié sets out inland from the coast of Guinea.", "date": "April 1827"},
+    {"year": 1827, "place": "Kankan", "lat": 10.38, "lon": -9.3, "note": "Across the Fouta Djallon to the upper Niger.", "by": "land"},
+    {"year": 1827, "place": "Tiémé", "lat": 9.4, "lon": -6.4, "note": "Five months lying ill with scurvy and fever.", "by": "land", "confidence": "medium"},
+    {"year": 1828, "place": "Djenné", "lat": 13.9, "lon": -4.55, "note": "The great mosque city of the inland Niger delta.", "by": "land", "city": "djenne", "date": "March 1828"},
+    {"year": 1828, "place": "Timbuktu", "lat": 16.77, "lon": -3.0, "note": "Two weeks in the city: 'a mass of ill-looking houses built of earth'.", "by": "river", "city": "timbuktu", "date": "20 April 1828"},
+    {"year": 1828, "place": "Araouane", "lat": 18.9, "lon": -3.53, "note": "North with a caravan of six hundred camels.", "by": "land"},
+    {"year": 1828, "place": "Tafilalt", "lat": 31.3, "lon": -4.3, "note": "Two months across the desert, half dead of thirst.", "by": "land"},
+    {"year": 1828, "place": "Fez", "lat": 34.03, "lon": -5.0, "note": "Over the Atlas.", "by": "land", "city": "fez"},
+    {"year": 1828, "place": "Tangier", "lat": 35.77, "lon": -5.8, "note": "The French consul takes him in and ships him home.", "by": "land", "city": "tangier", "date": "September 1828"}
+  ],
+  "informs": [
+    {"region": "bilad-al-sudan", "level": 3, "homeKnows": 1828, "confidence": "high", "note": "Caillié returns from Timbuktu"},
+    {"region": "sahara", "level": 3, "homeKnows": 1828, "confidence": "high"}
+  ]
+}

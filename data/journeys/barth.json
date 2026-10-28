@@ -1,0 +1,30 @@
+{
+  "id": "barth",
+  "name": "Barth across the Sahara and the Sahel",
+  "traveler": "Heinrich Barth",
+  "years": "1850–1855",
+  "kind": "scientific",
+  "viewpoint": "britain",
+  "summary": "A British-funded mission sets out from Tripoli; its leader and its other German member die, and Heinrich Barth carries on alone for five years, from Aïr to Bornu, Adamawa, Sokoto and Timbuktu. He learned the languages, copied the chronicles, and wrote the fullest account of the Sahel and its history that Europe would have for a century.",
+  "source": "barth",
+  "confidence": "high",
+  "stops": [
+    {"year": 1850, "place": "Tripoli", "lat": 32.89, "lon": 13.19, "note": "The mission of James Richardson, Heinrich Barth and Adolf Overweg sets out.", "city": "tripoli", "date": "March 1850"},
+    {"year": 1850, "place": "Murzuk", "lat": 25.92, "lon": 13.92, "note": "The capital of the Fezzan.", "by": "land"},
+    {"year": 1850, "place": "Ghat", "lat": 24.96, "lon": 10.17, "note": "Among the Tuareg.", "by": "land"},
+    {"year": 1850, "place": "Agadez", "lat": 16.97, "lon": 7.99, "note": "The city of the Aïr mountains.", "by": "land", "date": "October 1850"},
+    {"year": 1851, "place": "Kano", "lat": 12.0, "lon": 8.52, "note": "The great market city of Hausaland.", "by": "land", "city": "kano", "date": "February 1851"},
+    {"year": 1851, "place": "Kukawa", "lat": 12.93, "lon": 13.57, "note": "The capital of Bornu, by Lake Chad; Richardson has died on the way.", "by": "land", "date": "April 1851"},
+    {"year": 1851, "place": "Yola", "lat": 9.2, "lon": 12.5, "note": "South to Adamawa, where he crosses the upper Benue.", "by": "land", "date": "June 1851"},
+    {"year": 1853, "place": "Sokoto", "lat": 13.06, "lon": 5.24, "note": "The capital of the caliphate; Overweg has died, and Barth goes on alone.", "by": "land"},
+    {"year": 1853, "place": "Timbuktu", "lat": 16.77, "lon": -3.0, "note": "Seven months in the city under the protection of Sheikh al-Bakkai.", "by": "land", "city": "timbuktu", "date": "September 1853"},
+    {"year": 1854, "place": "Kukawa", "lat": 12.93, "lon": 13.57, "note": "Back at Bornu, he meets Eduard Vogel, sent out because Barth was thought dead.", "by": "land", "date": "December 1854"},
+    {"year": 1855, "place": "Tripoli", "lat": 32.89, "lon": 13.19, "note": "Across the desert to the coast.", "by": "land", "city": "tripoli", "date": "August 1855"}
+  ],
+  "informs": [
+    {"region": "central-sahel", "level": 4, "homeKnows": 1857, "confidence": "high", "note": "Barth's Travels and Discoveries"},
+    {"region": "bilad-al-sudan", "level": 4, "homeKnows": 1857, "confidence": "high"},
+    {"region": "sahara", "level": 4, "homeKnows": 1857, "confidence": "high"},
+    {"viewpoint": "germany", "region": "central-sahel", "level": 4, "homeKnows": 1857, "confidence": "high", "note": "Barth's Travels and Discoveries"}
+  ]
+}

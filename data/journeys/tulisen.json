@@ -1,0 +1,30 @@
+{
+  "id": "tulisen",
+  "name": "Tulišen's embassy to the Volga",
+  "traveler": "Tulišen and the Kangxi emperor's envoys",
+  "years": "1712–1715",
+  "kind": "envoy",
+  "viewpoint": "china",
+  "summary": "The Kangxi emperor sends an embassy to Ayuki, khan of the Torghuts, a Mongol people who had left Dzungaria for the Volga. The envoys cross Mongolia and the whole of Siberia by Russian leave. Tulišen's Record of Strange Regions gave China its first account of Siberia and of Russia.",
+  "source": "tulisen",
+  "confidence": "high",
+  "stops": [
+    {"year": 1712, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "The embassy leaves the capital.", "city": "beijing", "date": "June 1712"},
+    {"year": 1712, "place": "Selenginsk", "lat": 51.9, "lon": 106.9, "note": "Across Mongolia to the Russian frontier fort, where they wait months for leave to go on.", "by": "land"},
+    {"year": 1713, "place": "Irkutsk", "lat": 52.29, "lon": 104.28, "note": "Past Lake Baikal to Irkutsk; Tulišen notes the Russian settlers, their churches and their crops.", "by": "land", "city": "irkutsk"},
+    {"year": 1713, "place": "Tobolsk", "lat": 58.2, "lon": 68.25, "note": "At Tobolsk, the capital of Siberia, Prince Gagarin, its governor, receives them.", "by": "land", "city": "tobolsk"},
+    {"year": 1714, "place": "Ayuki Khan's camp", "lat": 51.5, "lon": 46.0, "note": "Down the Volga to the Torghut khan's camp, where the emperor's letter is read.", "by": "river"},
+    {"waypoint": true, "lat": 58.2, "lon": 68.25},
+    {"waypoint": true, "lat": 56.0, "lon": 85.0},
+    {"waypoint": true, "lat": 52.29, "lon": 104.28},
+    {"waypoint": true, "lat": 51.9, "lon": 106.9},
+    {"waypoint": true, "lat": 47.9, "lon": 106.9},
+    {"year": 1715, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Home by the same long road.", "by": "land", "city": "beijing", "date": "April 1715"}
+  ],
+  "informs": [
+    {"region": "siberia-east", "level": 3, "homeKnows": 1715, "confidence": "high", "note": "Tulišen's Record of Strange Regions"},
+    {"region": "siberia-west", "level": 3, "homeKnows": 1715, "confidence": "high"},
+    {"region": "lower-volga", "level": 3, "homeKnows": 1715, "confidence": "high"},
+    {"region": "rus", "level": 2, "homeKnows": 1715, "confidence": "medium"}
+  ]
+}

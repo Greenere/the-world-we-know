@@ -1,0 +1,22 @@
+{
+  "id": "maternus",
+  "name": "Julius Maternus to Agisymba",
+  "traveler": "Julius Maternus",
+  "years": "c. 90 CE",
+  "kind": "traveler",
+  "viewpoint": "rome",
+  "summary": "A Roman from Leptis Magna travels south with the king of the Garamantes, four months across the Sahara to Agisymba, a land 'where the rhinoceroses gather'. Ptolemy took his account from the geographer Marinus; where Agisymba lay, perhaps near Lake Chad, is unknown.",
+  "source": "ptolemy",
+  "confidence": "low",
+  "lifts": false,
+  "stops": [
+    {"year": 90, "place": "Leptis Magna", "lat": 32.64, "lon": 14.29, "note": "Maternus sets out from the coast of Tripolitania.", "city": "leptis-magna"},
+    {"year": 90, "place": "Garama", "lat": 26.55, "lon": 12.99, "note": "The capital of the Garamantes, desert traders and charioteers of the Fezzan.", "by": "land"},
+    {"year": 90, "place": "Agisymba", "lat": 13.0, "lon": 14.5, "note": "Four months to the south with the Garamantian king, to a land of rhinoceroses.", "by": "land", "confidence": "low"},
+    {"year": 91, "place": "Leptis Magna", "lat": 32.64, "lon": 14.29, "note": "Home with the farthest report of Africa Rome ever had.", "by": "land", "city": "leptis-magna"}
+  ],
+  "informs": [
+    {"region": "sahara", "level": 2, "homeKnows": 91, "confidence": "low", "note": "Maternus's report"},
+    {"region": "central-sahel", "level": 1, "homeKnows": 91, "confidence": "low"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "hearne",
+  "name": "Hearne to the Coppermine",
+  "traveler": "Samuel Hearne and Matonabbee",
+  "years": "1770–1772",
+  "kind": "traveler",
+  "viewpoint": "britain",
+  "summary": "After two failed attempts, the Hudson's Bay Company man Samuel Hearne walks across the Barren Grounds with the Chipewyan leader Matonabbee and his people, the first European to reach the Arctic Ocean overland in North America. His journey showed there was no Northwest Passage through the continent at those latitudes.",
+  "source": "hearne",
+  "confidence": "high",
+  "stops": [
+    {"year": 1770, "place": "Prince of Wales Fort", "lat": 58.79, "lon": -94.2, "note": "Hearne sets out with Matonabbee's band.", "date": "December 1770"},
+    {"year": 1771, "place": "The Barren Grounds", "lat": 63.5, "lon": -103.0, "note": "Across the treeless tundra on foot, living on caribou.", "by": "land"},
+    {"year": 1771, "place": "Bloody Falls", "lat": 67.74, "lon": -115.37, "note": "Matonabbee's warriors massacre an Inuit camp at the falls, and Hearne cannot stop them.", "by": "land", "date": "July 1771"},
+    {"year": 1771, "place": "The mouth of the Coppermine", "lat": 67.82, "lon": -115.1, "note": "The Arctic Ocean, reached overland.", "by": "land", "date": "July 1771"},
+    {"year": 1771, "place": "Great Slave Lake", "lat": 61.5, "lon": -113.5, "note": "South-west to a great lake no European had seen, crossed on the winter ice.", "by": "land", "date": "December 1771"},
+    {"year": 1772, "place": "Prince of Wales Fort", "lat": 58.79, "lon": -94.2, "note": "Back after eighteen months and some five thousand kilometres.", "by": "land", "date": "June 1772"}
+  ],
+  "informs": [
+    {"region": "canadian-shield", "level": 3, "homeKnows": 1772, "confidence": "high", "note": "Hearne's journey"},
+    {"region": "arctic-canada", "level": 2, "homeKnows": 1772, "confidence": "high"}
+  ]
+}
