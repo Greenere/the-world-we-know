@@ -159,6 +159,8 @@ export interface City {
   host?: string;
   /** For a city: the wonders that stand in it. */
   wonders?: string[];
+  /** For a city: the inventions made in it. */
+  inventions?: string[];
   cell: number;
   dates: Partial<Record<CityDateKey, number | [number, number]>>;
   source: string;
@@ -283,6 +285,8 @@ export interface Invention {
   name: string;
   native?: string;
   place: string;
+  /** The city it was made in, when there is one (the printing press in Mainz). */
+  city?: string;
   lat: number;
   lon: number;
   /** The viewpoint it belongs to, when one fits; otherwise `culture` names who made it. */

@@ -1411,7 +1411,18 @@ def main() -> int:
                 for m in v.get("community", {}).get("members", []):
                     found.setdefault(m["viewpoint"], found[v["id"]])
     inventions = load_inventions(sources, vp_ids)
-    names = load_names(regions_by_id, {c["id"] for c in cities}, vp_ids, sources)
+    # Inventions made in a city (the printing press in Mainz): the city lists them, and they lead back to it.
+    for inv in inventions:
+        if "city" not in inv:
+            continue
+        host = by_id.get(inv["city"])
+        if not host or host.get("kind"):
+            fail(f"inventions.json: {inv['id']} was made in unknown city {inv['city']!r}")
+        elif haversine_km(inv["lat"], inv["lon"], host["lat"], host["lon"]) > 60:
+            fail(f"inventions.json: {inv['id']} is more than 60 km from {inv['city']}")
+        else:
+            host.setdefault("inventions", []).append(inv["id"])
+    names =load_names(regions_by_id, {c["id"] for c in cities}, vp_ids, sources)
     for c in cities:
         if not any(n["vp"] == "*" for n in names.get(("city", c["id"]), [])):
             fail(f"names.csv: city {c['id']} has no default (*) name")

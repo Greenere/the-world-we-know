@@ -391,6 +391,23 @@ export class Cards {
     );
   }
 
+  private inventionChips(ids: string[]): HTMLElement {
+    return h(
+      'div.chips',
+      ids.map(id => {
+        const x = this.data.inventionById.get(id);
+        if (!x) return null;
+        return h(
+          'button.chip.invention-chip',
+          {type: 'button', onclick: () => this.actions.openInvention(id)},
+          h('span.chip-icon', {html: inventionIcons[x.category] ?? icons.invention}),
+          tx.invention(x.id, 'name', x.name),
+          h('span.chip-meta', formatRange(x.year)),
+        );
+      }),
+    );
+  }
+
   // ── City ─────────────────────────────────────────────────────────────────
 
   private city(c: City, s: State): Node[] {
@@ -465,6 +482,7 @@ export class Cards {
     if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys));
     // A city's wonders, too close to draw apart, are listed here; a wonder's card leads back to its city.
     if (c.wonders?.length) out.push(h('h3.card-h', t('Wonders here')), this.wonderChips(c.wonders));
+    if (c.inventions?.length) out.push(h('h3.card-h', t('Invented here')), this.inventionChips(c.inventions));
     // Where it is: the city a wonder stands in, then the region ("In Granada, Iberia").
     const host = c.host ? this.data.cityById.get(c.host) : undefined;
     const r = c.region !== null ? this.data.regions[c.region] : undefined;
@@ -584,6 +602,7 @@ export class Cards {
       imaging: t('Seeing from afar'),
     };
     const vp = x.vp ? this.data.vp[x.vp] : null;
+    const host = x.city ? this.data.cityById.get(x.city) : undefined;
     const plate = x.pictures ? new Plate(this.data, {
       kind: 'invention', id: x.id,
       pick: items => items[0] ?? null,
@@ -615,7 +634,10 @@ export class Cards {
         'p.inv-meta',
         h('strong', formatRange(x.year)),
         ' · ',
-        h('button.linkish', {type: 'button', title: t('Show on the map'), onclick: () => this.actions.flyTo(x.lon, x.lat, 4)}, tx.invention(x.id, 'place', x.place)),
+        // Made in a city: the place leads to the city's card, which lists what else was made there.
+        host
+          ? h('button.linkish', {type: 'button', title: t('See the city'), onclick: () => this.actions.openCity(host.id)}, tx.invention(x.id, 'place', x.place))
+          : h('button.linkish', {type: 'button', title: t('Show on the map'), onclick: () => this.actions.flyTo(x.lon, x.lat, 4)}, tx.invention(x.id, 'place', x.place)),
         ' · ',
         vp ? h('span', {style: `color:${vp.color}`}, tx.viewpoint(vp.id, 'longName', vp.longName)) : tx.invention(x.id, 'culture', x.culture ?? ''),
       ),

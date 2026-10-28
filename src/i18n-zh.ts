@@ -96,6 +96,8 @@ export const zhUi: Record<string, string> = {
   'since {year}': '自{year}起',
   'Natural wonder': '自然奇观',
   'Wonders here': '城中奇观',
+  'Invented here': '城中发明',
+  'See the city': '查看这座城市',
   'with {wonders}': '有{wonders}',
   'in {city}': '在{city}',
   'Star on GitHub': '在 GitHub 上加星',

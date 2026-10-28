@@ -1341,7 +1341,8 @@ kbd {
   color: var(--ink-3);
 }
 
-.wonder-chip {
+.wonder-chip,
+.invention-chip {
   --chip: var(--brass);
 }
 

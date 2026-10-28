@@ -1034,6 +1034,13 @@ export class OverlayModel {
         }),
       ];
     }
+    // One made in a city sits at the city's upper-left shoulder (a wonder takes the right), clear of its mark.
+    const shoulder = (d: InventionView): [number, number] => {
+      const host = d.inv.city ? this.ctx.data.cityById.get(d.inv.city) : undefined;
+      if (!host) return [0, 0];
+      const k = citySize(tierAt(host, state.year)) * 0.38 + 5;
+      return [-k, -k];
+    };
     const out: Layer[] = [
       new IconLayer<InventionView>({
         id: 'inventions',
@@ -1044,11 +1051,12 @@ export class OverlayModel {
         iconMapping: this.atlas.mapping,
         getIcon: () => 'invention',
         getPosition: d => P([d.inv.lon, d.inv.lat]),
-        getSize: d => (d.selected ? 22 : 17),
+        getSize: d => (d.selected ? 22 : d.inv.city ? 14 : 17),
+        getPixelOffset: shoulder,
         getColor: d => [255, 255, 255, alpha(d)],
         sizeUnits: 'pixels',
         pickable: true,
-        updateTriggers: {getSize: key, getColor: key},
+        updateTriggers: {getSize: key, getColor: key, getPixelOffset: state.year},
       }),
     ];
     const labelled = shown.filter(d => d.selected || d.age < 0.2);
@@ -1065,7 +1073,10 @@ export class OverlayModel {
           getColor: d => (d.selected ? [...RUBRIC, 255] : [...BRASS, 235]),
           getTextAnchor: 'middle',
           getAlignmentBaseline: 'top',
-          getPixelOffset: [0, 12],
+          getPixelOffset: d => {
+            const [x, y] = shoulder(d);
+            return [x, y + 12];
+          },
           fontFamily: FONT_TEXT,
           // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
           fontWeight: 'italic',
@@ -1074,7 +1085,7 @@ export class OverlayModel {
           outlineWidth: 4,
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
-          updateTriggers: {getColor: key},
+          updateTriggers: {getColor: key, getPixelOffset: state.year},
         }),
       );
     }
