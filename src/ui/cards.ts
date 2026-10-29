@@ -27,6 +27,7 @@ function shownName(n: NameEntry): {name: string; native: string | null} {
 }
 
 type Child = Node | string | null | undefined | false;
+type LandmarkTarget = {id: string; name: string; year: number};
 
 /**
  * Replace an element's content only when `key` changes, and let the new content fade in. Text that changes
@@ -59,7 +60,8 @@ export class Cards {
   private live: ((s: State) => void) | null = null;
   private scenePlate: Plate | null = null;
   private inventionPlate: Plate | null = null;
-  /** The pending swap from one invention's words to the next. */
+  private landmarkPlate: Plate | null = null;
+  /** The pending swap from one card's words to the next. */
   private leaving = 0;
   private lightbox: HTMLElement | null = null;
   /** For each journey with pictures, the stops that have a scene (once loaded). */
@@ -78,6 +80,8 @@ export class Cards {
       openLiving(id: string, year?: number): void;
       pickArrival(index: number): void;
       openCity(id: string): void;
+      landmarkNeighbors(id: string): {previous?: LandmarkTarget; next?: LandmarkTarget} | null;
+      openLandmark(id: string): void;
       flyTo(lng: number, lat: number, zoom?: number): void;
     },
   ) {
@@ -145,13 +149,17 @@ export class Cards {
       this.live = null;
       this.scenePlate = null;
       this.inventionPlate = null;
+      this.landmarkPlate = null;
       return;
     }
     const key = `${subject}|${s.vps.join()}`;
     if (key !== this.key) {
       const sameSubject = this.key.split('|')[0] === subject;
       const changingInvention = !sameSubject && this.key.startsWith('invention:') && subject.startsWith('invention:');
+      const landmark = s.city && !s.invention && !s.living ? this.actions.landmarkNeighbors(s.city) : null;
+      const changingLandmark = !sameSubject && !!landmark && this.key.startsWith('city:') && !!this.actions.landmarkNeighbors(this.key.split('|')[0].slice(5));
       if (!subject.startsWith('invention:')) this.inventionPlate = null;
+      if (!landmark) this.landmarkPlate = null;
       this.key = key;
       this.live = null;
       this.scenePlate = null;
@@ -181,7 +189,7 @@ export class Cards {
       };
       clearTimeout(this.leaving);
       this.body.classList.remove('card-enter');
-      if (changingInvention) {
+      if (changingInvention || changingLandmark) {
         // The old words fade out before the new ones fade in, so no text ever cuts to half-tone;
         // the sketch stays put and crossfades on its own once the new one has decoded.
         const words = (list: Iterable<Node>) => [...list].filter((n): n is Element => n instanceof Element && !n.classList.contains('plate'));
@@ -417,6 +425,7 @@ export class Cards {
 
   private city(c: City, s: State): Node[] {
     const vp = s.vps[0];
+    const neighbors = this.actions.landmarkNeighbors(c.id);
     const kicker = h('div.card-kicker');
     const title = h('h2.card-title');
     const statusText: Record<string, string> = {
@@ -440,8 +449,10 @@ export class Cards {
           },
           vp,
           (d, title, caption, range) => this.openLightbox(d, title, caption, range),
+          neighbors ? this.landmarkPlate ?? undefined : undefined,
         )
       : null;
+    if (neighbors) this.landmarkPlate = plate;
     if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', tx.story(c.id, c.story)));
     const labels: Record<string, string> = {
@@ -505,6 +516,19 @@ export class Cards {
     out.push(
       h('p.card-src', {title: this.data.sources[c.source]?.citation ?? c.source}, `${t('Source:')} ${shortCitation(this.data.sources, c.source)} · ${t('{level} confidence', {level: t(c.confidence)})}`),
     );
+    if (neighbors) {
+      const nav = (other: LandmarkTarget | undefined, dir: 'prev' | 'next') => other
+        ? h('button.inv-nav-btn', {
+            type: 'button', title: other.name,
+            'aria-keyshortcuts': dir === 'prev' ? 'ArrowLeft' : 'ArrowRight',
+            onclick: () => this.actions.openLandmark(other.id),
+          },
+          dir === 'prev' ? h('span', {html: icons.prev}) : null,
+          h('span.inv-nav-text', h('span.inv-nav-when', formatYear(other.year)), h('span.inv-nav-name', other.name)),
+          dir === 'next' ? h('span', {html: icons.next}) : null)
+        : h('span');
+      out.push(h('div.inv-nav.landmark-nav', nav(neighbors.previous, 'prev'), nav(neighbors.next, 'next')));
+    }
     this.live = st => {
       const status = cityStatus(c, st.year);
       const phase = phaseAt(c, st.year);

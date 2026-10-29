@@ -794,6 +794,20 @@ export class JourneyPanel {
     return out.sort((a, b) => a.from - b.from || a.name.localeCompare(b.name));
   }
 
+  /** Card navigation follows the complete list, just as invention cards do. */
+  landmarkNeighbors(id: string) {
+    const entries = this.landmarkEntries(this.store.state.vps[0]);
+    const i = entries.findIndex(e => e.c.id === id);
+    if (i < 0) return null;
+    const target = (e: LandmarkEntry | undefined) => e ? {id: e.c.id, name: e.name, year: e.from} : undefined;
+    return {previous: target(entries[i - 1]), next: target(entries[i + 1])};
+  }
+
+  openLandmark(id: string) {
+    const entry = this.landmarkEntries(this.store.state.vps[0]).find(e => e.c.id === id);
+    if (entry) this.openAt(entry.c, entry.from);
+  }
+
   private renderLandmarks() {
     const el = this.landmarkResults;
     if (!el) return;

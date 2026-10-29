@@ -156,6 +156,8 @@ class App {
       openLiving: (id: string, year?: number) => this.openLiving(id, year),
       pickArrival: (i: number) => this.pickArrival(i),
       openCity: (id: string) => this.openCity(id, false),
+      landmarkNeighbors: (id: string) => this.ui.journey.landmarkNeighbors(id),
+      openLandmark: (id: string) => this.ui.journey.openLandmark(id),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),
     };
     const ui = {
@@ -992,13 +994,20 @@ class App {
     const blocked = (e: KeyboardEvent) => e.defaultPrevented || e.isComposing || e.altKey || e.ctrlKey || e.metaKey || editing(e);
     const overlayOpen = () => this.store.state.search || this.store.state.panel === 'about' || !!document.querySelector('.lightbox');
 
-    // Capture invention arrows before MapLibre can use them to pan a focused map.
+    // Capture card navigation before MapLibre can use arrows to pan a focused map.
     document.addEventListener('keydown', e => {
       if (blocked(e) || e.shiftKey || overlayOpen() || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
-      const id = this.store.state.invention;
-      if (!id) return;
+      const s = this.store.state;
+      const id = s.invention;
+      const landmarks = !id && !s.living && s.city ? this.ui.journey.landmarkNeighbors(s.city) : null;
+      if (!id && !landmarks) return;
       e.preventDefault();
       e.stopPropagation();
+      if (landmarks) {
+        const next = e.key === 'ArrowLeft' ? landmarks.previous : landmarks.next;
+        if (next) this.ui.journey.openLandmark(next.id);
+        return;
+      }
       const i = this.data.inventions.findIndex(x => x.id === id);
       const next = i < 0 ? undefined : this.data.inventions[i + (e.key === 'ArrowLeft' ? -1 : 1)];
       if (next) this.openInvention(next.id);
