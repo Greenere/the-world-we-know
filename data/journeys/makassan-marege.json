@@ -1,0 +1,20 @@
+{
+  "id": "makassan-marege",
+  "name": "Pobassoo's trepang fleet",
+  "traveler": "Pobassoo and the Makassan trepang fleet",
+  "years": "1802–1803",
+  "kind": "fleet",
+  "viewpoint": "nusantara",
+  "summary": "For nearly two centuries, from about 1720 until Australia banned it in 1907, fleets of praus sailed from Makassar each December on the north-west monsoon to the coast of Arnhem Land, which they called Marege', to gather and boil trepang for the China trade, and came home on the south-east trades in April. In February 1803 Matthew Flinders met part of one fleet: its commander Pobassoo told him he led some sixty praus and a thousand men and had made the voyage six or seven times.",
+  "source": "macknight-1976",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 1802, "place": "Makassar", "lat": -5.14, "lon": 119.43, "note": "The fleet sails south-east on the north-west monsoon.", "city": "makassar", "date": "December 1802"},
+    {"year": 1803, "place": "Marege'", "lat": -11.3, "lon": 132.2, "note": "The praus spread out along the coast, boiling and drying trepang in camps ashore.", "by": "sea", "confidence": "medium"},
+    {"year": 1803, "place": "English Company's Islands", "lat": -11.8, "lon": 136.5, "note": "Flinders finds six praus here and talks with Pobassoo.", "by": "sea", "date": "February 1803", "source": "flinders"},
+    {"year": 1803, "place": "Makassar", "lat": -5.14, "lon": 119.43, "note": "Home on the south-east trades with the season's catch.", "city": "makassar", "date": "April 1803", "by": "sea"}
+  ],
+  "informs": [
+  ]
+}

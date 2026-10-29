@@ -858,6 +858,27 @@ def load_journeys(sources: dict, vp_ids: set[str]) -> list[dict]:
         if not j.get("informs") and j.get("lifts") is not False:
             fail(f"{where}: must inform at least one viewpoint about at least one region (or say \"lifts\": false)")
         journeys.append(j)
+    # A party sent out from a larger journey: its parent must exist, it must set out from one of the parent's
+    # stops, and it must fall within the parent's years.
+    by_id = {j["id"]: j for j in journeys}
+    for j in journeys:
+        if "parent" not in j and "fork" not in j:
+            continue
+        where = f"journeys/{j['id']}.json"
+        p = by_id.get(j.get("parent", ""))
+        if not p or p is j:
+            fail(f"{where}: unknown parent journey {j.get('parent')!r}")
+            continue
+        if p.get("parent"):
+            fail(f"{where}: its parent {p['id']} is itself a sub-journey")
+        forks = [s for s in p["stops"] if not s.get("waypoint") and s.get("place") == j.get("fork")]
+        if not forks:
+            fail(f"{where}: fork {j.get('fork')!r} is not a stop of {p['id']}")
+            continue
+        first = next(s for s in j["stops"] if not s.get("waypoint"))
+        p_years = [s["year"] for s in p["stops"] if not s.get("waypoint")]
+        if not (min(p_years) <= first["year"] <= max(p_years)):
+            fail(f"{where}: sets out in {first['year']}, outside {p['id']}'s years")
     return journeys
 
 

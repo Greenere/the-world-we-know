@@ -29,10 +29,7 @@
     {"waypoint": true, "lat": 29.5, "lon": 71.0},
     {"year": -325, "place": "Patala", "lat": 25.4, "lon": 68.4, "note": "The Indus delta; first sight of the Ocean's tides."},
     {"year": -325, "place": "Gedrosian desert", "lat": 25.8, "lon": 62.5, "note": "A disastrous march through the desert; thousands die."},
-    {"waypoint": true, "lat": 24.6, "lon": 66.5, "from": "Patala"},
-    {"waypoint": true, "lat": 25.1, "lon": 61.5},
-    {"waypoint": true, "lat": 25.4, "lon": 57.6},
-    {"year": -324, "place": "Harmozeia", "lat": 27.1, "lon": 56.6, "note": "Nearchus brings the fleet along the coast from the Indus and finds Alexander inland.", "confidence": "medium"},
+    {"year": -325, "place": "Carmania", "lat": 27.5, "lon": 57.8, "note": "Out of the desert; Nearchus, sailing from the Indus, finds Alexander here.", "confidence": "medium"},
     {"year": -324, "place": "Susa", "lat": 32.19, "lon": 48.26, "note": "Mass weddings of Macedonians and Persians.", "city": "susa"},
     {"year": -323, "place": "Babylon", "lat": 32.54, "lon": 44.42, "note": "Alexander dies, aged 32, planning a voyage around Arabia.", "city": "babylon"}
   ],
@@ -46,9 +43,6 @@
     {"region": "bactria", "level": 3, "homeKnows": -329, "confidence": "high"},
     {"region": "transoxiana", "level": 3, "homeKnows": -328, "confidence": "high", "note": "Sogdiana and Maracanda"},
     {"region": "indus", "level": 4, "homeKnows": -326, "confidence": "high"},
-    {"region": "india-north", "level": 2, "homeKnows": -326, "confidence": "medium", "note": "The Ganges and the Gangaridai, by report"},
-    {"region": "arabian-sea", "level": 3, "homeKnows": -325, "confidence": "high", "note": "Nearchus' voyage"},
-    {"region": "persian-gulf", "level": 3, "homeKnows": -324, "confidence": "high"},
-    {"region": "oman", "level": 1, "homeKnows": -324, "confidence": "low"}
+    {"region": "india-north", "level": 2, "homeKnows": -326, "confidence": "medium", "note": "The Ganges and the Gangaridai, by report"}
   ]
 }

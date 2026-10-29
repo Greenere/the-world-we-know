@@ -1,0 +1,20 @@
+{
+  "id": "brunei-nanjing",
+  "name": "The king of Brunei's voyage to Nanjing",
+  "traveler": "Maharaja Karna of Brunei (Ma-na-re-jia-na)",
+  "years": "1408",
+  "kind": "envoy",
+  "viewpoint": "nusantara",
+  "summary": "In the years of Zheng He's fleets, a king of Brunei sails to the Ming court with his queen, children and some 150 followers. He lands in Fujian, where court officials meet him, and is escorted to Nanjing. The Yongle emperor receives him with honour, but he falls ill and dies there. He is buried south of the city, where his tomb still stands.",
+  "source": "ming-shilu",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1408, "place": "Brunei", "lat": 4.89, "lon": 114.94, "note": "The king sets sail for China with his family.", "city": "brunei"},
+    {"year": 1408, "place": "Fujian", "lat": 26.07, "lon": 119.3, "note": "Court officials meet him on landing.", "by": "sea", "confidence": "medium"},
+    {"year": 1408, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "note": "Received by the Yongle emperor; he dies here in the autumn.", "city": "nanjing"},
+    {"year": 1408, "place": "Shizigang", "lat": 31.95, "lon": 118.75, "note": "Buried south of the city; his tomb is still there."}
+  ],
+  "informs": [
+  ]
+}

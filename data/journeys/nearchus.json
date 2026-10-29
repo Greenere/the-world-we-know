@@ -1,0 +1,26 @@
+{
+  "id": "nearchus",
+  "name": "Nearchus sails from the Indus",
+  "traveler": "Nearchus, Alexander's admiral",
+  "years": "325–324 BCE",
+  "kind": "fleet",
+  "parent": "alexander",
+  "fork": "Patala",
+  "viewpoint": "greece",
+  "summary": "While Alexander marches through the Gedrosian desert, his friend Nearchus takes the fleet from the Indus delta along the coast of Makran and up the Persian Gulf. His sailors see whales, live on fish among the Fish-Eaters of the barren shore, and are the first Greeks to chart this sea. Arrian's Indica preserves his log.",
+  "source": "arrian",
+  "confidence": "high",
+  "stops": [
+    {"year": -325, "place": "Patala", "lat": 25.8, "lon": 68.0, "note": "The fleet waits in the Indus delta for the monsoon to turn."},
+    {"year": -325, "place": "Krokala", "lat": 24.85, "lon": 66.95, "note": "Held in harbour by contrary winds for weeks.", "by": "sea"},
+    {"year": -325, "place": "Coast of the Fish-Eaters", "lat": 25.25, "lon": 62.3, "note": "A barren shore whose people live on fish; the sailors see whales.", "by": "sea"},
+    {"year": -325, "place": "Harmozeia", "lat": 27.1, "lon": 56.9, "note": "He goes inland to find Alexander in Carmania, then returns to the fleet.", "by": "sea", "date": "December 325 BCE"},
+    {"year": -324, "place": "Mouth of the Pasitigris", "lat": 30.4, "lon": 48.5, "note": "Up the Persian Gulf to the river mouth.", "by": "sea"},
+    {"year": -324, "place": "Susa", "lat": 32.19, "lon": 48.26, "note": "He rejoins Alexander and is crowned with gold.", "city": "susa"}
+  ],
+  "informs": [
+    {"region": "arabian-sea", "level": 3, "homeKnows": -324, "confidence": "high", "note": "Nearchus' voyage"},
+    {"region": "persian-gulf", "level": 3, "homeKnows": -324, "confidence": "high"},
+    {"region": "oman", "level": 1, "homeKnows": -324, "confidence": "medium"}
+  ]
+}

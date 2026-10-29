@@ -4,6 +4,8 @@
   "traveler": "Jebe and Subutai, generals of Genghis Khan",
   "years": "1220–1223",
   "kind": "military",
+  "parent": "genghis-khwarazm",
+  "fork": "Samarkand",
   "viewpoint": "steppe",
   "summary": "Sent after the fleeing Khwarazm-shah, two Mongol generals with about 20,000 horsemen ride around the Caspian Sea, through Persia and the Caucasus onto the steppe north of the Black Sea, crush the Rus princes at the Kalka and return east: a reconnaissance in force of some 8,000 km.",
   "source": "secret-history",

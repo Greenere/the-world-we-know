@@ -200,11 +200,16 @@ export class JourneyPanel {
     const inSeries = new Map<string, string>();
     for (const sr of this.data.series) for (const id of sr.journeys) inSeries.set(id, sr.id);
     const out: Entry[] = [];
+    // A party sent out from a journey is listed under it, not on its own.
+    const subs = (members: Journey[]) => members.flatMap(m => this.data.journeyChildren.get(m.id) ?? []);
     for (const sr of this.data.series) {
       const members = sr.journeys.map(id => this.data.journeyById.get(id)).filter(Boolean) as Journey[];
-      if (members.length) out.push(entryOf(sr.id, tx.series(sr.id, sr.name), members));
+      if (members.length) out.push(entryOf(sr.id, tx.series(sr.id, sr.name), members, subs(members)));
     }
-    for (const j of this.data.journeys) if (!inSeries.has(j.id)) out.push(entryOf(j.id, tx.journey(j.id, 'name', j.name), [j]));
+    for (const j of this.data.journeys) {
+      if (inSeries.has(j.id) || (j.parent && this.data.journeyById.has(j.parent))) continue;
+      out.push(entryOf(j.id, tx.journey(j.id, 'name', j.name), [j], subs([j])));
+    }
     return out.sort((a, b) => a.t0 - b.t0);
   }
 
@@ -233,7 +238,7 @@ export class JourneyPanel {
   private matching(e: Entry): Journey[] {
     const f = FILTERS.find(x => x.id === this.filter) ?? FILTERS[0];
     const q = fold(this.query.trim());
-    return e.members.filter(
+    return [...e.members, ...e.subs].filter(
       j => (f.id === 'all' || f.kinds.includes(j.kind)) && (!this.vpFilter || this.inViewpoint(j, this.vpFilter)) && (!q || this.searchText(j).includes(q)),
     );
   }
@@ -495,7 +500,7 @@ export class JourneyPanel {
     const color = this.data.vp[first.viewpoint].color;
     const main = h(
       'button.jp-item',
-      {type: 'button', style: `--chip:${color}`, onclick: () => this.actions.start((hits[0] ?? first).id)},
+      {type: 'button', style: `--chip:${color}`, onclick: () => this.actions.start((hits.find(j => e.members.includes(j)) ?? first).id)},
       h('span.jp-item-icon', {html: kindIcons[first.kind] ?? kindIcons.traveler}),
       h(
         'span.jp-item-text',
@@ -508,7 +513,8 @@ export class JourneyPanel {
         ),
       ),
     );
-    if (e.members.length === 1) return h('li', {'data-entry': e.id}, main);
+    const subs = this.subRows(e, hits);
+    if (e.members.length === 1) return h('li', {'data-entry': e.id}, main, subs);
     const searching = !!this.query.trim();
     return h(
       'li.jp-series',
@@ -528,6 +534,27 @@ export class JourneyPanel {
               onclick: () => this.actions.start(j.id),
             },
             String(i + 1),
+          ),
+        ),
+      ),
+      subs,
+    );
+  }
+
+  /** The parties an entry's journeys sent out, indented beneath it; dimmed when the filters leave them out. */
+  private subRows(e: Entry, hits: Journey[]): HTMLElement | null {
+    if (!e.subs.length) return null;
+    return h(
+      'ul.jp-subs',
+      e.subs.map(j =>
+        h(
+          'li',
+          h(
+            'button.jp-sub',
+            {type: 'button', class: hits.includes(j) ? '' : 'dim', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.start(j.id)},
+            h('span.jp-sub-icon', {html: kindIcons[j.kind] ?? kindIcons.traveler}),
+            h('span.jp-sub-name', tx.journey(j.id, 'name', j.name)),
+            h('span.jp-sub-meta', tx.journey(j.id, 'years', j.years)),
           ),
         ),
       ),
@@ -582,6 +609,16 @@ export class JourneyPanel {
         const a = X(j.t[0]);
         const b = Math.max(a + 3, X(j.t[j.t.length - 1]));
         const bar = mk('rect', {x: a, y: y - 3.5, width: b - a, height: 7, rx: 2, class: p.hits.includes(j) ? 'g-bar' : 'g-bar dim'});
+        const title = mk('title', {});
+        title.textContent = `${tx.journey(j.id, 'name', j.name)} · ${tx.journey(j.id, 'years', j.years)}`;
+        bar.append(title);
+        bar.addEventListener('click', () => this.actions.start(j.id));
+        g.append(bar);
+      }
+      for (const j of p.e.subs) {
+        const a = X(j.t[0]);
+        const b = Math.max(a + 3, X(j.t[j.t.length - 1]));
+        const bar = mk('rect', {x: a, y: y + 2.5, width: b - a, height: 3, rx: 1.5, class: p.hits.includes(j) ? 'g-bar g-sub' : 'g-bar g-sub dim'});
         const title = mk('title', {});
         title.textContent = `${tx.journey(j.id, 'name', j.name)} · ${tx.journey(j.id, 'years', j.years)}`;
         bar.append(title);
@@ -849,6 +886,13 @@ export class JourneyPanel {
       list.push({region: inf.region, year: inf.homeKnowsMid});
       informed.set(inf.viewpoint, list);
     }
+    // Each party this journey sent out, at the stop it set out from: the last stop of that name before it left.
+    const forks = new Map<number, Journey[]>();
+    for (const c of this.data.journeyChildren.get(j.id) ?? []) {
+      const at = geo.stops.map((st, i) => ({st, i})).filter(({st}) => st.stop.place === c.fork);
+      const k = (at.filter(({st}) => st.t <= c.t[0] + 1e-6).pop() ?? at[0])?.i;
+      if (k !== undefined) forks.set(k, [...(forks.get(k) ?? []), c]);
+    }
     const stopsList = h(
       'ol.jp-stops',
       geo.stops.map((st, i) => {
@@ -864,6 +908,22 @@ export class JourneyPanel {
             h('div.jp-stop-place', tx.stop(j.id, i, 'place', s.place ?? '')),
             s.note ? h('p.jp-stop-note', tx.stop(j.id, i, 'note', s.note)) : null,
             h('div.jp-stop-src', {title: this.data.sources[src]?.citation ?? src}, shortCitation(this.data.sources, src), s.confidence && s.confidence !== j.confidence ? ` · ${t('{level} confidence', {level: t(s.confidence)})}` : ''),
+            (forks.get(i) ?? []).map(c =>
+              h(
+                'button.jp-stop-fork',
+                {
+                  type: 'button',
+                  style: `--chip:${this.data.vp[c.viewpoint].color}`,
+                  title: t('Follow {name}', {name: tx.journey(c.id, 'name', c.name)}),
+                  onclick: (e: Event) => {
+                    e.stopPropagation();
+                    this.actions.switchTo(c.id, c.t[0]);
+                  },
+                },
+                h('span.jp-stop-fork-icon', {html: kindIcons[c.kind] ?? kindIcons.traveler}),
+                t('{name} sets out from here', {name: tx.journey(c.id, 'name', c.name)}),
+              ),
+            ),
           ),
         );
         this.stopEls.push(li);
@@ -911,6 +971,7 @@ export class JourneyPanel {
           h('button.card-close', {type: 'button', 'aria-label': t('Close journey'), onclick: () => this.actions.close(), html: icons.close}),
         ),
         h('h2.card-title', tx.journey(j.id, 'name', j.name)),
+        this.parentLink(j),
         h(
           'div.jp-controls',
           h('button.jp-step', {type: 'button', 'aria-label': t('Previous stop'), onclick: () => this.actions.step(-1), html: icons.prev}),
@@ -964,6 +1025,18 @@ export class JourneyPanel {
       (this.meanwhileEl = h('div.jp-meanwhile', {hidden: true})),
       stopsList,
     ];
+  }
+
+  /** For a party sent out from a larger journey: the journey it belongs to, opened at the moment it set out. */
+  private parentLink(j: Journey): HTMLElement | null {
+    const p = j.parent ? this.data.journeyById.get(j.parent) : undefined;
+    if (!p) return null;
+    const name = tx.journey(p.id, 'name', p.name);
+    return h(
+      'p.jp-parent',
+      t('Part of '),
+      h('button.linkish', {type: 'button', style: `color:${this.data.vp[p.viewpoint].color}`, title: t('Follow {name} from here', {name}), onclick: () => this.actions.switchTo(p.id, j.t[0])}, name),
+    );
   }
 
   /** Other journeys that came close in place and time, computed by the build. */
@@ -1106,12 +1179,14 @@ interface Entry {
   id: string;
   name: string;
   members: Journey[];
+  /** Parties the members sent out on journeys of their own (Gan Ying from Ban Chao's), listed beneath. */
+  subs: Journey[];
   t0: number;
   t1: number;
 }
 
-function entryOf(id: string, name: string, members: Journey[]): Entry {
-  return {id, name, members, t0: Math.min(...members.map(j => j.t[0])), t1: Math.max(...members.map(j => j.t[j.t.length - 1]))};
+function entryOf(id: string, name: string, members: Journey[], subs: Journey[] = []): Entry {
+  return {id, name, members, subs, t0: Math.min(...members.map(j => j.t[0])), t1: Math.max(...members.map(j => j.t[j.t.length - 1]))};
 }
 
 /** Lower case, accents and ʻokina dropped, so "ibn battuta" finds "Ibn Baṭṭūṭa". */

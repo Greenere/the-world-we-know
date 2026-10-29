@@ -1,0 +1,24 @@
+{
+  "id": "fan-shouyi",
+  "name": "Fan Shouyi in Europe",
+  "traveler": "Fan Shouyi (Louis Fan)",
+  "years": "1707–1720",
+  "kind": "traveler",
+  "viewpoint": "china",
+  "summary": "A young Chinese Christian goes to Europe with the Jesuit Antonio Provana, an envoy of the Kangxi emperor to the pope. He spends ten years there, is ordained a priest, and comes home after Provana dies at sea. His short Shenjianlu, 'Record of Things Seen and Heard', is the only surviving account of Europe by a Chinese visitor before the nineteenth century.",
+  "source": "fan-shouyi",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 1707, "place": "Macau", "lat": 22.2, "lon": 113.55, "note": "He sails with Provana at the end of winter.", "city": "macau"},
+    {"year": 1708, "place": "Lisbon", "lat": 38.71, "lon": -9.14, "note": "Landfall in Portugal.", "city": "lisbon", "by": "sea"},
+    {"year": 1709, "place": "Rome", "lat": 41.89, "lon": 12.49, "note": "Years of study; he is ordained a priest.", "city": "rome", "confidence": "medium"},
+    {"year": 1719, "place": "Lisbon", "lat": 38.71, "lon": -9.14, "note": "They sail for China; Provana dies on the voyage.", "city": "lisbon"},
+    {"year": 1720, "place": "Macau", "lat": 22.2, "lon": 113.55, "note": "Home alone.", "city": "macau", "by": "sea"},
+    {"year": 1720, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Received by the Kangxi emperor.", "city": "beijing", "date": "October 1720"}
+  ],
+  "informs": [
+    {"region": "iberia", "level": 3, "homeKnows": 1721, "confidence": "medium", "note": "The Shenjianlu"},
+    {"region": "italy", "level": 3, "homeKnows": 1721, "confidence": "medium"}
+  ]
+}

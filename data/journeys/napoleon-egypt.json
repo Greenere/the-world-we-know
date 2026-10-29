@@ -14,8 +14,6 @@
     {"year": 1798, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "The army lands and storms the city.", "date": "July 1798", "city": "alexandria"},
     {"year": 1798, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "After the Battle of the Pyramids, the Institut d'Égypte is founded in the city.", "date": "July 1798", "city": "cairo"},
     {"year": 1798, "place": "Aboukir Bay", "lat": 31.32, "lon": 30.07, "note": "Nelson destroys the French fleet; the army is stranded.", "date": "August 1798"},
-    {"year": 1799, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "Desaix's column, with the artist Vivant Denon, reaches the temples of Upper Egypt.", "city": "thebes", "from": "Cairo"},
-    {"year": 1799, "place": "Philae", "lat": 24.02, "lon": 32.88, "note": "The southern limit of the survey."},
     {"year": 1799, "place": "Rosetta", "lat": 31.4, "lon": 30.42, "note": "Soldiers find a stone inscribed in hieroglyphs, Demotic and Greek; it will unlock the hieroglyphs in 1822.", "date": "July 1799"},
     {"waypoint": true, "lat": 31.13, "lon": 33.8},
     {"waypoint": true, "lat": 31.5, "lon": 34.47},

@@ -294,6 +294,8 @@ export interface RouteView {
   years: string;
   color: [number, number, number];
   paths: LngLat[][];
+  /** A related journey drawn behind the one being followed: the party it sent out, or the journey it belongs to. */
+  faint?: boolean;
 }
 
 export interface OverlayContext {
@@ -942,8 +944,8 @@ export class OverlayModel {
         parameters: SURFACE_PARAMETERS,
         data,
         getPath: d => d.path,
-        getColor: d => [...d.r.color, 175],
-        getWidth: 1.8,
+        getColor: d => [...d.r.color, d.r.faint ? 120 : 175],
+        getWidth: d => (d.r.faint ? 1.4 : 1.8),
         widthUnits: 'pixels',
         widthMinPixels: 1.4,
         jointRounded: true,

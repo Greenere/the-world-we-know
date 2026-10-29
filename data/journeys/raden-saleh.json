@@ -1,0 +1,27 @@
+{
+  "id": "raden-saleh",
+  "name": "Raden Saleh in Europe",
+  "traveler": "Raden Saleh",
+  "years": "1829–1852",
+  "kind": "traveler",
+  "viewpoint": "nusantara",
+  "summary": "A young Javanese aristocrat with a gift for drawing sails for the Netherlands in 1829 and stays more than twenty years. He studies painting in The Hague, lives at the court of Dresden, travels with Horace Vernet to French Algeria, and becomes the first modern painter from Southeast Asia known in Europe before he returns to Java.",
+  "source": "raden-saleh",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1829, "place": "Batavia", "lat": -6.13, "lon": 106.81, "note": "He sails for the Netherlands.", "city": "batavia"},
+    {"year": 1829, "place": "The Hague", "lat": 52.08, "lon": 4.3, "note": "Ten years of study under Dutch painters.", "by": "sea"},
+    {"year": 1839, "place": "Dresden", "lat": 51.05, "lon": 13.74, "note": "Friend of dukes and poets at the Saxon court."},
+    {"year": 1845, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "He befriends Horace Vernet.", "city": "paris"},
+    {"year": 1846, "place": "Marseille", "lat": 43.3, "lon": 5.37, "note": "South to the sea with Vernet.", "confidence": "medium"},
+    {"year": 1846, "place": "Algiers", "lat": 36.75, "lon": 3.06, "note": "In French Algeria, which he paints for years after.", "city": "algiers", "by": "sea"},
+    {"year": 1846, "place": "Marseille", "lat": 43.3, "lon": 5.37, "note": "Back to France.", "by": "sea", "confidence": "medium"},
+    {"year": 1851, "place": "The Hague", "lat": 52.08, "lon": 4.3, "note": "At the end of 1851 he takes ship for home."},
+    {"year": 1852, "place": "Batavia", "lat": -6.13, "lon": 106.81, "note": "Home after more than twenty years.", "city": "batavia", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "germania", "level": 4, "homeKnows": 1852, "confidence": "medium", "note": "Raden Saleh in The Hague and Dresden"},
+    {"region": "gaul", "level": 3, "homeKnows": 1852, "confidence": "medium"},
+    {"region": "maghreb", "level": 2, "homeKnows": 1852, "confidence": "medium", "note": "With Horace Vernet in Algiers"}
+  ]
+}

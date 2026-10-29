@@ -637,11 +637,8 @@ china,zhetysu,-60,3,high,hanshu,The Wusun
 china,bay-of-bengal,-1..1,2,low,hanshu,The Hanshu's sea route to Huangzhi
 china,tamilakam,-1..1,1,low,hanshu,
 china,japan,57,2,high,houhanshu,The king of Na in Wa receives a gold seal
-china,persia,97,2,medium,houhanshu,Anxi (Parthia)
-china,mesopotamia,97,2,medium,houhanshu,Tiaozhi on the shore of the great sea
 china,persian-gulf,97,2,medium,houhanshu,
 china,levant,97,1,low,houhanshu,Daqin beyond the sea
-china,italy,97,1,low,houhanshu,
 china,levant,166,2,low,houhanshu,Envoys of the king of Daqin arrive by sea
 china,med-east,166,1,low,houhanshu,
 china,khmer,245..250,3,medium,kang-tai,Kang Tai and Zhu Ying visit Funan
@@ -659,12 +656,7 @@ china,korea,668,4,high,hoc,
 china,manchuria,668,3,high,hoc,
 china,sumatra,671..695,3,high,yijing,Yijing studies at Srivijaya
 china,malay-peninsula,671..695,3,medium,yijing,
-china,bengal,671..695,3,high,yijing,Tamralipti
-china,india-north,671..695,4,high,yijing,Nalanda
-china,mesopotamia,762,3,medium,du-huan,Du Huan in Kufa
 china,levant,762,2,medium,du-huan,
-china,persia,762,3,medium,du-huan,
-china,arabia-hejaz,762,2,medium,du-huan,
 china,maghreb,762,1,low,du-huan,"Molin, perhaps in north Africa"
 china,egypt,762,1,low,du-huan,
 # After An Lushan: the west recedes
@@ -726,7 +718,6 @@ china,siberia-east,1270,1,low,hoc,
 china,japan,1281,4,high,hoc,
 china,burma,1287,3,high,hoc,
 china,java,1293,3,high,hoc,
-china,khmer,1297,4,high,zhou-daguan,Zhou Daguan describes Angkor
 china,africa,1330,1,low,kangnido,Africa drawn as a triangle pointing south
 china,southern-africa,1330,1,low,kangnido,
 china,maghreb,1330,2,low,kangnido,
@@ -2896,14 +2887,12 @@ nusantara,philippines,1365,3,medium,nagarakretagama,
 nusantara,khmer,1365,3,high,nagarakretagama,
 nusantara,annam,1365,3,high,nagarakretagama,Champa
 nusantara,china-south,1405,4,high,ma-huan,Zheng He's fleets at Malacca
-nusantara,china-north,1411,3,high,ming-shilu,Malacca's ruler visits the Ming court
 nusantara,arabia-hejaz,1450,3,high,reid,Malacca's rulers turn to Islam; pilgrims to Mecca
 nusantara,west-india-coast,1450,3,high,reid,Gujarati merchants in Malacca
 nusantara,persia,1450,2,medium,reid,
 nusantara,egypt,1450,2,medium,reid,
 nusantara,mesopotamia,1450,2,medium,reid,
 nusantara,iberia,1511,3,high,reid,The Portuguese take Malacca
-nusantara,anatolia,1566,3,high,reid,Aceh's envoys to the Ottoman sultan
 nusantara,germania,1596,3,high,reid,The Dutch at Banten
 nusantara,britain,1602,2,high,reid,
 nusantara,mexico,1600,2,medium,reid,The Manila galleon sails for Acapulco
@@ -2988,19 +2977,7 @@ korea,tibet,1780,2,high,yeolha-ilgi,Pak Ji-won meets the Panchen Lama's court at
 korea,mongolia,1780,4,high,yeolha-ilgi,
 korea,gaul,1866,3,high,seth-korea,The French expedition to Ganghwa
 korea,north-america,1871,3,high,seth-korea,The American expedition to Ganghwa
-korea,north-america,1883,4,high,seth-korea,The mission crosses America by rail to Washington
-korea,gaul,1884,3,high,seth-korea,The mission comes home by way of Europe and Suez
-korea,britain,1884,3,high,seth-korea,
-korea,med-west,1884,3,high,seth-korea,
-korea,egypt,1884,3,high,seth-korea,
-korea,red-sea,1884,3,high,seth-korea,
-korea,indian-ocean,1884,3,high,seth-korea,
-korea,sri-lanka,1884,3,high,seth-korea,
-korea,north-atlantic-east,1884,3,high,seth-korea,
 korea,europe,1895,3,high,yu-kilchun,Yu Kil-chun's Observations on a Journey to the West
-korea,rus,1896,3,high,seth-korea,Min Yeong-hwan at the coronation of Nicholas II
-korea,siberia-west,1896,3,high,seth-korea,He comes home across Siberia
-korea,siberia-east,1896,3,high,seth-korea,
 
 # ════ Steppe: the deer-stone herders, then the empires of the Orkhon ════
 steppe,mongolia,-2000,3,low,honeychurch,Herders of the Mongolian plateau
@@ -3056,8 +3033,6 @@ steppe,caspian,1223,3,high,juvaini,
 steppe,lower-volga,1236,4,high,juvaini,The Volga Bulgars conquered
 steppe,volga,1236,4,high,juvaini,
 steppe,balkans,1242,2,high,juvaini,The army turns back from the Adriatic
-steppe,germania,1241,2,high,juvaini,The battle of Legnica
-steppe,baltic,1241,1,medium,juvaini,
 steppe,tibet,1247,3,high,atwood,Sakya Pandita meets Köten
 steppe,anatolia,1243,3,high,juvaini,The Seljuks defeated at Köse Dağ
 steppe,europe,1246,1,high,carpini-rubruck,The pope's envoy at Güyük's enthronement
@@ -3155,3 +3130,5 @@ inca,west-india-coast,1613,1,medium,bonialian-2015,People from Portuguese India 
 inca,africa,1615,1,medium,guaman-poma,"Guinea, one of the four parts of the world"
 inca,asia,1615,1,medium,guaman-poma,
 inca,iberia,1810,4,high,cadiz-cortes,Dionisio Inca Yupanqui sits in the Cortes of Cádiz
+nusantara,anatolia,1566,3,high,reid,Aceh's envoys to the Ottoman sultan
+nusantara,arafura-timor,1720,3,medium,macknight-1976,"Marege', the trepang coast"

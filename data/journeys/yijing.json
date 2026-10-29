@@ -1,0 +1,25 @@
+{
+  "id": "yijing",
+  "name": "Yijing's voyage to Nalanda",
+  "traveler": "Yijing",
+  "years": "671–695",
+  "kind": "pilgrim",
+  "viewpoint": "china",
+  "summary": "A monk sails from Guangzhou on a Persian ship to Srivijaya, learns Sanskrit there, and goes on to India, where he studies for ten years at the great monastery of Nalanda. On the way home he spends years in Srivijaya translating, and recommends it to Chinese monks as the place to prepare for India. He returns to Luoyang with some 400 texts.",
+  "source": "yijing",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 671, "place": "Guangzhou", "lat": 23.13, "lon": 113.26, "note": "He sails on a Persian ship.", "city": "guangzhou"},
+    {"year": 671, "place": "Srivijaya", "lat": -2.98, "lon": 104.75, "note": "Six months learning Sanskrit grammar.", "city": "palembang", "by": "sea"},
+    {"year": 672, "place": "Kedah", "lat": 5.65, "lon": 100.5, "note": "Across to the Malay peninsula.", "by": "sea"},
+    {"year": 673, "place": "Tamralipti", "lat": 22.3, "lon": 87.92, "note": "Landfall in India.", "by": "sea"},
+    {"year": 675, "place": "Nalanda", "lat": 25.14, "lon": 85.44, "note": "Ten years at the great monastery.", "city": "nalanda"},
+    {"year": 687, "place": "Srivijaya", "lat": -2.98, "lon": 104.75, "note": "Years of translating on the way home.", "city": "palembang", "by": "sea"},
+    {"year": 695, "place": "Luoyang", "lat": 34.68, "lon": 112.45, "note": "Welcomed by Empress Wu with some 400 texts.", "city": "luoyang", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "bengal", "level": 3, "homeKnows": 695, "confidence": "high", "note": "Tamralipti"},
+    {"region": "india-north", "level": 4, "homeKnows": 695, "confidence": "high", "note": "Nalanda"}
+  ]
+}

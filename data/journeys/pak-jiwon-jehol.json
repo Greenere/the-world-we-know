@@ -1,0 +1,23 @@
+{
+  "id": "pak-jiwon-jehol",
+  "name": "Pak Ji-won's journey to Jehol",
+  "traveler": "Pak Ji-won",
+  "years": "1780",
+  "kind": "envoy",
+  "viewpoint": "korea",
+  "summary": "A scholar without office joins his cousin's embassy for the Qianlong emperor's seventieth birthday. The emperor has gone to his summer palace at Jehol beyond the Great Wall, so the envoys must follow. There Pak Ji-won meets Mongols and the Panchen Lama's Tibetan court, and his Jehol Diary argues that Joseon should learn from the Qing's practical knowledge.",
+  "source": "yeolha-ilgi",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1780, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "The birthday embassy sets out.", "city": "seoul", "date": "June 1780"},
+    {"year": 1780, "place": "Uiju", "lat": 40.2, "lon": 124.53, "note": "Across the Yalu in flood."},
+    {"year": 1780, "place": "Shenyang", "lat": 41.8, "lon": 123.43, "note": "The Qing's old capital in Manchuria.", "city": "shenyang"},
+    {"year": 1780, "place": "Shanhaiguan", "lat": 40.0, "lon": 119.75, "note": "Through the Great Wall."},
+    {"year": 1780, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "The emperor is away.", "city": "beijing", "date": "August 1780"},
+    {"year": 1780, "place": "Jehol", "lat": 40.98, "lon": 117.93, "note": "At the summer palace he meets Mongol princes and the Panchen Lama's court."},
+    {"year": 1780, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "Home in the autumn to write the Yeolha ilgi.", "city": "seoul", "date": "October 1780"}
+  ],
+  "informs": [
+  ]
+}

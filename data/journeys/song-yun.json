@@ -1,0 +1,23 @@
+{
+  "id": "song-yun",
+  "name": "Song Yun and Huisheng go to Gandhara",
+  "traveler": "Song Yun and the monk Huisheng",
+  "years": "518–522",
+  "kind": "pilgrim",
+  "viewpoint": "china",
+  "summary": "The Northern Wei empress dowager sends an official and a monk west for Buddhist scriptures. They cross the Tarim and the Pamirs, meet the king of the Hephthalites in his felt tents, and reach the Buddhist lands of Udyana and Gandhara, coming home with 170 texts. Their accounts survive in Yang Xuanzhi's record of the monasteries of Luoyang.",
+  "source": "song-yun",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 518, "place": "Luoyang", "lat": 34.68, "lon": 112.45, "note": "They set out from the Wei capital.", "city": "luoyang"},
+    {"year": 519, "place": "Khotan", "lat": 37.11, "lon": 79.93, "note": "Along the southern road of the Tarim.", "city": "khotan"},
+    {"year": 519, "place": "Karghalik", "lat": 37.9, "lon": 77.4, "note": "Toward the Pamirs."},
+    {"year": 519, "place": "Hephthalite court", "lat": 36.7, "lon": 70.8, "note": "The king of the Hephthalites receives them in his felt tent."},
+    {"year": 519, "place": "Udyana", "lat": 34.77, "lon": 72.36, "note": "The land of the Swat valley, full of monasteries."},
+    {"year": 520, "place": "Gandhara", "lat": 34.01, "lon": 71.58, "note": "Under a Hephthalite king; they visit the great stupa of Kanishka.", "city": "peshawar"},
+    {"year": 522, "place": "Luoyang", "lat": 34.68, "lon": 112.45, "note": "Home with 170 Buddhist texts.", "city": "luoyang"}
+  ],
+  "informs": [
+  ]
+}

@@ -1,26 +1,23 @@
 {
   "id": "ban-chao",
   "name": "Ban Chao in the Western Regions",
-  "traveler": "Ban Chao and Gan Ying",
+  "traveler": "Ban Chao",
   "years": "73–102 CE",
   "kind": "military",
   "viewpoint": "china",
-  "summary": "With a few dozen men and local allies, Ban Chao restores Han control over the oasis kingdoms of the Tarim basin over thirty years. In 97 he sends his officer Gan Ying west to reach Daqin (Rome); Gan Ying gets to the Persian Gulf, where Parthian sailors tell him the sea crossing takes years, and turns back.",
+  "summary": "With a few dozen men and local allies, Ban Chao restores Han control over the oasis kingdoms of the Tarim basin over thirty years. In 97, from his seat at Kucha, he sends his officer Gan Ying west to look for Daqin, the Roman empire.",
   "source": "houhanshu",
   "confidence": "high",
+  "lifts": false,
   "stops": [
     {"year": 73, "place": "Luoyang", "lat": 34.62, "lon": 112.45, "note": "Ban Chao is sent west with 36 men.", "city": "luoyang"},
     {"year": 73, "place": "Shanshan (Loulan)", "lat": 40.52, "lon": 89.92, "note": "Ban Chao's men kill the Xiongnu envoys, and the king submits.", "city": "loulan"},
     {"year": 74, "place": "Khotan", "lat": 37.1, "lon": 79.93, "note": "Khotan joins the Han.", "city": "khotan"},
     {"year": 78, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "His base for the next twenty years.", "city": "kashgar"},
-    {"year": 91, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "Ban Chao becomes Protector General of the Western Regions.", "city": "kucha"},
-    {"year": 97, "place": "Merv", "lat": 37.66, "lon": 62.16, "note": "Gan Ying travels west through Parthia.", "city": "merv"},
-    {"year": 97, "place": "Tiaozhi (the Persian Gulf)", "lat": 30.5, "lon": 47.8, "note": "Told the sea takes up to three years to cross, he turns back.", "source": "houhanshu", "city": "basra"},
+    {"year": 91, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "Ban Chao becomes Protector General of the Western Regions, and in 97 sends Gan Ying west from here.", "city": "kucha"},
     {"year": 102, "place": "Luoyang", "lat": 34.62, "lon": 112.45, "note": "Ban Chao returns home at seventy and dies a month later.", "city": "luoyang"}
   ],
   "informs": [
-    {"region": "tarim", "level": 4, "homeKnows": 102, "confidence": "high"},
-    {"region": "persia", "level": 3, "homeKnows": 98, "confidence": "medium", "note": "Anxi (Parthia)"},
-    {"region": "mesopotamia", "level": 2, "homeKnows": 98, "confidence": "medium", "note": "Tiaozhi on the shore of the great sea"}
+    {"region": "tarim", "level": 4, "homeKnows": 102, "confidence": "high"}
   ]
 }

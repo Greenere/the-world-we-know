@@ -655,6 +655,9 @@ def crossings(journeys: list[dict]) -> dict[str, list[dict]]:
     real = {j["id"]: [s for s in j["stops"] if not s.get("waypoint")] for j in journeys}
     for ai, A in enumerate(journeys):
         for B in journeys[ai + 1:]:
+            # A party and the journey that sent it out are one story, not two that crossed.
+            if A.get("parent") == B["id"] or B.get("parent") == A["id"]:
+                continue
             ta, tb = A["_times"], B["_times"]
             lo, hi = max(ta[0], tb[0]), min(ta[-1], tb[-1])
             best = None

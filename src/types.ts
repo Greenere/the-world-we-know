@@ -226,6 +226,9 @@ export interface Journey {
   /** Fractional year of each (non-waypoint) stop: the clock every journey shares. */
   t: number[];
   crossings: Crossing[];
+  /** A party sent out from a larger journey (Gan Ying from Ban Chao's), and the parent's stop it set out from. */
+  parent?: string;
+  fork?: string;
 }
 
 /** Two journeys close in place and time, computed by the build. */

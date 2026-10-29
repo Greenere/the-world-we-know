@@ -1,0 +1,27 @@
+{
+  "id": "orda-baidar",
+  "name": "Orda and Baidar's raid into Poland",
+  "traveler": "Orda and Baidar, grandsons of Genghis Khan",
+  "years": "1241",
+  "kind": "military",
+  "parent": "batu",
+  "fork": "Kyiv",
+  "viewpoint": "steppe",
+  "summary": "To keep the Poles from coming to Hungary's aid, Batu sends a western wing of perhaps 10,000 horsemen through Poland. It burns Sandomierz and Kraków and, on 9 April 1241, destroys Duke Henry the Pious's army of Poles, Germans and knights at Legnica. Two days later the main army wins at Mohi, and the wing rides south through Moravia to rejoin it in Hungary.",
+  "source": "jackson-mongols",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1241, "place": "Kyiv", "lat": 50.45, "lon": 30.52, "note": "The western wing parts from the main army.", "city": "kyiv"},
+    {"year": 1241, "place": "Sandomierz", "lat": 50.68, "lon": 21.75, "note": "Sacked.", "date": "February 1241"},
+    {"year": 1241, "place": "Chmielnik", "lat": 50.6, "lon": 20.75, "note": "The Polish knights of Lesser Poland are routed.", "date": "March 1241"},
+    {"year": 1241, "place": "Kraków", "lat": 50.06, "lon": 19.94, "note": "The city is burned.", "city": "krakow", "date": "March 1241"},
+    {"year": 1241, "place": "Wrocław", "lat": 51.11, "lon": 17.03, "note": "They pass the city by."},
+    {"year": 1241, "place": "Legnica", "lat": 51.21, "lon": 16.16, "note": "Henry the Pious is killed and his army destroyed.", "city": "legnica", "date": "9 April 1241"},
+    {"year": 1241, "place": "Moravia", "lat": 49.59, "lon": 17.25, "note": "South through Moravia, burning as they go."},
+    {"year": 1241, "place": "Hungary", "lat": 47.5, "lon": 19.05, "note": "They rejoin Batu after his victory at Mohi."}
+  ],
+  "informs": [
+    {"region": "germania", "level": 2, "homeKnows": 1243, "confidence": "high", "note": "The battle of Legnica"},
+    {"region": "baltic", "level": 1, "homeKnows": 1243, "confidence": "medium"}
+  ]
+}

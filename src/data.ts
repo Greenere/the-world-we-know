@@ -32,6 +32,8 @@ export interface AppData {
   cityById: Map<string, City>;
   journeys: Journey[];
   journeyById: Map<string, Journey>;
+  /** The parties each journey sent out on journeys of their own, in the order they set out. */
+  journeyChildren: Map<string, Journey[]>;
   series: Series[];
   inventions: Invention[];
   inventionById: Map<string, Invention>;
@@ -85,6 +87,7 @@ export async function loadData(): Promise<AppData> {
     cityById: new Map(cities.map(c => [c.id, c])),
     journeys,
     journeyById: new Map(journeys.map(j => [j.id, j])),
+    journeyChildren: childrenOf(journeys),
     series,
     inventions,
     inventionById: new Map(inventions.map(x => [x.id, x])),
@@ -229,4 +232,11 @@ export function phaseAt(c: City, year: number): Phase | null {
   let cur: Phase | null = null;
   for (const p of c.path?.phases ?? []) if (p.from <= year) cur = p;
   return cur;
+}
+
+function childrenOf(journeys: Journey[]): Map<string, Journey[]> {
+  const out = new Map<string, Journey[]>();
+  for (const j of journeys) if (j.parent) out.set(j.parent, [...(out.get(j.parent) ?? []), j]);
+  for (const list of out.values()) list.sort((a, b) => a.t[0] - b.t[0]);
+  return out;
 }

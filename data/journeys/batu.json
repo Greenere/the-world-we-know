@@ -13,8 +13,7 @@
     {"year": 1237, "place": "Ryazan", "lat": 54.63, "lon": 39.74, "note": "The first Rus city to fall.", "date": "December 1237", "city": "ryazan"},
     {"year": 1238, "place": "Vladimir", "lat": 56.13, "lon": 40.4, "note": "The grand prince's capital is burned.", "city": "vladimir"},
     {"year": 1240, "place": "Kyiv", "lat": 50.45, "lon": 30.52, "note": "The mother of Rus cities is sacked.", "city": "kyiv", "date": "December 1240"},
-    {"year": 1241, "place": "Legnica", "lat": 51.21, "lon": 16.16, "note": "A Polish and German army is destroyed.", "date": "9 April 1241", "city": "legnica"},
-    {"year": 1241, "place": "Mohi", "lat": 47.98, "lon": 20.95, "note": "King Béla's Hungarian army is destroyed.", "date": "11 April 1241", "from": "Kyiv"},
+    {"year": 1241, "place": "Mohi", "lat": 47.98, "lon": 20.95, "note": "Over the Carpathians, the main army destroys King Béla's Hungarians, two days after the western wing wins at Legnica.", "date": "11 April 1241"},
     {"year": 1242, "place": "Dalmatian coast", "lat": 43.5, "lon": 16.4, "note": "The pursuit of Béla reaches the Adriatic."},
     {"year": 1242, "place": "Sarai", "lat": 47.9, "lon": 46.5, "note": "News of Ögedei's death; Batu withdraws and founds his capital on the Volga."}
   ],

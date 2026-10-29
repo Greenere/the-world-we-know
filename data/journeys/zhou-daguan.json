@@ -1,0 +1,22 @@
+{
+  "id": "zhou-daguan",
+  "name": "Zhou Daguan at Angkor",
+  "traveler": "Zhou Daguan",
+  "years": "1296–1297",
+  "kind": "envoy",
+  "viewpoint": "china",
+  "summary": "A member of a Yuan embassy spends a year at Angkor, capital of the Khmer empire at its height, and writes the only eyewitness account of daily life there: the gilded towers, the king's processions, the markets kept by women, the bathing in the lake and the Chinese settlers who had married Khmer wives.",
+  "source": "zhou-daguan",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1296, "place": "Wenzhou", "lat": 28.0, "lon": 120.65, "note": "The embassy sails in early spring."},
+    {"year": 1296, "place": "Champa", "lat": 13.9, "lon": 109.1, "note": "Down the coast of Champa.", "by": "sea"},
+    {"year": 1296, "place": "Mekong delta", "lat": 9.9, "lon": 106.6, "note": "Up the river toward the great lake.", "by": "sea"},
+    {"year": 1296, "place": "Angkor", "lat": 13.41, "lon": 103.87, "note": "A year in the Khmer capital.", "city": "angkor"},
+    {"year": 1297, "place": "Wenzhou", "lat": 28.0, "lon": 120.65, "note": "Home in the summer.", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "khmer", "level": 4, "homeKnows": 1297, "confidence": "high", "note": "Zhou Daguan describes Angkor"}
+  ]
+}

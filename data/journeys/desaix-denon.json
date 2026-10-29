@@ -1,0 +1,27 @@
+{
+  "id": "desaix-denon",
+  "name": "Desaix and Denon go up the Nile",
+  "traveler": "General Desaix's division, with the artist Vivant Denon",
+  "years": "1798–1799",
+  "kind": "military",
+  "parent": "napoleon-egypt",
+  "fork": "Cairo",
+  "viewpoint": "france",
+  "summary": "Sent to chase the Mamluk bey Murad into Upper Egypt, Desaix's division marches up the Nile to the first cataract. With it rides Vivant Denon, fifty-one years old, sketching temples under fire. His Voyage dans la Basse et la Haute Égypte of 1802 made Egypt's monuments famous across Europe, and opened the way for the great Description.",
+  "source": "denon",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1798, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "The division sets out after Murad Bey.", "city": "cairo", "date": "August 1798"},
+    {"year": 1798, "place": "Beni Suef", "lat": 29.07, "lon": 31.1, "note": "Up the Nile valley."},
+    {"year": 1798, "place": "Asyut", "lat": 27.18, "lon": 31.18, "note": "Through Middle Egypt, fighting the Mamluks."},
+    {"year": 1798, "place": "Dendera", "lat": 26.14, "lon": 32.67, "note": "Denon sketches the temple of Hathor.", "date": "December 1798"},
+    {"year": 1799, "place": "Thebes", "lat": 25.7, "lon": 32.64, "note": "At the sight of the ruins, the whole division halts and applauds.", "city": "thebes", "date": "January 1799"},
+    {"year": 1799, "place": "Esna", "lat": 25.29, "lon": 32.55, "note": "Further south, toward the cataract."},
+    {"year": 1799, "place": "Aswan", "lat": 24.09, "lon": 32.9, "note": "The first cataract."},
+    {"year": 1799, "place": "Philae", "lat": 24.03, "lon": 32.88, "note": "The southern limit; Denon draws the island temples.", "date": "February 1799"},
+    {"year": 1799, "place": "Cairo", "lat": 30.04, "lon": 31.24, "note": "Denon brings back his sketches and sails for France with Bonaparte in August.", "city": "cairo"}
+  ],
+  "informs": [
+  ]
+}

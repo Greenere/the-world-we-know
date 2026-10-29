@@ -1,0 +1,23 @@
+{
+  "id": "mun-sundeuk",
+  "name": "Mun Sun-deuk's drift",
+  "traveler": "Mun Sun-deuk, a skate merchant of Uido",
+  "years": "1801–1805",
+  "kind": "castaway",
+  "viewpoint": "korea",
+  "summary": "A fish trader from a small island off Korea's south-west coast is blown out to sea and spends three years finding his way home: from the Ryukyu kingdom to Spanish Luzon, then to Portuguese Macau, and overland through Qing China. The exiled scholar Jeong Yak-jeon wrote down his account, with the words he had learned in each language.",
+  "source": "pyohae-simal",
+  "confidence": "high",
+  "stops": [
+    {"year": 1801, "place": "Uido", "lat": 34.62, "lon": 125.83, "note": "Caught by a storm carrying skate from Heuksando to the mainland."},
+    {"year": 1802, "place": "Ryukyu", "lat": 26.22, "lon": 127.72, "note": "Cast ashore in the Ryukyu kingdom.", "city": "shuri", "by": "sea"},
+    {"year": 1803, "place": "Luzon", "lat": 14.6, "lon": 120.98, "note": "A ship home goes astray to the Spanish Philippines.", "city": "manila", "by": "sea"},
+    {"year": 1803, "place": "Macau", "lat": 22.2, "lon": 113.55, "note": "Through the Portuguese port.", "city": "macau", "by": "sea"},
+    {"year": 1804, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Sent north across China to the capital.", "city": "beijing"},
+    {"year": 1805, "place": "Uido", "lat": 34.62, "lon": 125.83, "note": "Home after three years and two months.", "date": "January 1805"}
+  ],
+  "informs": [
+    {"region": "philippines", "level": 2, "homeKnows": 1805, "confidence": "high", "note": "Mun Sun-deuk in Spanish Luzon"},
+    {"region": "lingnan", "level": 2, "homeKnows": 1805, "confidence": "medium", "note": "Macau"}
+  ]
+}

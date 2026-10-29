@@ -1,0 +1,26 @@
+{
+  "id": "changchun",
+  "name": "Changchun's journey to Genghis Khan",
+  "traveler": "Qiu Chuji, the Daoist master Changchun",
+  "years": "1220–1224",
+  "kind": "traveler",
+  "viewpoint": "china",
+  "summary": "Genghis Khan, at war in Central Asia, summons a famous Daoist master he hopes can give him the secret of long life. The seventy-year-old Changchun crosses the Mongolian steppe, the Altai and Dzungaria to Samarkand and finds the khan in the Hindu Kush. He tells him there are ways to protect life, but no elixir. His disciple Li Zhichang's account is one of the best descriptions of Central Asia in the Mongol conquest.",
+  "source": "changchun",
+  "confidence": "high",
+  "stops": [
+    {"year": 1220, "place": "Shandong", "lat": 37.3, "lon": 120.8, "note": "He sets out with eighteen disciples."},
+    {"year": 1220, "place": "Yanjing", "lat": 39.9, "lon": 116.4, "note": "Through the former Jin capital.", "city": "beijing"},
+    {"year": 1221, "place": "Lake Buir", "lat": 47.8, "lon": 117.7, "note": "Onto the steppe."},
+    {"year": 1221, "place": "Mongolian plateau", "lat": 47.9, "lon": 106.9, "note": "Across the Mongolian heartland."},
+    {"year": 1221, "place": "Altai mountains", "lat": 47.0, "lon": 90.0, "note": "Over the Altai."},
+    {"year": 1221, "place": "Beshbalik", "lat": 44.1, "lon": 89.1, "note": "The Uyghur city in Dzungaria."},
+    {"year": 1221, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "He winters in the city the Mongols have just taken.", "city": "samarkand"},
+    {"year": 1222, "place": "Hindu Kush", "lat": 35.0, "lon": 69.2, "note": "He meets the khan at his camp: there are ways to protect life, but no elixir."},
+    {"year": 1224, "place": "Yanjing", "lat": 39.9, "lon": 116.4, "note": "Home, with the khan's protection for his order.", "city": "beijing"}
+  ],
+  "informs": [
+    {"region": "mongolia", "level": 4, "homeKnows": 1224, "confidence": "high", "note": "Li Zhichang's account of the steppe"},
+    {"region": "transoxiana", "level": 4, "homeKnows": 1224, "confidence": "high", "note": "Samarkand under the Mongols"}
+  ]
+}

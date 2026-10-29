@@ -454,22 +454,36 @@ class App {
 
   private announced = NaN;
   private routeCache: {key: string; views: RouteView[]} = {key: '', views: []};
+  private relativeCache: {key: string; views: RouteView[]} = {key: '', views: []};
 
   /** The journey list's matches, drawn whole while the list is open and nothing is being followed. */
   private routeViews(s: State, geo: JourneyGeo | null): RouteView[] {
-    if (!s.routes || geo || s.panel !== 'journeys') return [];
+    if (geo) return this.relativeViews(s, geo);
+    if (!s.routes || s.panel !== 'journeys') return [];
     const key = `${s.routes.join(',')}|${getLang()}`;
-    if (key !== this.routeCache.key) {
-      const views = s.routes.flatMap(id => {
-        const g = this.geo(id);
-        if (!g) return [];
-        const j = g.journey;
-        const paths = g.legs.filter(l => l.onMap).map(l => l.points);
-        return paths.length ? [{id, name: tx.journey(id, 'name', j.name), years: tx.journey(id, 'years', j.years), color: hexToRgb(this.data.vp[j.viewpoint].color), paths}] : [];
-      });
-      this.routeCache = {key, views};
-    }
+    if (key !== this.routeCache.key) this.routeCache = {key, views: s.routes.flatMap(id => this.routeView(id))};
     return this.routeCache.views;
+  }
+
+  /**
+   * While following a journey, its relatives stay faintly on the map: each party it sent out, once that party
+   * has set out (Gan Ying from Ban Chao's Kucha), and, while following a party, the journey it belongs to.
+   */
+  private relativeViews(s: State, geo: JourneyGeo): RouteView[] {
+    const j = geo.journey;
+    const kids = (this.data.journeyChildren.get(j.id) ?? []).filter(c => s.year >= c.t[0]).map(c => c.id);
+    const ids = j.parent ? [j.parent, ...kids] : kids;
+    const key = `${j.id}>${ids.join(',')}|${getLang()}`;
+    if (key !== this.relativeCache.key) this.relativeCache = {key, views: ids.flatMap(id => this.routeView(id, true))};
+    return this.relativeCache.views;
+  }
+
+  private routeView(id: string, faint = false): RouteView[] {
+    const g = this.geo(id);
+    if (!g) return [];
+    const j = g.journey;
+    const paths = g.legs.filter(l => l.onMap).map(l => l.points);
+    return paths.length ? [{id, name: tx.journey(id, 'name', j.name), years: tx.journey(id, 'years', j.years), color: hexToRgb(this.data.vp[j.viewpoint].color), paths, faint}] : [];
   }
 
   private journeyUnderWay(year: number) {
@@ -843,7 +857,11 @@ class App {
         return;
       }
       if (pick?.layer?.id === 'routes') {
-        this.startJourney((pick.object as {r: RouteView}).r.id);
+        // From a party back to the journey it belongs to: pick that journey up at the same moment.
+        const r = (pick.object as {r: RouteView}).r;
+        const cur = this.store.state.journey;
+        const isParent = !!cur && this.data.journeyById.get(cur)?.parent === r.id;
+        this.startJourney(r.id, isParent ? this.store.state.year : undefined);
         return;
       }
       if (pick?.layer?.id === 'living-points') {

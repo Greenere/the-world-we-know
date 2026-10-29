@@ -1,0 +1,24 @@
+{
+  "id": "tongsinsa-1719",
+  "name": "The embassy to Edo of 1719",
+  "traveler": "Hong Chi-jung's embassy, with Sin Yu-han as its writer",
+  "years": "1719–1720",
+  "kind": "envoy",
+  "viewpoint": "korea",
+  "summary": "Joseon sent twelve great embassies to the Tokugawa shoguns between 1607 and 1811, each several hundred strong. The 1719 embassy, sent to congratulate the shogun Yoshimune, crossed by Tsushima and the Inland Sea and went overland from Osaka to Edo, greeted by crowds and by Japanese scholars eager for Korean poems. Its writer Sin Yu-han kept the Haeyurok, the fullest Korean diary of Tokugawa Japan.",
+  "source": "tongsinsa-1719",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1719, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "The embassy leaves the capital.", "city": "seoul"},
+    {"year": 1719, "place": "Busan", "lat": 35.1, "lon": 129.04, "note": "It takes ship at the Japan house in Busan.", "city": "busan"},
+    {"year": 1719, "place": "Tsushima", "lat": 34.2, "lon": 129.29, "note": "The domain that managed Joseon's relations with Japan.", "by": "sea"},
+    {"year": 1719, "place": "Shimonoseki", "lat": 33.96, "lon": 130.94, "note": "Into the Inland Sea.", "by": "sea"},
+    {"year": 1719, "place": "Osaka", "lat": 34.69, "lon": 135.5, "note": "They leave the sea for the road.", "city": "osaka", "by": "sea"},
+    {"year": 1719, "place": "Kyoto", "lat": 35.01, "lon": 135.77, "note": "A night at Honnō-ji.", "city": "kyoto"},
+    {"year": 1719, "place": "Edo", "lat": 35.68, "lon": 139.77, "note": "Received by the shogun Tokugawa Yoshimune.", "city": "edo"},
+    {"year": 1720, "place": "Busan", "lat": 35.1, "lon": 129.04, "note": "Home by the same road and sea.", "city": "busan", "by": "sea"}
+  ],
+  "informs": [
+  ]
+}

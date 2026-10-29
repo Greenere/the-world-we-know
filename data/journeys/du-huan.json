@@ -1,0 +1,25 @@
+{
+  "id": "du-huan",
+  "name": "Du Huan in the lands of the Caliph",
+  "traveler": "Du Huan",
+  "years": "751–762",
+  "kind": "castaway",
+  "viewpoint": "china",
+  "summary": "Captured when an Abbasid army defeats the Tang at the Talas river, a Chinese officer spends eleven years in the new Islamic empire. He describes Kufa, its mosques and markets, Chinese weavers and painters at work there, and a land called Molin, perhaps in Africa. He comes home by sea to Guangzhou, and his relative Du You preserves part of his record.",
+  "source": "du-huan",
+  "confidence": "medium",
+  "stops": [
+    {"year": 751, "place": "Talas", "lat": 42.52, "lon": 72.24, "note": "Taken prisoner when Gao Xianzhi's army is defeated."},
+    {"year": 751, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "Through Sogdiana.", "city": "samarkand"},
+    {"year": 752, "place": "Merv", "lat": 37.66, "lon": 62.19, "note": "The Abbasids' base in Khorasan.", "city": "merv", "confidence": "low"},
+    {"year": 754, "place": "Kufa", "lat": 32.03, "lon": 44.4, "note": "The Abbasid capital; Chinese weavers and painters work there.", "city": "kufa"},
+    {"year": 761, "place": "Basra", "lat": 30.5, "lon": 47.8, "note": "He takes ship for home.", "city": "basra", "confidence": "low"},
+    {"year": 762, "place": "Guangzhou", "lat": 23.13, "lon": 113.26, "note": "Home by sea after eleven years.", "city": "guangzhou", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "mesopotamia", "level": 3, "homeKnows": 762, "confidence": "medium", "note": "Du Huan in Kufa"},
+    {"region": "persia", "level": 3, "homeKnows": 762, "confidence": "medium"},
+    {"region": "arabia-hejaz", "level": 2, "homeKnows": 762, "confidence": "medium"},
+    {"region": "africa", "level": 1, "homeKnows": 762, "confidence": "low", "note": "Molin, perhaps in Africa"}
+  ]
+}

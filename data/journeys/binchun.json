@@ -1,0 +1,36 @@
+{
+  "id": "binchun",
+  "name": "Binchun's mission to Europe",
+  "traveler": "Binchun, with his son and three student interpreters",
+  "years": "1866",
+  "kind": "envoy",
+  "viewpoint": "china",
+  "summary": "The Qing's first official tour of Europe: a sixty-two-year-old bannerman sent by the Zongli Yamen, with Robert Hart, to see the West for himself. In seven months the party meets Queen Victoria, visits the Netherlands and the Stockholm Exhibition, and rides the railways of Europe. Binchun's diary and poems were among the first Chinese accounts of modern Europe.",
+  "source": "binchun",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1866, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "The mission sets out.", "city": "beijing", "date": "March 1866"},
+    {"year": 1866, "place": "Shanghai", "lat": 31.23, "lon": 121.47, "note": "Down to the coast.", "city": "shanghai"},
+    {"year": 1866, "place": "Hong Kong", "lat": 22.28, "lon": 114.16, "note": "Onto the mail steamer.", "city": "hong-kong", "by": "sea"},
+    {"waypoint": true, "lat": 1.2, "lon": 103.8},
+    {"waypoint": true, "lat": 6.0, "lon": 80.0},
+    {"waypoint": true, "lat": 12.0, "lon": 51.5},
+    {"waypoint": true, "lat": 12.6, "lon": 43.4},
+    {"waypoint": true, "lat": 20.0, "lon": 38.5},
+    {"waypoint": true, "lat": 27.5, "lon": 34.0},
+    {"year": 1866, "place": "Suez", "lat": 29.97, "lon": 32.55, "note": "Before the canal, across Egypt by railway.", "by": "direct"},
+    {"year": 1866, "place": "Alexandria", "lat": 31.2, "lon": 29.92, "note": "Onto the steamer for France.", "city": "alexandria"},
+    {"year": 1866, "place": "Marseille", "lat": 43.3, "lon": 5.37, "note": "Landfall in Europe.", "by": "sea"},
+    {"year": 1866, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "His first great European city.", "city": "paris"},
+    {"year": 1866, "place": "London", "lat": 51.51, "lon": -0.12, "note": "Received by Queen Victoria.", "city": "london"},
+    {"year": 1866, "place": "The Hague", "lat": 52.08, "lon": 4.3, "note": "In the Netherlands.", "date": "June 1866"},
+    {"year": 1866, "place": "Stockholm", "lat": 59.33, "lon": 18.07, "note": "He visits the Stockholm Exhibition.", "city": "stockholm", "date": "July 1866"},
+    {"year": 1866, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "note": "To the Russian capital.", "city": "st-petersburg", "confidence": "medium"},
+    {"year": 1866, "place": "Berlin", "lat": 52.52, "lon": 13.4, "note": "Then home by the same sea road, reaching Beijing in November.", "confidence": "medium"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 4, "homeKnows": 1866, "confidence": "high", "note": "Binchun is received by Queen Victoria"},
+    {"region": "scandinavia", "level": 3, "homeKnows": 1866, "confidence": "high", "note": "Binchun at the Stockholm Exhibition"},
+    {"region": "germania", "level": 4, "homeKnows": 1866, "confidence": "medium"}
+  ]
+}

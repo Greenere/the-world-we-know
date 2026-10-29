@@ -1,0 +1,43 @@
+{
+  "id": "bobingsa",
+  "name": "The first Korean mission to the United States",
+  "traveler": "Min Yeong-ik's embassy",
+  "years": "1883–1884",
+  "kind": "envoy",
+  "viewpoint": "korea",
+  "summary": "A year after Joseon's treaty with the United States, an embassy led by Min Yeong-ik crosses the Pacific, rides the railway across America and bows to President Chester Arthur in a New York hotel. It visits factories, farms and an exhibition in Boston. Min and two companions then come home the long way, aboard the warship USS Trenton.",
+  "source": "seth-korea",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1883, "place": "Chemulpo", "lat": 37.47, "lon": 126.6, "note": "The embassy sails in July.", "date": "July 1883"},
+    {"year": 1883, "place": "Yokohama", "lat": 35.44, "lon": 139.64, "note": "Across to the Pacific liner.", "by": "sea"},
+    {"year": 1883, "place": "San Francisco", "lat": 37.77, "lon": -122.42, "note": "Landfall in America.", "city": "san-francisco", "date": "September 1883", "by": "sea"},
+    {"year": 1883, "place": "Chicago", "lat": 41.88, "lon": -87.63, "note": "Across the continent by rail.", "city": "chicago"},
+    {"year": 1883, "place": "New York", "lat": 40.71, "lon": -74.0, "note": "Received by President Arthur.", "city": "new-york", "date": "September 1883"},
+    {"year": 1883, "place": "Boston", "lat": 42.36, "lon": -71.06, "note": "The Foreign Exhibition, farms and factories.", "city": "boston"},
+    {"year": 1883, "place": "New York", "lat": 40.71, "lon": -74.0, "note": "Min and two companions board the USS Trenton.", "city": "new-york", "date": "December 1883"},
+    {"waypoint": true, "lat": 36.0, "lon": -5.6},
+    {"waypoint": true, "lat": 37.5, "lon": 11.5},
+    {"waypoint": true, "lat": 31.5, "lon": 32.3},
+    {"waypoint": true, "lat": 29.9, "lon": 32.6},
+    {"waypoint": true, "lat": 20.0, "lon": 38.5},
+    {"waypoint": true, "lat": 12.6, "lon": 43.4},
+    {"waypoint": true, "lat": 12.0, "lon": 51.5},
+    {"waypoint": true, "lat": 6.0, "lon": 80.0},
+    {"waypoint": true, "lat": 5.9, "lon": 95.0},
+    {"waypoint": true, "lat": 1.2, "lon": 103.8},
+    {"waypoint": true, "lat": 10.0, "lon": 110.0},
+    {"waypoint": true, "lat": 22.0, "lon": 117.5},
+    {"waypoint": true, "lat": 30.0, "lon": 124.0},
+    {"year": 1884, "place": "Chemulpo", "lat": 37.47, "lon": 126.6, "note": "Home by way of the Mediterranean and Suez.", "date": "May 1884", "by": "direct", "confidence": "medium"}
+  ],
+  "informs": [
+    {"region": "north-america", "level": 4, "homeKnows": 1884, "confidence": "high", "note": "The mission crosses America by rail to Washington"},
+    {"region": "north-atlantic-east", "level": 3, "homeKnows": 1884, "confidence": "medium"},
+    {"region": "med-west", "level": 3, "homeKnows": 1884, "confidence": "medium"},
+    {"region": "egypt", "level": 3, "homeKnows": 1884, "confidence": "medium", "note": "The mission comes home by way of Europe and Suez"},
+    {"region": "red-sea", "level": 3, "homeKnows": 1884, "confidence": "medium"},
+    {"region": "indian-ocean", "level": 3, "homeKnows": 1884, "confidence": "medium"},
+    {"region": "sri-lanka", "level": 3, "homeKnows": 1884, "confidence": "medium"}
+  ]
+}

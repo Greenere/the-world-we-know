@@ -1,0 +1,24 @@
+{
+  "id": "gan-ying",
+  "name": "Gan Ying's mission toward Da Qin",
+  "traveler": "Gan Ying, envoy of Ban Chao",
+  "years": "97",
+  "kind": "envoy",
+  "parent": "ban-chao",
+  "fork": "Kucha",
+  "viewpoint": "china",
+  "summary": "The general Ban Chao, master of the Western Regions, sends his officer Gan Ying to find Da Qin, the Roman empire. Gan Ying crosses Parthia and reaches Tiaozhi on the shore of a great sea, probably the head of the Persian Gulf. Parthian sailors warn him the voyage could take two years and drive men mad with homesickness, and he turns back. No Han envoy ever got closer to Rome.",
+  "source": "houhanshu",
+  "confidence": "medium",
+  "stops": [
+    {"year": 97, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "Ban Chao's seat as Protector-General of the Western Regions.", "city": "kucha"},
+    {"year": 97, "place": "Merv", "lat": 37.66, "lon": 62.19, "note": "Into Anxi, the Parthian empire.", "city": "merv", "confidence": "low"},
+    {"year": 97, "place": "Tiaozhi", "lat": 30.5, "lon": 47.8, "note": "On the shore of the great sea, he turns back.", "confidence": "low"},
+    {"year": 98, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "He reports what he has learned of the lands to the west.", "city": "kucha"}
+  ],
+  "informs": [
+    {"region": "persia", "level": 3, "homeKnows": 98, "confidence": "medium", "note": "Anxi (Parthia)"},
+    {"region": "mesopotamia", "level": 2, "homeKnows": 98, "confidence": "medium", "note": "Tiaozhi on the shore of the great sea"},
+    {"region": "italy", "level": 1, "homeKnows": 98, "confidence": "low", "note": "Da Qin, by report"}
+  ]
+}

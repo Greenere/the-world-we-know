@@ -1,0 +1,33 @@
+{
+  "id": "min-yeonghwan-moscow",
+  "name": "Min Yeong-hwan at the tsar's coronation",
+  "traveler": "Min Yeong-hwan, with Yun Chi-ho",
+  "years": "1896",
+  "kind": "envoy",
+  "viewpoint": "korea",
+  "summary": "Sent to the coronation of Nicholas II while the Korean king shelters in the Russian legation, Min Yeong-hwan's small embassy goes round the world: by the Pacific liner to Canada, across America and the Atlantic, through London and Berlin to Moscow, and home across Siberia. His diary, the Haecheon chubeom, is one of the first Korean accounts of a journey round the globe.",
+  "source": "min-yeonghwan",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1896, "place": "Chemulpo", "lat": 37.47, "lon": 126.6, "note": "They sail on the Empress liner.", "date": "April 1896"},
+    {"year": 1896, "place": "Yokohama", "lat": 35.44, "lon": 139.64, "note": "Across to Japan for the Pacific crossing.", "by": "sea"},
+    {"year": 1896, "place": "Vancouver", "lat": 49.28, "lon": -123.12, "note": "Across the Pacific.", "by": "sea"},
+    {"year": 1896, "place": "Montreal", "lat": 45.5, "lon": -73.57, "note": "By the Canadian Pacific Railway.", "city": "montreal"},
+    {"year": 1896, "place": "New York", "lat": 40.71, "lon": -74.0, "note": "East by rail.", "city": "new-york"},
+    {"year": 1896, "place": "Liverpool", "lat": 53.41, "lon": -2.98, "note": "Across the Atlantic.", "city": "liverpool", "by": "sea"},
+    {"year": 1896, "place": "London", "lat": 51.51, "lon": -0.12, "note": "A few days in England.", "city": "london"},
+    {"year": 1896, "place": "Berlin", "lat": 52.52, "lon": 13.4, "note": "East through Germany."},
+    {"year": 1896, "place": "Moscow", "lat": 55.75, "lon": 37.62, "note": "Nicholas II is crowned in the Kremlin.", "city": "moscow", "date": "May 1896"},
+    {"year": 1896, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "note": "Talks with the Russian government.", "city": "st-petersburg"},
+    {"year": 1896, "place": "Irkutsk", "lat": 52.29, "lon": 104.3, "note": "Home across Siberia, before the railway is finished.", "city": "irkutsk"},
+    {"year": 1896, "place": "Vladivostok", "lat": 43.12, "lon": 131.9, "note": "Down the Amur to the Pacific."},
+    {"year": 1896, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "Home after seven months.", "city": "seoul", "date": "October 1896", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 3, "homeKnows": 1896, "confidence": "medium"},
+    {"region": "germania", "level": 3, "homeKnows": 1896, "confidence": "medium"},
+    {"region": "rus", "level": 3, "homeKnows": 1896, "confidence": "high", "note": "Min Yeong-hwan at the coronation of Nicholas II"},
+    {"region": "siberia-west", "level": 3, "homeKnows": 1896, "confidence": "medium", "note": "He comes home across Siberia"},
+    {"region": "siberia-east", "level": 3, "homeKnows": 1896, "confidence": "medium"}
+  ]
+}

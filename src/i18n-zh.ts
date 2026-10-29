@@ -262,6 +262,7 @@ export const zhUi: Record<string, string> = {
   ' had passed through {other} in {year}.': '已于{year}经过{other}。',
   ' would pass through {other} in {year}.': '将于{year}经过{other}。',
   'Go to this moment': '前往这一时刻',
+  '{name} sets out from here': '{name}从这里出发',
   'Follow {name} from here': '从这里开始跟随{name}',
   'Follow {name}': '跟随{name}',
   Meanwhile: '与此同时',

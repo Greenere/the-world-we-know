@@ -1,0 +1,24 @@
+{
+  "id": "chen-cheng",
+  "name": "Chen Cheng's embassy to Herat",
+  "traveler": "Chen Cheng",
+  "years": "1414–1415",
+  "kind": "envoy",
+  "viewpoint": "china",
+  "summary": "The Yongle emperor sends Chen Cheng to the court of Shah Rukh, Timur's son, at Herat. He keeps a day-by-day route book and writes a survey of the eighteen countries on the way, both presented to the emperor on his return: the fullest Chinese account of Timurid Central Asia.",
+  "source": "chen-cheng",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 1414, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "The embassy sets out.", "city": "beijing", "date": "February 1414"},
+    {"year": 1414, "place": "Suzhou", "lat": 39.73, "lon": 98.5, "note": "The end of the Great Wall at Jiayu Pass."},
+    {"year": 1414, "place": "Hami", "lat": 42.83, "lon": 93.5, "note": "Into the Western Regions.", "confidence": "medium"},
+    {"year": 1414, "place": "Turpan", "lat": 42.95, "lon": 89.18, "note": "Through the oasis of Turpan.", "confidence": "medium"},
+    {"year": 1414, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "Timur's city.", "city": "samarkand", "confidence": "medium"},
+    {"year": 1414, "place": "Herat", "lat": 34.35, "lon": 62.2, "note": "At the court of Shah Rukh.", "city": "herat"},
+    {"year": 1415, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "He presents his route book and his survey to the emperor.", "city": "beijing", "date": "November 1415"}
+  ],
+  "informs": [
+    {"region": "persia", "level": 4, "homeKnows": 1415, "confidence": "high", "note": "Chen Cheng at Shah Rukh's court"}
+  ]
+}
