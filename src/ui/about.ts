@@ -59,6 +59,8 @@ export class About {
           'p',
           t('The Humanity layer is different: it shows when modern humans first arrived. We say “first known to” a viewpoint, never “discovered”. Someone was usually already there.'),
         ),
+        h('h3.card-h', t('Journeys')),
+        h('p', t('Each journey follows its travellers stop by stop. The trail shows what they saw; the fog lifts only when the news reaches home, sometimes years later. A party sent out from a larger journey, like Gan Ying from Ban Chao’s or Nearchus from Alexander’s, is a journey of its own, drawn faintly beside the one it belongs to.')),
         h('h3.card-h', t('Keys')),
         h(
           'dl.keys',
