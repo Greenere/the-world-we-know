@@ -8,15 +8,15 @@
 
 ## What's in it
 
-- **27 viewpoints.** Each has its own history of what it knew, from 2000 BCE to today:
-  - **China, Japan, India, Nusantara.**
+- **30 viewpoints.** Each has its own history of what it knew, from 2000 BCE to today:
+  - **China, Korea, Japan, the Mongolian steppe, India, Nusantara.**
   - **Persia, Arabia, Egypt, the Maghreb.**
   - **The Sahel, Ethiopia, the Swahili coast, Southern Africa.**
-  - **The Mexica, the Inca, the Inuit, Polynesia.**
+  - **The Mexica, the Maya, the Inca, the Inuit, Polynesia.**
   - **Greece, Rome, Iberia, France, Britain, Germany, the Norse, Russia.**
   - **Two knowledge communities,** Europe and the Islamic world. Each shares what its members knew.
   - **Humanity,** which traces where people first arrived, back 70,000 years.
-- **143 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks.
+- **157 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks.
 - **123 landmarks and 63 lost cities found again.**
   - Pyramids, walls, waterfalls and volcanoes, each known to a viewpoint only when it lived nearby, met the place itself, or the place became famous.
   - Some cover ground: deserts, salt flats and lakes that shrink over the centuries, drawn in their real outlines.

@@ -1,0 +1,11 @@
+{
+  "subject": "invention/behaim-globe",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Single-object study of a roughly half-metre painted late-fifteenth-century terrestrial globe in a restrained dark support ring on a Nuremberg workbench around1492. Sphere physically round with consistent perspective, pale ochre land and muted blue sea, broad Eurasian and African shapes and expanded ocean, NO Americas and no modern accurate globe. Fine historical map texture remains small unreadable strokes; simple workshop tools at edge. No plastic sphere, modern country borders, shiny brass fantasy armillary or numbered labels.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://objektkatalog.gnm.de/wisski/navigate/4516/view"
+  ]
+}

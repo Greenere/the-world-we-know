@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Cassini map of France",
+      "caption": "César-François Cassini de Thury begins to map the whole of France on a network of measured triangles, in 182 sheets at about 1:86,400; his son finishes it.",
+      "sources": [
+        "national-surveys"
+      ],
+      "confidence": "high",
+      "prompt": "Wide eighteenth-century French hilltop survey around1750: surveyor peers through a small brass angular instrument mounted securely on tripod while an assistant records observations on a board. View runs across farms toward distant church spires used as landmarks. Modest coats, breeches and hats, no uniforms necessary. Landscape and long sightlines dominate, no drawn laser rays or floating triangles, no modern total station or Eiffel Tower."
+    }
+  ]
+}

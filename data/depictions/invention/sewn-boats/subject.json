@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Sewn-plank boats",
+      "caption": "Boatbuilders of the East African coast stitch planks together with coconut-fibre cord instead of nails. The Periplus says the market town of Rhapta was named for its sewn boats.",
+      "sources": [
+        "periplus"
+      ],
+      "confidence": "medium",
+      "prompt": "Close view INSIDE an unfinished East African coastal sewn-plank hull in first-century context: dark-skinned boatbuilder's hands pull coarse plant-fibre cord through paired holes along adjacent wooden plank edges, seam packed with fibre. Show actual stitches bridging the seam and solid curved planks correctly joined, hand tools and fibre coil nearby. Focus joinery rather than a complete later mtepe sailing rig. No iron nails, modern glue, power tools or invented medieval town."
+    }
+  ]
+}

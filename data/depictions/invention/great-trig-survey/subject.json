@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Great Trigonometrical Survey",
+      "caption": "William Lambton measures a baseline near Madras and begins to cover India with chains of triangles, a survey carried on by George Everest.",
+      "sources": [
+        "national-surveys"
+      ],
+      "confidence": "high",
+      "prompt": "Long ground-level view along a precisely stretched metal measuring chain supported on low wooden trestles across flat ground near Madras in1802. Indian survey assistants in appropriate cotton garments align supports and markers, a European surveyor records measurements off to side. Distant low hills and palms, no Himalaya nearby. Chain measurement and collaborative labour focus, no unsupported floating chain, laser, tape reel, modern total station or giant telescope."
+    }
+  ]
+}

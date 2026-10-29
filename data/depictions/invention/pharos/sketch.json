@@ -1,0 +1,8 @@
+{
+  "subject": "invention/pharos",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Water-level view from a small Hellenistic harbour boat toward the Pharos of Alexandria around280BCE at dusk. Lighthouse reconstruction with broad square lower stage, narrower octagonal middle stage, small cylindrical upper stage and modest beacon fire, pale masonry above low coastline. Tower dominates, no portrait. No modern glass lantern, searchlight beam, medieval minaret or enormous fantasy flame; do not claim exact lost architectural details.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks."
+}

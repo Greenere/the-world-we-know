@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Radar",
+      "caption": "Robert Watson-Watt and Arnold Wilkins show that a bomber flying near Daventry reflects a BBC shortwave signal strongly enough to be detected.",
+      "sources": [
+        "brown-radar"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique view inside an improvised field receiving setup near Daventry inFebruary1935: dark wooden radio receiver boxes, control knobs and a small cathode-ray tube showing a faint irregular linear trace, researcher in plain suit seen from behind leaning to inspect it. Through open shelter/van doorway, wire aerials on simple poles in a flat English field and a tiny distant biplane silhouette. Focus detecting a faint signal. NO rotating dish, green circular sweeping radar screen, modern monitor, digital readout, WWII fighter or giant futuristic antenna."
+    }
+  ]
+}

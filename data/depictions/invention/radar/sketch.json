@@ -1,0 +1,11 @@
+{
+  "subject": "invention/radar",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Oblique view inside an improvised field receiving setup near Daventry inFebruary1935: dark wooden radio receiver boxes, control knobs and a small cathode-ray tube showing a faint irregular linear trace, researcher in plain suit seen from behind leaning to inspect it. Through open shelter/van doorway, wire aerials on simple poles in a flat English field and a tiny distant biplane silhouette. Focus detecting a faint signal. NO rotating dish, green circular sweeping radar screen, modern monitor, digital readout, WWII fighter or giant futuristic antenna.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://collection.sciencemuseumgroup.org.uk/objects/co35028/apparatus-used-by-r-watson-watt-in-february-1935-f"
+  ]
+}

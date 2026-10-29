@@ -4,7 +4,7 @@
   "traveler": "Jebe and Subutai, generals of Genghis Khan",
   "years": "1220–1223",
   "kind": "military",
-  "viewpoint": "china",
+  "viewpoint": "steppe",
   "summary": "Sent after the fleeing Khwarazm-shah, two Mongol generals with about 20,000 horsemen ride around the Caspian Sea, through Persia and the Caucasus onto the steppe north of the Black Sea, crush the Rus princes at the Kalka and return east: a reconnaissance in force of some 8,000 km.",
   "source": "secret-history",
   "confidence": "medium",
@@ -21,6 +21,9 @@
   "informs": [
     {"region": "pontic-steppe", "level": 2, "homeKnows": 1227, "confidence": "medium"},
     {"region": "caucasus", "level": 3, "homeKnows": 1227, "confidence": "medium"},
-    {"region": "rus", "level": 1, "homeKnows": 1227, "confidence": "low"}
+    {"region": "rus", "level": 1, "homeKnows": 1227, "confidence": "low"},
+    {"viewpoint": "china", "region": "pontic-steppe", "level": 2, "homeKnows": 1271, "confidence": "medium"},
+    {"viewpoint": "china", "region": "caucasus", "level": 3, "homeKnows": 1271, "confidence": "medium"},
+    {"viewpoint": "china", "region": "rus", "level": 1, "homeKnows": 1271, "confidence": "low"}
   ]
 }

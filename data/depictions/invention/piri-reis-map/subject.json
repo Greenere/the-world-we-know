@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Piri Reis map",
+      "caption": "The Ottoman captain Piri Reis compiles a map of the world from about twenty sources, among them, he writes, a chart drawn by Columbus himself.",
+      "sources": [
+        "piri-reis"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique close desk view of an irregularly shaped parchment Atlantic chart being worked on in Ottoman Gallipoli in1513. Iberia and western Africa at right, Caribbean islands upper left and Brazil lower left, fine radiating rhumb lines, little ship and mountain motifs. Compass dividers and reed pen at edge, hand keeping parchment flat. No Antarctic continent claim, no modern global projection, no modern borders, no readable invented Ottoman text. Do not fill it with unrelated maps."
+    }
+  ]
+}

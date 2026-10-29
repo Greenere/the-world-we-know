@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The double-hulled voyaging canoe",
+      "caption": "Two hulls lashed side by side under one deck and crab-claw sails carry dozens of people, with pigs, dogs and chickens and the plants for a new garden.",
+      "sources": [
+        "wilmshurst-2011"
+      ],
+      "confidence": "medium",
+      "prompt": "Elevated three-quarter broad view of a Polynesian double-hulled voyaging canoe near Raiatea around1100: TWO clearly separate long parallel wooden hulls joined by crossbeams and one working deck, one crab-claw sail supported by spars. A few voyagers handling lashings, baskets and wrapped plant cuttings on deck, island receding. Both hulls touch same water plane. No modern catamaran cabins, metal fittings, triangular Bermuda sail or generic explorer foreground."
+    }
+  ]
+}

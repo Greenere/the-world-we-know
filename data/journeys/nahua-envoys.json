@@ -1,0 +1,23 @@
+{
+  "id": "nahua-envoys",
+  "name": "Nahua nobles at the court of Charles V",
+  "traveler": "Nahua nobles, performers and ballplayers with Cortés",
+  "years": "1528–1529",
+  "kind": "envoy",
+  "viewpoint": "mexica",
+  "summary": "Cortés sails for Spain with Nahua nobles, sons of Moctezuma among them, with ballplayers, jugglers and acrobats. At Charles V's court the German artist Christoph Weiditz draws them playing ullamaliztli with a rubber ball. In 1529 a few go on to Rome and are received by Pope Clement VII, who grants bulls for churches in their home towns.",
+  "source": "weiditz",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1528, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "note": "They leave the rebuilt city with Cortés.", "city": "tenochtitlan"},
+    {"year": 1528, "place": "Veracruz", "lat": 19.2, "lon": -96.13, "note": "They take ship for Spain.", "city": "veracruz"},
+    {"year": 1528, "place": "Palos de la Frontera", "lat": 37.23, "lon": -6.89, "note": "Landfall in Castile.", "date": "May 1528", "by": "sea"},
+    {"year": 1528, "place": "Toledo", "lat": 39.86, "lon": -4.02, "note": "At the emperor's court, Weiditz draws the ballplayers and jugglers.", "city": "toledo"},
+    {"year": 1529, "place": "Seville", "lat": 37.39, "lon": -5.98, "note": "Most of the nobles wait here for months.", "city": "seville"},
+    {"year": 1529, "place": "Rome", "lat": 41.89, "lon": 12.49, "note": "Received by Pope Clement VII.", "city": "rome", "by": "sea", "source": "hamann-1529"}
+  ],
+  "informs": [
+    {"region": "iberia", "level": 3, "homeKnows": 1530, "confidence": "high", "note": "Nahua nobles at Charles V's court"},
+    {"region": "italy", "level": 2, "homeKnows": 1530, "confidence": "medium", "note": "Received by Pope Clement VII in Rome"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "hyecho",
+  "name": "Hyecho's pilgrimage to the five Indias",
+  "traveler": "Hyecho",
+  "years": "723–727",
+  "kind": "pilgrim",
+  "viewpoint": "korea",
+  "summary": "A young Silla monk sails from Guangzhou to India, visits the holy places of the Buddha, and walks home to China through Kashmir, Gandhara and the Pamirs, noting Arab armies in Tokharistan and the Türks beyond. He never went back to Silla. His account, Wang ocheonchukguk jeon, was lost until Paul Pelliot found a copy at Dunhuang in 1908.",
+  "source": "seth-korea",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 719, "place": "Gyeongju", "lat": 35.86, "lon": 129.22, "note": "As a youth he leaves Silla to study Buddhism in Tang China.", "city": "gyeongju"},
+    {"year": 723, "place": "Guangzhou", "lat": 23.13, "lon": 113.26, "note": "He takes ship for India.", "city": "guangzhou", "by": "sea"},
+    {"year": 724, "place": "Tamralipti", "lat": 22.3, "lon": 87.92, "note": "Probably his landing in India; the start of his account is lost.", "by": "sea"},
+    {"year": 724, "place": "Kushinagar", "lat": 26.74, "lon": 83.89, "note": "Where the Buddha died; he finds the stupa in a forest.", "by": "land"},
+    {"year": 724, "place": "Varanasi", "lat": 25.32, "lon": 83.0, "note": "The deer park where the Buddha first taught.", "city": "varanasi"},
+    {"year": 725, "place": "Bodh Gaya", "lat": 24.7, "lon": 84.99, "note": "The last of the four great stupas of central India."},
+    {"year": 725, "place": "Kannauj", "lat": 27.05, "lon": 79.91, "note": "Central India's king and his nine hundred elephants.", "city": "kannauj"},
+    {"year": 726, "place": "Kashmir", "lat": 34.08, "lon": 74.8, "note": "A kingdom of many monasteries."},
+    {"year": 726, "place": "Gandhara", "lat": 34.01, "lon": 71.58, "note": "Ruled by a Türk king who honours the Buddha.", "city": "peshawar"},
+    {"year": 726, "place": "Balkh", "lat": 36.76, "lon": 66.9, "note": "Tokharistan, held by Arab armies; he hears of Persia and the Arabs beyond.", "city": "balkh"},
+    {"year": 727, "place": "Wakhan", "lat": 37.0, "lon": 72.7, "note": "His poem of the frozen Pamir road."},
+    {"year": 727, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "Back within the Tang.", "city": "kashgar"},
+    {"year": 727, "place": "Kucha", "lat": 41.72, "lon": 82.96, "note": "The Protectorate of Anxi, in the eleventh month.", "city": "kucha"},
+    {"year": 733, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "note": "He spends the rest of his life translating scriptures in China.", "city": "changan"}
+  ],
+  "informs": []
+}

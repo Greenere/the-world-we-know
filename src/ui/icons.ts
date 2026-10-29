@@ -45,6 +45,7 @@ export const kindIcons: Record<string, string> = {
   traveler: wrap('<circle cx="10.5" cy="4.2" r="1.6"/><path d="M10 6.5l-2 4 2.5 2-1 4.5M10.5 9.5l3 1.6M8 10.5l-2.6 1.5M10.5 12.5l2.5 4"/>'),
   pilgrim: wrap('<path d="M6 3v14"/><circle cx="12" cy="4.5" r="1.6"/><path d="M12 6.6v5l-2 5M12 11.6l2 5M9 8.5l3 .5 2.5-1"/>'),
   envoy: wrap('<path d="M6 3v14M6 4h8l-2 2.5 2 2.5H6"/>'),
+  castaway: wrap('<path d="M4 11.8l11-2.2.6 2.4-10.2 2.2z"/><path d="M9 10.8V4.5l3.8 4.8"/><path d="M2.5 16.5c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0"/>'),
   'group voyage': wrap('<path d="M2.5 12.5c3 2 12 2 15 0M4 12.5l1.5 2.5h9l1.5-2.5M9 3c-3 2-4 6-3 9h6C11 8 10 5 9 3z"/>'),
   polar: wrap('<path d="M10 3v14M4 6.5l12 7M16 6.5l-12 7M8.4 3.8L10 5.4l1.6-1.6M8.4 16.2L10 14.6l1.6 1.6"/>'),
   mountaineering: wrap('<path d="M2.5 16.5L8 7l2.5 3.5L13 6l4.5 10.5z"/><path d="M8 7l1 3.2 1.5.3"/>'),
@@ -211,6 +212,21 @@ export function sealSvg(id: string, color: string, size = 18) {
       // Inti, the sun.
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(k => `<path d="M12 3.2l1 2.6h-2z" transform="rotate(${k * 30} 12 12)"/>`).join('')}</g><circle cx="12" cy="12" r="4.4" fill="#f6f0e2"/><path d="M10.4 11.4h.1M13.5 11.4h.1M10.6 13.4q1.4 1 2.8 0" stroke="${color}" stroke-width="1" stroke-linecap="round" fill="none"/>`,
+      );
+    case 'korea':
+      // Cheomseongdae, Silla's star-watching tower.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><rect x="9.2" y="5.4" width="5.6" height="1.6" rx=".2"/><path d="M9.9 7.4C9.9 11 8.3 14.4 8.3 17.2h7.4c0-2.8-1.6-6.2-1.6-9.8z"/><rect x="6.8" y="17.2" width="10.4" height="1.4" rx=".3"/></g><path d="M9.7 9.6h4.6M9.2 13.6h5.6M8.7 15.6h6.6" stroke="${color}" stroke-width=".5"/><rect x="11.1" y="10.8" width="1.8" height="1.8" fill="${color}"/>`,
+      );
+    case 'steppe':
+      // A ger, the felt tent of the herders.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M5.2 12.4Q8 9 12 7.8q4 1.2 6.8 4.6z"/><rect x="6" y="12.9" width="12" height="4.6" rx=".3"/><rect x="10.8" y="6.6" width="2.4" height="1" rx=".3"/></g><rect x="10.9" y="14.1" width="2.2" height="3.4" fill="${color}"/><path d="M4.8 18.1h14.4" stroke="#f6f0e2" stroke-width="1"/>`,
+      );
+    case 'maya':
+      // Thirteen in bar-and-dot numerals.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><circle cx="8.6" cy="8" r="1.3"/><circle cx="12" cy="8" r="1.3"/><circle cx="15.4" cy="8" r="1.3"/><rect x="6.2" y="10.6" width="11.6" height="2.4" rx="1.2"/><rect x="6.2" y="14.4" width="11.6" height="2.4" rx="1.2"/></g>`,
       );
     default:
       return s(

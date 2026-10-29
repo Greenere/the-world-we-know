@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Illustrated Treatise on the Sea Kingdoms",
+      "caption": "After China's defeat in the Opium War, Wei Yuan compiles an account of the countries of the world, with maps of every continent, from the translations of Western books gathered by Lin Zexu.",
+      "sources": [
+        "haiguo-tuzhi"
+      ],
+      "confidence": "medium",
+      "prompt": "Overhead close book-and-workshop study in Yangzhou around1850: open traditional Chinese thread-bound volume with one woodcut geographic map on its page and dense small indistinct vertical text columns opposite; nearby stacked thread-bound volumes, inkbrush and a carved printing block. Map lines and printing process focus. No modern world atlas binding, invented readable Chinese or European metal printing press; restrained paper and ink textures."
+    }
+  ]
+}

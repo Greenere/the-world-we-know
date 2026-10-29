@@ -14,7 +14,7 @@ import {GROUPS} from './topbar';
 /** Journey kinds grouped into the list's filters. */
 const FILTERS: {id: string; label: string; kinds: string[]}[] = [
   {id: 'all', label: 'All', kinds: []},
-  {id: 'sea', label: 'By sea', kinds: ['sailor', 'fleet', 'merchant route', 'group voyage']},
+  {id: 'sea', label: 'By sea', kinds: ['sailor', 'fleet', 'merchant route', 'group voyage', 'castaway']},
   {id: 'land', label: 'Overland', kinds: ['traveler', 'pilgrim', 'envoy', 'merchant']},
   {id: 'military', label: 'Military', kinds: ['military']},
   {id: 'science', label: 'Science', kinds: ['scientific']},

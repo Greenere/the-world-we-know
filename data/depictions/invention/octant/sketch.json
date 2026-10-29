@@ -1,0 +1,11 @@
+{
+  "subject": "invention/octant",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Almost face-on close object study of an EARLY1730s wooden reflecting octant on a plain London instrument-maker's bench: rigid flat triangular-sector frame spanning about45degrees, gently curved graduated arc at bottom, straight pivoted index arm from apex to arc, small index mirror near apex and second horizon mirror beside simple sight vane on side. Brass fittings, all frame parts coplanar, no warped arc. Subtle unreadable tick marks only. No full circular astrolabe, modern micrometer sextant, giant telescope, decorative fantasy gears or human face.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://www.londonmuseum.org.uk/collections/v/object-281936/octant-hadleys-octant/"
+  ]
+}

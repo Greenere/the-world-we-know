@@ -1538,7 +1538,6 @@ sahel,anatolia,1590,1,low,tarikh-al-sudan,"Rum, the Ottoman sultan"
 mexica,mexico,-500,3,medium,hoc,Cuicuilco and the Valley of Mexico
 mexica,mexico,100,4,medium,hoc,Teotihuacan's reach
 mexica,maya,-100,1,low,hoc,
-mexica,maya,378,3,medium,stuart-entrada,Teotihuacan's entrada at Tikal
 mexica,maya,650..750,2,low,hoc,Teotihuacan's fall cuts the link
 mexica,maya,1000,3,medium,hoc,Toltec styles at Chichén Itzá
 mexica,central-america,400,2,medium,hoc,Kaminaljuyu
@@ -1549,9 +1548,8 @@ mexica,rio-grande-pueblos,1000,2,low,hoc,Turquoise mines of the north
 mexica,andes-north,800,1,low,hoc,Metalworking arrives from the south by sea
 mexica,caribbean,1519,2,medium,sahagun,
 mexica,europe,1519,1,high,sahagun,Strangers from the east
-mexica,europe,1528..1530,2,medium,hoc,Nahua nobles travel to Spain
+mexica,europe,1528..1530,2,high,weiditz,Nahua nobles travel to Spain
 mexica,europe,1600,3,medium,chimalpahin,Chimalpahin follows the news of Europe
-mexica,iberia,1528,2,medium,hoc,
 mexica,iberia,1600,3,medium,chimalpahin,
 mexica,peru,1533,2,medium,chimalpahin,News of the conquest of Peru
 mexica,philippines,1571,2,medium,chimalpahin,The Manila galleon
@@ -1573,9 +1571,7 @@ inca,amazon,-500,1,low,moseley,"Antisuyu, the forest"
 inca,amazon,1450,2,medium,sarmiento,Inca campaigns into the forest
 inca,europe,1528,1,high,cieza,Bearded men in a ship
 inca,europe,1533,2,high,guaman-poma,
-inca,europe,1609,3,high,garcilaso,Garcilaso writes in Spain
 inca,iberia,1560,2,medium,garcilaso,
-inca,iberia,1609,3,medium,garcilaso,
 inca,mexico,1533,1,medium,hoc,News of New Spain
 # ════ Persia (with Mesopotamia); it joins the Islamic world in 651 ════
 persia,persia,-500,5,high,behistun,"The Achaemenid heartland, measured by the royal road and its stations"
@@ -2722,7 +2718,7 @@ inca,caribbean,1533,1,medium,cieza,
 inca,mexico,1560,2,medium,cieza,
 inca,levant,1615,2,medium,guaman-poma,
 inca,guinea-coast,1615,2,medium,guaman-poma,Africans brought to Peru
-inca,china-south,1615,1,low,guaman-poma,
+inca,china-south,1615,2,medium,guaman-poma,
 # Polynesia: South America, the fur trade, London
 polynesia,south-america,1200,1,low,ioannidis-2020,"A meeting with South Americans, known from DNA and the sweet potato"
 polynesia,pacific-northwest,1811,3,high,hoc,Hawaiians in the fur trade on the Columbia
@@ -2917,3 +2913,245 @@ ethiopia,greece,530,2,medium,munro-hay,Justinian's envoys to King Kaleb
 ethiopia,mesopotamia,340,2,medium,munro-hay,Babylon and the lands of the Bible
 ethiopia,britain,1770,2,high,hoc,James Bruce at Gondar
 swahili,anatolia,1585,2,high,horton-middleton,The Ottoman galleys of Mir Ali Bey
+
+# ════ Korea: the Chulmun and Mumun villages, Gojoseon, then the Three Kingdoms ════
+korea,korea,-2000,3,low,seth-korea,Chulmun villages of the peninsula
+korea,sea-of-japan,-2000,2,low,seth-korea,
+korea,east-china-sea,-2000,1,low,seth-korea,
+korea,manchuria,-2000,2,low,seth-korea,
+korea,japan,-2000,1,low,habu,Jōmon and Chulmun fishers meet across the Tsushima strait
+korea,korea,-1500,3,medium,seth-korea,Mumun rice farmers
+korea,manchuria,-1000,3,low,seth-korea,The Liaoning bronze-dagger culture
+korea,china-north,-400,2,low,seth-korea,The knife money of Yan
+korea,japan,-400,2,medium,seth-korea,Mumun farmers carry rice to Kyushu
+korea,mongolia,-300,1,low,seth-korea,
+korea,korea,-194,4,medium,shiji,Wiman's kingdom at Wanggeom
+korea,china-north,-108,3,high,hanshu,The Han conquer Gojoseon and found Lelang
+korea,east-china-sea,-108,2,medium,hanshu,
+korea,manchuria,1,3,medium,samguk-sagi,Goguryeo rises on the Yalu
+korea,japan,100,2,medium,samguk-sagi,"Wa, across the strait"
+korea,sea-of-japan,100,3,medium,samguk-sagi,
+korea,china-north,372,3,high,samguk-sagi,Buddhism from the Former Qin
+korea,china-south,372,3,high,samguk-sagi,Baekje's envoys to the Eastern Jin
+korea,east-china-sea,372,3,medium,samguk-sagi,
+korea,india-north,384,1,medium,samguk-sagi,The land of the Buddha
+korea,korea,400,4,high,samguk-sagi,"The Three Kingdoms: Goguryeo, Baekje and Silla"
+korea,manchuria,414,4,high,samguk-sagi,Gwanggaeto's conquests in Manchuria
+korea,japan,400,3,medium,samguk-sagi,Baekje's alliance with Wa
+korea,mongolia,600,2,medium,samguk-sagi,Goguryeo envoys at the Türk khagan's tent
+korea,transoxiana,650,1,low,seth-korea,Goguryeo envoys painted at Afrasiab in Samarkand
+korea,persia,600,1,low,seth-korea,Glass and silver from Persia in Silla's royal tombs
+korea,china-north,668,4,high,samguk-sagi,Silla's alliance with the Tang
+korea,india-north,700,2,medium,yijing,Silla monks study at Nalanda
+korea,tarim,750,1,low,seth-korea,
+korea,china-south,830,3,medium,samguk-sagi,Silla merchant towns along the Tang coast
+korea,japan,830,3,medium,samguk-sagi,Jang Bogo's ships trade with Japan
+korea,east-china-sea,830,4,medium,samguk-sagi,
+korea,china-south,1100,3,high,goryeosa,Song merchants at Byeongnando
+korea,persian-gulf,1024,1,medium,goryeosa,Arab merchants at the Goryeo court
+korea,arabia-felix,1024,1,low,goryeosa,
+korea,mongolia,1231,3,high,goryeosa,The Mongol invasions
+korea,mongolia,1260,4,high,goryeosa,Goryeo's kings marry into the Yuan house
+korea,japan,1274,3,high,goryeosa,Goryeo ships carry the Mongol invasions of Japan
+korea,tarim,1300,2,medium,goryeosa,Uyghur and Central Asian officials at the Yuan court
+korea,transoxiana,1300,2,low,goryeosa,
+korea,tibet,1300,2,medium,goryeosa,
+korea,ryukyu-taiwan,1389,3,high,goryeosa,Envoys from Chūzan
+korea,khmer,1393,2,high,joseon-sillok,Envoys from Siam
+korea,java,1406,2,high,joseon-sillok,An envoy from Java
+korea,india-north,1402,2,medium,ledyard-korea,The Kangnido
+korea,persia,1402,2,medium,ledyard-korea,
+korea,arabia-felix,1402,2,low,ledyard-korea,
+korea,mesopotamia,1402,1,low,ledyard-korea,
+korea,egypt,1402,1,low,ledyard-korea,
+korea,africa,1402,1,low,ledyard-korea,Africa drawn as a triangle pointing south
+korea,maghreb,1402,1,low,ledyard-korea,
+korea,europe,1402,1,low,ledyard-korea,About a hundred place names in the far west
+korea,japan,1471,4,high,haedong-jegukgi,"Japan and its ports, mapped by Sin Suk-ju"
+korea,ryukyu-taiwan,1471,4,high,haedong-jegukgi,
+korea,korea,1861,5,high,ledyard-korea,Kim Jeong-ho's Daedong yeojido
+korea,iberia,1593,1,medium,seth-korea,A Jesuit with the Japanese army
+korea,europe,1603,2,high,ledyard-korea,Ricci's world map
+korea,italy,1603,2,high,ledyard-korea,
+korea,iberia,1603,2,high,ledyard-korea,
+korea,africa,1603,2,high,ledyard-korea,
+korea,north-america,1603,2,high,ledyard-korea,
+korea,south-america,1603,2,high,ledyard-korea,
+korea,indian-ocean,1603,2,high,ledyard-korea,
+korea,pacific-north,1603,1,high,ledyard-korea,
+korea,europe,1631,2,high,aleni,Jeong Du-won brings back Aleni's world geography and a telescope
+korea,germania,1627,2,high,hamel,Weltevree's ship is wrecked on the coast
+korea,germania,1653,2,high,hamel,Hamel's crew
+korea,siberia-east,1654,1,high,joseon-sillok,Joseon musketeers fight the Russians on the Amur
+korea,rus,1658,1,medium,joseon-sillok,
+korea,tibet,1780,2,high,yeolha-ilgi,Pak Ji-won meets the Panchen Lama's court at Jehol
+korea,mongolia,1780,4,high,yeolha-ilgi,
+korea,gaul,1866,3,high,seth-korea,The French expedition to Ganghwa
+korea,north-america,1871,3,high,seth-korea,The American expedition to Ganghwa
+korea,north-america,1883,4,high,seth-korea,The mission crosses America by rail to Washington
+korea,gaul,1884,3,high,seth-korea,The mission comes home by way of Europe and Suez
+korea,britain,1884,3,high,seth-korea,
+korea,med-west,1884,3,high,seth-korea,
+korea,egypt,1884,3,high,seth-korea,
+korea,red-sea,1884,3,high,seth-korea,
+korea,indian-ocean,1884,3,high,seth-korea,
+korea,sri-lanka,1884,3,high,seth-korea,
+korea,north-atlantic-east,1884,3,high,seth-korea,
+korea,europe,1895,3,high,yu-kilchun,Yu Kil-chun's Observations on a Journey to the West
+korea,rus,1896,3,high,seth-korea,Min Yeong-hwan at the coronation of Nicholas II
+korea,siberia-west,1896,3,high,seth-korea,He comes home across Siberia
+korea,siberia-east,1896,3,high,seth-korea,
+
+# ════ Steppe: the deer-stone herders, then the empires of the Orkhon ════
+steppe,mongolia,-2000,3,low,honeychurch,Herders of the Mongolian plateau
+steppe,siberia-east,-2000,1,low,honeychurch,
+steppe,manchuria,-2000,1,low,honeychurch,
+steppe,china-north,-2000,1,low,honeychurch,
+steppe,kazakh-steppe,-2000,1,low,anthony,
+steppe,mongolia,-1200,3,medium,honeychurch,Deer stones from the Altai to Lake Baikal
+steppe,siberia-east,-1200,1,low,honeychurch,
+steppe,zhetysu,-1200,1,low,honeychurch,
+steppe,china-north,-1250,2,medium,keightley,Raiders on the Shang frontier
+steppe,mongolia,-209,4,medium,shiji,The Xiongnu confederation under Modu
+steppe,china-north,-200,3,high,shiji,Modu besieges the Han emperor at Baideng
+steppe,manchuria,-209,3,high,shiji,The Donghu defeated
+steppe,hexi,-176,3,high,shiji,The Yuezhi driven out
+steppe,tarim,-176,3,high,shiji,"Loulan, the Wusun and the twenty-six oasis states"
+steppe,siberia-west,-201,1,medium,shiji,The Dingling and Jiankun in the north
+steppe,siberia-east,-201,1,medium,shiji,
+steppe,kazakh-steppe,-176,2,medium,shiji,The Wusun and Kangju
+steppe,transoxiana,-160,1,low,shiji,The Yuezhi flee far to the west
+steppe,china-north,-51,4,high,hanshu,The chanyu Huhanye visits Chang'an
+steppe,zhetysu,-36,3,high,hanshu,Zhizhi's last stand on the Talas
+steppe,korea,500,1,low,golden-turkic,
+steppe,kazakh-steppe,552,4,high,golden-turkic,The Türk khaganate from Manchuria to the Caspian
+steppe,zhetysu,552,4,high,golden-turkic,
+steppe,transoxiana,560,3,high,golden-turkic,The Sogdian merchants and their cities
+steppe,bactria,560,3,high,golden-turkic,The Hephthalites crushed
+steppe,persia,567,3,high,menander,Embassies to the Sasanian shah
+steppe,caspian,568,2,high,menander,
+steppe,pontic-steppe,568,2,high,menander,
+steppe,caucasus,576,3,high,menander,The Türks attack the Bosporus
+steppe,greece,568,2,high,menander,Zemarchus's embassy from Constantinople
+steppe,anatolia,568,2,high,menander,
+steppe,manchuria,552,3,high,golden-turkic,
+steppe,china-north,552,4,high,golden-turkic,
+steppe,china-south,600,2,medium,golden-turkic,
+steppe,tibet,600,2,medium,orkhon,Tüpüt
+steppe,korea,732,2,high,orkhon,"Bükli, whose envoys mourn Kül Tegin"
+steppe,transoxiana,712,4,high,orkhon,"Tonyukuk's campaign to the Iron Gate"
+steppe,siberia-west,710,2,high,orkhon,The Kyrgyz on the Yenisei
+steppe,siberia-west,1207,2,high,secret-history,Jochi subdues the forest peoples
+steppe,siberia-east,1207,2,high,secret-history,
+steppe,tarim,744,4,high,golden-turkic,The Uyghur khaganate
+steppe,china-north,757,4,high,golden-turkic,Uyghur horsemen retake the Tang capitals
+steppe,mesopotamia,762,1,low,golden-turkic,"Babylon, homeland of Mani, whose faith the khagan adopts"
+steppe,siberia-west,840,2,high,golden-turkic,The Kyrgyz sack Ordu-Baliq
+steppe,hexi,1209,4,high,secret-history,The Tangut kingdom submits
+steppe,china-north,1215,5,high,secret-history,Zhongdu falls
+steppe,manchuria,1215,4,high,secret-history,
+steppe,tarim,1218,4,high,secret-history,The Qara Khitai conquered
+steppe,zhetysu,1218,4,high,secret-history,
+steppe,caspian,1223,3,high,juvaini,
+steppe,lower-volga,1236,4,high,juvaini,The Volga Bulgars conquered
+steppe,volga,1236,4,high,juvaini,
+steppe,balkans,1242,2,high,juvaini,The army turns back from the Adriatic
+steppe,germania,1241,2,high,juvaini,The battle of Legnica
+steppe,baltic,1241,1,medium,juvaini,
+steppe,tibet,1247,3,high,atwood,Sakya Pandita meets Köten
+steppe,anatolia,1243,3,high,juvaini,The Seljuks defeated at Köse Dağ
+steppe,europe,1246,1,high,carpini-rubruck,The pope's envoy at Güyük's enthronement
+steppe,italy,1246,2,high,carpini-rubruck,
+steppe,gaul,1254,2,high,carpini-rubruck,Rubruck comes from the king of the Franks
+steppe,india-north,1250,2,high,juvaini,Raids into the Delhi sultanate
+steppe,mesopotamia,1258,4,high,rashid-al-din,Baghdad falls to Hulagu
+steppe,levant,1260,3,high,rashid-al-din,
+steppe,egypt,1260,2,high,rashid-al-din,The Mamluks win at Ain Jalut
+steppe,china-south,1279,4,high,yuanshi,The Song conquered
+steppe,annam,1285,3,high,yuanshi,The campaigns against Đại Việt and Champa
+steppe,burma,1287,3,high,yuanshi,Pagan falls
+steppe,japan,1274,3,high,yuanshi,The invasions of Japan
+steppe,korea,1231,4,high,yuanshi,
+steppe,east-china-sea,1274,3,high,yuanshi,
+steppe,south-china-sea,1292,3,high,yuanshi,
+steppe,java,1293,2,high,yuanshi,The fleet to Java
+steppe,tamilakam,1280,2,medium,yuanshi,Envoys to Ma'bar
+steppe,sri-lanka,1284,2,medium,yuanshi,
+steppe,gaul,1400,1,low,atwood,"After the Yuan falls, the far west fades from memory"
+steppe,britain,1400,1,low,atwood,
+steppe,italy,1400,1,low,atwood,
+steppe,germania,1400,1,low,atwood,
+steppe,balkans,1400,1,low,atwood,
+steppe,egypt,1400,1,low,atwood,
+steppe,levant,1400,1,low,atwood,
+steppe,java,1400,1,low,atwood,
+steppe,burma,1400,1,low,atwood,
+steppe,siberia-west,1616,3,high,atwood,Russian envoys to the Altan Khan of the Khalkha
+steppe,rus,1616,3,high,atwood,
+steppe,lower-volga,1630,4,high,atwood,"The Torghuts move to the Volga: the Kalmyks"
+steppe,caucasus,1640,3,medium,atwood,
+steppe,china-north,1691,5,high,qing-shilu,The Khalkha submit to the Qing at Dolon Nor
+steppe,manchuria,1691,4,high,qing-shilu,
+steppe,siberia-east,1727,3,high,atwood,The tea road through Kyakhta
+steppe,rus,1727,3,high,atwood,
+
+# ════ Maya: the lowland villages, the Classic cities, and Maya writers under Spain ════
+maya,maya,-2000,2,low,sharer,Farming villages of the lowlands
+maya,central-america,-2000,1,low,sharer,
+maya,gulf-of-mexico,-2000,1,low,pool-olmec,
+maya,mexico,-2000,1,low,pool-olmec,
+maya,maya,-1000,3,medium,inomata-2013,"Ceibal, Cuello and the first plazas"
+maya,mexico,-1000,2,medium,pool-olmec,The Olmec of the Gulf Coast
+maya,gulf-of-mexico,-1000,2,medium,pool-olmec,
+maya,central-america,-1000,2,medium,sharer,Jade from the Motagua valley
+maya,caribbean,-500,1,low,sharer,
+maya,maya,-300,4,medium,sharer,"El Mirador, joined to its towns by causeways"
+maya,central-america,-300,3,medium,sharer,The highland cities of Kaminaljuyu and Chalchuapa
+maya,mexico,378,3,high,stuart-entrada,"Teotihuacan, the place of reeds to the west"
+maya,gulf-of-mexico,600,3,medium,sharer,Canoe trade along the coast
+maya,caribbean,600,2,medium,sharer,
+maya,central-america,900,3,high,sharer,Gold from Panama and Costa Rica in the Sacred Cenote
+maya,andes-north,1000,1,low,sharer,Gold from as far as Colombia
+maya,rio-grande-pueblos,1000,1,low,sharer,Turquoise from the far north by way of Tula
+maya,caribbean,1200,3,medium,sharer,"Cozumel, Ix Chel's island, and the canoe trade to Honduras"
+maya,mexico,1450,3,high,landa,Aztec merchants at Xicalango
+maya,iberia,1511,1,medium,bernal-diaz,Shipwrecked strangers from the east
+maya,iberia,1517,2,high,bernal-diaz,Hernández de Córdoba fights at Champotón
+maya,caribbean,1517,3,high,bernal-diaz,
+maya,mexico,1524,4,high,kaqchikel-annals,Alvarado's Nahua allies from Mexico
+maya,iberia,1567,3,high,raimundez-2019,Maya nobles write to the king of Castile
+maya,italy,1550,1,medium,landa,"Rome, the seat of the pope"
+maya,levant,1550,2,medium,chilam-balam,Jerusalem in the friars' teaching
+maya,europe,1550,1,medium,restall-maya,
+maya,guinea-coast,1550,2,medium,restall-black-middle,Africans brought to Yucatán
+maya,caribbean,1600,4,medium,restall-maya,Ships to Havana and Veracruz
+maya,north-atlantic-west,1600,2,medium,restall-maya,
+maya,britain,1650,2,medium,restall-maya,English logwood cutters on the coast of Belize
+maya,britain,1850,3,high,reed-caste-war,Chan Santa Cruz trades with British Honduras for guns
+maya,north-america,1848,2,high,reed-caste-war,Yucatán's governor offers the province to the United States
+
+# ════ Mexica, Maya and Inca after the conquest: what their own people learned of a wider world ════
+mexica,maya,1524,4,high,kaqchikel-annals,Nahua allies march with Alvarado into Guatemala
+mexica,central-america,1524,3,high,kaqchikel-annals,
+mexica,rio-grande-pueblos,1598,4,high,villagra,Oñate's colony and its Nahua and Tlaxcalan settlers
+mexica,guinea-coast,1550,2,medium,chimalpahin,Africans brought to Mexico City
+mexica,caribbean,1600,3,medium,chimalpahin,The fleets from Havana and Veracruz
+mexica,north-america,1847,3,high,guardino-2017,The United States army takes Mexico City
+mexica,california,1848,3,high,guardino-2017,California is lost to the United States
+mexica,gaul,1862,3,high,martinez-galicia,The French intervention
+mexica,alps-danube,1864,3,high,martinez-galicia,Maximilian of Austria learns Nahuatl from Faustino Galicia Chimalpopoca
+maya,central-america,1524,4,high,kaqchikel-annals,Alvarado's conquest of the highlands
+maya,andes-north,1534,2,high,lovell-alvarado,Conscripts from Guatemala march with Alvarado to Quito
+maya,peru,1534,1,medium,lovell-alvarado,
+maya,peru,1580,2,medium,macleod-1973,Ships from Realejo carry Guatemala's trade to Peru
+inca,amazon,1541,3,high,hemming-inca,Thousands of Andean porters go with Gonzalo Pizarro to the land of cinnamon
+inca,amazon-river,1542,2,medium,hemming-inca,Orellana's men float down the great river
+inca,pampas,1590,3,medium,assadourian-1982,The road from Potosí to Tucumán and Buenos Aires
+inca,brazil-coast,1600,2,medium,assadourian-1982,Portuguese traders from Brazil reach Potosí
+inca,japan,1613,2,high,bonialian-2015,Japanese living in Lima are counted in the census of 1613
+inca,china-south,1613,2,high,bonialian-2015,Chinese living in Lima
+inca,philippines,1613,2,high,bonialian-2015,
+inca,west-india-coast,1613,1,medium,bonialian-2015,People from Portuguese India in Lima
+inca,africa,1615,1,medium,guaman-poma,"Guinea, one of the four parts of the world"
+inca,asia,1615,1,medium,guaman-poma,
+inca,iberia,1810,4,high,cadiz-cortes,Dionisio Inca Yupanqui sits in the Cortes of Cádiz

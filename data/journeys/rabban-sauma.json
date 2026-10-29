@@ -1,0 +1,34 @@
+{
+  "id": "rabban-sauma",
+  "name": "Rabban Sauma's journey to the West",
+  "traveler": "Rabban Sauma",
+  "years": "1275–1288",
+  "kind": "envoy",
+  "viewpoint": "steppe",
+  "summary": "A Turkic monk of the Church of the East sets out from Khanbaliq for Jerusalem with his pupil Markos. War stops them in Persia, where Markos becomes patriarch. In 1287 the Ilkhan Arghun sends Sauma west to seek an alliance against the Mamluks. He sees Constantinople, a sea battle off Naples, Rome without a pope, Paris and the king of England in Gascony, and is the first person from China known to reach western Europe.",
+  "source": "rabban-sauma",
+  "confidence": "high",
+  "stops": [
+    {"year": 1275, "place": "Khanbaliq", "lat": 39.9, "lon": 116.4, "note": "He leaves the Yuan capital for Jerusalem.", "city": "beijing"},
+    {"year": 1276, "place": "Khotan", "lat": 37.11, "lon": 79.93, "note": "Along the southern Silk Road.", "city": "khotan"},
+    {"year": 1276, "place": "Kashgar", "lat": 39.47, "lon": 75.99, "note": "Found abandoned after the wars.", "city": "kashgar"},
+    {"year": 1277, "place": "Talas", "lat": 42.52, "lon": 72.24, "note": "At the camp of Qaidu, at war with Kublai."},
+    {"year": 1280, "place": "Maragha", "lat": 37.39, "lon": 46.24, "note": "At the Ilkhan's court; war in Syria blocks the road to Jerusalem.", "city": "maragha"},
+    {"year": 1287, "place": "Trebizond", "lat": 41.0, "lon": 39.72, "note": "Sent west by the Ilkhan Arghun.", "city": "trebizond"},
+    {"year": 1287, "place": "Constantinople", "lat": 41.01, "lon": 28.98, "note": "Received by Andronikos II; he sees Hagia Sophia.", "city": "constantinople", "by": "sea"},
+    {"year": 1287, "place": "Naples", "lat": 40.85, "lon": 14.27, "note": "He watches a sea battle from a rooftop.", "city": "naples", "by": "sea", "date": "June 1287"},
+    {"year": 1287, "place": "Rome", "lat": 41.89, "lon": 12.49, "note": "The pope has just died; he debates the cardinals.", "city": "rome"},
+    {"year": 1287, "place": "Genoa", "lat": 44.41, "lon": 8.93, "note": "Received by the city's leaders.", "city": "genoa"},
+    {"year": 1287, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "Philip IV shows him the relics of the Sainte-Chapelle.", "city": "paris"},
+    {"year": 1287, "place": "Bordeaux", "lat": 44.84, "lon": -0.58, "note": "Edward I of England receives him in Gascony."},
+    {"year": 1288, "place": "Rome", "lat": 41.89, "lon": 12.49, "note": "Pope Nicholas IV gives him communion at Easter.", "city": "rome", "by": "sea"},
+    {"year": 1288, "place": "Maragha", "lat": 37.39, "lon": 46.24, "note": "Home to the Ilkhan with letters from the kings of the West.", "city": "maragha", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "greece", "level": 3, "homeKnows": 1288, "confidence": "medium", "note": "Constantinople and Hagia Sophia"},
+    {"region": "italy", "level": 3, "homeKnows": 1288, "confidence": "medium", "note": "Rabban Sauma in Rome"},
+    {"region": "gaul", "level": 3, "homeKnows": 1288, "confidence": "medium", "note": "Rabban Sauma meets Philip IV in Paris"},
+    {"region": "britain", "level": 2, "homeKnows": 1288, "confidence": "medium", "note": "He meets Edward I in Gascony"},
+    {"region": "med-west", "level": 2, "homeKnows": 1288, "confidence": "medium"}
+  ]
+}

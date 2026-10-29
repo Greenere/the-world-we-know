@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The map that named America",
+      "caption": "Martin Waldseemüller and Matthias Ringmann print a twelve-sheet map of the world that shows a separate New World and names it America, after Amerigo Vespucci.",
+      "sources": [
+        "waldseemuller"
+      ],
+      "confidence": "high",
+      "prompt": "Wide printer's workshop view at Saint-Die in1507: the large wall map assembled as TWELVE rectangular sheets in FOUR columns and THREE rows, inspected by a small standing printer at side. Broad modified Ptolemaic curved world outline, narrow separate Americas on left, Europe/Africa nearer centre, Asia right; geographic forms approximate period woodcut, not modern map. Paper seams and printing work are focus. No readable labels or quotation, no Australia or satellite-accurate coasts."
+    }
+  ]
+}

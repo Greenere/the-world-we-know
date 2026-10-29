@@ -1,0 +1,11 @@
+{
+  "subject": "invention/great-trig-survey",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Long ground-level view along a precisely stretched metal measuring chain supported on low wooden trestles across flat ground near Madras in1802. Indian survey assistants in appropriate cotton garments align supports and markers, a European surveyor records measurements off to side. Distant low hills and palms, no Himalaya nearby. Chain measurement and collaborative labour focus, no unsupported floating chain, laser, tape reel, modern total station or giant telescope.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://wgbis.ces.iisc.ac.in/biodiversity/sahyadri/documents/trigonometrical_survey.htm"
+  ]
+}

@@ -1000,7 +1000,7 @@
     "tagline": "The Valley of Mexico, from Teotihuacan to Tenochtitlan.",
     "color": "#1d8a8f",
     "seal": "mexica",
-    "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Tlatilco in the Olmec age, then Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule.",
+    "startNote": "Before the Mexica founded Tenochtitlan in 1325, this view follows the cities of the Valley of Mexico they inherited from: Tlatilco in the Olmec age, then Teotihuacan and Tula. After 1521 it follows Nahua scholars under Spanish rule, such as the annalist Chimalpahin, and in the 19th century Nahua scholars such as Faustino Galicia Chimalpopoca.",
     "homes": [
       {
         "from": -2000,
@@ -1095,7 +1095,7 @@
     "tagline": "The Andes, from Chavín to Cusco.",
     "color": "#c4652a",
     "seal": "inca",
-    "startNote": "Before the Inca, this view follows the Andean societies they inherited from: Caral, Chavín, Tiwanaku and Huari. After 1533 it follows Andean chroniclers under Spanish rule.",
+    "startNote": "Before the Inca, this view follows the Andean societies they inherited from: Caral, Chavín, Tiwanaku and Huari. After 1533 it follows Andean chroniclers under Spanish rule, such as Guamán Poma and Garcilaso, and then Inca descendants such as Juan Bautista Túpac Amaru and Dionisio Inca Yupanqui.",
     "homes": [
       {
         "from": -2000,
@@ -3268,6 +3268,402 @@
         "year": 1849,
         "label": "Hikayat Abdullah",
         "source": "abdullah-munshi"
+      }
+    ]
+  },
+  {
+    "id": "korea",
+    "name": "Korea",
+    "longName": "Korea",
+    "adjective": "Korean",
+    "tagline": "The peninsula, from Gojoseon to Joseon, between China, the steppe and Japan.",
+    "color": "#5f9e8a",
+    "seal": "korea",
+    "startNote": "Before the Three Kingdoms took shape in the 4th century, this view follows the peoples of the peninsula: the Chulmun and Mumun villages known from archaeology, and Gojoseon in the north, known from Chinese histories.",
+    "noteUntil": 300,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Amsa-dong",
+        "lat": 37.56,
+        "lon": 127.13
+      },
+      {
+        "from": -300,
+        "place": "Pyongyang",
+        "lat": 39.02,
+        "lon": 125.75
+      },
+      {
+        "from": 550,
+        "place": "Gyeongju",
+        "lat": 35.86,
+        "lon": 129.22
+      },
+      {
+        "from": 919,
+        "place": "Kaesong",
+        "lat": 37.97,
+        "lon": 126.55
+      },
+      {
+        "from": 1394,
+        "place": "Hanseong",
+        "lat": 37.57,
+        "lon": 126.98
+      }
+    ],
+    "moments": [
+      {
+        "year": -1500,
+        "label": "Mumun farmers grow rice in walled villages",
+        "source": "seth-korea"
+      },
+      {
+        "year": -108,
+        "label": "The Han conquer Gojoseon and found Lelang",
+        "source": "hanshu"
+      },
+      {
+        "year": 372,
+        "label": "Buddhism reaches Goguryeo from the Former Qin",
+        "source": "samguk-sagi"
+      },
+      {
+        "year": 668,
+        "label": "Silla unites the peninsula with Tang help",
+        "source": "samguk-sagi"
+      },
+      {
+        "year": 828,
+        "label": "Jang Bogo's Cheonghaejin rules the Yellow Sea trade",
+        "source": "samguk-sagi"
+      },
+      {
+        "year": 1024,
+        "label": "Arab merchants come to the Goryeo court",
+        "source": "goryeosa"
+      },
+      {
+        "year": 1231,
+        "label": "The first Mongol invasion",
+        "source": "goryeosa"
+      },
+      {
+        "year": 1402,
+        "label": "The Kangnido maps the world from Japan to Africa",
+        "source": "ledyard-korea"
+      },
+      {
+        "year": 1471,
+        "label": "Sin Suk-ju describes Japan and the Ryūkyū",
+        "source": "haedong-jegukgi"
+      },
+      {
+        "year": 1488,
+        "label": "Choe Bu drifts to China and walks home",
+        "source": "choe-bu"
+      },
+      {
+        "year": 1592,
+        "label": "Japan invades: the Imjin War",
+        "source": "seth-korea"
+      },
+      {
+        "year": 1603,
+        "label": "Ricci's world map reaches Seoul",
+        "source": "ledyard-korea"
+      },
+      {
+        "year": 1653,
+        "label": "Hamel's Dutch crew are wrecked on Jeju",
+        "source": "hamel"
+      },
+      {
+        "year": 1780,
+        "label": "Pak Ji-won travels to the emperor's summer palace at Jehol",
+        "source": "yeolha-ilgi"
+      },
+      {
+        "year": 1861,
+        "label": "Kim Jeong-ho's Daedong yeojido maps the whole country",
+        "source": "ledyard-korea"
+      },
+      {
+        "year": 1883,
+        "label": "The first Korean mission to the United States",
+        "source": "seth-korea"
+      }
+    ]
+  },
+  {
+    "id": "steppe",
+    "name": "Steppe",
+    "longName": "Mongolia and the steppe",
+    "adjective": "Steppe",
+    "tagline": "Herders of the Mongolian plateau, from the Xiongnu to the Mongol empire.",
+    "color": "#8f8a2a",
+    "seal": "steppe",
+    "startNote": "Before the Xiongnu united the steppe in 209 BCE, this view follows the herders of the Mongolian plateau who raised the deer stones, known only from archaeology. Then it follows each empire centred on the Orkhon: the Xiongnu, Xianbei, Rouran, Türks, Uyghurs and Mongols. Their own words survive from the Orkhon inscriptions of the 730s and the Secret History of the 1250s; before that, through Chinese and Byzantine writers.",
+    "noteUntil": -209,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Khangai mountains",
+        "lat": 47.3,
+        "lon": 100.0
+      },
+      {
+        "from": -209,
+        "place": "Orkhon valley",
+        "lat": 47.55,
+        "lon": 102.7
+      },
+      {
+        "from": 744,
+        "place": "Ordu-Baliq",
+        "lat": 47.43,
+        "lon": 102.66
+      },
+      {
+        "from": 1206,
+        "place": "Kherlen valley",
+        "lat": 47.4,
+        "lon": 109.0
+      },
+      {
+        "from": 1235,
+        "place": "Karakorum",
+        "lat": 47.2,
+        "lon": 102.82
+      },
+      {
+        "from": 1264,
+        "place": "Shangdu",
+        "lat": 42.36,
+        "lon": 116.18
+      },
+      {
+        "from": 1370,
+        "place": "Karakorum",
+        "lat": 47.2,
+        "lon": 102.82
+      },
+      {
+        "from": 1639,
+        "place": "Örgöö",
+        "lat": 47.92,
+        "lon": 106.92
+      }
+    ],
+    "moments": [
+      {
+        "year": -1200,
+        "label": "Deer stones are raised across the steppe",
+        "source": "honeychurch"
+      },
+      {
+        "year": -209,
+        "label": "Modu Chanyu unites the Xiongnu",
+        "source": "shiji"
+      },
+      {
+        "year": -51,
+        "label": "The chanyu Huhanye visits the Han court",
+        "source": "hanshu"
+      },
+      {
+        "year": 552,
+        "label": "The Türks overthrow the Rouran",
+        "source": "golden-turkic"
+      },
+      {
+        "year": 568,
+        "label": "A Byzantine envoy reaches the Türk khagan",
+        "source": "menander"
+      },
+      {
+        "year": 732,
+        "label": "The Orkhon inscriptions name peoples from Korea to Rome",
+        "source": "orkhon"
+      },
+      {
+        "year": 840,
+        "label": "The Kyrgyz sack Ordu-Baliq",
+        "source": "golden-turkic"
+      },
+      {
+        "year": 1206,
+        "label": "Temüjin is proclaimed Genghis Khan",
+        "source": "secret-history"
+      },
+      {
+        "year": 1221,
+        "label": "Genghis Khan pursues Jalal al-Din to the Indus",
+        "source": "juvaini"
+      },
+      {
+        "year": 1241,
+        "label": "Mongol armies reach Poland and Hungary",
+        "source": "juvaini"
+      },
+      {
+        "year": 1254,
+        "label": "Rubruck at Möngke's court in Karakorum",
+        "source": "carpini-rubruck"
+      },
+      {
+        "year": 1287,
+        "label": "Rabban Sauma, a monk from Khanbaliq, reaches Rome and Paris",
+        "source": "rabban-sauma"
+      },
+      {
+        "year": 1368,
+        "label": "The Yuan court flees back to the steppe",
+        "source": "ming-shilu"
+      },
+      {
+        "year": 1578,
+        "label": "Altan Khan meets the third Dalai Lama",
+        "source": "atwood"
+      },
+      {
+        "year": 1691,
+        "label": "The Khalkha submit to the Qing at Dolon Nor",
+        "source": "qing-shilu"
+      },
+      {
+        "year": 1727,
+        "label": "The Treaty of Kyakhta opens the Russian tea trade",
+        "source": "atwood"
+      }
+    ]
+  },
+  {
+    "id": "maya",
+    "name": "Maya",
+    "longName": "The Maya",
+    "adjective": "Maya",
+    "tagline": "Cities of the Petén and the Yucatán, from El Mirador to the last kingdom at Tayasal.",
+    "color": "#2e5e4e",
+    "seal": "maya",
+    "startNote": "Before about 1000 BCE this view follows the first farming villages of the Maya lowlands, known only from archaeology. After the Spanish conquest it follows Maya writers: the authors of the Popol Vuh, the Annals of the Kaqchikels and the books of Chilam Balam.",
+    "noteUntil": -1000,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Cuello",
+        "lat": 18.09,
+        "lon": -88.57
+      },
+      {
+        "from": -1000,
+        "place": "Ceibal",
+        "lat": 16.51,
+        "lon": -90.06
+      },
+      {
+        "from": -600,
+        "place": "El Mirador",
+        "lat": 17.75,
+        "lon": -89.92
+      },
+      {
+        "from": 250,
+        "place": "Tikal",
+        "lat": 17.22,
+        "lon": -89.62
+      },
+      {
+        "from": 900,
+        "place": "Chichén Itzá",
+        "lat": 20.68,
+        "lon": -88.57
+      },
+      {
+        "from": 1220,
+        "place": "Mayapán",
+        "lat": 20.63,
+        "lon": -89.46
+      },
+      {
+        "from": 1450,
+        "place": "Maní",
+        "lat": 20.39,
+        "lon": -89.39
+      },
+      {
+        "from": 1847,
+        "place": "Chan Santa Cruz",
+        "lat": 19.58,
+        "lon": -88.05
+      }
+    ],
+    "moments": [
+      {
+        "year": -1000,
+        "label": "Ceibal builds the first Maya ceremonial plaza",
+        "source": "inomata-2013"
+      },
+      {
+        "year": -300,
+        "label": "El Mirador's causeways and great pyramids",
+        "source": "sharer"
+      },
+      {
+        "year": 378,
+        "label": "Teotihuacan's envoys arrive at Tikal",
+        "source": "stuart-entrada"
+      },
+      {
+        "year": 426,
+        "label": "K'inich Yax K'uk' Mo' founds the dynasty of Copán",
+        "source": "martin-grube"
+      },
+      {
+        "year": 695,
+        "label": "Tikal defeats its great rival Calakmul",
+        "source": "martin-grube"
+      },
+      {
+        "year": 900,
+        "label": "The cities of the southern lowlands are abandoned",
+        "source": "sharer"
+      },
+      {
+        "year": 1000,
+        "label": "Gold and turquoise from far away reach Chichén Itzá",
+        "source": "sharer"
+      },
+      {
+        "year": 1502,
+        "label": "Columbus meets a Maya trading canoe off Honduras",
+        "source": "colon-hernando"
+      },
+      {
+        "year": 1511,
+        "label": "Shipwrecked Spaniards wash ashore in Yucatán",
+        "source": "bernal-diaz"
+      },
+      {
+        "year": 1524,
+        "label": "Alvarado conquers the K'iche' highlands",
+        "source": "kaqchikel-annals"
+      },
+      {
+        "year": 1562,
+        "label": "Landa burns the Maya books at Maní",
+        "source": "landa"
+      },
+      {
+        "year": 1697,
+        "label": "Nojpetén, the last Maya kingdom, falls",
+        "source": "jones-itza"
+      },
+      {
+        "year": 1847,
+        "label": "The Caste War begins in Yucatán",
+        "source": "reed-caste-war"
       }
     ]
   },

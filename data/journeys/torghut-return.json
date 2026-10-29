@@ -1,0 +1,23 @@
+{
+  "id": "torghut-return",
+  "name": "The Torghuts' return from the Volga",
+  "traveler": "Ubashi Khan and the Torghut Kalmyks",
+  "years": "1771",
+  "kind": "group voyage",
+  "viewpoint": "steppe",
+  "summary": "Squeezed by Russian rule on the Volga, where their Oirat ancestors had settled in the 1630s, some 170,000 Torghuts set out in midwinter for Dzungaria, their old homeland, now under the Qing. Harried by Russian troops and Kazakh raiders across thousands of kilometres of steppe, barely half reach the Ili in July.",
+  "source": "atwood",
+  "lifts": false,
+  "confidence": "medium",
+  "stops": [
+    {"year": 1771, "place": "The Volga steppe", "lat": 47.3, "lon": 46.5, "note": "They leave their pastures east of the Volga.", "date": "January 1771"},
+    {"year": 1771, "place": "Yaik River", "lat": 47.1, "lon": 51.9, "note": "Across the Yaik (Ural) on the ice."},
+    {"year": 1771, "place": "Emba River", "lat": 47.6, "lon": 56.5, "note": "Across the Emba."},
+    {"year": 1771, "place": "Turgai", "lat": 49.6, "lon": 63.5, "note": "Through the Kazakh steppe, under attack."},
+    {"year": 1771, "place": "Lake Balkhash", "lat": 46.6, "lon": 74.9, "note": "Starving, they follow the lake's shore."},
+    {"year": 1771, "place": "Ili valley", "lat": 43.9, "lon": 81.3, "note": "Barely half arrive, and the Qing settle them in Dzungaria.", "city": "ghulja", "date": "July 1771"}
+  ],
+  "informs": [
+    {"region": "kazakh-steppe", "level": 4, "homeKnows": 1771, "confidence": "high", "note": "The Torghuts' flight back from the Volga"}
+  ]
+}

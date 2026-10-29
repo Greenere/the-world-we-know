@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Behaim's globe",
+      "caption": "Martin Behaim and the painter Georg Glockendon make a globe for the city council of Nuremberg, drawn from Ptolemy, Marco Polo and Portuguese charts. It is the oldest globe that survives.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Single-object study of a roughly half-metre painted late-fifteenth-century terrestrial globe in a restrained dark support ring on a Nuremberg workbench around1492. Sphere physically round with consistent perspective, pale ochre land and muted blue sea, broad Eurasian and African shapes and expanded ocean, NO Americas and no modern accurate globe. Fine historical map texture remains small unreadable strokes; simple workshop tools at edge. No plastic sphere, modern country borders, shiny brass fantasy armillary or numbered labels."
+    }
+  ]
+}

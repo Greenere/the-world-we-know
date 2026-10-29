@@ -1,0 +1,18 @@
+{
+  "subject": "invention/ricci-map",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Interior Beijing study around1602: a large oval world map on SIX adjacent vertical paper panels, mounted on a plain wall, with the Pacific near centre and Asia toward centre-left and the Americas toward centre-right. A Chinese scholar in Ming clothing and a bearded European scholar in Chinese-style robe study it from side in three-quarter rear view. Map and exchange of knowledge dominate, little text-like ink marks not readable Chinese. No Qing queue, no modern map colours, no modern borders or modern furniture.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "edits": [
+    {
+      "method": "built-in imagegen",
+      "prompt": "Edit this historical sketch, preserving the room, scholars, six vertical panels, paper texture and watercolor style. Correct the map's anachronistic geography for Matteo Ricci's 1602 world map: REMOVE the recognizably modern outline of Australia and New Zealand below Southeast Asia. Replace that area with open pale blue ocean above a large hypothetical Terra Australis southern landmass along the bottom edge. Keep a Pacific-centered oval early seventeenth-century map, with imprecise period coastlines, no modern borders, no readable text."
+    },
+    {
+      "method": "built-in imagegen",
+      "prompt": "Correct the anatomy of the scholar on the RIGHT in this watercolor sketch. Preserve the entire map, room, left scholar, composition, clothing style, colors and paper texture. Redraw ONLY the right scholar's pointing arm and adjacent sleeve: it must be his LEFT arm, clearly emerging naturally from his left shoulder on the left side of his torso as seen from behind, with one shoulder, one elbow, a naturally bent forearm and one anatomically correct left hand pointing at the map. Show a coherent continuous sleeve from shoulder to elbow to wrist, with plausible draping and foreshortening. Keep the elbow comfortably in front of his body, the forearm directed diagonally upward-left, wrist straight, index finger extended toward the map and other fingers gently curled. No extra arms, fused limbs, reversed elbows, floating hand, or disconnected sleeve. His other arm remains relaxed down by his side and mostly hidden. Maintain loose graphite, sepia ink and watercolor sketch style. Do not change geography or panel divisions or add writing."
+    }
+  ]
+}

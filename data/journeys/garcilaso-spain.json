@@ -1,0 +1,26 @@
+{
+  "id": "garcilaso-spain",
+  "name": "Garcilaso goes to Spain",
+  "traveler": "Garcilaso de la Vega, 'El Inca'",
+  "years": "1560–1561",
+  "kind": "traveler",
+  "viewpoint": "inca",
+  "summary": "The son of a Spanish captain and an Inca princess leaves Cusco at twenty and never returns. In Montilla, decades later, he writes the Royal Commentaries of the Incas (Lisbon, 1609), which carried the Andean past to Europe and the world of Europe back to Peru.",
+  "source": "garcilaso",
+  "confidence": "high",
+  "stops": [
+    {"year": 1560, "place": "Cusco", "lat": -13.52, "lon": -71.97, "note": "He leaves on 20 January 1560.", "city": "cuzco", "date": "January 1560"},
+    {"year": 1560, "place": "Lima", "lat": -12.05, "lon": -77.04, "note": "Down to the coast.", "city": "lima"},
+    {"year": 1560, "place": "Panama", "lat": 8.95, "lon": -79.53, "note": "By sea up the Pacific coast.", "by": "sea"},
+    {"year": 1560, "place": "Nombre de Dios", "lat": 9.58, "lon": -79.47, "note": "Across the isthmus.", "city": "nombre-de-dios"},
+    {"year": 1560, "place": "Cartagena", "lat": 10.42, "lon": -75.55, "note": "The fleet gathers for Spain.", "city": "cartagena", "by": "sea"},
+    {"year": 1560, "place": "Azores", "lat": 38.65, "lon": -27.22, "note": "Across the Atlantic.", "by": "sea"},
+    {"year": 1560, "place": "Lisbon", "lat": 38.71, "lon": -9.14, "note": "First sight of Europe.", "city": "lisbon", "by": "sea"},
+    {"year": 1561, "place": "Seville", "lat": 37.39, "lon": -5.98, "note": "Through Andalusia.", "city": "seville"},
+    {"year": 1561, "place": "Montilla", "lat": 37.59, "lon": -4.64, "note": "He settles with his father's family and writes there and in Córdoba for the rest of his life."}
+  ],
+  "informs": [
+    {"region": "iberia", "level": 3, "homeKnows": 1609, "confidence": "high", "note": "Garcilaso writes in Spain"},
+    {"region": "europe", "level": 3, "homeKnows": 1609, "confidence": "high", "note": "The Royal Commentaries, printed in Lisbon"}
+  ]
+}

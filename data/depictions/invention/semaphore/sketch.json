@@ -1,0 +1,11 @@
+{
+  "subject": "invention/semaphore",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Low-angle outdoor view of a Chappe optical telegraph station on a modest masonry tower near Paris in1794. On ONE upright mast is ONE long central pivoting regulator beam, with ONE shorter hinged indicator arm at EACH of its two ends, three rigid bars total, silhouetted clearly at different angles. Operator small in tower opening, next station faint on distant ridge. No electric wire, traffic signal, windmill, flag signalling or four-armed cross.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://www.arts-et-metiers.net/musee/modele-telegraphe-optique-systeme-chappe"
+  ]
+}

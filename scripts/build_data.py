@@ -41,7 +41,7 @@ NE_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/
 NE_FILES = ["ne_50m_land", "ne_50m_lakes", "ne_50m_rivers_lake_centerlines", "ne_50m_antarctic_ice_shelves_polys"]
 
 RES = 3
-MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "inuit", "zimbabwe", "ethiopia", "swahili", "nusantara"]
+MAIN_VPS = ["europe", "china", "islam", "polynesia", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "inuit", "zimbabwe", "ethiopia", "swahili", "nusantara", "korea", "steppe", "maya"]
 ALL_VPS = MAIN_VPS + ["humanity"]
 CONFIDENCE = {"high": 0, "medium": 1, "low": 2}
 BODIES = {"orbit", "moon"}

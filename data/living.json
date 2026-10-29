@@ -2,7 +2,7 @@
   {
     "id": "maize", "kind": "plant", "name": "Maize", "native": "tlaolli",
     "origin": {"year": "-7000..-6000", "place": "The Balsas valley, Mexico", "lat": 18.4, "lon": -100.2, "culture": "Farmers of southern Mexico"},
-    "home": ["mexica"],
+    "home": ["mexica", "maya"],
     "summary": "Farmers of southern Mexico breed a wild grass, teosinte, into maize, a plant that can no longer seed itself without people. It becomes the staple of the Americas from the St Lawrence to the Andes, and after 1492 one of the staples of the world.",
     "source": "piperno-2009", "confidence": "high",
     "spread": [
@@ -12,7 +12,8 @@
       {"year": 1539, "place": "Hornbach", "lat": 49.19, "lon": 7.37, "vp": "germany", "from": "Seville", "note": "Hieronymus Bock describes 'foreign corn' in his herbal; many in Europe think it came from Turkey.", "source": "crosby", "confidence": "medium"},
       {"year": "1540..1600", "place": "The Gold Coast", "lat": 5.5, "lon": -1.0, "from": "Lisbon", "note": "Portuguese traders bring maize to the Gulf of Guinea, where it becomes a staple of the forest kingdoms.", "source": "crosby", "confidence": "medium"},
       {"year": 1555, "place": "Gong County, Henan", "lat": 34.77, "lon": 112.97, "vp": "china", "from": "Lisbon", "note": "First written down in China in a county gazetteer, as 'imperial wheat'. Within two centuries it feeds settlers in the hills of the interior.", "source": "ho-pingti", "confidence": "medium"},
-      {"year": 1579, "place": "Nagasaki", "lat": 32.75, "lon": 129.88, "vp": "japan", "from": "Lisbon", "note": "Portuguese traders bring it to Kyushu.", "confidence": "low"}
+      {"year": 1579, "place": "Nagasaki", "lat": 32.75, "lon": 129.88, "vp": "japan", "from": "Lisbon", "note": "Portuguese traders bring it to Kyushu.", "confidence": "low"},
+      {"year": "1700..1750", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "from": "Gong County, Henan", "note": "Maize spreads from China into the northern hills.", "source": "seth-korea", "confidence": "low"}
     ]
   },
   {
@@ -25,13 +26,14 @@
       {"year": 1570, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "note": "Potatoes reach Spain from Peru; Seville's Hospital de la Sangre is buying them in 1573."},
       {"year": 1597, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "John Gerard pictures the potato in his Herball, calling it, wrongly, the potato of Virginia."},
       {"year": 1600, "place": "Villeneuve-de-Berg", "lat": 44.55, "lon": 4.5, "vp": "france", "from": "Seville", "note": "Olivier de Serres describes the 'cartoufle' in his treatise on farming; France is slow to eat it until Parmentier's campaign of the 1770s.", "confidence": "medium"},
-      {"year": 1765, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "vp": "russia", "from": "London", "note": "Catherine the Great's Senate orders instructions on growing potatoes sent across the empire.", "confidence": "medium"}
+      {"year": 1765, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "vp": "russia", "from": "London", "note": "Catherine the Great's Senate orders instructions on growing potatoes sent across the empire.", "confidence": "medium"},
+      {"year": "1824..1825", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "note": "Potatoes come across the Tumen from Manchuria.", "source": "seth-korea", "confidence": "medium"}
     ]
   },
   {
     "id": "sweet-potato", "kind": "plant", "name": "The sweet potato", "native": "kumara",
     "origin": {"year": "-6000..-4000", "place": "Northwest South America", "lat": 2.0, "lon": -77.0, "culture": "Farmers of tropical America"},
-    "home": ["inca", "mexica"],
+    "home": ["inca", "mexica", "maya"],
     "summary": "A tropical American root that crossed the Pacific twice: once in Polynesian canoes centuries before Columbus, and again in the Manila galleons, to become the food that kept south China alive through famine.",
     "source": "roullier-2013", "confidence": "high",
     "spread": [
@@ -41,13 +43,14 @@
       {"year": "1570..1590", "place": "Manila", "lat": 14.6, "lon": 120.98, "note": "The Manila galleons bring it across the Pacific from Mexico to the Spanish Philippines.", "source": "ho-pingti", "confidence": "medium"},
       {"year": 1593, "place": "Fuzhou", "lat": 26.07, "lon": 119.3, "vp": "china", "from": "Manila", "note": "Chen Zhenlong smuggles vines from Luzon wound into a ship's rope. When famine strikes Fujian the next year, the governor has them planted.", "source": "ho-pingti"},
       {"year": 1605, "place": "Ryukyu", "lat": 26.21, "lon": 127.68, "from": "Fuzhou", "note": "Noguni Sōkan brings it home to Okinawa from Fujian.", "confidence": "medium"},
-      {"year": 1705, "place": "Kagoshima", "lat": 31.6, "lon": 130.56, "vp": "japan", "from": "Ryukyu", "note": "Maeda Riemon brings it from Ryukyu to Satsuma; in Japan it is still called satsuma-imo.", "confidence": "medium"}
+      {"year": 1705, "place": "Kagoshima", "lat": 31.6, "lon": 130.56, "vp": "japan", "from": "Ryukyu", "note": "Maeda Riemon brings it from Ryukyu to Satsuma; in Japan it is still called satsuma-imo.", "confidence": "medium"},
+      {"year": 1763, "place": "Busan", "lat": 35.1, "lon": 129.04, "vp": "korea", "from": "Kagoshima", "note": "The envoy Jo Eom brings sweet potatoes back from Tsushima as a famine crop.", "source": "seth-korea", "confidence": "high"}
     ]
   },
   {
     "id": "chili", "kind": "plant", "name": "The chili pepper", "native": "chīlli",
     "origin": {"year": "-6000..-4000", "place": "East-central Mexico", "lat": 19.5, "lon": -97.5, "culture": "Farmers of Mexico"},
-    "home": ["mexica", "inca"],
+    "home": ["mexica", "inca", "maya"],
     "summary": "Domesticated in Mexico and eaten across the Americas, the chili took less than a century after 1492 to become part of the cooking of India, Southeast Asia and much of Africa, and later of Sichuan and Hunan.",
     "source": "andrews-peppers", "confidence": "high",
     "spread": [
@@ -55,13 +58,14 @@
       {"year": 1500, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "from": "Seville", "note": "Portuguese ships take it on to Africa and Asia.", "confidence": "medium"},
       {"year": "1540..1560", "place": "Goa", "lat": 15.5, "lon": 73.83, "vp": "india", "from": "Lisbon", "note": "Chilies reach the Portuguese at Goa. Within a century they are grown across India and are a staple of its cooking.", "confidence": "medium"},
       {"year": "1542..1552", "place": "Bungo, Kyushu", "lat": 33.24, "lon": 131.6, "vp": "japan", "from": "Lisbon", "note": "The Portuguese bring it to Kyushu, where it is called tōgarashi, 'Chinese mustard'.", "confidence": "low"},
-      {"year": 1591, "place": "Hangzhou", "lat": 30.25, "lon": 120.17, "vp": "china", "from": "Lisbon", "note": "Gao Lian's Eight Discourses mentions 'barbarian pepper', grown for its red fruit. Only in the eighteenth century does China cook with it, above all in Hunan and Sichuan.", "confidence": "medium"}
+      {"year": 1591, "place": "Hangzhou", "lat": 30.25, "lon": 120.17, "vp": "china", "from": "Lisbon", "note": "Gao Lian's Eight Discourses mentions 'barbarian pepper', grown for its red fruit. Only in the eighteenth century does China cook with it, above all in Hunan and Sichuan.", "confidence": "medium"},
+      {"year": 1614, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "vp": "korea", "from": "Bungo, Kyushu", "note": "Yi Su-gwang's encyclopedia calls it 'Japanese mustard', a poison brought from Japan. A century later it is in kimchi.", "source": "seth-korea", "confidence": "medium"}
     ]
   },
   {
     "id": "tobacco", "kind": "plant", "name": "Tobacco",
     "origin": {"year": "-1000..1", "place": "South America", "lat": -15.0, "lon": -63.0, "culture": "Peoples of the Americas"},
-    "home": ["mexica", "inca"],
+    "home": ["mexica", "inca", "maya"],
     "summary": "Across the Americas tobacco is smoked, chewed and snuffed: in prayer, in healing and to seal agreements. Within a century of Columbus it is smoked from London to Beijing, and rulers from the Ottoman sultan to the Chinese emperor try and fail to ban it.",
     "source": "goodman-tobacco", "confidence": "high",
     "spread": [
@@ -72,7 +76,9 @@
       {"year": "1590..1605", "place": "Nagasaki", "lat": 32.75, "lon": 129.88, "vp": "japan", "from": "Lisbon", "note": "Portuguese sailors bring tobacco; within a few years the shogunate tries, and fails, to ban it.", "confidence": "medium"},
       {"year": "1600..1610", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "from": "Lisbon", "note": "Tobacco reaches the Ottoman capital. In 1633 Murad IV bans smoking on pain of death.", "confidence": "medium"},
       {"year": "1600..1620", "place": "Moscow", "lat": 55.75, "lon": 37.62, "vp": "russia", "from": "Roanoke", "note": "English merchants bring it to Muscovy. Tsar Mikhail bans it in 1634; Peter the Great later sells the monopoly to an English lord.", "confidence": "medium"},
-      {"year": "1600..1620", "place": "Zhangzhou", "lat": 24.51, "lon": 117.65, "vp": "china", "from": "Lisbon", "note": "Tobacco reaches Fujian from Spanish Manila. The Chongzhen emperor bans it in 1639; his soldiers in the north smoke it against the cold.", "confidence": "medium"}
+      {"year": "1600..1620", "place": "Zhangzhou", "lat": 24.51, "lon": 117.65, "vp": "china", "from": "Lisbon", "note": "Tobacco reaches Fujian from Spanish Manila. The Chongzhen emperor bans it in 1639; his soldiers in the north smoke it against the cold.", "confidence": "medium"},
+      {"year": "1616..1618", "place": "Dongnae", "lat": 35.2, "lon": 129.08, "vp": "korea", "from": "Nagasaki", "note": "Tobacco comes from Japan through the trading post at Busan, and within years everyone smokes.", "source": "seth-korea", "confidence": "medium"},
+      {"year": "1640..1660", "place": "Khalkha", "lat": 47.9, "lon": 106.9, "vp": "steppe", "note": "Tobacco reaches the Mongols through Chinese and Russian traders.", "source": "atwood", "confidence": "low"}
     ]
   },
   {
@@ -83,6 +89,7 @@
     "source": "coe-chocolate", "confidence": "high",
     "spread": [
       {"year": "-1900", "place": "Paso de la Amada", "lat": 15.0, "lon": -92.5, "note": "Potters on the Pacific coast of Mesoamerica leave cacao residue in their drinking vessels.", "confidence": "medium"},
+      {"year": "-600", "place": "Colha", "lat": 18.0, "lon": -88.4, "vp": "maya", "note": "Cacao residue in spouted jars at Colha in Belize, the oldest in the Maya world. The Maya name, kakaw, passes into Nahuatl and then into every European language.", "source": "coe-chocolate", "confidence": "high"},
       {"year": 1519, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "vp": "iberia", "from": "Paso de la Amada", "via": "cortes", "note": "Cortés's men see Moctezuma served chocolate in golden cups."},
       {"year": 1544, "place": "Valladolid", "lat": 41.65, "lon": -4.72, "from": "Tenochtitlan", "note": "A delegation of Maya nobles brings chocolate to the Spanish court; within a century it is the fashion there.", "confidence": "medium"},
       {"year": 1615, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Valladolid", "note": "By tradition Anne of Austria brings the Spanish taste for chocolate to Paris when she marries Louis XIII.", "confidence": "low"},
@@ -97,6 +104,7 @@
     "summary": "Domesticated in Mexico for its meat and feathers. In Europe and Asia nobody knew where it came from: the English named it after Turkey, the French called it the bird of the Indies, and the Turks the bird of India.",
     "source": "schorger", "confidence": "medium",
     "spread": [
+      {"year": "-300..100", "place": "El Mirador", "lat": 17.75, "lon": -89.92, "vp": "maya", "note": "Turkey bones from central Mexico at El Mirador. The Maya already hunted their own wild ocellated turkey.", "source": "sharer", "confidence": "medium"},
       {"year": 1511, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "note": "King Ferdinand orders every ship from the Indies to bring ten turkeys."},
       {"year": "1524..1541", "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "Turkeys reach England, named for the Turkish merchants who were thought to have brought them."},
       {"year": "1534..1549", "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Seville", "note": "The French call it the dinde, the bird d'Inde, of the Indies.", "confidence": "low"},
@@ -110,7 +118,9 @@
     "summary": "Tea leaves found in the tomb of the Han emperor Jing, who died in 141 BCE, are the oldest known. By the Tang it is China's national drink. It reached the rest of the world by three roads: to Japan with monks, across the steppe by caravan, and to Europe by sea.",
     "source": "mair-hoh", "confidence": "high",
     "spread": [
+      {"year": "780..800", "place": "Ordu-Baliq", "lat": 47.43, "lon": 102.66, "vp": "steppe", "note": "Uyghur envoys trade horses for tea at the Tang court and carry it home.", "source": "mair-hoh", "confidence": "medium"},
       {"year": 805, "place": "Mount Hiei", "lat": 35.07, "lon": 135.84, "vp": "japan", "note": "The monk Saichō brings tea seeds home from Tang China."},
+      {"year": 828, "place": "Jirisan", "lat": 35.33, "lon": 127.73, "vp": "korea", "note": "The envoy Kim Daeryeom brings tea seeds back from the Tang, and the king has them planted on Mount Jiri.", "source": "samguk-sagi", "confidence": "high"},
       {"year": 851, "place": "Siraf", "lat": 27.67, "lon": 52.34, "vp": "islam", "note": "A Gulf merchant's account of China describes a herb the Chinese drink in hot water, called sakh.", "source": "akhbar-sin"},
       {"year": 1191, "place": "Kyoto", "lat": 35.01, "lon": 135.77, "from": "Mount Hiei", "note": "The monk Eisai brings home Song-style powdered tea, the root of the tea ceremony.", "confidence": "medium"},
       {"year": 1559, "place": "Venice", "lat": 45.44, "lon": 12.33, "vp": "europe", "from": "Siraf", "note": "Giovanni Battista Ramusio prints a Persian merchant's account of chai catai, the tea of Cathay."},
@@ -135,7 +145,8 @@
       {"year": 1669, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Istanbul", "note": "Süleyman Ağa, the sultan's envoy, serves coffee to Paris society."},
       {"year": 1670, "place": "Chikmagalur", "lat": 13.32, "lon": 75.77, "vp": "india", "from": "Mocha", "note": "By legend the Sufi Baba Budan smuggles seven beans from Mocha and plants them in the hills of Karnataka.", "confidence": "low"},
       {"year": "1696..1699", "place": "Batavia", "lat": -6.13, "lon": 106.8, "vp": "nusantara", "from": "Chikmagalur", "note": "The Dutch plant coffee on Java, and 'java' becomes a word for coffee.", "confidence": "medium"},
-      {"year": 1727, "place": "Belém", "lat": -1.45, "lon": -48.5, "from": "Batavia", "note": "Francisco de Melo Palheta brings seedlings from French Guiana. Brazil becomes the world's largest grower.", "confidence": "medium"}
+      {"year": 1727, "place": "Belém", "lat": -1.45, "lon": -48.5, "from": "Batavia", "note": "Francisco de Melo Palheta brings seedlings from French Guiana. Brazil becomes the world's largest grower.", "confidence": "medium"},
+      {"year": 1896, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "vp": "korea", "note": "King Gojong drinks coffee while sheltering in the Russian legation.", "source": "seth-korea", "confidence": "medium"}
     ]
   },
   {
@@ -163,6 +174,7 @@
     "summary": "Chinese farmers domesticate the silk moth, which can no longer fly, and learn to unwind its cocoon as a single thread. For centuries Rome bought silk without knowing what made it; Virgil thought it was combed from leaves.",
     "source": "needham", "confidence": "medium",
     "spread": [
+      {"year": "1..300", "place": "Mahan", "lat": 36.0, "lon": 127.0, "vp": "korea", "note": "The Mahan raise silkworms and weave silk, say the Chinese histories.", "source": "houhanshu", "confidence": "medium"},
       {"year": "200..300", "place": "Kyushu", "lat": 33.5, "lon": 130.5, "vp": "japan", "note": "The Wei chronicle records that the people of Wa raise silkworms.", "confidence": "medium"},
       {"year": "400..450", "place": "Khotan", "lat": 37.11, "lon": 79.93, "note": "By legend a Chinese princess, married to the king of Khotan, smuggles silkworm eggs out in her headdress.", "source": "xuanzang", "confidence": "low"},
       {"year": 552, "place": "Constantinople", "lat": 41.01, "lon": 28.98, "vp": "rome", "from": "Khotan", "note": "Two monks smuggle silkworm eggs to Justinian in hollow canes, ending Persia's hold on the silk trade.", "source": "procopius"},
@@ -181,10 +193,13 @@
       {"year": "-1600", "place": "Mycenae", "lat": 37.73, "lon": 22.75, "note": "Chariots appear on the gravestones of Mycenae.", "source": "anthony", "confidence": "medium"},
       {"year": "-1500..-1200", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "india", "note": "The Rigveda praises horses and chariots.", "source": "rigveda", "confidence": "medium"},
       {"year": "-1250..-1200", "place": "Anyang", "lat": 36.1, "lon": 114.35, "vp": "china", "note": "Horses and chariots are buried in Shang royal tombs.", "source": "keightley"},
+      {"year": "-1300..-1100", "place": "Khövsgöl", "lat": 49.6, "lon": 100.2, "vp": "steppe", "note": "Horse skulls ring the deer stones and stone mounds of the Mongolian steppe: its herders now ride.", "source": "honeychurch", "confidence": "medium"},
+      {"year": "-300..-100", "place": "Gojoseon", "lat": 39.02, "lon": 125.75, "vp": "korea", "note": "Horse fittings appear in the graves of the north.", "source": "seth-korea", "confidence": "low"},
       {"year": "350..450", "place": "Yamato", "lat": 34.6, "lon": 135.8, "vp": "japan", "from": "Anyang", "note": "Horses come to Japan from Korea; the great tombs of the Kofun age are ringed with clay horses.", "source": "anthony", "confidence": "medium"},
       {"year": "780..830", "place": "Borobudur", "lat": -7.61, "lon": 110.2, "vp": "nusantara", "from": "The Punjab", "note": "Horses and riders are carved on the reliefs of Borobudur.", "confidence": "low"},
       {"year": 1493, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "Avaris", "via": "columbus-2", "note": "Columbus's second voyage brings the first horses back to the Americas.", "source": "crosby"},
       {"year": 1519, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "vp": "mexica", "from": "Hispaniola", "via": "cortes", "note": "The Mexica see horses for the first time; Cortés's sixteen horses count for more in battle than their numbers.", "source": "bernal-diaz"},
+      {"year": 1525, "place": "Nojpetén", "lat": 16.93, "lon": -89.89, "vp": "maya", "from": "Tenochtitlan", "note": "Cortés leaves a lame horse with the Itza king. It dies, and the Itza make a stone statue of it, which friars find and smash in 1618.", "source": "jones-itza", "confidence": "high"},
       {"year": 1532, "place": "Cajamarca", "lat": -7.16, "lon": -78.51, "vp": "inca", "from": "Hispaniola", "via": "pizarro", "note": "Pizarro's riders charge at Cajamarca, and the Inca meet the horse.", "source": "xerez"},
       {"year": "1680..1750", "place": "The Great Plains", "lat": 40.0, "lon": -100.0, "from": "Tenochtitlan", "note": "Horses spread north from New Mexico after the Pueblo Revolt; the Comanche, Lakota and Cheyenne become horse peoples.", "source": "crosby", "confidence": "medium"}
     ]
@@ -285,6 +300,7 @@
     "summary": "Farmers of the lower Yangtze tame a wild marsh grass into rice, grown in flooded fields. It came to feed more people than any other crop.",
     "source": "fuller-2009", "confidence": "high",
     "spread": [
+      {"year": "-1500..-1000", "place": "Songguk-ri", "lat": 36.27, "lon": 126.88, "vp": "korea", "note": "Mumun farmers grow rice in paddy fields in the southwest of the peninsula.", "source": "seth-korea", "confidence": "medium"},
       {"year": "-1000..-800", "place": "Northern Kyushu", "lat": 33.6, "lon": 130.4, "vp": "japan", "note": "Wet-field rice comes to Kyushu from Korea, and with it the Yayoi age.", "confidence": "medium"},
       {"year": "-326", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "greece", "via": "alexander", "note": "Alexander's officer Aristobulus describes rice growing in water in India.", "source": "strabo"},
       {"year": "900..1000", "place": "Valencia", "lat": 39.47, "lon": -0.38, "vp": "iberia", "note": "Rice is grown in the irrigated huertas of al-Andalus; Spanish arroz comes from the Arabic al-ruzz.", "confidence": "medium"},
@@ -299,6 +315,7 @@
     "source": "zohary-hopf", "confidence": "high",
     "spread": [
       {"year": "-2600..-2300", "place": "The Hexi corridor", "lat": 38.9, "lon": 100.6, "vp": "china", "note": "Wheat reaches the Hexi corridor from the west; in time it becomes the grain of north China's noodles and steamed buns.", "confidence": "medium"},
+      {"year": "-1500..-1000", "place": "The Korean peninsula", "lat": 36.5, "lon": 127.5, "vp": "korea", "note": "Wheat and barley grow alongside millet and rice in Mumun villages.", "source": "seth-korea", "confidence": "low"},
       {"year": "1..300", "place": "Northern Kyushu", "lat": 33.6, "lon": 130.4, "vp": "japan", "from": "The Hexi corridor", "note": "Wheat and barley reach Japan by way of Korea.", "confidence": "low"},
       {"year": 1525, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "vp": "mexica", "note": "Juan Garrido, an African conquistador, is said to have sown the first wheat in Mexico, from a few grains found in a sack of rice.", "confidence": "medium"},
       {"year": "1535..1540", "place": "Lima", "lat": -12.05, "lon": -77.04, "vp": "inca", "from": "Mexico City", "note": "Inés Muñoz sows the first wheat in Peru.", "confidence": "medium"}
@@ -366,6 +383,7 @@
       {"year": "-1213", "place": "Thebes", "lat": 25.72, "lon": 32.6, "vp": "egypt", "note": "Peppercorns are placed in the nostrils of the mummy of Ramesses II.", "confidence": "medium"},
       {"year": "1..100", "place": "Muziris", "lat": 10.15, "lon": 76.21, "vp": "rome", "via": "periplus", "note": "Roman ships load pepper at Muziris; Pliny complains that India drains the empire of fifty million sesterces a year.", "source": "periplus"},
       {"year": "600..700", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Tang cooks use hujiao, the 'barbarian pepper', brought by sea from India.", "confidence": "medium"},
+      {"year": 1389, "place": "Kaesong", "lat": 37.97, "lon": 126.55, "vp": "korea", "note": "Envoys from Chūzan bring pepper and sappanwood to the Goryeo court.", "source": "goryeosa", "confidence": "medium"},
       {"year": "1400..1500", "place": "Banten", "lat": -6.05, "lon": 106.15, "vp": "nusantara", "note": "Pepper is planted in Sumatra and western Java, and Banten becomes a great pepper port.", "confidence": "medium"},
       {"year": 1498, "place": "Calicut", "lat": 11.25, "lon": 75.78, "vp": "iberia", "via": "dagama", "note": "Vasco da Gama reaches the pepper coast by sea, and Lisbon breaks Venice's hold on the trade."}
     ]
@@ -390,7 +408,7 @@
   {
     "id": "rubber", "kind": "plant", "name": "Rubber", "native": "cahuchu",
     "origin": {"year": "-1600", "place": "El Manatí, Veracruz", "lat": 17.95, "lon": -94.75, "culture": "The Olmec"},
-    "home": ["mexica"],
+    "home": ["mexica", "maya"],
     "summary": "Mesoamericans made balls of rubber three and a half thousand years ago. The Amazon's rubber tree made fortunes after 1850, until seeds taken to Asia ended Brazil's hold on the trade.",
     "source": "dean-rubber", "confidence": "high",
     "spread": [
@@ -440,8 +458,10 @@
       {"year": "-1450", "place": "Thebes", "lat": 25.72, "lon": 32.6, "vp": "egypt", "from": "The Ganges plain", "note": "The annals of Thutmose III record a bird 'that gives birth every day' sent as tribute.", "confidence": "medium"},
       {"year": "-700..-600", "place": "Corinth", "lat": 37.91, "lon": 22.88, "vp": "greece", "from": "The Ganges plain", "note": "The Greeks call it the Persian bird.", "confidence": "medium"},
       {"year": "-300..1", "place": "Northern Kyushu", "lat": 33.6, "lon": 130.4, "vp": "japan", "from": "The Yellow River valley", "note": "Chickens reach Japan, kept for their crowing at dawn as much as for food.", "confidence": "low"},
+      {"year": "1..300", "place": "Mahan", "lat": 36.0, "lon": 127.0, "vp": "korea", "from": "The Yellow River valley", "note": "The Chinese histories describe the long-tailed chickens of the Mahan in the southwest.", "source": "houhanshu", "confidence": "medium"},
       {"year": "900..1100", "place": "Samoa", "lat": -13.8, "lon": -172.1, "vp": "polynesia", "note": "Chickens travel across the Pacific in the voyaging canoes.", "confidence": "medium"},
-      {"year": "1300..1420", "place": "El Arenal, Chile", "lat": -37.2, "lon": -73.6, "from": "Samoa", "note": "Chicken bones on the coast of Chile may predate Columbus, brought by Polynesian voyagers; the dating is disputed.", "confidence": "low"}
+      {"year": "1300..1420", "place": "El Arenal, Chile", "lat": -37.2, "lon": -73.6, "from": "Samoa", "note": "Chicken bones on the coast of Chile may predate Columbus, brought by Polynesian voyagers; the dating is disputed.", "confidence": "low"},
+      {"year": "1520..1550", "place": "Yucatán", "lat": 20.6, "lon": -89.0, "vp": "maya", "note": "Spanish chickens join the Maya's own turkeys in village yards.", "source": "restall-maya", "confidence": "low"}
     ]
   },
   {
@@ -455,7 +475,9 @@
       {"year": "-280", "place": "Heraclea", "lat": 40.2, "lon": 16.6, "vp": "rome", "from": "Gaugamela", "note": "Pyrrhus's elephants rout the Roman cavalry; the Romans call them 'Lucanian oxen'.", "source": "pliny"},
       {"year": 802, "place": "Aachen", "lat": 50.78, "lon": 6.08, "vp": "germany", "note": "Abul-Abbas, an elephant sent by the caliph Harun al-Rashid, reaches Charlemagne.", "source": "royal-frankish-annals"},
       {"year": 1255, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "note": "Louis IX gives Henry III an elephant, kept at the Tower; Matthew Paris draws it from life.", "source": "hahn-tower"},
+      {"year": 1287, "place": "The Liao River", "lat": 43.0, "lon": 122.5, "vp": "steppe", "note": "Kublai Khan rides into battle against the rebel Nayan in a tower carried by four elephants.", "source": "polo", "confidence": "medium"},
       {"year": 1408, "place": "Obama, Wakasa", "lat": 35.5, "lon": 135.75, "vp": "japan", "note": "A ship from Palembang brings an elephant to Japan as a gift for the shogun.", "confidence": "low"},
+      {"year": 1411, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "vp": "korea", "from": "Obama, Wakasa", "note": "The shogun sends King Taejong an elephant. After it tramples a man to death it is banished to an island.", "source": "joseon-sillok", "confidence": "high"},
       {"year": 1514, "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "iberia", "note": "Hanno, an Indian elephant from King Manuel of Portugal, is presented to Pope Leo X."}
     ]
   },

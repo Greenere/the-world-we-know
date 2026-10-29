@@ -1,0 +1,25 @@
+{
+  "id": "choe-bu",
+  "name": "Choe Bu's drift to China",
+  "traveler": "Choe Bu",
+  "years": "1488",
+  "kind": "castaway",
+  "viewpoint": "korea",
+  "summary": "A Joseon official on Jeju sets sail for home on news of his father's death. A storm drives his boat across the sea for two weeks to the coast of Zhejiang, where he is taken for a Japanese pirate. Sent north up the Grand Canal to Beijing and home by land, he writes, at the king's order, the Pyohaerok: the fullest account of Ming China's south by any foreigner.",
+  "source": "choe-bu",
+  "confidence": "high",
+  "stops": [
+    {"year": 1488, "place": "Jeju", "lat": 33.51, "lon": 126.53, "note": "He sails for the mainland with 42 men.", "date": "February 1488"},
+    {"year": 1488, "place": "Taizhou coast", "lat": 29.0, "lon": 121.7, "note": "After fourteen days adrift they land and are taken for Japanese pirates.", "by": "sea"},
+    {"year": 1488, "place": "Hangzhou", "lat": 30.27, "lon": 120.15, "note": "Questioned, and believed.", "city": "hangzhou"},
+    {"year": 1488, "place": "Suzhou", "lat": 31.3, "lon": 120.62, "note": "He marvels at its wealth.", "city": "suzhou"},
+    {"year": 1488, "place": "Yangzhou", "lat": 32.39, "lon": 119.42, "note": "North along the Grand Canal.", "city": "yangzhou"},
+    {"year": 1488, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Received at the Ming court.", "city": "beijing", "date": "April 1488"},
+    {"year": 1488, "place": "Shanhaiguan", "lat": 40.0, "lon": 119.75, "note": "Through the pass at the end of the Great Wall."},
+    {"year": 1488, "place": "Uiju", "lat": 40.2, "lon": 124.53, "note": "Across the Yalu into Joseon.", "date": "June 1488"},
+    {"year": 1488, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "He writes his diary for the king before going home to mourn.", "city": "seoul"}
+  ],
+  "informs": [
+    {"region": "china-south", "level": 4, "homeKnows": 1488, "confidence": "high", "note": "Jiangnan and the Grand Canal, in Choe Bu's diary"}
+  ]
+}

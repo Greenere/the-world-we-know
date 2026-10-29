@@ -1,0 +1,18 @@
+{
+  "id": "altan-khan-kokonor",
+  "name": "Altan Khan meets the Dalai Lama",
+  "traveler": "Altan Khan of the Tümed",
+  "years": "1578",
+  "kind": "pilgrim",
+  "viewpoint": "steppe",
+  "summary": "The most powerful Mongol ruler since the Yuan invites the Tibetan lama Sonam Gyatso to meet him near Kokonor. Altan gives him the title Dalai, Mongolian for 'ocean', and the Mongols turn to Tibetan Buddhism. The bond between the two peoples shapes Inner Asia for the next three centuries.",
+  "source": "atwood",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1578, "place": "Köke Khota", "lat": 40.82, "lon": 111.65, "note": "Altan Khan's city on the Yellow River bend, today Hohhot."},
+    {"year": 1578, "place": "Near Kokonor", "lat": 36.3, "lon": 100.6, "note": "He meets Sonam Gyatso and names him Dalai Lama, where the monastery of Thegchen Chonkhor was later built.", "confidence": "medium"}
+  ],
+  "informs": [
+    {"region": "tibet", "level": 4, "homeKnows": 1578, "confidence": "high", "note": "Altan Khan and the third Dalai Lama"}
+  ]
+}

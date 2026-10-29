@@ -1,0 +1,19 @@
+{
+  "id": "siyaj-kak",
+  "name": "Siyaj K'ak' comes to Tikal",
+  "traveler": "Siyaj K'ak', a lord from Teotihuacan",
+  "years": "378",
+  "kind": "military",
+  "viewpoint": "mexica",
+  "summary": "A warlord tied to Teotihuacan, a thousand kilometres to the west, marches into the Maya lowlands. Eight days after he reaches Waka', Tikal's king Chak Tok Ich'aak dies, and a new dynasty with Teotihuacan's goggled warriors and spearthrowers takes the throne. The Maya remembered it on their stelae as 'the arrival'.",
+  "source": "stuart-entrada",
+  "confidence": "medium",
+  "stops": [
+    {"year": 378, "place": "Teotihuacan", "lat": 19.69, "lon": -98.84, "note": "The great city of the Valley of Mexico, the Maya's 'place of reeds'.", "city": "teotihuacan"},
+    {"year": 378, "place": "Waka' (El Perú)", "lat": 17.26, "lon": -90.36, "note": "Stela 15 records his arrival on the river road to the east.", "date": "January 378"},
+    {"year": 378, "place": "Tikal", "lat": 17.22, "lon": -89.62, "note": "The day he arrives, Tikal's king 'enters the water': he dies, and a new king is installed under Teotihuacan.", "city": "tikal", "date": "January 378"}
+  ],
+  "informs": [
+    {"region": "maya", "level": 3, "homeKnows": 378, "confidence": "medium", "note": "Teotihuacan's entrada at Tikal"}
+  ]
+}

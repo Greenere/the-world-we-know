@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The electric telegraph",
+      "caption": "Samuel Morse sends \"What hath God wrought\" along a wire from Washington to Baltimore, in a code of dots and dashes.",
+      "sources": [
+        "standage"
+      ],
+      "confidence": "high",
+      "prompt": "Intimate1844Washington workbench view: operator's hand depresses a simple pivoted brass telegraph key on wooden base, connected by thin wires to an early electromagnetic paper-tape register with two coils and a narrow paper strip passing under a marking lever. Brass, dark wood, glass battery vessels in soft background. Mechanical message recording is focus, no modern telephone, Morse sounder from later decades, keyboard, ticker stock display or readable message text."
+    }
+  ]
+}

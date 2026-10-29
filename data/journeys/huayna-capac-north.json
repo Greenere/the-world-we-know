@@ -1,0 +1,22 @@
+{
+  "id": "huayna-capac-north",
+  "name": "Huayna Capac's northern wars",
+  "traveler": "Huayna Capac",
+  "years": "c. 1510–1527",
+  "kind": "military",
+  "viewpoint": "inca",
+  "summary": "The eleventh Sapa Inca spends most of his reign in the far north, where the Cayambe and Caranqui resist for well over a decade. He builds a second capital at Tumebamba, rings the north with hilltop forts, and ends the war in a massacre the chroniclers remember at Yahuarcocha, the 'lake of blood'. He dies at Quito of an epidemic, probably smallpox, that runs ahead of the Spaniards.",
+  "source": "hemming-inca",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 1510, "place": "Cusco", "lat": -13.52, "lon": -71.97, "note": "He leads the army north.", "city": "cuzco"},
+    {"year": 1512, "place": "Tumebamba", "lat": -2.9, "lon": -79.0, "note": "His birthplace becomes a second capital."},
+    {"year": 1515, "place": "Quito", "lat": -0.22, "lon": -78.51, "note": "The base for the war in the north.", "city": "quito"},
+    {"year": 1517, "place": "Pambamarca", "lat": 0.08, "lon": -78.2, "note": "Hilltop forts against the Cayambe."},
+    {"year": 1520, "place": "Yahuarcocha", "lat": 0.37, "lon": -78.1, "note": "The Caranqui are defeated on the lakeshore."},
+    {"year": 1527, "place": "Quito", "lat": -0.22, "lon": -78.51, "note": "He dies of an epidemic that came from the Spaniards before they did.", "city": "quito"}
+  ],
+  "informs": [
+  ]
+}

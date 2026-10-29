@@ -822,7 +822,7 @@ export class OverlayModel {
         dashJustified: true,
         capRounded: true,
         pickable: true,
-        extensions: [DASHED],
+        extensions: [DASHED, horizonCull],
       } as ConstructorParameters<typeof PathLayer<Reef>>[0]),
       new PolygonLayer<Shape>({
         id: 'cities-area',
@@ -886,7 +886,7 @@ export class OverlayModel {
     const common = {parameters: SURFACE_PARAMETERS, getPath: (d: Line) => d.line, widthUnits: 'pixels' as const, jointRounded: true};
     const standing = data.filter(d => !d.ruin);
     return [
-      new PathLayer<Line>({...common, id: 'cities-path-casing', data: standing, getColor: [...PAPER, 200], getWidth: d => (d.style === 'wall' ? 7 : 4.5), capRounded: true}),
+      new PathLayer<Line>({...common, id: 'cities-path-casing', extensions: [horizonCull], data: standing, getColor: [...PAPER, 200], getWidth: d => (d.style === 'wall' ? 7 : 4.5), capRounded: true}),
       // Fallen works: a faint broken line, like the ruin sign.
       new PathLayer<Line>({
         ...common,
@@ -896,13 +896,14 @@ export class OverlayModel {
         getWidth: d => 1 + 0.8 * d.fade,
         getDashArray: [2.5, 2],
         dashJustified: true,
-        extensions: [DASHED],
+        extensions: [DASHED, horizonCull],
         pickable: true,
         updateTriggers: {getColor: state.year, getWidth: state.year},
       } as ConstructorParameters<typeof PathLayer<Line>>[0]),
       new PathLayer<Line>({
         ...common,
         id: 'cities-path',
+        extensions: [horizonCull],
         data: standing,
         // A canal is water: a deep blue-grey, not the ink of a road or wall.
         getColor: d => (d.style === 'river' ? [...MOSS, 220] : d.style === 'canal' ? [...CANAL, 230] : [...INK, 200]),
@@ -919,7 +920,7 @@ export class OverlayModel {
         getWidth: 5,
         getDashArray: [0.35, 0.9],
         dashJustified: true,
-        extensions: [DASHED],
+        extensions: [DASHED, horizonCull],
       } as ConstructorParameters<typeof PathLayer<Line>>[0]),
     ];
   }
@@ -937,6 +938,7 @@ export class OverlayModel {
     return [
       new PathLayer<{path: LngLat[]; r: RouteView}>({
         id: 'routes',
+        extensions: [horizonCull],
         parameters: SURFACE_PARAMETERS,
         data,
         getPath: d => d.path,
@@ -965,6 +967,7 @@ export class OverlayModel {
     const out: Layer[] = [
       new PathLayer<{path: LngLat[]; o: Traveller}>({
         id: 'others-trail',
+        extensions: [horizonCull],
         parameters: SURFACE_PARAMETERS,
         data: trails,
         getPath: d => d.path,
@@ -1321,13 +1324,14 @@ function journeyLayers(
       getDashArray: [3, 4],
       dashJustified: true,
       parameters: SURFACE_PARAMETERS,
-      extensions: [DASHED],
+      extensions: [DASHED, horizonCull],
       jointRounded: true,
       capRounded: true,
       updateTriggers: {getPath: state.globe},
     }),
     new PathLayer<LngLat[]>({
       id: 'journey-trail-halo',
+      extensions: [horizonCull],
       parameters: SURFACE_PARAMETERS,
       data: trailPaths,
       getPath: d => d,
@@ -1339,6 +1343,7 @@ function journeyLayers(
     }),
     new PathLayer<LngLat[]>({
       id: 'journey-trail',
+      extensions: [horizonCull],
       parameters: SURFACE_PARAMETERS,
       data: trailPaths,
       getPath: d => d,

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Mongol post",
+      "caption": "Ögedei Khan sets up relay stations a day's ride apart across the empire, with fresh horses and food for anyone carrying the khan's pass, the paiza.",
+      "sources": [
+        "juvaini"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level inside a thirteenth-century Mongol relay station: foreground hands inspect a plain rectangular metal paiza with a suspension hole and small indistinct vertical marks, while a messenger in belted deel and cap waits. Fresh horses and low felt tents visible through doorway. Focus pass and practical hospitality, unlike the wide Persian horse-change scene. No readable invented script, no modern passport, no monumental palace."
+    }
+  ]
+}

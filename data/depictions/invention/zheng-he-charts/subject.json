@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Zheng He's sailing charts",
+      "caption": "The pilots of the treasure fleets set down their routes from Nanjing to Hormuz and East Africa as one long strip of coast, with compass bearings, hours of sailing and the heights of stars for each crossing.",
+      "sources": [
+        "needham"
+      ],
+      "confidence": "medium",
+      "prompt": "Long low view along a narrow partially unrolled Chinese maritime route chart on a Ming pilot's wooden table in Nanjing around1430: uneven coastline strip and successive mountain profiles, scattered compass-bearing marks in tiny indistinct brushwork, inkstone and brush at near end. Anonymous pilot's hand points along a coastal bend. Manuscript antecedent rather than a bound1621printed Wubei zhi. No global Mercator grid, modern longitude map, invented readable Chinese, sextant or gigantic treasure ship."
+    }
+  ]
+}

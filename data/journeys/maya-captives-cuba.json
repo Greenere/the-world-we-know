@@ -1,0 +1,20 @@
+{
+  "id": "maya-captives-cuba",
+  "name": "Maya captives sold to Cuba",
+  "traveler": "Maya captives of the Caste War",
+  "years": "1849–1861",
+  "kind": "castaway",
+  "viewpoint": "maya",
+  "summary": "To be rid of prisoners and to raise money for the war, Yucatán's government ships Maya captives, men, women and children, to the sugar plantations of Cuba under ten-year 'labour contracts' that were sales in all but name. The trade runs until Benito Juárez bans it in 1861.",
+  "source": "alvarez-cuartero-2007",
+  "lifts": false,
+  "confidence": "high",
+  "stops": [
+    {"year": 1849, "place": "Tihosuco", "lat": 20.2, "lon": -88.37, "note": "Where the Caste War began in 1847."},
+    {"year": 1849, "place": "Sisal", "lat": 21.17, "lon": -90.03, "note": "Yucatán's port; the captives are shipped from the coast."},
+    {"year": 1849, "place": "Havana", "lat": 23.13, "lon": -82.38, "note": "Sold to Cuba's sugar estates.", "city": "havana", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "caribbean", "level": 4, "homeKnows": 1850, "confidence": "high", "note": "Maya captives of the Caste War are sold to Cuba"}
+  ]
+}

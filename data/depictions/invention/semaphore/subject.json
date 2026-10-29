@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The semaphore telegraph",
+      "caption": "Claude Chappe's line of towers with movable arms carries signals from Paris to Lille. Its first great message, news of a victory at the frontier, arrives within the hour.",
+      "sources": [
+        "standage"
+      ],
+      "confidence": "high",
+      "prompt": "Low-angle outdoor view of a Chappe optical telegraph station on a modest masonry tower near Paris in1794. On ONE upright mast is ONE long central pivoting regulator beam, with ONE shorter hinged indicator arm at EACH of its two ends, three rigid bars total, silhouetted clearly at different angles. Operator small in tower opening, next station faint on distant ridge. No electric wire, traffic signal, windmill, flag signalling or four-armed cross."
+    }
+  ]
+}

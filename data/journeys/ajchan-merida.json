@@ -1,0 +1,18 @@
+{
+  "id": "ajchan-merida",
+  "name": "AjChan's embassy to Mérida",
+  "traveler": "AjChan, envoy of the Itza king Ajaw Kan Ek'",
+  "years": "1695",
+  "kind": "envoy",
+  "viewpoint": "maya",
+  "summary": "The last independent Maya kingdom, the Itza of Nojpetén on Lake Petén Itzá, sends an envoy north to the Spanish governor of Yucatán, Martín de Ursúa, with an offer of peaceful submission. AjChan is baptized in Mérida, a coup that Ursúa presents as the kingdom's surrender. Within two years Spanish troops storm Nojpetén.",
+  "source": "jones-itza",
+  "confidence": "medium",
+  "lifts": false,
+  "stops": [
+    {"year": 1695, "place": "Nojpetén", "lat": 16.93, "lon": -89.89, "note": "The Itza capital, an island city in Lake Petén Itzá."},
+    {"year": 1695, "place": "Mérida", "lat": 20.97, "lon": -89.62, "note": "He offers the Itza's submission and is baptized."}
+  ],
+  "informs": [
+  ]
+}

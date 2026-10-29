@@ -1,7 +1,7 @@
 # Invention sketchbook
 
 Every entry in `data/inventions.json` has one standalone study under
-`data/depictions/invention/<id>/`. The collection currently contains 60 cards.
+`data/depictions/invention/<id>/`. The collection currently contains 82 cards.
 
 Each folder contains:
 
@@ -64,3 +64,35 @@ Small marks on maps and artifacts suggest historical writing without introducing
 readable invented quotations. Maps are interpretive sketches, not reference
 maps for measuring locations. Layout, poses, light and incidental surroundings
 are artistic choices.
+
+## October 2026 additions
+
+Twenty-two new studies complete the expanded collection: the Royal Road, Pharos,
+sewn-plank boats, double-hulled voyaging canoe, Mongol post, Mamluk pigeon post,
+Ptolemy in Latin, Zheng He's charts, chasqui, Behaim's globe, Waldseemüller's map,
+Piri Reis's map, Ricci's map, octant, Cihannüma, Cassini's survey, semaphore,
+Great Trigonometrical Survey, electric telegraph, Haiguo tuzhi, telephone and radar.
+Each uses the existing card's summary, source and confidence, with matching
+Chinese title and enlarged-image caption.
+
+The compositions distinguish relay systems (horse change, pass inspection,
+runner handoff, pigeon message), mapmaking (translation, scroll, globe, wall map,
+parchment, printing and field survey) and instruments (close mechanical studies).
+The early East African boat page shows the sewn seam, without projecting a later
+complete mtepe rig back into the first century. Historical maps are interpretive
+studies, not exact facsimiles; the surviving charts and later museum instruments
+inform their broad forms without asserting every depicted detail existed at the
+card's earliest date.
+
+Additional references checked for these drawings:
+
+- [Germanisches Nationalmuseum: Behaim globe](https://objektkatalog.gnm.de/wisski/navigate/4516/view)
+- [Library of Congress: Waldseemüller's 1507 map](https://loc.gov/exhibits/exploring-the-early-americas/interactives/waldseemuller-maps/worldmap1507/index.html)
+- [Royal Geographical Society: Ricci's world map](https://www.rgs.org/our-collections/stories-from-our-collections/explore-our-collections/kunyu-wanguo-quantu-map) — period geography includes a hypothetical southern continent, rather than a modern outline of Australia.
+- [London Museum: Hadley's octant](https://www.londonmuseum.org.uk/collections/v/object-281936/octant-hadleys-octant/) — a later surviving instrument, used for general geometry rather than copied as the 1731 prototype.
+- [Musée des Arts et Métiers: Chappe telegraph model](https://www.arts-et-metiers.net/musee/modele-telegraphe-optique-systeme-chappe)
+- [Science Museum Group: replica of Bell's March 1876 liquid transmitter](https://collection.sciencemuseumgroup.org.uk/objects/co33314/replica-of-bells-liquid-transmitter-of-march-1876-1880-1958)
+- [Science Museum Group: apparatus from the 1935 radar experiment](https://collection.sciencemuseumgroup.org.uk/objects/co35028/apparatus-used-by-r-watson-watt-in-february-1935-f)
+
+Prompts exclude later familiar substitutes: a dial telephone, a rotating radar
+dish or circular sweep screen, a modern metal sextant, and laser surveying gear.

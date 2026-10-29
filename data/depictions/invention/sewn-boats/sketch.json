@@ -1,0 +1,8 @@
+{
+  "subject": "invention/sewn-boats",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Close view INSIDE an unfinished East African coastal sewn-plank hull in first-century context: dark-skinned boatbuilder's hands pull coarse plant-fibre cord through paired holes along adjacent wooden plank edges, seam packed with fibre. Show actual stitches bridging the seam and solid curved planks correctly joined, hand tools and fibre coil nearby. Focus joinery rather than a complete later mtepe sailing rig. No iron nails, modern glue, power tools or invented medieval town.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks."
+}

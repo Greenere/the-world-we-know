@@ -1,0 +1,21 @@
+{
+  "subject": "invention/waldseemuller",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Wide printer's workshop view at Saint-Die in1507: the large wall map assembled as TWELVE rectangular sheets in FOUR columns and THREE rows, inspected by a small standing printer at side. Broad modified Ptolemaic curved world outline, narrow separate Americas on left, Europe/Africa nearer centre, Asia right; geographic forms approximate period woodcut, not modern map. Paper seams and printing work are focus. No readable labels or quotation, no Australia or satellite-accurate coasts.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://loc.gov/exhibits/exploring-the-early-americas/interactives/waldseemuller-maps/worldmap1507/index.html"
+  ],
+  "edits": [
+    {
+      "method": "built-in imagegen",
+      "prompt": "Edit this workshop sketch preserving people, furniture, light, watercolor, paper and composition. Correct the wall map to evoke Waldseemuller's 1507 map: make exactly TWELVE sheets arranged FOUR columns by THREE rows, with clear fine horizontal seams at one-third and two-thirds. Geography should be early 1507 cartography, with a narrow elongated strip of the Americas at the far left, old world at right, no modern Australia or New Zealand or modern Antarctica. Remove the modern-looking northern America outline and southern polar continent band. Keep tiny illegible marks, no readable words. Preserve all other scene elements."
+    },
+    {
+      "method": "built-in imagegen",
+      "prompt": "Make one precise change to this sketch. The wall map currently has eight sheets (4 columns x 2 rows). It MUST have TWELVE sheets (4 columns x 3 rows). Erase the single horizontal white seam at the map midpoint, and replace it with TWO horizontal white seams: one at one-third of the map height, another at two-thirds. Both new horizontal seams cross ALL FOUR columns continuously. Keep the three vertical seams, making exactly twelve rectangular panels. Preserve the map artwork, people, room, furniture and style. No other changes."
+    }
+  ]
+}

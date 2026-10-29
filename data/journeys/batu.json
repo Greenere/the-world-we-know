@@ -4,7 +4,7 @@
   "traveler": "Batu and Subutai",
   "years": "1236–1242",
   "kind": "military",
-  "viewpoint": "china",
+  "viewpoint": "steppe",
   "summary": "A Mongol army of perhaps 120,000 conquers the Volga Bulghars, the Cumans and the Rus principalities, sacks Kyiv, and drives into Poland and Hungary, destroying two European armies within days of each other in 1241. News of the Great Khan's death turns them back; the Golden Horde rules the Rus for two centuries.",
   "source": "juvaini",
   "confidence": "medium",
@@ -21,6 +21,9 @@
   "informs": [
     {"region": "rus", "level": 3, "homeKnows": 1243, "confidence": "medium"},
     {"region": "alps-danube", "level": 2, "homeKnows": 1243, "confidence": "medium", "note": "Hungary"},
-    {"region": "pontic-steppe", "level": 4, "homeKnows": 1243, "confidence": "medium"}
+    {"region": "pontic-steppe", "level": 4, "homeKnows": 1243, "confidence": "medium"},
+    {"viewpoint": "china", "region": "rus", "level": 3, "homeKnows": 1271, "confidence": "medium"},
+    {"viewpoint": "china", "region": "alps-danube", "level": 2, "homeKnows": 1271, "confidence": "medium", "note": "Hungary"},
+    {"viewpoint": "china", "region": "pontic-steppe", "level": 4, "homeKnows": 1271, "confidence": "medium"}
   ]
 }

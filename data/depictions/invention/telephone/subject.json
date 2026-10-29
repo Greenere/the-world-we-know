@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The telephone",
+      "caption": "Alexander Graham Bell patents the telephone and, in his Boston workshop, calls his assistant Thomas Watson down the wire.",
+      "sources": [
+        "fischer-telephone"
+      ],
+      "confidence": "high",
+      "prompt": "Close side view of Bell's experimental LIQUID transmitter in Boston inMarch1876: a simple vertical wooden support holds a broad conical mouthpiece pointing UP above a diaphragm, with a fine vertical conducting wire descending from the diaphragm into a small liquid cup beneath. Thin circuit wires connect across rough workbench to battery vessels. At edge a man's lower face leans toward the upward mouthpiece, apparatus dominates. No familiar desk telephone, no candlestick phone, no rotary dial, handset, modern microphone or wireless device. Coherent simple experimental construction, not polished commercial equipment."
+    }
+  ]
+}

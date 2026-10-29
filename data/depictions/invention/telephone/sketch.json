@@ -1,0 +1,17 @@
+{
+  "subject": "invention/telephone",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Close side view of Bell's experimental LIQUID transmitter in Boston inMarch1876: a simple vertical wooden support holds a broad conical mouthpiece pointing UP above a diaphragm, with a fine vertical conducting wire descending from the diaphragm into a small liquid cup beneath. Thin circuit wires connect across rough workbench to battery vessels. At edge a man's lower face leans toward the upward mouthpiece, apparatus dominates. No familiar desk telephone, no candlestick phone, no rotary dial, handset, modern microphone or wireless device. Coherent simple experimental construction, not polished commercial equipment.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "reference_sources": [
+    "https://collection.sciencemuseumgroup.org.uk/objects/co33314/replica-of-bells-liquid-transmitter-of-march-1876-1880-1958"
+  ],
+  "edits": [
+    {
+      "method": "built-in imagegen",
+      "prompt": "Edit this historical telephone sketch to fix the perspective of the circular diaphragm disc directly under the brass funnel. Keep the composition, man, wooden stand, battery jars, cream paper, graphite and muted watercolor style. Use ONE consistent elevated three-quarter viewpoint for the apparatus: the viewer looks slightly DOWN at all horizontal circular surfaces. Redraw the funnel base and diaphragm assembly as a thin, flat, perfectly horizontal circular plate seen as a single coherent ellipse, concentric with the funnel's narrow neck. Show the TOP of that plate and a narrow front edge; DO NOT show a second exposed underside ellipse that faces the viewer, a bent dish, doubled disc, tilted flange, or mutually incompatible ellipses. Its rear edge is naturally hidden behind the funnel. The funnel opening, horizontal diaphragm disc, glass cup rim and liquid surface must all be parallel circles in consistent perspective. Align funnel axis, disc center, fine vertical conducting wire and center of the liquid cup on ONE straight vertical axis. Wire descends from center underneath diaphragm into liquid, without an extra hanging circular plate. Keep the construction simple, mechanically supported by the wooden bracket. No rotary dial, modern telephone, labels or new objects."
+    }
+  ]
+}

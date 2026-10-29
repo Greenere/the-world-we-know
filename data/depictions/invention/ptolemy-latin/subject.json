@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Ptolemy's Geography in Latin",
+      "caption": "In Florence, Jacopo Angeli finishes a Latin translation of Ptolemy's Geography, a book the Greek scholar Manuel Chrysoloras had brought from Constantinople.",
+      "sources": [
+        "hoc"
+      ],
+      "confidence": "high",
+      "prompt": "Over-shoulder manuscript workshop in Florence around1408: scholar in plain early fifteenth-century robe compares a Greek handwritten codex with a fresh Latin manuscript, quill poised above page. Columns of tiny indistinct ink strokes and a few coordinate-like marks, dividers and simple ruler nearby. Focus careful translation between books; no printing press, printed atlas, modern world map, spectacles with modern frames or legible fabricated text."
+    }
+  ]
+}

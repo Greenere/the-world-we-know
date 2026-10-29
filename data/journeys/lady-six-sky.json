@@ -1,0 +1,18 @@
+{
+  "id": "lady-six-sky",
+  "name": "Lady Six Sky comes to Naranjo",
+  "traveler": "Lady Six Sky (Wak Chanil Ajaw)",
+  "years": "682",
+  "kind": "envoy",
+  "viewpoint": "maya",
+  "summary": "A princess of Dos Pilas, daughter of its king B'alaj Chan K'awiil and an ally of mighty Calakmul, is sent to refound the ruined dynasty of Naranjo. She rules there for decades in all but name, and her armies carry Naranjo's wars across the eastern Petén.",
+  "source": "martin-grube",
+  "confidence": "high",
+  "lifts": false,
+  "stops": [
+    {"year": 682, "place": "Dos Pilas", "lat": 16.44, "lon": -90.26, "note": "Her father's city, Calakmul's ally in the Petexbatún."},
+    {"year": 682, "place": "Naranjo", "lat": 17.13, "lon": -89.25, "note": "Her arrival is carved on Naranjo's Stela 24.", "date": "August 682"}
+  ],
+  "informs": [
+  ]
+}

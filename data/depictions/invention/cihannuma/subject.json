@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Cihannüma, printed in Istanbul",
+      "caption": "İbrahim Müteferrika, founder of the first Ottoman Turkish press, prints Kâtip Çelebi's geography of the world, the Cihannüma, with maps engraved in Istanbul.",
+      "sources": [
+        "katip-celebi"
+      ],
+      "confidence": "medium",
+      "prompt": "Istanbul printing shop in1732: low side view of an Ottoman printer in plain robe and wrapped headcloth lifting a freshly printed map leaf from a worktable, open bound geography and several drying sheets beyond. A modest wooden handpress in background, paper and ink textures foreground. Small indistinct Ottoman script columns around a period map, no readable fake text. No modern lithographic press, roller factory, enormous illuminated manuscript or tourist mosque skyline."
+    }
+  ]
+}

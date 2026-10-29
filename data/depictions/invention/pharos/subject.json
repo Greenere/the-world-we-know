@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The lighthouse of Alexandria",
+      "caption": "On the island of Pharos the Ptolemies raise a tower more than a hundred metres high, with a fire at its top that ships can see far out on a low, featureless coast.",
+      "sources": [
+        "strabo"
+      ],
+      "confidence": "high",
+      "prompt": "Water-level view from a small Hellenistic harbour boat toward the Pharos of Alexandria around280BCE at dusk. Lighthouse reconstruction with broad square lower stage, narrower octagonal middle stage, small cylindrical upper stage and modest beacon fire, pale masonry above low coastline. Tower dominates, no portrait. No modern glass lantern, searchlight beam, medieval minaret or enormous fantasy flame; do not claim exact lost architectural details."
+    }
+  ]
+}

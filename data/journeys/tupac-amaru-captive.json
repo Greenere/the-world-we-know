@@ -1,0 +1,24 @@
+{
+  "id": "tupac-amaru-captive",
+  "name": "Juan Bautista Túpac Amaru's forty years of captivity",
+  "traveler": "Juan Bautista Túpac Amaru",
+  "years": "1781–1822",
+  "kind": "castaway",
+  "viewpoint": "inca",
+  "summary": "After the great Andean rebellion of 1780–81, the half-brother of its leader Túpac Amaru II is marched to Lima and shipped to Spain, by way of Rio de Janeiro, with the rest of the family. He survives prisons in Cádiz and thirty-four years in the presidio of Ceuta in North Africa. Freed at last, he sails for independent Buenos Aires and writes his memoir there.",
+  "source": "tupac-amaru-memoir",
+  "confidence": "high",
+  "stops": [
+    {"year": 1781, "place": "Cusco", "lat": -13.52, "lon": -71.97, "note": "Arrested after the execution of José Gabriel Túpac Amaru.", "city": "cuzco"},
+    {"year": 1783, "place": "Lima", "lat": -12.05, "lon": -77.04, "note": "Held for exile to Spain.", "city": "lima"},
+    {"year": 1785, "place": "Rio de Janeiro", "lat": -22.9, "lon": -43.17, "note": "The ship puts in on the way to Spain.", "by": "sea"},
+    {"year": 1785, "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Years in the prisons of Cádiz.", "by": "sea"},
+    {"year": 1788, "place": "Ceuta", "lat": 35.89, "lon": -5.31, "note": "The presidio on the African shore, his prison for over thirty years.", "date": "July 1788", "by": "sea"},
+    {"year": 1822, "place": "Buenos Aires", "lat": -34.6, "lon": -58.38, "note": "Freed, he sails for the new republic and writes his memoir.", "city": "buenos-aires", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "maghreb", "level": 2, "homeKnows": 1825, "confidence": "high", "note": "Imprisoned at Ceuta"},
+    {"region": "brazil-coast", "level": 2, "homeKnows": 1825, "confidence": "medium"},
+    {"region": "pampas", "level": 4, "homeKnows": 1825, "confidence": "high", "note": "He writes his memoir in Buenos Aires"}
+  ]
+}

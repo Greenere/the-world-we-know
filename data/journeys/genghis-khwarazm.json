@@ -1,0 +1,29 @@
+{
+  "id": "genghis-khwarazm",
+  "name": "Genghis Khan's war on Khwarazm",
+  "traveler": "Genghis Khan",
+  "years": "1219–1225",
+  "kind": "military",
+  "viewpoint": "steppe",
+  "summary": "When the governor of Otrar kills a Mongol trade caravan and the shah has his envoys put to death, Genghis Khan leads perhaps 100,000 horsemen west. In two years the Khwarazmian empire falls: Bukhara, Samarkand, Balkh and the cities of Khorasan are taken, and the shah's son Jalal al-Din is driven to the Indus. The steppe now reaches the lands of Islam.",
+  "source": "juvaini",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1219, "place": "Black Irtysh", "lat": 47.9, "lon": 85.5, "note": "The army gathers on the Irtysh after the murder of the envoys."},
+    {"year": 1219, "place": "Otrar", "lat": 42.85, "lon": 68.3, "note": "Besieged for five months; the governor who killed the caravan is put to death.", "city": "otrar"},
+    {"year": 1220, "place": "Bukhara", "lat": 39.77, "lon": 64.42, "note": "Juvaini has the khan tell its people he is the punishment of God.", "city": "bukhara", "date": "February 1220"},
+    {"year": 1220, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "The shah's capital surrenders after a few days.", "city": "samarkand", "date": "March 1220"},
+    {"year": 1221, "place": "Balkh", "lat": 36.76, "lon": 66.9, "note": "Across the Oxus into Tokharistan.", "city": "balkh"},
+    {"year": 1221, "place": "Bamiyan", "lat": 34.83, "lon": 67.83, "note": "His grandson is killed in the siege, and the valley is laid waste."},
+    {"year": 1221, "place": "Indus River", "lat": 33.0, "lon": 71.6, "note": "Jalal al-Din spurs his horse into the river and escapes to India.", "date": "November 1221"},
+    {"year": 1222, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "He winters here, and summons the Daoist master Changchun.", "city": "samarkand"},
+    {"year": 1225, "place": "Tuul River", "lat": 47.9, "lon": 106.9, "note": "Home to the steppe after six years."}
+  ],
+  "informs": [
+    {"region": "transoxiana", "level": 4, "homeKnows": 1225, "confidence": "high"},
+    {"region": "bactria", "level": 4, "homeKnows": 1225, "confidence": "high", "note": "Tokharistan"},
+    {"region": "persia", "level": 4, "homeKnows": 1225, "confidence": "medium", "note": "Khorasan, sacked by his sons"},
+    {"region": "indus", "level": 3, "homeKnows": 1225, "confidence": "medium"},
+    {"region": "india-north", "level": 1, "homeKnows": 1225, "confidence": "low", "note": "Hindustan, where Jalal al-Din fled"}
+  ]
+}

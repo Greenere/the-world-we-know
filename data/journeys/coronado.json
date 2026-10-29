@@ -23,6 +23,9 @@
     {"region": "north-america-west", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
     {"region": "great-plains", "level": 2, "homeKnows": 1542, "confidence": "high", "note": "Coronado"},
     {"region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"},
-    {"viewpoint": "europe", "region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"}
+    {"viewpoint": "europe", "region": "rio-grande-pueblos", "level": "=3", "homeKnows": 1542, "confidence": "high", "note": "The Pueblo towns of Cíbola and Tiguex"},
+    {"viewpoint": "mexica", "region": "rio-grande-pueblos", "level": 3, "homeKnows": 1542, "confidence": "high", "note": "Some 1300 allies from around Mexico City march with Coronado", "source": "flint-coronado"},
+    {"viewpoint": "mexica", "region": "colorado-plateau", "level": 2, "homeKnows": 1542, "confidence": "medium", "source": "flint-coronado"},
+    {"viewpoint": "mexica", "region": "great-plains", "level": 2, "homeKnows": 1542, "confidence": "medium", "note": "Quivira, on the plains", "source": "flint-coronado"}
   ]
 }

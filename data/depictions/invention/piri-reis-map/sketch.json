@@ -1,0 +1,14 @@
+{
+  "subject": "invention/piri-reis-map",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: one invention-card sketch for a historical atlas.\nOne landscape 3:2 page from an explorers field sketchbook. Visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolour washes in ochre, grey-green and faded blue. Detail concentrated on the principal object or action; outer edges dissolve irregularly into warm cream paper with subtle foxing. An observed working sketch, not a polished painting, digital render, photograph, infographic or collage. A single coherent principal scene, optionally one small unlabelled detail study. No frame, binding, captions, labels, signature, watermark or readable writing. Any marks on historic artifacts remain small and nonverbal. People, materials and tools appropriate to the place and date.\nScene: Oblique close desk view of an irregularly shaped parchment Atlantic chart being worked on in Ottoman Gallipoli in1513. Iberia and western Africa at right, Caribbean islands upper left and Brazil lower left, fine radiating rhumb lines, little ship and mountain motifs. Compass dividers and reed pen at edge, hand keeping parchment flat. No Antarctic continent claim, no modern global projection, no modern borders, no readable invented Ottoman text. Do not fill it with unrelated maps.\nKeep machinery, hands, hulls and load-bearing parts geometrically coherent. Use a distinct observational viewpoint as specified. No text, captions or labels anywhere; historical writing may only appear as tiny indistinct marks.",
+  "edits": [
+    {
+      "method": "built-in imagegen",
+      "prompt": "Transform this scene into a loose historical field sketch, not a photograph. Preserve the same composition, parchment map, hands and period objects. Render everything with clearly visible graphite construction lines, sepia ink hatching and light uneven muted watercolor washes. Simplify fine detail, especially skin, wood and map; make edges of the scene fade irregularly into blank cream sketchbook paper. No photographic textures or depth of field. Keep map coastlines interpretive and early-sixteenth-century, no text or readable lettering. The result must look hand drawn with much exposed paper."
+    }
+  ]
+}

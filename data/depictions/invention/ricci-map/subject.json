@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "Ricci's map of the world",
+      "caption": "The Jesuit Matteo Ricci and the scholar Li Zhizao print a great map of the world in Chinese, with China near the centre and the continents and seas of the European map named in Chinese.",
+      "sources": [
+        "ricci-map"
+      ],
+      "confidence": "high",
+      "prompt": "Interior Beijing study around1602: a large oval world map on SIX adjacent vertical paper panels, mounted on a plain wall, with the Pacific near centre and Asia toward centre-left and the Americas toward centre-right. A Chinese scholar in Ming clothing and a bearded European scholar in Chinese-style robe study it from side in three-quarter rear view. Map and exchange of knowledge dominate, little text-like ink marks not readable Chinese. No Qing queue, no modern map colours, no modern borders or modern furniture."
+    }
+  ]
+}

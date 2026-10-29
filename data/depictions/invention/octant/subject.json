@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The octant and sextant",
+      "caption": "John Hadley shows the Royal Society an instrument whose two mirrors let a navigator hold a star against the horizon while the ship rolls beneath him.",
+      "sources": [
+        "bennett-instruments"
+      ],
+      "confidence": "high",
+      "prompt": "Almost face-on close object study of an EARLY1730s wooden reflecting octant on a plain London instrument-maker's bench: rigid flat triangular-sector frame spanning about45degrees, gently curved graduated arc at bottom, straight pivoted index arm from apex to arc, small index mirror near apex and second horizon mirror beside simple sight vane on side. Brass fittings, all frame parts coplanar, no warped arc. Subtle unreadable tick marks only. No full circular astrolabe, modern micrometer sextant, giant telescope, decorative fantasy gears or human face."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "title": "The Royal Road and its relay riders",
+      "caption": "Darius's road runs some 2,500 km from Sardis to Susa, with a hundred and eleven staging posts, each holding fresh horses and riders for the king's messages.",
+      "sources": [
+        "herodotus"
+      ],
+      "confidence": "high",
+      "prompt": "Wide roadside scene near Achaemenid Susa around500BCE: a tired mounted courier arrives at a modest mudbrick relay courtyard while a groom holds a fresh horse by its reins. Focus changing horses, courtyard and long dusty road, rider small. Persian soft cap, long sleeved tunic and trousers, simple saddlecloth, NO stirrups, no medieval caravanserai or domed mosque."
+    }
+  ]
+}

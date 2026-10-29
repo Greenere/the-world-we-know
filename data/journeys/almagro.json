@@ -18,6 +18,7 @@
     {"year": 1537, "place": "Cuzco", "lat": -13.53, "lon": -71.97, "note": "Seizes Cuzco from the Pizarros, which leads to civil war and his execution.", "city": "cuzco", "date": "April 1537"}
   ],
   "informs": [
-    {"region": "atacama-chile", "level": 3, "homeKnows": 1538, "confidence": "high"}
+    {"region": "atacama-chile", "level": 3, "homeKnows": 1538, "confidence": "high"},
+    {"viewpoint": "inca", "region": "atacama-chile", "level": 4, "homeKnows": 1537, "confidence": "high", "note": "Paullu Inca goes with Almagro to Chile", "source": "hemming-inca"}
   ]
 }
