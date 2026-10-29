@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1500,
+      "title": "Moai of Rapa Nui — c. 1500",
+      "caption": "About 1500. Moai stand on an ahu, their faces turned inland and their backs to the sea.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Low inland-facing viewpoint shows fronts of row of moai and sea BEHIND them; whole torsos on continuous stone platform, few red pukao, no giant buried heads only."
+    }
+  ]
+}

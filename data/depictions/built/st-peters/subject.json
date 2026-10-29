@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1700,
+      "title": "St Peter's Basilica — c. 1700",
+      "caption": "About 1700. The colonnades curve around the square before St Peter's Basilica.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique eye-level near outer colonnade, coherent curved Tuscan columns, basilica facade and dome beyond, central obelisk; period people tiny, no cars."
+    }
+  ]
+}

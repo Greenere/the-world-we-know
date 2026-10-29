@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1500,
+      "title": "Templo Mayor — c. 1500",
+      "caption": "About 1500. Two shrines stand above the paired stairways of Tenochtitlan's main temple.",
+      "sources": [
+        "sahagun"
+      ],
+      "confidence": "high",
+      "prompt": "Low diagonal reconstruction twin-shrine stepped Mexica pyramid, TWO parallel steep stairways on same front and red/blue-accented summit shrines, plastered stone, no Maya single temple or sacrifices."
+    }
+  ]
+}

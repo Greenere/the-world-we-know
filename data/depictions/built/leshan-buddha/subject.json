@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1850,
+      "title": "Leshan Giant Buddha — c. 1850",
+      "caption": "About 1850. The seated Buddha is cut into the river cliff, with its hands resting on its knees.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low river-level view entire Leshan Buddha in cliff niche, feet at bottom and knees above, textured rock and vegetation, tiny boat for scale, no dam or modern stairs dominating."
+    }
+  ]
+}

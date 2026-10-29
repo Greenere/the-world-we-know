@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 2010,
+      "title": "Three Gorges Dam — c. 2010",
+      "caption": "About 2010. A long concrete barrier crosses the Yangtze, with spillways and powerhouses along its length.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Distant high oblique engineering landscape Three Gorges STRAIGHT gravity dam across broad river, central spillway and long powerhouses, lush hills, no curved Hoover arch dam."
+    }
+  ]
+}

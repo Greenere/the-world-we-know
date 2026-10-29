@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 100,
+      "title": "Sanchi — c. 100",
+      "caption": "About 100. A carved gateway opens onto the circular path around Sanchi's Great Stupa.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low three-quarter view ONE torana with two posts supporting three curved carved crossbars, hemispherical stupa and railing behind, no pointed pagoda or hollow dome entrance."
+    }
+  ]
+}

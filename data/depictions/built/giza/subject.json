@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -2500,
+      "title": "Great Pyramid of Giza — c. 2500 BCE",
+      "caption": "About 2500 BCE. Khufu's pyramid rises above the desert edge, its pale casing catching the light.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide low desert approach; completed Great Pyramid with smooth pale limestone casing, square base and straight triangular faces, tiny Old Kingdom workers for scale. No later pyramids dominating, no camels."
+    }
+  ]
+}

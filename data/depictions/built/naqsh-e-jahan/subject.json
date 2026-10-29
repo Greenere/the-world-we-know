@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1650,
+      "title": "Naqsh-e Jahan Square — c. 1650",
+      "caption": "About 1650. Arcades enclose Isfahan's great square between the mosque, palace and bazaar.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from Ali Qapu upper terrace across broad rectangular maidan, Shah Mosque portal at south end with dome offset behind entrance axis, shops and small market groups, no modern fountains or traffic."
+    }
+  ]
+}

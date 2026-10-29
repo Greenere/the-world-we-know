@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Djinguereber Mosque — c. 1900",
+      "caption": "About 1900. Timber beams project from the earthen walls of Timbuktu's mosque.",
+      "sources": [
+        "ibn-battuta"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level angled study Djinguereber mosque Timbuktu, low mud plaster mass and tapered SQUARE minaret, projecting toron, sandy lane; NOT Djenne triple-tower facade, no giant gold dome."
+    }
+  ]
+}

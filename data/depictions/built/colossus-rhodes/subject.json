@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -250,
+      "title": "Colossus of Rhodes — c. 250 BCE",
+      "caption": "About 250 BCE. A bronze figure of Helios towers over the buildings of Rhodes.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "high",
+      "prompt": "Low city-street view bronze Helios standing upright feet close together on ONE broad land pedestal, draped hips, radiate crown, harbor only distant; NO straddling harbor, no flaming torch like Liberty; location interpretive."
+    }
+  ]
+}

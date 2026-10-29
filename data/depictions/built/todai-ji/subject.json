@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Tōdai-ji — c. 1750",
+      "caption": "About 1750. The Great Buddha Hall's broad timber facade stands behind an open forecourt.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low three-quarter current1709 rebuilt Daibutsuden, broad dark timber facade and double massive tiled roofs, curved central gable on lower roof, Nara trees, no towering pagoda."
+    }
+  ]
+}

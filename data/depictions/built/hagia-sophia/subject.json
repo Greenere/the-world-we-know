@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1100,
+      "title": "Hagia Sophia — c. 1100",
+      "caption": "About 1100. Light enters beneath the great dome of Justinian's church.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Interior side aisle looking up central dome on pendentives with ring of small windows and two semidomes, marble piers, Byzantine mosaics suggested, NO Ottoman calligraphic roundels or minarets or pews."
+    }
+  ]
+}

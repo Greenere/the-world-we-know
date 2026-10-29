@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Sigiriya — c. 1900",
+      "caption": "About 1900. The lion's stone paws mark the climb toward Sigiriya's summit.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Low view at lion terrace, two enormous brick-and-plaster paws flank stair, sheer rock rises behind, no reconstructed giant intact lion head, no fantastical palace."
+    }
+  ]
+}

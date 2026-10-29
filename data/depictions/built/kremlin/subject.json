@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1700,
+      "title": "Moscow Kremlin — c. 1700",
+      "caption": "About 1700. Brick towers and cathedral domes rise above the Moscow River.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Across-river oblique Kremlin view red brick walls and spired towers, white churches golden onion domes behind, no Soviet stars, no nineteenth-century Grand Kremlin Palace."
+    }
+  ]
+}

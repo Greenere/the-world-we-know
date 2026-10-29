@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Erdene Zuu — c. 1900",
+      "caption": "About 1900. White stupas punctuate the monastery wall on the Mongolian steppe.",
+      "sources": [
+        "atwood"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique outside view Erdene Zuu continuous white perimeter wall topped repeated small stupas, Tibetan-Chinese tiled temple roofs inside, grass steppe; no giant pagoda or modern town."
+    }
+  ]
+}

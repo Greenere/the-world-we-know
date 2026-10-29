@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1850,
+      "title": "Abu Simbel — c. 1850",
+      "caption": "About 1850. At Abu Simbel, colossal seated figures emerge from the sand against the cliff.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique riverside view at ORIGINAL pre-relocation site, four seated Ramesses figures including one ancient broken upper body; substantial sand low on facade, doorway visible, no Lake Nasser."
+    }
+  ]
+}

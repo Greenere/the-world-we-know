@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1860,
+      "title": "Big Ben — c. 1860",
+      "caption": "About 1860. The clock tower stands above Westminster's riverside frontage.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low view from Thames boat toward clock tower at north end Palace, square clock faces on adjacent sides same perspective and coherent hands, Gothic detail simplified, no London Eye or modern skyline."
+    }
+  ]
+}

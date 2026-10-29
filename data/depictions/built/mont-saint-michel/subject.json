@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1500,
+      "title": "Mont-Saint-Michel — c. 1500",
+      "caption": "About 1500. The abbey and its walled settlement rise above the tidal flats.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Distant low tidal-flat view, medieval abbey on rocky island, clustered roofs and fortifications, NO nineteenth-century tall metal spire or modern causeway, wet sand reflections."
+    }
+  ]
+}

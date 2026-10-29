@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -3000,
+      "title": "Newgrange — c. 3000 BCE",
+      "caption": "About 3000 BCE. A narrow beam of midwinter light reaches the stone chamber at Newgrange.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Interior from chamber looking down straight narrow stone-lined passage, corbelled rough stone chamber wall and basin foreground, low sunlight runs ALONG floor from roof-box entrance, no sunbeam through solid ceiling."
+    }
+  ]
+}

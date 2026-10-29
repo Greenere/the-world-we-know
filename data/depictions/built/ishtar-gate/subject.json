@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -550,
+      "title": "Ishtar Gate — c. 550 BCE",
+      "caption": "About 550 BCE. Glazed blue bricks and rows of animals cover Babylon's monumental gate.",
+      "sources": [
+        "herodotus"
+      ],
+      "confidence": "high",
+      "prompt": "Street-level angled gate with deep blue glazed brick, bulls and long-necked mushhushshu relief bands, crenellated square towers, coherent arched passage, no Egyptian pyramids."
+    }
+  ]
+}

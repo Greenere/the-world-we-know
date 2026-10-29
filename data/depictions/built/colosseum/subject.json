@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 200,
+      "title": "Colosseum — c. 200",
+      "caption": "About 200. Stacked arcades wrap around Rome's oval amphitheatre.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Street-level oblique exterior intact four-tier Flavian amphitheatre, three arcaded levels and solid attic with windows, oval building on ground, tiny Romans, no modern ruin gap or medieval houses."
+    }
+  ]
+}

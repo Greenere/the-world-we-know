@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -2200,
+      "title": "Stonehenge — c. 2200 BCE",
+      "caption": "About 2200 BCE. Uprights and lintels frame the open sky above Salisbury Plain.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Low view between sarsens, horizontal lintels resting securely on upright pairs, larger central trilithons behind; grass plain, no druids or medieval costume."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1980,
+      "title": "Sydney Opera House — c. 1980",
+      "caption": "About 1980. White tiled shells rise above the harbour at Bennelong Point.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low ferry-level water view recognizable multiple sail-like ribbed concrete shells on broad podium, coherent nested roof geometry, harbor blue-grey, no fantasy symmetric single lotus."
+    }
+  ]
+}

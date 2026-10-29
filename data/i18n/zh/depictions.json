@@ -1516,5 +1516,485 @@
    "title": "雷达",
    "caption": "罗伯特·沃森-瓦特与阿诺德·威尔金斯证明，飞过达文特里附近的轰炸机会反射BBC的短波信号，强到足以被探测到。"
   }
+ },
+ "built/giza": {
+  "sketch": {
+   "title": "吉萨大金字塔 · 约公元前2500年",
+   "caption": "约公元前2500年。胡夫金字塔矗立在沙漠边缘，浅色包石映着阳光。"
+  }
+ },
+ "built/stonehenge": {
+  "sketch": {
+   "title": "巨石阵 · 约公元前2200年",
+   "caption": "约公元前2200年。巨石立柱与横梁勾勒出索尔兹伯里平原上空的天际。"
+  }
+ },
+ "built/gobekli-tepe": {
+  "sketch": {
+   "title": "哥贝克力石阵 · 约2010年",
+   "caption": "约2010年。哥贝克力石阵的丁字形石柱立在环形石墙之内。"
+  }
+ },
+ "built/abu-simbel": {
+  "sketch": {
+   "title": "阿布辛拜勒 · 约1850年",
+   "caption": "约1850年。阿布辛贝的巨型坐像从崖前积沙中显露出来。"
+  }
+ },
+ "built/great-wall": {
+  "sketch": {
+   "title": "长城 · 约1600年",
+   "caption": "约1600年。明代烽楼俯瞰沿陡峭山脊延伸的长城。"
+  }
+ },
+ "built/terracotta-army": {
+  "sketch": {
+   "title": "兵马俑 · 约1980年",
+   "caption": "约1980年。秦始皇陵兵马俑的发掘坑道中，陶俑排列成行。"
+  }
+ },
+ "built/borobudur": {
+  "sketch": {
+   "title": "婆罗浮屠 · 约1850年",
+   "caption": "约1850年。婆罗浮屠上层台地的钟形佛塔高出爪哇林海。"
+  }
+ },
+ "built/sigiriya": {
+  "sketch": {
+   "title": "锡吉里耶 · 约1900年",
+   "caption": "约1900年。狮子石爪标示着通向锡吉里耶岩顶的攀登入口。"
+  }
+ },
+ "built/ajanta": {
+  "sketch": {
+   "title": "阿旃陀石窟 · 约1900年",
+   "caption": "约1900年。阿旃陀佛堂内，雕刻石柱引向深处的佛塔。"
+  }
+ },
+ "built/rapa-nui-moai": {
+  "sketch": {
+   "title": "拉帕努伊的摩艾石像 · 约1500年",
+   "caption": "约1500年。摩艾石像立在祭台上，面向内陆，背朝大海。"
+  }
+ },
+ "built/nazca-lines": {
+  "sketch": {
+   "title": "纳斯卡线 · 约1930年",
+   "caption": "约1930年。浅色线条在深色荒漠地表勾出蜂鸟的轮廓。"
+  }
+ },
+ "built/mogao-caves": {
+  "sketch": {
+   "title": "莫高窟 · 约1900年",
+   "caption": "约1900年。莫高窟中，彩绘与泥塑构成佛像及四壁人物。"
+  }
+ },
+ "built/suez-canal": {
+  "sketch": {
+   "title": "苏伊士运河 · 约1870年",
+   "caption": "约1870年。蒸汽船驶过新开通的苏伊士运河，两岸是低矮沙堤。"
+  }
+ },
+ "built/panama-canal": {
+  "sketch": {
+   "title": "巴拿马运河 · 约1914年",
+   "caption": "约1914年。船只停在运河船闸的混凝土壁与成对闸门之间。"
+  }
+ },
+ "built/hadrians-wall": {
+  "sketch": {
+   "title": "哈德良长城 · 约200年",
+   "caption": "约200年。罗马北境石墙沿线，一座里堡嵌在墙体之中。"
+  }
+ },
+ "built/grand-canal": {
+  "sketch": {
+   "title": "大运河 · 约1750年",
+   "caption": "约1750年。漕船聚集在中国大运河一段繁忙的河道上。"
+  }
+ },
+ "built/newgrange": {
+  "sketch": {
+   "title": "纽格莱奇墓 · 约公元前3000年",
+   "caption": "约公元前3000年。冬至前后的细束阳光照进纽格莱奇石室。"
+  }
+ },
+ "built/carnac": {
+  "sketch": {
+   "title": "卡纳克巨石阵 · 约1800年",
+   "caption": "约1800年。一列列立石延伸过布列塔尼荒原。"
+  }
+ },
+ "built/mont-saint-michel": {
+  "sketch": {
+   "title": "圣米歇尔山 · 约1500年",
+   "caption": "约1500年。修道院与城墙围合的聚落高出潮间滩地。"
+  }
+ },
+ "built/lascaux": {
+  "sketch": {
+   "title": "拉斯科洞窟 · 约公元前15000年",
+   "caption": "约公元前15000年。公牛与马的彩绘沿着洞壁起伏展开。"
+  }
+ },
+ "built/altamira": {
+  "sketch": {
+   "title": "阿尔塔米拉洞窟 · 约公元前14000年",
+   "caption": "约公元前14000年。红黑色野牛占据阿尔塔米拉低矮的洞顶。"
+  }
+ },
+ "built/leshan-buddha": {
+  "sketch": {
+   "title": "乐山大佛 · 约1850年",
+   "caption": "约1850年。大佛依江岸崖壁凿成，双手放在膝上。"
+  }
+ },
+ "built/bamiyan": {
+  "sketch": {
+   "title": "巴米扬大佛 · 约630年",
+   "caption": "约630年。巴米扬崖壁的高大龛穴中立着佛像。"
+  }
+ },
+ "built/behistun": {
+  "sketch": {
+   "title": "贝希斯敦铭文 · 约1850年",
+   "caption": "约1850年。贝希斯敦石灰岩壁高处刻着王室浮雕与成行铭文。"
+  }
+ },
+ "built/serpent-mound": {
+  "sketch": {
+   "title": "巨蛇丘 · 约1900年",
+   "caption": "约1900年。土筑巨蛇沿山脊蜿蜒，下方是林木覆盖的谷地。"
+  }
+ },
+ "built/sanchi": {
+  "sketch": {
+   "title": "桑奇大塔 · 约100年",
+   "caption": "约100年。雕刻门楼通向桑奇大塔周围的环形步道。"
+  }
+ },
+ "built/meteora": {
+  "sketch": {
+   "title": "迈泰奥拉 · 约1550年",
+   "caption": "约1550年。修道院坐落在陡峭砂岩柱的顶端。"
+  }
+ },
+ "built/khajuraho": {
+  "sketch": {
+   "title": "克久拉霍 · 约1100年",
+   "caption": "约1100年。成簇的砂岩尖塔高出坎达里亚·摩诃提婆神庙的台基。"
+  }
+ },
+ "built/konark": {
+  "sketch": {
+   "title": "科纳克太阳神庙 · 约1900年",
+   "caption": "约1900年。科纳克太阳神庙基座旁保留着雕刻石轮。"
+  }
+ },
+ "built/ellora": {
+  "sketch": {
+   "title": "埃洛拉石窟 · 约1850年",
+   "caption": "约1850年。埃洛拉大庭院内，一座独立神庙由整块山岩凿出。"
+  }
+ },
+ "built/krak-des-chevaliers": {
+  "sketch": {
+   "title": "骑士堡 · 约1250年",
+   "caption": "约1250年。重重城墙守护着城堡内院与高塔。"
+  }
+ },
+ "built/ait-benhaddou": {
+  "sketch": {
+   "title": "阿伊特本哈杜 · 约1900年",
+   "caption": "约1900年。阿伊特本哈杜的土筑塔楼与民居聚集在渡河处上方。"
+  }
+ },
+ "built/kuelap": {
+  "sketch": {
+   "title": "库埃拉普 · 约1400年",
+   "caption": "约1400年。一道狭窄入口穿过库埃拉普厚重的石砌围墙。"
+  }
+ },
+ "built/hoover-dam": {
+  "sketch": {
+   "title": "胡佛水坝 · 约1936年",
+   "caption": "约1936年。弧形混凝土大坝横跨科罗拉多河上的黑峡谷。"
+  }
+ },
+ "built/three-gorges-dam": {
+  "sketch": {
+   "title": "三峡大坝 · 约2010年",
+   "caption": "约2010年。长长的混凝土坝体横断长江，泄洪孔与厂房沿坝排列。"
+  }
+ },
+ "built/masada": {
+  "sketch": {
+   "title": "马萨达 · 约公元前10年",
+   "caption": "约公元前10年。希律王北宫的层层台地沿荒漠高原边缘下降。"
+  }
+ },
+ "built/catalhoyuk": {
+  "sketch": {
+   "title": "恰塔霍裕克 · 约公元前6500年",
+   "caption": "约公元前6500年。梯子连接着紧密排列的泥砖房平屋顶。"
+  }
+ },
+ "built/shwedagon": {
+  "sketch": {
+   "title": "仰光大金塔 · 约1900年",
+   "caption": "约1900年。镀金佛塔耸立在山顶平台的小佛殿之上。"
+  }
+ },
+ "built/baalbek": {
+  "sketch": {
+   "title": "巴勒贝克 · 约1900年",
+   "caption": "约1900年。朱庇特神庙石台上仍立着六根巨柱。"
+  }
+ },
+ "built/carcassonne": {
+  "sketch": {
+   "title": "卡尔卡松 · 约1300年",
+   "caption": "约1300年。两重城墙环绕卡尔卡松山城。"
+  }
+ },
+ "built/mahabodhi": {
+  "sketch": {
+   "title": "摩诃菩提寺 · 约1900年",
+   "caption": "约1900年。菩提伽耶的高砖塔立在圣树旁。"
+  }
+ },
+ "built/big-wild-goose-pagoda": {
+  "sketch": {
+   "title": "大雁塔 · 约1750年",
+   "caption": "约1750年。方形砖塔分七层逐级收分，高出寺院屋顶。"
+  }
+ },
+ "built/djinguereber": {
+  "sketch": {
+   "title": "津加里贝尔清真寺 · 约1900年",
+   "caption": "约1900年。廷巴克图清真寺的土墙上伸出木梁。"
+  }
+ },
+ "built/templo-mayor": {
+  "sketch": {
+   "title": "大神庙 · 约1500年",
+   "caption": "约1500年。特诺奇蒂特兰主神庙的双阶梯上方并列着两座神殿。"
+  }
+ },
+ "built/erdene-zuu": {
+  "sketch": {
+   "title": "额尔德尼召 · 约1900年",
+   "caption": "约1900年。蒙古草原上的寺院围墙以白色佛塔相间。"
+  }
+ },
+ "built/cheomseongdae": {
+  "sketch": {
+   "title": "瞻星台 · 约1900年",
+   "caption": "约1900年。小型石筑瞻星台独立在开阔天空下。"
+  }
+ },
+ "built/seokguram": {
+  "sketch": {
+   "title": "石窟庵 · 约1900年",
+   "caption": "约1900年。花岗岩坐佛端坐在环绕雕像的圆形石室中。"
+  }
+ },
+ "built/haamonga": {
+  "sketch": {
+   "title": "毛伊的担子 · 约1800年",
+   "caption": "约1800年。两根珊瑚石立柱托起哈阿蒙加毛伊石门的横梁。"
+  }
+ },
+ "built/sacsayhuaman": {
+  "sketch": {
+   "title": "萨克塞瓦曼 · 约1500年",
+   "caption": "约1500年。巨型石块严密拼合，构成库斯科上方的折线台墙。"
+  }
+ },
+ "built/prambanan": {
+  "sketch": {
+   "title": "普兰巴南 · 约1955年",
+   "caption": "约1955年。残存塔身与散落石块展现出普兰巴南的规模。"
+  }
+ },
+ "built/brihadisvara": {
+  "sketch": {
+   "title": "布里哈迪斯瓦拉神庙 · 约1100年",
+   "caption": "约1100年。坦贾武尔神庙庭院中，花岗岩维摩那塔高耸而立。"
+  }
+ },
+ "built/lighthouse-alexandria": {
+  "sketch": {
+   "title": "亚历山大灯塔 · 约100年",
+   "caption": "约100年。法罗斯灯塔标示着亚历山大港的入口。"
+  }
+ },
+ "built/temple-of-artemis": {
+  "sketch": {
+   "title": "阿耳忒弥斯神庙 · 约公元前300年",
+   "caption": "约公元前300年。以弗所阿耳忒弥斯神庙四周环列大理石柱。"
+  }
+ },
+ "built/mausoleum-halicarnassus": {
+  "sketch": {
+   "title": "摩索拉斯王陵 · 约公元前300年",
+   "caption": "约公元前300年。毛索洛斯陵墓高台上立着柱廊与阶梯状屋顶。"
+  }
+ },
+ "built/colossus-rhodes": {
+  "sketch": {
+   "title": "罗得岛太阳神巨像 · 约公元前250年",
+   "caption": "约公元前250年。赫利俄斯青铜巨像高出罗得岛城中的建筑。"
+  }
+ },
+ "built/statue-of-zeus": {
+  "sketch": {
+   "title": "奥林匹亚宙斯像 · 约公元前400年",
+   "caption": "约公元前400年。奥林匹亚神庙深处，宙斯坐像占据高大空间。"
+  }
+ },
+ "built/ishtar-gate": {
+  "sketch": {
+   "title": "伊什塔尔城门 · 约公元前550年",
+   "caption": "约公元前550年。巴比伦城门表面覆着蓝釉砖与成行兽形浮雕。"
+  }
+ },
+ "built/notre-dame-paris": {
+  "sketch": {
+   "title": "巴黎圣母院 · 约1900年",
+   "caption": "约1900年。飞扶壁从大教堂高墙伸向河岸一侧。"
+  }
+ },
+ "built/st-peters": {
+  "sketch": {
+   "title": "圣彼得大教堂 · 约1700年",
+   "caption": "约1700年。柱廊弯曲环抱圣彼得大教堂前的广场。"
+  }
+ },
+ "built/versailles": {
+  "sketch": {
+   "title": "凡尔赛宫 · 约1700年",
+   "caption": "约1700年。宫殿长廊中，窗户与镜面沿两侧重复排列。"
+  }
+ },
+ "built/sydney-opera-house": {
+  "sketch": {
+   "title": "悉尼歌剧院 · 约1980年",
+   "caption": "约1980年。悉尼贝内朗角的白色贴砖壳顶高出港湾。"
+  }
+ },
+ "built/golden-gate-bridge": {
+  "sketch": {
+   "title": "金门大桥 · 约1940年",
+   "caption": "约1940年。悬索在两座橙色桥塔之间承托跨越海峡的桥面。"
+  }
+ },
+ "built/big-ben": {
+  "sketch": {
+   "title": "大本钟 · 约1860年",
+   "caption": "约1860年。钟楼高出威斯敏斯特宫的临河立面。"
+  }
+ },
+ "built/alhambra": {
+  "sketch": {
+   "title": "阿尔罕布拉宫 · 约1400年",
+   "caption": "约1400年。桃金娘庭院的长池映出拱廊与塔楼。"
+  }
+ },
+ "built/colosseum": {
+  "sketch": {
+   "title": "罗马斗兽场 · 约200年",
+   "caption": "约200年。层叠拱廊环绕罗马椭圆形竞技场。"
+  }
+ },
+ "built/parthenon": {
+  "sketch": {
+   "title": "帕特农神庙 · 约公元前400年",
+   "caption": "约公元前400年。多立克柱托起雅典娜神庙的屋顶与雕刻山墙。"
+  }
+ },
+ "built/hagia-sophia": {
+  "sketch": {
+   "title": "圣索菲亚大教堂 · 约1100年",
+   "caption": "约1100年。光线从查士丁尼大教堂穹顶下方进入。"
+  }
+ },
+ "built/dome-of-the-rock": {
+  "sketch": {
+   "title": "圆顶清真寺 · 约1900年",
+   "caption": "约1900年。八角形建筑的拱廊与瓷砖墙承托着耶路撒冷圣岩上方的穹顶。"
+  }
+ },
+ "built/mezquita": {
+  "sketch": {
+   "title": "科尔多瓦大清真寺 · 约1000年",
+   "caption": "约1000年。科尔多瓦礼拜大厅的双层拱券交替使用红色与浅色拱石。"
+  }
+ },
+ "built/kremlin": {
+  "sketch": {
+   "title": "莫斯科克里姆林宫 · 约1700年",
+   "caption": "约1700年。砖塔与教堂穹顶高出莫斯科河。"
+  }
+ },
+ "built/eiffel-tower": {
+  "sketch": {
+   "title": "埃菲尔铁塔 · 约1889年",
+   "caption": "约1889年。新建埃菲尔铁塔的铁格架从四座塔脚向上展开。"
+  }
+ },
+ "built/angkor-wat": {
+  "sketch": {
+   "title": "吴哥窟 · 约1600年",
+   "caption": "约1600年。莲花形塔尖高出寺庙长廊。"
+  }
+ },
+ "built/forbidden-city": {
+  "sketch": {
+   "title": "紫禁城 · 约1750年",
+   "caption": "约1750年。汉白玉台基将正殿托起在宫廷广场上方。"
+  }
+ },
+ "built/temple-of-heaven": {
+  "sketch": {
+   "title": "天坛 · 约1750年",
+   "caption": "约1750年。三重蓝瓦屋顶覆盖圆形大殿，下承汉白玉台基。"
+  }
+ },
+ "built/potala": {
+  "sketch": {
+   "title": "布达拉宫 · 约1750年",
+   "caption": "约1750年。白宫墙体与中央红宫铺展在拉萨红山之上。"
+  }
+ },
+ "built/todai-ji": {
+  "sketch": {
+   "title": "东大寺 · 约1750年",
+   "caption": "约1750年。大佛殿宽阔的木构立面位于开敞前庭之后。"
+  }
+ },
+ "built/taj-mahal": {
+  "sketch": {
+   "title": "泰姬陵 · 约1660年",
+   "caption": "约1660年。白色大理石陵墓坐落在花园尽端，紧邻亚穆纳河。"
+  }
+ },
+ "built/statue-of-liberty": {
+  "sketch": {
+   "title": "自由女神像 · 约1900年",
+   "caption": "约1900年。自由女神高举火炬，左侧抱着铭板，俯临港湾。"
+  }
+ },
+ "built/naqsh-e-jahan": {
+  "sketch": {
+   "title": "伊玛目广场 · 约1650年",
+   "caption": "约1650年。拱廊将伊斯法罕大广场围合在清真寺、宫殿与集市之间。"
+  }
+ },
+ "built/registan": {
+  "sketch": {
+   "title": "雷吉斯坦广场 · 约1700年",
+   "caption": "约1700年。三座经学院面向撒马尔罕的开敞广场。"
+  }
  }
 }

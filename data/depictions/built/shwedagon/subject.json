@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Shwedagon Pagoda — c. 1900",
+      "caption": "About 1900. The gilded stupa rises above smaller shrines on its hilltop platform.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Low diagonal terrace view broad bell-shaped golden stupa tapering into hti umbrella, smaller Burmese shrines, barefoot distant visitors, no generic Thai pagoda or modern skyline."
+    }
+  ]
+}

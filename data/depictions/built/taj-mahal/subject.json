@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1660,
+      "title": "Taj Mahal — c. 1660",
+      "caption": "About 1660. The marble tomb rises at the far end of its garden, beside the Yamuna.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique garden walkway viewpoint white marble mausoleum with large onion dome, four distinct minarets at platform corners, smaller domed kiosks, no mirrored duplicate towers or cemetery headstones."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Notre-Dame de Paris — c. 1900",
+      "caption": "About 1900. Flying buttresses reach from the cathedral's upper walls toward the riverbank.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "View from Seine southeast across water toward medieval Notre Dame apse, flying buttresses, west twin towers behind, modest medieval timber spire NOT tall nineteenth-century Viollet-le-Duc spire."
+    }
+  ]
+}

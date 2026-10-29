@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1850,
+      "title": "Ellora Caves — c. 1850",
+      "caption": "About 1850. A freestanding temple has been carved from the rock inside Ellora's great courtyard.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "High oblique view Kailasa temple cave16 within excavated rock court, Dravidian tower and stone bridge, continuous cliff enclosure visible; no assembled mountain-sized fantasy temple."
+    }
+  ]
+}

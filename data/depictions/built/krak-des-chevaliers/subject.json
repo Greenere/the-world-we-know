@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1250,
+      "title": "Krak des Chevaliers — c. 1250",
+      "caption": "About 1250. Concentric walls protect the castle's inner court and great towers.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Hilltop oblique exterior Crusader castle around1250, massive rounded towers, coherent inner and outer curtain walls, dry Syrian hills; no fairy-tale pointed roofs."
+    }
+  ]
+}

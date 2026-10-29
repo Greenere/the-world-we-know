@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -400,
+      "title": "Statue of Zeus at Olympia — c. 400 BCE",
+      "caption": "About 400 BCE. The seated Zeus fills the far end of his temple at Olympia.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "high",
+      "prompt": "Interior colonnade side view seated chryselephantine Zeus with ivory-toned skin and gold robe, throne, small winged Nike in right hand and staff in left, both arms anatomically coherent, no outdoor standing giant."
+    }
+  ]
+}

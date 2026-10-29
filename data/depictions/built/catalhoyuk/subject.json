@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -6500,
+      "title": "Çatalhöyük — c. 6500 BCE",
+      "caption": "About 6500 BCE. Ladders link the flat roofs of closely packed mudbrick houses.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Elevated intimate view Neolithic roofscape, adjoining mudbrick houses with roof openings and wooden ladders leading INSIDE openings, few small people, no streets or chimneys or metal tools."
+    }
+  ]
+}

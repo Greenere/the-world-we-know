@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Mogao Caves — c. 1900",
+      "caption": "About 1900. Pigment and clay give form to a Buddha and painted figures within a Mogao cave.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Interior intimate cave shrine: seated painted clay Buddha in niche, weathered Tang-style wall paintings, dim reflected doorway light; no giant exterior pagoda or modern electric lamps."
+    }
+  ]
+}

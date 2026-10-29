@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1980,
+      "title": "Terracotta Army — c. 1980",
+      "caption": "About 1980. Ranks of clay soldiers fill the excavated corridors of the First Emperor's burial army.",
+      "sources": [
+        "shiji"
+      ],
+      "confidence": "high",
+      "prompt": "Close elevated view into excavated Pit One, grey-brown terracotta warriors on same earthen floor, parallel rammed-earth partitions, some fragmented figures; no living soldiers or metal swords in every hand."
+    }
+  ]
+}

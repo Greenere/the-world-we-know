@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1300,
+      "title": "Carcassonne — c. 1300",
+      "caption": "About 1300. Two circuits of walls enclose the hilltop town of Carcassonne.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique hillside view double curtain walls and round towers with mostly low tile caps and some open tops, dense medieval roofs; no modern traffic or fanciful needle spires."
+    }
+  ]
+}

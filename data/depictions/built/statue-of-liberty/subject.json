@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Statue of Liberty — c. 1900",
+      "caption": "About 1900. Liberty holds her torch above the harbour, with a tablet against her left side.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low harbor boat view statue on masonry pedestal, RIGHT arm raised holding torch, LEFT arm cradles tablet, seven crown rays, early weathered green-brown copper, no modern Manhattan skyscrapers."
+    }
+  ]
+}

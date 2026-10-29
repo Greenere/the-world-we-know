@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1870,
+      "title": "Suez Canal — c. 1870",
+      "caption": "About 1870. A steamship passes between the low sandy banks of the new Suez Canal.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Bank-level diagonal long narrow sea-level canal, one 1870 screw steamship with auxiliary masts and funnel, small towpath figures, no locks or container ship."
+    }
+  ]
+}

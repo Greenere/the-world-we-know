@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Big Wild Goose Pagoda — c. 1750",
+      "caption": "About 1750. The square brick pagoda rises in seven diminishing storeys above the temple roofs.",
+      "sources": [
+        "xuanzang"
+      ],
+      "confidence": "high",
+      "prompt": "Low garden view Xi'an Great Wild Goose Pagoda, SEVEN stacked square tapering brick stories with restrained projecting ledges, no elaborate wooden upturned eaves on each level."
+    }
+  ]
+}

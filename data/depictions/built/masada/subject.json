@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -10,
+      "title": "Masada — c. 10 BCE",
+      "caption": "About 10 BCE. Terraces of Herod's northern palace descend the edge of the desert plateau.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Side high viewpoint northern palace three stepped terraces attached to cliff beneath plateau, Judean desert and Dead Sea distance, modest Roman colonnades, no medieval fortress."
+    }
+  ]
+}

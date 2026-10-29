@@ -1,0 +1,8 @@
+{
+  "subject": "built/khajuraho",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-29",
+  "prompt": "Use case: historical-scene. Create a landscape 3:2 architectural watercolor field sketch of Kandariya Mahadeva temple at Khajuraho, India, around 1100. WIDE DISTANT three-quarter view emphasizing the tall curving sandstone shikhara and progressively smaller clustered spires, stone platform, stairs and surrounding trees. The building is the sole subject. Stone wall ornament appears only as abstract small geometric texture, with NO visible human figures, NO figurative sculptures, NO nudity and NO people. Loose graphite construction lines, sepia ink hatching, muted ochre and grey-green watercolor washes, unfinished edges fading into bare cream paper. Coherent architectural perspective and solid geometry. No writing, labels, border or photographic rendering."
+}

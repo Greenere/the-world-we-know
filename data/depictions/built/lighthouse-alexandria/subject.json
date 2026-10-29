@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 100,
+      "title": "Lighthouse of Alexandria — c. 100",
+      "caption": "About 100. The Pharos tower marks the entrance to Alexandria's harbour.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "high",
+      "prompt": "From stone quay at tower foot looking upward, three diminishing stages square base octagonal middle cylindrical top, plausible fire beacon, Mediterranean ships distant; no modern lighthouse stripes."
+    }
+  ]
+}

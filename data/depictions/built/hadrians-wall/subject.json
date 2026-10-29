@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 200,
+      "title": "Hadrian's Wall — c. 200",
+      "caption": "About 200. A milecastle interrupts the stone wall along Rome's northern frontier.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Ridge-side view of Roman stone wall and small rectangular milecastle, believable connecting wall and gateway, rolling Northumberland, two distant Roman auxiliaries, no medieval crenellated fantasy castle."
+    }
+  ]
+}

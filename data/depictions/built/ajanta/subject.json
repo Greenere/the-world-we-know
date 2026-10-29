@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Ajanta Caves — c. 1900",
+      "caption": "About 1900. Carved columns lead toward a stupa inside one of Ajanta's Buddhist halls.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior Cave 19 chaitya, rock-cut ribbed vaulted ceiling, column aisles and stupa with Buddha image at end, slant daylight from entrance, no freestanding masonry cathedral."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Temple of Heaven — c. 1750",
+      "caption": "About 1750. Three blue roofs crown the circular hall on its marble terraces.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low three-quarter Hall of Prayer for Good Harvests, circular building with EXACTLY THREE diminishing blue conical tiled roofs, gold finial, red columns and three white circular terraces, no square pagoda."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1940,
+      "title": "Golden Gate Bridge — c. 1940",
+      "caption": "About 1940. Suspension cables carry the roadway between two orange towers above the strait.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide oblique coastal view TWO main Art Deco towers, sagging continuous main cables and vertical hangers correctly tied to level deck, fog on Marin headlands, no impossible extra spans."
+    }
+  ]
+}

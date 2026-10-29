@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Forbidden City — c. 1750",
+      "caption": "About 1750. Marble terraces lift the main ceremonial hall above the palace courtyard.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low diagonal courtyard Hall of Supreme Harmony Qing era, yellow double-eaved hip roof, red columns, THREE stacked white marble terraces with stairs and balustrades, no modern flag or tourists."
+    }
+  ]
+}

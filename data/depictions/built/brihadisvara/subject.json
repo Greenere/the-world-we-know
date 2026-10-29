@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1100,
+      "title": "Brihadisvara Temple — c. 1100",
+      "caption": "About 1100. The granite vimana dominates the temple court at Thanjavur.",
+      "sources": [
+        "chola-inscriptions"
+      ],
+      "confidence": "high",
+      "prompt": "Low oblique long courtyard view main pyramidal stepped Dravidian vimana capped rounded stone crown, warm granite, small devotees, no gaudy modern paint or entrance gopuram taller than shrine."
+    }
+  ]
+}

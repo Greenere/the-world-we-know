@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1850,
+      "title": "Borobudur — c. 1850",
+      "caption": "About 1850. Bell-shaped stupas rise above Borobudur's upper terraces and the forests of Java.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Terrace-level close view of perforated bell stupas with seated Buddha glimpsed inside one, central solid stupa behind, misty hills; weathered stone, no modern visitors."
+    }
+  ]
+}

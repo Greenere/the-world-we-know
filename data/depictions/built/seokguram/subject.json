@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Seokguram — c. 1900",
+      "caption": "About 1900. A granite Buddha sits within a circular chamber lined with carved figures.",
+      "sources": [
+        "seth-korea"
+      ],
+      "confidence": "high",
+      "prompt": "Frontal slightly offset interior artificial granite grotto, seated Buddha right hand reaching toward knee earth-touch gesture, lotus plinth and round halo, curved stone wall behind, no gold Thai Buddha."
+    }
+  ]
+}

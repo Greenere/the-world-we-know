@@ -3,6 +3,7 @@
 
 export const zhUi: Record<string, string> = {
   'Landscape study': '山水写生',
+  'Architectural study': '建筑写生',
   // Title and top bar
   'The World We Know': '山海所知',
   'Pick a viewpoint and a year to see how much of the world it knew.': '选一个视角和年份，看它所知晓的世界有多大。',

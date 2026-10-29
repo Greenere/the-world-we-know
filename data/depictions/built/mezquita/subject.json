@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1000,
+      "title": "Mezquita of Córdoba — c. 1000",
+      "caption": "About 1000. Red and pale voussoirs alternate across the double arches of Córdoba's prayer hall.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Interior diagonal forest of columns, lower horseshoe arches and upper semicircular arches coherently spanning same supports, alternating red and cream masonry, no later cathedral nave."
+    }
+  ]
+}

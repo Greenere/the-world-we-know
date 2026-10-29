@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1700,
+      "title": "Registan — c. 1700",
+      "caption": "About 1700. Three madrasas face the open square at Samarkand.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level diagonal from southwest Registan, Ulugh Beg west side, Sher Dor east opposite, Tilya Kori north with blue dome, coherent three-sided square and tiled portals, no fourth giant madrasa closing foreground."
+    }
+  ]
+}

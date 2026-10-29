@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 2010,
+      "title": "Göbekli Tepe — c. 2010",
+      "caption": "About 2010. T-shaped pillars stand within a circular stone enclosure at Göbekli Tepe.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Close archaeological view of excavated enclosure before modern canopy, two taller central T pillars, animal relief on one foreground pillar; no invented intact roofs, no Stonehenge lintels."
+    }
+  ]
+}

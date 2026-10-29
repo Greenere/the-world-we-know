@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -300,
+      "title": "Mausoleum at Halicarnassus — c. 300 BCE",
+      "caption": "About 300 BCE. A colonnade and stepped roof rise above Mausolus's high tomb platform.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "high",
+      "prompt": "Distant three-quarter reconstruction high rectangular stone podium, Ionic colonnade, stepped pyramidal roof and small four-horse chariot sculpture on top, city hills, not Egyptian pyramid."
+    }
+  ]
+}

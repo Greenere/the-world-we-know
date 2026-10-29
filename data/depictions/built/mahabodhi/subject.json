@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Mahabodhi Temple — c. 1900",
+      "caption": "About 1900. A tall brick tower rises beside the sacred tree at Bodh Gaya.",
+      "sources": [
+        "xuanzang"
+      ],
+      "confidence": "high",
+      "prompt": "Courtyard low three-quarter view pyramidal rectilinear Mahabodhi tower with tiers of niches and small corner towers, Bodhi foliage to side, no rounded Hindu shikhara or Chinese pagoda."
+    }
+  ]
+}

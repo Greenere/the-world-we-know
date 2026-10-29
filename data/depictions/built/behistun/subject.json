@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1850,
+      "title": "Behistun Inscription — c. 1850",
+      "caption": "About 1850. The royal relief and lines of inscriptions sit high on the limestone face at Behistun.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Close angled rock-face study of Darius relief with standing king and row bound figures, tiny indistinct cuneiform bands below, cliff texture and steep drop; no readable invented text."
+    }
+  ]
+}

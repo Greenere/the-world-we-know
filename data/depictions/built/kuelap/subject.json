@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1400,
+      "title": "Kuélap — c. 1400",
+      "caption": "About 1400. A narrow entrance cuts through Kuélap's massive stone enclosure.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Close upward view tall limestone enclosure wall and narrow tapering entry ramp on cloudforest ridge, rounded stone house bases glimpsed atop, no Inca polygonal masonry or pyramids."
+    }
+  ]
+}

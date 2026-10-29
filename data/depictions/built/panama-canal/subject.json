@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1914,
+      "title": "Panama Canal — c. 1914",
+      "caption": "About 1914. A ship waits between the concrete walls and paired gates of a canal lock.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "High oblique view Gatun original locks, rectangular chambers in straight sequence, coherent water levels and closed miter gate, period steam freighter, rainforest behind, no modern widened locks."
+    }
+  ]
+}

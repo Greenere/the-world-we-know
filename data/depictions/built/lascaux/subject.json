@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -15000,
+      "title": "Lascaux — c. 15000 BCE",
+      "caption": "About 15000 BCE. Painted bulls and horses follow the uneven surface of the cave wall.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Close interior study Hall of Bulls, ochre black animal outlines following limestone bulges, faint warm oil-lamp glow from offscreen; no writing, torches against paintings or modern handrails."
+    }
+  ]
+}

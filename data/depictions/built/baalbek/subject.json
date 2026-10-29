@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Baalbek — c. 1900",
+      "caption": "About 1900. Six great columns remain above the stone platform of Jupiter's temple.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low close view EXACTLY six surviving tall Corinthian columns in continuous row supporting entablature, broken huge blocks foreground, Lebanon hills, no intact invented complete temple."
+    }
+  ]
+}

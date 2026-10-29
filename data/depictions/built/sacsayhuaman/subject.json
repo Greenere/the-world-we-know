@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1500,
+      "title": "Sacsayhuamán — c. 1500",
+      "caption": "About 1500. Huge fitted stones form the zigzag terraces above Cusco.",
+      "sources": [
+        "cieza"
+      ],
+      "confidence": "high",
+      "prompt": "Close person-height view polygonal dry stone massive irregular blocks and zigzag corner, terraces behind, tiny Inca figure standing properly on ground, no mortar or brick courses."
+    }
+  ]
+}

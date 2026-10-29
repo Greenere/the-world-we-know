@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -14000,
+      "title": "Altamira — c. 14000 BCE",
+      "caption": "About 14000 BCE. Red and black bison occupy the low ceiling at Altamira.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Upward close view polychrome bison painted across naturally bulging low rock ceiling, charcoal outlines and red ochre bodies, no freestanding animals or modern gallery."
+    }
+  ]
+}

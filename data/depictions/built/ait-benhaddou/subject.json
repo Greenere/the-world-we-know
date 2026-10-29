@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Aït Benhaddou — c. 1900",
+      "caption": "About 1900. Earthen towers and houses cluster above the river crossing at Aït Benhaddou.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Riverbed low view stepped ksar, red earthen square towers with small geometric decoration, dry foothills, tiny pack animals, no European battlements or lush jungle."
+    }
+  ]
+}

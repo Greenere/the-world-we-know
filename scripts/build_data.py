@@ -1010,7 +1010,7 @@ DEPICTION_FORMATS = (".webp", ".png", ".jpg", ".jpeg")
 DEPICTION_SIZES = {"thumb": 200, "card": 720, "full": 1280}
 # What each kind of subject holds: a city has eras in time, from one fixed view; a journey has scenes,
 # each pinned to one of its stops; inventions and natural wonders have standalone studies.
-DEPICTION_KINDS = {"city": "eras", "journey": "scenes", "invention": "studies", "natural": "studies"}
+DEPICTION_KINDS = {"city": "eras", "journey": "scenes", "invention": "studies", "natural": "studies", "built": "studies"}
 
 
 def depiction_image(src: Path, out_dir: Path, item: str) -> dict[str, str]:
@@ -1043,6 +1043,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
                                                    journey: the `traveller` and `scenes` (each at a stop)
                                                    invention: `studies` of the object or process
                                                    natural: standalone landscape `studies`
+                                                   built: dated architectural `studies`
     data/depictions/<kind>/<id>/<item>.webp|png|jpg  the accepted picture (or <item>.placeholder.svg)
     data/depictions/<kind>/<id>/<item>.json          how it was made
 
@@ -1080,7 +1081,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
         ids = [e.get("id") for e in entries]
         for k, e in enumerate(entries):
             w = f"{where} {list_key}[{k}] {e.get('id')!r}"
-            needed = ("id", "title", "caption", "sources", "confidence", "prompt") + ({"city": ("from",), "journey": ("stop", "place"), "invention": (), "natural": ()}[kind])
+            needed = ("id", "title", "caption", "sources", "confidence", "prompt") + ({"city": ("from",), "journey": ("stop", "place"), "invention": (), "natural": (), "built": ("from",)}[kind])
             for key in needed:
                 if key not in e:
                     fail(f"{w}: missing {key}")
@@ -1676,6 +1677,7 @@ def main() -> int:
         "journey": {j["id"]: [st for st in j["stops"] if not st.get("waypoint")] for j in journeys},
         "invention": {inv["id"] for inv in inventions},
         "natural": {c["id"] for c in cities if c.get("kind") == "natural"},
+        "built": {c["id"] for c in cities if c.get("kind") == "built"},
     })
     for inv in inventions:
         if inv["id"] in pictured["invention"]:
@@ -1683,7 +1685,7 @@ def main() -> int:
     city_docs = []
     for c in cities:
         doc = {k: v for k, v in c.items() if k != "mid"}
-        picture_kind = "natural" if c.get("kind") == "natural" else "city"
+        picture_kind = c.get("kind") or "city"
         if c["id"] in pictured[picture_kind]:
             doc["pictures"] = pictured[picture_kind][c["id"]]
         doc["names"] = names.get(("city", c["id"]), [])

@@ -95,12 +95,12 @@ export interface Depiction {
   made?: {provider?: string; model?: string; date?: string};
 }
 
-export type DepictionKind = 'city' | 'journey' | 'invention' | 'natural';
+export type DepictionKind = 'city' | 'journey' | 'invention' | 'natural' | 'built';
 
 export interface DepictionDoc {
   kind: DepictionKind;
   id: string;
-  /** A city's eras, a journey's scenes, or standalone invention or landscape studies, in order. */
+  /** A city's eras, a journey's scenes, or standalone invention, landscape or architectural studies. */
   eras?: Depiction[];
   scenes?: Depiction[];
   studies?: Depiction[];
@@ -169,7 +169,7 @@ export interface City {
   names: NameEntry[];
   journeys: string[];
   region: number | null;
-  /** Number of city eras or natural-wonder studies in depictions/<kind>/<id>.json. */
+  /** Number of city eras or landmark studies in depictions/<kind>/<id>.json. */
   pictures?: number;
 }
 

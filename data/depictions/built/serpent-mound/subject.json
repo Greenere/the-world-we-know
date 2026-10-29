@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Serpent Mound — c. 1900",
+      "caption": "About 1900. An earthen serpent follows the ridge above the wooded valley.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "low",
+      "prompt": "Oblique elevated landscape of Great Serpent Mound Ohio, low smooth grassy undulating snake earthwork and coiled tail, open oval near head, wooded margins; not stone wall or giant sculpted reptile."
+    }
+  ]
+}

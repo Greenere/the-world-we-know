@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Konark Sun Temple — c. 1900",
+      "caption": "About 1900. A carved stone wheel survives at the base of Konark's sun temple.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Close low study ONE large fixed stone chariot wheel with eight major spokes attached vertically to temple plinth, intricate rim and hub, weathered masonry; no moving wagon or reconstructed intact tall sanctuary."
+    }
+  ]
+}

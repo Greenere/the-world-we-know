@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1930,
+      "title": "Nazca Lines — c. 1930",
+      "caption": "About 1930. A hummingbird takes shape in pale lines across the dark desert surface.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique aerial archaeological sketch of ONE Nazca hummingbird geoglyph, shallow pale continuous narrow paths on flat reddish gravel, surrounding faint straight lines; no giant raised sculpture or painted green bird."
+    }
+  ]
+}

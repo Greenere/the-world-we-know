@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1600,
+      "title": "Angkor Wat — c. 1600",
+      "caption": "About 1600. Lotus-shaped towers rise beyond the temple's long galleries.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique view along sandstone gallery toward central quincunx towers, Angkor Wat proper not Bayon faces, Buddhist monks small, tropical vegetation, no giant roots consuming whole temple."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Dome of the Rock — c. 1900",
+      "caption": "About 1900. An octagonal arcade and tiled walls support the dome above Jerusalem's sacred rock.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Oblique courtyard exterior Dome of Rock circa1900 with weathered GREY metal dome (not modern bright gold), octagonal Ottoman blue tile walls, pointed arcade foreground, no oversized mosque minarets."
+    }
+  ]
+}

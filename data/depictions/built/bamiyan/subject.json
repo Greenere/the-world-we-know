@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 630,
+      "title": "Buddhas of Bamiyan — c. 630",
+      "caption": "About 630. A standing Buddha fills a tall niche in the Bamiyan cliff.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low oblique view intact large western Buddha before destruction, robe pleats and muted pigment, central Afghan sandstone cliff and smaller cave openings, no giant seated Buddha."
+    }
+  ]
+}

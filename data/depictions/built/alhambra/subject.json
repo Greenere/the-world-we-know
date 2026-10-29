@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1400,
+      "title": "Alhambra — c. 1400",
+      "caption": "About 1400. A long pool reflects the arcades and tower of the Court of the Myrtles.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Courtyard-level asymmetrical view elongated rectangular pool, Comares tower beyond delicate arched portico, clipped myrtle borders, Nasrid stucco, no fountain lions mixed into this court."
+    }
+  ]
+}

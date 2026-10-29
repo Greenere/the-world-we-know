@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -400,
+      "title": "Parthenon — c. 400 BCE",
+      "caption": "About 400 BCE. Doric columns support the roof and sculpted pediment of Athena's temple.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Three-quarter low west-front view intact Parthenon with EIGHT front Doric columns, coherent pitched marble roof, restrained pigment on sculpture, no later mosque or modern ruins."
+    }
+  ]
+}

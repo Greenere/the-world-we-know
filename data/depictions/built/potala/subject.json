@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Potala Palace — c. 1750",
+      "caption": "About 1750. White walls and the red central palace spread across Lhasa's Red Hill.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide oblique from foot of hill, massive sloping white walls stepped into rock, central red palace and small gilded roofs, Tibetan settlement foreground, no fantasy needle spires or modern plaza."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1600,
+      "title": "Great Wall — c. 1600",
+      "caption": "About 1600. A Ming watchtower overlooks the wall as it follows a steep mountain ridge.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Eye level from parapet toward Ming brick watchtower and continuous ridge wall, properly supported stairs, northern China mountains; no skyline or modern railings."
+    }
+  ]
+}

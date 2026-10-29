@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1750,
+      "title": "Grand Canal — c. 1750",
+      "caption": "About 1750. Grain boats gather along a busy reach of China's Grand Canal.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Water-level from small boat near Huai'an, Qing grain barges with low cabins and furled sails beside stone quay, porters distant, no Venetian gondolas or ocean junks filling narrow canal."
+    }
+  ]
+}

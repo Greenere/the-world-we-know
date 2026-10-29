@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1900,
+      "title": "Cheomseongdae — c. 1900",
+      "caption": "About 1900. A small stone observatory stands alone against the open sky.",
+      "sources": [
+        "samguk-sagi"
+      ],
+      "confidence": "high",
+      "prompt": "Ground low close view Gyeongju bottle-shaped stone tower, curved stacked granite body, single square opening midheight and square crossed stone top, no telescope or domed roof."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1550,
+      "title": "Meteora — c. 1550",
+      "caption": "About 1550. A monastery occupies the summit of a steep sandstone pillar.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide neighboring-rock viewpoint Great Meteoron, compact stone monastery roofs on broad rock summit, other tall pillars receding, no fantasy bridges between towers."
+    }
+  ]
+}

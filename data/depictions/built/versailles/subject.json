@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1700,
+      "title": "Palace of Versailles — c. 1700",
+      "caption": "About 1700. Windows and mirrors repeat along the length of the palace gallery.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Interior Hall of Mirrors diagonal lengthwise view, tall arched windows on ONE side, matching arched mirrors opposite reflecting same room correctly, parquet floor and painted vault, no modern ropes or crowds."
+    }
+  ]
+}

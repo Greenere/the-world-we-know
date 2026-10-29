@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1955,
+      "title": "Prambanan — c. 1955",
+      "caption": "About 1955. The surviving towers and scattered stones record the scale of Prambanan.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground diagonal historical RUIN view central Shiva tower partly collapsed with lower carved base and rubble, Java landscape; avoid fully restored modern temple group for1900."
+    }
+  ]
+}

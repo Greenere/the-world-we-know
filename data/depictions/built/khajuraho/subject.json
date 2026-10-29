@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1100,
+      "title": "Khajuraho — c. 1100",
+      "caption": "About 1100. Clustered sandstone spires rise above the platform of Kandariya Mahadeva.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Wide three-quarter architectural view of clustered sandstone spires and platform, with ornament simplified into small geometric marks."
+    }
+  ]
+}

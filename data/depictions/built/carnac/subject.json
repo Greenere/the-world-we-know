@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1800,
+      "title": "Carnac stones — c. 1800",
+      "caption": "About 1800. Rows of standing stones recede across the Breton heath.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground-level diagonal view of uneven weathered granite menhirs in many parallel rows across heath, varying heights, sea haze; no lintels or circular Stonehenge layout."
+    }
+  ]
+}

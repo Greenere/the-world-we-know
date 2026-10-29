@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1936,
+      "title": "Hoover Dam — c. 1936",
+      "caption": "About 1936. The curved concrete dam spans Black Canyon above the Colorado River.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "High oblique downstream view complete concrete arch-gravity dam, crest across canyon with intake towers behind upstream side, powerhouse feet below, no modern bypass bridge."
+    }
+  ]
+}

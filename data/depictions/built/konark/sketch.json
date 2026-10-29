@@ -1,0 +1,11 @@
+{
+  "subject": "built/konark",
+  "era": "sketch",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-28",
+  "prompt": "Use case: historical-scene. Asset: built-landmark card illustration.\nONE landscape 3:2 architectural field-sketchbook page. Clearly visible loose graphite construction lines, quick sepia ink and parallel hatching, restrained uneven watercolor washes of ochre, grey-green and faded blue. Detail concentrated on the named structure; irregular unfinished edges fade into bare warm cream paper. An observed hand-drawn working sketch, NOT a photograph, glossy painting, digital render, fantasy concept art or infographic. One coherent perspective, believable load-bearing geometry and consistent scale. No border, binding, labels, captions, date, signature, watermark or readable text. Only tiny indistinct marks for inscriptions. No modern tourism infrastructure unless explicitly part of scene. People optional, small and appropriate to depicted date, never obligatory foreground explorer.\nSubject: Konark Sun Temple, approximately 1900.\nScene and viewpoint: Close low study ONE large fixed stone chariot wheel with eight major spokes attached vertically to temple plinth, intricate rim and hub, weathered masonry; no moving wagon or reconstructed intact tall sanctuary.",
+  "reference_sources": [
+    "https://www.unesco.org/en/articles/sun-temple-konarak"
+  ]
+}

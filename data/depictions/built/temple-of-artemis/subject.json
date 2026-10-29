@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -300,
+      "title": "Temple of Artemis — c. 300 BCE",
+      "caption": "About 300 BCE. Marble columns surround the temple of Artemis at Ephesus.",
+      "sources": [
+        "pliny"
+      ],
+      "confidence": "high",
+      "prompt": "Eye-level oblique approach enormous Ionic dipteral temple with two surrounding column rows, coherent pitched pediment roof and low wide steps, no Roman dome or Doric capitals."
+    }
+  ]
+}

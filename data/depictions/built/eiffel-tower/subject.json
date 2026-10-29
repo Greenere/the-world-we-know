@@ -1,0 +1,15 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": 1889,
+      "title": "Eiffel Tower — c. 1889",
+      "caption": "About 1889. Iron latticework opens above the four feet of the new Eiffel Tower.",
+      "sources": [
+        "draft"
+      ],
+      "confidence": "high",
+      "prompt": "Low close view from beneath one arch showing FOUR splayed iron legs meeting in coherent lattice tower, reddish-brown original paint, 1889 people and distant fair, no modern antennas."
+    }
+  ]
+}
