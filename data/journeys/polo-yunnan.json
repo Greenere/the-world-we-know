@@ -1,0 +1,35 @@
+{
+  "id": "polo-yunnan",
+  "name": "Marco Polo's mission to Yunnan",
+  "traveler": "Marco Polo, envoy of Kublai Khan",
+  "years": "c. 1277–1280",
+  "kind": "envoy",
+  "parent": "polo",
+  "fork": "Juju (Zhuozhou)",
+  "viewpoint": "rome",
+  "summary": "Kublai sends young Marco on a mission to the far south-west. His account follows the Yuan post road stage by stage: across the Yellow River to Xi'an, over the Qinling to Chengdu, through Tibetan borderlands wasted by war, to Yunnan, the old kingdom of Dali. Prince Mangala, whom he found ruling at Xi'an, died in 1280, so he went before then, perhaps around 1277.",
+  "source": "polo",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1277, "place": "Juju (Zhuozhou)", "lat": 39.49, "lon": 115.97, "note": "Where the roads part, he takes the western one."},
+    {"year": 1277, "place": "Taianfu (Taiyuan)", "lat": 37.87, "lon": 112.55, "note": "Vineyards, and workshops making arms for the Khan's armies.", "city": "taiyuan"},
+    {"year": 1277, "place": "Pianfu (Pingyang)", "lat": 36.09, "lon": 111.52, "note": "A great city of merchants and silk."},
+    {"year": 1277, "place": "The Caramoran (Yellow River)", "lat": 34.83, "lon": 110.3, "note": "Too wide and deep to bridge; he crosses by boat. Ginger and silk on the far bank.", "confidence": "medium"},
+    {"year": 1277, "place": "Kenjanfu (Xi'an)", "lat": 34.26, "lon": 108.94, "note": "Prince Mangala, the Khan's son, holds court in a palace outside the walls. Mangala died in 1280, so Marco came before then.", "city": "changan"},
+    {"year": 1278, "place": "Acbalec Manzi (Hanzhong)", "lat": 33.07, "lon": 107.03, "note": "Twenty days through the valleys of the Qinling, with forests full of 'lions' (tigers), bears and deer.", "confidence": "medium"},
+    {"year": 1278, "place": "Sindufu (Chengdu)", "lat": 30.66, "lon": 104.06, "note": "A great city crossed by wide rivers, with bridges roofed over, where merchants keep their stalls.", "city": "chengdu"},
+    {"year": 1278, "place": "Tebet", "lat": 30.0, "lon": 103.0, "note": "A country laid waste by Möngke's wars. Travellers burn green canes at night; they burst so loudly that wild beasts flee.", "confidence": "medium"},
+    {"year": 1278, "place": "Caindu (Xichang)", "lat": 27.9, "lon": 102.26, "note": "A lake that yields pearls, and cakes of salt stamped with the Khan's mark, used as money.", "confidence": "medium"},
+    {"year": 1278, "place": "The Brius (Jinsha River)", "lat": 26.1, "lon": 102.25, "note": "Gold dust in the river, which gave it its Chinese name, Jinsha, 'golden sand'.", "confidence": "medium"},
+    {"year": 1278, "place": "Yachi (Kunming)", "lat": 25.04, "lon": 102.7, "note": "A great city of merchants. Cowrie shells serve as money, and people eat raw meat.", "city": "kunming"},
+    {"year": 1278, "place": "Carajan (Dali)", "lat": 25.6, "lon": 100.2, "note": "Great serpents with jaws that could swallow a man: crocodiles. This was the old kingdom of Dali, which Kublai himself conquered in 1253.", "city": "dali"},
+    {"year": 1278, "place": "Zardandan (Yongchang)", "lat": 25.12, "lon": 99.16, "note": "A people who cover their teeth in gold. Near here, he says, twelve thousand of the Khan's horsemen beat the King of Mien and his war elephants; the History of Yuan dates the battle to 1277. Beyond lies Mien, whose capital Pagan he describes with two towers covered in gold and silver, taken by the Khan's army in 1287. Whether he ever went there is debated: no passage says he did, and the conquest came long after this mission."}
+  ],
+  "informs": [
+    {"region": "sichuan", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Sindufu and Carajan"},
+    {"viewpoint": "europe", "region": "sichuan", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Sindufu and Carajan"},
+    {"region": "tibet", "level": 1, "homeKnows": 1300, "confidence": "low", "note": "Tebet, by report"},
+    {"region": "burma", "level": 2, "homeKnows": 1300, "confidence": "low", "note": "Mien, by report"},
+    {"viewpoint": "europe", "region": "burma", "level": 2, "homeKnows": 1300, "confidence": "low", "note": "Mien, by report"}
+  ]
+}

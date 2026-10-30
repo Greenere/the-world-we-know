@@ -1,0 +1,1988 @@
+{
+  "traveller": "Marco Polo: Venetian man with warm light-olive skin, dark brown wavy hair, long straight nose and dark brows. At departure age17: slim, clean-shaven, simple brown wool tunic and muted rust cloak. During eastern travel age18–24: lean build and short dark beard emerging. In China age25–36: short dark beard, plain practical belted Yuan-period travel robe in muted brown or blue-grey, no royal insignia. At sea and home age37–44: weathered face, dark beard beginning to grey, practical travel clothes. Father Niccolo and uncle Maffeo are distinctly older bearded merchants, never Marco duplicates. Clothing adapts to climate. No European Renaissance hats or Qing queues.",
+  "scenes": [
+    {
+      "id": "venice-departure",
+      "stop": 0,
+      "place": "Venice",
+      "title": "Leaving Venice",
+      "caption": "In 1271, seventeen-year-old Marco left Venice with his father Niccolò and his uncle Maffeo. The brothers had already been to Kublai Khan's court, and were going back with his request for a hundred learned Christians and oil from Jerusalem.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quayside side view of young Marco lifting a cloth bundle into a low boat, two older Venetian merchants behind; thirteenth-century brick waterfront, no Renaissance palace or striped gondolier.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Quayside side view of young Marco lifting a cloth bundle into a low boat, two older Venetian merchants behind; thirteenth-century brick waterfront, no Renaissance palace or striped gondolier."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the brothers' first journey, Kublai's requests, and the departure with Marco.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "adriatic-deck",
+      "stop": 0,
+      "place": "Venice",
+      "title": "Across the Adriatic",
+      "caption": "They sailed down the Adriatic toward the Holy Land, the usual route for Venetian merchants heading east. On a merchant ship of the time, passengers shared the deck with cargo, rope and the crew working the lateen sails.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from within a modest Mediterranean merchant ship along deck past mast and rope coils toward distant low coast, single coherent hull and supported rigging, lateen sail partly overhead.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "View from within a modest Mediterranean merchant ship along deck past mast and rope coils toward distant low coast, single coherent hull and supported rigging, lateen sail partly overhead."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Prologue: voyage from Venice to Acre; shipboard details are contextual.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "acre-harbor",
+      "stop": 1,
+      "place": "Acre",
+      "title": "The harbour at Acre",
+      "caption": "Acre was the last great crusader port in the Holy Land, and the papal legate Teobaldo Visconti was there. The Polos went to him first, to ask leave to fetch the oil from Jerusalem.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low view across medieval Acre enclosed harbor, stone sea wall and modest square towers, varied small merchant vessels, no Ottoman domes or modern marina.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide low view across medieval Acre enclosed harbor, stone sea wall and modest square towers, varied small merchant vessels, no Ottoman domes or modern marina."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the Polos at Acre with the legate Teobaldo of Piacenza.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "sepulchre-oil",
+      "stop": 2,
+      "place": "Jerusalem",
+      "title": "Oil for the Khan",
+      "caption": "In Jerusalem they took oil from the lamp that burned at the Holy Sepulchre. Kublai had asked for it on their first visit, and they carried it all the way to his court.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate still life small plain stoppered glass oil vessel beside suspended metal sanctuary oil lamp, rough stone medieval church alcove; warm reflected flame, no modern restored shrine or readable text.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Intimate still life small plain stoppered glass oil vessel beside suspended metal sanctuary oil lamp, rough stone medieval church alcove; warm reflected flame, no modern restored shrine or readable text."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the oil from the lamp of the Sepulchre.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "acre-letters",
+      "stop": 3,
+      "place": "Acre",
+      "title": "Letters from the legate",
+      "caption": "Back in Acre, the legate gave them letters for the Khan, explaining that the Church still had no pope to send the learned men he wanted. The papal throne had then been empty for nearly three years.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Across a small wooden writing table, older cleric hands folded sealed parchment to young Marco, his father seated beside him, simple thirteenth-century stone chamber, anatomically clear hands, no legible script.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Across a small wooden writing table, older cleric hands folded sealed parchment to young Marco, his father seated beside him, simple thirteenth-century stone chamber, anatomically clear hands, no legible script."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the legate's letters; the vacancy of 1268–1271.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "ayas-road",
+      "stop": 4,
+      "place": "Ayas",
+      "title": "From the port to the road",
+      "caption": "At Ayas, news reached them that the legate had been elected Pope Gregory X. He called them back to Acre and sent two Dominican friars with them, but at Ayas the friars heard that the Mamluks had invaded Armenia, and turned back.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Elevated port-edge view packhorses leaving modest Cilician Armenian coastal warehouse toward dusty inland road, harbor behind, no giant fantasy fortress or modern saddle gear.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "Elevated port-edge view packhorses leaving modest Cilician Armenian coastal warehouse toward dusty inland road, harbor behind, no giant fantasy fortress or modern saddle gear."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: election of Gregory X; the two friars turn back.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "sivas-carpets",
+      "stop": 5,
+      "place": "Sivas",
+      "title": "Carpets of Turcomania",
+      "caption": "Crossing Turcomania, the Anatolian lands under Mongol rule, he wrote that the best and handsomest carpets in the world were woven there. He named Konya, Kayseri and Sivas as its chief cities.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close side view Anatolian weaver at vertical carpet loom, warp threads tensioned between wooden beams, hands tie wool knots, restrained geometric carpet pattern, thirteenth-century workshop, no power machinery.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Close side view Anatolian weaver at vertical carpet loom, warp threads tensioned between wooden beams, hands tie wool knots, restrained geometric carpet pattern, thirteenth-century workshop, no power machinery."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Turcomania.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "erzincan-cloth",
+      "stop": 6,
+      "place": "Arzinga (Erzincan)",
+      "title": "Cloth at Erzincan",
+      "caption": "At Arzinga, the modern Erzincan, he noted the best buckram in the world, a fine cotton cloth. The town also had hot springs, which he called the best baths anywhere.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Table-height merchant stall with folded pale tightly woven cloth, wooden measuring rod, rolled bundles tied with cord; eastern Anatolian stone doorway, no modern printed fabric or invented writing.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Table-height merchant stall with folded pale tightly woven cloth, wooden measuring rod, rolled bundles tied with cord; eastern Anatolian stone doorway, no modern printed fabric or invented writing."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Greater Armenia, Arzinga.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "erzurum-highland",
+      "stop": 7,
+      "place": "Erzurum",
+      "title": "Across the Armenian highlands",
+      "caption": "Greater Armenia was cold, high country, where he said even the Tartar armies could not stay the winter. Passing near a great mountain, he heard that Noah's ark rested on its summit.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Very wide snowy Armenian plateau trail near Erzurum, small three-man mounted caravan with young Marco amid local guides, dark mountain slopes, no literal Noah ark or oil wells.",
+      "traveller": true,
+      "composition": {
+        "focus": "landscape",
+        "view": "Very wide snowy Armenian plateau trail near Erzurum, small three-man mounted caravan with young Marco amid local guides, dark mountain slopes, no literal Noah ark or oil wells."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Greater Armenia; the mountain of the ark.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "tabriz-bazaar",
+      "stop": 8,
+      "place": "Tauris (Tabriz)",
+      "title": "The market of Tabriz",
+      "caption": "He described Tauris, now Tabriz, as a great city of trade. Goods came from India, Baghdad, Mosul and Hormuz, and Latin merchants, most of them Genoese, came to buy them.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level diagonal Ilkhanid Tabriz bazaar, brick vaults above stalls, bales and pottery, small Persian and Mediterranean merchants in natural activity, no Safavid blue monumental entrance.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Street-level diagonal Ilkhanid Tabriz bazaar, brick vaults above stalls, bales and pottery, small Persian and Mediterranean merchants in natural activity, no Safavid blue monumental entrance."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Tauris.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "tabriz-weighing",
+      "stop": 8,
+      "place": "Tauris (Tabriz)",
+      "title": "Weighing a purchase",
+      "caption": "Among the goods he listed at Tauris were silks, cloth of gold and precious stones. Deals like these would have been settled on a balance, with silver weighed rather than counted.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close tabletop brass two-pan balance suspended naturally from horizontal beam, small weights, wrapped silk sample and pouch of silver pieces, merchant fingertips at edge, all objects lie on table, no labels.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close tabletop brass two-pan balance suspended naturally from horizontal beam, small weights, wrapped silk sample and pouch of silver pieces, merchant fingertips at edge, all objects lie on table, no labels."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book I: Tauris; the weighing is contextual.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "saveh-tombs",
+      "stop": 9,
+      "place": "Saba (Saveh)",
+      "title": "The tombs shown at Saveh",
+      "caption": "At Saba, now Saveh, he was shown three handsome tombs said to hold the three Magi, their bodies still whole. He was told the three kings had set out from here to worship the newborn Christ.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Small plain Persian vaulted tomb interior, three simple grave markers, elderly guide gestures while young Marco listens in profile, interpretive modest brick architecture, no biblical apparition or ornate modern shrine.",
+      "traveller": true,
+      "composition": {
+        "focus": "architecture",
+        "view": "Small plain Persian vaulted tomb interior, three simple grave markers, elderly guide gestures while young Marco listens in profile, interpretive modest brick architecture, no biblical apparition or ornate modern shrine."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Saba and the three Magi.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "yazd-silk",
+      "stop": 10,
+      "place": "Yazd",
+      "title": "Silk from Yazd",
+      "caption": "He called Yazd a noble city of trade, where a silk cloth called yazdi was woven and carried to many markets. Beyond it, he wrote, the road crossed seven days of plain with only three places to stay.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Over-shoulder view Persian silk weaver at simple horizontal handloom, shimmering muted rust and cream fabric emerging under beam, adobe room, no modern Jacquard mechanism.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Over-shoulder view Persian silk weaver at simple horizontal handloom, shimmering muted rust and cream fabric emerging under beam, adobe room, no modern Jacquard mechanism."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Yasdi.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "kerman-embroidery",
+      "stop": 11,
+      "place": "Kerman",
+      "title": "Embroidery in Kerman",
+      "caption": "At Kerman, he noted that the women embroidered silk in many colours with animals and birds of every kind, very skilfully. He also described the falcons bred in its mountains.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close oblique hands stitching bird-and-vine embroidery onto wool cloth supported across lap, needle short and correctly held, muted medieval Persian colors, no oversized modern embroidery hoop.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Close oblique hands stitching bird-and-vine embroidery onto wool cloth supported across lap, needle short and correctly held, muted medieval Persian colors, no oversized modern embroidery hoop."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Kerman.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "kerman-turquoise",
+      "stop": 11,
+      "place": "Kerman",
+      "title": "Turquoise and worked steel",
+      "caption": "He recorded turquoise mined in Kerman's mountains, and veins of steel and ondanique, from which its smiths made bridles, saddles, swords and bows. Ondanique was probably a fine Indian steel.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet mineral and workshop still life rough turquoise pieces, a few polished cabochons and plain steel blade blank on leather-covered workbench, no faceted diamonds or modern tools.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Quiet mineral and workshop still life rough turquoise pieces, a few polished cabochons and plain steel blade blank on leather-covered workbench, no faceted diamonds or modern tools."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Kerman; ondanique.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "camadi-refuge",
+      "stop": 12,
+      "place": "Camadi",
+      "title": "Shelter after the raid",
+      "caption": "Near Camadi, raiders he called Caraonas fell on the caravan, under cover of a darkness he believed they raised by magic. The Polos escaped to a village called Conosalmi; most of their companions were killed or sold as slaves.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from adobe courtyard doorway, weary young Marco and two merchants bring pack animals inside, distant dusty plain beyond gate; aftermath and refuge, no combat or supernatural darkness or injured bodies.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "View from adobe courtyard doorway, weary young Marco and two merchants bring pack animals inside, distant dusty plain beyond gate; aftermath and refuge, no combat or supernatural darkness or injured bodies."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Camadi and the Caraonas.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "hormuz-harbor",
+      "stop": 13,
+      "place": "Hormuz",
+      "title": "Old Hormuz on the mainland",
+      "caption": "In 1272 Hormuz still stood on the mainland, near the mouth of the Minab river. He found a busy port for spices, pearls and horses bound for India, but so hot that in summer people lay in water up to their necks.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Broad waterline view thirteenth-century mainland Old Hormuz near Minab, low sunbaked houses and palm fringe, wooden Indian Ocean ships anchored off sandy shore, no later island Portuguese fortress.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Broad waterline view thirteenth-century mainland Old Hormuz near Minab, low sunbaked houses and palm fringe, wooden Indian Ocean ships anchored off sandy shore, no later island Portuguese fortress."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Hormuz; the old mainland site.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "hormuz-sewn-hull",
+      "stop": 13,
+      "place": "Hormuz",
+      "title": "Planks joined with cord",
+      "caption": "He distrusted the local ships: their planks were sewn together with twine made from coconut husk, without iron nails, and many were lost at sea. The Polos chose not to sail for China from here.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Extreme close oblique view curved wooden hull planks joined along a clean seam by coir stitching through paired holes, shipwright hands pulling cord, flat consistent plank curvature, no wire staples or impossible overlapping hull.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Extreme close oblique view curved wooden hull planks joined along a clean seam by coir stitching through paired holes, shipwright hands pulling cord, flat consistent plank curvature, no wire staples or impossible overlapping hull."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Hormuz, the sewn ships.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "kerman-return",
+      "stop": 14,
+      "place": "Kerman",
+      "title": "Back through Kerman",
+      "caption": "From Hormuz they went back to Kerman by another road, to go east overland. He wrote that the water on the way was bitter and green as grass, and drinking it brought on a flux.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Rear three-quarter medium view young Marco tightens packhorse load beside dry roadside well, barren Iranian ridge behind, no repeated embroidery shop or city panorama.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "Rear three-quarter medium view young Marco tightens packhorse load beside dry roadside well, barren Iranian ridge behind, no repeated embroidery shop or city panorama."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: the return from Hormuz to Kerman.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "cobinan-mirror",
+      "stop": 15,
+      "place": "Cobinan (Kuhbanan)",
+      "title": "A polished steel mirror",
+      "caption": "At Cobinan, now Kuhbanan, he saw large steel mirrors of fine quality. The town also made tutty, a zinc ointment for the eyes, by heating earth in a furnace and collecting what rose from it.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close still life small FLAT circular polished steel hand mirror on folded cloth, rough mineral powder in ceramic dish and simple wooden handle, one consistent elliptical perspective, no bent mirror or glass cosmetic packaging.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close still life small FLAT circular polished steel hand mirror on folded cloth, rough mineral powder in ceramic dish and simple wooden handle, one consistent elliptical perspective, no bent mirror or glass cosmetic packaging."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Cobinan.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "tun-dry-plain",
+      "stop": 16,
+      "place": "Tonocain (Tun)",
+      "title": "The country of the Dry Tree",
+      "caption": "Beyond the desert lay Tonocain, around the modern Tun, on a plain with a single great tree he called the Dry Tree. He wrote that Alexander had fought Darius there.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide Iranian steppe panorama with one old spreading plane tree near low adobe rest shelter, thin caravan track, pale distant hills, no fantasy assassin castle or historical battle enacted.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide Iranian steppe panorama with one old spreading plane tree near low adobe rest shelter, thin caravan track, pale distant hills, no fantasy assassin castle or historical battle enacted."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Tonocain and the Dry Tree.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "sheberghan-melons",
+      "stop": 17,
+      "place": "Sapurgan (Sheberghan)",
+      "title": "Melons dried for the road",
+      "caption": "He called the melons of Sapurgan, now Sheberghan, the best in the world. People cut them into strips like pumpkin, dried them in the sun and sold them far and wide, sweet as honey.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "low",
+      "prompt": "Low close view strips of melon drying on reed mats above clean packed earth, cut whole melon and knife resting safely on board, small courtyard sunlight, no modern trays or plastic.",
+      "traveller": false,
+      "composition": {
+        "focus": "food",
+        "view": "Low close view strips of melon drying on reed mats above clean packed earth, cut whole melon and knife resting safely on board, small courtyard sunlight, no modern trays or plastic."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Sapurgan.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "balkh-ruins",
+      "stop": 18,
+      "place": "Balkh",
+      "title": "The ruined city of Balkh",
+      "caption": "He called Balkh a noble and great city, now much reduced: the Tartars had sacked it, and many of its palaces and marble houses lay in ruins. He was told that Alexander had married Darius's daughter there.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low street-level view broken mudbrick walls and collapsed arches, weeds and quiet empty lane, distant standing modest brick minaret, no fresh destruction or corpses or modern ruins signage.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Low street-level view broken mudbrick walls and collapsed arches, weeds and quiet empty lane, distant standing modest brick minaret, no fresh destruction or corpses or modern ruins signage."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Balc.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "taloqan-salt",
+      "stop": 19,
+      "place": "Taican (Taloqan)",
+      "title": "Salt from the mountains",
+      "caption": "Near Taican, now Taloqan, he saw mountains made of salt, so hard it had to be dug with iron picks. He thought there was enough to supply the whole world until the end of time.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close ground-level salt blocks in woven panniers beside pale mineral-streaked hillside, wooden scoop and small pack donkey partly visible, no Himalayan pink-salt showroom or modern mine machinery.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close ground-level salt blocks in woven panniers beside pale mineral-streaked hillside, wooden scoop and small pack donkey partly visible, no Himalayan pink-salt showroom or modern mine machinery."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Taican, the salt mountains.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "badakhshan-recovery",
+      "stop": 20,
+      "place": "Badakhshan",
+      "title": "A pause in Badakhshan",
+      "caption": "Marco fell ill in Badakhshan and stayed about a year. He was advised to go up into the mountains, and the clean air there cured him.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet side view young Marco seated wrapped in plain wool cloak under timber porch, bowl beside him, mountain valley beyond, relaxed recuperating pose with both feet supported, no sickbed melodrama.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Quiet side view young Marco seated wrapped in plain wool cloak under timber porch, bowl beside him, mountain valley beyond, relaxed recuperating pose with both feet supported, no sickbed melodrama."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Badashan; Marco's year of illness.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "badakhshan-stones",
+      "stop": 20,
+      "place": "Badakhshan",
+      "title": "Lapis and balas rubies",
+      "caption": "Badakhshan's mines yielded balas rubies and the finest lapis lazuli. Only the king could dig the rubies, and anyone caught taking them out of the country risked death.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Natural-history mineral study on folded coarse cloth: rough deep blue lapis with subtle gold flecks and red spinel crystals in pale matrix, magnified main objects, no diamonds or modern precision-cut gems or labels.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Natural-history mineral study on folded coarse cloth: rough deep blue lapis with subtle gold flecks and red spinel crystals in pale matrix, magnified main objects, no diamonds or modern precision-cut gems or labels."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Badashan, the rubies and the azure.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "wakhan-river",
+      "stop": 21,
+      "place": "Vokhan (Wakhan)",
+      "title": "Up the Wakhan valley",
+      "caption": "From Badakhshan the road ran twelve days up the Oxus into Vokhan, now the Wakhan. He noted that its people had a language of their own and were brave fighters.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide elevated view winding cold river in Wakhan valley, terraced tiny fields and steep barren rock walls, very small pack caravan on plausible bank path, no road bridges or glaciers filling entire inhabited valley.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide elevated view winding cold river in Wakhan valley, terraced tiny fields and steep barren rock walls, very small pack caravan on plausible bank path, no road bridges or glaciers filling entire inhabited valley."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Vokhan.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "pamir-crossing",
+      "stop": 22,
+      "place": "The Pamir",
+      "title": "Crossing the high plain",
+      "caption": "Beyond the Wakhan the road climbed for three days to the Pamir, which he was told was the highest place in the world. For twelve days there was no dwelling, and fire burned so weakly that food would not cook properly.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide rear view small mounted caravan crossing broad treeless high-altitude plateau, young Marco among guides, snowy ranges beyond, low scrub and tiny smoky camp remnants, no oxygen bottles or prayer-flag tourist viewpoint.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "Wide rear view small mounted caravan crossing broad treeless high-altitude plateau, young Marco among guides, snowy ranges beyond, low scrub and tiny smoky camp remnants, no oxygen bottles or prayer-flag tourist viewpoint."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Pamier.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "pamir-sheep",
+      "stop": 22,
+      "place": "The Pamir",
+      "title": "The sheep with great horns",
+      "caption": "On the Pamir he saw great wild sheep whose horns were up to six palms long; shepherds made bowls from them. The Pamir argali is now named Ovis ammon polii, Marco Polo's sheep.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Natural-history close landscape study ONE male Pamir argali with huge outward curling horns, anatomically sound hooves firmly on stony slope, a smaller ewe distant, subdued fur and graphite detail, no fantasy ram horns intersecting skull.",
+      "traveller": false,
+      "composition": {
+        "focus": "animal",
+        "view": "Natural-history close landscape study ONE male Pamir argali with huge outward curling horns, anatomically sound hooves firmly on stony slope, a smaller ewe distant, subdued fur and graphite detail, no fantasy ram horns intersecting skull."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Pamier; named Ovis polii by Blyth in 1841.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "kashgar-gardens",
+      "stop": 23,
+      "place": "Kashgar",
+      "title": "Gardens around Kashgar",
+      "caption": "After the mountains came Kashgar, which he described as a land of gardens, vineyards and fine estates, growing cotton, flax and hemp. Its merchants travelled the world, and Nestorian Christians lived among the Muslims.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from shaded orchard edge toward grape trellises and irrigation channel, earthen Kashgar houses distance, fruit trees and cotton plot, no modern Islamic monumental gate.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "View from shaded orchard edge toward grape trellises and irrigation channel, earthen Kashgar houses distance, fruit trees and cotton plot, no modern Islamic monumental gate."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Cascar.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "yarkand-water",
+      "stop": 24,
+      "place": "Yarkand",
+      "title": "Water in the oasis",
+      "caption": "At Yarcan, now Yarkand, he wrote that many people had swollen legs or goitres, which he blamed on the water they drank. The oasis lived on its irrigation channels and gardens.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close courtyard-level view stone-lined irrigation channel feeding earthen garden beds, one local adult lifting a wooden bucket, mulberry shade and mudbrick wall, no medical spectacle or caricature.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Close courtyard-level view stone-lined irrigation channel feeding earthen garden beds, one local adult lifting a wooden bucket, mulberry shade and mudbrick wall, no medical spectacle or caricature."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book I: Yarcan; the irrigation is contextual.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "khotan-river",
+      "stop": 25,
+      "place": "Khotan",
+      "title": "Searching the riverbed",
+      "caption": "He described Khotan as a well-supplied province of cotton, flax, hemp and grain, its people traders and craftsmen. He did not mention its jade, which had gone from these riverbeds to China for more than a thousand years.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low bank viewpoint local stone gatherer crouching at clear shallow river, hands selecting pale rounded jade pebble from wet gravel, mountains distant, no scuba gear or dazzling enormous gems.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Low bank viewpoint local stone gatherer crouching at clear shallow river, hands selecting pale rounded jade pebble from wet gravel, mountains distant, no scuba gear or dazzling enormous gems."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book I: Cotan. Polo mentions river stones only at Pem and Charchan; Khotan's jade is contextual.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "khotan-jade",
+      "stop": 25,
+      "place": "Khotan",
+      "title": "A handful of jade",
+      "caption": "Khotan's jade is nephrite, found as rounded pebbles in the White Jade and Black Jade rivers. Worked by grinding with abrasive sand, it had reached Chinese courts for more than a thousand years before Polo passed.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close overhead field study naturally rounded nephrite pebbles in cream green and grey, one partly ground simple ring blank and abrasive grit on wooden board, no modern machine cutter or brilliant emerald crystals.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close overhead field study naturally rounded nephrite pebbles in cream green and grey, one partly ground simple ring blank and abrasive grit on wooden board, no modern machine cutter or brilliant emerald crystals."
+      },
+      "evidence": {
+        "basis": "context",
+        "passage": "Context: Khotan nephrite and the White and Black Jade rivers; not described by Polo.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "keriya-stones",
+      "stop": 26,
+      "place": "Pem (Keriya)",
+      "title": "Stones from the Keriya waters",
+      "caption": "At Pem, probably near modern Keriya, he noted jasper and chalcedony in the rivers. He also recorded that a wife whose husband was away more than twenty days could take another husband.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Waist-height view oasis market seller displaying modest smooth red-brown jasper and milky chalcedony river stones in shallow basket, buyer's open palm at edge, adobe courtyard, not jewel-encrusted royal treasure.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Waist-height view oasis market seller displaying modest smooth red-brown jasper and milky chalcedony river stones in shallow basket, buyer's open palm at edge, adobe courtyard, not jewel-encrusted royal treasure."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Pein.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "qiemo-oasis",
+      "stop": 27,
+      "place": "Charchan (Qiemo)",
+      "title": "A settlement at the sand's edge",
+      "caption": "Charchan, now Qiemo, was a sandy province, and he noted jasper and chalcedony carried from its rivers to China. When an army came through, people fled two or three days into the sand with their animals, to places where they knew of water.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide view thin oasis belt at edge of immense dunes, modest adobe homes, bundles packed beside small household herd, no soldiers or active battle, settlement is main subject.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide view thin oasis belt at edge of immense dunes, modest adobe homes, bundles packed beside small household herd, no soldiers or active battle, settlement is main subject."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Charchan.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "lop-supplies",
+      "stop": 28,
+      "place": "Lop (Charklik)",
+      "title": "Provisioning at Lop",
+      "caption": "Lop was the last town before the desert. Travellers rested there a week, then loaded a month's food for themselves and their animals: crossing the desert even at its narrowest, he said, took a month.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Three-quarter close caravan camp scene young Marco and guide secure leather water bags to Bactrian camel load, grain sack and balanced panniers, feet grounded and straps attached plausibly, no canteens or telescopes.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Three-quarter close caravan camp scene young Marco and guide secure leather water bags to Bactrian camel load, grain sack and balanced panniers, feet grounded and straps attached plausibly, no canteens or telescopes."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Lop.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "lop-night",
+      "stop": 28,
+      "place": "Lop (Charklik)",
+      "title": "Keeping together after dark",
+      "caption": "He reported that spirits in the desert called travellers by name, so that anyone who fell behind was lost. Caravans kept close together at night and hung bells on their animals so that no one would stray.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Long low dusk view compact line Bactrian camels moving along dune margin, small bells at necks, last light on sand, stars faint, no ghosts or glowing spirits or massive full moon.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "Long low dusk view compact line Bactrian camels moving along dune margin, small bells at necks, last light on sand, stars faint, no ghosts or glowing spirits or massive full moon."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: the desert of Lop and its voices.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "dunhuang-paper",
+      "stop": 29,
+      "place": "Shazhou (Dunhuang)",
+      "title": "Paper figures at Dunhuang",
+      "caption": "At Sachiu, now Dunhuang, he described funerals at which paper figures of men, horses and camels, and paper coins, were burned with the dead. People believed these would serve them in the next world.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet artisan tabletop small paper horse and camel models with simple bamboo framework, cut paper sheets and paste bowl, restrained ochre workshop light, no corpse or burning person or legible writing.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Quiet artisan tabletop small paper horse and camel models with simple bamboo framework, cut paper sheets and paste bowl, restrained ochre workshop light, no corpse or burning person or legible writing."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Tangut and Sachiu, funeral customs.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "jiuquan-rhubarb",
+      "stop": 30,
+      "place": "Succiu (Suzhou, Jiuquan)",
+      "title": "Rhubarb for distant markets",
+      "caption": "In the mountains of Succiu, now Jiuquan, he wrote, the finest rhubarb grew, and merchants carried it from there all over the world. Dried rhubarb root was a prized medicine as far away as Europe.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Botanical field sketch broad rhubarb leaves and thick reddish petioles beside cut dried medicinal root pieces on woven mat, rocky Gansu foothills behind, no modern labeled herbal packaging.",
+      "traveller": false,
+      "composition": {
+        "focus": "plant",
+        "view": "Botanical field sketch broad rhubarb leaves and thick reddish petioles beside cut dried medicinal root pieces on woven mat, rocky Gansu foothills behind, no modern labeled herbal packaging."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Sukchur.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "ganzhou-buddha",
+      "stop": 31,
+      "place": "Campichu (Ganzhou)",
+      "title": "A reclining Buddha at Ganzhou",
+      "caption": "The Polos spent a year at Campichu, now Zhangye, on business he did not explain. He described great monasteries with lying idols ten paces long; one such reclining Buddha, made around 1098, still lies in Zhangye's Great Buddha Temple.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior lateral view colossal reclining Buddha on right side within timber Buddhist hall, long body and head supported on hand, faded painted clay robes, tiny visitors for scale, no modern floodlights.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Interior lateral view colossal reclining Buddha on right side within timber Buddhist hall, long body and head supported on hand, faded painted clay robes, tiny visitors for scale, no modern floodlights."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book I: Campichu; the Dafo Temple is contextual.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "liangzhou-yak",
+      "stop": 32,
+      "place": "Ergiuul (Liangzhou)",
+      "title": "A shaggy pack animal",
+      "caption": "Around Ergiuul, now Wuwei, he described wild cattle as big as elephants, with long silky hair, and tame ones bred from them: yaks. He also brought the dried head and feet of a musk deer home to Venice.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "low",
+      "prompt": "Close natural-history side study shaggy dark yak with light pack saddle, four hooves firmly on rocky meadow, realistic bovine horns and heavy coat, high Gansu borderland pasture, no musk deer hybrid.",
+      "traveller": false,
+      "composition": {
+        "focus": "animal",
+        "view": "Close natural-history side study shaggy dark yak with light pack saddle, four hooves firmly on rocky meadow, realistic bovine horns and heavy coat, high Gansu borderland pasture, no musk deer hybrid."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Erguiul; the yak and the musk deer.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "ningxia-camel-hair",
+      "stop": 33,
+      "place": "Egrigaia (Ningxia)",
+      "title": "Cloth from camel hair",
+      "caption": "At Egrigaia, now Yinchuan, he praised the camlets woven from camel hair, the finest in the world, some of them white. Merchants carried them to Cathay and beyond.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "low",
+      "prompt": "Tabletop tactile study combed cream camel fibre, wooden spindle and folded soft woven cloth, blurred white Bactrian camel through doorway, no wool sheep fleece substituted.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Tabletop tactile study combed cream camel fibre, wooden spindle and folded soft woven cloth, blurred white Bactrian camel through doorway, no wool sheep fleece substituted."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Egrigaia.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "tenduc-christians",
+      "stop": 34,
+      "place": "Tenduc",
+      "title": "A Christian community on the steppe",
+      "caption": "At Tenduc, he wrote, the ruler was a Christian named George, of the Önggüt, whom he took for a descendant of Prester John. The Önggüt really were Christians of the Church of the East, and Chinese records name this prince Körgüz.",
+      "sources": [
+        "polo",
+        "yuanshi"
+      ],
+      "confidence": "low",
+      "prompt": "Modest steppe settlement chapel interior with simple East Syriac cross motif carved on stone, Mongol and Onggut adults in plain long robes, no Gothic cathedral or European royal throne.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Modest steppe settlement chapel interior with simple East Syriac cross motif carved on stone, Mongol and Onggut adults in plain long robes, no Gothic cathedral or European royal throne."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book I: Tenduc and King George; Yuanshi on Körgüz.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "chagannor-birds",
+      "stop": 35,
+      "place": "Chagannor",
+      "title": "Birds by the lake",
+      "caption": "At Chagannor, the Khan had a palace beside a lake full of swans, cranes and other birds. He came there to hunt with gyrfalcons and hawks, and had millet sown along the shores so the birds would have food.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low reed-edge view cranes standing in shallow lake and swans farther out, Mongolian grasslands under wide sky, distant tiny falconer only if needed, no foreground explorer or impossible bird anatomy.",
+      "traveller": false,
+      "composition": {
+        "focus": "animal",
+        "view": "Low reed-edge view cranes standing in shallow lake and swans farther out, Mongolian grasslands under wide sky, distant tiny falconer only if needed, no foreground explorer or impossible bird anatomy."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Chagan-nor.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "shangdu-arrival",
+      "stop": 36,
+      "place": "Shangdu (Xanadu)",
+      "title": "The summer capital",
+      "caption": "In 1275 the Polos reached Kublai at Shangdu, his summer capital, more than three years after leaving Venice. The Khan had sent riders forty days' journey out to meet them.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide approach from grassy plain toward Yuan Shangdu low perimeter walls and modest roofed palace complex, small mounted group with Marco age21, no Forbidden City or gigantic white European marble castle.",
+      "traveller": true,
+      "composition": {
+        "focus": "city",
+        "view": "Wide approach from grassy plain toward Yuan Shangdu low perimeter walls and modest roofed palace complex, small mounted group with Marco age21, no Forbidden City or gigantic white European marble castle."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: arrival at the court; Book I: Chandu.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "shangdu-cane",
+      "stop": 36,
+      "place": "Shangdu (Xanadu)",
+      "title": "The palace of cane",
+      "caption": "Inside Shangdu's park stood a palace of cane, gilded and lacquered, that could be taken apart and moved. He wrote that more than two hundred silk cords held it up against the wind.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close oblique structural study modest elegant Yuan cane pavilion corner, lacquered timber posts supporting split bamboo roof tiles, taut guy ropes tied to stakes, coherent load-bearing frame, no fantasy all-stone palace.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Close oblique structural study modest elegant Yuan cane pavilion corner, lacquered timber posts supporting split bamboo roof tiles, taut guy ropes tied to stakes, coherent load-bearing frame, no fantasy all-stone palace."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book I: Chandu, the cane palace.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "shangdu-audience",
+      "stop": 36,
+      "place": "Shangdu (Xanadu)",
+      "title": "An audience with Kublai",
+      "caption": "The Polos knelt before Kublai and gave him the Pope's letters and the oil from Jerusalem, and Niccolò presented his son. The Khan welcomed Marco and took him into his household.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior from behind three modest Venetian visitors facing mature Kublai seated on low raised cushion dais in Yuan hall, Marco21 at side listening, Mongol robe and simple cap, respectful distant faces, no Qing throne or European crown.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Interior from behind three modest Venetian visitors facing mature Kublai seated on low raised cushion dais in Yuan hall, Marco21 at side listening, Mongol robe and simple cap, respectful distant faces, no Qing throne or European crown."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the audience with Kublai.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "khanbaliq-streets",
+      "stop": 37,
+      "place": "Khanbaliq (Beijing)",
+      "title": "Streets of the new capital",
+      "caption": "Kublai's new capital, Dadu, which Polo called Khanbaliq, was laid out on a grid, its streets so straight that one could see from gate to gate. He wrote that the whole city was planned like a chessboard.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide oblique Yuan Dadu street with broad earthen road, low tiled timber shopfronts and carts, distant palace wall, no Ming Forbidden City towers or Qing queues or modern paving.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Wide oblique Yuan Dadu street with broad earthen road, low tiled timber shopfronts and carts, distant palace wall, no Ming Forbidden City towers or Qing queues or modern paving."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the city of Taidu.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "khanbaliq-money",
+      "stop": 37,
+      "place": "Khanbaliq (Beijing)",
+      "title": "Paper accepted as money",
+      "caption": "He was amazed that the Khan's subjects accepted paper money, made from mulberry bark and stamped with the Khan's red seal. Anyone who forged it, he wrote, was put to death.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close desk-level Yuan paper money preparation, official hand presses square red seal onto fibrous rectangular note lying FLAT on table, other indistinct black printed notes nearby, no readable invented characters or modern banknotes.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close desk-level Yuan paper money preparation, official hand presses square red seal onto fibrous rectangular note lying FLAT on table, other indistinct black printed notes nearby, no readable invented characters or modern banknotes."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: how the Khan makes paper pass for money.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "khanbaliq-post",
+      "stop": 37,
+      "place": "Khanbaliq (Beijing)",
+      "title": "Fresh horses at a post station",
+      "caption": "He described the Khan's post roads, with stations every twenty-five or thirty miles keeping hundreds of horses ready. Riders changing horses at each station could carry a message more than two hundred miles in a day.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Courtyard side view Marco late20s in plain travel coat watching official courier exchange horses, groom holds fresh horse reins, low Yuan post station, coherent saddles and separate reins, no modern mailbags.",
+      "traveller": true,
+      "composition": {
+        "focus": "life",
+        "view": "Courtyard side view Marco late20s in plain travel coat watching official courier exchange horses, groom holds fresh horse reins, low Yuan post station, coherent saddles and separate reins, no modern mailbags."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the Khan's posts and runners.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    },
+    {
+      "id": "lugou-lions",
+      "stop": 38,
+      "place": "Pulisanghin (Lugou Bridge)",
+      "title": "The bridge and its stone lions",
+      "caption": "Ten miles from the capital he crossed a marble bridge over a river he called Pulisanghin, Persian for 'stone bridge', with carved lions along its parapets. He counted twenty-four arches; the Lugou Bridge has eleven, and English speakers still call it the Marco Polo Bridge.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low eye-level along Lugou Bridge stone balustrade with small carved guardian lions on posts, roadway securely supported and visible repeating low arches only to side, Yuan era no modern traffic, do not draw24arches.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Low eye-level along Lugou Bridge stone balustrade with small carved guardian lions on posts, roadway securely supported and visible repeating low arches only to side, Yuan era no modern traffic, do not draw24arches."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the river Pulisanghin and its bridge.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "zhuozhou-fork",
+      "stop": 39,
+      "place": "Juju (Zhuozhou)",
+      "title": "Where the roads divide",
+      "caption": "A little beyond the bridge was Juju, now Zhuozhou, where, he wrote, the roads parted. One ran west through Cathay toward Tibet and Yunnan; the other ran south-east to Manzi, the former Song lands.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Over-shoulder view Marco around28 and mounted guide at unmarked fork of two earthen roads outside low town gate, one western track hills and one southeast canal plain, no written signposts or modern map.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "Over-shoulder view Marco around28 and mounted guide at unmarked fork of two earthen roads outside low town gate, one western track hills and one southeast canal plain, no written signposts or modern map."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Juju and the parting of the roads.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "hejian-silk",
+      "stop": 40,
+      "place": "Cacanfu (Hejian)",
+      "title": "Silk in Hejian",
+      "caption": "Going south toward Manzi, he passed Cacanfu, now Hejian, a city that made silk and cloth of silk and gold. He noted a church of Nestorian Christians there.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Interior side view Yuan-era silk reeling worker with small wooden reel and warm shallow basin of cocoons, thread continuous and plausible, timber window light, no industrial spinning machinery.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Interior side view Yuan-era silk reeling worker with small wooden reel and warm shallow basin of cocoons, thread continuous and plausible, timber window light, no industrial spinning machinery."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Cacanfu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "changlu-brine",
+      "stop": 41,
+      "place": "Cianglu (Changlu)",
+      "title": "Drawing salt from the earth",
+      "caption": "At Cianglu, now Changlu, he watched salt made from the earth: people heaped up salty soil, poured water over it, and collected the brine that drained out. The Changlu salt works remained among China's largest for centuries.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Medium side view simple earthen salt leaching installation, salty soil in raised shallow wooden trough, brine drains into ceramic vessel beneath, worker carries bucket, no modern pipes or chemical plant.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Medium side view simple earthen salt leaching installation, salty soil in raised shallow wooden trough, brine drains into ceramic vessel beneath, worker carries bucket, no modern pipes or chemical plant."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book II: Cianglu, salt-making; the later salt works are contextual.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "changlu-pan",
+      "stop": 41,
+      "place": "Cianglu (Changlu)",
+      "title": "Crystals in the salt pan",
+      "caption": "The brine was then boiled in great iron pans until the salt crystallised, white and fine. He noted that the trade brought the Khan a large revenue.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close low view shallow rectangular iron evaporation pan above brick hearth, thin steam, salt crystals gathered at one edge with wooden rake, coherent level liquid surface, no giant bubbling cauldron.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close low view shallow rectangular iron evaporation pan above brick hearth, thin steam, salt crystals gathered at one edge with wooden rake, coherent level liquid surface, no giant bubbling cauldron."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Cianglu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "jining-canal",
+      "stop": 42,
+      "place": "Sinjumatu (Jining)",
+      "title": "A waterway joining north and south",
+      "caption": "At Sinjumatu, now Jining, he saw a river divided in two, one half flowing north toward Cathay and the other south toward Manzi. This was the summit of the Grand Canal, where Kublai's engineers were cutting new channels to carry grain to the capital.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Elevated riverbank sketch canal junction near Yuan Jining, small flat-bottom cargo boats and workers repairing earth embankment, modest engineering, no modern concrete locks or claim allmodernGrandCanalcomplete1282.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Elevated riverbank sketch canal junction near Yuan Jining, small flat-bottom cargo boats and workers repairing earth embankment, modest engineering, no modern concrete locks or claim allmodernGrandCanalcomplete1282."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book II: Sinjumatu; the Jizhou and Huitong canals (1283–1289) are contextual.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "huaian-crossing",
+      "stop": 43,
+      "place": "Coiganju (Huai'an)",
+      "title": "Crossing into Manzi",
+      "caption": "He crossed the Caramoran, the Mongols' 'Black River', as he called the Yellow River, which then reached the sea by way of the Huai. On the far bank lay Coiganju, now Huai'an, the gateway to Manzi.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from broad wooden ferry deck Marco and local passengers beside secured pack bundles, yellow-brown river and low far bank, ferry fully buoyant with plausible low gunwale, no standing people outside hull.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "View from broad wooden ferry deck Marco and local passengers beside secured pack bundles, yellow-brown river and low far bank, ferry fully buoyant with plausible low gunwale, no standing people outside hull."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the Caramoran and Coiganju.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "gaoyou-fish",
+      "stop": 44,
+      "place": "Cayu (Gaoyou)",
+      "title": "Fish beside the canal",
+      "caption": "At Cayu, now Gaoyou, the road ran along a stone causeway beside the canal, through wide water and marsh. He noted fish and game in great abundance.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground-level riverside study woven baskets of fresh modest carp and net drying on wooden poles, canal boat beyond, Yuan fishermen small background, no modern metal fish market counters.",
+      "traveller": false,
+      "composition": {
+        "focus": "food",
+        "view": "Ground-level riverside study woven baskets of fresh modest carp and net drying on wooden poles, canal boat beyond, Yuan fishermen small background, no modern metal fish market counters."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Cayu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "yangzhou-quay",
+      "stop": 45,
+      "place": "Yangiu (Yangzhou)",
+      "title": "Merchants at Yangzhou",
+      "caption": "Yangiu, now Yangzhou, was a great city ruling twenty-seven others, and he claimed to have governed it for three years on the Khan's orders. No Chinese record mentions him, and many scholars think he held a lesser post, perhaps in the salt administration.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "low",
+      "prompt": "Wide oblique busy Yuan Yangzhou canal quay, low warehouses and bales unloaded via gangplank, merchants ordinary scale, no Marco on governor throne or Qing scenic garden.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Wide oblique busy Yuan Yangzhou canal quay, low warehouses and bales unloaded via gangplank, merchants ordinary scale, no Marco on governor throne or Qing scenic garden."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Yanju; Pelliot and Haw on the governorship claim.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "zhenjiang-church",
+      "stop": 46,
+      "place": "Chinghianfu (Zhenjiang)",
+      "title": "A Christian church at Zhenjiang",
+      "caption": "At Chinghianfu, now Zhenjiang, he found two Nestorian churches built in 1278 by Mar Sargis, a Christian whom the Khan had made governor. A Chinese gazetteer of about 1333 confirms him, and credits him with seven churches, six of them around the city.",
+      "sources": [
+        "polo",
+        "zhishun-zhenjiang"
+      ],
+      "confidence": "high",
+      "prompt": "Quiet Yuan Jiangnan courtyard with modest timber-roofed East Syriac Christian meeting hall and plain cross over door, local adult worshippers, no Gothic cathedral or invented exact monumental facade.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Quiet Yuan Jiangnan courtyard with modest timber-roofed East Syriac Christian meeting hall and plain cross over door, local adult worshippers, no Gothic cathedral or invented exact monumental facade."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Chinghianfu; Zhishun Zhenjiang zhi on Mar Sargis.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "suzhou-canal",
+      "stop": 47,
+      "place": "Suju (Suzhou)",
+      "title": "A bridge in Suzhou",
+      "caption": "He described Suju, now Suzhou, as a very great city with six thousand stone bridges, high enough for a galley to pass under. Its people lived by trade and crafts.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Water-level view under edge of small stone arch bridge toward Yuan Suzhou canal houses, plain white plaster and dark tile, coherent arch springing on two banks, no modern tourism lantern rows.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Water-level view under edge of small stone arch bridge toward Yuan Suzhou canal houses, plain white plaster and dark tile, coherent arch springing on two banks, no modern tourism lantern rows."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Suju.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "suzhou-silk-shop",
+      "stop": 47,
+      "place": "Suju (Suzhou)",
+      "title": "Choosing a length of silk",
+      "caption": "So much silk was made around Suzhou, he wrote, that everyone was dressed in it, and great quantities went to market. He noted that its merchants were rich, but not men of war.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Side view Marco early30s feeling edge of folded silk while Chinese merchant unrolls fabric over counter, hands simple and separated, Yuan robes and caps, no Qing queues or modern measuring tape.",
+      "traveller": true,
+      "composition": {
+        "focus": "life",
+        "view": "Side view Marco early30s feeling edge of folded silk while Chinese merchant unrolls fabric over counter, hands simple and separated, Yuan robes and caps, no Qing queues or modern measuring tape."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Suju.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "hangzhou-waterways",
+      "stop": 48,
+      "place": "Quinsay (Hangzhou)",
+      "title": "Waterways of Hangzhou",
+      "caption": "He called Quinsay, now Hangzhou, 'beyond dispute the finest and noblest city in the world'. Its name came from xingzai, the 'temporary capital' of the fallen Song, and he counted twelve thousand bridges over its canals.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide elevated oblique late13c Hangzhou urban canal with several modest stone bridges at believable intervals, dense low tiled roofs and cargo boats, no thousands of literal bridges or modern WestLake skyline.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Wide elevated oblique late13c Hangzhou urban canal with several modest stone bridges at believable intervals, dense low tiled roofs and cargo boats, no thousands of literal bridges or modern WestLake skyline."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the city of Kinsay.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "hangzhou-market",
+      "stop": 48,
+      "place": "Quinsay (Hangzhou)",
+      "title": "A southern market",
+      "caption": "He described ten great market squares in Quinsay, each holding a market three days a week for forty or fifty thousand people. He listed fish brought fresh from the sea every day, game, and pears weighing ten pounds each.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Eye-level sheltered market lane, fish basket stall foreground, vegetables and ceramic bowls farther back, Yuan civilian shoppers in varied side/rear poses, no uniform exotic costumes or presentdayshop signs.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Eye-level sheltered market lane, fish basket stall foreground, vegetables and ceramic bowls farther back, Yuan civilian shoppers in varied side/rear poses, no uniform exotic costumes or presentdayshop signs."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Kinsay, its markets.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "hangzhou-lake",
+      "stop": 48,
+      "place": "Quinsay (Hangzhou)",
+      "title": "Boats on the lake",
+      "caption": "On West Lake, he wrote, pleasure boats with tables and painted cabins carried parties of friends, who could see the whole city and its palaces from the water. Fine houses and Buddhist monasteries stood all around the shore.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from under simple covered pleasure boat awning across West Lake, Marco early30s seated side silhouette with local companions, distant low shore pavilions and wooded hills, no modern skyscrapers or Qianlong-era marble boat.",
+      "traveller": true,
+      "composition": {
+        "focus": "landscape",
+        "view": "View from under simple covered pleasure boat awning across West Lake, Marco early30s seated side silhouette with local companions, distant low shore pavilions and wooded hills, no modern skyscrapers or Qianlong-era marble boat."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Kinsay, the lake.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "quzhou-hills",
+      "stop": 49,
+      "place": "Ghiuju (Quzhou)",
+      "title": "Toward the Fujian hills",
+      "caption": "From Quinsay the road south ran up into hill country, through towns he called Vuju and Ghiuju, now Wuzhou and Quzhou. He noted prosperous towns, plenty of silk, and canes of great size along the way.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "low",
+      "prompt": "Wide low view winding foot-and-packhorse trail among wooded southern Chinese hills, creek and small timber wayside shelter, tiny travellers, no modern terraced tea tourist road or hugeMingbridge.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide low view winding foot-and-packhorse trail among wooded southern Chinese hills, creek and small timber wayside shelter, tiny travellers, no modern terraced tea tourist road or hugeMingbridge."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Vuju, Ghiuju and the road to Fuju.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "jianou-chickens",
+      "stop": 50,
+      "place": "Quenlinfu (Jian'ou)",
+      "title": "The chickens with soft plumage",
+      "caption": "At Quenlinfu, now Jian'ou, he noted handsome stone bridges, ginger and galingale. He also described hens with no feathers, only a coat like a cat's fur: the breed now called the silkie.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close natural-history sketch two silkie chickens with soft fluffy white and grey plumage, small dark beaks and normal chicken legs standing in earth courtyard, ginger roots in basket side, no mammal fur anatomy.",
+      "traveller": false,
+      "composition": {
+        "focus": "animal",
+        "view": "Close natural-history sketch two silkie chickens with soft fluffy white and grey plumage, small dark beaks and normal chicken legs standing in earth courtyard, ginger roots in basket side, no mammal fur anatomy."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Quenlinfu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "fuzhou-sugar",
+      "stop": 51,
+      "place": "Fuju (Fuzhou)",
+      "title": "Sugar for trade",
+      "caption": "He described Fuju, now Fuzhou, as a great trading city, where ships brought pearls and precious stones from India, and sugar was made in enormous quantities. Nearby, he said, men from 'Babylon', meaning Egypt, had taught the people to refine it.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close workshop view sugarcane stalks, thick syrup in shallow pot and simple unglazed conical draining molds upright on stand, wooden tools, Yuan Fujian setting, no modern white sugar cubes or factory centrifuge.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Close workshop view sugarcane stalks, thick syrup in shallow pot and simple unglazed conical draining molds upright on stand, wooden tools, Yuan Fujian setting, no modern white sugar cubes or factory centrifuge."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Fuju and Unken.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "quanzhou-port",
+      "stop": 52,
+      "place": "Zaiton (Quanzhou)",
+      "title": "The port of Zaiton",
+      "caption": "He called Zaiton, now Quanzhou, one of the two greatest ports in the world. For every shipload of pepper that went to Alexandria for Christendom, he wrote, a hundred came to Zaiton.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "high",
+      "prompt": "Broad shore view Yuan Quanzhou estuary harbor, wooden seagoing Chinese junks with plausible battened sails and separate smaller craft, tiled warehouses and low pagoda inland, no Qing warjunk or gigantic Ming treasure ship.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Broad shore view Yuan Quanzhou estuary harbor, wooden seagoing Chinese junks with plausible battened sails and separate smaller craft, tiled warehouses and low pagoda inland, no Qing warjunk or gigantic Ming treasure ship."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Zaiton.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "quanzhou-cargo",
+      "stop": 52,
+      "place": "Zaiton (Quanzhou)",
+      "title": "Loading for the voyage",
+      "caption": "Kublai fitted out fourteen four-masted ships for the princess's voyage, some with crews of two hundred and fifty. He had them provisioned, Polo wrote, for two years at sea.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "high",
+      "prompt": "Low dock-level view stevedores roll tied ceramic storage jar carefully onto sturdy gangplank leading to ship opening, bundled cargo securely in hold, no impossible floating loads or modern pallet.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Low dock-level view stevedores roll tied ceramic storage jar carefully onto sturdy gangplank leading to ship opening, bundled cargo securely in hold, no impossible floating loads or modern pallet."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: the fitting out of the princess's fleet.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "kokochin-embarkation",
+      "stop": 52,
+      "place": "Zaiton (Quanzhou)",
+      "title": "The princess's escort",
+      "caption": "In 1291 the Polos sailed with Kököchin, a seventeen-year-old Mongol princess sent as a bride to the Ilkhan Arghun. A Yuan post-station record of 1290, found by Yang Zhijiu in 1941, names her three Persian envoys exactly as Polo does: Uladai, Abishqa and Khoja.",
+      "sources": [
+        "polo",
+        "yang-zhijiu"
+      ],
+      "confidence": "high",
+      "prompt": "Medium side deck view adult Mongol princess in modest Yuan silk robe and soft court cap seated under awning with attendants, Marco late30s consulting two Persian envoys at respectful distance, no romantic scene or Qingheaddress.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Medium side deck view adult Mongol princess in modest Yuan silk robe and soft court cap seated under awning with attendants, Marco late30s consulting two Persian envoys at respectful distance, no romantic scene or Qingheaddress."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: Cocachin and the envoys Oulatai, Apusca and Coja; Yang Zhijiu (1941).",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "champa-coast",
+      "stop": 53,
+      "place": "Ciamba (Champa)",
+      "title": "Along the coast of Champa",
+      "caption": "The fleet coasted south to Ciamba, the kingdom of Champa, which Marco had visited in 1285. Its king paid the Khan tribute in elephants and aloes-wood, and had, he said, 326 children.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "From ship offshore toward forested centralVietnam coast, small river mouth and low Cham brick temple tower inland, local fishing boats, no Angkor Wat skyline transplanted to beach.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "From ship offshore toward forested centralVietnam coast, small river mouth and low Cham brick temple tower inland, local fishing boats, no Angkor Wat skyline transplanted to beach."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Chamba.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "conson-islands",
+      "stop": 54,
+      "place": "Sondur and Condur (Côn Sơn)",
+      "title": "Sondur and Condur",
+      "caption": "Past Champa, he noted two islands he called Sondur and Condur, now the Côn Sơn islands. Later sailors knew them as Pulo Condore, a landmark on the route between China and the Malay world.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Very wide sea-level rocky wooded Con Son island profile, open blue-grey sea and cloud shadows, only small corner of ship rail foreground, no modern prison buildings or generic tropicalresort.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Very wide sea-level rocky wooded Con Son island profile, open blue-grey sea and cloud shadows, only small corner of ship rail foreground, no modern prison buildings or generic tropicalresort."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book III: Sondur and Condur.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "bintan-shallows",
+      "stop": 55,
+      "place": "Pentam (Bintan)",
+      "title": "Feeling a way through the shallows",
+      "caption": "Near Pentam, now Bintan, he wrote, the sea between the islands was so shallow, only four paces deep, that ships had to draw up their rudders. Beyond lay the strait leading to Sumatra.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close view from stern quarter Chinese seagoing junk, crew work wooden lifting tackle to raise large vertical stern rudder in shallow pale water, clearly connected ropes and blade, distant mangrove coast; no detached modern propeller.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "Close view from stern quarter Chinese seagoing junk, crew work wooden lifting tackle to raise large vertical stern rudder in shallow pale water, clearly connected ropes and blade, distant mangrove coast; no detached modern propeller."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Pentam.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "sumatra-wait",
+      "stop": 56,
+      "place": "Samara (Samudra), Sumatra",
+      "title": "Waiting for the monsoon",
+      "caption": "The fleet waited five months at Samara, on Sumatra, for the monsoon to turn. The party built a timber stockade against the man-eaters they had heard lived inland, and traded with the islanders for food.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Medium view Marco late30s mends travel bag under simple palm-thatch shelter, rain outside and anchored ships distant, mixed local and visiting sailors naturally at work, no threatening stereotypes.",
+      "traveller": true,
+      "composition": {
+        "focus": "life",
+        "view": "Medium view Marco late30s mends travel bag under simple palm-thatch shelter, rain outside and anchored ships distant, mixed local and visiting sailors naturally at work, no threatening stereotypes."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Java the Less, the kingdom of Samara.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "sumatra-rain",
+      "stop": 56,
+      "place": "Samara (Samudra), Sumatra",
+      "title": "The anchorage in rain",
+      "caption": "He called Sumatra 'Java the Less', and noted that from here the Pole Star could no longer be seen. He described the palm wine drawn from cut branches, and the sago flour of the neighbouring kingdom of Fansur.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Shore-level sheltered view tropical rain curtains over northern Sumatra anchorage, ships silhouettes beyond wet palm leaves, woven baskets raised on timber supports foreground, no shipbuilding lesson or giant waves inside calm bay.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Shore-level sheltered view tropical rain curtains over northern Sumatra anchorage, ships silhouettes beyond wet palm leaves, woven baskets raised on timber supports foreground, no shipbuilding lesson or giant waves inside calm bay."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Samara and Fansur.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "nicobar-coconuts",
+      "stop": 57,
+      "place": "Necuveram (Nicobar Islands)",
+      "title": "Coconuts on an island shore",
+      "caption": "Sailing north-west, they passed Necuveram, the Nicobar Islands, where he said people went naked and had no king. He listed red sandalwood, coconuts and brazilwood among its trees.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close botanical shoreline sketch split and whole mature coconuts beneath palm frond, fibrous husks and rounded stones, clear shallows and forest beyond; no people, modern tools or invented sandalwood labels.",
+      "traveller": false,
+      "composition": {
+        "focus": "plant",
+        "view": "Close botanical shoreline sketch split and whole mature coconuts beneath palm frond, fibrous husks and rounded stones, clear shallows and forest beyond; no people, modern tools or invented sandalwood labels."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Necuveram.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "ceylon-gems",
+      "stop": 58,
+      "place": "Seilan (Sri Lanka)",
+      "title": "Stones from Seilan",
+      "caption": "He wrote that Seilan, Sri Lanka, produced the finest rubies in the world, and that its king owned one a palm long, flawless and red as fire. Kublai, he said, had offered a city for it and been refused.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close view merchant's small cloth tray of natural corundum ruby and sapphire pebbles and rough crystals, simple metal balance nearby, Sri Lankan shaded veranda, no giant fully faceted modern gems.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close view merchant's small cloth tray of natural corundum ruby and sapphire pebbles and rough crystals, simple metal balance nearby, Sri Lankan shaded veranda, no giant fully faceted modern gems."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Seilan.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "kayal-divers",
+      "stop": 59,
+      "place": "Cail (Kayal), Maabar",
+      "title": "The pearl fishery",
+      "caption": "In Maabar, on the Gulf of Mannar, he described pearl divers going down from boats into four to twelve fathoms of water. They paid a tenth to the king and a share to the Brahmins who charmed the sharks so they would not attack.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Waterline side view small wooden pearl-diving boat, adult diver at surface grasping boat side with basket, crew helps from WITHIN hull, coastal shallows, no modern goggles scuba or diver floating above water.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Waterline side view small wooden pearl-diving boat, adult diver at surface grasping boat side with basket, crew helps from WITHIN hull, coastal shallows, no modern goggles scuba or diver floating above water."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Maabar, the pearl fishery.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "kayal-shells",
+      "stop": 59,
+      "place": "Cail (Kayal), Maabar",
+      "title": "Sorting the catch",
+      "caption": "He wrote that the king of Maabar wore a necklace of 104 large pearls and rubies, one for each prayer he said every day. The king allowed no large pearls to leave his kingdom.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close overhead shallow woven tray with opened pearl oysters wet nacre and few irregular small natural pearls, hands sorting shells on sand-covered mat, no piles of identical spherical jewels or modern pearl farm racks.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close overhead shallow woven tray with opened pearl oysters wet nacre and few irregular small natural pearls, hands sorting shells on sand-covered mat, no piles of identical spherical jewels or modern pearl farm racks."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Maabar, the king's pearls.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "comari-cape",
+      "stop": 60,
+      "place": "Comari (Kanyakumari)",
+      "title": "Rounding the southern cape",
+      "caption": "At Comari, Cape Comorin, he saw the Pole Star again for the first time since Java, just above the horizon. From here the ships turned north up the Malabar coast.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Distant sternward sea view low rocky Kanyakumari cape where ocean currents meet, one small sailboat near coast, natural rock islets, no modern Vivekananda memorial or giant statue.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "Distant sternward sea view low rocky Kanyakumari cape where ocean currents meet, one small sailboat near coast, natural rock islets, no modern Vivekananda memorial or giant statue."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Comari.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "quilon-pepper",
+      "stop": 61,
+      "place": "Coilum (Quilon)",
+      "title": "Pepper at Quilon",
+      "caption": "At Coilum, now Kollam, he described pepper gathered in May, June and July from vines planted and watered like crops. He also noted brazilwood and the best indigo, made from a herb soaked in water and dried in the sun.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close coastal garden study pepper vine climbing live support tree, pendant green pepper spikes, small woven tray dried peppercorns below, Kerala humid vegetation, no chili pepper plant or coffeeberries.",
+      "traveller": false,
+      "composition": {
+        "focus": "plant",
+        "view": "Close coastal garden study pepper vine climbing live support tree, pendant green pepper spikes, small woven tray dried peppercorns below, Kerala humid vegetation, no chili pepper plant or coffeeberries."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book III: Coilum.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "hormuz-arrival",
+      "stop": 62,
+      "place": "Hormuz",
+      "title": "Landfall in Persia",
+      "caption": "After eighteen months at sea the fleet reached Hormuz. Of some six hundred people who had sailed, he wrote, only eighteen survived, among them the princess and one of the three envoys.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Medium shore-level scene tired Marco around39 steps from small boat onto mainland Hormuz landing while companions unload light luggage, older weathered features, no celebratory crowd or corpses, no laterislandfort.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Medium shore-level scene tired Marco around39 steps from small boat onto mainland Hormuz landing while companions unload light luggage, older weathered features, no celebratory crowd or corpses, no laterislandfort."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: arrival in Persia.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "tabriz-passes",
+      "stop": 63,
+      "place": "Tauris (Tabriz)",
+      "title": "Tablets for the road west",
+      "caption": "Arghun had died, so the princess was married to his son Ghazan. The new Ilkhan Gaykhatu gave the Polos four golden tablets of authority, and while they were in Persia news came that Kublai himself had died.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close still life four modest metal travel-authority tablets on folded cloth, oblong rounded tops with suspension holes and indistinct engraved marks, worn leather pouch, no modern dogtags or readablefakeMongolian.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close still life four modest metal travel-authority tablets on folded cloth, oblong rounded tops with suspension holes and indistinct engraved marks, worn leather pouch, no modern dogtags or readablefakeMongolian."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue: Kiacatu's tablets; news of Kublai's death.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "trebizond-loss",
+      "stop": 64,
+      "place": "Trebizond",
+      "title": "Reduced baggage at Trebizond",
+      "caption": "At Trebizond, on the Black Sea, the Polos were robbed of part of their goods. Fifteen years later, Maffeo's will still recorded the property taken from them in the empire of Trebizond.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet harbor warehouse scene Marco40 and older companion examine opened half-empty cloth sacks beside securely stacked surviving baggage, Black Sea harbor doorway, no violent robbery reenactment.",
+      "traveller": true,
+      "composition": {
+        "focus": "life",
+        "view": "Quiet harbor warehouse scene Marco40 and older companion examine opened half-empty cloth sacks beside securely stacked surviving baggage, Black Sea harbor doorway, no violent robbery reenactment."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Venetian documents: Maffeo Polo's will (1310).",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "bosporus-passage",
+      "stop": 65,
+      "place": "Constantinople",
+      "title": "Through the Bosporus",
+      "caption": "From Trebizond they sailed along the Black Sea to Constantinople, where the Venetians had their own quarter. The book says almost nothing about this last stage; Marco was nearly home.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "View from merchant ship over low gunwale toward1295 Constantinople sea walls and Byzantine domes on hill, Hagia Sophia without minarets, no Ottoman skyline or modern suspension bridges.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "View from merchant ship over low gunwale toward1295 Constantinople sea walls and Byzantine domes on hill, Hagia Sophia without minarets, no Ottoman skyline or modern suspension bridges."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Prologue: Trebizond, Constantinople, Negroponte, Venice.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "negroponte-channel",
+      "stop": 66,
+      "place": "Negroponte",
+      "title": "The narrow channel at Negroponte",
+      "caption": "On the way home they called at Negroponte, the Venetian port on Euboea, beside the narrow Euripus strait. From here Venetian ships followed the coasts of Greece and Dalmatia up to Venice.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low shore view narrow Euripus channel and medieval Euboea waterfront with simple stone tower and small boats, distant modest crossing if visible, no Ottoman mosque or modern cable bridge.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Low shore view narrow Euripus channel and medieval Euboea waterfront with simple stone tower and small boats, distant modest crossing if visible, no Ottoman mosque or modern cable bridge."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Prologue: Negroponte; the sailing route is contextual.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "venice-home",
+      "stop": 67,
+      "place": "Venice",
+      "title": "Venice after twenty-four years",
+      "caption": "They reached Venice in 1295, twenty-four years after leaving; Marco was about forty-one. A story first printed in 1559 says even their relatives did not know them until they slit open their old coats and jewels spilled out.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Side-rear view weathered Marco41 with short dark beard flecked grey and travel cloak at Venetian waterside doorway, elderly father and uncle behind, modest medieval brick and timber buildings, no Renaissance palaces.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Side-rear view weathered Marco41 with short dark beard flecked grey and travel cloak at Venetian waterside doorway, elderly father and uncle behind, modest medieval brick and timber buildings, no Renaissance palaces."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Prologue; Ramusio (1559) for the homecoming story.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "venice-baggage",
+      "stop": 67,
+      "place": "Venice",
+      "title": "What came home",
+      "caption": "The book says they came home rich, and Venetian documents show Marco as a prosperous merchant for the rest of his life. In his will of 1324 he freed his servant Peter, 'of the Tartar race'.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet tabletop open worn leather bag, folded weathered robe, small cloth packet rough gems, simple metal weight and travel bowl; no jewels magically pouring from cut coat or enormous treasure hoard.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Quiet tabletop open worn leather bag, folded weathered robe, small cloth packet rough gems, simple metal weight and travel bowl; no jewels magically pouring from cut coat or enormous treasure hoard."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Marco Polo's will, 9 January 1324.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "genoa-dictation",
+      "stop": 68,
+      "place": "Genoa",
+      "title": "The journey becomes a book",
+      "caption": "Captured by the Genoese, perhaps at the battle of Curzola in 1298, he dictated his travels in prison to a fellow captive, the romance writer Rustichello of Pisa. On his deathbed, urged to take back its marvels, he is said to have replied that he had not told half of what he saw.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate side view Marco44 seated speaking naturally to middle-aged Rustichello writing with quill at rough table in simple stone chamber, slitwindow daylight, no iron cage torture or modern bound printed book, illegible handwritingonly.",
+      "traveller": true,
+      "composition": {
+        "focus": "people",
+        "view": "Intimate side view Marco44 seated speaking naturally to middle-aged Rustichello writing with quill at rough table in simple stone chamber, slitwindow daylight, no iron cage torture or modern bound printed book, illegible handwritingonly."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Prologue; Jacopo d'Acqui, Imago Mundi, for the deathbed words.",
+        "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
+      }
+    }
+  ]
+}

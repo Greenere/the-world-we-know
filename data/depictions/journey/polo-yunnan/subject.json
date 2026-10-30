@@ -1,0 +1,403 @@
+{
+  "traveller": "Marco Polo: Venetian man with warm light-olive skin, dark brown wavy hair, long straight nose and dark brows. At departure age17: slim, clean-shaven, simple brown wool tunic and muted rust cloak. During eastern travel age18–24: lean build and short dark beard emerging. In China age25–36: short dark beard, plain practical belted Yuan-period travel robe in muted brown or blue-grey, no royal insignia. At sea and home age37–44: weathered face, dark beard beginning to grey, practical travel clothes. Father Niccolo and uncle Maffeo are distinctly older bearded merchants, never Marco duplicates. Clothing adapts to climate. No European Renaissance hats or Qing queues.",
+  "scenes": [
+    {
+      "id": "western-road",
+      "stop": 0,
+      "place": "Juju (Zhuozhou)",
+      "title": "Taking the western road",
+      "caption": "Kublai sent Marco on a mission to the far south-west, probably around 1277. At Zhuozhou he took the western road, which he said ran for ten days through Cathay past fine cities, vineyards and mulberry groves.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Three-quarter rear view Marco23 riding small horse with Yuan guide onto dusty road toward distant western hills, cultivated plain and low village, no repeated main-route fork composition.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "Three-quarter rear view Marco23 riding small horse with Yuan guide onto dusty road toward distant western hills, cultivated plain and low village, no repeated main-route fork composition."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the mission to the west; Juju.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "taiyuan-vines",
+      "stop": 1,
+      "place": "Taianfu (Taiyuan)",
+      "title": "Vineyards at Taiyuan",
+      "caption": "At Taianfu, now Taiyuan, he noted vineyards, which he said were the only ones in the province of Cathay, and plenty of wine. The city also made weapons and equipment for the Khan's armies.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close vine-level view bunches of modest grapes on wooden trellis, Shanxi cultivated valley behind and ceramic harvesting basket, no European chateau or modern wire vineyard rows.",
+      "traveller": false,
+      "composition": {
+        "focus": "plant",
+        "view": "Close vine-level view bunches of modest grapes on wooden trellis, Shanxi cultivated valley behind and ceramic harvesting basket, no European chateau or modern wire vineyard rows."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Taianfu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "pingyang-merchants",
+      "stop": 2,
+      "place": "Pianfu (Pingyang)",
+      "title": "Silk merchants in Pingyang",
+      "caption": "At Pianfu, now Pingyang, he found a great city of merchants and craftsmen, with much silk. Carts and pack animals carried such goods west along the road toward Xi'an.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low shop-door viewpoint two Yuan merchants stack cloth bales onto small two-wheeled ox cart, consistent wheel axle and cargo support, earthen Shanxi street, no modern cart or giant silk banners.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Low shop-door viewpoint two Yuan merchants stack cloth bales onto small two-wheeled ox cart, consistent wheel axle and cargo support, earthen Shanxi street, no modern cart or giant silk banners."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book II: Pianfu; the carts are contextual.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "yellow-river-ferry",
+      "stop": 3,
+      "place": "The Caramoran (Yellow River)",
+      "title": "Across the Yellow River",
+      "caption": "Beyond a castle he called Caichu, he reached the Caramoran, the Yellow River, too wide and deep to bridge. He crossed by boat into a country of ginger, silk and game.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "From bow of broad wooden ferry looking toward muddy Yellow River banks, Marco23 seated beside tied packhorse with handler, plausible stable deck load, no impossible suspensionbridge.",
+      "traveller": true,
+      "composition": {
+        "focus": "travel",
+        "view": "From bow of broad wooden ferry looking toward muddy Yellow River banks, Marco23 seated beside tied packhorse with handler, plausible stable deck load, no impossible suspensionbridge."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Caichu and the Caramoran.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "river-ferry-gear",
+      "stop": 3,
+      "place": "The Caramoran (Yellow River)",
+      "title": "Ropes and river mud",
+      "caption": "Yellow River ferries had to cross a heavy, silt-laden current. Ferrymen worked them with long sweeps and ropes, and the crossings were kept running as stations on the Khan's post roads.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close observational study coiled hemp rope, wet wooden steering sweep resting through oarlock and muddy mooring post, water beyond, correct continuous rope and board perspective, no compass wheel or metal engine.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close observational study coiled hemp rope, wet wooden steering sweep resting through oarlock and muddy mooring post, water beyond, correct continuous rope and board perspective, no compass wheel or metal engine."
+      },
+      "evidence": {
+        "basis": "context",
+        "passage": "Context: Yuan ferries and post-road crossings; not described in detail by Polo.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "xian-palace",
+      "stop": 4,
+      "place": "Kenjanfu (Xi'an)",
+      "title": "Outside Prince Mangala's palace",
+      "caption": "At Kenjanfu, now Xi'an, he found Kublai's son Mangala ruling as prince from a great palace outside the city walls. Mangala died in 1280, which helps date Marco's journey to before then.",
+      "sources": [
+        "polo",
+        "yuanshi"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique approach modest Yuan princely palace outer courtyard near Xi'an, tiled timber hall over low rammed-earth platform and mounted officials, no Ming city wall gate or ForbiddenCity.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Oblique approach modest Yuan princely palace outer courtyard near Xi'an, tiled timber hall over low rammed-earth platform and mounted officials, no Ming city wall gate or ForbiddenCity."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Kenjanfu and Mangalai; Yuanshi on Mangala's death.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "qinling-valleys",
+      "stop": 5,
+      "place": "Acbalec Manzi (Hanzhong)",
+      "title": "Through the Qinling valleys",
+      "caption": "From Xi'an the road took twenty days through the Qinling, a country of mountains and valleys whose forests were full of 'lions', bears, lynx and deer. By lions he meant tigers.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide view from wooded hillside down narrow Qinling gorge, pack trail cut into SAFE broad ledge above river, tiny caravan, misty pines and deciduous trees, no fantasy hanging bridge.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide view from wooded hillside down narrow Qinling gorge, pack trail cut into SAFE broad ledge above river, tiny caravan, misty pines and deciduous trees, no fantasy hanging bridge."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Cuncun.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "chengdu-covered-bridge",
+      "stop": 6,
+      "place": "Sindufu (Chengdu)",
+      "title": "A bridge lined with shops",
+      "caption": "At Sindufu, now Chengdu, he described rivers half a mile wide flowing through the city, crossed by stone bridges. Each bridge had a wooden roof, painted red, on marble columns.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low riverbank diagonal view broad timber covered bridge on coherent stout stone piers, small shops beneath continuous tiled roof, navigable openings between piers, no bridge suspended without supports.",
+      "traveller": false,
+      "composition": {
+        "focus": "architecture",
+        "view": "Low riverbank diagonal view broad timber covered bridge on coherent stout stone piers, small shops beneath continuous tiled roof, navigable openings between piers, no bridge suspended without supports."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Sindafu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "chengdu-bridge-stalls",
+      "stop": 6,
+      "place": "Sindufu (Chengdu)",
+      "title": "Under the bridge roof",
+      "caption": "Along each bridge, he wrote, were rows of booths where merchants plied their trades, taken down at night. The Khan collected a toll on the goods that crossed.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Eye-level INTERIOR covered Chengdu bridge arcade, Marco24 walks past ceramic bowls and cloth stall, river glimpsed through side railing, sturdy beams and continuousfloor, no street sitting directlyonwater.",
+      "traveller": true,
+      "composition": {
+        "focus": "life",
+        "view": "Eye-level INTERIOR covered Chengdu bridge arcade, Marco24 walks past ceramic bowls and cloth stall, river glimpsed through side railing, sturdy beams and continuousfloor, no street sitting directlyonwater."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Sindafu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "bamboo-camp",
+      "stop": 7,
+      "place": "Tebet",
+      "title": "Bamboo in the campfire",
+      "caption": "In Tebet, a country laid waste by Möngke's wars, travellers burned green canes at night. Heated, the canes burst with such a bang that lions, bears and other beasts fled, and horses not used to it bolted.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low dusk campsite view two local guides tend small controlled fire with green bamboo sections using long stick, tethered horses safely distant, wooded Sichuan borderland, no exploding huge fireball or animals attacking.",
+      "traveller": false,
+      "composition": {
+        "focus": "life",
+        "view": "Low dusk campsite view two local guides tend small controlled fire with green bamboo sections using long stick, tethered horses safely distant, wooded Sichuan borderland, no exploding huge fireball or animals attacking."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Tebet.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "caindu-lake",
+      "stop": 8,
+      "place": "Caindu (Xichang)",
+      "title": "The lake at Caindu",
+      "caption": "In Caindu, around modern Xichang, he described a lake that produced pearls, which the Khan did not allow to be fished freely in case they lost their value. A mountain there yielded turquoise, also reserved for the Khan.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low lakeshore view Qionghai near Xichang, reeds and small wooden canoe, agricultural shore and layered mountains, no presentday hotels or TibetanPotala.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide low lakeshore view Qionghai near Xichang, reeds and small wooden canoe, agricultural shore and layered mountains, no presentday hotels or TibetanPotala."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Caindu.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "caindu-salt",
+      "stop": 8,
+      "place": "Caindu (Xichang)",
+      "title": "Salt cakes used in exchange",
+      "caption": "Instead of coins, people in Caindu used salt: brine boiled down and pressed into cakes, stamped with the Khan's mark. Eighty cakes, he said, bought a saggio of gold.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close palm-sized shallow rounded salt cakes arranged on plain woven mat with small balance, one cake in adult palm for scale, indistinct impressed mark only, no moderncoins or enormousloaves.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Close palm-sized shallow rounded salt cakes arranged on plain woven mat with small balance, one cake in adult palm for scale, indistinct impressed mark only, no moderncoins or enormousloaves."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Caindu, salt money.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "jinsha-gold",
+      "stop": 9,
+      "place": "The Brius (Jinsha River)",
+      "title": "Gold in the river gravel",
+      "caption": "He crossed a great river he called the Brius, in which, he said, gold dust was found in great quantity. It is the upper Yangtze, whose Chinese name, Jinsha, means 'golden sand'.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Low side view local adult washes fine river gravel in shallow wooden bowl at Jinsha riverbank, tiny subtle goldflecks notlarge nuggets, fast brown river and wooded slopes, no metallic prospecting sluice or Californian costume.",
+      "traveller": false,
+      "composition": {
+        "focus": "craft",
+        "view": "Low side view local adult washes fine river gravel in shallow wooden bowl at Jinsha riverbank, tiny subtle goldflecks notlarge nuggets, fast brown river and wooded slopes, no metallic prospecting sluice or Californian costume."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: the river Brius.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "kunming-market",
+      "stop": 10,
+      "place": "Yachi (Kunming)",
+      "title": "The market at Yachi",
+      "caption": "At Yachi, now Kunming, he found a great city of merchants and craftsmen, home to Muslims, Nestorian Christians and Buddhists. He noted that people ate meat raw, chopped and seasoned.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level Yuan Kunming market with low timber and tiled buildings, baskets of grain and cloth, diverse local merchants in plain eraappropriate dress, distant lake hills, no modern ethniccostumeparade.",
+      "traveller": false,
+      "composition": {
+        "focus": "city",
+        "view": "Street-level Yuan Kunming market with low timber and tiled buildings, baskets of grain and cloth, diverse local merchants in plain eraappropriate dress, distant lake hills, no modern ethniccostumeparade."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Carajan and Yachi.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "kunming-cowries",
+      "stop": 10,
+      "place": "Yachi (Kunming)",
+      "title": "Shells as money",
+      "caption": "In Yunnan, he wrote, money was white cowrie shells from the sea, eighty to a saggio of silver. Cowries stayed in use in Yunnan for centuries, long after paper money had spread through the rest of China.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Extreme close study small white cowrie shells with toothed slit undersides and smooth backs, adult hands count onto cloth beside modest rice measure, no generic clam shells or modern money.",
+      "traveller": false,
+      "composition": {
+        "focus": "object",
+        "view": "Extreme close study small white cowrie shells with toothed slit undersides and smooth backs, adult hands count onto cloth beside modest rice measure, no generic clam shells or modern money."
+      },
+      "evidence": {
+        "basis": "account-and-context",
+        "passage": "Book II: Yachi, cowrie money; its later use is contextual.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "dali-landscape",
+      "stop": 11,
+      "place": "Carajan (Dali)",
+      "title": "The old kingdom of Dali",
+      "caption": "Beyond Yachi lay Carajan, the old kingdom of Dali beside Erhai lake, which Kublai himself had conquered in 1253. He described great serpents ten paces long, with jaws that could swallow a man: crocodiles.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide elevated view Dali basin and Erhai lake beneath Cangshan mountains, low thirteenth-century settlement and cultivated fields, distant restrained pagodas, no modern rebuilt citygate.",
+      "traveller": false,
+      "composition": {
+        "focus": "landscape",
+        "view": "Wide elevated view Dali basin and Erhai lake beneath Cangshan mountains, low thirteenth-century settlement and cultivated fields, distant restrained pagodas, no modern rebuilt citygate."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Carajan; the great serpents.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "dali-horses",
+      "stop": 11,
+      "place": "Carajan (Dali)",
+      "title": "Horses of the south-west",
+      "caption": "Carajan bred large, fine horses, sold as far as India. He noted that its riders used long stirrups, like the French, and docked a joint of their horses' tails so they could not lash the rider.",
+      "sources": [
+        "polo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close side view compact sturdy Yunnan pony with simple leather bridle and modest saddle, handler only arm at edge, four anatomically correct legs on firmearth, pasture and foothills, no Mongolianarmoredwarhorse.",
+      "traveller": false,
+      "composition": {
+        "focus": "animal",
+        "view": "Close side view compact sturdy Yunnan pony with simple leather bridle and modest saddle, handler only arm at edge, four anatomically correct legs on firmearth, pasture and foothills, no Mongolianarmoredwarhorse."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Carajan, its horses.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    },
+    {
+      "id": "yongchang-road",
+      "stop": 12,
+      "place": "Zardandan (Yongchang)",
+      "title": "The road beyond Yongchang",
+      "caption": "At Zardandan, around Yongchang, he found people who covered their teeth in gold. Near here, he wrote, the Khan's horsemen had beaten the King of Mien and his war elephants; the History of Yuan dates the battle to 1277.",
+      "sources": [
+        "polo",
+        "yuanshi"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide rear view modest packhorse train descending forested westernYunnan ridge toward hazy subtropical valleys, no battle elephants or Marco commanding troops, trail physically continuous and broad enoughforhorses.",
+      "traveller": false,
+      "composition": {
+        "focus": "travel",
+        "view": "Wide rear view modest packhorse train descending forested westernYunnan ridge toward hazy subtropical valleys, no battle elephants or Marco commanding troops, trail physically continuous and broad enoughforhorses."
+      },
+      "evidence": {
+        "basis": "account",
+        "passage": "Book II: Zardandan and the battle of Vochan; Yuanshi.",
+        "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
+      }
+    }
+  ]
+}
