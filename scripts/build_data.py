@@ -1526,11 +1526,7 @@ def main() -> int:
         for vp in found:
             if vp not in vp_ids:
                 fail(f"landmarks.csv: {c['id']} found by unknown viewpoint {vp!r}")
-        # What a knowledge community came upon, its members learned with it, unless they have a date of their own.
-        for v in viewpoints:
-            if v["id"] in found:
-                for m in v.get("community", {}).get("members", []):
-                    found.setdefault(m["viewpoint"], found[v["id"]])
+        # A community's encounters reach its members (and the reverse) only while they belong: the app works that out.
     inventions = load_inventions(sources, vp_ids)
     living = load_living(sources, viewpoints, {j["id"] for j in journeys})
     # Inventions made in a city (the printing press in Mainz): the city lists them, and they lead back to it.

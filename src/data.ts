@@ -184,12 +184,19 @@ export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId)
   if (vp === 'humanity') known = field.firstKnown(vp, c.cell, 3);
   else if (own !== undefined) known = own;
   else {
+    // A neighbour knew it, but only once it knew the land the landmark stands on: Silla Korea lay 830 km from
+    // Mount Fuji, but knew Japan only as the coast of Wa.
+    const home = nearHome(data, vp, c.lat, c.lon, c.kind === 'built' && c.dates.founded !== undefined ? mid(c.dates.founded) : -Infinity);
+    const land = home === null ? null : field.firstKnown(vp, c.cell, NEAR_LEVEL);
+    const close = home === null || land === null ? null : Math.max(home, land);
     // Having mapped the land is not knowing a place in it (Bactria mapped since Alexander, Bamiyan unheard of in
     // Europe until 1824), so beyond its neighbours a viewpoint needs a recorded encounter or the place's fame.
-    const close = nearHome(data, vp, c.lat, c.lon);
     const contact = field.firstKnown(vp, c.cell, 2);
     const far = contact === null || widely === undefined ? null : Math.max(contact, widely);
     known = close === null ? far : far === null ? close : Math.min(close, far);
+    // What its knowledge community came upon, it learned with it, and the reverse; but only while it belonged.
+    const shared = communityFound(data, c, vp);
+    if (shared !== null && (known === null || shared < known)) known = shared;
   }
   // Out of reach until the world shared one map, and no sooner than it became known beyond its neighbours.
   if (known === null) known = Math.max(SHARED_MAP, widely ?? SHARED_MAP);
@@ -206,14 +213,44 @@ const SHARED_MAP = 1900;
 /** Within this distance of a viewpoint's home, a landmark is its own: Stonehenge for Britain, Fuji for Japan. */
 const NEAR_KM = 1000;
 
-/** The first year a viewpoint (or, for a knowledge community, one of its members) had a home near a place. */
-function nearHome(data: AppData, vp: VpId, lat: number, lon: number): number | null {
+/** How well a neighbour must know the land a landmark stands on before the landmark is its own. */
+const NEAR_LEVEL = 3;
+
+/**
+ * The first year a viewpoint (or, for a knowledge community, one of its members) had a home near a place that
+ * stood then. A home counts only while it was home (Japan left Kyushu for Yamato in 300), and a member's only while
+ * it belonged to the community (the Maghreb left Europe in 670).
+ */
+function nearHome(data: AppData, vp: VpId, lat: number, lon: number, standing: number): number | null {
+  const spans = (id: VpId, lo: number, hi: number) =>
+    data.vp[id].homes.map((h, i, all) => ({h, from: Math.max(h.from, lo), to: Math.min(all[i + 1]?.from ?? Infinity, hi)}));
   const homes = [
-    ...data.vp[vp].homes.map(h => ({h, from: h.from})),
-    ...(data.vp[vp].community?.members ?? []).flatMap(m => data.vp[m.viewpoint].homes.map(h => ({h, from: Math.max(h.from, m.from)}))),
+    ...spans(vp, -Infinity, Infinity),
+    ...(data.vp[vp].community?.members ?? []).flatMap(m => spans(m.viewpoint, m.from, m.until ?? Infinity)),
   ];
   let first: number | null = null;
-  for (const {h, from} of homes) if (km(h.lat, h.lon, lat, lon) < NEAR_KM && (first === null || from < first)) first = from;
+  for (const {h, from, to} of homes) {
+    const y = Math.max(from, standing);
+    if (y < to && km(h.lat, h.lon, lat, lon) < NEAR_KM && (first === null || y < first)) first = y;
+  }
+  return first;
+}
+
+/**
+ * A recorded encounter shared through a knowledge community: Europe learns what its members came upon, and a member
+ * what Europe came upon, each only while it belonged (Egypt left Europe in 641, so Europe's Victoria Falls of 1855
+ * is not Egypt's).
+ */
+function communityFound(data: AppData, c: City, vp: VpId): number | null {
+  if (!c.found) return null;
+  let first: number | null = null;
+  const take = (found: number | undefined, m: {from: number; until?: number}) => {
+    if (found === undefined) return;
+    const y = Math.max(found, m.from);
+    if ((m.until === undefined || y < m.until) && (first === null || y < first)) first = y;
+  };
+  for (const m of data.vp[vp].community?.members ?? []) take(c.found[m.viewpoint], m);
+  for (const v of data.viewpoints) for (const m of v.community?.members ?? []) if (m.viewpoint === vp) take(c.found[v.id], m);
   return first;
 }
 
