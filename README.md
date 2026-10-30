@@ -4,7 +4,9 @@
 
 **[Open the atlas →](https://greenere.github.io/the-world-we-know/)** · in English and Chinese · runs in any modern browser
 
-![Zheng He's first voyage on the atlas, 1407: China's known world, the fleet's route, and the journey panel](docs/images/zheng-he.jpg)
+![Zheng He's fifth voyage at Aden, 1418: China's known world, the fleet's route, and a sketchbook card of the king of Aden's gifts, giraffe included](docs/images/zheng-he-fifth-voyage.jpg)
+
+![Marco Polo at Tabriz, 1272: Rome's known world, his route from Venice, and a sketchbook card of the Tabriz bazaar](docs/images/marco-polo.jpg)
 
 ## What's in it
 
@@ -16,7 +18,7 @@
   - **Greece, Rome, Iberia, France, Britain, Germany, the Norse, Russia.**
   - **Two knowledge communities,** Europe and the Islamic world. Each shares what its members knew.
   - **Humanity,** which traces where people first arrived, back 70,000 years.
-- **177 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks. A party sent out from a larger journey (Gan Ying from Ban Chao's, Nearchus from Alexander's) is a journey of its own, nested under the one it belongs to.
+- **178 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks. A party sent out from a larger journey (Gan Ying from Ban Chao's, Marco Polo's mission to Yunnan from his own) is a journey of its own, nested under the one it belongs to.
 - **146 landmarks and 63 lost cities found again.**
   - Pyramids, walls, waterfalls and volcanoes, each known to a viewpoint only when it lived nearby, met the place itself, or the place became famous.
   - Some cover ground: deserts, salt flats and lakes that shrink over the centuries, drawn in their real outlines.
