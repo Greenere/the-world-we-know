@@ -1,5 +1,7 @@
 # The World We Know
 
+**English** · [中文](README.zh.md)
+
 **An atlas of who knew what, and when.** Pick a culture and a year, and the map shows how much of the world that culture knew. Fog covers the rest. Follow the travellers who pushed knowledge outward, and watch the fog lift when their news reaches home, or come back when knowledge is lost.
 
 **[Open the atlas →](https://greenere.github.io/the-world-we-know/)** · in English and Chinese · runs in any modern browser
