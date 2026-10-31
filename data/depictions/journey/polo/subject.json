@@ -6,7 +6,7 @@
       "stop": 0,
       "place": "Venice",
       "title": "Leaving Venice",
-      "caption": "In 1271, seventeen-year-old Marco left Venice with his father Niccolò and his uncle Maffeo. The brothers had already been to Kublai Khan's court, and were going back with his request for a hundred learned Christians and oil from Jerusalem.",
+      "caption": "The Polos sailed from Venice for Acre, the usual way east for Venetian merchants. Marco would not see the city again for twenty-four years.",
       "sources": [
         "polo"
       ],
@@ -50,7 +50,7 @@
       "stop": 1,
       "place": "Acre",
       "title": "The harbour at Acre",
-      "caption": "Acre was the last great crusader port in the Holy Land, and the papal legate Teobaldo Visconti was there. The Polos went to him first, to ask leave to fetch the oil from Jerusalem.",
+      "caption": "Ships from Venice and Genoa landed pilgrims and merchants in this harbour, inside its sea wall. Twenty years later, in 1291, Acre fell to the Mamluks and the crusader states came to an end.",
       "sources": [
         "polo"
       ],
@@ -62,8 +62,8 @@
         "view": "Wide low view across medieval Acre enclosed harbor, stone sea wall and modest square towers, varied small merchant vessels, no Ottoman domes or modern marina."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Prologue: the Polos at Acre with the legate Teobaldo of Piacenza.",
+        "basis": "account-and-context",
+        "passage": "Prologue: the Polos at Acre with the legate Teobaldo of Piacenza. The fall of Acre in 1291 is contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -72,7 +72,7 @@
       "stop": 2,
       "place": "Jerusalem",
       "title": "Oil for the Khan",
-      "caption": "In Jerusalem they took oil from the lamp that burned at the Holy Sepulchre. Kublai had asked for it on their first visit, and they carried it all the way to his court.",
+      "caption": "Pilgrims often carried oil from the Sepulchre's lamps home as a relic, in small flasks of glass or metal. The Polos' flask had to last more than three years on the road to Kublai's court.",
       "sources": [
         "polo"
       ],
@@ -84,8 +84,8 @@
         "view": "Intimate still life small plain stoppered glass oil vessel beside suspended metal sanctuary oil lamp, rough stone medieval church alcove; warm reflected flame, no modern restored shrine or readable text."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Prologue: the oil from the lamp of the Sepulchre.",
+        "basis": "account-and-context",
+        "passage": "Prologue: the oil from the lamp of the Sepulchre. Pilgrim flasks for Sepulchre oil are contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -94,7 +94,7 @@
       "stop": 3,
       "place": "Acre",
       "title": "Letters from the legate",
-      "caption": "Back in Acre, the legate gave them letters for the Khan, explaining that the Church still had no pope to send the learned men he wanted. The papal throne had then been empty for nearly three years.",
+      "caption": "The papal throne had been empty since 1268, the longest vacancy in the Church's history. The legate's letters were the Polos' proof to Kublai that they had tried to do as he asked.",
       "sources": [
         "polo"
       ],
@@ -106,8 +106,8 @@
         "view": "Across a small wooden writing table, older cleric hands folded sealed parchment to young Marco, his father seated beside him, simple thirteenth-century stone chamber, anatomically clear hands, no legible script."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Prologue: the legate's letters; the vacancy of 1268–1271.",
+        "basis": "account-and-context",
+        "passage": "Prologue: the legate's letters; the vacancy of 1268–1271. The length of the vacancy is contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -116,7 +116,7 @@
       "stop": 4,
       "place": "Ayas",
       "title": "From the port to the road",
-      "caption": "At Ayas, news reached them that the legate had been elected Pope Gregory X. He called them back to Acre and sent two Dominican friars with them, but at Ayas the friars heard that the Mamluks had invaded Armenia, and turned back.",
+      "caption": "He called Laias a town of great trade, where spices and cloth of silk and gold came down from the interior, and merchants of Venice and Genoa came to buy. From here the Polos left the sea and took the road inland.",
       "sources": [
         "polo"
       ],
@@ -129,7 +129,7 @@
       },
       "evidence": {
         "basis": "account",
-        "passage": "Prologue: election of Gregory X; the two friars turn back.",
+        "passage": "Prologue: election of Gregory X; the two friars turn back. Book I: Laias.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -160,7 +160,7 @@
       "stop": 6,
       "place": "Arzinga (Erzincan)",
       "title": "Cloth at Erzincan",
-      "caption": "At Arzinga, the modern Erzincan, he noted the best buckram in the world, a fine cotton cloth. The town also had hot springs, which he called the best baths anywhere.",
+      "caption": "In summer, he wrote, the Tartar armies brought their herds to graze in Greater Armenia, and left when the cold came. Buckram then meant a fine cotton cloth, not the stiff fabric of later bookbinding.",
       "sources": [
         "polo"
       ],
@@ -204,7 +204,7 @@
       "stop": 8,
       "place": "Tauris (Tabriz)",
       "title": "The market of Tabriz",
-      "caption": "He described Tauris, now Tabriz, as a great city of trade. Goods came from India, Baghdad, Mosul and Hormuz, and Latin merchants, most of them Genoese, came to buy them.",
+      "caption": "Tauris stood among pleasant gardens, he wrote, and its people were Armenians, Nestorians, Jacobites, Georgians and Persians, besides Muslims. Caravans brought goods in from every side.",
       "sources": [
         "polo"
       ],
@@ -248,7 +248,7 @@
       "stop": 9,
       "place": "Saba (Saveh)",
       "title": "The tombs shown at Saveh",
-      "caption": "At Saba, now Saveh, he was shown three handsome tombs said to hold the three Magi, their bodies still whole. He was told the three kings had set out from here to worship the newborn Christ.",
+      "caption": "The people of Saba knew little of the three kings beyond their names, Balthasar, Gaspar and Melchior. Three days on, at a castle of fire-worshippers, he heard how the Christ child had given the Magi a stone, and how the fire it lit was still kept burning.",
       "sources": [
         "polo"
       ],
@@ -261,7 +261,7 @@
       },
       "evidence": {
         "basis": "account",
-        "passage": "Book I: Saba and the three Magi.",
+        "passage": "Book I: Saba and the three Magi. Book I: Saba and Cala Ataperistan.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -336,7 +336,7 @@
       "stop": 12,
       "place": "Camadi",
       "title": "Shelter after the raid",
-      "caption": "Near Camadi, raiders he called Caraonas fell on the caravan, under cover of a darkness he believed they raised by magic. The Polos escaped to a village called Conosalmi; most of their companions were killed or sold as slaves.",
+      "caption": "Camadi had once been a great city, he wrote, but the Tartars had ravaged it. The plain below grew dates and pistachios, and its villages had high earthen walls against raiders.",
       "sources": [
         "polo"
       ],
@@ -349,7 +349,7 @@
       },
       "evidence": {
         "basis": "account",
-        "passage": "Book I: Camadi and the Caraonas.",
+        "passage": "Book I: Camadi and the Caraonas. Book I: Camadi and the plain of Reobar.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -380,7 +380,7 @@
       "stop": 13,
       "place": "Hormuz",
       "title": "Planks joined with cord",
-      "caption": "He distrusted the local ships: their planks were sewn together with twine made from coconut husk, without iron nails, and many were lost at sea. The Polos chose not to sail for China from here.",
+      "caption": "Shipwrights bored holes along the planks and stitched them with cord twisted from coconut husk, and they used fish oil on the seams instead of pitch. Each ship had one mast, one sail and one rudder, and no deck.",
       "sources": [
         "polo"
       ],
@@ -424,7 +424,7 @@
       "stop": 15,
       "place": "Cobinan (Kuhbanan)",
       "title": "A polished steel mirror",
-      "caption": "At Cobinan, now Kuhbanan, he saw large steel mirrors of fine quality. The town also made tutty, a zinc ointment for the eyes, by heating earth in a furnace and collecting what rose from it.",
+      "caption": "To make tutty, they heated an earth from the mines in a furnace under an iron grating, and gathered what the fumes left on it; what stayed in the fire was spodium. The same town's steel made mirrors large and fine.",
       "sources": [
         "polo"
       ],
@@ -446,7 +446,7 @@
       "stop": 16,
       "place": "Tonocain (Tun)",
       "title": "The country of the Dry Tree",
-      "caption": "Beyond the desert lay Tonocain, around the modern Tun, on a plain with a single great tree he called the Dry Tree. He wrote that Alexander had fought Darius there.",
+      "caption": "The Dry Tree, as he called it, was tall and thick, its leaves green on one side and white on the other, with husks like a chestnut's that held nothing. For a hundred miles around, he wrote, there was no other tree.",
       "sources": [
         "polo"
       ],
@@ -468,7 +468,7 @@
       "stop": 17,
       "place": "Sapurgan (Sheberghan)",
       "title": "Melons dried for the road",
-      "caption": "He called the melons of Sapurgan, now Sheberghan, the best in the world. People cut them into strips like pumpkin, dried them in the sun and sold them far and wide, sweet as honey.",
+      "caption": "Dried in the sun, the strips grew sweeter than honey, he wrote, and were carried for sale through all the country around. Sapurgan had plenty of everything, and good hunting.",
       "sources": [
         "polo"
       ],
@@ -490,7 +490,7 @@
       "stop": 18,
       "place": "Balkh",
       "title": "The ruined city of Balkh",
-      "caption": "He called Balkh a noble and great city, now much reduced: the Tartars had sacked it, and many of its palaces and marble houses lay in ruins. He was told that Alexander had married Darius's daughter there.",
+      "caption": "Its palaces and marble houses had stood broken since the Mongols took the city in 1220, half a century before. Balkh, he wrote, marked the edge of the Ilkhan's lands, the 'Lord of the Tartars of the Levant'.",
       "sources": [
         "polo"
       ],
@@ -502,8 +502,8 @@
         "view": "Low street-level view broken mudbrick walls and collapsed arches, weeds and quiet empty lane, distant standing modest brick minaret, no fresh destruction or corpses or modern ruins signage."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book I: Balc.",
+        "basis": "account-and-context",
+        "passage": "Book I: Balc. The Mongol sack of 1220 is contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -512,7 +512,7 @@
       "stop": 19,
       "place": "Taican (Taloqan)",
       "title": "Salt from the mountains",
-      "caption": "Near Taican, now Taloqan, he saw mountains made of salt, so hard it had to be dug with iron picks. He thought there was enough to supply the whole world until the end of time.",
+      "caption": "The salt was so hard it could only be broken with iron picks, and people came from thirty days' journey around to fetch it. It was, he said, the best salt in the world.",
       "sources": [
         "polo"
       ],
@@ -534,7 +534,7 @@
       "stop": 20,
       "place": "Badakhshan",
       "title": "A pause in Badakhshan",
-      "caption": "Marco fell ill in Badakhshan and stayed about a year. He was advised to go up into the mountains, and the clean air there cured him.",
+      "caption": "The mountain tops were wide plains of good grass and clear springs, and the air so pure, he wrote, that anyone with a fever who went up was soon well. He knew because it had happened to him.",
       "sources": [
         "polo"
       ],
@@ -578,7 +578,7 @@
       "stop": 21,
       "place": "Vokhan (Wakhan)",
       "title": "Up the Wakhan valley",
-      "caption": "From Badakhshan the road ran twelve days up the Oxus into Vokhan, now the Wakhan. He noted that its people had a language of their own and were brave fighters.",
+      "caption": "The people of Vokhan were Muslims and good fighters, under a chief who answered to the prince of Badakhshan. Their valley was full of game, and the road kept climbing toward the high plain of the Pamir.",
       "sources": [
         "polo"
       ],
@@ -644,7 +644,7 @@
       "stop": 23,
       "place": "Kashgar",
       "title": "Gardens around Kashgar",
-      "caption": "After the mountains came Kashgar, which he described as a land of gardens, vineyards and fine estates, growing cotton, flax and hemp. Its merchants travelled the world, and Nestorian Christians lived among the Muslims.",
+      "caption": "Its merchants travelled all over the world, yet he found the townsfolk miserly, eating and drinking poorly. Besides cotton, the oasis grew flax and hemp, and its orchards gave good fruit.",
       "sources": [
         "polo"
       ],
@@ -666,7 +666,7 @@
       "stop": 24,
       "place": "Yarkand",
       "title": "Water in the oasis",
-      "caption": "At Yarcan, now Yarkand, he wrote that many people had swollen legs or goitres, which he blamed on the water they drank. The oasis lived on its irrigation channels and gardens.",
+      "caption": "Yarcan stretched five days' journey, he wrote, with plenty of everything, cotton above all. Its people were Muslims, with some Nestorian and Jacobite Christians among them.",
       "sources": [
         "polo"
       ],
@@ -688,7 +688,7 @@
       "stop": 25,
       "place": "Khotan",
       "title": "Searching the riverbed",
-      "caption": "He described Khotan as a well-supplied province of cotton, flax, hemp and grain, its people traders and craftsmen. He did not mention its jade, which had gone from these riverbeds to China for more than a thousand years.",
+      "caption": "Jade came down from the Kunlun mountains with the summer floods. Once the water fell, gatherers would have searched the shallows, often feeling for the stones with their bare feet.",
       "sources": [
         "polo"
       ],
@@ -700,8 +700,8 @@
         "view": "Low bank viewpoint local stone gatherer crouching at clear shallow river, hands selecting pale rounded jade pebble from wet gravel, mountains distant, no scuba gear or dazzling enormous gems."
       },
       "evidence": {
-        "basis": "account-and-context",
-        "passage": "Book I: Cotan. Polo mentions river stones only at Pem and Charchan; Khotan's jade is contextual.",
+        "basis": "context",
+        "passage": "Book I: Cotan. Polo mentions river stones only at Pem and Charchan; Khotan's jade is contextual. Polo mentions river stones only at Pem and Charchan; jade gathering at Khotan is contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -732,7 +732,7 @@
       "stop": 26,
       "place": "Pem (Keriya)",
       "title": "Stones from the Keriya waters",
-      "caption": "At Pem, probably near modern Keriya, he noted jasper and chalcedony in the rivers. He also recorded that a wife whose husband was away more than twenty days could take another husband.",
+      "caption": "Pem's people were Muslims and subjects of the Great Khan, and lived by trade and crafts. Further on, at Charchan, he noted that stones like these were carried to Cathay for sale.",
       "sources": [
         "polo"
       ],
@@ -745,7 +745,7 @@
       },
       "evidence": {
         "basis": "account",
-        "passage": "Book I: Pein.",
+        "passage": "Book I: Pein. Book I: Pein and Charchan.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     },
@@ -776,7 +776,7 @@
       "stop": 28,
       "place": "Lop (Charklik)",
       "title": "Provisioning at Lop",
-      "caption": "Lop was the last town before the desert. Travellers rested there a week, then loaded a month's food for themselves and their animals: crossing the desert even at its narrowest, he said, took a month.",
+      "caption": "Across the desert there was water at each day's stage, he wrote, but in many places only enough for fifty or a hundred men with their beasts, and some of it bitter. There was nothing at all to eat on the way.",
       "sources": [
         "polo"
       ],
@@ -820,7 +820,7 @@
       "stop": 29,
       "place": "Shazhou (Dunhuang)",
       "title": "Paper figures at Dunhuang",
-      "caption": "At Sachiu, now Dunhuang, he described funerals at which paper figures of men, horses and camels, and paper coins, were burned with the dead. People believed these would serve them in the next world.",
+      "caption": "Families kept the dead at home for days, setting out food at every meal, and asked astrologers to choose the day for the burning. The paper figures went to the pyre with music playing all the way.",
       "sources": [
         "polo"
       ],
@@ -864,7 +864,7 @@
       "stop": 31,
       "place": "Campichu (Ganzhou)",
       "title": "A reclining Buddha at Ganzhou",
-      "caption": "The Polos spent a year at Campichu, now Zhangye, on business he did not explain. He described great monasteries with lying idols ten paces long; one such reclining Buddha, made around 1098, still lies in Zhangye's Great Buddha Temple.",
+      "caption": "Some idols were ten paces long and lay on their side, with smaller figures around them like disciples, all richly gilded. Zhangye's surviving reclining Buddha, about thirty-five metres of painted clay, was made around 1098.",
       "sources": [
         "polo"
       ],
@@ -908,7 +908,7 @@
       "stop": 33,
       "place": "Egrigaia (Ningxia)",
       "title": "Cloth from camel hair",
-      "caption": "At Egrigaia, now Yinchuan, he praised the camlets woven from camel hair, the finest in the world, some of them white. Merchants carried them to Cathay and beyond.",
+      "caption": "Egrigaia had three Nestorian churches among its Muslims, he noted. Merchants carried its camlets to Cathay and across the world.",
       "sources": [
         "polo"
       ],
@@ -930,7 +930,7 @@
       "stop": 34,
       "place": "Tenduc",
       "title": "A Christian community on the steppe",
-      "caption": "At Tenduc, he wrote, the ruler was a Christian named George, of the Önggüt, whom he took for a descendant of Prester John. The Önggüt really were Christians of the Church of the East, and Chinese records name this prince Körgüz.",
+      "caption": "The Önggüt really were Christians of the Church of the East, and Chinese records name this prince Körgüz. He married into Kublai's family, and later welcomed the Catholic missionary John of Montecorvino.",
       "sources": [
         "polo",
         "yuanshi"
@@ -953,7 +953,7 @@
       "stop": 35,
       "place": "Chagannor",
       "title": "Birds by the lake",
-      "caption": "At Chagannor, the Khan had a palace beside a lake full of swans, cranes and other birds. He came there to hunt with gyrfalcons and hawks, and had millet sown along the shores so the birds would have food.",
+      "caption": "He listed five kinds of crane there, some black as crows, some white with eyes on their wings like a peacock's. The Khan had millet sown along the shores so the birds would never go hungry.",
       "sources": [
         "polo"
       ],
@@ -997,7 +997,7 @@
       "stop": 36,
       "place": "Shangdu (Xanadu)",
       "title": "The palace of cane",
-      "caption": "Inside Shangdu's park stood a palace of cane, gilded and lacquered, that could be taken apart and moved. He wrote that more than two hundred silk cords held it up against the wind.",
+      "caption": "The cane palace stood in a walled park of meadows, streams and deer, gilded and lacquered inside. Built of split canes, it could be taken apart and moved, and the Khan lived in it only in June, July and August.",
       "sources": [
         "polo"
       ],
@@ -1107,7 +1107,7 @@
       "stop": 38,
       "place": "Pulisanghin (Lugou Bridge)",
       "title": "The bridge and its stone lions",
-      "caption": "Ten miles from the capital he crossed a marble bridge over a river he called Pulisanghin, Persian for 'stone bridge', with carved lions along its parapets. He counted twenty-four arches; the Lugou Bridge has eleven, and English speakers still call it the Marco Polo Bridge.",
+      "caption": "Along each side ran a parapet of marble slabs and columns, he wrote, with a lion on top of every column. About five hundred carved lions sit there today, and no two are alike.",
       "sources": [
         "polo"
       ],
@@ -1119,8 +1119,8 @@
         "view": "Low eye-level along Lugou Bridge stone balustrade with small carved guardian lions on posts, roadway securely supported and visible repeating low arches only to side, Yuan era no modern traffic, do not draw24arches."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book II: the river Pulisanghin and its bridge.",
+        "basis": "account-and-context",
+        "passage": "Book II: the river Pulisanghin and its bridge. The count of lions today is contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -1129,7 +1129,7 @@
       "stop": 39,
       "place": "Juju (Zhuozhou)",
       "title": "Where the roads divide",
-      "caption": "A little beyond the bridge was Juju, now Zhuozhou, where, he wrote, the roads parted. One ran west through Cathay toward Tibet and Yunnan; the other ran south-east to Manzi, the former Song lands.",
+      "caption": "Juju was a busy town of weavers and inns, making cloth of silk and gold and fine sendal. Its western road led to his mission to Yunnan; this time he took the road south-east.",
       "sources": [
         "polo"
       ],
@@ -1217,7 +1217,7 @@
       "stop": 42,
       "place": "Sinjumatu (Jining)",
       "title": "A waterway joining north and south",
-      "caption": "At Sinjumatu, now Jining, he saw a river divided in two, one half flowing north toward Cathay and the other south toward Manzi. This was the summit of the Grand Canal, where Kublai's engineers were cutting new channels to carry grain to the capital.",
+      "caption": "Boats past counting, he wrote, carried goods north and south from here. The Jizhou canal, finished in 1283, was cut nearby to bring the southern grain up toward the capital.",
       "sources": [
         "polo"
       ],
@@ -1239,7 +1239,7 @@
       "stop": 43,
       "place": "Coiganju (Huai'an)",
       "title": "Crossing into Manzi",
-      "caption": "He crossed the Caramoran, the Mongols' 'Black River', as he called the Yellow River, which then reached the sea by way of the Huai. On the far bank lay Coiganju, now Huai'an, the gateway to Manzi.",
+      "caption": "The river here was more than a mile wide and deep enough for great ships, he wrote, and the Khan kept fifteen thousand vessels on it to carry his armies to the islands of the sea. On the far bank stood Coiganju, now Huai'an.",
       "sources": [
         "polo"
       ],
@@ -1283,7 +1283,7 @@
       "stop": 45,
       "place": "Yangiu (Yangzhou)",
       "title": "Merchants at Yangzhou",
-      "caption": "Yangiu, now Yangzhou, was a great city ruling twenty-seven others, and he claimed to have governed it for three years on the Khan's orders. No Chinese record mentions him, and many scholars think he held a lesser post, perhaps in the salt administration.",
+      "caption": "Yangiu was a city of trade and crafts, he wrote, where harness and arms were made for the Khan's soldiers. Twenty-seven other cities answered to it, and a great army was quartered nearby.",
       "sources": [
         "polo"
       ],
@@ -1305,7 +1305,7 @@
       "stop": 46,
       "place": "Chinghianfu (Zhenjiang)",
       "title": "A Christian church at Zhenjiang",
-      "caption": "At Chinghianfu, now Zhenjiang, he found two Nestorian churches built in 1278 by Mar Sargis, a Christian whom the Khan had made governor. A Chinese gazetteer of about 1333 confirms him, and credits him with seven churches, six of them around the city.",
+      "caption": "The churches stood among Buddhist temples in a city of silk weavers and merchants. Mar Sargis came from Samarkand, of a family of physicians who made sherbet for the Khan's court.",
       "sources": [
         "polo",
         "zhishun-zhenjiang"
@@ -1372,7 +1372,7 @@
       "stop": 48,
       "place": "Quinsay (Hangzhou)",
       "title": "Waterways of Hangzhou",
-      "caption": "He called Quinsay, now Hangzhou, 'beyond dispute the finest and noblest city in the world'. Its name came from xingzai, the 'temporary capital' of the fallen Song, and he counted twelve thousand bridges over its canals.",
+      "caption": "Its bridges were built so high, he wrote, that ships with their masts could pass beneath, while carts and horses crossed above. Canals ran through every quarter, and goods and people went about the city by water.",
       "sources": [
         "polo"
       ],
@@ -1460,7 +1460,7 @@
       "stop": 50,
       "place": "Quenlinfu (Jian'ou)",
       "title": "The chickens with soft plumage",
-      "caption": "At Quenlinfu, now Jian'ou, he noted handsome stone bridges, ginger and galingale. He also described hens with no feathers, only a coat like a cat's fur: the breed now called the silkie.",
+      "caption": "He compared their coat to a cat's fur, and wrote that the hens were black all over and laid eggs like any others, good to eat. Breeders call them silkies; under the fluff their skin and bones are dark.",
       "sources": [
         "polo"
       ],
@@ -1472,8 +1472,8 @@
         "view": "Close natural-history sketch two silkie chickens with soft fluffy white and grey plumage, small dark beaks and normal chicken legs standing in earth courtyard, ginger roots in basket side, no mammal fur anatomy."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book II: Quenlinfu.",
+        "basis": "account-and-context",
+        "passage": "Book II: Quenlinfu. The breed today is contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -1482,7 +1482,7 @@
       "stop": 51,
       "place": "Fuju (Fuzhou)",
       "title": "Sugar for trade",
-      "caption": "He described Fuju, now Fuzhou, as a great trading city, where ships brought pearls and precious stones from India, and sugar was made in enormous quantities. Nearby, he said, men from 'Babylon', meaning Egypt, had taught the people to refine it.",
+      "caption": "Near Unken, men from 'Babylon', meaning Egypt, had shown the people how to refine sugar with the ash of certain trees. Before that, he wrote, they had only boiled it into a dark paste.",
       "sources": [
         "polo"
       ],
@@ -1548,7 +1548,7 @@
       "stop": 52,
       "place": "Zaiton (Quanzhou)",
       "title": "The princess's escort",
-      "caption": "In 1291 the Polos sailed with Kököchin, a seventeen-year-old Mongol princess sent as a bride to the Ilkhan Arghun. A Yuan post-station record of 1290, found by Yang Zhijiu in 1941, names her three Persian envoys exactly as Polo does: Uladai, Abishqa and Khoja.",
+      "caption": "Arghun had asked for a bride from the family of his late wife Bolghana, and Kököchin, seventeen, was chosen. Kublai had long refused to let the Polos go; the escort was his reluctant leave.",
       "sources": [
         "polo",
         "yang-zhijiu"
@@ -1571,7 +1571,7 @@
       "stop": 53,
       "place": "Ciamba (Champa)",
       "title": "Along the coast of Champa",
-      "caption": "The fleet coasted south to Ciamba, the kingdom of Champa, which Marco had visited in 1285. Its king paid the Khan tribute in elephants and aloes-wood, and had, he said, 326 children.",
+      "caption": "Ciamba had elephants in plenty, and forests of aloes-wood and ebony. Its Cham kings built in brick, and their temple towers still stand along the coast.",
       "sources": [
         "polo"
       ],
@@ -1583,8 +1583,8 @@
         "view": "From ship offshore toward forested centralVietnam coast, small river mouth and low Cham brick temple tower inland, local fishing boats, no Angkor Wat skyline transplanted to beach."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book III: Chamba.",
+        "basis": "account-and-context",
+        "passage": "Book III: Chamba. The surviving Cham towers are contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -1593,7 +1593,7 @@
       "stop": 54,
       "place": "Sondur and Condur (Côn Sơn)",
       "title": "Sondur and Condur",
-      "caption": "Past Champa, he noted two islands he called Sondur and Condur, now the Côn Sơn islands. Later sailors knew them as Pulo Condore, a landmark on the route between China and the Malay world.",
+      "caption": "Ships between China and the Malay world steered by these islands for centuries, and Polo gave them only a line. Five hundred miles beyond, he wrote, lay Locac, a rich country of brazilwood and gold.",
       "sources": [
         "polo"
       ],
@@ -1637,7 +1637,7 @@
       "stop": 56,
       "place": "Samara (Samudra), Sumatra",
       "title": "Waiting for the monsoon",
-      "caption": "The fleet waited five months at Samara, on Sumatra, for the monsoon to turn. The party built a timber stockade against the man-eaters they had heard lived inland, and traded with the islanders for food.",
+      "caption": "Some two thousand of them, he wrote, camped for five months behind timber walls and towers. They traded with the islanders for food.",
       "sources": [
         "polo"
       ],
@@ -1681,7 +1681,7 @@
       "stop": 57,
       "place": "Necuveram (Nicobar Islands)",
       "title": "Coconuts on an island shore",
-      "caption": "Sailing north-west, they passed Necuveram, the Nicobar Islands, where he said people went naked and had no king. He listed red sandalwood, coconuts and brazilwood among its trees.",
+      "caption": "Necuveram had no king, he wrote, and its forests were thick with valuable trees. 'Indian nuts', his name for coconuts, grew there in plenty.",
       "sources": [
         "polo"
       ],
@@ -1725,7 +1725,7 @@
       "stop": 59,
       "place": "Cail (Kayal), Maabar",
       "title": "The pearl fishery",
-      "caption": "In Maabar, on the Gulf of Mannar, he described pearl divers going down from boats into four to twelve fathoms of water. They paid a tenth to the king and a share to the Brahmins who charmed the sharks so they would not attack.",
+      "caption": "The divers went down from small boats into four to twelve fathoms of water and brought up oysters in net bags tied around their bodies. The fishery ran only in April and May.",
       "sources": [
         "polo"
       ],
@@ -1813,7 +1813,7 @@
       "stop": 62,
       "place": "Hormuz",
       "title": "Landfall in Persia",
-      "caption": "After eighteen months at sea the fleet reached Hormuz. Of some six hundred people who had sailed, he wrote, only eighteen survived, among them the princess and one of the three envoys.",
+      "caption": "They had been at sea eighteen months since leaving Zaiton. It was the same mainland port where, twenty years before, they had refused to trust the sewn ships.",
       "sources": [
         "polo"
       ],
@@ -1835,7 +1835,7 @@
       "stop": 63,
       "place": "Tauris (Tabriz)",
       "title": "Tablets for the road west",
-      "caption": "Arghun had died, so the princess was married to his son Ghazan. The new Ilkhan Gaykhatu gave the Polos four golden tablets of authority, and while they were in Persia news came that Kublai himself had died.",
+      "caption": "Each tablet was a paiza: a plate of gold bearing the Khan's order that its bearer be given horses, food and escort. Theirs brought them two hundred horsemen at a time, and they needed them, for the roads were unsafe.",
       "sources": [
         "polo"
       ],
@@ -1923,7 +1923,7 @@
       "stop": 67,
       "place": "Venice",
       "title": "Venice after twenty-four years",
-      "caption": "They reached Venice in 1295, twenty-four years after leaving; Marco was about forty-one. A story first printed in 1559 says even their relatives did not know them until they slit open their old coats and jewels spilled out.",
+      "caption": "Marco was about forty-one, his father and uncle old men now. The family house stood in the parish of San Giovanni Grisostomo, where the Corte del Milion still bears Marco's nickname.",
       "sources": [
         "polo"
       ],
@@ -1936,7 +1936,7 @@
       },
       "evidence": {
         "basis": "account-and-context",
-        "passage": "Prologue; Ramusio (1559) for the homecoming story.",
+        "passage": "Prologue; Ramusio (1559) for the homecoming story. The Polo house and the Corte del Milion are contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -1967,7 +1967,7 @@
       "stop": 68,
       "place": "Genoa",
       "title": "The journey becomes a book",
-      "caption": "Captured by the Genoese, perhaps at the battle of Curzola in 1298, he dictated his travels in prison to a fellow captive, the romance writer Rustichello of Pisa. On his deathbed, urged to take back its marvels, he is said to have replied that he had not told half of what he saw.",
+      "caption": "Rustichello wrote it in French, the language of romance, and opened it like one: 'Great princes, emperors and kings, dukes and marquises…'. Copies spread fast, and some 150 manuscripts survive.",
       "sources": [
         "polo"
       ],
@@ -1979,8 +1979,8 @@
         "view": "Intimate side view Marco44 seated speaking naturally to middle-aged Rustichello writing with quill at rough table in simple stone chamber, slitwindow daylight, no iron cage torture or modern bound printed book, illegible handwritingonly."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Prologue; Jacopo d'Acqui, Imago Mundi, for the deathbed words.",
+        "basis": "account-and-context",
+        "passage": "Prologue; Jacopo d'Acqui, Imago Mundi, for the deathbed words. The manuscript tradition is contextual.",
         "url": "https://www.gutenberg.org/files/10636/10636-h/10636-h.htm"
       }
     }

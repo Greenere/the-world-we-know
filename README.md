@@ -6,9 +6,9 @@
 
 **[Open the atlas →](https://greenere.github.io/the-world-we-know/)** · in English and Chinese · runs in any modern browser
 
-![Zheng He's fifth voyage at Aden, 1418: China's known world, the fleet's route, and a sketchbook card of the king of Aden's gifts, giraffe included](docs/images/zheng-he-fifth-voyage.jpg)
+![Zheng He's fifth voyage at Aden, 1418: China's known world, the fleet's route and its own timeline, and the journey card with a sketch of the king of Aden's gifts, giraffe included](docs/images/zheng-he-fifth-voyage.jpg)
 
-![Marco Polo at Tabriz, 1272: Rome's known world, his route from Venice, and a sketchbook card of the Tabriz bazaar](docs/images/marco-polo.jpg)
+![Marco Polo at Tabriz, 1272: Rome's known world, his whole route, and the journey card with a sketch of the Tabriz bazaar](docs/images/marco-polo.jpg)
 
 ## What's in it
 
@@ -30,7 +30,7 @@
 - **35 plants and animals**, and how word of them spread: maize from Mexico to China, tea to Europe by caravan and by sea, the giraffe greeted as a qilin at the Ming court, the dodo and the moa lost. Each has the year every viewpoint came to know it, and its arrivals marked on the map.
 - **493 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
 - **Two panels.** Journeys holds the journeys and landmarks; Discoveries holds the inventions and the plants and animals.
-- **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map.
+- **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map. While you follow a journey, the timeline becomes the journey's own: land and sea legs, long stays folded with their length, and the news reaching home.
 
 Every view is a link: `?vp=china&year=1420`, `?vp=europe,china&year=1420`, `?journey=zhenghe&stop=4`, `?city=loulan`, `?invention=magnetic-compass`, `?living=maize&vp=china`, `&globe=1`, `&lang=zh`.
 

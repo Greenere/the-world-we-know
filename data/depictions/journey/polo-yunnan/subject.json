@@ -72,7 +72,7 @@
       "stop": 3,
       "place": "The Caramoran (Yellow River)",
       "title": "Across the Yellow River",
-      "caption": "Beyond a castle he called Caichu, he reached the Caramoran, the Yellow River, too wide and deep to bridge. He crossed by boat into a country of ginger, silk and game.",
+      "caption": "Just before the river stood a castle he called Caichu, where he heard a tale of the Golden King and Prester John. Beyond the crossing the road ran on two days to Cachanfu.",
       "sources": [
         "polo"
       ],
@@ -116,7 +116,7 @@
       "stop": 4,
       "place": "Kenjanfu (Xi'an)",
       "title": "Outside Prince Mangala's palace",
-      "caption": "At Kenjanfu, now Xi'an, he found Kublai's son Mangala ruling as prince from a great palace outside the city walls. Mangala died in 1280, which helps date Marco's journey to before then.",
+      "caption": "He described the palace as one of the finest anywhere, inside a walled park five miles round, with streams, lakes and fountains. Inside, its walls were painted with gold and azure.",
       "sources": [
         "polo",
         "yuanshi"
@@ -139,7 +139,7 @@
       "stop": 5,
       "place": "Acbalec Manzi (Hanzhong)",
       "title": "Through the Qinling valleys",
-      "caption": "From Xi'an the road took twenty days through the Qinling, a country of mountains and valleys whose forests were full of 'lions', bears, lynx and deer. By lions he meant tigers.",
+      "caption": "Between the forests the road passed towns and villages whose people lived by farming and hunting. It came down at last to the plain of Acbalec Manzi, now Hanzhong.",
       "sources": [
         "polo"
       ],
@@ -205,7 +205,7 @@
       "stop": 7,
       "place": "Tebet",
       "title": "Bamboo in the campfire",
-      "caption": "In Tebet, a country laid waste by Möngke's wars, travellers burned green canes at night. Heated, the canes burst with such a bang that lions, bears and other beasts fled, and horses not used to it bolted.",
+      "caption": "The canes were about three palms round and fifteen paces long, and in the fire they split with a crack heard ten miles away. Horses not used to it broke loose, so travellers hobbled all four of their feet.",
       "sources": [
         "polo"
       ],
@@ -249,7 +249,7 @@
       "stop": 8,
       "place": "Caindu (Xichang)",
       "title": "Salt cakes used in exchange",
-      "caption": "Instead of coins, people in Caindu used salt: brine boiled down and pressed into cakes, stamped with the Khan's mark. Eighty cakes, he said, bought a saggio of gold.",
+      "caption": "The brine came from wells, he wrote, and was boiled down in pans and pressed in moulds. Eighty cakes were worth a saggio of gold, but in the hills further off a cake bought more.",
       "sources": [
         "polo"
       ],
@@ -271,7 +271,7 @@
       "stop": 9,
       "place": "The Brius (Jinsha River)",
       "title": "Gold in the river gravel",
-      "caption": "He crossed a great river he called the Brius, in which, he said, gold dust was found in great quantity. It is the upper Yangtze, whose Chinese name, Jinsha, means 'golden sand'.",
+      "caption": "He wrote that much cinnamon grew in the country around the Brius as well. Washers would have panned its gravel in shallow wooden bowls, as they still did here in the twentieth century.",
       "sources": [
         "polo"
       ],
@@ -283,8 +283,8 @@
         "view": "Low side view local adult washes fine river gravel in shallow wooden bowl at Jinsha riverbank, tiny subtle goldflecks notlarge nuggets, fast brown river and wooded slopes, no metallic prospecting sluice or Californian costume."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book II: the river Brius.",
+        "basis": "account-and-context",
+        "passage": "Book II: the river Brius. Gold washing on the Jinsha is contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -293,7 +293,7 @@
       "stop": 10,
       "place": "Yachi (Kunming)",
       "title": "The market at Yachi",
-      "caption": "At Yachi, now Kunming, he found a great city of merchants and craftsmen, home to Muslims, Nestorian Christians and Buddhists. He noted that people ate meat raw, chopped and seasoned.",
+      "caption": "Its people were Muslims, Nestorian Christians and Buddhists, and they made a good wine from rice and spices. Salt from local wells brought the Khan a great profit.",
       "sources": [
         "polo"
       ],
@@ -337,7 +337,7 @@
       "stop": 11,
       "place": "Carajan (Dali)",
       "title": "The old kingdom of Dali",
-      "caption": "Beyond Yachi lay Carajan, the old kingdom of Dali beside Erhai lake, which Kublai himself had conquered in 1253. He described great serpents ten paces long, with jaws that could swallow a man: crocodiles.",
+      "caption": "Carajan bred big horses that were taken to India for sale, and gold was found in its rivers and lakes. The basin below the Cangshan mountains had been the heart of the Dali kingdom for three centuries.",
       "sources": [
         "polo"
       ],
@@ -349,8 +349,8 @@
         "view": "Wide elevated view Dali basin and Erhai lake beneath Cangshan mountains, low thirteenth-century settlement and cultivated fields, distant restrained pagodas, no modern rebuilt citygate."
       },
       "evidence": {
-        "basis": "account",
-        "passage": "Book II: Carajan; the great serpents.",
+        "basis": "account-and-context",
+        "passage": "Book II: Carajan; the great serpents. The Dali kingdom is contextual.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     },
@@ -381,7 +381,7 @@
       "stop": 12,
       "place": "Zardandan (Yongchang)",
       "title": "The road beyond Yongchang",
-      "caption": "At Zardandan, around Yongchang, he found people who covered their teeth in gold. Near here, he wrote, the Khan's horsemen had beaten the King of Mien and his war elephants; the History of Yuan dates the battle to 1277.",
+      "caption": "From here the road ran two and a half days steeply downhill toward Mien, through country without towns, only a great market held three days a week. Traders came up to it to exchange gold for silver, one of gold for five of silver.",
       "sources": [
         "polo",
         "yuanshi"
@@ -395,7 +395,7 @@
       },
       "evidence": {
         "basis": "account",
-        "passage": "Book II: Zardandan and the battle of Vochan; Yuanshi.",
+        "passage": "Book II: Zardandan and the battle of Vochan; Yuanshi. Book II: the descent toward Mien.",
         "url": "https://www.gutenberg.org/files/12410/12410-h/12410-h.htm"
       }
     }

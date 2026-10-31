@@ -673,7 +673,7 @@
       "stop": 35,
       "place": "Multan",
       "title": "Waiting at the gate",
-      "caption": "After crossing the Indus, he reached Multan and waited to continue to Delhi. Officials there handled the arrival of foreign visitors seeking the sultan’s court.",
+      "caption": "No foreigner went on to Delhi until the sultan's answer came back. Officials wrote down each newcomer's looks and manner for the sultan, and their reports decided his rank and pay.",
       "sources": [
         "ibn-battuta",
         "ibn-battuta-orias"
@@ -1001,7 +1001,7 @@
       "stop": 55,
       "place": "Cairo",
       "title": "The Nile again",
-      "caption": "After his last pilgrimage, he returned to Cairo on the way west. From Egypt, he continued to Alexandria and took ship toward North Africa.",
+      "caption": "The young Mamluk sultan al-Nasir Hasan now ruled the city he had called the mother of cities on his first visit, more than twenty years before. The plague had taken a great part of its people.",
       "sources": [
         "ibn-battuta",
         "ibn-battuta-orias"
@@ -1010,8 +1010,8 @@
       "prompt": "Quiet high oblique view from simple upper window Cairo1349 down onto Nile landing with a few small riverboats, mooring posts and folded sail, foreground window ledge and water jar, river as large negative space. No protagonist, no modern bridge or Ottoman buildings, restrained reflective mood.",
       "traveller": false,
       "evidence": {
-        "basis": "account",
-        "passage": "Return to Egypt and Mediterranean departure, 1349."
+        "basis": "account-and-context",
+        "passage": "Return to Egypt and Mediterranean departure, 1349. The plague in Cairo is contextual."
       }
     },
     {
@@ -1036,7 +1036,7 @@
       "stop": 59,
       "place": "Fez",
       "title": "Back in Fez",
-      "caption": "After returning to Tangier in 1349, he travelled to Fez and the Marinid court. He had been away from Morocco for roughly twenty-four years.",
+      "caption": "Sultan Abu Inan received him and kept him at court. A few years later the sultan had his secretary Ibn Juzayy write down the travels, the book we read today.",
       "sources": [
         "ibn-battuta",
         "ibn-battuta-orias"
@@ -1045,8 +1045,8 @@
       "prompt": "Close rear three-quarter view of older Moroccan traveller age45 Ibn Battuta cream turban muted brown cloak pausing at plain carved wooden doorway in narrow Marinid Fez lane1349. One hand near worn door jamb, quiet reflected warm light, no grand palace, restrained intimate human sketch, no large crowd.",
       "traveller": true,
       "evidence": {
-        "basis": "account",
-        "passage": "Return to Morocco and the court at Fez."
+        "basis": "account-and-context",
+        "passage": "Return to Morocco and the court at Fez. The writing of the Rihla (1355) is contextual."
       }
     },
     {
