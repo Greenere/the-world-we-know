@@ -1,7 +1,7 @@
 import type {AppData} from '../data';
 import type {State, Store} from '../state';
 import {t} from '../i18n';
-import {LEVEL_NAMES} from '../types';
+import {HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {h} from './dom';
 import {icons} from './icons';
 import {fogAlphaFor} from './cards';
@@ -45,6 +45,13 @@ export class About {
         h(
           'ul.about-levels',
           LEVEL_NAMES.map((n, i) => h('li', h('span.fog-swatch', {style: `--a:${fogAlphaFor(i)}`}), h('strong', t(n)), h('span', t(MEANING[i])))),
+          h('li', h('span.seen-swatch', {style: 'width:30px;height:18px;--c:#9b2f20'}), h('strong', t('Seen on a journey')), h('span', t('The traveller has seen it, but the news has not yet reached home.'))),
+        ),
+        h(
+          'p.about-note',
+          t('Humanity has its own scale: {levels}. In compare mode the two viewpoints’ colours tint what each knew, and land both knew takes a mix of the two.', {
+            levels: [0, 3, 5].map(l => t(HUMANITY_LEVEL_NAMES[l])).join(t(', ')),
+          }),
         ),
         h('h3.card-h', t('Viewpoints')),
         h(

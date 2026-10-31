@@ -142,8 +142,9 @@ kbd {
   left: var(--gutter);
   right: var(--gutter);
   display: grid;
-  /* The switcher sits centred while there is room; when the tools need more than their half, it moves left. */
-  grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+  /* The switcher sits centred while there is room; when the tools need more than their half, it moves left. The
+     title row gives way first: its subtitle shortens rather than push the switcher. */
+  grid-template-columns: minmax(0, 1fr) auto minmax(max-content, 1fr);
   align-items: start;
   gap: 12px;
   pointer-events: none;
@@ -154,51 +155,42 @@ kbd {
 }
 
 .cartouche {
+  position: relative;
   justify-self: start;
-  /* The left column's width, shared with the journey panel below it, so the two cards line up. */
-  width: var(--left-w);
-  max-width: calc(100vw - 2 * var(--gutter));
-  /* A little more room above the title than below the legend, close to the margin at the sides. */
-  padding: 11px 16px 9px;
-  text-align: left;
+  /* One row, the height of the viewpoint switcher beside it. */
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 44px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0 18px 0 20px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .cartouche-title {
+  flex: none;
   margin: 0;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 23px;
-  line-height: 1.1;
+  font-size: 22px;
+  line-height: 1;
   letter-spacing: 0.005em;
 }
 
-.cartouche-lede {
-  margin: 3px 0 0;
-  font-size: 12px;
-  line-height: 1.3;
-  color: var(--ink-3);
-}
-
-/* One line: what the map shows and how to use it. */
-.cartouche-lede {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* A full row of levels spreads across the card, lining up with the text at both edges; Humanity's three stay
-   together. */
-.cartouche-legend .legend-levels:has(li:nth-child(5)) {
-  justify-content: space-between;
-}
-
-.cartouche-legend .legend-levels:not(:has(li:nth-child(5))) {
-  gap: 4px 18px;
+.cartouche-rule {
+  flex: none;
+  width: 1px;
+  height: 20px;
+  background: var(--rule-2);
 }
 
 .cartouche-sub {
-  margin-top: 2px;
-  font-size: 13.5px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
   color: var(--ink-2);
   font-style: italic;
 }
@@ -206,7 +198,7 @@ kbd {
 .sub-vp {
   font-style: normal;
   font-family: var(--font-sc);
-  font-size: 14.5px;
+  font-size: 15px;
 }
 
 .sub-dot,
@@ -214,12 +206,71 @@ kbd {
   color: var(--ink-3);
 }
 
+/* Chinese has no italic: the row stays upright, the viewpoint carried by weight and colour, 所知 quieter. */
+.lang-zh .cartouche-title {
+  font-size: 21px;
+  letter-spacing: 0.08em;
+}
+
+.lang-zh .cartouche-sub {
+  font-style: normal;
+  font-size: 14.5px;
+}
+
+.lang-zh .sub-vp {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.lang-zh .sub-lead {
+  margin-left: 1px;
+  color: var(--ink-3);
+}
+
+.lang-zh .sub-dot {
+  margin: 0 0.15em;
+}
+
+.cartouche-sub.tight .sub-lead,
+.cartouche-sub.tighter .sub-place {
+  display: none;
+}
+
+.cartouche-about {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin: 0 -10px 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-3);
+  transition: color 0.2s, background 0.2s;
+}
+
+.cartouche-about:hover {
+  color: var(--ink);
+  background: rgba(64, 46, 24, 0.07);
+}
+
+.cartouche-about svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* A viewpoint's note for its early years: a slip under the title row while it applies. */
 .cartouche-note {
-  margin-top: 6px;
-  padding-top: 6px;
-  border-top: 1px solid var(--rule);
-  font-size: 12.5px;
-  line-height: 1.38;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: var(--left-w);
+  padding: 9px 14px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: normal;
   color: var(--ink-2);
 }
 
@@ -916,14 +967,6 @@ kbd {
   right: calc(var(--gutter) + var(--right-w) + 12px);
 }
 
-/* The legend: a row in the title card, under the subtitle. */
-.cartouche-legend {
-  margin-top: 5px;
-  padding-top: 6px;
-  border-top: 1px solid var(--rule);
-}
-
-.legend-title,
 .inset-title,
 .card-kicker,
 .card-h {
@@ -931,55 +974,6 @@ kbd {
   font-weight: 400;
   font-size: 12.5px;
   letter-spacing: 0.09em;
-  color: var(--ink-3);
-}
-
-.legend-levels,
-.legend-tints {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.legend-levels li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  min-width: 38px;
-  text-align: center;
-}
-
-.legend-levels .fog-swatch {
-  width: 26px;
-  height: 13px;
-}
-
-.legend-name {
-  font-size: 11px;
-  line-height: 1.1;
-  white-space: nowrap;
-  color: var(--ink-2);
-}
-
-.legend-seen {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 6px;
-  font-size: 12px;
-  color: var(--ink-2);
-}
-
-.legend-seen .seen-swatch {
-  width: 26px;
-  height: 15px;
-}
-
-.legend-seen em {
   color: var(--ink-3);
 }
 
@@ -993,26 +987,6 @@ kbd {
     repeating-linear-gradient(-45deg, color-mix(in srgb, var(--c) 34%, transparent) 0 1px, transparent 1px 6px),
     color-mix(in srgb, var(--c) 13%, #e9dcbb);
   box-shadow: inset 0 0 0 1px var(--rule-2);
-}
-
-.legend-tints li {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  color: var(--ink-2);
-}
-
-.tint {
-  width: 18px;
-  height: 12px;
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--c) 34%, var(--land));
-  box-shadow: inset 0 0 0 1px var(--rule-2);
-}
-
-.tint.none {
-  background: #efe7d3;
 }
 
 /* A sliver of map seen through the fog: land, coast and sea under paper of strength --a. */
@@ -2626,6 +2600,12 @@ kbd {
   font-weight: 500;
 }
 
+.about-note {
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+
 .keys {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -2803,11 +2783,6 @@ kbd {
   }
 }
 
-@media (max-width: 760px) {
-  .cartouche-lede {
-    display: none;
-  }
-}
 
 @media (max-width: 760px) {
   :root {
@@ -2817,15 +2792,29 @@ kbd {
   body {
     font-size: 15px;
   }
+  /* The title gets the first row to itself, then the tools, then the viewpoints. */
+  .topbar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
   .cartouche {
-    width: auto;
-    padding: 7px 12px 8px;
+    justify-self: stretch;
+    height: 40px;
+    padding: 0 14px;
+    gap: 9px;
   }
   .cartouche-title {
     font-size: 19px;
   }
   .cartouche-sub {
-    font-size: 12.5px;
+    font-size: 13px;
+  }
+  .tools {
+    justify-self: stretch;
+    justify-content: space-between;
+  }
+  .switcher {
+    grid-row: auto;
   }
   .tool {
     width: 36px;
@@ -2878,9 +2867,6 @@ kbd {
   .tl-play {
     width: 38px;
     height: 38px;
-  }
-  .cartouche-legend {
-    display: none;
   }
   .has-card .bottom-right {
     right: var(--gutter);

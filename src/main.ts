@@ -34,7 +34,6 @@ import {h} from './ui/dom';
 import {sealSvg} from './ui/icons';
 import {Inset} from './ui/inset';
 import {JourneyPanel} from './ui/journey-panel';
-import {Legend} from './ui/legend';
 import {Search} from './ui/search';
 import {momentsFor, scaleFor, Timeline} from './ui/timeline';
 import {TopBar} from './ui/topbar';
@@ -84,7 +83,6 @@ class App {
     journeyCard: JourneyCard;
     journey: JourneyPanel;
     search: Search;
-    legend: Legend;
     inset: Inset;
     about: About;
   };
@@ -203,7 +201,6 @@ class App {
         (j, shown) => ui.cards.scenePlate(j, shown),
       ),
       search: new Search(data, this.store, e => this.choose(e)),
-      legend: new Legend(data),
       inset: new Inset(data),
       about: new About(data, this.store),
     };
@@ -217,7 +214,6 @@ class App {
       ui.search.el,
       ui.about.el,
     ];
-    ui.top.legendSlot.append(ui.legend.el);
     document.getElementById('app')!.prepend(...this.uiNodes);
     return ui;
   }
@@ -324,7 +320,6 @@ class App {
     this.ui.cards.update(s);
     this.ui.journey.update(s);
     this.ui.search.update(s);
-    this.ui.legend.update(s, geo);
     this.ui.about.update(s);
     this.ui.inset.update(s, geo, performance.now());
     document.documentElement.style.setProperty('--vp', this.data.vp[s.vps[0]].color);
