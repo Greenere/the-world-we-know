@@ -685,8 +685,12 @@ export class JourneyPanel {
     ].filter(Boolean) as Node[];
   }
 
-  /** Open a place's card at the year the viewpoint came to know it. */
+  /** Keep the list's discovery order, but open ruins after the city fell out of use. */
   private openAt(c: City, year: number) {
+    if (!c.kind && c.dates.abandoned !== undefined && c.dates.forgotten === undefined && c.tier <= 2) {
+      const d = c.dates.abandoned;
+      year = Math.max(year, typeof d === 'number' ? d : (d[0] + d[1]) / 2);
+    }
     this.store.set({year: Math.max(START, Math.min(PRESENT, Math.round(year))), playing: false});
     this.actions.openCity(c.id);
   }

@@ -1,0 +1,20 @@
+{
+  "view": "Chan Chan close oblique corridor view of tan adobe relief wall with simple repeated fish and diamond net patterns carved shallowly, eroded upper edge, sandy floor and another plain high earthen wall, no painted colors or stone Inca masonry, motifs not readable text.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1500,
+      "title": "Fish along an earthen wall",
+      "caption": "At Chan Chan, fish and net-like patterns decorate the walls of adobe compounds. The motifs connect the Chimú capital with the Pacific coast nearby, while the narrow passages show how carefully access was controlled within its great enclosures.",
+      "sources": [
+        "ruin-study-chan-chan"
+      ],
+      "confidence": "medium",
+      "prompt": "Chan Chan close oblique corridor view of tan adobe relief wall with simple repeated fish and diamond net patterns carved shallowly, eroded upper edge, sandy floor and another plain high earthen wall, no painted colors or stone Inca masonry, motifs not readable text.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/366/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

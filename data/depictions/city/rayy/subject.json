@@ -1,0 +1,20 @@
+{
+  "view": "Rayy Chashma Ali ridge with eroded ancient mudbrick defensive wall running along low rocky crest, footpath and rough stone foreground, dry plain below. Fragmentary uneven wall not intact crenellated fantasy fortress, no Qajar rock relief focus or modern city.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1220,
+      "title": "At the foot of the ridge",
+      "caption": "Old Rayy occupied the meeting place of a plain and rocky hills south of the Alborz. Earthen fortifications and settlement remains survive around Chashma Ali, where the city's history reaches far beyond the medieval trading centre destroyed in the Mongol invasion.",
+      "sources": [
+        "ruin-study-rayy"
+      ],
+      "confidence": "medium",
+      "prompt": "Rayy Chashma Ali ridge with eroded ancient mudbrick defensive wall running along low rocky crest, footpath and rough stone foreground, dry plain below. Fragmentary uneven wall not intact crenellated fantasy fortress, no Qajar rock relief focus or modern city.",
+      "evidence": {
+        "url": "https://www.iranicaonline.org/articles/ray-i-archeo/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

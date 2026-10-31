@@ -1,0 +1,20 @@
+{
+  "view": "Chichen Itza Group of Thousand Columns close eye-level oblique view through many parallel rows of weathered round stone columns, missing roof open sky, low Temple of Warriors steps partly visible behind, Yucatan forest at edge, not generic Greek columns no capitals or European reliefs.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1250,
+      "title": "Columns without a roof",
+      "caption": "At Chichén Itzá, ranks of stone columns remain where broad roofed spaces once stood. They show another side of the Maya city beyond its famous pyramid: gathering places built around halls, courts and carefully ordered movement.",
+      "sources": [
+        "ruin-study-chichen-itza"
+      ],
+      "confidence": "medium",
+      "prompt": "Chichen Itza Group of Thousand Columns close eye-level oblique view through many parallel rows of weathered round stone columns, missing roof open sky, low Temple of Warriors steps partly visible behind, Yucatan forest at edge, not generic Greek columns no capitals or European reliefs.",
+      "evidence": {
+        "url": "https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

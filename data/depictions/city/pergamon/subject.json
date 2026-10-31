@@ -1,0 +1,20 @@
+{
+  "view": "Pergamon exceptionally steep Hellenistic theatre viewed diagonally down from upper seating, tightly spaced curved stone rows dropping to narrow stage terrace, broad Bakircay plain below, no free-standing amphitheatre outer walls, no sea directly at foot.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1300,
+      "title": "Seats above the plain",
+      "caption": "Pergamon's theatre descends steeply below the acropolis. Its rows of stone seats fit into the hillside, letting the terrain do much of the structural work while opening a view over the plain below.",
+      "sources": [
+        "ruin-study-pergamon"
+      ],
+      "confidence": "medium",
+      "prompt": "Pergamon exceptionally steep Hellenistic theatre viewed diagonally down from upper seating, tightly spaced curved stone rows dropping to narrow stage terrace, broad Bakircay plain below, no free-standing amphitheatre outer walls, no sea directly at foot.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1457/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

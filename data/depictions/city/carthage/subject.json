@@ -1,0 +1,20 @@
+{
+  "view": "Oblique close view down a narrow excavated Punic residential street on Byrsa Hill Carthage, low rectangular stone house foundations and threshold stones, Mediterranean gulf pale blue far below; no standing Roman columns or fantasy temples.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": -146,
+      "title": "A street on Byrsa Hill",
+      "caption": "On Byrsa Hill, low walls trace the rooms and narrow streets of Punic Carthage. These domestic remains belong to the city Rome destroyed in 146 BCE, beneath the later Roman capital built on the same ground.",
+      "sources": [
+        "ruin-study-carthage"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique close view down a narrow excavated Punic residential street on Byrsa Hill Carthage, low rectangular stone house foundations and threshold stones, Mediterranean gulf pale blue far below; no standing Roman columns or fantasy temples.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/37/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

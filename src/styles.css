@@ -1977,6 +1977,11 @@ kbd {
   --chip: #485e3a;
 }
 
+/* Ruins never lost, in the sepia the map draws them in. */
+.landmark-ruin {
+  --chip: #685034;
+}
+
 /* Lost cities found again take the map's sign for a rediscovered ruin. */
 .landmark-found {
   --chip: var(--rubric);

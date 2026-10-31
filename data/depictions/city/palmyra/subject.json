@@ -1,0 +1,20 @@
+{
+  "view": "Palmyra surviving weathered limestone colonnade from diagonal low angle, several upright columns receding across sandy ground with broken drums in foreground and oasis palms distant. No intact triumphal arch, no intact Temple of Bel, no modern conflict or vehicles.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1100,
+      "title": "Columns at the oasis",
+      "caption": "Palmyra's colonnaded street crossed a city enriched by caravan trade. Rows of limestone columns still explain its plan: a Roman-style avenue set beside an oasis, on routes linking the Mediterranean with lands farther east.",
+      "sources": [
+        "ruin-study-palmyra"
+      ],
+      "confidence": "medium",
+      "prompt": "Palmyra surviving weathered limestone colonnade from diagonal low angle, several upright columns receding across sandy ground with broken drums in foreground and oasis palms distant. No intact triumphal arch, no intact Temple of Bel, no modern conflict or vehicles.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/23/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

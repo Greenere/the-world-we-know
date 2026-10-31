@@ -1,0 +1,20 @@
+{
+  "view": "Memphis fallen limestone colossus of Ramesses II lying horizontally face up, close diagonal view along monumental head royal nemes headdress and torso with damaged lower legs, believable single human statue anatomy, scattered low ruins and palms faint background; no modern museum roof, no standing full statue, no pyramids.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 640,
+      "title": "The fallen colossus",
+      "caption": "A colossal statue of Ramesses II survives at Memphis, where kings once ruled near the head of the Nile Delta. The scale of the carved figure contrasts with the fragmentary remains of the old capital around it.",
+      "sources": [
+        "ruin-study-memphis"
+      ],
+      "confidence": "medium",
+      "prompt": "Memphis fallen limestone colossus of Ramesses II lying horizontally face up, close diagonal view along monumental head royal nemes headdress and torso with damaged lower legs, believable single human statue anatomy, scattered low ruins and palms faint background; no modern museum roof, no standing full statue, no pyramids.",
+      "evidence": {
+        "url": "https://egymonuments.gov.eg/world-heritage/memphis-and-its-necropolis/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "view": "Tula Hidalgo Pyramid B top four Toltec atlantean warrior stone columns in a row seen slightly from below at three-quarter angle, cylindrical monumental stone figures with rectangular headdresses and butterfly breastplates, lower stepped platform foreground. Four rigid carved figures not living warriors, no roof or invented Greek temple.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1150,
+      "title": "The warrior columns",
+      "caption": "At Tula, carved warrior figures stand above a stepped temple platform. These monumental supports belonged to the architecture of the Toltec capital; their weapons, headdresses and rigid stance are carved details, rather than portraits of people at work.",
+      "sources": [
+        "ruin-study-tula"
+      ],
+      "confidence": "medium",
+      "prompt": "Tula Hidalgo Pyramid B top four Toltec atlantean warrior stone columns in a row seen slightly from below at three-quarter angle, cylindrical monumental stone figures with rectangular headdresses and butterfly breastplates, lower stepped platform foreground. Four rigid carved figures not living warriors, no roof or invented Greek temple.",
+      "evidence": {
+        "url": "https://www.inah.gob.mx/zonas/zona-arqueologica-y-museo-de-sitio-de-tula",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

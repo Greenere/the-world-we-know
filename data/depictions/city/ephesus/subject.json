@@ -1,0 +1,20 @@
+{
+  "view": "Ephesus Curetes Street looking downhill at pedestrian height, worn marble paving foreground, broken columns and roofless terraces, library facade distant secondary subject; dry hills no water at street end, no crowds.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1450,
+      "title": "Along the marble street",
+      "caption": "A marble-paved street runs between the remains of public buildings and hillside houses at Ephesus. The old harbour has silted up, leaving the city's streets inland from the coast that once brought ships and trade to its door.",
+      "sources": [
+        "ruin-study-ephesus"
+      ],
+      "confidence": "medium",
+      "prompt": "Ephesus Curetes Street looking downhill at pedestrian height, worn marble paving foreground, broken columns and roofless terraces, library facade distant secondary subject; dry hills no water at street end, no crowds.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1018/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

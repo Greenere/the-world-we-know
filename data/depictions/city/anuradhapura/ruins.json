@@ -1,0 +1,11 @@
+{
+  "subject": "city/anuradhapura",
+  "era": "ruins",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-31",
+  "prompt": "Use case: historical-scene. Asset: archaeological field sketch for a ruins landmark card.\nA page from an explorer's field sketchbook, drawn on the spot, in the manner of the expedition artists of the 18th and 19th centuries (Cook's artists, Conrad Martens on the Beagle, Thomas Baines with Livingstone, Edward Wilson in the Antarctic). A visible graphite underdrawing with construction lines left in; quick sepia and brown ink over parts of it, with loose parallel hatching for shade; watercolour dropped in quickly and unevenly in a few washes of ochre, grey-green and faded blue, pooling and leaving the paper bare in places. The drawing is unfinished: detail is concentrated on the city, and the edges, the sky and the near water dissolve into bare cream paper in an irregular vignette. Slightly foxed, worn sketchbook paper with soft tone variation; a single page, no binding or spine visible. An observed working sketch, not a finished painting. No legible writing of any kind: no annotations, labels, captions, dates or signature. No border or frame. Nothing anachronistic for the year given. Landscape aspect ratio 3:2.\nSubject: anuradhapura. Anuradhapura ruined monastery entrance close low diagonal study, semicircular carved moonstone flat horizontal on ground immediately before stone steps, paired upright guardstones beside steps, worn concentric animal and floral bands subtle not readable text, low foundation beyond tropical greenery, no restored palace.\nInterpretive archaeological study of surviving remains, not a literal scene of the abandonment year. Keep ruins ruined; do not reconstruct missing buildings. No modern tourism infrastructure, mandatory explorer, labels or writing. Site-specific forms with correct structure, perspective and scale. One coherent composition, unfinished cream-paper margins.",
+  "reference_sources": [
+    "https://whc.unesco.org/en/list/200/"
+  ]
+}

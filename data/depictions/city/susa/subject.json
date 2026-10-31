@@ -1,0 +1,20 @@
+{
+  "view": "Susa Achaemenid Apadana excavated palace foundations, slightly elevated oblique view across low earthen and brick wall grid with a few broad circular stone column bases, dry Khuzestan plain; no intact Persepolis columns, no modern French castle.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1300,
+      "title": "Across the palace foundations",
+      "caption": "At Susa, broad foundations mark a palace built for the Achaemenid kings. Broken column bases and brickwork lie above older layers of settlement, reminders that this royal centre already had a long history before Darius made it one of his capitals.",
+      "sources": [
+        "ruin-study-susa"
+      ],
+      "confidence": "medium",
+      "prompt": "Susa Achaemenid Apadana excavated palace foundations, slightly elevated oblique view across low earthen and brick wall grid with a few broad circular stone column bases, dry Khuzestan plain; no intact Persepolis columns, no modern French castle.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1455/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

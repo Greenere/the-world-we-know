@@ -1,0 +1,20 @@
+{
+  "view": "Wari Huari archaeological city near Ayacucho eye-level view down narrow passage between tall rough fieldstone walls of irregular small stones set in mud, broken uneven tops no roof, Andean brown hills and scrub beyond, no Machu Picchu polished polygonal masonry.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 1000,
+      "title": "Passages through Wari",
+      "caption": "At Wari, thick stone walls divide the remains of a large Andean city into enclosed spaces. These narrow passages belonged to a capital that organised people and resources across wide areas of Peru centuries before the Inca.",
+      "sources": [
+        "ruin-study-huari"
+      ],
+      "confidence": "medium",
+      "prompt": "Wari Huari archaeological city near Ayacucho eye-level view down narrow passage between tall rough fieldstone walls of irregular small stones set in mud, broken uneven tops no roof, Andean brown hills and scrub beyond, no Machu Picchu polished polygonal masonry.",
+      "evidence": {
+        "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=1125",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}

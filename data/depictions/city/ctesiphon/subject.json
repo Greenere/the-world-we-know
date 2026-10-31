@@ -1,0 +1,20 @@
+{
+  "view": "Taq Kasra Ctesiphon three-quarter low view of immense surviving parabolic barrel-vault brick iwan and adjoining ruined facade, open empty shaded hall without interior columns, missing upper masonry and broken edges, tiny distant person for scale optional, no complete symmetrical palace.",
+  "eras": [
+    {
+      "id": "ruins",
+      "from": 800,
+      "title": "Under the great vault",
+      "caption": "The great brick vault known as Taq Kasra survives from the Sasanian royal centre at Ctesiphon. Its open hall needs no forest of columns: the enormous arch carries the roof across a space intended to impress those approaching the court.",
+      "sources": [
+        "ruin-study-ctesiphon"
+      ],
+      "confidence": "medium",
+      "prompt": "Taq Kasra Ctesiphon three-quarter low view of immense surviving parabolic barrel-vault brick iwan and adjoining ruined facade, open empty shaded hall without interior columns, missing upper masonry and broken edges, tiny distant person for scale optional, no complete symmetrical palace.",
+      "evidence": {
+        "url": "https://www.iranicaonline.org/articles/ctesiphon/",
+        "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
+      }
+    }
+  ]
+}
