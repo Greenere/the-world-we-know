@@ -11,7 +11,7 @@
   "lifts": false,
   "stops": [
     {"year": 1695, "place": "Nojpetén", "lat": 16.93, "lon": -89.89, "note": "The Itza capital, an island city in Lake Petén Itzá."},
-    {"year": 1695, "place": "Mérida", "lat": 20.97, "lon": -89.62, "note": "He offers the Itza's submission and is baptized."}
+    {"year": 1695, "place": "Mérida", "lat": 20.97, "lon": -89.62, "note": "He offers the Itza's submission and is baptized.", "city": "merida"}
   ],
   "informs": [
   ]

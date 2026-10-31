@@ -145,6 +145,7 @@ export const zhUi: Record<string, string> = {
   lost: '湮没',
   'rediscovered ruin': '重新发现的废墟',
   Founded: '建立',
+  Appeared: '显现',
   'At its height': '鼎盛',
   Abandoned: '废弃',
   Forgotten: '遗忘',

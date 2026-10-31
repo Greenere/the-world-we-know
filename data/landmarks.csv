@@ -4,7 +4,8 @@ id,kind,subtype,lat,lon,tier,founded,peak,abandoned,forgotten,rediscovered,sourc
 # kind: built | natural. subtype (natural only) picks the map sign: peak, volcano, falls, gorge, rock, pool (a small
 # water), or water; water has no sign, its name is lettered on the lake or bay the basemap (or its area) draws. tier sets how prominent the mark
 # and label are (1 the most). A landmark that runs along a line (a wall, a canal) has its course in
-# landmark-paths.json; the mark stays at its best-known point.
+# landmark-paths.json; the mark stays at its best-known point. A natural landmark has a founding date only when
+# it appeared within the atlas's span (Vinicunca's colours, uncovered as its ice melted).
 # Knowing a region is not knowing what is in it. A viewpoint living near a landmark (a home within 1,000 km)
 # knew it. Others, once in contact with the land, heard of it no sooner than `widely`, the year it became known
 # beyond its neighbours (Herodotus for the pyramids, Stein and Pelliot for the Mogao Caves).
@@ -74,6 +75,7 @@ chimborazo,natural,volcano,-1.47,-78.82,2,,,,,,draft,high,europe 1534,1802,,"An 
 denali,natural,peak,63.07,-151.0,2,,,,,,draft,high,europe 1794,1897,,"The highest peak in North America, the High One to the Koyukon. Vancouver saw it from the sea in 1794; it was first climbed in 1913."
 yellowstone,natural,volcano,44.46,-110.83,2,,,,,,draft,high,europe 1807,1872,,"Geysers, boiling springs and painted canyons over a slumbering supervolcano. John Colter's tales of it in 1807 were laughed at; in 1872 it became the world's first national park."
 okavango,natural,water,-19.3,22.9,2,,,,,,draft,high,europe 1849,1849,,"A river that never reaches the sea, spreading into a vast green delta in the Kalahari. Livingstone crossed its edge on the way to Lake Ngami in 1849."
+pantanal,natural,water,-18.4,-56.9,2,,,,,,hernandez-comentarios,medium,iberia 1543,1600,,"The largest tropical wetland on Earth, where the upper Paraguay and its rivers flood a basin the size of England each rainy season: caimans, jaguars, capybaras and hyacinth macaws. Spanish explorers going upriver in the 1540s took it for a great lake, the Laguna de los Xarayes, and it sat on European maps as an inland sea for two centuries."
 mount-cameroon,natural,volcano,4.2,9.17,2,,,,,,draft,high,maghreb -500 greece -300,1472,,A volcano rising straight from the Gulf of Guinea. The Carthaginian Hanno saw it burning at night around 500 BCE and called it the Chariot of the Gods.
 aoraki,natural,peak,-43.6,170.14,2,,,,,,draft,high,polynesia 1300 europe 1642,1851,,"The highest peak of the Southern Alps, Aoraki to the Māori, a boy turned to stone. Tasman saw the great range in 1642; it was named for Cook in 1851."
 kilauea,natural,volcano,19.41,-155.28,2,,,,,,draft,high,polynesia 1000 europe 1823,1823,,"One of the most active volcanoes on Earth, home of the fire goddess Pele. The missionary William Ellis described its lava lake in 1823."
@@ -122,6 +124,7 @@ mount-athos,natural,peak,40.16,24.33,3,,,,,,draft,high,,-480,,"A marble peak at 
 yosemite,natural,gorge,37.74,-119.59,2,,,,,,draft,high,europe 1851,1864,,"A granite valley in the Sierra Nevada, home of the Ahwahneechee; a militia chasing them entered it in 1851, and in 1864 it was set aside for the public."
 lake-itasca,natural,pool,47.24,-95.21,3,,,,,,draft,high,europe 1832,1832,,"The small lake where the Mississippi begins, found in 1832 by Henry Schoolcraft with the Ojibwe guide Ozawindib."
 salar-de-uyuni,natural,rock,-20.13,-67.49,2,,,,,,draft,high,,1900,,"The largest salt flat on Earth, a white plain on the Bolivian altiplano where a prehistoric lake dried away."
+vinicunca,natural,peak,-13.87,-71.3,2,2013,,,,,smithsonian-vinicunca,medium,,2015,,"A ridge in the Andes south-east of Cusco striped red, gold, turquoise and lavender by its minerals. For as long as anyone remembered it lay under snow and ice; as the ice melted in the early 2010s the colours came out, and photographs of them spread across the world. By 2017 more than a thousand visitors a day were climbing to its 5,200-metre summit."
 milford-sound,natural,pool,-44.67,167.92,3,,,,,,draft,high,polynesia 1300 europe 1823,1880,,"A fjord between sheer granite walls in the south-west of New Zealand, Piopiotahi to the Māori."
 north-cape,natural,rock,71.17,25.78,3,,,,,,draft,high,norse 890 britain 890,1553,,"A cliff at the northern end of Europe. The Norse chieftain Ohthere sailed round it about 890 and told King Alfred of the voyage; the English captain Richard Chancellor named it in 1553, looking for a way to China."
 namib,natural,rock,-24.73,15.29,2,,,,,,draft,high,,1880,,"The oldest desert on Earth, where red dunes three hundred metres high run down to the Atlantic."

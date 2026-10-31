@@ -186,7 +186,7 @@ export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId)
   else {
     // A neighbour knew it, but only once it knew the land the landmark stands on: Silla Korea lay 830 km from
     // Mount Fuji, but knew Japan only as the coast of Wa.
-    const home = nearHome(data, vp, c.lat, c.lon, c.kind === 'built' && c.dates.founded !== undefined ? mid(c.dates.founded) : -Infinity);
+    const home = nearHome(data, vp, c.lat, c.lon, c.kind && c.dates.founded !== undefined ? mid(c.dates.founded) : -Infinity);
     const land = home === null ? null : field.firstKnown(vp, c.cell, NEAR_LEVEL);
     const close = home === null || land === null ? null : Math.max(home, land);
     // Having mapped the land is not knowing a place in it (Bactria mapped since Alexander, Bamiyan unheard of in
@@ -200,7 +200,8 @@ export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId)
   }
   // Out of reach until the world shared one map, and no sooner than it became known beyond its neighbours.
   if (known === null) known = Math.max(SHARED_MAP, widely ?? SHARED_MAP);
-  if (c.kind === 'built' && c.dates.founded !== undefined) known = Math.max(known, mid(c.dates.founded));
+  // Nothing is known before it is there: a building before it stands, a wonder before it appears (Vinicunca's colours).
+  if (c.kind && c.dates.founded !== undefined) known = Math.max(known, mid(c.dates.founded));
   const lost = c.dates.forgotten;
   const found = c.dates.rediscovered;
   if (lost === undefined || found === undefined || known < mid(lost)) return known;

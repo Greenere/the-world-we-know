@@ -20,15 +20,17 @@
   - **Greece, Rome, Iberia, France, Britain, Germany, the Norse, Russia.**
   - **Two knowledge communities,** Europe and the Islamic world. Each shares what its members knew.
   - **Humanity,** which traces where people first arrived, back 70,000 years.
-- **178 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks. A party sent out from a larger journey (Gan Ying from Ban Chao's, Marco Polo's mission to Yunnan from his own) is a journey of its own, nested under the one it belongs to.
-- **146 landmarks and 63 lost cities found again.**
+- **184 journeys.** Voyages, pilgrimages, campaigns, scientific expeditions and the last frontiers, from the Sahara and Siberia to the Canadian Arctic. Each is routed over land, sea and river, and tied to what each viewpoint learned from it and when the news reached home. Many come with illustrated sketchbooks. A party sent out from a larger journey (Gan Ying from Ban Chao's, Marco Polo's mission to Yunnan from his own) is a journey of its own, nested under the one it belongs to.
+- **148 landmarks, 50 ruins that were never lost, and 69 lost cities found again.**
   - Pyramids, walls, waterfalls and volcanoes, each known to a viewpoint only when it lived nearby, met the place itself, or the place became famous.
   - Some cover ground: deserts, salt flats and lakes that shrink over the centuries, drawn in their real outlines.
+  - Ruins stay known to the people who lived beside them: Teotihuacan, Great Zimbabwe and Angkor are listed apart from the cities the world forgot and found again.
+  - Some appear only late. Peru's Rainbow Mountain shows its colours from 2013, when its ice melted.
   - Some change with time. The Great Wall is drawn through nine dynasties, each wall in ink while it stood and fading the longer it has lain in ruin. The Grand Canal re-routes age by age.
   - Wonders within a city (the Alhambra in Granada) are listed on their city's card.
 - **82 inventions** that changed how people saw the world, from the spoked-wheel chariot to GPS. Those made in a city are listed on its card.
 - **35 plants and animals**, and how word of them spread: maize from Mexico to China, tea to Europe by caravan and by sea, the giraffe greeted as a qilin at the Ming court, the dodo and the moa lost. Each has the year every viewpoint came to know it, and its arrivals marked on the map.
-- **493 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
+- **505 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
 - **Two panels.** Journeys holds the journeys and landmarks; Discoveries holds the inventions and the plants and animals.
 - **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map. While you follow a journey, the timeline becomes the journey's own: land and sea legs, long stays folded with their length, and the news reaching home.
 

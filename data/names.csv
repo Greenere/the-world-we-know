@@ -1089,3 +1089,21 @@ city,jerusalem,turks,Kudüs,قدس,,,inalcik-classical
 city,thessaloniki,turks,Selanik,سلانيك,1430,,inalcik-classical
 city,cairo,turks,Mısır,مصر,1517,,inalcik-classical
 city,montreal,haudenosaunee,Tiohtià:ke,,,,snow-iroquois
+
+# ── Maya and Mesoamerican ruins, and Mérida (2026-10-31) ──
+city,merida,*,Mérida,,,,
+city,uxmal,*,Uxmal,,,,
+city,tulum,*,Tulum,,,,
+city,mitla,*,Mitla,,,,
+city,paquime,*,Casas Grandes,,,,
+city,yaxchilan,*,Yaxchilán,,,,
+city,quirigua,*,Quiriguá,,,,
+city,naranjo,*,Naranjo,,,,
+city,edzna,*,Edzná,,,,
+city,el-tajin,*,El Tajín,,,,
+city,ciudad-perdida,*,Teyuna,,,,
+city,merida,maya,T'hó,,,1541,landa
+city,pantanal,*,Pantanal,,,,
+city,pantanal,iberia,Laguna de los Xarayes,,1543,1800,hernandez-comentarios
+city,quilmes,*,Quilmes,,,,
+city,vinicunca,*,Rainbow Mountain,Winikunka,,,

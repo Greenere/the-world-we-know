@@ -415,7 +415,7 @@ export class Cards {
     if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', tx.story(c.id, c.story)));
     const labels: Record<string, string> = {
-      founded: t(c.kind === 'built' ? 'Built' : 'Founded'),
+      founded: t(c.kind === 'built' ? 'Built' : c.kind === 'natural' ? 'Appeared' : 'Founded'),
       peak: t('At its height'),
       abandoned: t('Abandoned'),
       forgotten: t('Forgotten'),
@@ -425,10 +425,15 @@ export class Cards {
     if (c.kind) {
       // A landmark was there to be found: when this viewpoint first came to know its surroundings.
       const known = landmarkKnown(this.data, this.field, c, vp);
-      dl.append(
-        h('dt', t(vp === 'humanity' ? 'First reached' : 'Known to {vp}', {vp: vpName(this.data, vp)})),
-        h('dd', known <= START ? t('since {year}', {year: formatYear(known)}) : formatYear(known)),
-      );
+      // Known from the day it was built or appeared: the date below says it once.
+      const f = c.dates.founded;
+      const from = f === undefined ? null : typeof f === 'number' ? f : (f[0] + f[1]) / 2;
+      if (from === null || Math.round(known) !== Math.round(from)) {
+        dl.append(
+          h('dt', t(vp === 'humanity' ? 'First reached' : 'Known to {vp}', {vp: vpName(this.data, vp)})),
+          h('dd', known <= START ? t('since {year}', {year: formatYear(known)}) : formatYear(known)),
+        );
+      }
     }
     for (const k of ['founded', 'peak', 'abandoned', 'forgotten', 'rediscovered'] as const) {
       const d = c.dates[k];
