@@ -193,6 +193,7 @@ export const zhUi: Record<string, string> = {
   'No landmark matches.': '没有匹配的地标。',
   'Found again': '失而复得',
   'Built wonders': '人造奇观',
+  'What {vp} knew, seen from {place}': '{vp}所知的世界，以{place}为中心',
   'Ruins': '遗址',
   'Abandoned {year}': '{year}废弃',
   'Abandoned {abandoned}, known from {year}': '{abandoned}废弃，{year}起为人所知',

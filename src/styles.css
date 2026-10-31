@@ -142,9 +142,8 @@ kbd {
   left: var(--gutter);
   right: var(--gutter);
   display: grid;
-  /* The switcher sits centred while there is room; when the tools need more than their half, it moves left. The
-     title row gives way first: its subtitle shortens rather than push the switcher. */
-  grid-template-columns: minmax(0, 1fr) auto minmax(max-content, 1fr);
+  /* The switcher sits centred while there is room; when a side needs more than its half, it moves over. */
+  grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
   align-items: start;
   gap: 12px;
   pointer-events: none;
@@ -154,17 +153,43 @@ kbd {
   pointer-events: auto;
 }
 
+.topbar-left {
+  justify-self: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.topbar-left > .cartouche,
+.topbar-left > .tool {
+  flex: none;
+}
+
+.topbar.tight .vp-more .vp-name,
+.topbar.tight .vp-compare .vp-name,
+.topbar.tighter .vp-chip:not(.active) .vp-name {
+  display: none;
+}
+
+.topbar-right {
+  justify-self: end;
+  display: flex;
+}
+
 .cartouche {
   position: relative;
   justify-self: start;
   /* One row, the height of the viewpoint switcher beside it. */
   display: flex;
   align-items: center;
-  gap: 11px;
-  height: 44px;
+  gap: 8px;
+  /* The height of the Journeys and Discoveries buttons beside it. */
+  height: 40px;
   min-width: 0;
   max-width: 100%;
-  padding: 0 18px 0 20px;
+  padding: 0 18px 0 7px;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -179,85 +204,33 @@ kbd {
   letter-spacing: 0.005em;
 }
 
-.cartouche-rule {
-  flex: none;
-  width: 1px;
-  height: 20px;
-  background: var(--rule-2);
-}
-
-.cartouche-sub {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  color: var(--ink-2);
-  font-style: italic;
-}
-
-.sub-vp {
-  font-style: normal;
-  font-family: var(--font-sc);
-  font-size: 15px;
-}
-
-.sub-dot,
-.sub-amp {
-  color: var(--ink-3);
-}
-
-/* Chinese has no italic: the row stays upright, the viewpoint carried by weight and colour, 所知 quieter. */
 .lang-zh .cartouche-title {
-  font-size: 21px;
+  font-size: 19px;
   letter-spacing: 0.08em;
 }
 
-.lang-zh .cartouche-sub {
-  font-style: normal;
-  font-size: 14.5px;
+/* The title wears the paper of the switcher and the timeline, at the height of the buttons beside it, its
+   name led by the atlas's compass rose. */
+.topbar-left > .cartouche {
+  padding: 0 16px 0 9px;
+  gap: 9px;
 }
 
-.lang-zh .sub-vp {
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.lang-zh .sub-lead {
-  margin-left: 0.3em;
-  color: var(--ink-3);
-}
-
-.lang-zh .sub-dot {
-  margin: 0 0.15em;
-}
-
-.cartouche-sub.tight .sub-lead,
-.cartouche-sub.tighter .sub-place {
-  display: none;
-}
-
-.cartouche-about {
+.cartouche-rose {
   flex: none;
-  width: 30px;
-  height: 30px;
-  margin: 0 -10px 0 auto;
   display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--ink-3);
-  transition: color 0.2s, background 0.2s;
+  color: var(--rubric);
 }
 
-.cartouche-about:hover {
-  color: var(--ink);
-  background: rgba(64, 46, 24, 0.07);
+.topbar-left > .cartouche .cartouche-title {
+  font-size: 20px;
+  /* The face sets its letters high in the line; centre them on the ⓘ. */
+  transform: translateY(2px);
 }
 
-.cartouche-about svg {
-  width: 19px;
-  height: 19px;
+.lang-zh .topbar-left > .cartouche .cartouche-title {
+  font-size: 19px;
+  transform: translateY(2.5px);
 }
 
 /* A viewpoint's note for its early years: a slip under the title row while it applies. */
@@ -275,11 +248,12 @@ kbd {
 }
 
 .switcher {
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: 2px;
   padding: 4px;
-  border-radius: 999px;
+  border-radius: 8px;
 }
 
 .switcher-chips {
@@ -299,7 +273,7 @@ kbd {
   align-items: center;
   gap: 7px;
   padding: 6px 13px 6px 9px;
-  border-radius: 999px;
+  border-radius: 5px;
   color: var(--ink-2);
   font-size: 15px;
   white-space: nowrap;
@@ -451,6 +425,8 @@ kbd {
   align-items: center;
   gap: 22px;
   padding: 8px 22px 6px 16px;
+  /* The corners of the title and the switcher above. */
+  border-radius: 8px;
   /* Dragging along the track shouldn't select the year or the tick labels. */
   -webkit-user-select: none;
   user-select: none;
@@ -2759,27 +2735,20 @@ kbd {
   }
 }
 
-/* Journeys and Discoveries go to their marks before the bar gets crowded; their titles still name them. */
-@media (max-width: 1400px) {
-  .tool-wide .tool-label {
-    display: none;
-  }
+
+/* Only when nothing else makes room (set by the top bar) does the switcher take a row of its own. */
+.topbar.stacked {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.topbar.stacked .switcher {
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 @media (max-width: 1250px) {
-  .topbar {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-  .switcher {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    justify-self: center;
-  }
   .vp-chip .vp-name {
     font-size: 13.5px;
-  }
-  :root {
-    --top-h: 122px;
   }
 }
 
@@ -2797,8 +2766,13 @@ kbd {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
   }
-  .cartouche {
+  .topbar-left {
     justify-self: stretch;
+  }
+  .topbar-left > .cartouche {
+    flex: 1;
+  }
+  .cartouche {
     height: 40px;
     padding: 0 14px;
     gap: 9px;
@@ -2806,11 +2780,11 @@ kbd {
   .cartouche-title {
     font-size: 19px;
   }
-  .cartouche-sub {
-    font-size: 13px;
-  }
-  .tools {
+  .topbar-right {
     justify-self: stretch;
+  }
+  .topbar-right > .tools {
+    flex: 1;
     justify-content: space-between;
   }
   .switcher {
@@ -2835,7 +2809,7 @@ kbd {
     justify-self: stretch;
     overflow-x: auto;
     scrollbar-width: none;
-    border-radius: 14px;
+    border-radius: 8px;
   }
   .switcher::-webkit-scrollbar {
     display: none;
@@ -2918,7 +2892,7 @@ kbd {
   }
 }
 
-/* Phones: the stack is the bottom sheet. With a card open, the folded journey sits on top of it as a tab. */
+  /* Phones: the stack is the bottom sheet. With a card open, the folded journey sits on top of it as a tab. */
 @media (max-width: 760px) {
   #app > .card-stack {
     top: auto;

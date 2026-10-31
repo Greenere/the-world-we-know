@@ -60,10 +60,8 @@ export class TopBar {
   /** The left panel's two faces: where people went, and what they came to know that travelled. */
   private journeysBtn: HTMLButtonElement;
   private discoveriesBtn: HTMLButtonElement;
-  private subtitle: HTMLElement;
   /** A viewpoint's note for its early years, as a slip under the title row while it applies. */
   private note: HTMLElement;
-  private subKey = '';
   private moreBtn: HTMLButtonElement;
   private picker: HTMLElement;
   private pickerItems = new Map<VpId, HTMLButtonElement>();
@@ -163,42 +161,48 @@ export class TopBar {
       'aria-label': t('Toggle globe view'),
       onclick: () => store.set({globe: !store.state.globe}),
     });
-    this.subtitle = h('div.cartouche-sub');
     this.note = h('div.cartouche-note.panel');
-    // One row, the height of the switcher: the atlas's name, and whose map it is from where. The year is on the
-    // timeline, and how to read the fog is under About.
-    this.el = h(
-      'header.topbar',
+    const about = h('button.tool', {type: 'button', title: t('About this atlas'), 'aria-label': t('About'), onclick: () => this.togglePanel('about'), html: icons.info});
+    const tools = h(
+      'div.tools',
+      h('button.tool', {type: 'button', title: t('Search  /'), 'aria-label': t('Search'), onclick: () => store.set({search: true}), html: icons.search}),
+      this.globeBtn,
       h(
-        'div.cartouche.panel',
-        h('h1.cartouche-title', t('The World We Know')),
-        h('span.cartouche-rule'),
-        this.subtitle,
-        // About, which explains how to read the fog, sits with the title it explains.
-        h('button.cartouche-about', {type: 'button', title: t('About this atlas'), 'aria-label': t('About'), onclick: () => this.togglePanel('about'), html: icons.info}),
-        this.note,
+        'button.tool.tool-lang',
+        {type: 'button', title: getLang() === 'zh' ? 'English' : '中文', 'aria-label': getLang() === 'zh' ? 'Switch to English' : '切换到中文', onclick: () => this.onLang()},
+        getLang() === 'zh' ? 'EN' : '中',
       ),
-      h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips, this.moreBtn), h('span.switcher-rule'), this.compareBtn, this.picker),
+      // About, which also explains how to read the fog.
+      about,
+      // Star on GitHub. Until the repository is public it is a link without a destination, with its own tooltip
+      // (a disabled button would show none); give it an href and drop `soon` once it opens.
       h(
-        'div.tools',
-        this.journeysBtn,
-        this.discoveriesBtn,
-        h('button.tool', {type: 'button', title: t('Search  /'), 'aria-label': t('Search'), onclick: () => store.set({search: true}), html: icons.search}),
-        this.globeBtn,
-        h(
-          'button.tool.tool-lang',
-          {type: 'button', title: getLang() === 'zh' ? 'English' : '中文', 'aria-label': getLang() === 'zh' ? 'Switch to English' : '切换到中文', onclick: () => this.onLang()},
-          getLang() === 'zh' ? 'EN' : '中',
-        ),
-        // Star on GitHub. Until the repository is public it is a link without a destination, with its own tooltip
-        // (a disabled button would show none); give it an href and drop `soon` once it opens.
-        h(
-          'a.tool.tool-github.soon',
-          {role: 'link', tabindex: '0', 'aria-disabled': 'true', 'aria-label': `${t('Star on GitHub')}: ${t('To be open-sourced…')}`, 'data-tip': t('To be open-sourced…')},
-          h('span.tool-icon', {html: icons.github}),
-        ),
+        'a.tool.tool-github.soon',
+        {role: 'link', tabindex: '0', 'aria-disabled': 'true', 'aria-label': `${t('Star on GitHub')}: ${t('To be open-sourced…')}`, 'data-tip': t('To be open-sourced…')},
+        h('span.tool-icon', {html: icons.github}),
       ),
     );
+    // The atlas's name. The year is on the timeline.
+    const title = h('div.cartouche.panel', h('span.cartouche-rose', {html: icons.rose}), h('h1.cartouche-title', t('The World We Know')), this.note);
+    // Left: the title, then what there is to browse (Journeys and Discoveries open the list panel beneath them).
+    // Centre: the viewpoints; the chosen one's tooltip names the home it is seen from. Right: the tools.
+    const left = h('div.topbar-left', title);
+    const right = h('div.topbar-right', tools);
+    this.el = h(
+      'header.topbar',
+      left,
+      h('nav.switcher.panel', {'aria-label': t('Viewpoint')}, h('div.switcher-chips', chips, this.moreBtn), h('span.switcher-rule'), this.compareBtn, this.picker),
+      right,
+    );
+    // On phones the two buttons stay with the other tools, in the row of round buttons.
+    const narrow = matchMedia('(max-width: 760px)');
+    const place = () => {
+      if (narrow.matches) tools.prepend(this.journeysBtn, this.discoveriesBtn);
+      else left.append(this.journeysBtn, this.discoveriesBtn);
+      this.fitTitle();
+    };
+    place();
+    narrow.addEventListener('change', place);
   }
 
   /**
@@ -236,18 +240,17 @@ export class TopBar {
   }
 
   /**
-   * When the top bar is crowded, the title row's subtitle gives up words rather than be cut mid-phrase: first
-   * "as known to", then the place, leaving the viewpoint's name.
+   * Keep the top bar to one row. When it runs out of room the switcher gives way: first More and Compare go to
+   * their marks, then the viewpoints not chosen; only past that does it take a row of its own.
    */
   private fitTitle() {
-    const row = this.el.querySelector<HTMLElement>('.cartouche');
-    if (!row) return;
-    const sub = this.subtitle;
-    sub.classList.remove('tight', 'tighter');
-    if (sub.scrollWidth <= sub.clientWidth + 1) return;
-    sub.classList.add('tight');
-    if (sub.scrollWidth <= sub.clientWidth + 1) return;
-    sub.classList.add('tighter');
+    const bar = this.el;
+    bar.classList.remove('tight', 'tighter', 'stacked');
+    const over = () => bar.scrollWidth > bar.clientWidth + 1;
+    for (const step of ['tight', 'tighter', 'stacked']) {
+      if (!over()) return;
+      bar.classList.add(step);
+    }
   }
 
   private openPicker() {
@@ -290,6 +293,14 @@ export class TopBar {
 
   update(s: State) {
     for (const [id, b] of this.chips) {
+      // The chosen viewpoint's tooltip says where it looks from: its home in this year.
+      const vp = this.data.vp[id];
+      const name = tx.viewpoint(id, 'longName', vp.longName);
+      b.title = vp.special
+        ? t('Humanity: when people first arrived')
+        : s.vps.includes(id)
+          ? t('What {vp} knew, seen from {place}', {vp: name, place: tx.name(homeAt(vp, s.year).place)})
+          : t('What {vp} knew', {vp: name});
       b.classList.toggle('active', s.vps.includes(id));
       b.setAttribute('aria-pressed', String(s.vps.includes(id)));
       b.hidden = !FEATURED.includes(id) && !s.vps.includes(id);
@@ -301,27 +312,6 @@ export class TopBar {
     setIcon(this.globeBtn, s.globe ? icons.flat : icons.globe);
     this.globeBtn.title = s.globe ? t('Flat map') : t('Globe view');
     const vps = s.vps.map(v => this.data.vp[v]);
-    // Whose map, and from where; rebuilt only when that changes (a home moves, say), not every year.
-    const home = s.compare ? '' : homeAt(vps[0], s.year).place;
-    const subKey = `${s.compare}|${s.vps.join()}|${home}`;
-    if (subKey !== this.subKey) {
-      this.subKey = subKey;
-      this.subtitle.replaceChildren();
-      if (s.compare && vps.length === 2) {
-        this.subtitle.append(
-          h('span.sub-vp', {style: `color:${vps[0].color}`}, tx.viewpoint(vps[0].id, 'name', vps[0].name)),
-          h('span.sub-amp', getLang() === 'zh' ? ' 与 ' : ' & '),
-          h('span.sub-vp', {style: `color:${vps[1].color}`}, tx.viewpoint(vps[1].id, 'name', vps[1].name)),
-        );
-      } else {
-        const vp = vps[0];
-        const who = h('span.sub-vp', {style: `color:${vp.color}`}, vp.special ? t('people') : tx.viewpoint(vp.id, 'name', vp.name));
-        const place = vp.special ? null : h('span.sub-place', h('span.sub-dot', ' · '), tx.name(home));
-        if (getLang() === 'zh') this.subtitle.append(who, h('span.sub-lead', vp.special ? '所及' : '所知'), place ?? '');
-        else this.subtitle.append(h('span.sub-lead', vp.special ? 'as reached by ' : 'as known to '), who, place ?? '');
-      }
-      this.fitTitle();
-    }
     const vp = vps[0];
     const showNote =
       !s.compare &&

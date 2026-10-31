@@ -14,6 +14,9 @@ export const icons = {
     '<circle cx="10" cy="10" r="7"/><ellipse cx="10" cy="10" rx="3" ry="7"/><path d="M3.3 7.6h13.4M3.3 12.4h13.4"/>',
   ),
   flat: wrap('<rect x="3" y="4.5" width="14" height="11" rx="1"/><path d="M3 8.2h14M3 11.8h14M8 4.5v11M12 4.5v11"/>'),
+  /** The atlas's own mark, before its name: a compass rose in red ink. */
+  rose:
+    '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10.5" stroke-width="1"/><circle cx="12" cy="12" r="7.6" stroke-width=".6"/><path d="M12 2.6 13.5 12 12 21.4 10.5 12z" fill="currentColor" stroke="none"/><path d="M2.6 12 12 10.6 21.4 12 12 13.4z" fill="currentColor" stroke="none" opacity=".5"/></svg>',
   info: wrap('<circle cx="10" cy="10" r="7"/><path d="M10 9v4.6"/><circle cx="10" cy="6.4" r=".4" fill="currentColor"/>'),
   compare: wrap('<circle cx="7.6" cy="10" r="4.6"/><circle cx="12.4" cy="10" r="4.6"/>'),
   compass: wrap(
