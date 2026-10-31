@@ -27,6 +27,8 @@ paraphrases or contextual descriptions, not invented quotations. Reported
 stories are attributed when included. Existing route source/confidence values
 are retained; the pictures do not raise their confidence.
 
+The captions follow the Ibn Battuta sketchbook’s narrative approach: establish the stop or action, then add a concrete detail about local work, travel or daily life. They generally use two sentences in the past tense. Contextual details use “would have” where appropriate; captions do not comment on the illustration or repeatedly announce what the book mentions. A caption sits beside its stop's note on the journey card, so it adds what the note leaves out (another detail Polo recorded, or context for the scene) and never retells it. Prefer the specific thing he recorded to a general statement no source makes. English and Chinese tell the same story.
+
 The main textual reference is the public-domain Yule–Cordier edition:
 
 - [Volume I: prologue, the outward route and the Khan's court](https://www.gutenberg.org/files/10636/10636-h/10636-h.htm)
