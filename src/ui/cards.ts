@@ -10,6 +10,7 @@ import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
 import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
+import type {ScenePlate} from './journey-card';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
 
@@ -29,6 +30,9 @@ function shownName(n: NameEntry): {name: string; native: string | null} {
 type Child = Node | string | null | undefined | false;
 type LandmarkTarget = {id: string; name: string; year: number};
 
+/** Where a journey is opened from: a city or landmark, a region, or a point (where a plant or animal arrived). */
+export type JourneyAt = {city?: string; region?: string; point?: [number, number]};
+
 /**
  * Replace an element's content only when `key` changes, and let the new content fade in. Text that changes
  * every year (the year itself) is written directly instead, so nothing flickers while the timeline plays.
@@ -45,7 +49,8 @@ function swap(el: HTMLElement, key: string, content: () => Child[]) {
 }
 
 /**
- * The right-hand card: a region, a city or an invention. A card is built once per subject and viewpoint;
+ * The right-hand card: a region, a city, a landmark, an invention, a plant or animal. It sits under the
+ * journey card while a journey is followed. A card is built once per subject and viewpoint;
  * as the year changes only its year-dependent parts update in place, so it can be read and scrolled while
  * the timeline plays.
  */
@@ -58,16 +63,11 @@ export class Cards {
   private key = '';
   /** Updates the year-dependent parts of the current card. */
   private live: ((s: State) => void) | null = null;
-  private scenePlate: Plate | null = null;
   private inventionPlate: Plate | null = null;
   private landmarkPlate: Plate | null = null;
   /** The pending swap from one card's words to the next. */
   private leaving = 0;
   private lightbox: HTMLElement | null = null;
-  /** For each journey with pictures, the stops that have a scene (once loaded). */
-  private sceneStops = new Map<string, number[]>();
-  /** The scene the reader closed (`journey:stop`); the card stays away until the traveller reaches another. */
-  private dismissed: string | null = null;
 
   constructor(
     private data: AppData,
@@ -75,7 +75,8 @@ export class Cards {
     private field: FogField,
     private actions: {
       openRegion(id: string): void;
-      openJourney(id: string): void;
+      /** Open a journey, at the stop where it comes to this place when there is one. */
+      openJourney(id: string, at?: JourneyAt): void;
       openInvention(id: string): void;
       openLiving(id: string, year?: number): void;
       pickArrival(index: number): void;
@@ -97,57 +98,18 @@ export class Cards {
     this.scroller.addEventListener('scroll', () => this.el.classList.toggle('scrolled', this.scroller.scrollTop > 4), {passive: true});
   }
 
-  private close() {
-    const s = this.store.state;
-    if (s.invention || s.living || s.city || s.region) this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
-    else {
-      this.dismissed = this.sceneKey(s);
-      this.update(s);
-    }
-  }
-
-  /** Show the followed journey's sketch again after the reader closed it. */
-  reopenScene() {
-    this.dismissed = null;
-    this.update(this.store.state);
-  }
-
-  /** Hold travel while the visible stop's sketchbook pages are being read. */
-  advanceSketch(dt: number, s: State): boolean {
-    return s.playing && !this.el.hidden && !!this.scenePlate?.advance(dt, s.progress, s.speed);
-  }
-
-  /** `journey:stop` of the scene for where the traveller is now, or null when the journey has no pictures. */
-  private sceneKey(s: State): string | null {
-    const j = s.journey ? this.data.journeyById.get(s.journey) : null;
-    if (!j?.pictures) return null;
-    const stops = this.sceneStops.get(j.id);
-    if (!stops) {
-      loadPictures(this.data, 'journey', j.id).then(doc => {
-        this.sceneStops.set(j.id, (doc?.scenes ?? []).map(x => x.stop ?? 0));
-        this.update(this.store.state);
-      });
-      return `${j.id}:?`;
-    }
-    if (!stops.length) return null;
-    return `${j.id}:${sceneStopAt(stops, s.progress)}`;
+  close() {
+    this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
   }
 
   update(s: State) {
-    let subject = s.invention ? `invention:${s.invention}` : s.living ? `living:${s.living}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
-    if (!s.journey) this.dismissed = null;
-    if (!subject) {
-      const scene = this.sceneKey(s);
-      if (scene && scene !== this.dismissed) subject = `scene:${s.journey}`;
-    }
+    const subject = s.invention ? `invention:${s.invention}` : s.living ? `living:${s.living}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
     this.el.hidden = !subject;
-    this.el.classList.toggle('scene-card', subject.startsWith('scene:'));
-    document.body.classList.toggle('has-card', !!subject);
+    document.body.classList.toggle('has-card', !!subject || !!s.journey);
     if (!subject) {
       clearTimeout(this.leaving);
       this.key = '';
       this.live = null;
-      this.scenePlate = null;
       this.inventionPlate = null;
       this.landmarkPlate = null;
       return;
@@ -162,11 +124,8 @@ export class Cards {
       if (!landmark) this.landmarkPlate = null;
       this.key = key;
       this.live = null;
-      this.scenePlate = null;
       let nodes: Node[] = [];
-      if (subject.startsWith('scene:')) {
-        nodes = this.scenes(this.data.journeyById.get(s.journey!)!, s);
-      } else if (s.invention) {
+      if (s.invention) {
         const x = this.data.inventionById.get(s.invention);
         if (x) nodes = this.invention(x);
       } else if (s.living) {
@@ -218,16 +177,23 @@ export class Cards {
     const level = h('strong');
     const year = h('span');
     const conf = h('span.conf');
+    // Where it lies and what it is to the viewpoint you look through, then the journeys that went there and how
+    // that viewpoint came to know it; the comparison across every viewpoint and the names come last, for reference.
+    const parents = r.parents.map(id => this.data.regionById.get(id)).filter(Boolean) as Region[];
     const out: Node[] = [
       h('div.card-kicker', t(r.surface === 'sea' ? 'Sea' : r.body ? 'Beyond Earth' : 'Region')),
       h('h2.card-title', tx.region(r.id, r.name)),
+      parents.length
+        ? h(
+            'p.card-part.card-part-top',
+            t('Part of '),
+            parents.map((p, i) => [i ? t(' and ') : '', h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(p.id)}, tx.region(p.id, p.name))]),
+          )
+        : null,
       called,
       h('div.card-status', swatch, h('span', level, vpData.special ? '' : t(' to {vp}', {vp: vpName(this.data, vp)}), t(' in '), year), conf),
-    ];
-    let ribbons: SVGElement | null = null;
-    if (cell >= 0) out.push(h('h3.card-h', t('Who knew it, and when')), (ribbons = this.ribbons(cell)));
-    const names = r.names.filter(n => n.vp !== '*');
-    if (names.length) out.push(h('h3.card-h', t('What they called it')), namesList(this.data, names));
+    ].filter(Boolean) as Node[];
+    if (r.journeys.length) out.push(h('h3.card-h', t('Journeys that passed through')), this.journeyChips(r.journeys, {region: r.id}));
     const evs = this.events(r, vp);
     if (evs.length) out.push(h('h3.card-h', t('How {vp} came to know it', {vp: vpData.special ? t('people') : vpName(this.data, vp)})), h('ol.events', evs));
     if (vp === 'polynesia') {
@@ -235,17 +201,10 @@ export class Cards {
         h('p.card-note', t('Polynesian knowledge was carried in navigation lore and oral tradition. These dates come from archaeology and genetics and carry wide ranges.')),
       );
     }
-    if (r.journeys.length) out.push(h('h3.card-h', t('Journeys that passed through')), this.journeyChips(r.journeys));
-    const parents = r.parents.map(id => this.data.regionById.get(id)).filter(Boolean) as Region[];
-    if (parents.length) {
-      out.push(
-        h(
-          'p.card-part',
-          t('Part of '),
-          parents.map((p, i) => [i ? t(' and ') : '', h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(p.id)}, tx.region(p.id, p.name))]),
-        ),
-      );
-    }
+    let ribbons: SVGElement | null = null;
+    if (cell >= 0) out.push(h('h3.card-h', t('Who knew it, and when')), (ribbons = this.ribbons(cell)));
+    const names = r.names.filter(n => n.vp !== '*');
+    if (names.length) out.push(h('h3.card-h', t('What they called it')), namesList(this.data, names));
     const now = ribbons?.querySelector('.rb-now') ?? null;
     const calledYear = h('span');
     this.live = st => {
@@ -318,7 +277,7 @@ export class Cards {
               : null,
           ),
           e.note ? h('div.event-note', tx.note(e.note)) : null,
-          j ? h('button.linkish.event-journey', {type: 'button', onclick: () => this.actions.openJourney(j.id)}, tx.journey(j.id, 'name', j.name)) : null,
+          j ? h('button.linkish.event-journey', {type: 'button', onclick: () => this.actions.openJourney(j.id, {region: r.id})}, tx.journey(j.id, 'name', j.name)) : null,
           h('div.event-src', {title: this.data.sources[e.source]?.citation ?? e.source}, shortCitation(this.data.sources, e.source), ` · ${t(CONFIDENCE_NAMES[e.conf])}`),
         ),
       );
@@ -369,7 +328,7 @@ export class Cards {
     return el;
   }
 
-  private journeyChips(ids: string[]): HTMLElement {
+  private journeyChips(ids: string[], at: JourneyAt): HTMLElement {
     return h(
       'div.chips',
       ids.map(id => {
@@ -377,7 +336,7 @@ export class Cards {
         if (!j) return null;
         return h(
           'button.chip',
-          {type: 'button', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.openJourney(id)},
+          {type: 'button', style: `--chip:${this.data.vp[j.viewpoint].color}`, onclick: () => this.actions.openJourney(id, at)},
           h('span.chip-icon', {html: kindIcons[j.kind] ?? kindIcons.traveler}),
           tx.journey(j.id, 'name', j.name),
         );
@@ -495,7 +454,7 @@ export class Cards {
     if (phases.length) out.push(h('h3.card-h', t('Through the ages')), h('ol.ages', ageEls));
     const names = c.names;
     if (names.length > 1) out.push(h('h3.card-h', t('Names over time')), namesList(this.data, names));
-    if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys));
+    if (c.journeys.length) out.push(h('h3.card-h', t('Journeys that stopped here')), this.journeyChips(c.journeys, {city: c.id}));
     // A city's wonders, too close to draw apart, are listed here; a wonder's card leads back to its city.
     if (c.wonders?.length) out.push(h('h3.card-h', t('Wonders here')), this.wonderChips(c.wonders));
     if (c.inventions?.length) out.push(h('h3.card-h', t('Invented here')), this.inventionChips(c.inventions));
@@ -581,16 +540,14 @@ export class Cards {
 
   // ── Journey sketchbook ───────────────────────────────────────────────────
 
-  /** The followed journey's sketch for the traveller's current stop, as the journey plays. */
-  private scenes(j: Journey, s: State): Node[] {
-    const vp = this.data.vp[j.viewpoint];
+  /** A journey's sketchbook, for the journey card: the sketch for the traveller's stop, as the journey plays. */
+  scenePlate(j: Journey, shown: () => void): ScenePlate {
     const real = j.stops.filter(x => !x.waypoint);
     const stopLabel = (d: Depiction) => {
       const st = real[d.stop ?? 0];
       const k = d.stop ?? 0;
       return `${shortPlace(tx.stop(j.id, k, 'place', d.place ?? ''))} · ${st?.date ? tx.stop(j.id, k, 'date', st.date) : formatYear(st?.year ?? 0)}`;
     };
-    const counter = h('span.scene-stop');
     const plate = new Plate(
       this.data,
       {
@@ -600,23 +557,13 @@ export class Cards {
         label: d => shortPlace(tx.stop(j.id, d.stop ?? 0, 'place', d.place ?? '')),
         range: stopLabel,
         jump: d => this.store.set({progress: d.stop ?? 0, playing: false}),
-        shown: (d, at) => {
-          const here = Math.floor(at + 1e-6) === d?.stop;
-          counter.textContent = d ? t(here ? 'At stop {n} of {total}' : 'Last sketch at stop {n} of {total}', {n: (d.stop ?? 0) + 1, total: real.length}) : '';
-        },
+        shown,
       },
-      s.vps[0],
+      this.store.state.vps[0],
       (d, title, caption, range) => this.openLightbox(d, title, caption, range),
     );
     plate.el.classList.add('scene');
-    this.scenePlate = plate;
-    this.live = st => plate.show(st.progress);
-    return [
-      h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), t('From the sketchbook')),
-      h('h2.card-title', tx.journey(j.id, 'name', j.name)),
-      plate.el,
-      h('p.scene-meta', counter),
-    ];
+    return plate;
   }
 
   // ── Plant or animal ──────────────────────────────────────────────────────
@@ -642,7 +589,7 @@ export class Cards {
           h('span.age-note', tx.arrival(x.id, i, 'note', a.note)),
         ),
         via
-          ? h('button.chip.arrival-via', {type: 'button', style: `--chip:${this.data.vp[via.viewpoint].color}`, onclick: () => this.actions.openJourney(via.id)},
+          ? h('button.chip.arrival-via', {type: 'button', style: `--chip:${this.data.vp[via.viewpoint].color}`, onclick: () => this.actions.openJourney(via.id, {point: [a.lon, a.lat]})},
               h('span.chip-icon', {html: kindIcons[via.kind] ?? kindIcons.traveler}), tx.journey(via.id, 'name', via.name))
           : null,
       );
@@ -759,11 +706,16 @@ const ribbonX = (y: number) => RIBBON.L + mainScale.toX(y) * (RIBBON.W - RIBBON.
 /** A stop's place without its gloss: "Belerion (Cornwall)" → "Belerion". */
 const shortPlace = (p: string) => p.replace(/\s*[(（].*[)）]$/, '');
 
-function sceneStopAt(stops: number[], progress: number) {
-  const k = Math.floor(progress + 1e-6);
-  let best = stops[0];
-  for (const x of stops) if (x <= k) best = x;
-  return best;
+/**
+ * A card's sketch, and its larger version for when the card shows it wider than the card image is sharp:
+ * the browser picks between them by the picture's width on screen and the screen's density.
+ */
+function sketchSources(d: Depiction): {src: string; srcset: string; sizes: string} {
+  return {
+    sizes: '(max-width: 760px) 92vw, calc(30vw - 46px)',
+    srcset: `${dataUrl(d.img.card)} 720w, ${dataUrl(d.img.full)} 1280w`,
+    src: dataUrl(d.img.card),
+  };
 }
 
 function eraRange(d: Depiction) {
@@ -893,6 +845,10 @@ class Plate {
     this.show(this.order.kind === 'journey' ? d.stop ?? 0 : this.at);
   }
 
+  thumb(): string | null {
+    return this.shown ? dataUrl(this.shown.img.thumb) : null;
+  }
+
   advance(dt: number, progress: number, speed: number): boolean {
     if (!this.loaded) {
       this.loadingTime += dt;
@@ -954,13 +910,13 @@ class Plate {
     this.crossfade(d, first);
     // Warm the neighbours so playing on into the next picture doesn't wait for the network.
     const i = this.items.indexOf(d);
-    for (const n of [this.items[i + 1], this.items[i - 1]]) if (n) new Image().src = dataUrl(n.img.card);
+    for (const n of [this.items[i + 1], this.items[i - 1]]) if (n) Object.assign(new Image(), sketchSources(n));
   }
 
   private crossfade(d: Depiction, first: boolean) {
     this.ready = false;
     const token = ++this.token;
-    const img = h('img.plate-layer', {src: dataUrl(d.img.card), alt: `${this.title(d)}, ${this.order.range(d)}: ${t('imagined sketch')}`, decoding: 'async'});
+    const img = h('img.plate-layer', {...sketchSources(d), alt: `${this.title(d)}, ${this.order.range(d)}: ${t('imagined sketch')}`, decoding: 'async'});
     const tag = d.placeholder ? h('span.plate-tag', t('Placeholder')) : null;
     const reveal = () => {
       if (token !== this.token) return;

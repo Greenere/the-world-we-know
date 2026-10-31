@@ -1,13 +1,11 @@
 import type {AppData} from '../data';
-import {landmarkKnown, loadPictures, nameFor, shortCitation} from '../data';
+import {landmarkKnown, nameFor} from '../data';
 import type {FogField} from '../fog/field';
-import type {JourneyGeo} from '../journey-geo';
-import {currentStopIndex} from '../journey-geo';
 import {isListPanel, type Shelf, type State, type Store} from '../state';
 import {ERAS, formatRange, formatYear, mainScale, PRESENT, START} from '../time';
 import type {City, Journey, VpId} from '../types';
 import {t, tx} from '../i18n';
-import {h, setIcon} from './dom';
+import {h} from './dom';
 import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
 import {GROUPS} from './topbar';
 
@@ -21,16 +19,13 @@ const FILTERS: {id: string; label: string; kinds: string[]}[] = [
   {id: 'frontier', label: 'Frontiers', kinds: ['polar', 'mountaineering', 'deep dive', 'spaceflight']},
 ];
 
-/** Left panel: the list of journeys, inventions or landmarks, or the journey being followed. */
+/** Left panel: the lists of journeys and landmarks, inventions and plants and animals. */
 export class JourneyPanel {
   el: HTMLElement;
   private body: HTMLElement;
   private key = '';
-  private stopEls: HTMLElement[] = [];
-  private counter: HTMLElement | null = null;
-  private playBtn: HTMLButtonElement | null = null;
-  private viewBtns: {follow: HTMLButtonElement; route: HTMLButtonElement} | null = null;
-  private epilogueEl: HTMLElement | null = null;
+  /** A journey was being followed at the last update, so the list coming back is the one it was opened from. */
+  private wasFollowing = false;
   private filter = 'all';
   /** Viewpoint filter: null for all journeys (where the list always opens). */
   private vpFilter: VpId | null = null;
@@ -46,8 +41,6 @@ export class JourneyPanel {
   private resultsEl: HTMLElement | null = null;
   private haystack = new Map<string, string>();
   private listEl: HTMLElement | null = null;
-  private meanwhileEl: HTMLElement | null = null;
-  private meanwhileKey = '';
   private invItems = new Map<string, HTMLElement>();
   /** The list on show, so a switch to the panel's other face rebuilds it. */
   private listShelf: Shelf | null = null;
@@ -73,16 +66,9 @@ export class JourneyPanel {
     private field: FogField,
     private actions: {
       start(id: string): void;
-      step(dir: -1 | 1): void;
-      close(): void;
-      openRegion(id: string): void;
       openInvention(id: string): void;
       openLiving(id: string): void;
       openCity(id: string): void;
-      switchTo(id: string, year: number): void;
-      showSketch(stop: number): void;
-      jumpTo(year: number): void;
-      recenter(): void;
     },
   ) {
     this.body = h('div.jp-body');
@@ -94,27 +80,23 @@ export class JourneyPanel {
     }, true);
   }
 
-  update(s: State, geo: JourneyGeo | null) {
-    const mode = geo ? `j:${geo.journey.id}` : isListPanel(s.panel) ? 'list' : 'none';
+  update(s: State) {
+    const mode = isListPanel(s.panel) ? 'list' : 'none';
     this.el.hidden = mode === 'none';
     // Switching between the panel's faces (Journeys, Discoveries) changes the list too.
     if (mode !== this.key || (mode === 'list' && s.shelf !== this.listShelf)) {
       // Coming back from a journey opened from the list: the list as it was left, filters and place in it.
-      const returning = mode === 'list' && this.key.startsWith('j:');
+      const returning = mode === 'list' && this.key === 'none' && this.wasFollowing && !s.journey;
       if (this.key === 'list') this.listScroll = this.el.scrollTop;
       this.key = mode;
       this.body.replaceChildren();
-      this.stopEls = [];
-      this.meanwhileEl = null;
-      this.meanwhileKey = '';
-      if (geo) this.body.append(...(this.journey(geo).filter(Boolean) as Node[]));
-      else if (mode === 'list') this.body.append(...this.list(returning));
+      if (mode === 'list') this.body.append(...this.list(returning));
       this.el.scrollTop = returning ? this.listScroll : 0;
       // After the timeline-following section has filled (it is queued the same way), before anything is drawn.
       if (returning) queueMicrotask(() => this.restoreAnchor());
     }
-    if (geo) this.progress(s, geo);
-    else if (mode === 'list' && s.shelf === 'landmarks' && s.vps[0] !== this.landmarkVp) this.listEl?.replaceChildren(...this.landmarkList(s));
+    this.wasFollowing = !!s.journey;
+    if (mode === 'list' && s.shelf === 'landmarks' && s.vps[0] !== this.landmarkVp) this.listEl?.replaceChildren(...this.landmarkList(s));
     else if (mode === 'list' && s.shelf === 'living' && s.vps[0] !== this.livingVp) this.listEl?.replaceChildren(...this.livingList(s));
     if (mode === 'list') this.refreshNear(s.year);
     for (const [id, els] of this.landmarkItems) for (const el of els) el.classList.toggle('current', id === s.city);
@@ -170,7 +152,7 @@ export class JourneyPanel {
             if (id !== 'journeys') this.publishRoutes(null);
             this.key = '';
             this.store.set({shelf: id});
-            this.update(this.store.state, null);
+            this.update(this.store.state);
           },
         },
         t(label),
@@ -886,306 +868,6 @@ export class JourneyPanel {
     btn.classList.toggle('current', c.id === this.store.state.city);
     this.landmarkItems.set(c.id, [...(this.landmarkItems.get(c.id) ?? []), btn]);
     return h('li', btn);
-  }
-
-  private journey(geo: JourneyGeo): (Node | null)[] {
-    const j = geo.journey;
-    const vp = this.data.vp[j.viewpoint];
-    this.counter = h('span.jp-counter');
-    this.playBtn = h('button.jp-play', {type: 'button', onclick: () => this.store.set({playing: !this.store.state.playing})});
-    const informed = new Map<string, {region: string; year: number}[]>();
-    for (const inf of j.informs) {
-      if (!j.lifts.includes(inf.region)) continue;
-      const list = informed.get(inf.viewpoint) ?? [];
-      list.push({region: inf.region, year: inf.homeKnowsMid});
-      informed.set(inf.viewpoint, list);
-    }
-    // Each party this journey sent out, at the stop it set out from: the last stop of that name before it left.
-    const forks = new Map<number, Journey[]>();
-    for (const c of this.data.journeyChildren.get(j.id) ?? []) {
-      const at = geo.stops.map((st, i) => ({st, i})).filter(({st}) => st.stop.place === c.fork);
-      const k = (at.filter(({st}) => st.t <= c.t[0] + 1e-6).pop() ?? at[0])?.i;
-      if (k !== undefined) forks.set(k, [...(forks.get(k) ?? []), c]);
-    }
-    const stopsList = h(
-      'ol.jp-stops',
-      geo.stops.map((st, i) => {
-        const s = st.stop;
-        const src = s.source ?? j.source;
-        const li = h(
-          'li.jp-stop',
-          {onclick: () => this.store.set({progress: i, playing: false})},
-          h('span.jp-stop-dot'),
-          h(
-            'div.jp-stop-text',
-            h('div.jp-stop-when', s.date ? tx.stop(j.id, i, 'date', s.date) : formatYear(st.year)),
-            h('div.jp-stop-place', tx.stop(j.id, i, 'place', s.place ?? '')),
-            s.note ? h('p.jp-stop-note', tx.stop(j.id, i, 'note', s.note)) : null,
-            h('div.jp-stop-src', {title: this.data.sources[src]?.citation ?? src}, shortCitation(this.data.sources, src), s.confidence && s.confidence !== j.confidence ? ` · ${t('{level} confidence', {level: t(s.confidence)})}` : ''),
-            (forks.get(i) ?? []).map(c =>
-              h(
-                'button.jp-stop-fork',
-                {
-                  type: 'button',
-                  style: `--chip:${this.data.vp[c.viewpoint].color}`,
-                  title: t('Follow {name}', {name: tx.journey(c.id, 'name', c.name)}),
-                  onclick: (e: Event) => {
-                    e.stopPropagation();
-                    this.actions.switchTo(c.id, c.t[0]);
-                  },
-                },
-                h('span.jp-stop-fork-icon', {html: kindIcons[c.kind] ?? kindIcons.traveler}),
-                t('{name} sets out from here', {name: tx.journey(c.id, 'name', c.name)}),
-              ),
-            ),
-          ),
-        );
-        this.stopEls.push(li);
-        return li;
-      }),
-    );
-    // Stops with a sketch get a small mark that opens it.
-    if (j.pictures) {
-      loadPictures(this.data, 'journey', j.id).then(doc => {
-        for (const sc of doc?.scenes ?? []) {
-          const li = this.stopEls[sc.stop ?? -1];
-          if (!li || li.querySelector('.jp-stop-sketch')) continue;
-          li.querySelector('.jp-stop-place')?.append(
-            h('button.jp-stop-sketch', {
-              type: 'button',
-              title: t('Sketch: {title}', {title: tx.depiction(`journey/${j.id}`, sc.id, 'title', sc.title)}),
-              'aria-label': t('Show the sketch: {title}', {title: tx.depiction(`journey/${j.id}`, sc.id, 'title', sc.title)}),
-              html: icons.sketch,
-              onclick: (e: Event) => {
-                e.stopPropagation();
-                this.actions.showSketch(sc.stop ?? 0);
-              },
-            }),
-          );
-        }
-      });
-    }
-    if (geo.epilogue) {
-      this.epilogueEl = h(
-        'li.jp-stop.epilogue',
-        {onclick: () => this.store.set({progress: geo.stops.length, playing: false})},
-        h('span.jp-stop-dot'),
-        h('div.jp-stop-text', h('div.jp-stop-when', formatYear(geo.homeKnows)), h('div.jp-stop-place', t('The news reaches home')), h('p.jp-stop-note', t('Only now does the fog lift.'))),
-      );
-      stopsList.append(this.epilogueEl);
-    } else {
-      this.epilogueEl = null;
-    }
-    return [
-      h(
-        'div.jp-sticky',
-        h(
-          'div.jp-head',
-          h('div.card-kicker', {style: `color:${vp.color}`}, h('span.kicker-icon', {html: kindIcons[j.kind] ?? ''}), `${t(j.kind)} · ${tx.journey(j.id, 'years', j.years)}`),
-          h('button.card-close', {type: 'button', 'aria-label': t('Close journey'), onclick: () => this.actions.close(), html: icons.close}),
-        ),
-        h('h2.card-title', tx.journey(j.id, 'name', j.name)),
-        this.parentLink(j),
-        h(
-          'div.jp-controls',
-          h('button.jp-step', {type: 'button', 'aria-label': t('Previous stop'), onclick: () => this.actions.step(-1), html: icons.prev}),
-          this.playBtn,
-          h('button.jp-step', {type: 'button', 'aria-label': t('Next stop'), onclick: () => this.actions.step(1), html: icons.next}),
-          this.counter,
-          this.viewToggle(),
-        ),
-      ),
-      j.traveler ? h('p.jp-traveller', tx.journey(j.id, 'traveler', j.traveler)) : null,
-      h('p.jp-summary', tx.journey(j.id, 'summary', j.summary)),
-      h(
-        'div.jp-lifts',
-        h('h3.card-h', t('Lifts the fog')),
-        h(
-          'ul',
-          [...informed].map(([v, list]) => {
-            const SHOW = 6;
-            const item = (x: {region: string; year: number}, i: number) => [
-              i ? ', ' : '',
-              h('button.linkish', {type: 'button', onclick: () => this.actions.openRegion(x.region)}, tx.region(x.region, this.data.regionById.get(x.region)?.name ?? x.region)),
-              h('span.jp-lift-year', ` ${formatYear(x.year)}`),
-            ];
-            const rest = list.length > SHOW + 1 ? h('span.jp-lift-rest', {hidden: true}, list.slice(SHOW).map((x, i) => item(x, i + SHOW))) : null;
-            const more = rest
-              ? h(
-                  'button.linkish.jp-lift-more',
-                  {
-                    type: 'button',
-                    onclick: (e: Event) => {
-                      rest.hidden = false;
-                      (e.currentTarget as HTMLElement).remove();
-                    },
-                  },
-                  t('and {n} more', {n: list.length - SHOW}),
-                )
-              : null;
-            return h(
-              'li',
-              h('span.jp-lift-vp', {style: `color:${this.data.vp[v as keyof AppData['vp']].color}`}, tx.viewpoint(v, 'name', this.data.vp[v as keyof AppData['vp']].name)),
-              ' ',
-              (rest ? list.slice(0, SHOW) : list).map(item),
-              more ? ' ' : null,
-              more,
-              rest,
-            );
-          }),
-        ),
-      ),
-      this.crossedPaths(j),
-      (this.meanwhileEl = h('div.jp-meanwhile', {hidden: true})),
-      stopsList,
-    ];
-  }
-
-  /** For a party sent out from a larger journey: the journey it belongs to, opened at the moment it set out. */
-  private parentLink(j: Journey): HTMLElement | null {
-    const p = j.parent ? this.data.journeyById.get(j.parent) : undefined;
-    if (!p) return null;
-    const name = tx.journey(p.id, 'name', p.name);
-    return h(
-      'p.jp-parent',
-      t('Part of '),
-      h('button.linkish', {type: 'button', style: `color:${this.data.vp[p.viewpoint].color}`, title: t('Follow {name} from here', {name}), onclick: () => this.actions.switchTo(p.id, j.t[0])}, name),
-    );
-  }
-
-  /** Other journeys that came close in place and time, computed by the build. */
-  private crossedPaths(j: Journey): HTMLElement | null {
-    if (!j.crossings.length) return null;
-    return h(
-      'div.jp-crossings',
-      h('h3.card-h', t('Crossed paths')),
-      h(
-        'ul.jp-cross-list',
-        j.crossings.map(c => {
-          const other = this.data.journeyById.get(c.journey);
-          if (!other) return null;
-          const color = this.data.vp[other.viewpoint].color;
-          const otherName = tx.journey(other.id, 'name', other.name);
-          const otherPlace = this.stopName(other, c.otherPlace);
-          const place = this.stopName(j, c.place);
-          const text =
-            c.kind === 'meanwhile'
-              ? [h('em', otherName), c.otherPlace
-                  ? t(' was at {other}, {km} km from {place}.', {other: otherPlace, km: Math.round(c.km / 10) * 10, place})
-                  : t(' was {km} km from {place}.', {km: Math.round(c.km / 10) * 10, place})]
-              : [h('em', otherName), t(c.otherT < c.t ? ' had passed through {other} in {year}.' : ' would pass through {other} in {year}.', {other: otherPlace, year: formatYear(c.otherT)})];
-          return h(
-            'li.jp-cross',
-            {style: `--chip:${color}`},
-            h(
-              'button.jp-cross-main',
-              {type: 'button', title: t('Go to this moment'), onclick: () => this.actions.jumpTo(c.t)},
-              h('span.jp-cross-when', `${formatYear(c.t)} · ${place}`),
-              h('span.jp-cross-text', text),
-            ),
-            h('button.jp-cross-follow', {type: 'button', title: t('Follow {name} from here', {name: otherName}), 'aria-label': t('Follow {name}', {name: otherName}), onclick: () => this.actions.switchTo(other.id, c.otherT), html: kindIcons[other.kind] ?? icons.arrow}),
-          );
-        }),
-      ),
-    );
-  }
-
-  /** A stop's place in the current language, looked up by its English name among the journey's stops. */
-  private stopName(j: Journey, en: string): string {
-    const i = j.stops.filter(x => !x.waypoint).findIndex(x => x.place === en);
-    return i >= 0 ? tx.stop(j.id, i, 'place', en) : tx.name(en);
-  }
-
-  /** Who else is travelling right now, nearest first. Called by the app as the traveller moves. */
-  setMeanwhile(others: {id: string; name: string; color: [number, number, number]; km: number; where: string}[]) {
-    const el = this.meanwhileEl;
-    if (!el) return;
-    const key = others.map(o => `${o.id}:${o.where}:${Math.round(o.km / 100)}`).join('|');
-    if (key === this.meanwhileKey) return;
-    this.meanwhileKey = key;
-    el.hidden = !others.length;
-    if (!others.length) return;
-    const year = this.store.state.year;
-    el.replaceChildren(
-      h('h3.card-h', t('Meanwhile')),
-      h(
-        'ul.jp-cross-list',
-        others.map(o =>
-          h(
-            'li.jp-cross',
-            {style: `--chip:rgb(${o.color.join(',')})`},
-            h(
-              'button.jp-cross-main',
-              {type: 'button', title: t('Follow {name} instead', {name: o.name}), onclick: () => this.actions.switchTo(o.id, year)},
-              h('span.jp-cross-text', h('em', o.name), ` ${o.where}`),
-              h('span.jp-cross-when', o.km < 50 ? t('right here') : t('{km} km away', {km: (o.km >= 1000 ? Math.round(o.km / 100) * 100 : Math.round(o.km / 10) * 10).toLocaleString('en')})),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  /** Camera: follow the traveller (default) or show the whole route. */
-  private viewToggle() {
-    const btn = (follow: boolean, label: string, icon: string) =>
-      h(
-        'button.jp-view-btn',
-        {
-          type: 'button',
-          title: label,
-          'aria-label': label,
-          onclick: () => {
-            // Pressing Follow again re-centres after the reader has dragged the map away.
-            if (follow && this.store.state.follow) this.actions.recenter();
-            else this.store.set({follow});
-          },
-        },
-        h('span', {html: icon}),
-        h('span.jp-view-label', t(follow ? 'Follow' : 'Route')),
-      );
-    const follow = btn(true, t('Follow the traveller'), icons.follow);
-    const route = btn(false, t('Show the whole route'), icons.route);
-    this.viewBtns = {follow, route};
-    return h('div.jp-view', {role: 'group', 'aria-label': t('Camera')}, follow, route);
-  }
-
-  /** Scroll a stop into view below the pinned header. */
-  private reveal(el: HTMLElement) {
-    const sticky = this.body.querySelector<HTMLElement>('.jp-sticky');
-    const box = this.el.getBoundingClientRect();
-    const r = el.getBoundingClientRect();
-    const offset = r.top - box.top + this.el.scrollTop;
-    const top = offset - (sticky?.offsetHeight ?? 0) - 10;
-    const bottom = offset + r.height - this.el.clientHeight + 16;
-    if (this.el.scrollTop > top) this.el.scrollTo({top, behavior: 'smooth'});
-    else if (this.el.scrollTop < bottom) this.el.scrollTo({top: Math.min(top, bottom), behavior: 'smooth'});
-  }
-
-  private progress(s: State, geo: JourneyGeo) {
-    const cur = currentStopIndex(geo, s.progress);
-    const inEpilogue = geo.epilogue && s.progress > geo.stops.length - 1 + 0.5;
-    this.stopEls.forEach((el, i) => {
-      el.classList.toggle('done', i < cur || inEpilogue);
-      const active = i === cur && !inEpilogue;
-      if (active && !el.classList.contains('current')) this.reveal(el);
-      el.classList.toggle('current', active);
-    });
-    this.epilogueEl?.classList.toggle('current', inEpilogue);
-    if (this.counter) {
-      this.counter.textContent = inEpilogue ? t('At home') : t('{n} of {total}', {n: cur + 1, total: geo.stops.length});
-      this.counter.title = inEpilogue ? t('The news reaches home') : t('Stop {n} of {total}', {n: cur + 1, total: geo.stops.length});
-    }
-    if (this.viewBtns) {
-      this.viewBtns.follow.classList.toggle('active', s.follow);
-      this.viewBtns.follow.setAttribute('aria-pressed', String(s.follow));
-      this.viewBtns.route.classList.toggle('active', !s.follow);
-      this.viewBtns.route.setAttribute('aria-pressed', String(!s.follow));
-    }
-    if (this.playBtn) {
-      setIcon(this.playBtn, s.playing ? icons.pause : icons.play);
-      this.playBtn.setAttribute('aria-label', t(s.playing ? 'Pause journey' : 'Play journey'));
-    }
   }
 }
 

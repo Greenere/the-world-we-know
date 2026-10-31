@@ -33,6 +33,8 @@ export interface State {
   progress: number;
   /** Journey camera: keep the traveller centred (default), or frame the whole route. */
   follow: boolean;
+  /** While following a journey: its card shows all its stops and what it made known, not the current stop. */
+  details: boolean;
   region: string | null;
   regionCell: number | null;
   city: string | null;
@@ -97,6 +99,7 @@ export const DEFAULT_STATE: State = {
   journey: null,
   progress: 0,
   follow: true,
+  details: false,
   region: null,
   regionCell: null,
   city: null,

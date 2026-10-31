@@ -175,6 +175,9 @@ export interface City {
 
 export type Body = 'orbit' | 'moon' | 'moon-orbit';
 
+/** How a leg was travelled. */
+export type Mode = 'sea' | 'land' | 'river' | 'direct';
+
 export interface Stop {
   year?: number;
   place?: string;
@@ -186,7 +189,7 @@ export interface Stop {
   date?: string;
   waypoint?: boolean;
   from?: string;
-  by?: 'sea' | 'land' | 'river' | 'direct';
+  by?: Mode;
   body?: Body;
   city?: string;
 }
@@ -221,6 +224,8 @@ export interface Journey {
   focus?: [number, number];
   /** Routed path into each (non-waypoint) stop from where its leg starts; null for the first stop and off-map legs. */
   route: ([number, number][] | null)[];
+  /** How each leg into a (non-waypoint) stop was travelled, as routed; "mixed" when its waypoints change mode. */
+  modes: (Mode | 'mixed' | null)[];
   /** Number of scene pictures in depictions/journey/<id>.json. */
   pictures?: number;
   /** Fractional year of each (non-waypoint) stop: the clock every journey shares. */

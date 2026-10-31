@@ -27,7 +27,8 @@ import {DEFAULT_STATE, isListPanel, type ListPanel, readUrl, type Shelf, SHELVES
 import {formatRange, formatYear, PRESENT, START} from './time';
 import type {Living, SearchEntry, VpId} from './types';
 import {About} from './ui/about';
-import {Cards, levelName} from './ui/cards';
+import {Cards, type JourneyAt, levelName} from './ui/cards';
+import {JourneyCard} from './ui/journey-card';
 import {hexToRgb, mixHex, rgb01} from './ui/color';
 import {h} from './ui/dom';
 import {sealSvg} from './ui/icons';
@@ -80,6 +81,7 @@ class App {
     top: TopBar;
     timeline: Timeline;
     cards: Cards;
+    journeyCard: JourneyCard;
     journey: JourneyPanel;
     search: Search;
     legend: Legend;
@@ -102,6 +104,8 @@ class App {
   private sightCache = new Map<string, Sight>();
   /** Follow camera: paused while the reader drags the map, resumed when the traveller moves. */
   private followPaused = false;
+  /** The journey was paused because a card opened while it played; closing that card carries on. */
+  private heldForCard = false;
   /** Until when our own camera flight runs; per-frame following waits for it. */
   private flightUntil = 0;
   private urlTimer = 0;
@@ -151,7 +155,7 @@ class App {
     const data = this.data;
     const actions = {
       openRegion: (id: string) => this.openRegion(id, true),
-      openJourney: (id: string) => this.startJourney(id),
+      openJourney: (id: string, at?: JourneyAt) => this.openJourneyAt(id, at),
       openInvention: (id: string) => this.openInvention(id),
       openLiving: (id: string, year?: number) => this.openLiving(id, year),
       pickArrival: (i: number) => this.pickArrival(i),
@@ -160,36 +164,44 @@ class App {
       openLandmark: (id: string) => this.ui.journey.openLandmark(id),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),
     };
-    const ui = {
+    const ui: App['ui'] = {
       top: new TopBar(data, this.store, () => this.setLanguage(isZh() ? 'en' : 'zh')),
-      timeline: new Timeline(data, this.store, d => this.step(d), id => this.openInvention(id), id => this.ui.journey.openEra(id)),
+      timeline: new Timeline(data, this.store, d => this.step(d), id => this.openInvention(id), id => this.ui.journey.openEra(id), id => this.startJourney(id)),
       cards: new Cards(data, this.store, this.field, actions),
       journey: new JourneyPanel(data, this.store, this.field, {
         start: id => this.startJourney(id),
-        step: d => this.step(d),
-        close: () => this.closeJourney(),
-        openRegion: id => this.openRegion(id, true),
         openInvention: id => this.openInvention(id),
         openLiving: id => this.openLiving(id),
         openCity: id => this.openCity(id, true),
-        switchTo: (id, year) => this.startJourney(id, year),
-        showSketch: i => {
-          this.travelTarget = null;
-          this.store.set({progress: i, playing: false, city: null, region: null, regionCell: null, invention: null, living: null});
-          ui.cards.reopenScene();
-        },
-        jumpTo: year => {
-          const g = this.geo(this.store.state.journey);
-          if (!g) return;
-          this.travelTarget = null;
-          this.store.set({progress: progressForYear(g, year, false), playing: false});
-        },
-        recenter: () => {
-          this.followPaused = false;
-          const g = this.geo(this.store.state.journey);
-          if (g) this.followCamera(this.store.state, g, true);
-        },
       }),
+      journeyCard: new JourneyCard(
+        data,
+        this.store,
+        {
+          step: d => this.step(d),
+          close: () => this.closeJourney(),
+          recenter: () => {
+            this.followPaused = false;
+            const g = this.geo(this.store.state.journey);
+            if (g) this.followCamera(this.store.state, g, true);
+          },
+          switchTo: (id, year) => this.startJourney(id, year),
+          openCity: id => this.openCity(id, true),
+          openRegion: id => this.openRegion(id, true),
+          unfold: () => ui.cards.close(),
+          showSketch: i => {
+            this.travelTarget = null;
+            this.store.set({progress: i, playing: false, details: false, city: null, region: null, regionCell: null, invention: null, living: null});
+          },
+          jumpTo: year => {
+            const g = this.geo(this.store.state.journey);
+            if (!g) return;
+            this.travelTarget = null;
+            this.store.set({progress: progressForYear(g, year, false), playing: false});
+          },
+        },
+        (j, shown) => ui.cards.scenePlate(j, shown),
+      ),
       search: new Search(data, this.store, e => this.choose(e)),
       legend: new Legend(data),
       inset: new Inset(data),
@@ -198,7 +210,8 @@ class App {
     this.uiNodes = [
       ui.top.el,
       ui.journey.el,
-      ui.cards.el,
+      // The cards on the right: the journey being followed, and under it whatever was opened on the map.
+      h('div.card-stack', ui.journeyCard.el, ui.cards.el),
       h('div.bottom-right', ui.inset.el),
       ui.timeline.el,
       ui.search.el,
@@ -303,10 +316,13 @@ class App {
 
   private onChange(s: State, p: State) {
     const geo = this.geo(s.journey);
+    this.holdForReading(s, p);
     this.ui.top.update(s);
     this.ui.timeline.update(s, geo);
+    // The journey card first: it measures itself to fold, before the card opening below takes room from it.
+    this.ui.journeyCard.update(s, geo, !!(s.city || s.region || s.invention || s.living));
     this.ui.cards.update(s);
-    this.ui.journey.update(s, geo);
+    this.ui.journey.update(s);
     this.ui.search.update(s);
     this.ui.legend.update(s, geo);
     this.ui.about.update(s);
@@ -397,7 +413,7 @@ class App {
     if (fogChanged || visChanged || this.needsLayers || pulsing || geo) {
       this.needsLayers = false;
       const others = this.travellers(st, geo);
-      if (geo) this.ui.journey.setMeanwhile(others);
+      if (geo) this.ui.journeyCard.setMeanwhile(others);
       this.overlay.setProps({layers: this.model.layers({state: st, fogUniforms: this.uniforms(st), geo, vpColor: this.data.vp[geo?.journey.viewpoint ?? st.vps[0]].color, now, others, routes: this.routeViews(st, geo)})});
     }
     if (geo || st.year >= 1957) this.ui.inset.update(st, geo, now);
@@ -434,7 +450,7 @@ class App {
     const max = stepCount(geo) - 1;
     const target = this.travelTarget ?? max;
     // Also run at the first and final stop, before the end-of-journey check.
-    if (this.ui.cards.advanceSketch(dt, s)) return;
+    if (this.ui.journeyCard.advance(dt, s)) return;
     if (s.progress >= target - 1e-6) {
       this.travelTarget = null;
       if (s.playing && s.progress >= max - 1e-6) this.store.set({playing: false, progress: max});
@@ -560,8 +576,8 @@ class App {
 
   // ── Journeys ─────────────────────────────────────────────────────────────
 
-  /** Follow a journey from its start, or from the moment `year` (switching from another traveller). */
-  startJourney(id: string, year?: number) {
+  /** Follow a journey from its start, from the moment `year` (switching from another traveller), or from `stop`. */
+  startJourney(id: string, year?: number, stop?: number) {
     const g = this.geo(id);
     if (!g) return;
     this.travelTarget = null;
@@ -569,11 +585,12 @@ class App {
     if (!this.store.state.journey) this.backToList = isListPanel(this.store.state.panel) ? this.store.state.panel : null;
     this.store.set({
       journey: id,
-      progress: year === undefined ? 0 : progressForYear(g, year, false),
+      progress: stop ?? (year === undefined ? 0 : progressForYear(g, year, false)),
       playing: false,
       vps: [g.journey.viewpoint],
       compare: false,
       panel: 'none',
+      details: false,
       city: null,
       region: null,
       regionCell: null,
@@ -585,6 +602,44 @@ class App {
     else this.fitJourney(g);
   }
 
+  /** Open a journey from a card at the stop where it comes to that place, or from its start if it never does. */
+  private openJourneyAt(id: string, at?: JourneyAt) {
+    const g = this.geo(id);
+    if (g) this.startJourney(id, undefined, at ? this.stopAt(g, at) : undefined);
+  }
+
+  /**
+   * Where a journey comes to a place: its stop at a city (or the first within 30 km of it), its first stop
+   * inside a region, or its first stop near a point. Failing those, the stop that comes closest; a journey that
+   * only made a region known, without going there, comes closest to the region's middle.
+   */
+  private stopAt(g: JourneyGeo, at: JourneyAt): number | undefined {
+    const on = g.stops.map((st, i) => ({i, lat: st.stop.lat, lon: st.stop.lon})).filter((x): x is {i: number; lat: number; lon: number} => x.lat !== undefined && x.lon !== undefined);
+    const dist = (lat: number, lon: number) => on.map(x => ({i: x.i, d: km([x.lon, x.lat], [lon, lat])}));
+    const near = (lat: number, lon: number) => {
+      const ds = dist(lat, lon);
+      return (ds.find(x => x.d < 30) ?? ds.sort((a, b) => a.d - b.d)[0])?.i;
+    };
+    if (at.city) {
+      const c = this.data.cityById.get(at.city);
+      const i = g.stops.findIndex(st => st.stop.city === at.city);
+      return i >= 0 ? i : c ? near(c.lat, c.lon) : undefined;
+    }
+    if (at.region) {
+      const r = this.data.regionById.get(at.region);
+      if (!r) return undefined;
+      const inside = on.find(x => {
+        const cell = cellAt(this.grid, x.lat, x.lon);
+        const own = cell >= 0 ? this.data.regions[this.grid.region[cell]] : undefined;
+        return !!own && (own.id === r.id || own.parents.includes(r.id) || own.within.includes(r.id));
+      });
+      if (inside) return inside.i;
+      return r.label ? dist(r.label[1], r.label[0]).sort((a, b) => a.d - b.d)[0]?.i : undefined;
+    }
+    if (at.point) return near(at.point[1], at.point[0]);
+    return undefined;
+  }
+
   private sight(g: JourneyGeo): Sight {
     let s = this.sightCache.get(g.journey.id);
     if (!s) {
@@ -594,12 +649,31 @@ class App {
     return s;
   }
 
-  /** Room the panels take, so "centred" means centred in the open part of the map. */
+  /** Room the panels take, so "centred" means centred in the open part of the map: the cards on the right, and
+   * the left panel when a list is open. */
   private cameraPadding() {
+    const s = this.store.state;
     const narrow = innerWidth < 760;
     return narrow
       ? {top: 120, bottom: Math.round(innerHeight * 0.56), left: 0, right: 0}
-      : {top: 90, bottom: 110, left: 400, right: 20};
+      : {top: 90, bottom: 110, left: isListPanel(s.panel) ? 400 : 20, right: (document.querySelector<HTMLElement>('.card-stack')?.offsetWidth ?? 392) + 28};
+  }
+
+  /**
+   * Reading holds the journey: a card opened while it plays (a city, a region) pauses it, so the traveller
+   * and the camera stay put, and closing that card carries on. Pressing play with the card open just plays.
+   */
+  private holdForReading(s: State, p: State) {
+    const card = (x: State) => !!(x.city || x.region || x.invention || x.living);
+    if (!s.journey || s.journey !== p.journey || (s.playing && card(s))) this.heldForCard = false;
+    if (!s.journey || s.journey !== p.journey) return;
+    if (card(s) && !card(p) && s.playing) {
+      this.heldForCard = true;
+      queueMicrotask(() => this.store.set({playing: false}));
+    } else if (!card(s) && card(p) && this.heldForCard) {
+      this.heldForCard = false;
+      if (!s.playing) queueMicrotask(() => this.store.set({playing: true}));
+    }
   }
 
   /** A comfortable zoom for following: closer for short legs (Everest), wider for ocean crossings. */
@@ -638,7 +712,7 @@ class App {
 
   closeJourney() {
     this.travelTarget = null;
-    this.store.set({journey: null, playing: false, progress: 0, ...(this.backToList ? {panel: this.backToList} : {})});
+    this.store.set({journey: null, playing: false, progress: 0, details: false, ...(this.backToList ? {panel: this.backToList} : {})});
     this.backToList = null;
   }
 
@@ -653,7 +727,7 @@ class App {
     const narrow = innerWidth < 760;
     const pad = narrow
       ? {top: 90, bottom: Math.round(innerHeight * 0.45), left: 30, right: 30}
-      : {top: 110, bottom: 170, left: 420, right: 80};
+      : {top: 110, bottom: 170, left: isListPanel(this.store.state.panel) ? 420 : 60, right: (document.querySelector<HTMLElement>('.card-stack')?.offsetWidth ?? 392) + 50};
     const [[w, sb], [e, n]] = g.bounds;
     const lat = (v: number) => clampLat(v, this.store.state.globe);
     if (e - w < 0.5 && n - sb < 0.5) {
@@ -1033,6 +1107,7 @@ class App {
       } else if (e.key === 'Escape') {
         if (s.search) this.store.set({search: false});
         else if (s.panel !== 'none') this.store.set({panel: 'none'});
+        else if (s.details) this.store.set({details: false});
         else if (s.city || s.region || s.invention || s.living) this.store.set({city: null, region: null, regionCell: null, invention: null, living: null});
         else if (s.journey) this.closeJourney();
       }

@@ -1,12 +1,13 @@
 import type {AppData} from '../data';
 import type {JourneyGeo} from '../journey-geo';
 import {stepCount} from '../journey-geo';
+import {type Ribbon, ribbonLayout, ribbonProgress, ribbonX, ribbonXAtYear} from '../journey-ribbon';
 import type {State, Store} from '../state';
 import {deepScale, ERAS, formatYear, mainScale, type TimeScale, yearParts} from '../time';
 import type {Moment, VpId} from '../types';
-import {t, tx} from '../i18n';
+import {isZh, t, tx} from '../i18n';
 import {h, setIcon} from './dom';
-import {icons, inventionIcons} from './icons';
+import {icons, inventionIcons, kindIcons} from './icons';
 
 export const SPEEDS = [0.5, 1, 2, 4];
 /** Slower paces used while a journey is under way during timeline playback. */
@@ -54,6 +55,12 @@ export class Timeline {
   private moments: MomentRef[] = [];
   private captionTimer = 0;
   private geo: JourneyGeo | null = null;
+  /** In journey mode, where each stop sits along the track. */
+  private ribbon: Ribbon | null = null;
+  /** The travelled part of the ribbon is drawn in full through this clip; the stops passed so far. */
+  private doneClip: SVGRectElement | null = null;
+  private stopBtns: HTMLElement[] = [];
+  private passed = -1;
   private selected: string | null = null;
   /** The era the current year falls in, marked on the axis. */
   private eraKey = '';
@@ -64,6 +71,7 @@ export class Timeline {
     onStep: (dir: -1 | 1) => void,
     private onInvention: (id: string) => void,
     private onEra: (id: string) => void,
+    private onJourney: (id: string) => void,
   ) {
     this.playBtn = h('button.tl-play', {type: 'button', 'aria-label': t('Play'), onclick: () => store.set({playing: !store.state.playing})});
     this.speedBtn = h('button.tl-speed', {
@@ -121,10 +129,11 @@ export class Timeline {
       return Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
     };
     // In journey mode the track is a stop track: dragging moves the traveller along the route.
-    const patchAt = (x: number) => (this.geo ? {progress: x * (stepCount(this.geo) - 1)} : {year: this.scale.fromX(x)});
+    const progressAt = (x: number) => (this.ribbon ? ribbonProgress(this.ribbon, x * this.ribbon.width) : 0);
+    const patchAt = (x: number) => (this.geo ? {progress: progressAt(x)} : {year: this.scale.fromX(x)});
     const tipAt = (x: number) => {
       if (!this.geo) return formatYear(this.scale.fromX(x));
-      const st = this.geo.stops[Math.min(this.geo.stops.length - 1, Math.round(x * (stepCount(this.geo) - 1)))];
+      const st = this.geo.stops[Math.min(this.geo.stops.length - 1, Math.round(progressAt(x)))];
       const k = this.geo.stops.indexOf(st);
       return `${tx.stop(this.geo.journey.id, k, 'place', st.stop.place ?? '')} · ${st.stop.date ? tx.stop(this.geo.journey.id, k, 'date', st.stop.date) : formatYear(st.year)}`;
     };
@@ -187,8 +196,16 @@ export class Timeline {
       this.drawTrack(geo);
       this.selected = null;
     }
-    const x = geo ? s.progress / Math.max(1, stepCount(geo) - 1) : this.scale.toX(s.year);
+    const x = geo && this.ribbon ? ribbonX(this.ribbon, s.progress) / this.ribbon.width : this.scale.toX(s.year);
     this.handle.style.left = `${x * 100}%`;
+    if (geo && this.ribbon) {
+      this.doneClip?.setAttribute('width', String(x * this.ribbon.width));
+      const passed = Math.floor(s.progress + 1e-6);
+      if (passed !== this.passed) {
+        this.passed = passed;
+        this.stopBtns.forEach((b, i) => b.classList.toggle('ahead', i > passed));
+      }
+    }
     this.track.setAttribute('aria-valuenow', String(Math.round(s.year)));
     this.track.setAttribute('aria-valuetext', formatYear(s.year));
     const p = yearParts(s.year);
@@ -222,17 +239,23 @@ export class Timeline {
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.setAttribute('width', String(W));
     svg.setAttribute('height', String(H));
+    for (const el of this.track.querySelectorAll('.tl-moment, .tl-invention, .tl-era, .tl-fork')) el.remove();
+    this.track.classList.toggle('journey', !!geo);
+    this.stopBtns = [];
+    this.passed = -1;
+    if (geo) return this.drawRibbon(geo, W);
+    this.ribbon = null;
+    this.doneClip = null;
     const sc = this.scale;
     const parts: string[] = [];
     const base = 30;
-    const steps = geo ? stepCount(geo) - 1 : 0;
-    const X = geo ? (i: number) => (i / Math.max(1, steps)) * W : (y: number) => sc.toX(y) * W;
+    const X = (y: number) => sc.toX(y) * W;
     // The recent, crowded centuries get a light wash so the stretched scale reads as deliberate.
-    if (!geo && sc.kind === 'main') {
+    if (sc.kind === 'main') {
       parts.push(`<rect x="${X(1800)}" y="${base - 22}" width="${X(2026) - X(1800)}" height="22" class="tl-wash"/>`);
     }
     // Hairlines between the eras, along the top edge above the markers.
-    if (!geo) for (const era of ERAS.slice(1)) {
+    for (const era of ERAS.slice(1)) {
       const x = X(era.from);
       if (x > 0 && x < W) parts.push(`<line x1="${x}" x2="${x}" y1="1" y2="11" class="tl-era-rule"/>`);
     }
@@ -248,28 +271,16 @@ export class Timeline {
       parts.push(`<text x="${x}" y="${base + 16}" text-anchor="${anchor}" class="${cls}">${text}</text>`);
       lastRight = left + w;
     };
-    if (geo) {
-      let lastYear = NaN;
-      geo.stops.forEach((st, i) => {
-        parts.push(`<line x1="${X(i)}" x2="${X(i)}" y1="${base}" y2="${base + 3}" class="tl-tick"/>`);
-        const y = Math.round(st.year);
-        if (y !== lastYear) label(X(i), formatYear(y));
-        lastYear = y;
-      });
-      if (geo.epilogue) label(X(steps), formatYear(geo.homeKnows), 'tl-label home');
-    } else {
-      for (const t of sc.ticks()) {
-        const x = X(t.year);
-        parts.push(`<line x1="${x}" x2="${x}" y1="${base}" y2="${base + (t.major ? 6 : 3)}" class="tl-tick${t.major ? ' major' : ''}"/>`);
-        if (t.label) label(x, t.label);
-      }
+    for (const t of sc.ticks()) {
+      const x = X(t.year);
+      parts.push(`<line x1="${x}" x2="${x}" y1="${base}" y2="${base + (t.major ? 6 : 3)}" class="tl-tick${t.major ? ' major' : ''}"/>`);
+      if (t.label) label(x, t.label);
     }
     svg.innerHTML = parts.join('');
 
-    for (const el of this.track.querySelectorAll('.tl-moment, .tl-invention, .tl-era')) el.remove();
     // Era names, centred on their span; a narrow era (1800–1900) may spill past its edges, its neighbours easing
     // aside within their own spans to make room. A click opens that era in the list beside the map.
-    if (!geo) {
+    {
       const marks = ERAS.map(era => {
         const a = Math.max(0, sc.toX(Math.max(era.from, -1e6))) * W;
         const b = Math.min(1, sc.toX(Math.min(era.to, 1e6))) * W;
@@ -311,7 +322,7 @@ export class Timeline {
       this.eraKey = '';
     }
     // Inventions sit on the axis as small brass rings, under the viewpoint's own key moments.
-    if (!geo) {
+    {
       for (const inv of this.data.inventions) {
         const x = sc.toX(inv.mid);
         if (x < 0 || x > 1) continue;
@@ -331,29 +342,165 @@ export class Timeline {
         );
       }
     }
-    const color = geo ? this.data.vp[geo.journey.viewpoint].color : '';
-    const marks = geo
-      ? [
-          ...geo.stops.map((st, i) => ({year: st.year, label: tx.stop(geo.journey.id, i, 'place', st.stop.place ?? ''), color, i, x: i / Math.max(1, steps)})),
-          ...(geo.epilogue ? [{year: geo.homeKnows, label: t('The news reaches home'), color, i: steps, x: 1}] : []),
-        ]
-      : this.moments.map(m => ({year: m.year, label: tx.moment(m.label), color: this.data.vp[m.vp].color, i: -1, x: sc.toX(m.year)}));
-    for (const m of marks) {
-      const x = Math.max(0, Math.min(1, m.x));
-      const b = h('button.tl-moment', {
+    for (const m of this.moments) {
+      const x = Math.max(0, Math.min(1, sc.toX(m.year)));
+      const label = tx.moment(m.label);
+      const color = this.data.vp[m.vp].color;
+      this.track.appendChild(
+        h('button.tl-moment', {
+          type: 'button',
+          style: `left:${x * 100}%;--m:${color}`,
+          title: `${formatYear(m.year)} · ${label}`,
+          'aria-label': `${formatYear(m.year)}: ${label}`,
+          onclick: (e: Event) => {
+            e.stopPropagation();
+            this.store.set({year: m.year, playing: false});
+            this.showCaption(label, color);
+          },
+        }),
+      );
+    }
+  }
+
+  /**
+   * A journey's own timeline: the route as a ribbon, land legs in the journey's colour and sea legs doubled, long
+   * stays folded into breaks marked with their length, parties sent out hanging from where they set out, and the
+   * line running on to the news reaching home. Place names sit above, years below.
+   */
+  private drawRibbon(geo: JourneyGeo, W: number) {
+    const j = geo.journey;
+    const n = geo.stops.length;
+    const times = geo.stops.map(st => st.t);
+    const rb = ribbonLayout(times, W, geo.epilogue);
+    this.ribbon = rb;
+    const color = this.data.vp[j.viewpoint].color;
+    const xs = rb.xs;
+    const Y = 20;
+    const parts: string[] = [];
+    // Labels never overlap: each row keeps the spans already taken.
+    const rows: Record<string, [number, number][]> = {top: [], bottom: []};
+    const fits = (row: string, l: number, r: number) => l >= -0.5 && r <= W + 0.5 && rows[row].every(([a, b]) => r + 8 <= a || l >= b + 8);
+    const label = (row: 'top' | 'bottom', x: number, text: string, cls: string, title = '') => {
+      // Chinese characters are about twice as wide as Latin ones.
+      const w = [...text].reduce((a, ch) => a + (ch.charCodeAt(0) > 0x2e80 ? 12 : 6.1), 0);
+      const anchor = x - w / 2 < 0 ? 'start' : x + w / 2 > W ? 'end' : 'middle';
+      const l = anchor === 'start' ? x : anchor === 'end' ? x - w : x - w / 2;
+      if (!fits(row, l, l + w)) return false;
+      rows[row].push([l, l + w]);
+      parts.push(`<text x="${x}" y="${row === 'top' ? 9 : 40}" text-anchor="${anchor}" class="${cls}">${title ? `<title>${esc(title)}</title>` : ''}${esc(text)}</text>`);
+      return true;
+    };
+    const place = (i: number) => tx.stop(j.id, i, 'place', geo.stops[i].stop.place ?? '');
+
+    // The legs, by how they were travelled. Drawn twice: faded for the way ahead, and in full through a clip
+    // that grows with the traveller.
+    const folded = new Set(rb.folds.map(f => f.after + 1));
+    const legs: string[] = [];
+    for (let i = 1; i < n; i++) {
+      if (folded.has(i)) continue;
+      // As routed: a leg the router left off the map (to orbit, to the Moon) is drawn as a flight.
+      const mode = j.modes?.[i] ?? (j.route[i] ? 'land' : 'direct');
+      const by = mode === 'mixed' ? 'land' : mode;
+      const [a, b] = [xs[i - 1], xs[i]];
+      if (by === 'sea') legs.push(`<path d="M${a} ${Y - 2}H${b}M${a} ${Y + 2}H${b}" class="tl-leg sea"/>`);
+      else legs.push(`<path d="M${a} ${Y}H${b}" class="tl-leg ${by === 'land' ? 'land' : by}"/>`);
+    }
+    parts.push(`<defs><clipPath id="tl-done"><rect x="-8" y="0" width="0" height="46"/></clipPath></defs>`);
+    parts.push(`<g class="tl-ribbon ahead">${legs.join('')}</g><g class="tl-ribbon" clip-path="url(#tl-done)">${legs.join('')}</g>`);
+
+    // Folds: a broken stretch, and how long it was.
+    for (const f of rb.folds) {
+      const m = (f.x0 + f.x1) / 2;
+      parts.push(`<path d="M${f.x0 + 7} ${Y}H${f.x1 - 7}" class="tl-fold"/>`);
+      parts.push(`<path d="M${f.x0 + 6} ${Y - 5}l-4 10M${f.x1 - 2} ${Y - 5}l-4 10" class="tl-fold-mark"/>`);
+      label('bottom', m, yearsText(f.years), 'tl-label fold', t('{n} between {a} and {b}', {n: yearsText(f.years), a: shortPlace(place(f.after)), b: shortPlace(place(f.after + 1))}));
+    }
+    // The news on its way home.
+    if (rb.home) {
+      parts.push(`<path d="M${rb.home.x0 + 5} ${Y}H${rb.home.x1 - 6}" class="tl-home-line"/>`);
+      label('top', W, t('The news reaches home'), 'tl-label home');
+      label('bottom', W, formatYear(geo.homeKnows), 'tl-label home');
+    }
+    // Parties sent out from this journey, at the year they set out: on the line during a long stay, else above it.
+    for (const c of this.data.journeyChildren.get(j.id) ?? []) {
+      const at = ribbonXAtYear(rb, times, geo.epilogue ? geo.homeKnows : null, c.t[0]);
+      if (at === null) continue;
+      const name = tx.journey(c.id, 'name', c.name);
+      // Within a fold time isn't to scale, so a party setting out during a long stay hangs from its middle.
+      const fold = rb.folds.find(f => at > f.x0 && at < f.x1);
+      const x = fold ? (fold.x0 + fold.x1) / 2 : at;
+      const inFold = !!fold;
+      if (!inFold) {
+        rows.top.push([x - 9, x + 9]);
+        parts.push(`<path d="M${x} ${13}V${Y - 3}" class="tl-fork-stem"/>`);
+      }
+      this.track.appendChild(
+        h('button.tl-fork', {
+          type: 'button',
+          class: inFold ? 'on-line' : '',
+          style: `left:${(x / W) * 100}%`,
+          title: `${t('{name} sets out from here', {name})} · ${formatYear(c.t[0])}`,
+          'aria-label': t('Follow {name}', {name}),
+          html: kindIcons[c.kind] ?? kindIcons.traveler,
+          onclick: (e: Event) => {
+            e.stopPropagation();
+            this.onJourney(c.id);
+          },
+        }),
+      );
+    }
+    // Place names above: where it starts and ends and where each fold begins and ends, then any others with room.
+    const order = [0, n - 1, ...rb.folds.map(f => f.after), ...rb.folds.map(f => f.after + 1), ...geo.stops.map((_, i) => i)];
+    const done = new Set<number>();
+    for (const i of order) {
+      if (done.has(i)) continue;
+      done.add(i);
+      label('top', xs[i], shortPlace(place(i)), 'tl-label place');
+    }
+    // Years below, wherever the year turns.
+    let lastYear = NaN;
+    geo.stops.forEach((st, i) => {
+      const y = Math.round(st.year);
+      if (y !== lastYear) label('bottom', xs[i], formatYear(y), 'tl-label');
+      lastYear = y;
+    });
+    this.svgEl.innerHTML = parts.join('');
+    this.svgEl.style.setProperty('--j', color);
+    this.doneClip = this.svgEl.querySelector('#tl-done rect');
+
+    const steps = stepCount(geo);
+    for (let i = 0; i < steps; i++) {
+      const home = i >= n;
+      const text = home ? t('The news reaches home') : place(i);
+      const year = home ? geo.homeKnows : geo.stops[i].year;
+      // Where stops crowd together they shrink, so a busy stretch reads as a line rather than a string of beads.
+      const room = Math.min(i > 0 ? xs[i] - xs[i - 1] : Infinity, i < steps - 1 ? xs[i + 1] - xs[i] : Infinity);
+      const b = h('button.tl-moment.stop', {
         type: 'button',
-        style: `left:${x * 100}%;--m:${m.color}`,
-        title: `${formatYear(m.year)} · ${m.label}`,
-        'aria-label': `${formatYear(m.year)}: ${m.label}`,
+        class: home ? 'home' : room < 11 ? 'small' : '',
+        style: `left:${(xs[i] / W) * 100}%;--m:${color}`,
+        title: `${formatYear(year)} · ${text}`,
+        'aria-label': `${formatYear(year)}: ${text}`,
         onclick: (e: Event) => {
           e.stopPropagation();
-          if (m.i >= 0) this.store.set({progress: m.i, playing: false});
-          else this.store.set({year: m.year, playing: false});
-          this.showCaption(m.label, m.color);
+          this.store.set({progress: i, playing: false});
+          this.showCaption(text, color);
         },
       });
-      if (geo) b.classList.add('stop');
+      this.stopBtns.push(b);
       this.track.appendChild(b);
     }
   }
+}
+
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+/** A place name without its gloss: "Tauris (Tabriz)" is Tauris on a crowded line; the tooltip has the rest. */
+const shortPlace = (s: string) => s.replace(/\s*[（(][^（()）]*[)）]\s*$/, '') || s;
+
+/** How long a fold is (never under a year and a half), to the half year: "6 years", "2½ years". */
+function yearsText(years: number): string {
+  const half = Math.round(years * 2) / 2;
+  const whole = Math.floor(half);
+  return t('{n} years', {n: half % 1 ? (isZh() ? `${whole}.5` : `${whole}½`) : String(whole)});
 }

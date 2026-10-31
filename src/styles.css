@@ -2,6 +2,8 @@
 
 :root {
   --left-w: 380px;
+  /* The cards on the right grow with the window: wider pictures and lines, but the map keeps its room on laptops. */
+  --right-w: clamp(392px, 30vw, 448px);
   --paper: #f5efe0;
   --paper-2: #efe7d3;
   --paper-3: #e6dbc0;
@@ -529,6 +531,167 @@ kbd {
   font-style: italic;
 }
 
+/* ── A journey's own timeline: the route as a ribbon ── */
+
+.tl-leg {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.tl-leg.land {
+  stroke: var(--j);
+  stroke-width: 2.6;
+}
+
+/* By sea, a double line in the colour of deep water. */
+.tl-leg.sea {
+  stroke: #4f7470;
+  stroke-width: 1.3;
+}
+
+.tl-leg.river {
+  stroke: #4f7470;
+  stroke-width: 2.4;
+  stroke-dasharray: 5 2.5;
+}
+
+/* Through the air, or beyond the map. */
+.tl-leg.direct {
+  stroke: var(--ink-3);
+  stroke-width: 1.3;
+  stroke-dasharray: 2 3;
+}
+
+.tl-ribbon.ahead {
+  opacity: 0.28;
+}
+
+.tl-fold {
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.6;
+  stroke-dasharray: 0.5 4;
+  stroke-linecap: round;
+}
+
+.tl-fold-mark {
+  fill: none;
+  stroke: var(--ink-2);
+  stroke-width: 1.1;
+}
+
+.tl-label.fold {
+  font-family: var(--font-text);
+  font-size: 12.5px;
+  font-style: italic;
+  letter-spacing: 0;
+  fill: var(--ink-2);
+}
+
+.tl-label.place {
+  fill: var(--ink-2);
+}
+
+.lang-zh .tl-label.place,
+.lang-zh .tl-label.fold {
+  font-family: inherit;
+  font-style: normal;
+}
+
+.tl-home-line {
+  fill: none;
+  stroke: var(--brass);
+  stroke-width: 1.3;
+  stroke-dasharray: 3 3;
+}
+
+.tl-track.journey .tl-label.home {
+  fill: var(--brass);
+}
+
+.tl-moment.stop.ahead {
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--ink-3);
+  border-color: transparent;
+}
+
+.tl-moment.stop.small {
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  top: 17.5px;
+  border-width: 1px;
+}
+
+.tl-moment.stop.home {
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  top: 14px;
+  background: var(--paper);
+  border: 1.5px solid var(--brass);
+  box-shadow: inset 0 0 0 2.5px var(--paper), inset 0 0 0 6px var(--brass);
+}
+
+.tl-moment.stop.home.ahead {
+  box-shadow: none;
+}
+
+.tl-fork-stem {
+  stroke: var(--j);
+  stroke-width: 1.2;
+  opacity: 0.7;
+}
+
+/* A party sent out from the journey: its sign, hanging over the point where it set out. */
+.tl-fork {
+  position: absolute;
+  top: -4px;
+  width: 17px;
+  height: 17px;
+  margin-left: -8.5px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--vp);
+  background: var(--paper);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp) 55%, transparent);
+  transition: transform 0.15s;
+  z-index: 2;
+}
+
+.tl-fork svg {
+  width: 11px;
+  height: 11px;
+}
+
+.tl-fork.on-line {
+  top: 11.5px;
+}
+
+.tl-fork:hover {
+  transform: scale(1.3);
+}
+
+/* Over the ribbon the handle is a ring around the traveller, without its needle. */
+.tl-track.journey .tl-handle {
+  bottom: 26px;
+}
+
+.tl-track.journey .tl-handle::before {
+  display: none;
+}
+
+.tl-track.journey .tl-handle-knob {
+  width: 16px;
+  height: 16px;
+  left: -8px;
+  bottom: -8px;
+  background: transparent;
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
 .tl-wash {
   fill: rgba(64, 46, 24, 0.045);
 }
@@ -750,7 +913,7 @@ kbd {
 }
 
 .has-card .bottom-right {
-  right: calc(var(--gutter) + 404px);
+  right: calc(var(--gutter) + var(--right-w) + 12px);
 }
 
 /* The legend: a row in the title card, under the subtitle. */
@@ -976,7 +1139,7 @@ kbd {
 .card {
   --side-top: var(--top-right);
   right: var(--gutter);
-  width: 392px;
+  width: var(--right-w);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1036,6 +1199,316 @@ kbd {
   color: var(--ink);
   background: rgba(64, 46, 24, 0.07);
 }
+
+/* ── The cards on the right: the journey being followed on top, what was opened on the map below ── */
+
+#app > .card-stack {
+  position: absolute;
+  top: var(--top-right, calc(var(--gutter) + var(--top-h)));
+  right: var(--gutter);
+  width: var(--right-w);
+  max-height: calc(100% - var(--top-right, calc(var(--gutter) + var(--top-h))) - var(--tl-h) - var(--gutter) - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.card-stack > .card {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: auto;
+  max-height: none;
+  min-height: 0;
+  flex: 0 1 auto;
+  pointer-events: auto;
+}
+
+/* Folded, the journey card is one line, and the card below it gets the room. */
+.journey-card.folded {
+  flex: none;
+  animation: none;
+}
+
+.jc-strip {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px 7px 7px;
+}
+
+.journey-card.folded .jc-strip {
+  display: flex;
+}
+
+.journey-card.folded > .jc-main {
+  display: none;
+}
+
+/* Folding: the card's words stay under the new strip, fading out as the card shrinks around them. */
+.journey-card.folding > .jc-main {
+  display: flex;
+}
+
+/* Unfolding: the strip lies over the top of the card, fading out as the card grows back. */
+.journey-card.unfolding > .jc-strip {
+  display: flex;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 4;
+  pointer-events: none;
+  background: var(--paper);
+}
+
+.jc-strip-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.jc-strip-thumb {
+  flex: none;
+  width: 66px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--j);
+  background: var(--paper-2);
+  box-shadow: inset 0 0 0 1px var(--rule-2);
+}
+
+.jc-strip-thumb.picture {
+  padding: 2px;
+  background: #fbf7ec;
+}
+
+.jc-strip-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jc-strip-thumb svg {
+  width: 22px;
+  height: 22px;
+}
+
+.jc-strip-text {
+  display: grid;
+  min-width: 0;
+}
+
+.jc-strip-name {
+  overflow: hidden;
+  font-family: var(--font-sc);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--j);
+}
+
+.jc-strip-place {
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.25;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.jc-strip-main:hover .jc-strip-place {
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-underline-offset: 3px;
+}
+
+/* The head and the scrolling body; the head stays put while the body scrolls under it. */
+.jc-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.jc-head {
+  flex: none;
+  padding: 12px 12px 10px 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.jc-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.jc-kind {
+  flex: none;
+  display: grid;
+  place-items: center;
+  color: var(--j);
+}
+
+.jc-kind svg {
+  width: 18px;
+  height: 18px;
+}
+
+.jc-name-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.jc-title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.jc-years {
+  flex: none;
+  font-family: var(--font-sc);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.jc-close {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-3);
+}
+
+.jc-close:hover {
+  color: var(--ink);
+  background: rgba(64, 46, 24, 0.07);
+}
+
+/* This stop / All stops, and the camera. */
+.jc-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.jc-bar .jp-view {
+  margin-left: auto;
+}
+
+.jc-tabs {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  border: 1px solid var(--rule-2);
+}
+
+.jc-tab {
+  height: 26px;
+  padding: 0 11px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  white-space: nowrap;
+  color: var(--ink-3);
+  transition: background 0.2s, color 0.2s;
+}
+
+.jc-tab:hover {
+  color: var(--ink);
+}
+
+.jc-tab.active {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--j) 13%, var(--paper));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--j) 40%, transparent);
+}
+
+.journey-card .card-scroll {
+  padding-top: 14px;
+}
+
+/* On phones only, where the journey's sheet covers the timeline: its controls, and where the stop falls. */
+.jc-stopline {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.jc-count {
+  min-width: 0;
+  font-family: var(--font-sc);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.jc-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+}
+
+.jc-leg {
+  margin: -1px 0 8px;
+  font-size: 14.5px;
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+.lang-zh .jc-leg {
+  font-style: normal;
+}
+
+.jc-place {
+  margin: 1px 0 4px;
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.jc-note {
+  margin: 0 0 4px;
+}
+
+.jc-stop .jp-stop-src {
+  display: block;
+}
+
+.jc-city {
+  display: block;
+  margin-top: 6px;
+  font-size: 14.5px;
+}
+
+.journey-card .plate {
+  margin-top: 16px;
+}
+
 
 .jp-head {
   position: relative;
@@ -1151,6 +1624,11 @@ kbd {
   margin: 14px 0 0;
   font-size: 13.5px;
   color: var(--ink-2);
+}
+
+/* Under a region's name: what it lies within. */
+.card-part.card-part-top {
+  margin: -2px 0 6px;
 }
 
 .card-src {
@@ -1765,9 +2243,10 @@ kbd {
   position: sticky;
   top: -16px;
   z-index: 2;
-  margin: -16px -20px 0;
-  padding: 16px 20px 0;
-  background: linear-gradient(var(--paper) 88%, rgba(245, 239, 224, 0));
+  margin: -16px -20px 12px;
+  padding: 16px 20px 8px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
 }
 
 .jp-traveller {
@@ -2453,66 +2932,47 @@ kbd {
   }
 }
 
-/* Phones: a journey's sketch can't be a second bottom sheet over the journey panel, so it becomes a small
-   picture docked in the map's corner above the sheet. It still cross-fades as the traveller moves; tapping
-   it opens the full sketch with its caption. */
+/* Phones: the stack is the bottom sheet. With a card open, the folded journey sits on top of it as a tab. */
 @media (max-width: 760px) {
-  .card.scene-card {
+  #app > .card-stack {
     top: auto;
-    left: auto;
-    right: 10px;
-    bottom: calc(56vh + 10px);
-    width: min(190px, 46vw);
-    max-height: none;
-    border-radius: 3px;
-    animation: rise 0.32s ease both;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-height: 62vh;
+    gap: 0;
+    z-index: 5;
   }
-  .card.scene-card::before,
-  .card.scene-card .card-kicker,
-  .card.scene-card .card-title,
-  .card.scene-card .plate-text,
-  .card.scene-card .plate-eras,
-  .card.scene-card .plate-src,
-  .card.scene-card .plate-range,
-  .card.scene-card .scene-meta {
+  .card-stack > .card {
+    max-height: 56vh;
+  }
+
+  .card-stack > .journey-card.folded {
+    border-radius: 14px 14px 0 0;
+    border-bottom: 0;
+    box-shadow: var(--shadow);
+  }
+  .card-stack > .journey-card.folded::before {
     display: none;
   }
-  .card.scene-card .card-scroll {
-    padding: 5px 5px 4px;
-    overflow: hidden;
+  .card-stack > .journey-card.folded + .card {
+    border-radius: 0;
   }
-  .card.scene-card .plate {
-    margin: 0;
+  .card-stack > .journey-card.folded + .card::before {
+    display: none;
   }
-  .card.scene-card .plate-img {
-    padding: 0;
-    width: 100%;
-    box-shadow: none;
-    cursor: zoom-in;
+  .journey-card .plate-eras {
+    display: none;
   }
-  .card.scene-card .plate-layer {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .jc-stopline {
+    display: flex;
   }
-  .card.scene-card .plate-cap {
-    margin: 4px 2px 0;
+  .jc-bar .jp-view-label {
+    display: none;
   }
-  .card.scene-card .plate-era {
-    font-size: 13px;
-    line-height: 1.2;
-  }
-  .card.scene-card > .card-close {
-    top: 2px;
-    right: 2px;
-    width: 24px;
-    height: 24px;
-    background: color-mix(in srgb, var(--paper) 85%, transparent);
-  }
-  .card.scene-card > .card-close svg {
-    width: 15px;
-    height: 15px;
+  .jc-bar .jp-view-btn {
+    padding: 0 6px;
   }
 }
 
@@ -2770,15 +3230,6 @@ kbd {
   height: 16px;
 }
 
-.scene-meta {
-  margin: 10px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid var(--rule);
-  font-family: var(--font-sc);
-  font-size: 12.5px;
-  letter-spacing: 0.05em;
-  color: var(--ink-3);
-}
 
 .plate-src {
   margin: 6px 0 0;

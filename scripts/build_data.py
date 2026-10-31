@@ -1702,6 +1702,7 @@ def main() -> int:
         doc = {k: v for k, v in j.items() if not k.startswith("_")}
         doc["lifts"] = j["_lifts"]
         doc["route"] = [[[round(x, 2), round(y, 2)] for x, y in r] if r else None for r in j["_routes"]]
+        doc["modes"] = j["_modes"]
         doc["t"] = j["_times"]
         doc["crossings"] = met[j["id"]]
         if j["id"] in pictured["journey"]:
