@@ -1,0 +1,20 @@
+{
+  "view": "Tulum El Castillo from adjacent coastal bluff, low compact weathered Maya temple on modest stepped base atop limestone sea cliff, small crescent sandy landing beach below and turquoise Caribbean, coastal shrubs foreground. Low coastal building not huge jungle pyramid, no boats required no modern tourists railings or resort.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "A temple above the landing",
+      "caption": "Tulum's Castillo stands on the cliff above a small Caribbean beach. Its compact temple and stone platform overlook the coast along which Maya traders travelled by canoe, while the town's walls protected the landward approaches.",
+      "sources": [
+        "landmark-study-tulum"
+      ],
+      "confidence": "medium",
+      "prompt": "Tulum El Castillo from adjacent coastal bluff, low compact weathered Maya temple on modest stepped base atop limestone sea cliff, small crescent sandy landing beach below and turquoise Caribbean, coastal shrubs foreground. Low coastal building not huge jungle pyramid, no boats required no modern tourists railings or resort.",
+      "evidence": {
+        "url": "https://www.inah.gob.mx/zonas/99-zona-arqueologica-de-tulum",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1600
+    }
+  ]
+}

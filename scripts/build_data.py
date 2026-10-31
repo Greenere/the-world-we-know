@@ -1008,7 +1008,7 @@ def load_cities(sources, grid: Grid):
 DEPICTION_FORMATS = (".webp", ".png", ".jpg", ".jpeg")
 # The sizes the site serves: the strip of eras, the card, and the enlarged view.
 DEPICTION_SIZES = {"thumb": 200, "card": 720, "full": 1280}
-# What each kind of subject holds: a city has eras in time, from one fixed view; a journey has scenes,
+# What each kind of subject holds: a city has eras in time with optional companion views; a journey has scenes,
 # each pinned to one of its stops; inventions and natural wonders have standalone studies.
 DEPICTION_KINDS = {"city": "eras", "journey": "scenes", "invention": "studies", "natural": "studies", "built": "studies"}
 
@@ -1071,7 +1071,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
         doc = json.loads(subject_file.read_text(encoding="utf-8"))
         list_key = DEPICTION_KINDS[kind]
         if kind == "city" and not doc.get("view"):
-            fail(f"{where}: describe the fixed 'view' every era is drawn from")
+            fail(f"{where}: describe the main 'view' used by the city sketches")
         if kind == "journey" and not doc.get("traveller"):
             fail(f"{where}: describe the 'traveller' so every scene draws them alike")
         out_dir = out_root / kind / sid
@@ -1089,6 +1089,12 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
                 fail(f"{w}: duplicate id")
             if kind == "city" and "to" in e and e["to"] < e.get("from", 0):
                 fail(f"{w}: 'to' is before 'from'")
+            if "companionOf" in e:
+                parent = next((x for x in entries if x.get("id") == e["companionOf"]), None)
+                if kind != "city" or not parent or parent is e or "companionOf" in parent:
+                    fail(f"{w}: companionOf must name a main city era")
+                elif any(e.get(key) != parent.get(key) for key in ("from", "to")):
+                    fail(f"{w}: companion view must share its main era's date range")
             if kind == "journey":
                 stops = subjects["journey"][sid]
                 i = e.get("stop", -1)
@@ -1114,7 +1120,7 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
                     continue
             files = depiction_image(image, out_dir, e["id"])
             written.update(out_dir / f for f in files.values())
-            rec = {k: e[k] for k in ("id", "from", "to", "stop", "place", "title", "caption", "captions", "sources", "confidence") if k in e}
+            rec = {k: e[k] for k in ("id", "from", "to", "companionOf", "stop", "place", "title", "caption", "captions", "sources", "confidence") if k in e}
             rec["img"] = {size: f"depictions/{kind}/{sid}/{name}" for size, name in files.items()}
             if placeholder:
                 rec["placeholder"] = True
@@ -1125,7 +1131,8 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
             items.append(rec)
         if kind == "city":
             items.sort(key=lambda r: r["from"])
-            for a, b in zip(items, items[1:]):
+            eras = [x for x in items if "companionOf" not in x]
+            for a, b in zip(eras, eras[1:]):
                 if a.get("to", math.inf) >= b["from"]:
                     fail(f"{where}: eras {a['id']} and {b['id']} overlap in time")
         elif kind == "journey":

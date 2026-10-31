@@ -1,0 +1,20 @@
+{
+  "view": "Teyuna Ciudad Perdida Colombia elevated ridge view along series of circular and oval low stone-walled terraces linked by narrow stone stairs descending into lush Sierra Nevada de Santa Marta forest, grass-covered empty house platforms, misty mountain backdrop. No intact huts, no Maya pyramids or Inca monumental dressed stone, physically connected steps.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "Terraces along the ridge",
+      "caption": "At Teyuna, stone steps connect circular terraces along a steep forested ridge. The surviving platforms once supported buildings of perishable materials; the place remained known to Indigenous communities even when outsiders began calling it the Lost City.",
+      "sources": [
+        "landmark-study-ciudad-perdida"
+      ],
+      "confidence": "medium",
+      "prompt": "Teyuna Ciudad Perdida Colombia elevated ridge view along series of circular and oval low stone-walled terraces linked by narrow stone stairs descending into lush Sierra Nevada de Santa Marta forest, grass-covered empty house platforms, misty mountain backdrop. No intact huts, no Maya pyramids or Inca monumental dressed stone, physically connected steps.",
+      "evidence": {
+        "url": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/como-llegar",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1972
+    }
+  ]
+}

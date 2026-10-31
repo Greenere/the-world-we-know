@@ -1,0 +1,20 @@
+{
+  "view": "Edzna Campeche Building of Five Storeys west facade seen obliquely from Great Acropolis plaza, five receding levels with repeated dark rectangular doorways to vaulted rooms and one broad central stair ascending to modest summit sanctuary, weathered pale limestone, green lowland horizon, correct tiers no giant blank Chichen pyramid.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "Rooms on five levels",
+      "caption": "At Edzná, the Building of Five Storeys combines a broad stairway with rows of vaulted rooms. Its open doorways make the structure read as a layered building, rather than a solid pyramid supporting only a shrine at the top.",
+      "sources": [
+        "landmark-study-edzna"
+      ],
+      "confidence": "medium",
+      "prompt": "Edzna Campeche Building of Five Storeys west facade seen obliquely from Great Acropolis plaza, five receding levels with repeated dark rectangular doorways to vaulted rooms and one broad central stair ascending to modest summit sanctuary, weathered pale limestone, green lowland horizon, correct tiers no giant blank Chichen pyramid.",
+      "evidence": {
+        "url": "https://lugares.inah.gob.mx/es/node/4339",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1907
+    }
+  ]
+}

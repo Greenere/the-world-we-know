@@ -79,6 +79,8 @@ export type CityDateKey = 'founded' | 'peak' | 'abandoned' | 'forgotten' | 'redi
 /** An imagined city era, journey scene, invention or landscape study. Fetched when its card opens. */
 export interface Depiction {
   id: string;
+  /** Another view of the named city era, with the same date range. */
+  companionOf?: string;
   /** A city's era: the years it covers. */
   from?: number;
   to?: number;

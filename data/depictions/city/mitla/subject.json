@@ -1,0 +1,20 @@
+{
+  "view": "Mitla Oaxaca close oblique detail of weathered wall panels of genuine small individually fitted stone geometric stepped greca fretwork, several different rectangular pattern panels above plain stone dado, nearby rectangular doorway reveals dark room. No carved human faces, no Maya glyph text, stone mosaic not painting, restrained red plaster traces.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "Patterns fitted in stone",
+      "caption": "Mitla's walls carry bands of stepped fretwork assembled from small pieces of stone. Seen close up, the patterns are built into the wall rather than painted on it, preserving the precision of the Zapotec masons who worked here.",
+      "sources": [
+        "landmark-study-mitla"
+      ],
+      "confidence": "medium",
+      "prompt": "Mitla Oaxaca close oblique detail of weathered wall panels of genuine small individually fitted stone geometric stepped greca fretwork, several different rectangular pattern panels above plain stone dado, nearby rectangular doorway reveals dark room. No carved human faces, no Maya glyph text, stone mosaic not painting, restrained red plaster traces.",
+      "evidence": {
+        "url": "https://lugares.inah.gob.mx/es/node/4350",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1550
+    }
+  ]
+}

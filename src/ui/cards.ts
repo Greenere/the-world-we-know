@@ -10,6 +10,7 @@ import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
 import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
+import {citySceneAt, citySketchPages} from '../city-sketches';
 import type {ScenePlate} from './journey-card';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
@@ -401,7 +402,7 @@ export class Cards {
           {
             kind: c.kind ?? 'city',
             id: c.id,
-            pick: c.kind ? items => items[0] ?? null : eraAt,
+            pick: c.kind ? items => items[0] ?? null : citySceneAt,
             label: d => c.kind === 'natural' ? t('Landscape study') : c.kind === 'built' ? `${t('Architectural study')} · ${formatYear(d.from ?? 0)}` : formatYear(d.from ?? 0),
             range: d => c.kind === 'natural' ? t('Landscape study') : c.kind === 'built' ? `${t('Architectural study')} · ${formatYear(d.from ?? 0)}` : eraRange(d),
             jump: d => { if (!c.kind) this.store.set({year: d.from ?? 0, playing: false}); },
@@ -727,14 +728,6 @@ function eraRange(d: Depiction) {
   return `${formatYear(d.from ?? 0)} – ${d.to === undefined ? t('today') : formatYear(d.to)}`;
 }
 
-function eraAt(eras: Depiction[], year: number): Depiction | null {
-  for (let i = eras.length - 1; i >= 0; i--) {
-    const e = eras[i];
-    if (year >= (e.from ?? -Infinity) && (e.to === undefined || year < e.to + 1)) return e;
-  }
-  return null;
-}
-
 /** How a plate walks its pictures: by year through a city's eras, or by stop along a journey. */
 interface PlateOrder {
   kind: DepictionKind;
@@ -813,15 +806,18 @@ class Plate {
         return;
       }
       this.items = items;
+      const companions = order.kind === 'city' && items.some(x => x.companionOf);
+      if (companions) this.strip.setAttribute('aria-label', t('Other scenes'));
       this.el.classList.remove('loading');
-      this.strip.hidden = items.length < 2;
+      // When every picture is a view of one era (a ruin's sketches), the pager already steps through them all.
+      this.strip.hidden = items.length < 2 || (order.kind === 'city' && citySketchPages(items, items[0]).length === items.length);
       this.strip.replaceChildren(
         ...items.map(x =>
           h(
             'button.plate-era-btn',
             {type: 'button', 'data-id': x.id, title: `${this.title(x)} (${order.label(x)})`, 'aria-label': `${this.title(x)} (${order.label(x)})`, onclick: () => this.select(x)},
             h('img', {src: dataUrl(x.img.thumb), alt: '', decoding: 'async', loading: 'lazy'}),
-            h('span', order.kind === 'journey' ? this.title(x) : order.label(x)),
+            h('span', order.kind === 'journey' || companions ? this.title(x) : order.label(x)),
           ),
         ),
       );
@@ -845,7 +841,8 @@ class Plate {
     this.playback.visit(d.stop ?? 0);
     this.playback.reset(d);
     this.selected = d;
-    this.order.jump(d);
+    // Switching views within an era must not rewind the user's timeline.
+    if (this.order.kind !== 'city' || citySceneAt(this.items ?? [], this.at, d) !== d) this.order.jump(d);
     // Another page at the same stop need not trigger a store update.
     this.show(this.order.kind === 'journey' ? d.stop ?? 0 : this.at);
   }
@@ -870,7 +867,10 @@ class Plate {
 
   private turnPage(delta: -1 | 1) {
     if (!this.items || !this.shown) return;
-    const next = journeyPageStep(this.items, this.shown, delta);
+    const pages = this.order.kind === 'city' ? citySketchPages(this.items, this.shown) : [];
+    const next = this.order.kind === 'city'
+      ? pages[pages.indexOf(this.shown) + delta]
+      : journeyPageStep(this.items, this.shown, delta);
     if (next) this.select(next);
   }
 
@@ -880,6 +880,7 @@ class Plate {
     if (!this.items) return;
     const d = this.order.kind === 'journey'
       ? journeySceneAt(this.items, at, this.selected)
+      : this.order.kind === 'city' ? citySceneAt(this.items, at, this.selected)
       : this.order.pick(this.items, at);
     if (this.selected && this.selected !== d) this.selected = null;
     this.el.hidden = !d;
@@ -890,7 +891,8 @@ class Plate {
     const range = this.order.range(d);
     const caption = this.caption(d);
     this.frame.setAttribute('aria-label', t('Enlarge: {title}', {title: this.title(d)}));
-    const pages = this.order.kind === 'journey' ? this.items.filter(x => x.stop === d.stop) : [];
+    const pages = this.order.kind === 'journey' ? this.items.filter(x => x.stop === d.stop)
+      : this.order.kind === 'city' ? citySketchPages(this.items, d) : [];
     this.pager.hidden = pages.length < 2;
     this.pageCount.textContent = pages.length > 1 ? t('Sketch {n} of {total}', {n: pages.indexOf(d) + 1, total: pages.length}) : '';
     this.previousPage.toggleAttribute('disabled', pages.indexOf(d) <= 0);

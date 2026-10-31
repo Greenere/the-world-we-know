@@ -1,0 +1,18 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Where the flood spreads",
+      "caption": "In the Pantanal, seasonal floodwater spreads through grasslands, channels and wooded islands. A low bank may be dry ground for capybaras in one season and part of a wider sheet of water in another.",
+      "sources": [
+        "landmark-study-pantanal"
+      ],
+      "confidence": "medium",
+      "prompt": "Pantanal Brazil natural-history field sketch low waterside viewpoint across shallow seasonal wetland channels and flooded grassland, wooded islands flat far horizon, two small anatomically correct capybaras resting on grassy bank as secondary detail, a distant white egret optional. Landscape primary not wildlife collage, no mountains or Amazon dense jungle canyon, natural muted green and faded blue.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/999/",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      }
+    }
+  ]
+}

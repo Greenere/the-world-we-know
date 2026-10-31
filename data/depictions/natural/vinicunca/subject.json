@@ -1,0 +1,18 @@
+{
+  "studies": [
+    {
+      "id": "landscape",
+      "title": "Bands across the ridge",
+      "caption": "At Vinicunca, differently coloured rock layers run across a high Andean ridge. Reds, ochres and muted greens follow the tilted strata, recording changes in the sediments and minerals that formed the mountain.",
+      "sources": [
+        "landmark-study-vinicunca"
+      ],
+      "confidence": "medium",
+      "prompt": "Vinicunca Peru real Rainbow Mountain from adjacent saddle, rounded pointed high Andean ridge with recognizable diagonally tilted parallel bands of muted iron red ochre cream and grey green sedimentary strata, barren scree foreground and distant high Andes with light snow patches. Restrained natural geological colors not neon rainbow or colored sand dunes, no crowds flags fences or invented buildings.",
+      "evidence": {
+        "url": "https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=13101",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "view": "Yaxchilan Structure 33 from bottom of steep worn stone stairway through dense moist forest, squat temple with three dark doorways and tall perforated roof comb of weathered masonry, vegetation at sides but architecture readable, no intact bright reconstruction, no river visible from incompatible view.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "Above the forest stairway",
+      "caption": "A steep stairway leads to Building 33 at Yaxchilán, where a perforated roof comb rises above the temple. The forest city stands beside a bend in the Usumacinta; local Maya knowledge of the place continued long before outside archaeological accounts made it widely known.",
+      "sources": [
+        "landmark-study-yaxchilan"
+      ],
+      "confidence": "medium",
+      "prompt": "Yaxchilan Structure 33 from bottom of steep worn stone stairway through dense moist forest, squat temple with three dark doorways and tall perforated roof comb of weathered masonry, vegetation at sides but architecture readable, no intact bright reconstruction, no river visible from incompatible view.",
+      "evidence": {
+        "url": "https://lugares.inah.gob.mx/es/node/5662",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1882
+    }
+  ]
+}

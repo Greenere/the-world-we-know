@@ -1,0 +1,20 @@
+{
+  "view": "Naranjo Saal Guatemala restrained archaeological view of partly exposed broad limestone stairway ascending forest-covered temple platform, eroded low masonry terraces disappearing beneath dense Peten trees, no complete towering temple reconstruction, modest exposed remains in forest with steps principal subject and depth through vegetation.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "Steps emerging from the forest",
+      "caption": "At Naranjo, stone stairways and temple platforms rise among forested hills. Excavation reveals only parts of a larger Maya capital, where palaces, plazas and elevated ceremonial groups were arranged across the uneven ground.",
+      "sources": [
+        "landmark-study-naranjo"
+      ],
+      "confidence": "medium",
+      "prompt": "Naranjo Saal Guatemala restrained archaeological view of partly exposed broad limestone stairway ascending forest-covered temple platform, eroded low masonry terraces disappearing beneath dense Peten trees, no complete towering temple reconstruction, modest exposed remains in forest with steps principal subject and depth through vegetation.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/tentativelists/6623/",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1905
+    }
+  ]
+}

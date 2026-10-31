@@ -1,0 +1,11 @@
+{
+  "subject": "city/uxmal",
+  "era": "ruins",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-31",
+  "prompt": "Use case: historical-scene. Asset: landmark field sketch for an illustrated atlas.\nA page from an explorer's field sketchbook, drawn on the spot, in the manner of the expedition artists of the 18th and 19th centuries (Cook's artists, Conrad Martens on the Beagle, Thomas Baines with Livingstone, Edward Wilson in the Antarctic). A visible graphite underdrawing with construction lines left in; quick sepia and brown ink over parts of it, with loose parallel hatching for shade; watercolour dropped in quickly and unevenly in a few washes of ochre, grey-green and faded blue, pooling and leaving the paper bare in places. The drawing is unfinished: detail is concentrated on the city, and the edges, the sky and the near water dissolve into bare cream paper in an irregular vignette. Slightly foxed, worn sketchbook paper with soft tone variation; a single page, no binding or spine visible. An observed working sketch, not a finished painting. No legible writing of any kind: no annotations, labels, captions, dates or signature. No border or frame. Nothing anachronistic for the year given. Landscape aspect ratio 3:2.\nSubject: uxmal. Uxmal Governor Palace close oblique architectural study along limestone facade, plain lower wall rectangular dark doorways, richly intricate continuous upper Puuc mosaic frieze with geometric lattice and projecting long-nosed Chaac masks, low terrace foreground. No fantasy giant masks or glyph writing, no pyramid primary subject.\nOne coherent composition with correct structure, spatial relationships and scale. No readable text, border or generic foreground explorer. Interpretive archaeological study of surviving and exposed remains, not a literal scene of the abandonment or first outside-recording year. Keep ruins ruined; do not invent missing buildings.",
+  "reference_sources": [
+    "https://lugares.inah.gob.mx/es/node/4482"
+  ]
+}

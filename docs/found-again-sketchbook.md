@@ -1,6 +1,6 @@
 # Found-again landmark sketchbook
 
-One archaeological study for each of the 63 cities in the **Found again** collection. These use the existing `city` depiction format and the normal landmark navigation, image sizes, lightbox and Chinese translation path.
+One archaeological study for each of the 69 cities in the **Found again** collection. These use the existing `city` depiction format and the normal landmark navigation, image sizes, lightbox and Chinese translation path.
 
 ## Scope and time
 
@@ -81,3 +81,16 @@ Artwork was generated with the built-in imagegen tool. The exact prompt and refe
 | `khara-khoto` | Walls at the edge of the sand | [Site or collection record](https://english.shanghai.gov.cn/en-ArtExhibitions/20260805/59f95db1163a44bca187c461f09d9d7b.html) |
 | `sippar` | Accounts from a temple | [Site or collection record](https://www.britishmuseum.org/collection/object/W_1891-0509-2377) |
 | `berenike` | A port between sea and desert | [Site or collection record](https://www.berenike.pcma.uw.edu.pl/) |
+
+## Added Americas studies
+
+These additions use source IDs `landmark-study-<id>`, with full built-in imagegen prompts beside each accepted WebP.
+
+| City | Study | Reference |
+| --- | --- | --- |
+| `yaxchilan` | Above the forest stairway | [Site reference](https://lugares.inah.gob.mx/es/node/5662) |
+| `quirigua` | A ruler carved in sandstone | [Site reference](https://whc.unesco.org/en/list/149/) |
+| `naranjo` | Steps emerging from the forest | [Site reference](https://whc.unesco.org/en/tentativelists/6623/) |
+| `edzna` | Rooms on five levels | [Site reference](https://lugares.inah.gob.mx/es/node/4339) |
+| `el-tajin` | Shadows in the niches | [Site reference](https://whc.unesco.org/en/list/631/) |
+| `ciudad-perdida` | Terraces along the ridge | [Site reference](https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/como-llegar) |

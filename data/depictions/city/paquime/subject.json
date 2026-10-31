@@ -1,0 +1,20 @@
+{
+  "view": "Paquime Casas Grandes low oblique view among warm tan poured-earth adobe room walls with softly rounded eroded tops, one surviving characteristic T-shaped doorway clearly shaped wider at top narrow below, small courts and low hills beyond, no stone Maya pyramids or reconstructed multistorey apartments.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "Rooms shaped from earth",
+      "caption": "Paquimé's rounded earthen walls enclose rooms, passages and small courts. The surviving lower storeys preserve the plan of a settlement that connected the communities of northern Mexico with the Pueblo world farther north.",
+      "sources": [
+        "landmark-study-paquime"
+      ],
+      "confidence": "medium",
+      "prompt": "Paquime Casas Grandes low oblique view among warm tan poured-earth adobe room walls with softly rounded eroded tops, one surviving characteristic T-shaped doorway clearly shaped wider at top narrow below, small courts and low hills beyond, no stone Maya pyramids or reconstructed multistorey apartments.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/560/",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1450
+    }
+  ]
+}

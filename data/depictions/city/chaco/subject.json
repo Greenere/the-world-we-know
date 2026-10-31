@@ -1,0 +1,36 @@
+{
+  "view": "Pueblo Bonito Chaco Canyon intimate eye-level view through successive small rectangular doorways aligned through roofless sandstone rooms, fine thin coursed masonry with larger core stones and remaining wood lintels, warm canyon cliff glimpse beyond. No arches, no adobe pyramid or intact roofs, plausible aligned doorway perspective.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "Doorways through Pueblo Bonito",
+      "caption": "At Pueblo Bonito, a sequence of small doorways leads through the surviving rooms of a Chacoan great house. Thin sandstone courses, thick walls and traces of upper floors show the skill of its Ancestral Pueblo builders.",
+      "sources": [
+        "landmark-study-chaco"
+      ],
+      "confidence": "medium",
+      "prompt": "Pueblo Bonito Chaco Canyon intimate eye-level view through successive small rectangular doorways aligned through roofless sandstone rooms, fine thin coursed masonry with larger core stones and remaining wood lintels, warm canyon cliff glimpse beyond. No arches, no adobe pyramid or intact roofs, plausible aligned doorway perspective.",
+      "evidence": {
+        "url": "https://www.nps.gov/chcu/planyourvisit/placestogo.htm",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1150
+    },
+    {
+      "id": "ruins-panorama",
+      "companionOf": "ruins",
+      "from": 1150,
+      "title": "The great house from the rim",
+      "caption": "From the canyon rim, Pueblo Bonito's curved outer wall encloses a dense arrangement of rooms, plazas and circular kivas. The wider view reveals the scale and planning of this Ancestral Pueblo great house, set against the open floor of Chaco Canyon.",
+      "sources": [
+        "grand-view-chaco"
+      ],
+      "confidence": "medium",
+      "prompt": "Pueblo Bonito Chaco Canyon New Mexico grand landscape view looking down from the sandstone north canyon rim onto the entire surviving D-shaped great house. Curved rear room blocks closest to viewer, straight southern frontage beyond, dense roofless rectangular sandstone rooms enclosing open plazas with several recognizable circular sunken kivas. Low surviving masonry, some taller partial rear walls, all visibly archaeological ruins not an intact inhabited reconstruction. Wide arid canyon floor and opposite layered sandstone mesa beyond, sparse desert scrub, expansive cream-paper sky. Correct D-shaped overall plan, not circular fortress, not a cliff dwelling, no roads cars railings or modern roof shelters.",
+      "evidence": {
+        "url": "https://home.nps.gov/chcu/learn/historyculture/upload/0028-chaco-center-historic-photograph-collection-2022-4.pdf",
+        "basis": "Interpretive study of exposed archaeological remains, sharing the existing ruin phase rather than asserting the illustrated state existed at its first year."
+      }
+    }
+  ]
+}

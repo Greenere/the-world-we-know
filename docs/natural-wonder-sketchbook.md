@@ -1,6 +1,6 @@
 # Natural wonder sketchbook
 
-All 66 entries marked `kind=natural` in `data/landmarks.csv` have one landscape
+All 68 entries marked `kind=natural` in `data/landmarks.csv` have one landscape
 study under `data/depictions/natural/<landmark-id>/`.
 
 Each folder contains `subject.json` (the study, caption, source, confidence and
@@ -37,3 +37,10 @@ Geographic references consulted alongside the authored landmark descriptions:
 
 Full per-image constraints, including distinctive mountain forms and exclusions,
 are preserved in each generation record.
+
+## Added landscapes
+
+- **Pantanal — Where the flood spreads:** a low wetland view with small capybaras for scale; seasonal channels and wooded islands remain the principal subject. [UNESCO reference](https://whc.unesco.org/en/list/999/).
+- **Vinicunca — Bands across the ridge:** muted geological colour bands across the real Andean ridge, without neon saturation or tourism infrastructure. The caption describes the geology rather than asserting a recent first discovery. [Peruvian tourism inventory](https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=13101).
+
+Both use dedicated `landmark-study-<id>` sources, English/Chinese captions, and built-in imagegen; final prompts are in each `landscape.json`.

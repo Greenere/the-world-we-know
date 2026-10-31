@@ -1,0 +1,20 @@
+{
+  "view": "Quirigua Guatemala tall narrow sandstone Stela E close three-quarter upward study, authentic Maya royal figure wearing elaborate headdress in shallow high-detail relief front, compact glyph blocks as tiny indistinct carved marks on side, weathered rounded summit, grassy plaza and tropical trees behind. Stone carved figure never living person, no invented readable lettering, no modern protective roof.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "A ruler carved in sandstone",
+      "caption": "At Quiriguá, a tall sandstone stela carries the image and inscriptions of a Maya ruler. The deeply worked surfaces turn a single upright stone into a public record of royal power, preserved among the remains of a much smaller city than nearby Copán.",
+      "sources": [
+        "landmark-study-quirigua"
+      ],
+      "confidence": "medium",
+      "prompt": "Quirigua Guatemala tall narrow sandstone Stela E close three-quarter upward study, authentic Maya royal figure wearing elaborate headdress in shallow high-detail relief front, compact glyph blocks as tiny indistinct carved marks on side, weathered rounded summit, grassy plaza and tropical trees behind. Stone carved figure never living person, no invented readable lettering, no modern protective roof.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/149/",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1840
+    }
+  ]
+}

@@ -15,6 +15,22 @@
         "url": "https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza",
         "basis": "Interpretive study of surviving archaeological remains, including excavated or conserved fabric. The era begins at the dataset abandonment date to associate the study with the ruin phase; it does not date the illustrated state of excavation or assert that habitation ended permanently in that year."
       }
+    },
+    {
+      "id": "ruins-panorama",
+      "companionOf": "ruins",
+      "from": 1250,
+      "title": "El Castillo across the plaza",
+      "caption": "El Castillo rises above the open plaza at Chichén Itzá, with nine stepped terraces and stairways leading to its summit temple. Seen from a distance, the pyramid's compact symmetry stands out against the low forest of the Yucatán plain.",
+      "sources": [
+        "grand-view-chichen-itza"
+      ],
+      "confidence": "medium",
+      "prompt": "Chichen Itza El Castillo Temple of Kukulcan grand landscape view across wide open plaza from north-northwest at human eye height and ample distance, whole freestanding square pyramid clearly visible in three-quarter perspective. Exactly nine stepped terraces, broad steep central stair on north face with stone balustrades and small serpent heads at ground, another central stair on adjacent face, modest rectangular stone summit temple. Recognizable real proportions roughly 55 metres wide and 30 metres total height, not absurdly tall. Weathered pale grey limestone, low Yucatan forest flat horizon, foreground limestone outcrops and sparse dry grass. Main pyramid occupies middle third to half of width with space and sky around it. No invented extra temples, no mountains, no crowds or tourist ropes, no neon colors, no readable text.",
+      "evidence": {
+        "url": "https://lugares.inah.gob.mx/es/node/4335",
+        "basis": "Interpretive study of exposed archaeological remains, sharing the existing ruin phase rather than asserting the illustrated state existed at its first year."
+      }
     }
   ]
 }

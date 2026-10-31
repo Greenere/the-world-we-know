@@ -1,0 +1,20 @@
+{
+  "view": "Uxmal Governor Palace close oblique architectural study along limestone facade, plain lower wall rectangular dark doorways, richly intricate continuous upper Puuc mosaic frieze with geometric lattice and projecting long-nosed Chaac masks, low terrace foreground. No fantasy giant masks or glyph writing, no pyramid primary subject.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "Stonework above the doorway",
+      "caption": "At Uxmal's Governor's Palace, plain lower walls support a long band of intricate stone mosaic. Geometric patterns and masks turn the upper façade into a carefully fitted surface, a distinctive feature of Puuc architecture.",
+      "sources": [
+        "landmark-study-uxmal"
+      ],
+      "confidence": "medium",
+      "prompt": "Uxmal Governor Palace close oblique architectural study along limestone facade, plain lower wall rectangular dark doorways, richly intricate continuous upper Puuc mosaic frieze with geometric lattice and projecting long-nosed Chaac masks, low terrace foreground. No fantasy giant masks or glyph writing, no pyramid primary subject.",
+      "evidence": {
+        "url": "https://lugares.inah.gob.mx/es/node/4482",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1200
+    }
+  ]
+}

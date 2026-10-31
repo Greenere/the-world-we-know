@@ -1,0 +1,11 @@
+{
+  "subject": "city/chaco",
+  "era": "ruins-panorama",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-31",
+  "prompt": "Use case: historical-scene. Asset: grand landscape companion sketch for a landmark card.\nA page from an explorer's field sketchbook, drawn on the spot, in the manner of the expedition artists of the 18th and 19th centuries (Cook's artists, Conrad Martens on the Beagle, Thomas Baines with Livingstone, Edward Wilson in the Antarctic). A visible graphite underdrawing with construction lines left in; quick sepia and brown ink over parts of it, with loose parallel hatching for shade; watercolour dropped in quickly and unevenly in a few washes of ochre, grey-green and faded blue, pooling and leaving the paper bare in places. The drawing is unfinished: detail is concentrated on the city, and the edges, the sky and the near water dissolve into bare cream paper in an irregular vignette. Slightly foxed, worn sketchbook paper with soft tone variation; a single page, no binding or spine visible. An observed working sketch, not a finished painting. No legible writing of any kind: no annotations, labels, captions, dates or signature. No border or frame. Nothing anachronistic for the year given. Landscape aspect ratio 3:2.\nPueblo Bonito Chaco Canyon New Mexico grand landscape view looking down from the sandstone north canyon rim onto the entire surviving D-shaped great house. Curved rear room blocks closest to viewer, straight southern frontage beyond, dense roofless rectangular sandstone rooms enclosing open plazas with several recognizable circular sunken kivas. Low surviving masonry, some taller partial rear walls, all visibly archaeological ruins not an intact inhabited reconstruction. Wide arid canyon floor and opposite layered sandstone mesa beyond, sparse desert scrub, expansive cream-paper sky. Correct D-shaped overall plan, not circular fortress, not a cliff dwelling, no roads cars railings or modern roof shelters.\nA single coherent perspective, correct architecture and scale. Delicate visible graphite, quick sepia hatching and sparse watercolour, irregular unfinished edges fading into bare cream paper. No frame or annotations.",
+  "reference_sources": [
+    "https://home.nps.gov/chcu/learn/historyculture/upload/0028-chaco-center-historic-photograph-collection-2022-4.pdf"
+  ]
+}

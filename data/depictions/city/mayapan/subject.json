@@ -1,0 +1,20 @@
+{
+  "view": "Mayapan Yucatan compact ruined ceremonial centre from low platform, modest stepped Temple of Kukulcan central with central stair and ruined summit, low closely packed stone foundations foreground and round ruined observatory secondary. No giant Chichen Itza duplicate, no intact crowded city, dry low forest.",
+  "eras": [
+    {
+      "id": "ruins",
+      "title": "Across the last capital",
+      "caption": "Mayapán's stepped temple rises above low platforms and the remains of crowded buildings. The compact centre belonged to a walled Maya capital whose rulers and households shared a much smaller urban space than the great cities of earlier centuries.",
+      "sources": [
+        "landmark-study-mayapan"
+      ],
+      "confidence": "medium",
+      "prompt": "Mayapan Yucatan compact ruined ceremonial centre from low platform, modest stepped Temple of Kukulcan central with central stair and ruined summit, low closely packed stone foundations foreground and round ruined observatory secondary. No giant Chichen Itza duplicate, no intact crowded city, dry low forest.",
+      "evidence": {
+        "url": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-mayapan",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1450
+    }
+  ]
+}

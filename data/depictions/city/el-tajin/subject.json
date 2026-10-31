@@ -1,0 +1,20 @@
+{
+  "view": "El Tajin Pyramid of Niches low three-quarter corner perspective emphasizing repeated small square recessed niches in six stepped stone terraces with projecting cornices, main central stair visible on one face, weathered grey sandstone with slight warm wash. No windows through solid pyramid, no Maya roof comb, no modern people or text.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "title": "Shadows in the niches",
+      "caption": "The Pyramid of the Niches at El Tajín has stepped terraces edged with rows of deep recesses. Their shadows break up the stone surface, giving this building a very different rhythm from a pyramid with plain sloping sides.",
+      "sources": [
+        "landmark-study-el-tajin"
+      ],
+      "confidence": "medium",
+      "prompt": "El Tajin Pyramid of Niches low three-quarter corner perspective emphasizing repeated small square recessed niches in six stepped stone terraces with projecting cornices, main central stair visible on one face, weathered grey sandstone with slight warm wash. No windows through solid pyramid, no Maya roof comb, no modern people or text.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/631/",
+        "basis": "Site-specific landscape or archaeological remains described by the cited heritage authority. Ruin and rediscovery eras indicate the dataset phase, not the date of excavation or conservation represented."
+      },
+      "from": 1785
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Ruins sketchbook
 
-44 archaeological studies cover every current entry in the landmark list’s **Ruins** group (abandoned cities with no forgotten phase, tier 1–2). Each has an English and Chinese title and caption, a source, and one dedicated landscape sketch.
+52 archaeological studies cover every current entry in the landmark list’s **Ruins** group (abandoned cities with no forgotten phase, tier 1–2). Each of the 50 sites has English and Chinese titles and captions, sources, and dedicated artwork. Pueblo Bonito and Chichén Itzá each have two views.
 
 ## Art direction
 
@@ -60,3 +60,24 @@ Built-in imagegen, one request per asset. Accepted images: `data/depictions/city
 | sukhothai | A seated Buddha in the open | [Site reference](https://whc.unesco.org/en/list/574/) |
 | haojing | The footprint of a Zhou building | [Site reference](https://www.hbswwkg.com/2021-11/18/content_8672065.html) |
 | assur | The mound beside the Tigris | [Site reference](https://whc.unesco.org/en/list/1130/) |
+
+## Added Americas studies
+
+These additions use source IDs `landmark-study-<id>`, with full built-in imagegen prompts beside each accepted WebP.
+
+| City | Study | Reference |
+| --- | --- | --- |
+| `mayapan` | Across the last capital | [Site reference](https://www.inah.gob.mx/zonas/zona-arqueologica-de-mayapan) |
+| `chaco` | Doorways through Pueblo Bonito | [Site reference](https://www.nps.gov/chcu/planyourvisit/placestogo.htm) |
+| `uxmal` | Stonework above the doorway | [Site reference](https://lugares.inah.gob.mx/es/node/4482) |
+| `tulum` | A temple above the landing | [Site reference](https://www.inah.gob.mx/zonas/99-zona-arqueologica-de-tulum) |
+| `mitla` | Patterns fitted in stone | [Site reference](https://lugares.inah.gob.mx/es/node/4350) |
+| `paquime` | Rooms shaped from earth | [Site reference](https://whc.unesco.org/en/list/560/) |
+
+## Companion views within an era
+
+Pueblo Bonito (`chaco`) adds **The great house from the rim**, showing the D-shaped room blocks, plazas and circular kivas in their canyon setting. Chichén Itzá adds **El Castillo across the plaza**, a wide view of the nine-tiered pyramid and summit temple. Both retain their original close study as the first page.
+
+Each additional entry has a unique ID (`ruins-panorama`) and `companionOf: "ruins"`, with exactly the same `from`/`to` dates as its main era. The data builder validates the reference and dates; only main eras participate in the non-overlap check. Companion references cannot form chains. Full prompts and references are saved in each `ruins-panorama.json`; accepted art is `ruins-panorama.webp` in the same city folder, generated with built-in imagegen.
+
+City cards expose the existing sketch pager and named thumbnails for companion views. Changing views within the active era preserves the year; moving out of that era resets the view. Other city-era navigation and journey pages keep their existing behavior.
