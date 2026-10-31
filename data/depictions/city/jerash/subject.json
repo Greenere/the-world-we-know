@@ -1,0 +1,20 @@
+{
+  "view": "Street-level receding view Jerash cardo stone paving with visible wheel ruts and irregular surviving Corinthian columns both sides, roofless ruins and low hills, no complete restored roofs or modern crowds.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1806,
+      "title": "A street lined with columns",
+      "caption": "Jerash preserves long stretches of its colonnaded streets and public buildings. Worn paving, column bases and drainage details make it possible to follow the routes once used by people moving through the ancient city.",
+      "sources": [
+        "found-study-jerash"
+      ],
+      "confidence": "medium",
+      "prompt": "Street-level receding view Jerash cardo stone paving with visible wheel ruts and irregular surviving Corinthian columns both sides, roofless ruins and low hills, no complete restored roofs or modern crowds.",
+      "evidence": {
+        "url": "https://ticket.gov.jo/en/location/jerash",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

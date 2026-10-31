@@ -1,0 +1,20 @@
+{
+  "view": "Close three-quarter archaeological object study Sanxingdui bronze mask broad face angular ears projecting cylindrical eyes, green patina and earth traces, securely resting on plain padded surface, actual cast mask hollow not living face, no gold fantasy ornament.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1929,
+      "title": "A face cast in bronze",
+      "caption": "Sanxingdui's pits contained bronze masks, figures and other carefully made objects. Their striking forms revealed a Bronze Age artistic tradition in Sichuan that differed from the better-known centres of the central plains.",
+      "sources": [
+        "found-study-sanxingdui"
+      ],
+      "confidence": "medium",
+      "prompt": "Close three-quarter archaeological object study Sanxingdui bronze mask broad face angular ears projecting cylindrical eyes, green patina and earth traces, securely resting on plain padded surface, actual cast mask hollow not living face, no gold fantasy ornament.",
+      "evidence": {
+        "url": "https://archaeology.harvard.edu/sites/g/files/omnuum7041/files/in_situ_fall_2024.pdf",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

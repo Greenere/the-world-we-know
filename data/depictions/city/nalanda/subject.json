@@ -1,0 +1,20 @@
+{
+  "view": "Oblique courtyard-level view Nalanda excavated red brick monastery cell walls, repetitive small doorways, central low platform, distant stepped temple ruin, no rebuilt wooden roofs, no modern railings.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1861,
+      "title": "Rooms for study",
+      "caption": "At Nalanda, excavated brick monasteries stand alongside the remains of temples and stupas. Rows of cells around courtyards recall the residential community in which monks lived and studied, including the Chinese pilgrim Xuanzang.",
+      "sources": [
+        "found-study-nalanda"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique courtyard-level view Nalanda excavated red brick monastery cell walls, repetitive small doorways, central low platform, distant stepped temple ruin, no rebuilt wooden roofs, no modern railings.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1502/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

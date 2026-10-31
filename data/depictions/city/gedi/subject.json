@@ -1,0 +1,20 @@
+{
+  "view": "Close view through weathered coral rag stone arched doorway at Gedi into roofless domestic courtyard, roots and coastal forest beyond, pale rough masonry plaster traces recessed wall niches, no inland savannah or grand Arab palace.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1927,
+      "title": "A doorway in the coastal forest",
+      "caption": "Gedi's coral-stone houses, mosques and water systems survive within coastal forest. Excavated pottery and the town's buildings reveal a Swahili community connected with trade across the Indian Ocean.",
+      "sources": [
+        "found-study-gedi"
+      ],
+      "confidence": "medium",
+      "prompt": "Close view through weathered coral rag stone arched doorway at Gedi into roofless domestic courtyard, roots and coastal forest beyond, pale rough masonry plaster traces recessed wall niches, no inland savannah or grand Arab palace.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1720/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

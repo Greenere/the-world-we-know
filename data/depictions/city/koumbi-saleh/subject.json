@@ -1,0 +1,20 @@
+{
+  "view": "Low diagonal view narrow excavated lane Koumbi Saleh between low dry-stone house foundations, flat Sahel landscape sparse thorn scrub, roofless mosque foundation distance, no tall minarets or mud city reconstruction.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1914,
+      "title": "Streets in the Sahel",
+      "caption": "At Koumbi Saleh, excavators traced stone-built houses, streets and a large mosque. Often associated with medieval Ghana, the ruins preserve part of a town connected with trade across the Sahara.",
+      "sources": [
+        "found-study-koumbi-saleh"
+      ],
+      "confidence": "medium",
+      "prompt": "Low diagonal view narrow excavated lane Koumbi Saleh between low dry-stone house foundations, flat Sahel landscape sparse thorn scrub, roofless mosque foundation distance, no tall minarets or mud city reconstruction.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/tentativelists/1546/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "view": "Close oblique view Ostia Piazzale delle Corporazioni weathered black-and-white mosaic merchant ship on white tesserae, chipped edges brick columns bases behind, no readable Latin labels, spatially flat floor not vertical mural.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1802,
+      "title": "A mosaic beside the harbour trade",
+      "caption": "At Ostia, mosaics and brick buildings preserve the work of Rome's port town. Images of ships and sea creatures in the trading offices connect the excavated streets with the movement of cargo across the Mediterranean.",
+      "sources": [
+        "found-study-ostia"
+      ],
+      "confidence": "medium",
+      "prompt": "Close oblique view Ostia Piazzale delle Corporazioni weathered black-and-white mosaic merchant ship on white tesserae, chipped edges brick columns bases behind, no readable Latin labels, spatially flat floor not vertical mural.",
+      "evidence": {
+        "url": "https://www.aarome.org/ostia-forum-project",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

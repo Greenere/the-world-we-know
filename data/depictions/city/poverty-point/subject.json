@@ -1,0 +1,20 @@
+{
+  "view": "Oblique aerial field sketch Poverty Point Louisiana six low concentric interrupted earthen arcs around broad flat plaza and larger grassy mound offset behind, wooded bayou edge flat landscape, accurate low earthwork scale, no stone pyramids no map labels.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1953,
+      "title": "Earthworks seen from above",
+      "caption": "At Poverty Point, broad curving ridges and large mounds form a planned landscape built by people who hunted, gathered and fished. Aerial views made the scale of the earthworks easier to recognise and study.",
+      "sources": [
+        "found-study-poverty-point"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique aerial field sketch Poverty Point Louisiana six low concentric interrupted earthen arcs around broad flat plaza and larger grassy mound offset behind, wooded bayou edge flat landscape, accurate low earthwork scale, no stone pyramids no map labels.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1435/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

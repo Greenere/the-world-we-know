@@ -1,0 +1,20 @@
+{
+  "view": "Oblique close view Oc Eo archaeological low red brick foundations in moist flat Mekong delta, narrow water channel and rice fields behind, Ba The hill distant, exposed pottery near trench edge, no Angkor-style reconstructed stone towers.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1944,
+      "title": "Traces beneath the delta",
+      "caption": "At Óc Eo, excavation has revealed brick structures, craft activity and goods connected with distant trade. The remains belong to a settlement within the canals and waterways of the Mekong delta.",
+      "sources": [
+        "found-study-oc-eo"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique close view Oc Eo archaeological low red brick foundations in moist flat Mekong delta, narrow water channel and rice fields behind, Ba The hill distant, exposed pottery near trench edge, no Angkor-style reconstructed stone towers.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/tentativelists/6572/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

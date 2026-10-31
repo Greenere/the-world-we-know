@@ -1,0 +1,20 @@
+{
+  "view": "Close archaeological study cluster of small buff clay cuneiform tablets and fragments resting in collapsed mudbrick archive room, side-lit tiny wedge textures not legible text, no book shelves or giant tablets, no hands required.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1964,
+      "title": "An archive of clay",
+      "caption": "At Ebla, tablets found in the palace archive recorded goods, officials and relations with other places. Thousands of pieces survived the destruction of the building, helping restore the history of a once-powerful Syrian kingdom.",
+      "sources": [
+        "found-study-ebla"
+      ],
+      "confidence": "medium",
+      "prompt": "Close archaeological study cluster of small buff clay cuneiform tablets and fragments resting in collapsed mudbrick archive room, side-lit tiny wedge textures not legible text, no book shelves or giant tablets, no hands required.",
+      "evidence": {
+        "url": "https://text-message.blogs.archives.gov/2020/07/07/the-royal-archives-of-ebla-reference-and-processing-archivists-4000-years-ago/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

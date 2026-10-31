@@ -1,0 +1,20 @@
+{
+  "view": "Low close three-quarter view surviving Karakorum massive weathered stone tortoise stele base on grass steppe, no stele on shell, shallow city foundations distance and broad sky, no invented Silver Tree fountain or palace.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1889,
+      "title": "A stone marker on the steppe",
+      "caption": "Karakorum's surviving foundations and carved stones mark the Mongol imperial capital in the Orkhon valley. The archaeological city belonged to a wider landscape of grazing, movement and exchange across the steppe.",
+      "sources": [
+        "found-study-karakorum"
+      ],
+      "confidence": "medium",
+      "prompt": "Low close three-quarter view surviving Karakorum massive weathered stone tortoise stele base on grass steppe, no stele on shell, shallow city foundations distance and broad sky, no invented Silver Tree fountain or palace.",
+      "evidence": {
+        "url": "https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "view": "Wide low view Khara Khoto Ejin desert ruined rammed-earth city corner and cluster of weathered white Buddhist stupas outside wall, dunes encroaching, ochre light, no intact bustling Tangut town or fantasy giant pagoda.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1908,
+      "title": "Walls at the edge of the sand",
+      "caption": "Khara-Khoto's earthen walls and stupas survived after the town was abandoned. Books and documents recovered there preserved Tangut writing and opened a record of life under the Western Xia and later Yuan rulers.",
+      "sources": [
+        "found-study-khara-khoto"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low view Khara Khoto Ejin desert ruined rammed-earth city corner and cluster of weathered white Buddhist stupas outside wall, dunes encroaching, ochre light, no intact bustling Tangut town or fantasy giant pagoda.",
+      "evidence": {
+        "url": "https://english.shanghai.gov.cn/en-ArtExhibitions/20260805/59f95db1163a44bca187c461f09d9d7b.html",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

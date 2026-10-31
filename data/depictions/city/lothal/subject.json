@@ -1,0 +1,20 @@
+{
+  "view": "Wide oblique view Lothal long rectangular empty excavated brick-lined basin, low eroded walls and inlet opening, dry basin floor and low settlement platform beyond, no modern ocean ships or intact harbor reconstruction.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1954,
+      "title": "A basin beside the settlement",
+      "caption": "Lothal's excavated brick-lined basin has long been interpreted as a dock connected with trade. Alongside the town's streets and craft remains, it shows how this Indus settlement was shaped by water and exchange.",
+      "sources": [
+        "found-study-lothal"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide oblique view Lothal long rectangular empty excavated brick-lined basin, low eroded walls and inlet opening, dry basin floor and low settlement platform beyond, no modern ocean ships or intact harbor reconstruction.",
+      "evidence": {
+        "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2047689&lang=2&reg=48",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

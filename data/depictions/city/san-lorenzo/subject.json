@@ -1,0 +1,20 @@
+{
+  "view": "Close profile study San Lorenzo Olmec colossal head weathered basalt cheek ear ornament and helmet band, low diagonal afternoon light emphasizes tool-shaped volume, plain earthy excavation setting, distinguish from frontal La Venta scene.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1945,
+      "title": "The work of a stone carver",
+      "caption": "San Lorenzo's colossal heads were carved from large blocks of basalt. Their individual faces and headgear made them more than anonymous monuments; archaeological study connects them with rulership in an early Olmec centre.",
+      "sources": [
+        "found-study-san-lorenzo"
+      ],
+      "confidence": "medium",
+      "prompt": "Close profile study San Lorenzo Olmec colossal head weathered basalt cheek ear ornament and helmet band, low diagonal afternoon light emphasizes tool-shaped volume, plain earthy excavation setting, distinguish from frontal La Venta scene.",
+      "evidence": {
+        "url": "https://www.inah.gob.mx/zonas/186-zona-arqueologica-de-san-lorenzo-tenochtitlan",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "view": "Close low angle archaeological brick wall foundations and terracotta water pipe exposed in dry steppe trench at Selitrennoe lower Volga, a few turquoise glazed sherds foreground, vast flat horizon, no intact palace or film-set reconstruction.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1843,
+      "title": "Brickwork on the steppe",
+      "caption": "Excavation at the lower Volga sites associated with Sarai has revealed brick buildings, water pipes and glazed ceramics. These remains show the urban life that accompanied the Golden Horde's travelling courts.",
+      "sources": [
+        "found-study-sarai"
+      ],
+      "confidence": "medium",
+      "prompt": "Close low angle archaeological brick wall foundations and terracotta water pipe exposed in dry steppe trench at Selitrennoe lower Volga, a few turquoise glazed sherds foreground, vast flat horizon, no intact palace or film-set reconstruction.",
+      "evidence": {
+        "url": "https://shm.ru/archeology/povolzhskaya-arkheologicheskaya-ekspeditsiya/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

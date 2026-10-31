@@ -1,0 +1,20 @@
+{
+  "view": "Close three-quarter view Copan Stela A intricately carved standing Maya ruler with deep projecting headdress and ornament, weathered limestone monolith in grassy plaza forest background, believable original sculpture not live person, no readable glyph labels.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1839,
+      "title": "A ruler carved in stone",
+      "caption": "Copán's sculptors covered stelae with detailed portraits, dress and signs of royal authority. The carved monuments helped later readers recover the history of a Maya kingdom whose buildings had become overgrown.",
+      "sources": [
+        "found-study-copan"
+      ],
+      "confidence": "medium",
+      "prompt": "Close three-quarter view Copan Stela A intricately carved standing Maya ruler with deep projecting headdress and ornament, weathered limestone monolith in grassy plaza forest background, believable original sculpture not live person, no readable glyph labels.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/129/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

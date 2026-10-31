@@ -1,0 +1,20 @@
+{
+  "view": "View along grassy semicircular earth rampart at Hedeby descending toward Haddeby Noor inlet, reeds foreground, open low meadow, subtle shallow archaeological trench with timber traces, no reconstructed Viking village.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1897,
+      "title": "The edge of a trading town",
+      "caption": "At Hedeby, roads, buildings and harbour remains survive beneath the ground beside the water. Its earthwork boundary helps trace a trading settlement that connected routes across land and sea.",
+      "sources": [
+        "found-study-hedeby"
+      ],
+      "confidence": "medium",
+      "prompt": "View along grassy semicircular earth rampart at Hedeby descending toward Haddeby Noor inlet, reeds foreground, open low meadow, subtle shallow archaeological trench with timber traces, no reconstructed Viking village.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1553/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

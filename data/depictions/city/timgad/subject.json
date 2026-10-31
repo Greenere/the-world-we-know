@@ -1,0 +1,20 @@
+{
+  "view": "Slightly elevated wide view Timgad regular grid roofless low stone house foundations, long paved street toward triple-bay Trajan arch, dry Algerian highland distant mountains, no intact bustling Roman city.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1881,
+      "title": "The grid of a Roman town",
+      "caption": "Timgad's streets retain the regular layout of a Roman colonial town. Excavation exposed houses and public spaces along the grid, while the surviving monumental arch marks one of its main routes.",
+      "sources": [
+        "found-study-timgad"
+      ],
+      "confidence": "medium",
+      "prompt": "Slightly elevated wide view Timgad regular grid roofless low stone house foundations, long paved street toward triple-bay Trajan arch, dry Algerian highland distant mountains, no intact bustling Roman city.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/194/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

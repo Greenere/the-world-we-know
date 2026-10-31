@@ -1,0 +1,20 @@
+{
+  "view": "View from dark narrow winding Siq canyon opening to Petra Al Khazneh Treasury rose sandstone facade, two classical tiers carved directly in cliff, one small local guide optional, coherent actual architecture, no modern tourists or fantasy palace.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1812,
+      "title": "Through the Siq",
+      "caption": "A narrow gorge opens onto the carved façade known as the Treasury. When Burckhardt visited Petra in 1812, local people already knew these ruins; his account helped bring the Nabataean city to a wider readership.",
+      "sources": [
+        "found-study-petra"
+      ],
+      "confidence": "medium",
+      "prompt": "View from dark narrow winding Siq canyon opening to Petra Al Khazneh Treasury rose sandstone facade, two classical tiers carved directly in cliff, one small local guide optional, coherent actual architecture, no modern tourists or fantasy palace.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/326/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

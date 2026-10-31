@@ -1,0 +1,20 @@
+{
+  "view": "Quiet ground-level excavation Qantir Nile Delta, shallow trench exposing fired-clay crucible fragments and vitrified furnace material, green fields and irrigation canal behind, no Tanis obelisks or standing Ramesses temples.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1966,
+      "title": "A capital beneath the fields",
+      "caption": "At Qantir, remains beneath cultivated fields have helped locate Pi-Ramesses, the capital of Ramesses II. Excavations reveal royal buildings and specialised workshops rather than a complete city still standing above ground.",
+      "sources": [
+        "found-study-pi-ramesses"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet ground-level excavation Qantir Nile Delta, shallow trench exposing fired-clay crucible fragments and vitrified furnace material, green fields and irrigation canal behind, no Tanis obelisks or standing Ramesses temples.",
+      "evidence": {
+        "url": "https://discovery.ucl.ac.uk/id/eprint/93697/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

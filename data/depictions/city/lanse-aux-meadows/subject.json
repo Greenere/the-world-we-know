@@ -1,0 +1,20 @@
+{
+  "view": "Ground-level archaeological view low excavated turf foundation outlines LAnse aux Meadows on windswept grassy coastal terrace, shallow rectangular rooms stone hearth exposed, Atlantic water and spruce horizon, no intact reconstructed longhouses or horned helmets.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1960,
+      "title": "Turf walls in Newfoundland",
+      "caption": "Excavations at L'Anse aux Meadows revealed the remains of timber-framed turf buildings and evidence of ironworking. The settlement established a Norse presence in North America around the year 1000.",
+      "sources": [
+        "found-study-lanse-aux-meadows"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground-level archaeological view low excavated turf foundation outlines LAnse aux Meadows on windswept grassy coastal terrace, shallow rectangular rooms stone hearth exposed, Atlantic water and spruce horizon, no intact reconstructed longhouses or horned helmets.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/4/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

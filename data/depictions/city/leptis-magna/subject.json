@@ -1,0 +1,20 @@
+{
+  "view": "View from curved stone seating down into Leptis Magna Roman theatre orchestra and ruined stage columns, pale Mediterranean band beyond, coherent semicircle and radial steps, no intact roof, no crowd.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1921,
+      "title": "The theatre above the sea",
+      "caption": "Leptis Magna grew into a major Roman city with markets, public buildings and a harbour. Its excavated theatre preserves the relationship between the curved seating, stage and Mediterranean setting.",
+      "sources": [
+        "found-study-leptis-magna"
+      ],
+      "confidence": "medium",
+      "prompt": "View from curved stone seating down into Leptis Magna Roman theatre orchestra and ruined stage columns, pale Mediterranean band beyond, coherent semicircle and radial steps, no intact roof, no crowd.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/183/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

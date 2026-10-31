@@ -1,0 +1,20 @@
+{
+  "view": "Quiet wide landscape low rounded grass burial mounds at Birka Bjorko island, scattered birch trees, Lake Malaren behind, natural low earthworks not giant tumuli, no reconstructed Viking houses or ships.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1871,
+      "title": "Mounds above the water",
+      "caption": "Birka's burial mounds and settlement remains lie on an island in Lake Mälaren. Excavation connects this quiet shoreline with the workshops, trade and long-distance contacts of a Viking-age town.",
+      "sources": [
+        "found-study-birka"
+      ],
+      "confidence": "medium",
+      "prompt": "Quiet wide landscape low rounded grass burial mounds at Birka Bjorko island, scattered birch trees, Lake Malaren behind, natural low earthworks not giant tumuli, no reconstructed Viking houses or ships.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/555/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "subject": "city/karakorum",
+  "era": "rediscovered",
+  "provider": "openai",
+  "method": "built-in imagegen",
+  "date": "2026-10-30",
+  "prompt": "Use case: historical-scene. Asset: archaeological field sketch for a rediscovered landmark card.\nA page from an explorer's field sketchbook, drawn on the spot, in the manner of the expedition artists of the 18th and 19th centuries (Cook's artists, Conrad Martens on the Beagle, Thomas Baines with Livingstone, Edward Wilson in the Antarctic). A visible graphite underdrawing with construction lines left in; quick sepia and brown ink over parts of it, with loose parallel hatching for shade; watercolour dropped in quickly and unevenly in a few washes of ochre, grey-green and faded blue, pooling and leaving the paper bare in places. The drawing is unfinished: detail is concentrated on the city, and the edges, the sky and the near water dissolve into bare cream paper in an irregular vignette. Slightly foxed, worn sketchbook paper with soft tone variation; a single page, no binding or spine visible. An observed working sketch, not a finished painting. No legible writing of any kind: no annotations, labels, captions, dates or signature. No border or frame. Nothing anachronistic for the year given. Landscape aspect ratio 3:2.\nSubject: karakorum. Low close three-quarter view surviving Karakorum massive weathered stone tortoise stele base on grass steppe, no stele on shell, shallow city foundations distance and broad sky, no invented Silver Tree fountain or palace.\nDepict the archaeological remains revealed during research, not a literal portrait of the first discovery day. Ruins must remain ruins, not an imagined intact ancient city. Any excavation equipment is unobtrusive and manual; no mandatory explorer, tourism infrastructure, labels or writing. Recognizable site-specific forms, restrained graphite and sepia ink with thin watercolor and unfinished cream-paper margins. One coherent composition. Correct structure, spatial relationships and object geometry.",
+  "reference_sources": [
+    "https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum"
+  ]
+}

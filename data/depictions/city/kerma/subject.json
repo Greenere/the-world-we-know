@@ -1,0 +1,20 @@
+{
+  "view": "Low dramatic side view Kerma western deffufa massive eroded rectangular mudbrick block rounded worn top with remnants stair, tiny low excavated foundations foreground, Sudan Nile palms distance, no pyramid or Egyptian pylon.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1913,
+      "title": "Mud brick above the plain",
+      "caption": "The western deffufa at Kerma survives as a massive mud-brick structure above the Nile plain. Excavation around it has revealed buildings and activities belonging to an early Nubian urban centre.",
+      "sources": [
+        "found-study-kerma"
+      ],
+      "confidence": "medium",
+      "prompt": "Low dramatic side view Kerma western deffufa massive eroded rectangular mudbrick block rounded worn top with remnants stair, tiny low excavated foundations foreground, Sudan Nile palms distance, no pyramid or Egyptian pylon.",
+      "evidence": {
+        "url": "https://kerma.ch/en/history/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

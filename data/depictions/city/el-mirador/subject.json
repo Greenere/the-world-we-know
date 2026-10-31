@@ -1,0 +1,20 @@
+{
+  "view": "Wide forest canopy view El Mirador La Danta immense terraced mound mostly forest-covered, small exposed limestone stair and upper triadic ruins emerging, humid Peten jungle, no fully cleared polished pyramid or Tikal tall roof comb.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1926,
+      "title": "A city beneath the canopy",
+      "caption": "At El Mirador, enormous platforms and temple complexes lie beneath the Petén forest. Archaeological work at La Danta has revealed the scale of a Maya centre that grew centuries before the better-known Classic-period cities.",
+      "sources": [
+        "found-study-el-mirador"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide forest canopy view El Mirador La Danta immense terraced mound mostly forest-covered, small exposed limestone stair and upper triadic ruins emerging, humid Peten jungle, no fully cleared polished pyramid or Tikal tall roof comb.",
+      "evidence": {
+        "url": "https://www.asociaciontikal.com/simposio-21-ano-2007/33-suyuc-07-doc/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

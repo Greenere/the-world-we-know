@@ -1,0 +1,20 @@
+{
+  "view": "Oblique view Mari palace excavated mudbrick courtyard and low adjoining rooms, eroded walls with some surviving plaster, Syrian Euphrates plain beyond, no intact roofs or invented ziggurat, weathered archaeological remains.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1933,
+      "title": "Courts beneath a mound",
+      "caption": "At Mari, excavation uncovered a large palace built mainly of mud brick. Its courts, rooms and archives revealed the organisation of a kingdom whose rulers depended on the Euphrates and the routes crossing its valley.",
+      "sources": [
+        "found-study-mari"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique view Mari palace excavated mudbrick courtyard and low adjoining rooms, eroded walls with some surviving plaster, Syrian Euphrates plain beyond, no intact roofs or invented ziggurat, weathered archaeological remains.",
+      "evidence": {
+        "url": "https://archeologie.culture.gouv.fr/mari/en",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

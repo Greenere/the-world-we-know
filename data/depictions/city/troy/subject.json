@@ -1,0 +1,20 @@
+{
+  "view": "Oblique ground-level view Troy Hisarlik excavated sloping battered limestone fortification wall, exposed stratified trench and low later foundations behind, dry grass Aegean landscape, no wooden horse, no intact citadel.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1871,
+      "title": "Cities built over cities",
+      "caption": "At Hisarlık, excavators found successive settlements built on the same hill. The exposed walls and layers show why Troy cannot be understood as the remains of just one city or one war.",
+      "sources": [
+        "found-study-troy"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique ground-level view Troy Hisarlik excavated sloping battered limestone fortification wall, exposed stratified trench and low later foundations behind, dry grass Aegean landscape, no wooden horse, no intact citadel.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/849/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

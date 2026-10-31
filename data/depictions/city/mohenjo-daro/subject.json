@@ -1,0 +1,20 @@
+{
+  "view": "Oblique close view excavated Mohenjo-daro Great Bath rectangular empty baked brick basin, straight descending steps at far short end and low brick rooms around, precise horizontal geometry, no water fantasy swimmers or giant Buddhist stupa dominating.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1922,
+      "title": "Steps into the Great Bath",
+      "caption": "The Great Bath at Mohenjo-daro was built with carefully fitted bricks and steps descending into its basin. Together with nearby drains and rooms, it shows the attention this Indus city gave to water and construction.",
+      "sources": [
+        "found-study-mohenjo-daro"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique close view excavated Mohenjo-daro Great Bath rectangular empty baked brick basin, straight descending steps at far short end and low brick rooms around, precise horizontal geometry, no water fantasy swimmers or giant Buddhist stupa dominating.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/138/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

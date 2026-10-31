@@ -1,0 +1,20 @@
+{
+  "view": "Ground-level close view weathered upright Maya limestone stela at Calakmul with extremely eroded relief, jungle roots and massive Structure II lower terraces behind, low filtered light, no crisp invented inscriptions.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1931,
+      "title": "Stelae in the forest",
+      "caption": "Calakmul was the seat of a powerful Maya dynasty. Carved stelae among its temples preserve names and events from its rulers' lives, helping archaeologists reconstruct the city's relations with other Maya kingdoms.",
+      "sources": [
+        "found-study-calakmul"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground-level close view weathered upright Maya limestone stela at Calakmul with extremely eroded relief, jungle roots and massive Structure II lower terraces behind, low filtered light, no crisp invented inscriptions.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1061/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

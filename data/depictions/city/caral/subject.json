@@ -1,0 +1,20 @@
+{
+  "view": "Wide elevated oblique view Caral Supe sunken circular court foreground linked stair to low eroded stepped platform mound, arid rocky valley mountains and distant green river strip, no Maya tower or Inca masonry.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1994,
+      "title": "A court below the platforms",
+      "caption": "Caral's stone platforms and sunken circular courts stand on a dry terrace above the Supe valley. Excavation revealed a complex ceremonial settlement that flourished long before the Inca Empire.",
+      "sources": [
+        "found-study-caral"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide elevated oblique view Caral Supe sunken circular court foreground linked stair to low eroded stepped platform mound, arid rocky valley mountains and distant green river strip, no Maya tower or Inca masonry.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1269/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

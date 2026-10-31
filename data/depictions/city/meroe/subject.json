@@ -1,0 +1,20 @@
+{
+  "view": "Wide dune-level view Meroe northern cemetery cluster of small steep slender pyramids with ruined missing tops and tiny pylon chapels, reddish sand and low hills, varied preservation, no giant Giza pyramids or modern restored caps.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1821,
+      "title": "Pyramids beyond the river",
+      "caption": "Meroë's royal cemeteries preserve the steep-sided pyramids of the rulers of Kush. Their small offering chapels and weathered stonework remain in a dry landscape east of the Nile, apart from the ancient town.",
+      "sources": [
+        "found-study-meroe"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide dune-level view Meroe northern cemetery cluster of small steep slender pyramids with ruined missing tops and tiny pylon chapels, reddish sand and low hills, varied preservation, no giant Giza pyramids or modern restored caps.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1336/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

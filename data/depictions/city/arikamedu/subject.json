@@ -1,0 +1,20 @@
+{
+  "view": "Close overhead coherent still life Arikamedu tiny red carnelian beads blue glass beads unfinished bead blanks and worn amphora sherds laid on plain linen beside trowel, no jewelry fantasy or colonial standing warehouse misidentified ancient.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1945,
+      "title": "Beads and broken vessels",
+      "caption": "At Arikamedu, imported pottery and evidence of beadmaking reveal a settlement engaged in overseas exchange. Small fragments of glass, stone and ceramic help trace connections that are no longer visible in the landscape.",
+      "sources": [
+        "found-study-arikamedu"
+      ],
+      "confidence": "medium",
+      "prompt": "Close overhead coherent still life Arikamedu tiny red carnelian beads blue glass beads unfinished bead blanks and worn amphora sherds laid on plain linen beside trowel, no jewelry fantasy or colonial standing warehouse misidentified ancient.",
+      "evidence": {
+        "url": "https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

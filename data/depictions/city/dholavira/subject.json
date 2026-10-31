@@ -1,0 +1,20 @@
+{
+  "view": "Low angle from empty Dholavira reservoir floor looking along deep sandstone cut basin with broad straight steps descending, dry Kutch light, low stone fortification upper edge, no medieval ornamental Indian stepwell arches.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1968,
+      "title": "Steps down to stored water",
+      "caption": "At Dholavira, reservoirs and channels helped a large settlement manage water in a dry environment. Excavated stone steps descend into storage basins, making the city's investment in collecting water visible.",
+      "sources": [
+        "found-study-dholavira"
+      ],
+      "confidence": "medium",
+      "prompt": "Low angle from empty Dholavira reservoir floor looking along deep sandstone cut basin with broad straight steps descending, dry Kutch light, low stone fortification upper edge, no medieval ornamental Indian stepwell arches.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1645/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

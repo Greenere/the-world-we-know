@@ -1,0 +1,20 @@
+{
+  "view": "Wide plateau-level view Dhar Tichitt Mauritania ancient low dry-stone round and irregular compound walls on sandstone escarpment, vast sandy plain beyond, sparse scrub, no standing adobe medieval Tichitt town or monumental columns.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1965,
+      "title": "Stone walls on the plateau",
+      "caption": "On the Dhar Tichitt plateau, dry-stone walls mark settlements and enclosures in a landscape now close to the desert. Archaeological study reveals communities whose daily life included herding and the cultivation of millet.",
+      "sources": [
+        "found-study-dhar-tichitt"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide plateau-level view Dhar Tichitt Mauritania ancient low dry-stone round and irregular compound walls on sandstone escarpment, vast sandy plain beyond, sparse scrub, no standing adobe medieval Tichitt town or monumental columns.",
+      "evidence": {
+        "url": "https://link.springer.com/article/10.1007/s10437-022-09479-5",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

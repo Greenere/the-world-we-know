@@ -1,0 +1,20 @@
+{
+  "view": "Low wide view Loulan bleached splintered wooden building posts and exposed reed wall fragments on wind-eroded yardangs, ruined earthen stupa distant, empty Lop Nur desert under pale sky, no living oasis or fantasy intact city.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1900,
+      "title": "Timber in the desert",
+      "caption": "At Loulan, ruined buildings and weathered timber mark an oasis that once depended on water near Lop Nur. Surviving documents and structural remains helped recover the history of settlement and travel in this now-arid landscape.",
+      "sources": [
+        "found-study-loulan"
+      ],
+      "confidence": "medium",
+      "prompt": "Low wide view Loulan bleached splintered wooden building posts and exposed reed wall fragments on wind-eroded yardangs, ruined earthen stupa distant, empty Lop Nur desert under pale sky, no living oasis or fantasy intact city.",
+      "evidence": {
+        "url": "https://idp.bl.uk/collection/610103DC0D4C4D9EACB5E5962C7FBA6A/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

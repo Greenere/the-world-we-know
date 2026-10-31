@@ -1,0 +1,20 @@
+{
+  "view": "High oblique view Machu Picchu terraces and roofless stone compounds with characteristic steep Huayna Picchu peak behind, vegetation between masonry, mist Urubamba gorge, coherent real layout, no reconstructed thatch tourist infrastructure.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1911,
+      "title": "Terraces above the Urubamba",
+      "caption": "Machu Picchu's terraces and stone buildings occupy a narrow Andean ridge. Local farmers knew the site before Bingham's visit in 1911; later surveys and photographs brought the Inca estate to international attention.",
+      "sources": [
+        "found-study-machu-picchu"
+      ],
+      "confidence": "medium",
+      "prompt": "High oblique view Machu Picchu terraces and roofless stone compounds with characteristic steep Huayna Picchu peak behind, vegetation between masonry, mist Urubamba gorge, coherent real layout, no reconstructed thatch tourist infrastructure.",
+      "evidence": {
+        "url": "https://world-heritage-datasheets.unep-wcmc.org/datasheet/output/site/historic-sanctuary-of-machu-picchu/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

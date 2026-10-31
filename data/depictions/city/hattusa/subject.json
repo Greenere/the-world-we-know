@@ -1,0 +1,20 @@
+{
+  "view": "Three-quarter close architectural view Hattusa Lion Gate two weathered lion-carved stone jambs with giant polygonal masonry, open top broken doorway and grassy Anatolian hills, no reconstructed timber tower, authentic Hittite lion forms.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1834,
+      "title": "The lions at the gate",
+      "caption": "Hattusa's defensive walls followed the hills around the Hittite capital. At the Lion Gate, carved stone animals guarded an entrance whose massive masonry still shows the builders' skill in fitting and supporting large blocks.",
+      "sources": [
+        "found-study-hattusa"
+      ],
+      "confidence": "medium",
+      "prompt": "Three-quarter close architectural view Hattusa Lion Gate two weathered lion-carved stone jambs with giant polygonal masonry, open top broken doorway and grassy Anatolian hills, no reconstructed timber tower, authentic Hittite lion forms.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/377/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

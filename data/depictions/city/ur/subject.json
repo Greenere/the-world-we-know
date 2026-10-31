@@ -1,0 +1,20 @@
+{
+  "view": "Wide low view Ur ziggurat as excavated weathered massive lower brick terrace with damaged stairs and eroded upper mound, flat desert ruins, no pristine modern reconstruction or complete multistorey summit temple.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1922,
+      "title": "The surviving ziggurat",
+      "caption": "At Ur, the ziggurat's baked-brick facing protected a vast core of mud brick. Excavation exposed parts of the sacred precinct and surrounding city, recovering a major centre of southern Mesopotamia.",
+      "sources": [
+        "found-study-ur"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low view Ur ziggurat as excavated weathered massive lower brick terrace with damaged stairs and eroded upper mound, flat desert ruins, no pristine modern reconstruction or complete multistorey summit temple.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1481/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

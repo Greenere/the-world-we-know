@@ -1,0 +1,20 @@
+{
+  "view": "Close study small broken buff clay Ugaritic tablet with tiny wedge impressions resting beside other sherds on neutral cloth, archaeologist brush edge, subtle shallow excavated stone room background, no readable modern writing or giant tablet.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1928,
+      "title": "A tablet from the coast",
+      "caption": "At Ugarit, clay tablets preserved several languages used in a Bronze Age port kingdom. Some were written with an alphabet of cuneiform signs, opening a record of myths, administration and international exchange.",
+      "sources": [
+        "found-study-ugarit"
+      ],
+      "confidence": "medium",
+      "prompt": "Close study small broken buff clay Ugaritic tablet with tiny wedge impressions resting beside other sherds on neutral cloth, archaeologist brush edge, subtle shallow excavated stone room background, no readable modern writing or giant tablet.",
+      "evidence": {
+        "url": "https://archeologie.culture.gouv.fr/proche-orient/en/ugarit-ras-shamra",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

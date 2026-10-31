@@ -1,0 +1,20 @@
+{
+  "view": "Oblique close view Palace of Nestor Pylos excavated megaron circular plaster hearth and four column bases around it, low rubble walls and worn patterned floor, no standing columns or modern protective roof, coherent circular perspective.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1939,
+      "title": "The hearth in the palace",
+      "caption": "At Pylos, excavation uncovered a Mycenaean palace with a central hall arranged around a large hearth. Clay tablets found in the ruins recorded supplies and administration, preserving the work of the palace before its destruction.",
+      "sources": [
+        "found-study-pylos"
+      ],
+      "confidence": "medium",
+      "prompt": "Oblique close view Palace of Nestor Pylos excavated megaron circular plaster hearth and four column bases around it, low rubble walls and worn patterned floor, no standing columns or modern protective roof, coherent circular perspective.",
+      "evidence": {
+        "url": "https://www.efamess.gr/en/pois/anaktoro-nestoros-ston-ano-egkliano/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

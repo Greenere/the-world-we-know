@@ -1,0 +1,20 @@
+{
+  "view": "View from shadowed Maya corbel-vault passage across Palenque palace courtyard with characteristic four-level square observation tower beyond, weathered limestone and jungle edge, no round Roman arches or invented city.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1773,
+      "title": "Rooms open to the forest",
+      "caption": "Palenque's palace and temples preserve fine stonework, stucco and carved accounts of its rulers. Roofless rooms and surviving vaulted passages reveal how builders arranged courts and interiors within the forested hills.",
+      "sources": [
+        "found-study-palenque"
+      ],
+      "confidence": "medium",
+      "prompt": "View from shadowed Maya corbel-vault passage across Palenque palace courtyard with characteristic four-level square observation tower beyond, weathered limestone and jungle edge, no round Roman arches or invented city.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/411/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

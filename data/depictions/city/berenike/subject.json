@@ -1,0 +1,20 @@
+{
+  "view": "Wide ground-level view Berenike excavated low coral and limestone walls and temple doorway remnants on arid Red Sea coastal plain, low blue sea strip distant, amphora fragments foreground, no intact Greek port or modern ships.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1818,
+      "title": "A port between sea and desert",
+      "caption": "Berenike linked the Red Sea with roads across Egypt's Eastern Desert. Excavated buildings, pottery and traded goods recover the history of a port through which people and cargo moved between Africa, the Mediterranean and the Indian Ocean.",
+      "sources": [
+        "found-study-berenike"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide ground-level view Berenike excavated low coral and limestone walls and temple doorway remnants on arid Red Sea coastal plain, low blue sea strip distant, amphora fragments foreground, no intact Greek port or modern ships.",
+      "evidence": {
+        "url": "https://www.berenike.pcma.uw.edu.pl/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

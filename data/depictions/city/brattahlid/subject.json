@@ -1,0 +1,20 @@
+{
+  "view": "Wide gently elevated view Brattahlid Qassiarsuk Greenland low grass-covered stone farm foundations beside deep blue fjord and bare rounded mountains, summer pasture, no standing replica church, no icebergs towering over houses.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1721,
+      "title": "A farm beside the fjord",
+      "caption": "At Brattahlíð, the remains of Norse farm buildings lie beside Greenland's grazing land and fjord. Stone footings mark rooms whose turf and timber walls once sheltered farming households.",
+      "sources": [
+        "found-study-brattahlid"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide gently elevated view Brattahlid Qassiarsuk Greenland low grass-covered stone farm foundations beside deep blue fjord and bare rounded mountains, summer pasture, no standing replica church, no icebergs towering over houses.",
+      "evidence": {
+        "url": "https://whc.unesco.org/document/155724",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

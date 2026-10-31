@@ -1,0 +1,20 @@
+{
+  "view": "Intimate archaeological object study weathered ox scapula oracle bone fragments and turtle plastron on plain cloth, fine incised tiny nonlegible marks and heat cracks, warm side light, realistic bone anatomy, no huge invented readable Chinese labels.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1899,
+      "title": "Words on bone",
+      "caption": "Inscribed bones and turtle shells helped lead scholars back to the Shang capital near Anyang. The excavated oracle bones preserve questions put to ancestors and deities, bringing royal concerns into the written record.",
+      "sources": [
+        "found-study-anyang"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate archaeological object study weathered ox scapula oracle bone fragments and turtle plastron on plain cloth, fine incised tiny nonlegible marks and heat cracks, warm side light, realistic bone anatomy, no huge invented readable Chinese labels.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1114/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

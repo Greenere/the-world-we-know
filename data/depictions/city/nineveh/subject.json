@@ -1,0 +1,20 @@
+{
+  "view": "Side-lit close archaeological trench view weathered Assyrian gypsum relief panel partly exposed at Nineveh palace, shallow carved registers of horse groom and shield bearer, earth bank behind, brush and basket small foreground, no gigantic free standing Nimrud lamassu.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1847,
+      "title": "A wall comes into view",
+      "caption": "At Nineveh, excavators uncovered carved stone panels inside the buried Assyrian palaces. Scenes of people, animals and royal activity survived on walls whose buildings had long since collapsed.",
+      "sources": [
+        "found-study-nineveh"
+      ],
+      "confidence": "medium",
+      "prompt": "Side-lit close archaeological trench view weathered Assyrian gypsum relief panel partly exposed at Nineveh palace, shallow carved registers of horse groom and shield bearer, earth bank behind, brush and basket small foreground, no gigantic free standing Nimrud lamassu.",
+      "evidence": {
+        "url": "https://www.britishmuseum.org/collection/object/W_2010-6001-2",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

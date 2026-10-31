@@ -1,0 +1,20 @@
+{
+  "view": "Close side view Zhengzhou Shang surviving massive eroded rammed earth wall section, horizontal compacted soil bands visible, grass top and low excavated ground foreground, exclude modern city skyline, no brick battlements or reconstructed gate.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1950,
+      "title": "Layers in an earthen wall",
+      "caption": "The Shang city at Zhengzhou was enclosed by substantial rammed-earth walls. Their surviving sections show how repeated layers of compacted earth could form a durable boundary around an early urban centre.",
+      "sources": [
+        "found-study-zhengzhou-shang"
+      ],
+      "confidence": "medium",
+      "prompt": "Close side view Zhengzhou Shang surviving massive eroded rammed earth wall section, horizontal compacted soil bands visible, grass top and low excavated ground foreground, exclude modern city skyline, no brick battlements or reconstructed gate.",
+      "evidence": {
+        "url": "https://english.henan.gov.cn/2021/10-26/2335060.html",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

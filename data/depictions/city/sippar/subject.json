@@ -1,0 +1,20 @@
+{
+  "view": "Close overhead field-table study small rectangular Babylonian clay account tablets and one broken envelope piece from Sippar, tiny wedge impressions and worn edges on pale linen, clay dust brush edge, no invented giant world map.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1881,
+      "title": "Accounts from a temple",
+      "caption": "At Sippar, excavated clay tablets preserved the business of the temple of Shamash. Loans, payments and other records show how a religious institution also took part in the everyday economy of a Babylonian city.",
+      "sources": [
+        "found-study-sippar"
+      ],
+      "confidence": "medium",
+      "prompt": "Close overhead field-table study small rectangular Babylonian clay account tablets and one broken envelope piece from Sippar, tiny wedge impressions and worn edges on pale linen, clay dust brush edge, no invented giant world map.",
+      "evidence": {
+        "url": "https://www.britishmuseum.org/collection/object/W_1891-0509-2377",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

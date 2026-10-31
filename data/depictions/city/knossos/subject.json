@@ -1,0 +1,20 @@
+{
+  "view": "Low eye-level archaeological study row of immense weathered Minoan pithoi storage jars within low stone magazine walls at Knossos, rope-like relief bands and circular mouths in correct perspective, sunlight across open roofless masonry, no red concrete reconstructed palace.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1900,
+      "title": "Storage rooms at Knossos",
+      "caption": "The palace at Knossos contained long storage rooms as well as courts and living quarters. Large pottery jars found there help explain how goods were collected and kept within a Minoan palace.",
+      "sources": [
+        "found-study-knossos"
+      ],
+      "confidence": "medium",
+      "prompt": "Low eye-level archaeological study row of immense weathered Minoan pithoi storage jars within low stone magazine walls at Knossos, rope-like relief bands and circular mouths in correct perspective, sunlight across open roofless masonry, no red concrete reconstructed palace.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/1733/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

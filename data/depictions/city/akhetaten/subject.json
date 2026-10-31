@@ -1,0 +1,20 @@
+{
+  "view": "Wide low oblique Amarna excavated low mudbrick house walls and doorways in sandy grid, desert cliffs background and scattered carved limestone fragments foreground, no intact temples or colossal sun disk fantasy.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1887,
+      "title": "A short-lived capital",
+      "caption": "Akhetaten was built for Akhenaten and abandoned as a royal capital soon after his reign. At Amarna, foundations and broken architectural pieces allow archaeologists to trace a city whose plan was never buried beneath another major capital.",
+      "sources": [
+        "found-study-akhetaten"
+      ],
+      "confidence": "medium",
+      "prompt": "Wide low oblique Amarna excavated low mudbrick house walls and doorways in sandy grid, desert cliffs background and scattered carved limestone fragments foreground, no intact temples or colossal sun disk fantasy.",
+      "evidence": {
+        "url": "https://www.amarnaproject.com/our-work/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

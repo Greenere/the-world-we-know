@@ -1,0 +1,20 @@
+{
+  "view": "Elevated near view Adulis excavated early Christian basilica low stone foundations rectangular nave semicircular apse and column bases in dusty Eritrean plain, dry foothills distant, no standing cathedral, no sea directly against church.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1810,
+      "title": "A port's buried church",
+      "caption": "Adulis linked the Red Sea coast with the inland kingdom of Aksum. Excavated churches and imported pottery help recover the life of a port through which people, goods and religious ideas travelled.",
+      "sources": [
+        "found-study-adulis"
+      ],
+      "confidence": "medium",
+      "prompt": "Elevated near view Adulis excavated early Christian basilica low stone foundations rectangular nave semicircular apse and column bases in dusty Eritrean plain, dry foothills distant, no standing cathedral, no sea directly against church.",
+      "evidence": {
+        "url": "https://unora.unior.it/bitstream/11574/50291/1/Zazzaro2013.pdf",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

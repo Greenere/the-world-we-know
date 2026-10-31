@@ -1,0 +1,20 @@
+{
+  "view": "Intimate view into a roofless excavated Roman room at Herculaneum, faded red wall painting, charred wooden doorway fragments supported in masonry, patterned floor and deep volcanic deposit beyond, no restored palace or victims.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1738,
+      "title": "A room preserved by the eruption",
+      "caption": "At Herculaneum, volcanic deposits preserved parts of upper floors, painted walls and even carbonised wood. Excavated rooms reveal details of domestic life that usually disappear when a building decays.",
+      "sources": [
+        "found-study-herculaneum"
+      ],
+      "confidence": "medium",
+      "prompt": "Intimate view into a roofless excavated Roman room at Herculaneum, faded red wall painting, charred wooden doorway fragments supported in masonry, patterned floor and deep volcanic deposit beyond, no restored palace or victims.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/829/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

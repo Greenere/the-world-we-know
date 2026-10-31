@@ -1,0 +1,20 @@
+{
+  "view": "Close field-table study few worn Roman amphora rim and handle fragments alongside local red pottery sherds and glass beads from Pattanam, small open brick excavation soft Kerala palm background, not whole amphora cargo or definitive ancient port reconstruction.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 2007,
+      "title": "Fragments of an ocean trade",
+      "caption": "Excavations at Pattanam recovered imported pottery alongside evidence of local activity and maritime connections. The site is a candidate for ancient Muziris; the finds illuminate Indian Ocean trade even while that identification remains debated.",
+      "sources": [
+        "found-study-muziris"
+      ],
+      "confidence": "medium",
+      "prompt": "Close field-table study few worn Roman amphora rim and handle fragments alongside local red pottery sherds and glass beads from Pattanam, small open brick excavation soft Kerala palm background, not whole amphora cargo or definitive ancient port reconstruction.",
+      "evidence": {
+        "url": "https://www.keralatourism.org/muziris/historical-sites/pattanam",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

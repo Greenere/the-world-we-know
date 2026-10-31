@@ -1,0 +1,20 @@
+{
+  "view": "Low side-angle view Trowulan Bajang Ratu red-brick paduraksa gateway weathered stepped vertical roof and single narrow opening, tropical vegetation and plain earth, characteristic Javanese proportions, no Angkor stone faces or restored royal palace.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1815,
+      "title": "Brickwork of Majapahit",
+      "caption": "Trowulan preserves the remains of Majapahit's capital beneath villages and fields in East Java. Brick gateways, water structures and buried buildings help trace a city whose life extended well beyond its monumental entrances.",
+      "sources": [
+        "found-study-trowulan"
+      ],
+      "confidence": "medium",
+      "prompt": "Low side-angle view Trowulan Bajang Ratu red-brick paduraksa gateway weathered stepped vertical roof and single narrow opening, tropical vegetation and plain earth, characteristic Javanese proportions, no Angkor stone faces or restored royal palace.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/tentativelists/5466/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

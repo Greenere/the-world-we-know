@@ -1,0 +1,20 @@
+{
+  "view": "Ground-level view La Venta colossal Olmec basalt head partly surrounded by damp earth and tropical foliage, helmet-like cap broad nose heavy lips, head clearly carved stone no body, restrained weathering, no museum park plaques.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1925,
+      "title": "Stone sculpture in a wet lowland",
+      "caption": "La Venta's monuments included large basalt heads and other carved stones within a ceremonial centre. Their survival in the Gulf lowlands helped reveal the scale and distinctive sculpture of Olmec society.",
+      "sources": [
+        "found-study-la-venta"
+      ],
+      "confidence": "medium",
+      "prompt": "Ground-level view La Venta colossal Olmec basalt head partly surrounded by damp earth and tropical foliage, helmet-like cap broad nose heavy lips, head clearly carved stone no body, restrained weathering, no museum park plaques.",
+      "evidence": {
+        "url": "https://inah.gob.mx/foto-del-dia/las-esculturas-olmecas-de-la-venta",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}

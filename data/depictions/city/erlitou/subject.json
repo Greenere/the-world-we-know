@@ -1,0 +1,20 @@
+{
+  "view": "Elevated archaeological trench view Erlitou exposed rammed earth palace foundation with subtle rectangular platforms column post holes and soil sections, Henan flat farmland distance, restrained material colors, no reconstructed Xia palace or speculative bronze dragon.",
+  "eras": [
+    {
+      "id": "rediscovered",
+      "from": 1959,
+      "title": "A palace traced in earth",
+      "caption": "At Erlitou, archaeologists traced large rammed-earth foundations, roads and craft areas beneath farmland. The remains reveal an early centre of political power whose buildings were largely made from materials that did not survive above ground.",
+      "sources": [
+        "found-study-erlitou"
+      ],
+      "confidence": "medium",
+      "prompt": "Elevated archaeological trench view Erlitou exposed rammed earth palace foundation with subtle rectangular platforms column post holes and soil sections, Henan flat farmland distance, restrained material colors, no reconstructed Xia palace or speculative bronze dragon.",
+      "evidence": {
+        "url": "https://www.eltxdmuseum.com/en/",
+        "basis": "Archaeological remains and finds from the cited site reference. The era spans rediscovery onward; the scene is an interpretive study of exposed remains, not a dated first-discovery reconstruction."
+      }
+    }
+  ]
+}
