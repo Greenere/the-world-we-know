@@ -13,7 +13,10 @@
       {"year": "1540..1600", "place": "The Gold Coast", "lat": 5.5, "lon": -1.0, "from": "Lisbon", "note": "Portuguese traders bring maize to the Gulf of Guinea, where it becomes a staple of the forest kingdoms.", "source": "crosby", "confidence": "medium"},
       {"year": 1555, "place": "Gong County, Henan", "lat": 34.77, "lon": 112.97, "vp": "china", "from": "Lisbon", "note": "First written down in China in a county gazetteer, as 'imperial wheat'. Within two centuries it feeds settlers in the hills of the interior.", "source": "ho-pingti", "confidence": "medium"},
       {"year": 1579, "place": "Nagasaki", "lat": 32.75, "lon": 129.88, "vp": "japan", "from": "Lisbon", "note": "Portuguese traders bring it to Kyushu.", "confidence": "low"},
-      {"year": "1700..1750", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "from": "Gong County, Henan", "note": "Maize spreads from China into the northern hills.", "source": "seth-korea", "confidence": "low"}
+      {"year": "1700..1750", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "from": "Gong County, Henan", "note": "Maize spreads from China into the northern hills.", "source": "seth-korea", "confidence": "low"},
+      {"year": "800..1000", "place": "The American Bottom", "lat": 38.66, "lon": -90.06, "vp": "mississippian", "note": "Maize becomes the staple that feeds Cahokia and the mound towns.", "source": "pauketat-cahokia", "confidence": "medium"},
+      {"year": "900..1000", "place": "The Finger Lakes", "lat": 42.75, "lon": -76.8, "vp": "haudenosaunee", "note": "Maize is grown with beans and squash, the Three Sisters.", "source": "snow-iroquois", "confidence": "medium"},
+      {"year": "1550..1591", "place": "The kingdom of Kongo", "lat": -6.27, "lon": 14.24, "vp": "kongo", "note": "Lopes describes maize in Kongo as 'Mazza Manputo', the grain of Portugal.", "source": "pigafetta-lopes", "confidence": "medium"}
     ]
   },
   {
@@ -74,11 +77,13 @@
       {"year": 1560, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Lisbon", "note": "Jean Nicot, the French ambassador in Lisbon, sends tobacco to Catherine de' Medici as a cure for headaches. Nicotine is named after him."},
       {"year": 1585, "place": "Roanoke", "lat": 35.9, "lon": -75.7, "vp": "britain", "note": "Thomas Harriot learns to smoke from the Algonquian people of Roanoke and praises it in his Briefe and True Report."},
       {"year": "1590..1605", "place": "Nagasaki", "lat": 32.75, "lon": 129.88, "vp": "japan", "from": "Lisbon", "note": "Portuguese sailors bring tobacco; within a few years the shogunate tries, and fails, to ban it.", "confidence": "medium"},
-      {"year": "1600..1610", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "from": "Lisbon", "note": "Tobacco reaches the Ottoman capital. In 1633 Murad IV bans smoking on pain of death.", "confidence": "medium"},
+      {"year": "1600..1610", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Lisbon", "note": "Tobacco reaches the Ottoman capital. In 1633 Murad IV bans smoking on pain of death.", "confidence": "medium"},
       {"year": "1600..1620", "place": "Moscow", "lat": 55.75, "lon": 37.62, "vp": "russia", "from": "Roanoke", "note": "English merchants bring it to Muscovy. Tsar Mikhail bans it in 1634; Peter the Great later sells the monopoly to an English lord.", "confidence": "medium"},
       {"year": "1600..1620", "place": "Zhangzhou", "lat": 24.51, "lon": 117.65, "vp": "china", "from": "Lisbon", "note": "Tobacco reaches Fujian from Spanish Manila. The Chongzhen emperor bans it in 1639; his soldiers in the north smoke it against the cold.", "confidence": "medium"},
       {"year": "1616..1618", "place": "Dongnae", "lat": 35.2, "lon": 129.08, "vp": "korea", "from": "Nagasaki", "note": "Tobacco comes from Japan through the trading post at Busan, and within years everyone smokes.", "source": "seth-korea", "confidence": "medium"},
-      {"year": "1640..1660", "place": "Khalkha", "lat": 47.9, "lon": 106.9, "vp": "steppe", "note": "Tobacco reaches the Mongols through Chinese and Russian traders.", "source": "atwood", "confidence": "low"}
+      {"year": "1640..1660", "place": "Khalkha", "lat": 47.9, "lon": 106.9, "vp": "steppe", "note": "Tobacco reaches the Mongols through Chinese and Russian traders.", "source": "atwood", "confidence": "low"},
+      {"year": "-300..0", "place": "The Ohio valley", "lat": 39.37, "lon": -83.0, "vp": "mississippian", "note": "Hopewell pipes carved in stone, for tobacco smoked in ceremony.", "source": "carr-hopewell", "confidence": "low"},
+      {"year": "1000..1300", "place": "Iroquoia", "lat": 42.9, "lon": -76.3, "vp": "haudenosaunee", "note": "Tobacco, burned to carry words to the Creator.", "source": "snow-iroquois", "confidence": "medium"}
     ]
   },
   {
@@ -100,7 +105,7 @@
   {
     "id": "turkey", "kind": "animal", "name": "The turkey", "native": "huexolotl",
     "origin": {"year": "-300..100", "place": "Southern Mexico", "lat": 17.5, "lon": -97.0, "culture": "Farmers of Mesoamerica"},
-    "home": ["mexica"],
+    "home": ["mexica", "mississippian", "haudenosaunee"],
     "summary": "Domesticated in Mexico for its meat and feathers. In Europe and Asia nobody knew where it came from: the English named it after Turkey, the French called it the bird of the Indies, and the Turks the bird of India.",
     "source": "schorger", "confidence": "medium",
     "spread": [
@@ -108,7 +113,7 @@
       {"year": 1511, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "note": "King Ferdinand orders every ship from the Indies to bring ten turkeys."},
       {"year": "1524..1541", "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "Turkeys reach England, named for the Turkish merchants who were thought to have brought them."},
       {"year": "1534..1549", "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Seville", "note": "The French call it the dinde, the bird d'Inde, of the Indies.", "confidence": "low"},
-      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "from": "Seville", "note": "The Ottomans call it hindi, the Indian bird.", "confidence": "low"}
+      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Seville", "note": "The Ottomans call it hindi, the Indian bird.", "confidence": "low"}
     ]
   },
   {
@@ -139,7 +144,7 @@
     "spread": [
       {"year": 1450, "place": "Mocha", "lat": 13.32, "lon": 43.25, "vp": "arabia", "note": "The Sufis of Yemen drink coffee for their night devotions. The port of Mocha gives its name to the trade."},
       {"year": "1500..1510", "place": "Cairo", "lat": 30.04, "lon": 31.24, "vp": "egypt", "from": "Mocha", "note": "Yemeni students drink coffee at al-Azhar. In 1511 the governor of Mecca tries to ban it."},
-      {"year": 1554, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "from": "Cairo", "note": "The first coffeehouses open in Istanbul."},
+      {"year": 1554, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Cairo", "note": "The first coffeehouses open in Istanbul."},
       {"year": 1615, "place": "Venice", "lat": 45.44, "lon": 12.33, "vp": "europe", "from": "Istanbul", "note": "Venetian merchants bring coffee from the Ottoman ports.", "confidence": "medium"},
       {"year": 1652, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Istanbul", "note": "Pasqua Rosée, a servant from Smyrna, opens London's first coffeehouse."},
       {"year": 1669, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Istanbul", "note": "Süleyman Ağa, the sultan's envoy, serves coffee to Paris society."},
@@ -185,7 +190,7 @@
   {
     "id": "horse", "kind": "animal", "name": "The horse",
     "origin": {"year": "-2200..-2000", "place": "The Volga–Don steppe", "lat": 48.5, "lon": 44.5, "culture": "Herders of the western steppe"},
-    "home": ["russia", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "arabia", "maghreb", "sahel", "ethiopia"],
+    "home": ["russia", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "arabia", "maghreb", "sahel", "ethiopia", "turks"],
     "summary": "Herders of the western steppe breed the horse that every domestic horse descends from. Within a few centuries it spreads across Eurasia, pulling chariots and later carrying riders. In the Americas, where horses had died out ten thousand years before, Europeans brought them back.",
     "source": "librado-2021", "confidence": "high",
     "spread": [
@@ -201,7 +206,8 @@
       {"year": 1519, "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "vp": "mexica", "from": "Hispaniola", "via": "cortes", "note": "The Mexica see horses for the first time; Cortés's sixteen horses count for more in battle than their numbers.", "source": "bernal-diaz"},
       {"year": 1525, "place": "Nojpetén", "lat": 16.93, "lon": -89.89, "vp": "maya", "from": "Tenochtitlan", "note": "Cortés leaves a lame horse with the Itza king. It dies, and the Itza make a stone statue of it, which friars find and smash in 1618.", "source": "jones-itza", "confidence": "high"},
       {"year": 1532, "place": "Cajamarca", "lat": -7.16, "lon": -78.51, "vp": "inca", "from": "Hispaniola", "via": "pizarro", "note": "Pizarro's riders charge at Cajamarca, and the Inca meet the horse.", "source": "xerez"},
-      {"year": "1680..1750", "place": "The Great Plains", "lat": 40.0, "lon": -100.0, "from": "Tenochtitlan", "note": "Horses spread north from New Mexico after the Pueblo Revolt; the Comanche, Lakota and Cheyenne become horse peoples.", "source": "crosby", "confidence": "medium"}
+      {"year": "1680..1750", "place": "The Great Plains", "lat": 40.0, "lon": -100.0, "from": "Tenochtitlan", "note": "Horses spread north from New Mexico after the Pueblo Revolt; the Comanche, Lakota and Cheyenne become horse peoples.", "source": "crosby", "confidence": "medium"},
+      {"year": 1540, "place": "The Mississippian chiefdoms", "lat": 34.5, "lon": -85.5, "vp": "mississippian", "note": "De Soto's army brings some two hundred horses through the Southeast.", "source": "hudson-desoto", "confidence": "high"}
     ]
   },
   {
@@ -287,7 +293,7 @@
     "summary": "Wild tulips grow in the mountains of Central Asia. Persian poets and Ottoman gardeners made it the flower of paradise, and in Holland in 1637 a single bulb could cost as much as a house.",
     "source": "pavord", "confidence": "medium",
     "spread": [
-      {"year": "1450..1500", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "note": "The gardens of the Ottoman sultans fill with tulips."},
+      {"year": "1450..1500", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "note": "The gardens of the Ottoman sultans fill with tulips."},
       {"year": 1554, "place": "Edirne", "lat": 41.68, "lon": 26.56, "vp": "germany", "from": "Istanbul", "note": "Ogier Ghiselin de Busbecq, the Habsburg envoy, sees tulips in Turkish gardens and sends bulbs home."},
       {"year": 1593, "place": "Leiden", "lat": 52.16, "lon": 4.49, "from": "Edirne", "note": "Carolus Clusius plants tulips in Leiden's botanical garden."},
       {"year": 1637, "place": "Haarlem", "lat": 52.38, "lon": 4.64, "from": "Leiden", "note": "Tulip mania peaks and crashes."}
@@ -310,7 +316,7 @@
   {
     "id": "wheat", "kind": "plant", "name": "Wheat",
     "origin": {"year": "-9500..-8500", "place": "The Fertile Crescent", "lat": 37.5, "lon": 39.5, "culture": "Farmers of the Fertile Crescent"},
-    "home": ["egypt", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "india", "arabia", "maghreb", "ethiopia"],
+    "home": ["egypt", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "india", "arabia", "maghreb", "ethiopia", "turks"],
     "summary": "Einkorn and emmer, the first wheats, are domesticated in the hills of the Fertile Crescent, and bread wheat follows. Wheat travels with the first farmers into Europe, North Africa and India, and east along the steppe to China.",
     "source": "zohary-hopf", "confidence": "high",
     "spread": [
@@ -332,7 +338,8 @@
       {"year": "-326", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "greece", "from": "The Ganges plain", "via": "alexander", "note": "Alexander's men see a tree whose fruit the Indian sages live on; Pliny calls it pala.", "source": "pliny"},
       {"year": "500..1000", "place": "The Swahili coast", "lat": -6.0, "lon": 39.3, "vp": "swahili", "note": "Bananas reach East Africa, probably with the Austronesian sailors who settled Madagascar, and become a staple of the great lakes.", "confidence": "low"},
       {"year": "1450..1500", "place": "The Canary Islands", "lat": 28.1, "lon": -15.42, "vp": "iberia", "from": "The Swahili coast", "note": "Portuguese and Spanish settlers bring bananas from West Africa to the Canaries.", "confidence": "medium"},
-      {"year": 1516, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "The Canary Islands", "note": "The friar Tomás de Berlanga brings banana roots from Gran Canaria to Santo Domingo.", "confidence": "medium"}
+      {"year": 1516, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "The Canary Islands", "note": "The friar Tomás de Berlanga brings banana roots from Gran Canaria to Santo Domingo.", "confidence": "medium"},
+      {"year": "0..500", "place": "The lower Congo", "lat": -5.6, "lon": 14.2, "vp": "kongo", "note": "Bananas, carried across Africa from the Indian Ocean, become a staple of the forest edge.", "source": "vansina-paths", "confidence": "low"}
     ]
   },
   {
@@ -343,7 +350,7 @@
     "source": "wu-2018", "confidence": "medium",
     "spread": [
       {"year": "1520..1550", "place": "Lisbon", "lat": 38.7, "lon": -9.14, "vp": "iberia", "note": "Portuguese ships bring sweet oranges from China. In Greek the fruit becomes portokali, in Turkish portakal, in Arabic burtuqal.", "confidence": "medium"},
-      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "islam", "from": "Lisbon", "note": "The Ottomans call the sweet orange portakal, the Portuguese fruit.", "confidence": "low"},
+      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Lisbon", "note": "The Ottomans call the sweet orange portakal, the Portuguese fruit.", "confidence": "low"},
       {"year": 1565, "place": "St Augustine", "lat": 29.9, "lon": -81.31, "from": "Lisbon", "note": "Spanish settlers plant oranges in Florida.", "confidence": "medium"},
       {"year": 1684, "place": "Versailles", "lat": 48.8, "lon": 2.12, "vp": "france", "from": "Lisbon", "note": "Louis XIV's great orangery at Versailles houses more than a thousand orange trees in tubs.", "confidence": "medium"}
     ]
@@ -356,7 +363,7 @@
     "source": "jones-manioc", "confidence": "medium",
     "spread": [
       {"year": 1500, "place": "Porto Seguro", "lat": -16.45, "lon": -39.07, "vp": "iberia", "via": "cabral", "note": "Pero Vaz de Caminha writes of the root the Tupi make their bread from.", "source": "caminha"},
-      {"year": "1550..1600", "place": "The kingdom of Kongo", "lat": -6.0, "lon": 14.5, "from": "Porto Seguro", "note": "Portuguese ships bring cassava from Brazil to the Kongo coast, where it becomes the staple of central Africa."},
+      {"year": "1550..1600", "place": "The kingdom of Kongo", "lat": -6.0, "lon": 14.5, "vp": "kongo", "from": "Porto Seguro", "note": "Portuguese ships bring cassava from Brazil to the Kongo coast, where it becomes the staple of central Africa."},
       {"year": "1750..1800", "place": "Zanzibar", "lat": -6.16, "lon": 39.19, "vp": "swahili", "from": "The kingdom of Kongo", "note": "Cassava is grown on the Swahili coast.", "confidence": "low"}
     ]
   },
@@ -467,7 +474,7 @@
   {
     "id": "elephant", "kind": "animal", "name": "The elephant",
     "origin": {"year": "-2500", "place": "India", "lat": 22.5, "lon": 79.0, "culture": "Peoples of South Asia"},
-    "home": ["india", "nusantara", "china", "swahili", "ethiopia", "sahel", "zimbabwe", "persia"],
+    "home": ["india", "nusantara", "china", "swahili", "ethiopia", "sahel", "zimbabwe", "persia", "kongo"],
     "summary": "Tamed in India for work and war, and hunted in Africa for ivory. Far from home, a single elephant could be a king's most famous gift.",
     "source": "bedini", "confidence": "high",
     "spread": [

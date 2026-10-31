@@ -1,0 +1,25 @@
+{
+  "id": "mehmed-celebi",
+  "name": "Yirmisekiz Mehmed Çelebi's embassy to Paris",
+  "traveler": "Yirmisekiz Mehmed Çelebi, ambassador of Ahmed III",
+  "years": "1720–1721",
+  "kind": "envoy",
+  "viewpoint": "turks",
+  "summary": "The first Ottoman ambassador to stay long in Paris sails to France with eighty attendants, to renew the alliance and, his instructions say, to study what in France is worth learning. Plague in Provence sends him the long way round, by the Canal du Midi and Bordeaux. His Sefâretnâme describes Versailles, the Observatory and the Gobelins, and helped start the Tulip Age's taste for French gardens.",
+  "source": "mehmed-sefaretname",
+  "confidence": "high",
+  "stops": [
+    {"year": 1720, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "note": "He sails on a French ship.", "date": "October 1720", "city": "constantinople"},
+    {"year": 1720, "place": "Toulon", "lat": 43.12, "lon": 5.93, "note": "Forty days of quarantine; Marseille is in the grip of the plague.", "date": "November 1720", "by": "sea"},
+    {"year": 1721, "place": "Toulouse", "lat": 43.6, "lon": 1.44, "note": "West by the Canal du Midi, around the plague.", "by": "river", "confidence": "medium"},
+    {"year": 1721, "place": "Bordeaux", "lat": 44.84, "lon": -0.58, "note": "Down the Garonne to the Atlantic side of France.", "by": "river"},
+    {"year": 1721, "place": "Paris", "lat": 48.86, "lon": 2.35, "note": "A grand entry, an audience with the eleven-year-old Louis XV, and five months of gardens, theatres and the Observatory.", "date": "March 1721", "by": "land", "city": "paris"},
+    {"year": 1721, "place": "Lyon", "lat": 45.76, "lon": 4.84, "note": "Home by the Rhône valley.", "by": "land", "city": "lyon"},
+    {"year": 1721, "place": "Sète", "lat": 43.4, "lon": 3.7, "note": "Down the Rhône to the sea, and a ship for home.", "by": "river"},
+    {"year": 1721, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "note": "He gives the grand vizier his account, and French gardens rise on the Bosphorus.", "date": "October 1721", "by": "sea", "city": "constantinople"}
+  ],
+  "informs": [
+    {"region": "gaul", "level": 4, "homeKnows": 1721, "confidence": "high", "note": "France, from the Midi to Versailles"},
+    {"region": "med-west", "level": 4, "homeKnows": 1721, "confidence": "high"}
+  ]
+}

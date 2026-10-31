@@ -1,0 +1,29 @@
+{
+  "id": "ertugrul",
+  "name": "The frigate Ertuğrul to Japan",
+  "traveler": "Osman Pasha and the crew of the Ertuğrul",
+  "years": "1889–1891",
+  "kind": "envoy",
+  "viewpoint": "turks",
+  "summary": "Sultan Abdülhamid II sends an old wooden frigate to return the visit of a Japanese prince, carrying the Order of Osmanié to the Meiji emperor. The voyage takes eleven months. On the way home a typhoon drives the ship onto the rocks off Kushimoto: more than five hundred men drown. The villagers of Ōshima save sixty-nine, and two Japanese warships carry them home.",
+  "source": "esenbel-ertugrul",
+  "confidence": "high",
+  "stops": [
+    {"year": 1889, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "note": "About six hundred men sail under Osman Pasha.", "date": "14 July 1889", "city": "constantinople"},
+    {"year": 1889, "place": "Suez", "lat": 29.97, "lon": 32.55, "note": "Through the canal to the Red Sea.", "by": "sea"},
+    {"year": 1889, "place": "Aden", "lat": 12.79, "lon": 45.02, "note": "Into the Indian Ocean.", "by": "sea", "city": "aden"},
+    {"year": 1889, "place": "Colombo", "lat": 6.93, "lon": 79.85, "note": "The old ship is taking water at the bow.", "by": "sea", "city": "colombo"},
+    {"year": 1890, "place": "Singapore", "lat": 1.29, "lon": 103.85, "note": "Months of repairs; she sails on 22 March.", "by": "sea", "city": "singapore"},
+    {"year": 1890, "place": "Saigon", "lat": 10.78, "lon": 106.7, "note": "About ten days in French Cochinchina.", "by": "sea"},
+    {"year": 1890, "place": "Yokohama", "lat": 35.44, "lon": 139.64, "note": "Osman Pasha presents the Order to the Meiji emperor in Tokyo.", "date": "7 June 1890", "by": "sea"},
+    {"year": 1890, "place": "Kushimoto", "lat": 33.47, "lon": 135.85, "note": "Sailing home into a typhoon, she breaks up on the rocks of Kashinozaki. The people of Ōshima carry the survivors from the sea.", "date": "16 September 1890", "by": "sea"},
+    {"year": 1891, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "note": "The sixty-nine survivors come home on the Japanese warships Hiei and Kongō.", "date": "January 1891", "by": "sea", "city": "constantinople"}
+  ],
+  "informs": [
+    {"region": "japan", "level": 3, "homeKnows": 1891, "confidence": "high", "note": "Meiji Japan, and the kindness of the people of Ōshima"},
+    {"region": "malacca-strait", "level": 3, "homeKnows": 1891, "confidence": "high"},
+    {"region": "south-china-sea", "level": 3, "homeKnows": 1891, "confidence": "high"},
+    {"region": "annam", "level": 2, "homeKnows": 1891, "confidence": "high"},
+    {"region": "sri-lanka", "level": 3, "homeKnows": 1891, "confidence": "high"}
+  ]
+}

@@ -12,11 +12,11 @@
 
 ## What's in it
 
-- **30 viewpoints.** Each has its own history of what it knew, from 2000 BCE to today:
+- **34 viewpoints.** Each has its own history of what it knew, from 2000 BCE to today:
   - **China, Korea, Japan, the Mongolian steppe, India, Nusantara.**
-  - **Persia, Arabia, Egypt, the Maghreb.**
-  - **The Sahel, Ethiopia, the Swahili coast, Southern Africa.**
-  - **The Mexica, the Maya, the Inca, the Inuit, Polynesia.**
+  - **Persia, Arabia, Egypt, the Maghreb, the Turks.**
+  - **The Sahel, Ethiopia, the Swahili coast, Kongo, Southern Africa.**
+  - **The Haudenosaunee, the Mississippian world, the Mexica, the Maya, the Inca, the Inuit, Polynesia.**
   - **Greece, Rome, Iberia, France, Britain, Germany, the Norse, Russia.**
   - **Two knowledge communities,** Europe and the Islamic world. Each shares what its members knew.
   - **Humanity,** which traces where people first arrived, back 70,000 years.

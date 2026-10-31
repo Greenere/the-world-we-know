@@ -1,0 +1,23 @@
+{
+  "id": "tomochichi",
+  "name": "Tomochichi in London",
+  "traveler": "Tomochichi, mico of the Yamacraw, with Senauki and Tooanahowi",
+  "years": "1734",
+  "kind": "envoy",
+  "viewpoint": "mississippian",
+  "summary": "The elderly Yamacraw leader, a Creek exile who had welcomed Oglethorpe's colonists at Savannah, sails to England with his wife, his nephew and five Creek headmen. He meets George II at Kensington, the Archbishop of Canterbury and the boys of Eton, and asks for fair trade and a school for Creek children.",
+  "source": "ghs-tomochichi",
+  "confidence": "high",
+  "stops": [
+    {"year": 1734, "place": "Yamacraw Bluff", "lat": 32.08, "lon": -81.09, "note": "They sail with Oglethorpe on the Aldborough.", "date": "23 March 1734"},
+    {"year": 1734, "place": "London", "lat": 51.51, "lon": -0.12, "note": "June: lodged at the Georgia Office. The Trustees receive them, and Verelst paints the delegation.", "by": "sea", "city": "london"},
+    {"year": 1734, "place": "Kensington", "lat": 51.5, "lon": -0.19, "note": "George II receives them at Kensington Palace; Tomochichi speaks of friendship and peace.", "date": "1 August 1734", "by": "land"},
+    {"year": 1734, "place": "Eton", "lat": 51.49, "lon": -0.61, "note": "The boys of Eton College are given a holiday in his honour.", "by": "land"},
+    {"year": 1734, "place": "Yamacraw Bluff", "lat": 32.08, "lon": -81.09, "note": "Home on the Prince of Wales.", "date": "27 December 1734", "by": "sea"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 3, "homeKnows": 1735, "confidence": "high", "note": "London and the king, from Tomochichi's own account"},
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1735, "confidence": "high"},
+    {"region": "north-atlantic-east", "level": 1, "homeKnows": 1735, "confidence": "high"}
+  ]
+}

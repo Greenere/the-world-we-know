@@ -38,8 +38,8 @@ from shapely.ops import unary_union
 RES = 4
 ETOPO_URL = "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO5/TOPO/ETOPO5/ETOPO5.DAT"
 # Bump VERSION when the routing changes (it keys the route cache); GRID_VERSION only when the grid does.
-VERSION = "routes-8"
-GRID_VERSION = "routes-3"
+VERSION = "routes-10"
+GRID_VERSION = "routes-4"
 
 ARCTIC_ICE_LAT = 69.0  # sea north of this is pack ice for routing (the Bering Strait, at 66°, stays open)
 SEA_KINDS = {"sailor", "fleet", "merchant route", "group voyage", "deep dive"}
@@ -55,6 +55,8 @@ PASSAGES = [
     ("Øresund", [(12.65, 55.55), (12.7, 56.0), (12.55, 56.15)], None),
     ("Kerch Strait", [(36.55, 45.05), (36.6, 45.4)], None),
     ("Bab-el-Mandeb", [(43.15, 12.35), (43.45, 12.7)], None),
+    # The gulf the grid closes: without it the canal would end in a dead end at Suez.
+    ("Gulf of Suez", [(32.55, 29.9), (32.65, 29.4), (33.0, 28.8), (33.5, 28.0), (33.9, 27.6)], None),
     ("Strait of Hormuz", [(56.1, 26.3), (56.6, 26.6)], None),
     ("Strait of Dover", [(1.3, 50.95), (1.65, 51.1)], None),
     ("Strait of Bonifacio", [(9.0, 41.35), (9.4, 41.35)], None),

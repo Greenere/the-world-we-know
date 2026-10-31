@@ -1080,3 +1080,12 @@ city,versailles,*,Palace of Versailles,,,,
 city,sydney-opera-house,*,Sydney Opera House,,,,
 city,golden-gate-bridge,*,Golden Gate Bridge,,,,
 city,big-ben,*,Big Ben,,,,
+
+# ── What the Haudenosaunee and the Turks called places ──
+city,vienna,turks,Beç,بچ,,,inalcik-classical
+city,buda,turks,Budin,بودين,,,inalcik-classical
+city,venice,turks,Venedik,ونديك,,,inalcik-classical
+city,jerusalem,turks,Kudüs,قدس,,,inalcik-classical
+city,thessaloniki,turks,Selanik,سلانيك,1430,,inalcik-classical
+city,cairo,turks,Mısır,مصر,1517,,inalcik-classical
+city,montreal,haudenosaunee,Tiohtià:ke,,,,snow-iroquois

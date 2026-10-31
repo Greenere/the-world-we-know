@@ -3518,10 +3518,10 @@ kbd {
   /* Centred with `translate`, so the drop-in animation's transform doesn't pull it sideways. */
   translate: -50% 0;
   z-index: 20;
-  width: min(780px, calc(100vw - 32px));
-  /* Three columns of whole groups; the panel stops above the timeline. */
+  width: min(1030px, calc(100vw - 32px));
+  /* Four columns of whole groups; the panel stops above the timeline. */
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0 20px;
   align-items: start;
   max-height: calc(100vh - var(--top-right, 80px) - var(--tl-h) - 3 * var(--gutter));
@@ -3590,6 +3590,13 @@ kbd {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   overflow: hidden;
+}
+
+/* Short of room for four, the columns wrap to three. */
+@media (max-width: 1100px) {
+  .vp-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {

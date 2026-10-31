@@ -3132,3 +3132,108 @@ inca,asia,1615,1,medium,guaman-poma,
 inca,iberia,1810,4,high,cadiz-cortes,Dionisio Inca Yupanqui sits in the Cortes of Cádiz
 nusantara,anatolia,1566,3,high,reid,Aceh's envoys to the Ottoman sultan
 nusantara,arafura-timor,1720,3,medium,macknight-1976,"Marege', the trepang coast"
+
+# ═══ Kongo ═══
+kongo,angola,-2000,2,low,vansina-paths,Foragers of the lower Congo savannas
+kongo,congo,-2000,1,low,vansina-paths,
+kongo,angola,-400,3,low,vansina-paths,Bantu-speaking farmers settle the lower Congo and work iron
+kongo,congo,-400,2,low,vansina-paths,The forest upriver from the Malebo Pool
+kongo,south-atlantic,-400,1,low,vansina-paths,
+kongo,angola,1390,4,medium,thornton-wca,"Mbanza Kongo and its provinces, from the river to the Loje"
+kongo,congo,1390,2,medium,thornton-wca,The Tio kingdom beyond the Malebo Pool
+kongo,iberia,1483,1,high,thornton-wca,Strangers from the sea at the river's mouth
+kongo,iberia,1485,2,high,thornton-wca,Kongo nobles come home from Lisbon
+kongo,south-atlantic,1485,2,high,thornton-wca,The sea road to Portugal
+kongo,north-atlantic-east,1485,2,high,thornton-wca,
+kongo,guinea-coast,1500,2,high,hilton-kongo,São Tomé and its sugar planters
+kongo,iberia,1508,3,high,brasio-mma,Afonso's sons and nephews study in Lisbon
+kongo,italy,1513,2,medium,thornton-wca,Afonso's embassy to Pope Leo X
+kongo,levant,1520,1,medium,hilton-kongo,Jerusalem in the priests' teaching
+kongo,congo,1550,3,medium,thornton-wca,The great market at the Malebo Pool
+kongo,brazil-coast,1580,2,medium,heywood-thornton,Kongolese captives carried to Brazil
+kongo,caribbean,1600,1,medium,heywood-thornton,
+kongo,germania,1642,2,high,beckx-castro,Envoys to the Dutch Republic
+kongo,brazil-coast,1642,3,high,thornton-wca,Envoys at Dutch Recife
+kongo,britain,1700,2,medium,thornton-wca,English ships at Soyo and Cabinda
+kongo,gaul,1750,2,medium,thornton-wca,French slavers at Loango and Cabinda
+
+# ═══ Mississippian ═══
+mississippian,mississippi,-2000,3,low,gibson-poverty,Poverty Point's earthworks on the lower Mississippi
+mississippian,eastern-woodlands,-2000,2,low,gibson-poverty,
+mississippian,gulf-of-mexico,-2000,1,low,gibson-poverty,
+mississippian,eastern-woodlands,-1500,3,low,gibson-poverty,"Soapstone from the Appalachians, chert from the Ohio"
+mississippian,canadian-shield,-1500,1,low,gibson-poverty,Copper from the north
+mississippian,eastern-woodlands,-100,4,medium,carr-hopewell,Hopewell earthworks from the Ohio to the Illinois
+mississippian,canadian-shield,-100,1,medium,carr-hopewell,Copper from Lake Superior
+mississippian,gulf-of-mexico,-100,2,medium,carr-hopewell,Shells and sharks' teeth from the Gulf
+mississippian,north-america-west,-100,1,medium,carr-hopewell,Obsidian from the Yellowstone country
+mississippian,great-plains,-100,1,low,carr-hopewell,
+mississippian,mississippi,1050,4,high,pauketat-cahokia,Cahokia and the towns of the American Bottom
+mississippian,great-plains,1050,2,medium,pauketat-cahokia,Bison hides and Plains trade
+mississippian,gulf-of-mexico,1050,3,medium,pauketat-cahokia,Lightning whelks from the Gulf coast
+mississippian,canadian-shield,1050,1,medium,pauketat-cahokia,
+mississippian,mexico,1300,1,low,brown-spiro,Obsidian from the Valley of Mexico at Spiro
+mississippian,california,1300,1,low,brown-spiro,Shell beads from the Gulf of California
+mississippian,iberia,1540,1,high,hudson-desoto,"Strangers from beyond the sea, with horses and iron"
+mississippian,caribbean,1540,1,medium,hudson-desoto,"Cuba, where de Soto sailed from"
+mississippian,britain,1670,2,high,gallay-slave,English traders from Charles Town
+mississippian,caribbean,1700,2,medium,gallay-slave,Captives sold to the sugar islands
+mississippian,gaul,1702,2,high,ethridge-creek,The French at Mobile and New Orleans
+mississippian,great-plains,1836,4,high,green-removal,Removal to Indian Territory
+
+# ═══ Haudenosaunee ═══
+haudenosaunee,eastern-woodlands,-2000,2,low,snow-iroquois,Hunters and fishers of the northern woods
+haudenosaunee,canada-east,-2000,1,low,snow-iroquois,
+haudenosaunee,eastern-woodlands,1000,3,medium,snow-iroquois,"Iroquoian farmers: maize, beans and squash"
+haudenosaunee,canada-east,1000,2,medium,snow-iroquois,The St Lawrence Iroquoians downriver
+haudenosaunee,canadian-shield,1000,1,low,snow-iroquois,
+haudenosaunee,eastern-woodlands,1450,4,medium,snow-iroquois,"The League, from the Hudson to the Genesee"
+haudenosaunee,canada-east,1450,3,medium,snow-iroquois,
+haudenosaunee,north-atlantic-west,1450,1,low,snow-iroquois,
+haudenosaunee,gaul,1609,2,high,richter-ordeal,Champlain's French at Lake Champlain
+haudenosaunee,germania,1614,2,high,richter-ordeal,Dutch traders at Fort Orange
+haudenosaunee,canadian-shield,1649,1,high,richter-ordeal,War parties north of the lakes
+haudenosaunee,britain,1664,2,high,richter-ordeal,The English take New Netherland
+haudenosaunee,mississippi,1680,2,high,richter-ordeal,War parties reach the Illinois country
+haudenosaunee,gaul,1689,3,high,richter-ordeal,Captives sent to the French king's galleys come home
+haudenosaunee,eastern-woodlands,1722,4,high,richter-ordeal,The Tuscarora come north from Carolina
+haudenosaunee,great-plains,1800,1,low,kelsay-brant,
+
+# ═══ Turks ═══
+turks,zhetysu,-2000,2,low,golden-turkic,Herders of the Altai and the Tian Shan
+turks,mongolia,-2000,1,low,golden-turkic,
+turks,kazakh-steppe,-2000,2,low,golden-turkic,
+turks,kazakh-steppe,766,4,medium,golden-turkic,The Oghuz on the Syr Darya
+turks,transoxiana,766,3,medium,golden-turkic,
+turks,caspian,766,3,medium,golden-turkic,
+turks,lower-volga,766,2,medium,golden-turkic,The Khazars on the Volga
+turks,persia,960,2,medium,peacock-seljuk,Oghuz warriors in the service of Persian princes
+turks,persia,1040,4,high,peacock-seljuk,The Seljuks take Khorasan and Iran
+turks,anatolia,1071,3,high,peacock-seljuk,"Manzikert, and the road into Anatolia"
+turks,anatolia,1200,4,high,peacock-seljuk,The Seljuk sultanate of Rum
+turks,balkans,1361,4,high,inalcik-classical,"Rumeli, from Edirne to the Danube"
+turks,black-sea,1475,4,high,inalcik-classical,The Black Sea becomes an Ottoman lake
+turks,pontic-steppe,1475,3,high,inalcik-classical,The Crimean khans become vassals
+turks,italy,1480,3,high,inalcik-classical,Otranto is taken
+turks,caribbean,1513,2,high,mcintosh-piri,"The Antilles, from Columbus's own chart"
+turks,brazil-coast,1513,2,high,mcintosh-piri,
+turks,south-atlantic,1513,2,high,mcintosh-piri,
+turks,north-atlantic-west,1513,2,high,mcintosh-piri,
+turks,egypt,1517,4,high,inalcik-classical,
+turks,red-sea,1517,4,high,casale-ottoman,A fleet at Suez
+turks,alps-danube,1526,4,high,inalcik-classical,Mohács; Buda becomes an Ottoman city
+turks,germania,1529,2,high,inalcik-classical,The siege of Vienna
+turks,med-west,1534,4,high,inalcik-classical,Hayreddin Barbarossa's fleet
+turks,gaul,1543,3,high,inalcik-classical,The fleet winters at Toulon
+turks,arabian-sea,1538,3,high,casale-ottoman,The fleet sails for Diu
+turks,west-india-coast,1538,3,high,casale-ottoman,
+turks,persian-gulf,1546,3,high,casale-ottoman,Basra becomes an Ottoman port
+turks,horn,1557,3,high,casale-ottoman,Massawa and the province of Habesh
+turks,sumatra,1567,2,high,casale-ottoman,Gunners and ships for Aceh
+turks,malacca-strait,1567,2,high,casale-ottoman,
+turks,lower-volga,1569,3,high,inalcik-classical,The Astrakhan campaign and the Don–Volga canal
+turks,mexico,1580,2,medium,goodrich-west-indies,The History of the West Indies tells of Mexico
+turks,peru,1580,2,medium,goodrich-west-indies,
+turks,east-africa-coast,1585,3,high,casale-ottoman,Mir Ali Beg's voyages to the Swahili coast
+turks,north-america,1655,2,high,hagen-katib,Katib Çelebi translates the Atlas Minor
+turks,south-america,1655,2,high,hagen-katib,

@@ -1,0 +1,25 @@
+{
+  "id": "nevunda",
+  "name": "Antonio Manuel ne Vunda's embassy to Rome",
+  "traveler": "Antonio Manuel ne Vunda, envoy of Álvaro II of Kongo",
+  "years": "1604–1608",
+  "kind": "envoy",
+  "viewpoint": "kongo",
+  "summary": "King Álvaro II sends his kinsman to the pope, to ask for priests and a bishop answerable to Rome rather than to Portugal. The journey takes more than three years, by way of Brazil, Lisbon and Madrid. He reaches Rome sick in January 1608 and dies days later; Paul V buries him in Santa Maria Maggiore, where his bust still stands.",
+  "source": "nevunda-bust",
+  "confidence": "medium",
+  "stops": [
+    {"year": 1604, "place": "Mbanza Kongo", "lat": -6.27, "lon": 14.24, "note": "Álvaro II names him ambassador to the Holy See.", "city": "mbanza-kongo"},
+    {"year": 1604, "place": "Luanda", "lat": -8.81, "lon": 13.23, "note": "The Portuguese port, where he takes ship.", "by": "land", "city": "luanda"},
+    {"year": 1605, "place": "Bahia", "lat": -12.97, "lon": -38.51, "note": "A long halt in Brazil on the way north.", "by": "sea", "city": "salvador", "source": "macedo-nevunda", "confidence": "low"},
+    {"year": 1605, "place": "Lisbon", "lat": 38.71, "lon": -9.14, "note": "Portugal at last, late in 1605, after a troubled crossing.", "by": "sea", "city": "lisbon"},
+    {"year": 1606, "place": "Madrid", "lat": 40.42, "lon": -3.7, "note": "At the court of Philip III, who rules Portugal too.", "by": "land", "city": "madrid"},
+    {"year": 1608, "place": "Rome", "lat": 41.9, "lon": 12.5, "note": "Lodged in the Vatican, he dies two days after arriving. The pope visits him, and orders a state funeral.", "date": "January 1608", "by": "sea", "city": "rome"}
+  ],
+  "informs": [
+    {"region": "italy", "level": 3, "homeKnows": 1610, "confidence": "medium", "note": "Rome and the pope, from the embassy's survivors"},
+    {"region": "iberia", "level": 3, "homeKnows": 1610, "confidence": "medium"},
+    {"region": "brazil-coast", "level": 2, "homeKnows": 1610, "confidence": "medium"},
+    {"region": "med-west", "level": 2, "homeKnows": 1610, "confidence": "medium"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "four-kings",
+  "name": "The Four Kings in London",
+  "traveler": "Hendrick Tejonihokarawa, Sa Ga Yeath Qua Pieth Tow, Ho Nee Yeath Taw No Row and Etow Oh Koam",
+  "years": "1710",
+  "kind": "envoy",
+  "viewpoint": "haudenosaunee",
+  "summary": "Three Mohawk leaders and a Mahican sail to London with Peter Schuyler to ask Queen Anne for help against New France, and for missionaries. London calls them the Four Indian Kings: crowds follow them, Verelst paints their portraits, and their speech is printed and sold. The Queen sends a chapel and silver for the Mohawk.",
+  "source": "hinderaker-kings",
+  "confidence": "high",
+  "stops": [
+    {"year": 1709, "place": "Tiononderoge", "lat": 42.94, "lon": -74.28, "note": "The lower Mohawk town, at the eastern door of the League."},
+    {"year": 1710, "place": "Boston", "lat": 42.36, "lon": -71.06, "note": "They sail with Schuyler and Francis Nicholson at the end of February.", "by": "land", "city": "boston"},
+    {"year": 1710, "place": "Portsmouth", "lat": 50.8, "lon": -1.09, "note": "Landfall in England at the beginning of April.", "by": "sea"},
+    {"year": 1710, "place": "London", "lat": 51.51, "lon": -0.12, "note": "Lodged in Covent Garden; Queen Anne receives them at St James's Palace, and their speech is read to her.", "date": "19 April 1710", "by": "land", "city": "london"},
+    {"year": 1710, "place": "Boston", "lat": 42.36, "lon": -71.06, "note": "Home in the summer, with gifts from the Queen.", "by": "sea", "city": "boston"},
+    {"year": 1710, "place": "Tiononderoge", "lat": 42.94, "lon": -74.28, "note": "The Queen's chapel and communion silver follow for Fort Hunter.", "by": "land"}
+  ],
+  "informs": [
+    {"region": "britain", "level": 3, "homeKnows": 1710, "confidence": "high", "note": "London, the Queen and her court"},
+    {"region": "north-atlantic-west", "level": 2, "homeKnows": 1710, "confidence": "high"},
+    {"region": "north-atlantic-east", "level": 2, "homeKnows": 1710, "confidence": "high"}
+  ]
+}

@@ -399,10 +399,14 @@
         {
           "viewpoint": "maghreb",
           "from": 670
+        },
+        {
+          "viewpoint": "turks",
+          "from": 1040
         }
       ]
     },
-    "startNote": "The Islamic world is a knowledge community. Before 622 it shows Arabia, which it grew from; after the hijra, Arabia, Egypt, Persia and the Maghreb each share what they know as they join, and what one knows, all keep.",
+    "startNote": "The Islamic world is a knowledge community. Before 622 it shows Arabia, which it grew from; after the hijra, Arabia, Egypt, Persia and the Maghreb, and from 1040 the Turks, each share what they know as they join, and what one knows, all keep.",
     "homes": [
       {
         "from": -2000,
@@ -3664,6 +3668,371 @@
         "year": 1847,
         "label": "The Caste War begins in Yucatán",
         "source": "reed-caste-war"
+      }
+    ]
+  },
+  {
+    "id": "kongo",
+    "name": "Kongo",
+    "longName": "Kongo: the kingdom of Mbanza Kongo",
+    "adjective": "Kongo",
+    "tagline": "The kingdom on the lower Congo, Christian from 1491, which wrote to Lisbon and sent envoys to Rome.",
+    "color": "#6b312e",
+    "seal": "kongo",
+    "startNote": "Before the kingdom rose about 1390, this view follows the farmers of the lower Congo, known only from archaeology and the history of their languages. From the 1500s Kongo's own letters, and the accounts of Portuguese and Italian priests, tell what it knew.",
+    "noteUntil": 1390,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The lower Congo",
+        "lat": -5.6,
+        "lon": 14.2
+      },
+      {
+        "from": 1390,
+        "place": "Mbanza Kongo",
+        "lat": -6.27,
+        "lon": 14.24
+      }
+    ],
+    "moments": [
+      {
+        "year": -400,
+        "label": "Iron-working farmers settle the lower Congo",
+        "source": "vansina-paths"
+      },
+      {
+        "year": 1390,
+        "label": "The kingdom is founded at Mbanza Kongo",
+        "source": "thornton-wca"
+      },
+      {
+        "year": 1483,
+        "label": "Diogo Cão's ships at the mouth of the Nzadi",
+        "source": "thornton-wca"
+      },
+      {
+        "year": 1491,
+        "label": "King Nzinga a Nkuwu is baptised João",
+        "source": "thornton-wca"
+      },
+      {
+        "year": 1526,
+        "label": "Afonso I writes to Lisbon against the slave traders",
+        "source": "brasio-mma"
+      },
+      {
+        "year": 1608,
+        "label": "Kongo's envoy Antonio Manuel ne Vunda reaches Rome",
+        "source": "nevunda-bust"
+      },
+      {
+        "year": 1642,
+        "label": "Garcia II receives the Dutch; envoys sail for Holland",
+        "source": "beckx-castro"
+      },
+      {
+        "year": 1665,
+        "label": "Defeat by the Portuguese at Mbwila",
+        "source": "thornton-wca"
+      },
+      {
+        "year": 1704,
+        "label": "Kimpa Vita preaches the restoration of Kongo",
+        "source": "thornton-kimpa"
+      }
+    ]
+  },
+  {
+    "id": "mississippian",
+    "name": "Mississippian",
+    "longName": "Mississippian: Cahokia, Moundville and the Muscogee",
+    "adjective": "Mississippian",
+    "tagline": "The mound cities of the Mississippi valley, and the Muscogee nations who came after them.",
+    "color": "#8f4724",
+    "seal": "mississippian",
+    "oral": true,
+    "startNote": "Before Cahokia rose about 1050, this view follows the mound builders of the eastern woodlands: Poverty Point and the Hopewell. After the chiefdoms broke apart in the 1500s, it follows their heirs, the Muscogee (Creek) towns. Its knowledge was carried in memory and in traded things; the dates come from archaeology and colonial records.",
+    "noteUntil": 1050,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "Poverty Point",
+        "lat": 32.64,
+        "lon": -91.41
+      },
+      {
+        "from": -100,
+        "place": "The Hopewell earthworks",
+        "lat": 39.37,
+        "lon": -83.0
+      },
+      {
+        "from": 1050,
+        "place": "Cahokia",
+        "lat": 38.66,
+        "lon": -90.06
+      },
+      {
+        "from": 1250,
+        "place": "Moundville",
+        "lat": 32.99,
+        "lon": -87.63
+      },
+      {
+        "from": 1600,
+        "place": "Coweta",
+        "lat": 32.38,
+        "lon": -84.99
+      },
+      {
+        "from": 1836,
+        "place": "Okmulgee",
+        "lat": 35.62,
+        "lon": -95.96
+      }
+    ],
+    "moments": [
+      {
+        "year": -1600,
+        "label": "Poverty Point's great earthen rings",
+        "source": "gibson-poverty"
+      },
+      {
+        "year": -100,
+        "label": "The Hopewell gather copper, mica and obsidian",
+        "source": "carr-hopewell"
+      },
+      {
+        "year": 1050,
+        "label": "Cahokia rises around Monks Mound",
+        "source": "pauketat-cahokia"
+      },
+      {
+        "year": 1250,
+        "label": "Moundville on the Black Warrior River",
+        "source": "knight-moundville"
+      },
+      {
+        "year": 1350,
+        "label": "Spiro gathers shells from two oceans",
+        "source": "brown-spiro"
+      },
+      {
+        "year": 1400,
+        "label": "Cahokia is left empty",
+        "source": "pauketat-cahokia"
+      },
+      {
+        "year": 1540,
+        "label": "De Soto's army marches through the chiefdoms",
+        "source": "hudson-desoto"
+      },
+      {
+        "year": 1734,
+        "label": "Tomochichi in London",
+        "source": "sweet-georgia"
+      },
+      {
+        "year": 1836,
+        "label": "The Muscogee are forced west to Indian Territory",
+        "source": "green-removal"
+      }
+    ]
+  },
+  {
+    "id": "haudenosaunee",
+    "name": "Haudenosaunee",
+    "longName": "Haudenosaunee: the Five, later Six, Nations",
+    "adjective": "Haudenosaunee",
+    "tagline": "The League of the longhouse, from the Mohawk to the Seneca, under the Great Law of Peace.",
+    "color": "#3d2f66",
+    "seal": "haudenosaunee",
+    "oral": true,
+    "startNote": "Before the League was formed, perhaps about 1450, this view follows the Iroquoian farmers of the Finger Lakes and the Mohawk valley, known from archaeology. Its knowledge was kept in memory and in wampum; the dates come from archaeology, oral tradition and colonial records.",
+    "noteUntil": 1450,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The Finger Lakes",
+        "lat": 42.75,
+        "lon": -76.8
+      },
+      {
+        "from": 1450,
+        "place": "Onondaga",
+        "lat": 43.0,
+        "lon": -76.15
+      },
+      {
+        "from": 1784,
+        "place": "The Grand River",
+        "lat": 43.07,
+        "lon": -80.12
+      }
+    ],
+    "moments": [
+      {
+        "year": 1000,
+        "label": "Maize, beans and squash in the Finger Lakes villages",
+        "source": "snow-iroquois"
+      },
+      {
+        "year": 1450,
+        "label": "The Great Law of Peace unites five nations",
+        "source": "snow-iroquois"
+      },
+      {
+        "year": 1609,
+        "label": "Champlain fires on the Mohawk at Lake Champlain",
+        "source": "richter-ordeal"
+      },
+      {
+        "year": 1614,
+        "label": "Dutch traders at Fort Orange",
+        "source": "richter-ordeal"
+      },
+      {
+        "year": 1649,
+        "label": "The League's war parties overrun the Huron country",
+        "source": "richter-ordeal"
+      },
+      {
+        "year": 1701,
+        "label": "The Great Peace of Montreal",
+        "source": "havard-montreal"
+      },
+      {
+        "year": 1710,
+        "label": "Four Indian Kings in London",
+        "source": "hinderaker-kings"
+      },
+      {
+        "year": 1722,
+        "label": "The Tuscarora join: the Six Nations",
+        "source": "richter-ordeal"
+      },
+      {
+        "year": 1784,
+        "label": "Joseph Brant leads the Mohawk to the Grand River",
+        "source": "kelsay-brant"
+      }
+    ]
+  },
+  {
+    "id": "turks",
+    "name": "Turks",
+    "longName": "Turks: Seljuks and Ottomans",
+    "adjective": "Turkish",
+    "tagline": "The Oghuz Turks, from the Syr Darya to Anatolia: the Seljuk sultans, then the house of Osman from Bursa to Istanbul.",
+    "color": "#1c5f7a",
+    "seal": "turks",
+    "startNote": "Before the Seljuks rose about 1040, this view follows the Oghuz Turks: herders of the Altai and the Tian Shan, then from about 766 on the Syr Darya, at the edge of the Islamic world. From 1040 it belongs to the Islamic world and shares what it knows; from 1299 it follows the Ottomans.",
+    "noteUntil": 1040,
+    "homes": [
+      {
+        "from": -2000,
+        "place": "The Altai",
+        "lat": 49.0,
+        "lon": 88.0
+      },
+      {
+        "from": 766,
+        "place": "Yangikent",
+        "lat": 45.42,
+        "lon": 62.53
+      },
+      {
+        "from": 1077,
+        "place": "Konya",
+        "lat": 37.87,
+        "lon": 32.48
+      },
+      {
+        "from": 1299,
+        "place": "Söğüt",
+        "lat": 40.02,
+        "lon": 30.18
+      },
+      {
+        "from": 1326,
+        "place": "Bursa",
+        "lat": 40.19,
+        "lon": 29.06
+      },
+      {
+        "from": 1365,
+        "place": "Edirne",
+        "lat": 41.68,
+        "lon": 26.56
+      },
+      {
+        "from": 1453,
+        "place": "Istanbul",
+        "lat": 41.01,
+        "lon": 28.98
+      }
+    ],
+    "moments": [
+      {
+        "year": 766,
+        "label": "The Oghuz settle on the Syr Darya",
+        "source": "golden-turkic"
+      },
+      {
+        "year": 1040,
+        "label": "The Seljuks win at Dandanaqan",
+        "source": "peacock-seljuk"
+      },
+      {
+        "year": 1071,
+        "label": "Manzikert opens Anatolia to the Turks",
+        "source": "peacock-seljuk"
+      },
+      {
+        "year": 1299,
+        "label": "Osman's beylik at Söğüt",
+        "source": "kafadar"
+      },
+      {
+        "year": 1453,
+        "label": "Mehmed II takes Constantinople",
+        "source": "inalcik-classical"
+      },
+      {
+        "year": 1513,
+        "label": "Piri Reis draws his map of the Atlantic",
+        "source": "mcintosh-piri"
+      },
+      {
+        "year": 1517,
+        "label": "Selim I takes Egypt and the holy cities",
+        "source": "inalcik-classical"
+      },
+      {
+        "year": 1538,
+        "label": "An Ottoman fleet sails for Diu",
+        "source": "casale-ottoman"
+      },
+      {
+        "year": 1580,
+        "label": "The History of the West Indies",
+        "source": "goodrich-west-indies"
+      },
+      {
+        "year": 1648,
+        "label": "Katib Çelebi's Cihannüma",
+        "source": "hagen-katib"
+      },
+      {
+        "year": 1720,
+        "label": "Yirmisekiz Mehmed Çelebi in Paris",
+        "source": "gocek-paris"
+      },
+      {
+        "year": 1890,
+        "label": "The frigate Ertuğrul sails to Japan",
+        "source": "esenbel-ertugrul"
       }
     ]
   },

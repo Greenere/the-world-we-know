@@ -231,6 +231,26 @@ export function sealSvg(id: string, color: string, size = 18) {
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><circle cx="8.6" cy="8" r="1.3"/><circle cx="12" cy="8" r="1.3"/><circle cx="15.4" cy="8" r="1.3"/><rect x="6.2" y="10.6" width="11.6" height="2.4" rx="1.2"/><rect x="6.2" y="14.4" width="11.6" height="2.4" rx="1.2"/></g>`,
       );
+    case 'kongo':
+      // The dikenga, Kongo's cosmogram: the crossroads of the living and the dead, and the sun's four moments.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="#f6f0e2" stroke-width="1"/><path d="M12 5v14M5 12h14" stroke="#f6f0e2" stroke-width="1.1"/><g fill="#f6f0e2"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="19" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></g>`,
+      );
+    case 'mississippian':
+      // The hand and eye, carved on Mississippian shell and stone.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><rect x="8.4" y="10.4" width="7.2" height="8" rx="2.4"/><rect x="8.5" y="6.6" width="1.6" height="5" rx=".8"/><rect x="10.3" y="5.4" width="1.6" height="6" rx=".8"/><rect x="12.1" y="5.6" width="1.6" height="6" rx=".8"/><rect x="13.9" y="6.8" width="1.6" height="5" rx=".8"/><rect x="6.6" y="11" width="1.6" height="4.6" rx=".8" transform="rotate(-32 7.4 15.6)"/></g><path d="M9.6 14.6q2.4-2 4.8 0q-2.4 2-4.8 0z" fill="${color}"/><circle cx="12" cy="14.6" r=".8" fill="#f6f0e2"/>`,
+      );
+    case 'haudenosaunee':
+      // The Hiawatha belt: the five nations joined, the tree of peace at the Onondaga heart.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><path d="M3.4 12h17.2" stroke="#f6f0e2" stroke-width="1"/><g fill="none" stroke="#f6f0e2" stroke-width="1"><rect x="3.4" y="10.8" width="2.4" height="2.4"/><rect x="6.6" y="10.8" width="2.4" height="2.4"/><rect x="15" y="10.8" width="2.4" height="2.4"/><rect x="18.2" y="10.8" width="2.4" height="2.4"/></g><path d="M12 5.6l1.8 2.8h-1l1.6 2.4h-1l1.6 2.6H9l1.6-2.6h-1l1.6-2.4h-1z" fill="#f6f0e2"/><rect x="11.4" y="13.4" width="1.2" height="2.6" fill="#f6f0e2"/>`,
+      );
+    case 'turks':
+      // A tulip, the flower of the Seljuk and Ottoman gardens.
+      return s(
+        `<circle cx="12" cy="12" r="10" fill="${color}"/><g fill="#f6f0e2"><path d="M8.3 6.8l2 2.2L12 5.4l1.7 3.6 2-2.2q.7 5.4-3.7 6.4-4.4-1-3.7-6.4z"/><rect x="11.5" y="12.6" width="1" height="6.2" rx=".4"/><path d="M11.8 18.2c-2.6-.2-4.4-2-4.8-4.4 2.2.4 4 2 4.8 4.4z"/><path d="M12.2 16.8c1.8-.4 3.4-2 3.8-4-2 .4-3.4 1.8-3.8 4z"/></g>`,
+      );
     default:
       return s(
         `<circle cx="12" cy="12" r="10" fill="${color}"/><circle cx="12" cy="12" r="7.4" fill="none" stroke="#f6f0e2" stroke-width=".9"/><path d="M12 5l1.6 5.4L19 12l-5.4 1.6L12 19l-1.6-5.4L5 12l5.4-1.6z" fill="#f6f0e2"/>`,

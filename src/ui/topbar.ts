@@ -16,14 +16,14 @@ export const GROUPS: [string, VpId[]][] = [
   ['Knowledge communities', ['europe', 'islam', 'humanity']],
   ['Europe', ['greece', 'rome', 'iberia', 'france', 'britain', 'germany', 'norse', 'russia']],
   ['Asia', ['steppe', 'india', 'china', 'korea', 'japan', 'nusantara']],
-  ['The Middle East', ['arabia', 'persia', 'egypt']],
-  ['Africa', ['maghreb', 'sahel', 'ethiopia', 'swahili', 'zimbabwe']],
-  ['The Americas and the Arctic', ['inuit', 'mexica', 'maya', 'inca']],
+  ['The Middle East', ['arabia', 'persia', 'egypt', 'turks']],
+  ['Africa', ['maghreb', 'sahel', 'ethiopia', 'swahili', 'kongo', 'zimbabwe']],
+  ['The Americas and the Arctic', ['inuit', 'haudenosaunee', 'mississippian', 'mexica', 'maya', 'inca']],
   ['Oceania', ['polynesia']],
 ];
 
-/** The picker's columns, by group index, chosen so the three come out about the same height. */
-const PICKER_COLUMNS = [[0, 2], [1, 3], [4, 5, 6]];
+/** The picker's columns, by group index, chosen so the four come out about the same height. */
+const PICKER_COLUMNS = [[0, 2], [1], [3, 4], [5, 6]];
 
 /** The second line of a picker entry: who is in a knowledge community, or which one a viewpoint joins. */
 function pickerLine(data: AppData, id: VpId): string {

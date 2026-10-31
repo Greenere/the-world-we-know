@@ -1,0 +1,35 @@
+{
+  "id": "seydi-ali",
+  "name": "Seydi Ali Reis's road home from India",
+  "traveler": "Seydi Ali Reis, admiral of the Ottoman fleet at Basra",
+  "years": "1554–1557",
+  "kind": "traveler",
+  "viewpoint": "turks",
+  "summary": "Sent to bring the Ottoman galleys at Basra back to Suez, the admiral fights the Portuguese off Muscat and is driven by storms onto the coast of Gujarat, where his ships are lost. With no fleet left, he walks home: through Mughal India, where he meets Humayun weeks before the emperor's death, over the Khyber, across Central Asia and Persia. He tells it all in the Mirror of Countries.",
+  "source": "seydi-mirat",
+  "confidence": "high",
+  "stops": [
+    {"year": 1554, "place": "Basra", "lat": 30.51, "lon": 47.81, "note": "He takes command of fifteen galleys, to sail them round Arabia to Suez.", "date": "July 1554", "city": "basra"},
+    {"year": 1554, "place": "Muscat", "lat": 23.61, "lon": 58.59, "note": "Two battles with the Portuguese fleet off the coast of Oman.", "by": "sea", "city": "muscat"},
+    {"year": 1554, "place": "Surat", "lat": 21.17, "lon": 72.83, "note": "A storm drives what is left of the fleet onto Gujarat; the ships are lost.", "by": "sea", "city": "surat"},
+    {"year": 1555, "place": "Ahmedabad", "lat": 23.02, "lon": 72.57, "note": "The sultan of Gujarat offers him a governorship; he declines, to go home.", "by": "land"},
+    {"year": 1555, "place": "Lahore", "lat": 31.55, "lon": 74.34, "note": "Through Sindh and Multan, with the Mughal army on the move.", "by": "land", "city": "lahore"},
+    {"year": 1555, "place": "Delhi", "lat": 28.65, "lon": 77.23, "note": "Humayun receives him. In January 1556 the emperor falls on his library stairs and dies.", "by": "land", "city": "delhi"},
+    {"year": 1556, "place": "Kabul", "lat": 34.53, "lon": 69.17, "note": "Over the Khyber Pass.", "by": "land", "city": "kabul"},
+    {"year": 1556, "place": "Samarkand", "lat": 39.65, "lon": 66.96, "note": "Timur's city, under the Uzbek khans.", "by": "land", "city": "samarkand"},
+    {"year": 1556, "place": "Bukhara", "lat": 39.77, "lon": 64.42, "note": "Held up by the wars of the Uzbek princes.", "by": "land", "city": "bukhara"},
+    {"year": 1556, "place": "Mashhad", "lat": 36.3, "lon": 59.6, "note": "Into Safavid Persia, the Ottomans' rival.", "by": "land"},
+    {"year": 1556, "place": "Qazvin", "lat": 36.27, "lon": 50.0, "note": "Shah Tahmasp questions him closely before letting him go.", "by": "land"},
+    {"year": 1557, "place": "Baghdad", "lat": 33.31, "lon": 44.36, "note": "Back in Ottoman lands, three years and seven months after leaving Basra.", "by": "land", "city": "baghdad"},
+    {"year": 1557, "place": "Istanbul", "lat": 41.01, "lon": 28.98, "note": "He presents the sultan with letters from eighteen rulers, and writes the Mirror of Countries.", "by": "land", "city": "constantinople"}
+  ],
+  "informs": [
+    {"region": "west-india-coast", "level": 4, "homeKnows": 1557, "confidence": "high", "note": "Gujarat, its ports and its civil war"},
+    {"region": "india-north", "level": 3, "homeKnows": 1557, "confidence": "high", "note": "Mughal Delhi"},
+    {"region": "indus", "level": 3, "homeKnows": 1557, "confidence": "high"},
+    {"region": "bactria", "level": 3, "homeKnows": 1557, "confidence": "high", "note": "The Khyber and Kabul"},
+    {"region": "transoxiana", "level": 4, "homeKnows": 1557, "confidence": "high", "note": "Samarkand and Bukhara under the Uzbeks"},
+    {"region": "persia", "level": 4, "homeKnows": 1557, "confidence": "high"},
+    {"region": "arabian-sea", "level": 3, "homeKnows": 1557, "confidence": "high", "note": "The monsoon and the Portuguese at sea"}
+  ]
+}
