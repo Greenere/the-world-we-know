@@ -697,7 +697,7 @@ export class JourneyPanel {
     return Math.max(typeof d === 'number' ? d : (d[0] + d[1]) / 2, landmarkKnown(this.data, this.field, c, vp));
   }
 
-  /** Places a viewpoint comes to know (landmarks people built, natural wonders, lost cities found again),
+  /** Places a viewpoint comes to know (landmarks people built, ruins never lost, natural wonders, lost cities found again),
    * grouped into eras by the year each entered this viewpoint's world. The grouping depends only on the
    * viewpoint, so a click that jumps the timeline leaves the list in place. */
   private landmarkList(s: State): Node[] {
@@ -705,7 +705,7 @@ export class JourneyPanel {
     this.landmarkVp = vp;
     this.landmarks = this.landmarkEntries(vp);
     const all = this.landmarks;
-    const kinds: [LandmarkEntry['group'], string][] = [['built', 'Built'], ['natural', 'Natural wonders'], ['found', 'Found again']];
+    const kinds: [LandmarkEntry['group'], string][] = [['built', 'Built wonders'], ['ruin', 'Ruins'], ['natural', 'Natural wonders'], ['found', 'Found again']];
     const kindDrop = this.dropdown(
       t('Kind'),
       [{title: null, items: [{id: null, label: t('All'), n: all.length}, ...kinds.map(([id, label]) => ({id, label: t(label), n: all.filter(e => e.group === id).length}))]}],
@@ -729,7 +729,7 @@ export class JourneyPanel {
     this.landmarkResults = h('div.jp-results');
     this.renderLandmarks();
     return [
-      h('p.jp-intro', t('Wonders people built, wonders they found, and lost cities found again, by when {vp} came to know them.', {vp: tx.viewpoint(vp, 'name', this.data.vp[vp].name)})),
+      h('p.jp-intro', t('Wonders people built, ruins never lost, wonders they found, and lost cities found again, by when {vp} came to know them.', {vp: tx.viewpoint(vp, 'name', this.data.vp[vp].name)})),
       h('div.jp-tools', h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search)),
       h('div.jp-filter-row', kindDrop),
       this.landmarkResults,
@@ -766,6 +766,16 @@ export class JourneyPanel {
         group = 'found';
         from = this.foundAgain(c, vp);
         meta = t('Found again {year}', {year: formatYear(from)});
+      } else if (c.dates.abandoned !== undefined && c.dates.forgotten === undefined && c.tier <= 2) {
+        // Ruins that were never lost: those who lived near them always knew them (Teotihuacan, Great Zimbabwe).
+        // A viewpoint knows one from when the map first shows it the city, and no sooner than it was built.
+        group = 'ruin';
+        const seen = this.field.firstKnown(vp, c.cell, humanity ? 3 : 2);
+        from = Math.max(seen ?? PRESENT, c.dates.founded === undefined ? -Infinity : mid(c.dates.founded));
+        const abandoned = mid(c.dates.abandoned);
+        meta = humanity || from <= abandoned
+          ? t('Abandoned {year}', {year: formatRange(c.dates.abandoned)})
+          : t('Abandoned {abandoned}, known from {year}', {abandoned: formatRange(c.dates.abandoned), year: formatYear(from)});
       } else continue;
       const name = tx.name(nameFor(c.names, '*' as VpId, PRESENT, c.id)!.name);
       const host = c.host ? this.data.cityById.get(c.host) : undefined;
@@ -891,7 +901,7 @@ const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f'ʻʼ’]/
 /** A place in the landmarks list, with the year it entered the viewpoint's world. */
 interface LandmarkEntry {
   c: City;
-  group: 'built' | 'natural' | 'found';
+  group: 'built' | 'ruin' | 'natural' | 'found';
   from: number;
   name: string;
   meta: string;

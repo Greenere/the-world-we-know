@@ -176,8 +176,8 @@ export const zhUi: Record<string, string> = {
   'Show the sketch: {title}': '查看速写：{title}',
 
   // Landmarks
-  'Wonders people built, wonders they found, and lost cities found again, by when {vp} came to know them.':
-    '人们建造的奇迹、他们发现的奇观，以及失而复得的城市，按{vp}知晓它们的年代排列。',
+  'Wonders people built, ruins never lost, wonders they found, and lost cities found again, by when {vp} came to know them.':
+    '人们建造的奇观、从未失落的遗址、发现的自然奇观，以及失而复得的古城，按{vp}得知它们的时间排列。',
   'Out of Africa': '走出非洲',
   'The Ice Age': '冰河时代',
   'First farmers': '最早的农人',
@@ -192,6 +192,10 @@ export const zhUi: Record<string, string> = {
   'Find a landmark': '查找地标',
   'No landmark matches.': '没有匹配的地标。',
   'Found again': '失而复得',
+  'Built wonders': '人造奇观',
+  'Ruins': '遗址',
+  'Abandoned {year}': '{year}废弃',
+  'Abandoned {abandoned}, known from {year}': '{abandoned}废弃，{year}起为人所知',
   'Found again {year}': '{year}重新发现',
   'Natural wonders': '自然奇观',
   'Built {year}': '{year}建成',
