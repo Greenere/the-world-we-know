@@ -178,8 +178,9 @@ export function shortCitation(sources: Record<string, Source>, id: string): stri
  * Every viewpoint knows every landmark in the end: we can only speak of them because the world came to. */
 export function landmarkKnown(data: AppData, field: FogField, c: City, vp: VpId): number {
   let known: number | null;
-  // A lost city became known beyond its neighbours when it was found again.
-  const widely = c.widely ?? (c.dates.rediscovered === undefined ? undefined : mid(c.dates.rediscovered));
+  // A lost city became known beyond its neighbours when it was found again. A ruin never lost was only visited
+  // by outsiders ("rediscovered" by Europe): that is one culture's encounter, recorded in `found`, not fame.
+  const widely = c.widely ?? (c.dates.rediscovered === undefined || c.dates.forgotten === undefined ? undefined : mid(c.dates.rediscovered));
   const own = c.found?.[vp];
   if (vp === 'humanity') known = field.firstKnown(vp, c.cell, 3);
   else if (own !== undefined) known = own;

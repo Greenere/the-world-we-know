@@ -1,6 +1,8 @@
-id,lat,lon,tier,founded,peak,abandoned,forgotten,rediscovered,source,confidence,story
+id,lat,lon,tier,founded,peak,abandoned,forgotten,rediscovered,source,confidence,story,found,widely
 # Dates are approximate. A range "a..b" is allowed; the map uses the midpoint.
 # founded → abandoned: living · abandoned → forgotten: ruin · forgotten → rediscovered: lost · after rediscovered: rediscovered ruin
+# A ruin never lost, like a landmark: found ("iberia 1586 france 1860"), each culture's own encounter, and widely,
+# a year it became known the world over (rare: most wait for the shared map of 1900). Evidence: docs/ruins-known.md.
 # ── Mediterranean and Europe ──
 athens,37.97,23.73,1,-1400,-430,,,,draft-urban,high,
 sparta,37.08,22.43,2,-900,-400,,,,draft-urban,medium,
@@ -8,8 +10,8 @@ corinth,37.91,22.88,2,-750,-400,,,,draft-urban,medium,
 syracuse,37.07,15.29,2,-734,-400,,,,draft-urban,high,
 thessaloniki,40.64,22.94,2,-315,1100,,,,draft-urban,high,
 rome,41.89,12.49,1,-753,100,,,,draft-urban,high,"Perhaps a million people at its height, the first city that size. To Han China it was the capital of Daqin, the 'great Qin' at the far end of the world."
-carthage,36.85,10.32,1,-814,-300,-146,,,appian,high,"A Phoenician colony that became the greatest power of the western Mediterranean. Rome razed it in 146 BCE after a three-year siege. A century later Caesar and Augustus founded a Roman city on the same site."
-carthago,36.86,10.33,2,-44,400,698,,,draft-urban,medium,"Roman Carthage, refounded on the ruins of the Punic city, grew into the second city of the western empire. It fell to the Umayyads in 698."
+carthage,36.85,10.32,1,-814,-300,-146,,,appian,high,A Phoenician colony that became the greatest power of the western Mediterranean. Rome razed it in 146 BCE after a three-year siege. A century later Caesar and Augustus founded a Roman city on the same site.,rome -146 greece -146,
+carthago,36.86,10.33,2,-44,400,698,,,draft-urban,medium,"Roman Carthage, refounded on the ruins of the Punic city, grew into the second city of the western empire. It fell to the Umayyads in 698.",islam 698,
 alexandria,31.20,29.92,1,-331,100,,,,draft-urban,high,"Founded by Alexander, home of the Library and the Pharos lighthouse, and for centuries the place where the Mediterranean met the trade of the Red Sea."
 pompeii,40.75,14.49,3,-600,50,79,79,1748,pliny-letters,high,"A prosperous Roman town buried under four to six metres of ash when Vesuvius erupted in 79. Pliny the Younger watched from across the bay. The town was forgotten until excavation began in 1748, nearly 1,700 years later."
 herculaneum,40.81,14.35,3,-500,50,79,79,1738,pliny-letters,high,
@@ -20,12 +22,12 @@ troy,39.96,26.24,3,-3000,-1250,500,600,1871,draft-urban,medium,
 knossos,35.30,25.16,3,-7000,-1700,400,600,1900,draft-urban,medium,
 mycenae,37.73,22.76,3,-1600,-1300,-468,,1876,draft-urban,medium,
 delphi,38.48,22.50,3,-800,-400,395,600,1892,draft-urban,medium,
-ephesus,37.94,27.34,2,-1000,150,1450,,,draft-urban,medium,
+ephesus,37.94,27.34,2,-1000,150,1450,,,draft-urban,medium,,rome 1446 britain 1869,
 miletus,37.53,27.28,3,-1000,-500,1500,,,draft-urban,medium,
 antioch,36.20,36.16,1,-300,400,,,,draft-urban,high,
 jerusalem,31.78,35.23,2,-3000,,,,,draft-urban,high,
 tyre,33.27,35.20,2,-2750,-800,,,,draft-urban,medium,
-palmyra,34.55,38.27,2,-100,250,1100,,1751,draft-urban,medium,
+palmyra,34.55,38.27,2,-100,250,1100,,1751,draft-urban,medium,,britain 1691,
 petra,30.33,35.44,2,-300,100,700,1200,1812,draft-urban,medium,"The Nabataean caravan city carved into rose-red cliffs. After its trade moved elsewhere it emptied, and outsiders forgot it until Johann Ludwig Burckhardt talked his way in, disguised as a pilgrim, in 1812. The local Bedouin had always known it."
 damascus,33.51,36.29,1,-3000,700,,,,draft-urban,high,
 aleppo,36.20,37.15,2,-3000,1200,,,,draft-urban,high,
@@ -74,12 +76,12 @@ bulghar,54.98,49.06,3,900,1300,1430,,,ibn-fadlan,medium,
 brattahlid,61.15,-45.50,3,985,1100,1450,1500,1721,vinland-sagas,low,
 lanse-aux-meadows,51.60,-55.53,3,1000,1000,1020,1050,1960,ingstad,medium,"A Norse camp of eight timber-and-turf buildings on the tip of Newfoundland, used for a few years around 1000. Helge and Anne Stine Ingstad found it in 1960, the first proof that Europeans reached the Americas before Columbus."
 # ── West Asia and North Africa ──
-babylon,32.54,44.42,1,-2300,-600,141,,1899,draft-urban,medium,
+babylon,32.54,44.42,1,-2300,-600,141,,1899,draft-urban,medium,,greece 141 rome 141,
 nineveh,36.36,43.15,2,-6000,-700,-612,100,1847,draft-urban,medium,
-persepolis,29.93,52.89,1,-518,-400,-330,,,arrian,high,"The ceremonial capital of the Persian kings. Alexander's army burned it in 330 BCE, perhaps in revenge for Athens, perhaps after a drunken feast. The ruins were never lost: local people called them Takht-e Jamshid, the throne of the legendary king Jamshid."
-susa,32.19,48.26,2,-4200,-500,1300,,,draft-urban,medium,
-ctesiphon,33.09,44.58,1,-120,570,800,,,draft-urban,medium,
-seleucia,33.10,44.52,2,-305,0,200,,,draft-urban,medium,
+persepolis,29.93,52.89,1,-518,-400,-330,,,arrian,high,"The ceremonial capital of the Persian kings. Alexander's army burned it in 330 BCE, perhaps in revenge for Athens, perhaps after a drunken feast. The ruins were never lost: local people called them Takht-e Jamshid, the throne of the legendary king Jamshid.",greece -330,
+susa,32.19,48.26,2,-4200,-500,1300,,,draft-urban,medium,,britain 1851,
+ctesiphon,33.09,44.58,1,-120,570,800,,,draft-urban,medium,,britain 1836,
+seleucia,33.10,44.52,2,-305,0,200,,,draft-urban,medium,,rome 200,1927
 baghdad,33.31,44.36,1,762,900,,,,al-tabari,high,"Built from scratch by the Abbasid caliph al-Mansur in 762 as a perfect circle of walls with the palace and mosque at its centre. Within a century it was probably the largest city in the world, and a centre of translation, mathematics and map-making."
 basra,30.50,47.80,2,636,850,,,,draft-urban,high,
 kufa,32.03,44.40,2,638,750,,,,draft-urban,medium,
@@ -87,10 +89,10 @@ samarra,34.20,43.87,2,836,860,,,,draft-urban,medium,
 isfahan,32.65,51.67,1,-500,1600,,,,draft-urban,medium,
 shiraz,29.60,52.53,2,693,1350,,,,draft-urban,medium,
 tabriz,38.08,46.29,2,400,1300,,,,draft-urban,medium,
-rayy,35.59,51.43,2,-3000,1000,1220,,,draft-urban,medium,
+rayy,35.59,51.43,2,-3000,1000,1220,,,draft-urban,medium,,britain 1818,
 tehran,35.69,51.39,2,1550,1950,,,,draft-urban,medium,
 nishapur,36.21,58.80,2,250,1100,,,,draft-urban,medium,
-merv,37.66,62.19,1,-500,1150,1221,,,draft-urban,medium,
+merv,37.66,62.19,1,-500,1150,1221,,,draft-urban,medium,,britain 1881,
 herat,34.35,62.20,2,-500,1450,,,,draft-urban,medium,
 balkh,36.76,66.90,1,-1500,600,,,,draft-urban,medium,
 samarkand,39.65,66.96,1,-700,1400,,,,draft-urban,high,
@@ -106,11 +108,11 @@ aden,12.78,45.03,2,-500,,,,,draft-urban,medium,
 muscat,23.59,58.38,3,100,1650,,,,draft-urban,medium,
 sohar,24.35,56.75,3,300,1000,,,,draft-urban,medium,
 hormuz,27.10,56.45,2,1300,1450,,,,draft-urban,medium,
-siraf,27.67,52.33,2,300,950,1050,,,draft-urban,medium,
+siraf,27.67,52.33,2,300,950,1050,,,draft-urban,medium,,britain 1966,
 cairo,30.04,31.24,1,969,1340,,,,draft-urban,high,
-fustat,30.00,31.23,2,641,1000,1168,,,draft-urban,high,
-memphis,29.85,31.25,2,-3100,-1500,640,,,draft-urban,medium,
-thebes,25.70,32.64,2,-3200,-1400,100,,,draft-urban,medium,
+fustat,30.00,31.23,2,641,1000,1168,,,draft-urban,high,,france 1168,
+memphis,29.85,31.25,2,-3100,-1500,640,,,draft-urban,medium,,islam 1200 france 1799,
+thebes,25.70,32.64,2,-3200,-1400,100,,,draft-urban,medium,,greece 100 rome 100,
 meroe,16.94,33.75,2,-800,0,350,600,1821,draft-urban,medium,
 aksum,14.13,38.72,2,-100,350,,,,draft-urban,medium,
 adulis,15.27,39.65,3,-300,500,700,900,1810,draft-urban,low,
@@ -118,10 +120,10 @@ kairouan,35.68,10.10,2,670,900,,,,draft-urban,high,
 tunis,36.80,10.18,2,-800,1300,,,,draft-urban,medium,
 fez,34.06,-4.97,1,789,1300,,,,draft-urban,high,
 marrakesh,31.63,-8.00,2,1070,1150,,,,draft-urban,high,
-sijilmasa,31.28,-4.27,2,757,1100,1400,,,levtzion-hopkins,medium,
+sijilmasa,31.28,-4.27,2,757,1100,1400,,,levtzion-hopkins,medium,,rome 1550,
 tlemcen,34.88,-1.31,3,700,1300,,,,draft-urban,medium,
 tripoli,32.89,13.18,3,-700,,,,,draft-urban,medium,
-cyrene,32.82,21.86,2,-631,-300,650,,,draft-urban,medium,
+cyrene,32.82,21.86,2,-631,-300,650,,,draft-urban,medium,,france 1706,
 leptis-magna,32.64,14.29,2,-650,200,650,1000,1921,draft-urban,low,
 # ── Africa ──
 timbuktu,16.77,-3.00,1,1100,1500,,,,levtzion-hopkins,medium,
@@ -133,9 +135,9 @@ kano,12.00,8.52,2,999,1500,,,,draft-urban,medium,
 ife,7.48,4.56,2,900,1300,,,,draft-urban,medium,
 benin-city,6.34,5.62,2,1180,1600,,,,draft-urban,medium,
 elmina,5.08,-1.35,3,1482,1650,,,,draft-urban,high,
-great-zimbabwe,-20.27,30.93,1,1100,1350,1450,,1871,pikirayi,medium,"Capital of a state that grew rich on gold traded to the Swahili coast, with curving granite walls built without mortar. It was left around 1450. Europeans who saw it from 1871 refused to believe Africans had built it; archaeology settled the question long ago."
+great-zimbabwe,-20.27,30.93,1,1100,1350,1450,,1871,pikirayi,medium,"Capital of a state that grew rich on gold traded to the Swahili coast, with curving granite walls built without mortar. It was left around 1450. Europeans who saw it from 1871 refused to believe Africans had built it; archaeology settled the question long ago.",iberia 1531 germany 1871,
 mapungubwe,-22.19,29.39,3,1075,1220,1300,1400,1933,draft-urban,medium,
-kilwa,-8.96,39.51,2,900,1330,1800,,,ibn-battuta,medium,
+kilwa,-8.96,39.51,2,900,1330,1800,,,ibn-battuta,medium,,britain 1812,
 mombasa,-4.05,39.67,2,1000,1500,,,,draft-urban,medium,
 malindi,-3.22,40.12,2,1100,1500,,,,draft-urban,medium,
 mogadishu,2.04,45.34,2,900,1300,,,,draft-urban,medium,
@@ -165,20 +167,20 @@ bharuch,21.70,72.97,3,-500,50,,,,periplus,medium,
 calicut,11.25,75.78,2,1100,1500,,,,draft-urban,medium,
 muziris,10.15,76.21,2,-300,100,1341,1400,2007,periplus,low,
 kochi,9.93,76.26,3,1341,1600,,,,draft-urban,medium,
-goa,15.50,73.91,2,1510,1600,1843,,,draft-urban,medium,
+goa,15.50,73.91,2,1510,1600,1843,,,draft-urban,medium,,iberia 1843,
 arikamedu,11.90,79.82,3,-200,50,200,400,1945,periplus,medium,
 madurai,9.93,78.12,2,-300,,,,,draft-urban,medium,
 kanchipuram,12.83,79.70,2,-300,650,,,,draft-urban,medium,
-vijayanagara,15.33,76.46,1,1336,1500,1565,,,draft-urban,high,
-anuradhapura,8.35,80.39,2,-437,300,1017,,1820,draft-urban,medium,
+vijayanagara,15.33,76.46,1,1336,1500,1565,,,draft-urban,high,,iberia 1565 britain 1800,
+anuradhapura,8.35,80.39,2,-437,300,1017,,1820,draft-urban,medium,,britain 1833,
 polonnaruwa,7.94,81.00,3,1000,1180,1293,,,draft-urban,medium,
-gaur,24.87,88.13,2,1200,1500,1575,,,draft-urban,medium,
+gaur,24.87,88.13,2,1200,1500,1575,,,draft-urban,medium,,britain 1810,
 dhaka,23.81,90.41,2,1608,1700,,,,draft-urban,medium,
 kolkata,22.57,88.36,1,1690,1900,,,,draft-urban,high,
 mumbai,18.95,72.83,1,1534,1950,,,,draft-urban,high,
 # ── East Asia ──
 anyang,36.10,114.35,3,-1300,-1100,-1046,-500,1899,draft-urban,medium,
-xianyang,34.33,108.71,2,-350,-210,-206,,,shiji,high,
+xianyang,34.33,108.71,2,-350,-210,-206,,,shiji,high,,,1959
 changan,34.26,108.94,1,-202,750,,,,draft-urban,high,"Capital of the Han and the Tang, the eastern end of the Silk Road. Around 750 perhaps a million people lived inside its grid of walled wards, including merchants and monks from Persia, Sogdiana, Korea and Japan."
 luoyang,34.62,112.45,1,-1036,100,,,,draft-urban,medium,
 kaifeng,34.80,114.31,1,-364,1100,,,,draft-urban,medium,
@@ -199,9 +201,9 @@ khotan,37.11,79.93,2,-200,900,,,,draft-urban,medium,
 kucha,41.72,82.96,3,-100,650,,,,draft-urban,medium,
 loulan,40.52,89.75,3,-200,200,330..400,500,1900,hedin,medium,"An oasis kingdom on the old shore of Lop Nur, a stop on the Silk Road for Chinese garrisons and caravans. As the rivers shifted and the lake dried, it was swallowed by the desert. Sven Hedin's guide stumbled on its ruins in 1900 while going back for a lost spade."
 niya,37.97,82.71,3,-100,200,350,500,1901,stein,medium,
-gaochang,42.86,89.53,2,-100,800,1383,,,draft-urban,medium,
+gaochang,42.86,89.53,2,-100,800,1383,,,draft-urban,medium,,china 1414 germany 1902,
 karakorum,47.20,102.82,2,1220,1260,1388,1600,1889,carpini-rubruck,low,
-shangdu,42.36,116.18,2,1256,1300,1369,,,polo,high,"Kublai Khan's summer capital, Xanadu, described by Marco Polo. The Ming burned it in 1369. Coleridge made it a dream of luxury in 1797, long after the city had become grass-covered mounds."
+shangdu,42.36,116.18,2,1256,1300,1369,,,polo,high,"Kublai Khan's summer capital, Xanadu, described by Marco Polo. The Ming burned it in 1369. Coleridge made it a dream of luxury in 1797, long after the city had become grass-covered mounds.",britain 1872,
 lhasa,29.65,91.17,2,637,1700,,,,draft-urban,medium,
 kyoto,35.01,135.77,1,794,1200,,,,draft-urban,high,
 nara,34.69,135.80,2,710,750,,,,draft-urban,high,
@@ -215,9 +217,9 @@ seoul,37.57,126.98,1,1394,1900,,,,draft-urban,high,
 pyongyang,39.02,125.75,2,-194,600,,,,draft-urban,low,
 # ── Southeast Asia ──
 oc-eo,10.25,105.15,3,100,400,600,700,1944,kang-tai,medium,
-angkor,13.41,103.87,1,802,1150,1431,,1860,mouhot,medium,"The Khmer capital, a city of perhaps 750,000 spread around great reservoirs and temples. After Ayutthaya's armies sacked it in 1431 the court moved south and the forest crept in, though monks kept Angkor Wat in use. Henri Mouhot's posthumous book made it famous in Europe from the 1860s."
+angkor,13.41,103.87,1,802,1150,1431,,1860,mouhot,medium,"The Khmer capital, a city of perhaps 750,000 spread around great reservoirs and temples. After Ayutthaya's armies sacked it in 1431 the court moved south and the forest crept in, though monks kept Angkor Wat in use. Henri Mouhot's posthumous book made it famous in Europe from the 1860s.",iberia 1586 france 1860,
 bagan,21.17,94.86,2,849,1200,,,,draft-urban,medium,
-ayutthaya,14.35,100.57,1,1351,1700,1767,,,draft-urban,high,
+ayutthaya,14.35,100.57,1,1351,1700,1767,,,draft-urban,high,,china 1767 germany 1767,
 palembang,-2.99,104.75,2,670,900,,,,yijing,medium,
 trowulan,-7.56,112.38,2,1293,1400,1527,1600,1815,draft-urban,medium,
 malacca,2.19,102.25,2,1400,1500,,,,ma-huan,medium,
@@ -232,25 +234,25 @@ singapore,1.29,103.85,2,1819,1950,,,,draft-urban,high,
 caral,-10.89,-77.52,2,-2600,-2000,-1800,-1500,1994,draft-urban,low,
 chavin,-9.59,-77.18,3,-900,-500,-200,,,draft-urban,medium,
 el-mirador,17.75,-89.92,2,-600,-150,150,300,1926,draft-urban,low,
-monte-alban,17.04,-96.77,2,-500,500,850,,,draft-urban,medium,
-teotihuacan,19.69,-98.84,1,-100,450,600,,,draft-urban,medium,
+monte-alban,17.04,-96.77,2,-500,500,850,,,draft-urban,medium,,iberia 1580,
+teotihuacan,19.69,-98.84,1,-100,450,600,,,draft-urban,medium,,iberia 1521,1910
 tikal,17.22,-89.62,1,-600,750,900,1000,1848,draft-urban,medium,
 calakmul,18.10,-89.81,2,-500,650,900,1000,1931,draft-urban,low,
 palenque,17.48,-92.05,2,-100,700,800,900,1773,draft-urban,medium,
 copan,14.84,-89.14,2,400,750,900,1000,1839,draft-urban,medium,
-chichen-itza,20.68,-88.57,1,600,1000,1250,,,draft-urban,medium,
-mayapan,20.63,-89.46,2,1220,1350,1450,,,draft-urban,medium,
+chichen-itza,20.68,-88.57,1,600,1000,1250,,,draft-urban,medium,,iberia 1533,
+mayapan,20.63,-89.46,2,1220,1350,1450,,,draft-urban,medium,,iberia 1566,
 cholula,19.06,-98.30,2,-300,600,,,,draft-urban,medium,
-tula,20.06,-99.34,2,900,1100,1150,,,draft-urban,medium,
+tula,20.06,-99.34,2,900,1100,1150,,,draft-urban,medium,,iberia 1570,
 tzintzuntzan,19.63,-101.58,3,1325,1500,,,,draft-urban,low,
 tenochtitlan,19.43,-99.13,1,1325,1519,,,,cortes-letters,high,"The Mexica capital, built on an island in Lake Texcoco and joined to the shore by causeways. In 1519 it was one of the largest cities on Earth, bigger than any in Spain. Cortés's forces and their allies destroyed it in 1521, and Mexico City was built on the ruins."
 cahokia,38.66,-90.06,2,800,1100,1350,,,pauketat,medium,"The largest city north of Mexico, around 1100 home to perhaps 10,000–20,000 people beneath a 30-metre earthen mound. By about 1350 it was empty. The mounds stayed, and later peoples and settlers saw them, but who built them was argued over for centuries."
 chaco,36.06,-107.96,2,850,1100,1150,,,draft-urban,medium,"The great houses of Chaco Canyon, the largest of them Pueblo Bonito with some 650 rooms rising four or five storeys, at the centre of roads running straight across the desert. Abandoned in the twelfth century; a US Army survey described them in 1849."
 merida,20.97,-89.62,2,1542,1900,,,,restall-maya,high,"Founded by Francisco de Montejo the Younger in 1542 on the Maya city of T'hó, and built from the stones of its pyramids. The capital of colonial Yucatán, and in the henequen boom of the late 1800s one of the richest cities in Mexico."
-uxmal,20.36,-89.77,2,500,900,1200,,,stephens-yucatan,medium,"The Puuc city of the Xiu, with its Pyramid of the Magician and the long Governor's Palace, among the finest buildings of the Maya. It declined after about 1100, but was never forgotten: friars visited in 1588, and Stephens and Catherwood drew it in 1841."
-tulum,20.21,-87.43,2,1200,1450,1600,,,bernal-diaz,medium,"A walled Maya port on a cliff above the Caribbean, a station of the canoe trade along the coast. Juan de Grijalva's men sailed past in 1518 and thought it a town as large as Seville. It emptied in the decades after the conquest."
-mitla,16.93,-96.36,2,-500,1300,1550,,,marcus-flannery,medium,"The Zapotec city of the dead, its palaces covered in stone mosaics of fretwork like woven cloth, where the high priest of the Zapotec lived. The palaces fell out of use after the conquest; the town of San Pablo Villa de Mitla lives on around them."
-paquime,30.37,-107.95,2,1130,1300,1450,,,dipeso-paquime,medium,"Paquimé, in the Casas Grandes valley: adobe apartment blocks many storeys high, ball courts, and pens where scarlet macaws were bred for their feathers and traded north to the Pueblos. Burned and left about 1450; Francisco de Ibarra's men saw its ruins in 1565."
+uxmal,20.36,-89.77,2,500,900,1200,,,stephens-yucatan,medium,"The Puuc city of the Xiu, with its Pyramid of the Magician and the long Governor's Palace, among the finest buildings of the Maya. It declined after about 1100, but was never forgotten: friars visited in 1588, and Stephens and Catherwood drew it in 1841.",iberia 1588 britain 1843,
+tulum,20.21,-87.43,2,1200,1450,1600,,,bernal-diaz,medium,"A walled Maya port on a cliff above the Caribbean, a station of the canoe trade along the coast. Juan de Grijalva's men sailed past in 1518 and thought it a town as large as Seville. It emptied in the decades after the conquest.",britain 1843,
+mitla,16.93,-96.36,2,-500,1300,1550,,,marcus-flannery,medium,"The Zapotec city of the dead, its palaces covered in stone mosaics of fretwork like woven cloth, where the high priest of the Zapotec lived. The palaces fell out of use after the conquest; the town of San Pablo Villa de Mitla lives on around them.",iberia 1580,
+paquime,30.37,-107.95,2,1130,1300,1450,,,dipeso-paquime,medium,"Paquimé, in the Casas Grandes valley: adobe apartment blocks many storeys high, ball courts, and pens where scarlet macaws were bred for their feathers and traded north to the Pueblos. Burned and left about 1450; Francisco de Ibarra's men saw its ruins in 1565.",iberia 1565,
 yaxchilan,16.9,-90.97,2,359,750,810,1000,1882,maudslay-yaxchilan,medium,"A Maya kingdom in a loop of the Usumacinta, famous for its carved lintels: Lady K'ab'al Xook drawing a thorned rope through her tongue, before her husband Itzamnaaj Bahlam III. The Lacandón Maya still came to pray there when Maudslay and Charnay arrived in 1882."
 quirigua,15.27,-89.04,2,426,750,900,1000,1840,stephens-central-america,medium,"A small Maya kingdom on the Motagua that in 738 captured and beheaded the king of its overlord Copán, then raised the tallest stelae in the Maya world. Catherwood drew them in 1840, in the forest of a banana valley."
 naranjo,17.13,-89.25,3,-500,700,900,1000,1905,maler-naranjo,low,"Sa'aal, the Maya kingdom east of Tikal, where Lady Six Sky of Dos Pilas arrived in 682 to refound the dynasty and ruled for her young son. Teobert Maler mapped its ruins in 1905."
@@ -258,10 +260,10 @@ edzna,19.6,-90.23,3,-400,700,1450,1500,1907,sharer,low,"A Maya city on the plain
 el-tajin,20.45,-97.38,2,600,900,1200,1300,1785,ruiz-tajin,medium,"The city of the Totonac lowlands, named for the god of thunder, with its Pyramid of the Niches, 365 square windows in the stone, and some twenty ball courts. Lost in the forest until a tobacco inspector came upon it in 1785."
 ciudad-perdida,11.04,-73.93,2,800,1300,1600,1650,1972,soto-teyuna,medium,"Teyuna, a Tairona town of stone terraces and stairways deep in the Sierra Nevada de Santa Marta, reached by some 1,200 steps through the cloud forest. Left after the Spanish wars; treasure hunters found it in 1972. The Kogi, Arhuaco and Wiwa, the Tairona's descendants, had always known it."
 mesa-verde,37.17,-108.47,3,1190,1260,1300,1400,1888,draft-urban,low,
-chan-chan,-8.11,-79.07,1,850,1400,1500,,,draft-urban,medium,
-tiwanaku,-16.55,-68.67,2,110,800,1000,,,draft-urban,medium,
+chan-chan,-8.11,-79.07,1,850,1400,1500,,,draft-urban,medium,,iberia 1535,
+tiwanaku,-16.55,-68.67,2,110,800,1000,,,draft-urban,medium,,iberia 1549,
 quilmes,-26.47,-66.03,3,850,1500,1666,,,lorandi-calchaqui,medium,"A walled town of stone houses climbing a hillside in the Calchaquí valleys, home to perhaps five thousand people. The Quilmes held out against the Spanish for more than a century; in 1666 the survivors were marched some 1,500 km to a reduction near Buenos Aires, which still bears their name."
-huari,-13.06,-74.20,2,500,800,1000,,,draft-urban,medium,
+huari,-13.06,-74.20,2,500,800,1000,,,draft-urban,medium,,iberia 1549,
 cuzco,-13.53,-71.97,1,1100,1500,,,,draft-urban,medium,
 machu-picchu,-13.16,-72.55,3,1450,1500,1572,1600,1911,bingham,medium,"A royal estate built for the Inca emperor Pachacuti in the mountains above the Urubamba. It was left around the time of the Spanish conquest and never found by the Spanish. Local farmers knew it well; Hiram Bingham's photographs made it known to the outside world in 1911–1913."
 lima,-12.05,-77.04,2,1535,,,,,draft-urban,high,
@@ -287,7 +289,7 @@ rio,-22.91,-43.17,1,1565,1900,,,,draft-urban,high,
 buenos-aires,-34.60,-58.38,1,1580,1950,,,,draft-urban,high,
 santiago,-33.45,-70.67,2,1541,,,,,draft-urban,high,
 # ── Oceania ──
-nan-madol,6.84,158.33,2,1180,1400,1628,,,kirch,medium,"Nearly a hundred artificial islets of stacked basalt columns off Pohnpei, the seat of the Saudeleur dynasty that ruled the island until about 1628. The only city of stone in the Pacific islands; Pohnpeians say it was raised by sorcery."
+nan-madol,6.84,158.33,2,1180,1400,1628,,,kirch,medium,"Nearly a hundred artificial islets of stacked basalt columns off Pohnpei, the seat of the Saudeleur dynasty that ruled the island until about 1628. The only city of stone in the Pacific islands; Pohnpeians say it was raised by sorcery.",britain 1836,
 lapaha,-21.15,-175.12,3,1200,1400,,,,kirch,low,
 taputapuatea,-16.83,-151.36,3,1000,1600,,,,kirch,low,"A great marae (sacred meeting ground) on Raʻiātea, the spiritual centre of East Polynesian voyaging. Navigators from across the region came here; stones from it were carried to found new marae on other islands."
 honolulu,21.31,-157.86,2,1200,,,,,kirch,low,
@@ -300,7 +302,7 @@ ur,30.96,46.10,2,-3800,-2100,-500,-300,1922,draft-urban,medium,
 uruk,31.32,45.64,2,-4500,-2900,300,600,1850,draft-urban,medium,
 hattusa,40.02,34.62,2,-1650,-1300,-1180,-1000,1834,draft-urban,medium,
 sardis,38.49,28.04,2,-1200,-550,1402,,,draft-urban,medium,
-pergamon,39.13,27.18,2,-300,150,1300,,,draft-urban,medium,
+pergamon,39.13,27.18,2,-300,150,1300,,,draft-urban,medium,,rome 1431 germany 1878,
 rhodes,36.43,28.22,2,-408,-200,,,,draft-urban,medium,
 byblos,34.12,35.65,3,-5000,-2000,,,,draft-urban,medium,
 ugarit,35.60,35.78,3,-6000,-1300,-1185,-1000,1928,draft-urban,medium,
@@ -412,10 +414,10 @@ tuban,-6.9,112.05,3,1050,1400,,,,yuanshi,low,
 # ── Before 500 BCE: Bronze and Iron Age cities ──
 erlitou,34.7,112.69,3,-1900,-1700,-1500,-1000,1959,draft-urban,medium,
 zhengzhou-shang,34.76,113.68,3,-1600,-1450,-1300,-1000,1950,draft-urban,medium,
-haojing,34.23,108.77,2,-1046,-800,-771,,,draft-urban,medium,
+haojing,34.23,108.77,2,-1046,-800,-771,,,draft-urban,medium,,,1955
 sanxingdui,30.99,104.2,3,-1700,-1200,-1000,-800,1929,draft-urban,medium,
 mari,34.55,40.89,2,-2900,-1800,-1759,-500,1933,draft-urban,medium,
-assur,35.46,43.26,2,-2600,-800,-614,,,draft-urban,medium,
+assur,35.46,43.26,2,-2600,-800,-614,,,draft-urban,medium,,britain 1847,
 dilmun,26.23,50.52,3,-2300,-2000,,,,draft-urban,medium,
 akhetaten,27.65,30.9,2,-1346,-1340,-1332,-1300,1887,draft-urban,medium,
 pi-ramesses,30.8,31.83,3,-1280,-1200,-1070,-1000,1966,draft-urban,medium,

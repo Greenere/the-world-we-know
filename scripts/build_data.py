@@ -985,18 +985,21 @@ def load_cities(sources, grid: Grid):
             city["subtype"] = subtype
         # found: "europe 1855 russia 1643". A landmark one viewpoint came upon only long after it knew the
         # country around it (Victoria Falls, in a Zambezi Europe had heard of since the Portuguese).
-        if kind:
-            widely = parse_year(row.get("widely", ""), f"{where} widely")
-            if widely is None:
-                fail(f"{where}: a landmark needs a 'widely' year, when it became known beyond its neighbours")
-            else:
-                city["widely"] = round(widely.mid)
-            if row.get("city"):
-                city["host"] = row["city"]
+        # A ruin, like a landmark, may say when it became known beyond its neighbours, and who came upon it.
+        ruin = not kind and "abandoned" in dates
+        widely = parse_year(row.get("widely", ""), f"{where} widely")
+        if kind and widely is None:
+            fail(f"{where}: a landmark needs a 'widely' year, when it became known beyond its neighbours")
+        elif widely is not None and not (kind or ruin):
+            fail(f"{where}: only a landmark or an abandoned city has a 'widely' year")
+        elif widely is not None:
+            city["widely"] = round(widely.mid)
+        if kind and row.get("city"):
+            city["host"] = row["city"]
         if row.get("found"):
             parts = row["found"].split()
-            if len(parts) % 2 or not kind:
-                fail(f"{where}: found must be pairs of 'viewpoint year', on a landmark")
+            if len(parts) % 2 or not (kind or ruin):
+                fail(f"{where}: found must be pairs of 'viewpoint year', on a landmark or an abandoned city")
             else:
                 city["found"] = {parts[i]: int(parts[i + 1]) for i in range(0, len(parts), 2)}
         if row.get("story"):
