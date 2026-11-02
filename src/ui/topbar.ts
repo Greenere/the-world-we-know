@@ -174,11 +174,10 @@ export class TopBar {
       ),
       // About, which also explains how to read the fog.
       about,
-      // Star on GitHub. Until the repository is public it is a link without a destination, with its own tooltip
-      // (a disabled button would show none); give it an href and drop `soon` once it opens.
+      // Star on GitHub: the source, in a new tab.
       h(
-        'a.tool.tool-github.soon',
-        {role: 'link', tabindex: '0', 'aria-disabled': 'true', 'aria-label': `${t('Star on GitHub')}: ${t('To be open-sourced…')}`, 'data-tip': t('To be open-sourced…')},
+        'a.tool.tool-github',
+        {href: 'https://github.com/Greenere/the-world-we-know', target: '_blank', rel: 'noopener', title: t('Star on GitHub'), 'aria-label': t('Star on GitHub')},
         h('span.tool-icon', {html: icons.github}),
       ),
     );

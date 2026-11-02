@@ -366,52 +366,6 @@ kbd {
   color: var(--ink);
 }
 
-/* Not open yet: quiet, inert, with a tooltip saying so. */
-/* The contents are dimmed rather than the button, so the tooltip stays crisp. */
-.tool-github.soon {
-  position: relative;
-  cursor: default;
-}
-
-.tool-github.soon > span {
-  opacity: 0.55;
-  transition: opacity 0.15s;
-}
-
-.tool-github.soon:hover {
-  transform: none;
-}
-
-.tool-github.soon:hover > span {
-  opacity: 0.75;
-}
-
-.tool-github.soon::after {
-  content: attr(data-tip);
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  padding: 5px 10px;
-  border-radius: 3px;
-  white-space: nowrap;
-  font-size: 13.5px;
-  font-style: italic;
-  color: var(--paper);
-  background: var(--ink);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  transform: translateY(-3px);
-  transition: opacity 0.15s, transform 0.15s;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.tool-github.soon:hover::after,
-.tool-github.soon:focus-visible::after {
-  opacity: 1;
-  transform: none;
-}
-
 /* ── Timeline ───────────────────────────────────────────────────────────── */
 
 .timeline {

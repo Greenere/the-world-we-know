@@ -119,7 +119,6 @@ export const zhUi: Record<string, string> = {
   'with {wonders}': '有{wonders}',
   'in {city}': '在{city}',
   'Star on GitHub': '在 GitHub 上加星',
-  'To be open-sourced…': '即将开源…',
   'Through the ages': '历代',
   'Frontier wall': '边墙',
   Waterway: '水道',
