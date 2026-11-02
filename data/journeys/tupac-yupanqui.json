@@ -17,7 +17,7 @@
     {"year": 1480, "place": "Cusco", "lat": -13.53, "lon": -71.97, "note": "Home after almost a year at sea, the chroniclers say.", "city": "cuzco", "by": "land", "confidence": "low"}
   ],
   "informs": [
-    {"region": "andes-north", "level": 4, "homeKnows": 1471, "confidence": "high", "note": "Chinchaysuyu reaches Quito"},
+    {"region": "ecuador", "level": 4, "homeKnows": 1471, "confidence": "high", "note": "Chinchaysuyu reaches Quito"},
     {"region": "galapagos", "level": 1, "homeKnows": 1481, "confidence": "low", "note": "Ninachumbi and Auachumbi"}
   ]
 }

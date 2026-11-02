@@ -433,7 +433,8 @@ iberia,peru,1532..1535,4,high,hoc,
 france,canada-east,1534..1535,3,high,hoc,Cartier on the St Lawrence
 iberia,atacama-chile,1536..1541,3,high,hoc,
 iberia,pampas,1536..1580,3,medium,hoc,
-iberia,andes-north,1538,4,high,hoc,
+iberia,colombia-andes,1538,4,high,hoc,
+iberia,spanish-main,1538,4,high,hoc,
 iberia,north-america-west,1540,2,medium,hoc,
 iberia,mississippi,1541,2,medium,hoc,De Soto
 europe,north-america,1550,2,medium,hoc,
@@ -988,10 +989,12 @@ polynesia,tonga,1150,3,low,kirch,West Polynesia seen from the new homeland
 polynesia,samoa,1150,3,low,kirch,
 polynesia,fiji,1150,2,low,kirch,
 polynesia,west-polynesia-sea,1150,3,low,kirch,
-polynesia,andes-north,1150..1230,2,low,ioannidis-2020,Contact with South America; the kūmara (sweet potato)
+polynesia,ecuador,1150..1230,2,low,ioannidis-2020,Contact with South America; the kūmara (sweet potato)
+polynesia,colombia-andes,1150..1230,2,low,ioannidis-2020,Contact with South America; the kūmara (sweet potato)
 polynesia,peru,1150..1230,1,low,ioannidis-2020,
 # The longest voyages cease, c. 1350–1500
-polynesia,andes-north,1350..1450,0,low,kirch,Contact with South America is not kept up
+polynesia,ecuador,1350..1450,0,low,kirch,Contact with South America is not kept up
+polynesia,colombia-andes,1350..1450,0,low,kirch,Contact with South America is not kept up
 polynesia,peru,1350..1450,0,low,kirch,
 polynesia,hawaii,1350..1450,1,low,kirch,Remembered in chants and genealogies
 polynesia,rapa-nui,1350..1450,1,low,kirch,
@@ -1569,7 +1572,7 @@ mexica,gulf-of-mexico,-500,2,medium,hoc,
 mexica,gulf-of-mexico,1450,3,medium,codex-mendoza,The Huastec and Totonac coasts
 mexica,north-america-west,900,1,low,hoc,Turquoise from the far north
 mexica,rio-grande-pueblos,1000,2,low,hoc,Turquoise mines of the north
-mexica,andes-north,800,1,low,hoc,Metalworking arrives from the south by sea
+mexica,ecuador,800,1,low,hoc,Metalworking arrives from the south by sea
 mexica,caribbean,1519,2,medium,sahagun,
 mexica,europe,1519,1,high,sahagun,Strangers from the east
 mexica,europe,1528..1530,2,high,weiditz,Nahua nobles travel to Spain
@@ -1586,7 +1589,7 @@ inca,peru,-500,3,medium,moseley,Chavín's pilgrims from coast and highland
 inca,peru,700,4,medium,moseley,Wari's roads
 inca,peru,1470,5,medium,cieza,"The Inca census, roads and khipu"
 inca,andes-north,-500,1,low,moseley,
-inca,andes-north,1000,2,low,moseley,Spondylus shells from the coast of Ecuador
+inca,ecuador,1000,2,low,moseley,Spondylus shells from the coast of Ecuador
 inca,atacama-chile,-500,1,low,moseley,
 inca,atacama-chile,500,3,medium,moseley,Tiwanaku's colonies
 inca,atacama-chile,1490,4,medium,cieza,The empire reaches the Maule
@@ -3163,7 +3166,7 @@ mexica,california,1848,3,high,guardino-2017,California is lost to the United Sta
 mexica,gaul,1862,3,high,martinez-galicia,The French intervention
 mexica,alps-danube,1864,3,high,martinez-galicia,Maximilian of Austria learns Nahuatl from Faustino Galicia Chimalpopoca
 maya,central-america,1524,4,high,kaqchikel-annals,Alvarado's conquest of the highlands
-maya,andes-north,1534,2,high,lovell-alvarado,Conscripts from Guatemala march with Alvarado to Quito
+maya,ecuador,1534,2,high,lovell-alvarado,Conscripts from Guatemala march with Alvarado to Quito
 maya,peru,1534,1,medium,lovell-alvarado,
 maya,peru,1580,2,medium,macleod-1973,Ships from Realejo carry Guatemala's trade to Peru
 inca,amazon,1541,3,high,hemming-inca,Thousands of Andean porters go with Gonzalo Pizarro to the land of cinnamon

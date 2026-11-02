@@ -242,6 +242,7 @@ class Region:
     label: tuple[float, float] | None
     body: str | None
     hidden: bool
+    warp: bool = False
     area: float = 0.0
     cells: np.ndarray | None = None
     idx: int = 0
@@ -279,7 +280,7 @@ def load_regions(grid: Grid) -> list[Region]:
         if surface not in ("any", "land", "sea", "space"):
             fail(f"regions.geojson: {rid} has unknown surface {surface!r}")
         label = tuple(p["label"]) if p.get("label") else None
-        regions.append(Region(rid, p.get("name", rid), surface, geom, label, p.get("body"), bool(p.get("hidden"))))
+        regions.append(Region(rid, p.get("name", rid), surface, geom, label, p.get("body"), bool(p.get("hidden")), bool(p.get("warp"))))
 
     n = len(grid.cells)
     # Regions are drawn as coarse polygons; testing every cell at a gently displaced point turns their
@@ -294,7 +295,8 @@ def load_regions(grid: Grid) -> list[Region]:
             continue
         shapely.prepare(r.geom)
         r.area = equal_area(r.geom)
-        tiny = r.area < WARP_MIN_AREA
+        # A part cut from a larger region ("warp": true) keeps its frontiers, so the parts still tile it.
+        tiny = r.area < WARP_MIN_AREA and not r.warp
         xs, ys = (grid.lon, grid.lat) if tiny else (wlon, wlat)
         inside = np.zeros(n, dtype=bool)
         for shift in (0.0, 360.0, -360.0):

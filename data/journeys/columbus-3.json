@@ -17,6 +17,6 @@
     {"year": 1500, "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Arrested by Francisco de Bobadilla and shipped home in chains.", "city": "gades", "date": "November 1500"}
   ],
   "informs": [
-    {"region": "andes-north", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "Columbus at the Gulf of Paria; Ojeda and Vespucci"}
+    {"region": "spanish-main", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "Columbus at the Gulf of Paria; Ojeda and Vespucci"}
   ]
 }

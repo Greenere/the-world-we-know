@@ -22,7 +22,7 @@
     {"year": 1500, "date": "June 1500", "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Home with pearls and some two hundred captives, sold as slaves.", "by": "sea"}
   ],
   "informs": [
-    {"region": "andes-north", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "The coast of Venezuela charted"},
+    {"region": "spanish-main", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "The coast of Venezuela charted"},
     {"region": "caribbean", "level": 3, "homeKnows": 1500, "confidence": "high"},
     {"region": "orinoco", "level": 2, "homeKnows": 1500, "confidence": "medium"},
     {"region": "amazon-river", "level": 1, "homeKnows": 1500, "confidence": "low", "note": "A sea of fresh water off a great river"}

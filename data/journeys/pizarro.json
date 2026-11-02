@@ -20,6 +20,6 @@
   ],
   "informs": [
     {"region": "peru", "level": 4, "homeKnows": 1534, "confidence": "high"},
-    {"region": "andes-north", "level": 4, "homeKnows": 1534, "confidence": "medium"}
+    {"region": "ecuador", "level": 4, "homeKnows": 1534, "confidence": "medium"}
   ]
 }
