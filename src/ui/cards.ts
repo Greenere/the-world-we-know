@@ -1,10 +1,10 @@
-import type {AppData} from '../data';
-import {dataUrl, landmarkKnown, loadPictures, nameFor, phaseAt, shortCitation} from '../data';
+import type {AppData, Books} from '../data';
+import {bookShelf, dataUrl, landmarkKnown, loadBooks, loadPictures, nameFor, phaseAt, shortCitation} from '../data';
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
 import {formatRange, formatYear, mainScale, START} from '../time';
-import type {City, Depiction, DepictionKind, Invention, Journey, Living, NameEntry, Region, RegionEvent, VpId} from '../types';
+import type {Book, City, Depiction, DepictionKind, Invention, Journey, Living, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
 import {h} from './dom';
@@ -69,6 +69,8 @@ export class Cards {
   /** The pending swap from one card's words to the next. */
   private leaving = 0;
   private lightbox: HTMLElement | null = null;
+  /** The Books shelf, once fetched. */
+  private books: Books | null = null;
 
   constructor(
     private data: AppData,
@@ -79,6 +81,9 @@ export class Cards {
       /** Open a journey, at the stop where it comes to this place when there is one. */
       openJourney(id: string, at?: JourneyAt): void;
       openInvention(id: string): void;
+      openBook(id: string): void;
+      /** Show a region as one viewpoint knew it in a year (`*`: the shared modern map, as the current one). */
+      showRegionAs(vp: VpId | '*', region: string, year: number): void;
       openLiving(id: string, year?: number): void;
       pickArrival(index: number): void;
       openCity(id: string): void;
@@ -100,11 +105,11 @@ export class Cards {
   }
 
   close() {
-    this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
+    this.store.set({region: null, regionCell: null, city: null, invention: null, book: null, living: null});
   }
 
   update(s: State) {
-    const subject = s.invention ? `invention:${s.invention}` : s.living ? `living:${s.living}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
+    const subject = s.invention ? `invention:${s.invention}` : s.book ? `book:${s.book}` : s.living ? `living:${s.living}` : s.city ? `city:${s.city}` : s.region ? `region:${s.region}:${s.regionCell}` : '';
     this.el.hidden = !subject;
     document.body.classList.toggle('has-card', !!subject || !!s.journey);
     if (!subject) {
@@ -118,8 +123,9 @@ export class Cards {
     const key = `${subject}|${s.vps.join()}`;
     if (key !== this.key) {
       const sameSubject = this.key.split('|')[0] === subject;
-      const changingInvention = !sameSubject && this.key.startsWith('invention:') && subject.startsWith('invention:');
-      const landmark = s.city && !s.invention && !s.living ? this.actions.landmarkNeighbors(s.city) : null;
+      const paged = (k: string) => k.startsWith('invention:') || k.startsWith('book:');
+      const changingInvention = !sameSubject && paged(this.key) && paged(subject);
+      const landmark = s.city && !s.invention && !s.book && !s.living ? this.actions.landmarkNeighbors(s.city) : null;
       const changingLandmark = !sameSubject && !!landmark && this.key.startsWith('city:') && !!this.actions.landmarkNeighbors(this.key.split('|')[0].slice(5));
       if (!subject.startsWith('invention:')) this.inventionPlate = null;
       if (!landmark) this.landmarkPlate = null;
@@ -129,6 +135,20 @@ export class Cards {
       if (s.invention) {
         const x = this.data.inventionById.get(s.invention);
         if (x) nodes = this.invention(x);
+      } else if (s.book) {
+        const b = this.shelf()?.byId.get(s.book);
+        // Until the shelf arrives, the card waits; a bound book opens as its invention.
+        if (!b) {
+          this.key = this.books ? key : '';
+          if (this.books) queueMicrotask(() => this.close());
+          return;
+        }
+        if (b.invention) {
+          this.key = '';
+          queueMicrotask(() => this.actions.openInvention(b.invention!));
+          return;
+        }
+        nodes = this.book(b);
       } else if (s.living) {
         const x = this.data.livingById.get(s.living);
         if (x) nodes = this.living(x, s);
@@ -376,6 +396,41 @@ export class Cards {
           h('span.chip-icon', {html: inventionIcons[x.category] ?? icons.invention}),
           tx.invention(x.id, 'name', x.name),
           h('span.chip-meta', formatRange(x.year)),
+        );
+      }),
+    );
+  }
+
+  /** Cities and landmarks: a ruin, a wonder or a living city, each with its sign. */
+  private placeChips(ids: string[]): HTMLElement {
+    const s = this.store.state;
+    return h(
+      'div.chips',
+      ids.map(id => {
+        const c = this.data.cityById.get(id);
+        if (!c) return null;
+        const icon = c.kind === 'natural' ? naturalIcons[c.subtype ?? ''] ?? icons.natural : c.kind === 'built' ? icons.built : c.dates.abandoned !== undefined ? icons.ruin : icons.city;
+        return h(
+          'button.chip.wonder-chip',
+          {type: 'button', onclick: () => this.actions.openCity(id)},
+          h('span.chip-icon', {html: icon}),
+          tx.name(nameFor(c.names, s.vps[0], s.year, c.id)?.name ?? c.id),
+        );
+      }),
+    );
+  }
+
+  private livingChips(ids: string[]): HTMLElement {
+    return h(
+      'div.chips',
+      ids.map(id => {
+        const x = this.data.livingById.get(id);
+        if (!x) return null;
+        return h(
+          'button.chip.living-chip',
+          {type: 'button', class: `living-${x.kind}`, onclick: () => this.actions.openLiving(id)},
+          h('span.chip-icon', {html: livingIcons[x.kind]}),
+          tx.living(x.id, 'name', x.name),
         );
       }),
     );
@@ -670,7 +725,10 @@ export class Cards {
       plate.el.classList.add('plate-invention');
       plate.show(x.mid);
     }
-    const all = this.data.inventions;
+    // A bound book is on the shelf: its card says what it brought, and turns to the books beside it.
+    const books = x.book ? this.shelf() : null;
+    const book = x.book ? books?.byId.get(x.book) : undefined;
+    const all = this.data.inventions.filter(o => !o.book);
     const i = all.indexOf(x);
     const nav = (other: Invention | undefined, dir: string) =>
       other
@@ -683,7 +741,9 @@ export class Cards {
           )
         : h('span');
     return [
-      h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: inventionIcons[x.category] ?? icons.invention}), `${t('Invention')} · ${CATEGORY[x.category] ?? x.category}`),
+      x.book
+        ? h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: icons.book}), `${t('Book')} · ${CATEGORY[x.category] ?? x.category}`)
+        : h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: inventionIcons[x.category] ?? icons.invention}), `${t('Invention')} · ${CATEGORY[x.category] ?? x.category}`),
       h('h2.card-title', tx.invention(x.id, 'name', x.name), x.native && x.native !== tx.invention(x.id, 'name', x.name) ? h('span.native', ` ${x.native}`) : null),
       h(
         'p.inv-meta',
@@ -700,9 +760,136 @@ export class Cards {
       h('p.card-story', tx.invention(x.id, 'summary', x.summary)),
       h('h3.card-h', t('What it changed')),
       h('p.inv-changed', tx.invention(x.id, 'changed', x.changed)),
+      ...(book ? this.brought(book) : []),
       h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `${t('Source:')} ${shortCitation(this.data.sources, x.source)} · ${t('{level} confidence', {level: t(x.confidence)})}`),
-      h('div.inv-nav', nav(all[i - 1], 'prev'), nav(all[i + 1], 'next')),
+      book && books ? this.bookNav(books, book) : x.book ? null : h('div.inv-nav', nav(all[i - 1], 'prev'), nav(all[i + 1], 'next')),
+    ].filter(Boolean) as Node[];
+  }
+
+  // ── Book ─────────────────────────────────────────────────────────────────
+
+  /** The shelf if it has arrived; otherwise fetch it and draw the card again when it does. */
+  private shelf(): Books | null {
+    if (!this.books) {
+      void loadBooks(this.data).then(b => {
+        if (!b || this.books) return;
+        this.books = b;
+        this.key = '';
+        this.update(this.store.state);
+      });
+    }
+    return this.books;
+  }
+
+  private book(b: Book): Node[] {
+    const vp = b.vp ? this.data.vp[b.vp] : null;
+    const title = tx.book(b.id, 'title', b.title);
+    const author = tx.book(b.id, 'author', b.author);
+    const src = this.data.sources[b.id];
+    return [
+      h('div.card-kicker.inv-kicker', h('span.kicker-icon', {html: b.kind === 'work' ? icons.book : icons.study}), t(b.kind === 'work' ? 'Work of its time' : 'Modern study')),
+      // The original title can be a whole phrase: on its own line beneath, free to wrap.
+      h('h2.card-title', title, title !== b.title ? h('span.native.book-original', b.title) : null),
+      h(
+        'p.inv-meta',
+        b.year !== undefined ? h('strong', b.kind === 'work' ? formatYear(b.year) : String(b.year)) : null,
+        b.year !== undefined && author ? ' · ' : null,
+        author || null,
+        vp ? ' · ' : null,
+        vp ? h('span', {style: `color:${vp.color}`}, tx.viewpoint(vp.id, 'longName', vp.longName)) : null,
+      ),
+      h('p.book-citation', src?.url ? h('a', {href: src.url, target: '_blank', rel: 'noopener'}, b.citation) : b.citation),
+      ...this.brought(b),
+      this.bookNav(this.books!, b),
     ];
+  }
+
+  /** What a book brought to the atlas: the regions it made known to each viewpoint, and the journeys, places,
+   * inventions, plants and animals and moments it is the source for. */
+  private brought(b: Book): Node[] {
+    const out: Node[] = [];
+    const sub = (label: string, body: Node) => out.push(h('h4.book-sub', label), body);
+    if (b.regions?.length) {
+      // Its own viewpoint first, then whoever it told the most.
+      const by = new Map<VpId | '*', [string, number, number][]>();
+      for (const [vp, rid, y, level] of b.regions) {
+        if (!this.data.regionById.has(rid) || this.data.regionById.get(rid)!.hidden) continue;
+        by.set(vp, [...(by.get(vp) ?? []), [rid, y, level]]);
+      }
+      const order = [...by.keys()].sort((p, q) => Number(q === b.vp) - Number(p === b.vp) || by.get(q)!.length - by.get(p)!.length);
+      // A short list shows whole; a long one keeps the first viewpoint open and folds the rest behind their counts.
+      const fold = b.regions.length > 14;
+      sub(
+        t('Regions it made known'),
+        h(
+          'div.book-regions',
+          order.map((vp, k) => {
+            const v = vp === '*' ? null : this.data.vp[vp];
+            return h(
+              'details.book-vp',
+              {style: v ? `--vp:${v.color}` : '', open: !fold || k === 0},
+              h('summary.book-vp-name', v ? tx.viewpoint(v.id, 'name', v.name) : t('The shared map'), h('span.jp-era-n', String(by.get(vp)!.length))),
+              h(
+                'div.chips',
+                by.get(vp)!.map(([rid, y, level]) => {
+                  const r = this.data.regionById.get(rid)!;
+                  return h(
+                    'button.chip.region-chip',
+                    {type: 'button', style: v ? `--chip:${v.color}` : '', title: `${levelName(vp === '*' ? this.store.state.vps[0] : vp, level)} · ${formatYear(y)}`, onclick: () => this.actions.showRegionAs(vp, rid, y)},
+                    h('span.chip-level', {'aria-hidden': 'true', style: `--lv:${level / 5}`}),
+                    tx.region(r.id, r.name),
+                    h('span.chip-meta', formatYear(y)),
+                  );
+                }),
+              ),
+            );
+          }),
+        ),
+      );
+    }
+    if (b.journeys?.length) sub(t('Journeys it tells of'), this.journeyChips(b.journeys, {}));
+    if (b.places?.length) sub(t('Places'), this.placeChips(b.places));
+    const inventions = b.inventions?.filter(id => id !== b.invention) ?? [];
+    if (inventions.length) sub(t('Inventions'), this.inventionChips(inventions));
+    if (b.living?.length) sub(t('Plants and animals'), this.livingChips(b.living));
+    if (b.moments?.length) {
+      sub(
+        t('On the timeline'),
+        h(
+          'ul.book-moments',
+          b.moments.map(([vp, y, label]) =>
+            h(
+              'li',
+              h(
+                'button.linkish',
+                {type: 'button', style: `--vp:${this.data.vp[vp].color}`, onclick: () => this.store.set({vps: [vp], compare: false, year: y, playing: false})},
+                h('span.book-moment-year', formatYear(y)),
+                ` ${tx.moment(label)}`,
+                h('span.arrival-vp', ` · ${vpName(this.data, vp)}`),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+    if (b.sketches) out.push(h('p.book-sketches', h('span.chip-icon', {html: icons.sketch}), t('Some of the imagined sketches are drawn after it.')));
+    return out.length ? [h('h3.card-h', t('What it brought')), ...out] : [];
+  }
+
+  private bookNav(books: Books, b: Book): HTMLElement {
+    const shelf = bookShelf(books);
+    const i = shelf.indexOf(b);
+    const nav = (other: Book | undefined, dir: string) =>
+      other
+        ? h(
+            'button.inv-nav-btn',
+            {type: 'button', title: tx.book(other.id, 'title', other.title), 'aria-keyshortcuts': dir === 'prev' ? 'ArrowLeft' : 'ArrowRight', onclick: () => this.actions.openBook(other.id)},
+            dir === 'prev' ? h('span', {html: icons.prev}) : null,
+            h('span.inv-nav-text', h('span.inv-nav-when', other.year === undefined ? '' : other.kind === 'work' ? formatYear(other.year) : String(other.year)), h('span.inv-nav-name', tx.book(other.id, 'title', other.title))),
+            dir === 'next' ? h('span', {html: icons.next}) : null,
+          )
+        : h('span');
+    return h('div.inv-nav', nav(shelf[i - 1], 'prev'), nav(shelf[i + 1], 'next'));
   }
 }
 

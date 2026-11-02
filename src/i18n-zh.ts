@@ -20,7 +20,7 @@ export const zhUi: Record<string, string> = {
   Kind: '类型',
   View: '视图',
   'Journeys and landmarks': '旅程与地标',
-  'Inventions, plants and animals': '发明与动植物',
+  'Inventions, books, plants and animals': '发明、典籍与动植物',
   Discoveries: '发现',
   Journeys: '探索',
   Inventions: '发明',
@@ -221,6 +221,32 @@ export const zhUi: Record<string, string> = {
   'Invented: ': '发明：',
   'Instruments and ideas that let people see, reach or record more of the world. Each marks its place of origin on the map for a century.':
     '让人们看到、到达或记录更多世界的仪器与观念。每一项都会在其发源地标记一个世纪。',
+
+  'Published: ': '刊行：',
+
+  // Books
+  Books: '典籍',
+  Book: '典籍',
+  'Work of its time': '当时之作',
+  'Works of their time': '当时之作',
+  'Modern study': '今人研究',
+  'Modern studies': '今人研究',
+  Whose: '出自',
+  'Find a book or an author…': '查找书名或作者…',
+  'Find a book': '查找典籍',
+  'No book matches.': '没有相符的典籍。',
+  'Loading…': '载入中…',
+  'The books could not be loaded.': '典籍未能载入。',
+  'The books this atlas is drawn from: works written in their own time, by when they were written, and the modern studies behind them. Open one to see what it brought.':
+    '本图集所依据的典籍：按成书年代排列的当时之作，以及其后的今人研究。打开一部，看它带来了什么。',
+  'What it brought': '它带来了什么',
+  'Regions it made known': '让人知晓的地域',
+  'The shared map': '共同的地图',
+  'Journeys it tells of': '记述的旅程',
+  Places: '地方',
+  'Plants and animals': '动植物',
+  'On the timeline': '时间轴上的时刻',
+  'Some of the imagined sketches are drawn after it.': '图集中的一些想象图依据此书绘成。',
 
   // Beyond Earth inset
   Earth: '地球',

@@ -21,6 +21,7 @@ export interface ZhContent {
   /** Keyed "landmark/phase". */
   phases: Record<string, {name?: string; note?: string}>;
   notes: Record<string, string>;
+  books: Record<string, {author?: string; title?: string}>;
   /** Every character used, for the map's label font atlas. */
   chars: string;
 }
@@ -129,6 +130,9 @@ export const tx = {
   },
   note(en: string): string {
     return (lang === 'zh' && zh?.notes[en]) || en;
+  },
+  book(id: string, field: 'author' | 'title', en: string): string {
+    return (lang === 'zh' && zh?.books?.[id]?.[field]) || en;
   },
   chars(): string {
     return zh?.chars ?? '';

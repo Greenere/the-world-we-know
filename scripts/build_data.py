@@ -18,6 +18,7 @@ import hashlib
 import shutil
 import json
 import math
+import re
 import sys
 import urllib.request
 from collections import defaultdict
@@ -517,8 +518,133 @@ def load_sources() -> dict[str, dict]:
             fail(f"sources.csv:{row['_line']}: duplicate id {row['id']}")
         if not row.get("citation"):
             fail(f"sources.csv:{row['_line']}: {row['id']} has no citation")
-        out[row["id"]] = {"citation": row["citation"], **({"url": row["url"]} if row.get("url") else {})}
+        if row.get("kind") not in SOURCE_KINDS:
+            fail(f"sources.csv:{row['_line']}: {row['id']} kind must be one of {', '.join(SOURCE_KINDS)}")
+        if row.get("viewpoint") and row["viewpoint"] not in ALL_VPS:
+            fail(f"sources.csv:{row['_line']}: unknown viewpoint {row['viewpoint']!r}")
+        doc = {"citation": row["citation"], "kind": row.get("kind")}
+        if row.get("url"):
+            doc["url"] = row["url"]
+        if row.get("year"):
+            doc["year"] = int(row["year"])
+        if row.get("viewpoint"):
+            doc["vp"] = row["viewpoint"]
+        out[row["id"]] = doc
     return out
+
+
+SOURCE_KINDS = ("work", "study", "record")
+
+
+def split_citation(c: str) -> tuple[str, str]:
+    """A modern study's author and title, from 'Author, Title (year)'."""
+    author, _, title = c.partition(", ")
+    if not title or author.startswith(("'", "The ", "A ")) or len(author) > 80:
+        author, title = "", c
+    title = re.sub(r",? \((?:[^()]*\d{4}[^()]*)\)$", "", title).strip(" ,.")
+    # An article: its own title, without the journal it appeared in.
+    quoted = re.match(r"^'(.+?)'(?=[ ,]|$)", title)
+    return author, quoted.group(1) if quoted else title
+
+
+def load_books(sources, events, journeys, cities, inventions, living, viewpoints) -> list[dict]:
+    """The Books shelf: the works of their time in data/books.csv and every modern study, each with what it
+    brought to the atlas: the regions it made known to each viewpoint, the journeys, places, inventions,
+    plants and animals and timeline moments it is the source for."""
+    shelf = {}
+    for row in read_csv(DATA / "books.csv"):
+        where = f"books.csv:{row['_line']}"
+        sid = row["id"]
+        if sources.get(sid, {}).get("kind") != "work":
+            fail(f"{where}: {sid!r} is not a work in sources.csv")
+            continue
+        also = row.get("also", "").split()
+        for a in also:
+            if sources.get(a, {}).get("kind") != "work":
+                fail(f"{where}: {a!r} is not a work in sources.csv")
+        shelf[sid] = {"author": row.get("author", ""), "title": row["title"], "ids": {sid, *also}}
+    titled = {}
+    for sid, src in sources.items():
+        if src["kind"] == "study":
+            author, title = split_citation(src["citation"])
+            # The same book cited under two ids is one book on the shelf.
+            if title in titled:
+                shelf[titled[title]]["ids"].add(sid)
+                continue
+            titled[title] = sid
+            shelf[sid] = {"author": author, "title": title, "ids": {sid}}
+    book_of = {i: b for b, x in shelf.items() for i in x["ids"]}
+    use = {b: defaultdict(set) for b in shelf}
+
+    def add(src, what, item):
+        if src in book_of:
+            use[book_of[src]][what].add(item)
+
+    # The regions each made known: per viewpoint, the furthest it took the region and the year it did.
+    reach = {b: {} for b in shelf}
+    for vp, by_region in events.items():
+        for rid, lst in by_region.items():
+            for e in lst:
+                b = book_of.get(e.source)
+                if b is None:
+                    continue
+                best = reach[b].get((vp, rid))
+                if best is None or e.level > best[1] or (e.level == best[1] and e.year < best[0]):
+                    reach[b][(vp, rid)] = (e.year, e.level)
+    for j in journeys:
+        for s in [j.get("source")] + [st.get("source") for st in j["stops"]] + [i.get("source") for i in j.get("informs", [])]:
+            add(s, "journeys", j["id"])
+    for c in cities:
+        add(c.get("source"), "places", c["id"])
+        for k in c.get("knownSource", []):
+            add(k, "places", c["id"])
+    for inv in inventions:
+        add(inv.get("source"), "inventions", inv["id"])
+        if inv.get("book"):
+            add(inv["book"], "inventions", inv["id"])
+    for x in living:
+        for s in [x.get("source")] + [e.get("source") for e in x["spread"]]:
+            add(s, "living", x["id"])
+    moments = defaultdict(list)
+    for v in viewpoints:
+        for m in v.get("moments", []):
+            if m.get("source") in book_of:
+                moments[book_of[m["source"]]].append([v["id"], m["year"], m["label"]])
+    for f in (DATA / "depictions").glob("*/*/subject.json"):
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        for e in doc.get(DEPICTION_KINDS.get(f.parent.parent.name, ""), []):
+            for sid in e.get("sources") or []:
+                if sid in book_of:
+                    use[book_of[sid]]["sketches"].add(1)
+    out = []
+    for b, x in shelf.items():
+        src = sources[b]
+        doc = {"id": b, "kind": src["kind"], "author": x["author"], "title": x["title"], "citation": src["citation"]}
+        for k in ("year", "vp", "url"):
+            if k in src:
+                doc[k] = src[k]
+        for inv in inventions:
+            if inv.get("book") == b:
+                doc["invention"] = inv["id"]
+        if x["ids"] - {b}:
+            doc["also"] = sorted(x["ids"] - {b})
+        regions = sorted(([vp, rid, round(y), lvl] for (vp, rid), (y, lvl) in reach[b].items()), key=lambda r: (r[2], r[0], r[1]))
+        if regions:
+            doc["regions"] = regions
+        for k in ("journeys", "places", "inventions", "living"):
+            if use[b][k]:
+                doc[k] = sorted(use[b][k])
+        if moments[b]:
+            doc["moments"] = moments[b]
+        if use[b]["sketches"]:
+            doc["sketches"] = True
+        out.append(doc)
+    out.sort(key=lambda d: (d["kind"] != "work", d.get("year", 0) if d["kind"] == "work" else 0, d["title"]))
+    # A source nothing cites brought nothing, and stays off the shelf.
+    unused = [d["id"] for d in out if not any(k in d for k in ("regions", "journeys", "places", "inventions", "living", "moments", "sketches"))]
+    if unused:
+        warn(f"books: {len(unused)} cite nothing in the atlas: {' '.join(unused[:12])}")
+    return [d for d in out if d["id"] not in unused]
 
 
 def check_ref(where: str, source: str | None, conf: str | None, sources: dict) -> int:
@@ -1002,6 +1128,13 @@ def load_cities(sources, grid: Grid):
                 fail(f"{where}: found must be pairs of 'viewpoint year', on a landmark or an abandoned city")
             else:
                 city["found"] = {parts[i]: int(parts[i + 1]) for i in range(0, len(parts), 2)}
+        if row.get("knownSource"):
+            if not (city.get("found") or "widely" in city):
+                fail(f"{where}: knownSource is the source for found or widely, which it lacks")
+            for k in row["knownSource"].split():
+                if k not in sources:
+                    fail(f"{where}: unknown source {k!r}")
+            city["knownSource"] = row["knownSource"].split()
         if row.get("story"):
             city["story"] = row["story"]
         cities.append(city)
@@ -1169,7 +1302,7 @@ def zh_date(text: str) -> str | None:
     return f"{year}{mo}月{int(m.group(1))}日" if m.group(1) else f"{year}{mo}月"
 
 
-def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, city_ids, events, living) -> dict | None:
+def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, city_ids, events, living, books) -> dict | None:
     """Chinese for the data (data/i18n/zh/): checked against what it translates, bundled into one file the
     app fetches when the reader switches to Chinese. Anything missing stays English in the app."""
     root = DATA / "i18n" / "zh"
@@ -1295,6 +1428,16 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
             warn(f"i18n/zh/notes.json: {k!r} is not a note on any event")
     stats["event notes"] = (sum(1 for n in all_notes if n in notes), len(all_notes))
 
+    zb = rd("books.json")
+    book_ids = {b["id"] for b in books}
+    for k, v in zb.items():
+        if k not in book_ids:
+            fail(f"i18n/zh/books.json: unknown book {k!r}")
+        elif set(v) - {"author", "title"}:
+            fail(f"i18n/zh/books.json: {k!r} may only give an author and a title")
+    works = [b for b in books if b["kind"] == "work"]
+    stats["books"] = (sum(1 for b in works if b["id"] in zb), len(works))
+
     # Characters the map's labels can show, for its font atlas.
     label_text = list(names.values()) + list(regions.values()) + [x.get("name", "") for x in inv.values()] + [x.get("name", "") for x in jz.values()]
     label_text += [e.get("place", "") for x in lz.values() for e in x.get("spread", {}).values()] + [x.get(k, "") for x in lz.values() for k in ("name", "place")]
@@ -1302,7 +1445,7 @@ def load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, c
     print("    中文: " + " · ".join(f"{k} {a}/{b}" for k, (a, b) in stats.items()))
     series = rd("series.json")
     return {"series": series, "names": names, "regions": regions, "journeys": jz, "inventions": inv, "living": lz, "viewpoints": vps, "moments": moments,
-            "depictions": dep, "stories": stories, "phases": phases, "notes": notes, "chars": chars}
+            "depictions": dep, "stories": stories, "phases": phases, "notes": notes, "books": zb, "chars": chars}
 
 
 INVENTION_CATEGORIES = ("navigation", "measurement", "mapping", "communication", "transport", "imaging")
@@ -1326,6 +1469,9 @@ def load_inventions(sources, vp_ids):
         if not (-90 <= inv.get("lat", 0) <= 90 and -180 <= inv.get("lon", 0) <= 180):
             fail(f"{where}: lat/lon out of range")
         check_ref(where, inv.get("source"), inv.get("confidence"), sources)
+        # A bound book (an atlas, a treatise) is shelved with the books, as the work it is in sources.csv.
+        if "book" in inv and sources.get(inv["book"], {}).get("kind") != "work":
+            fail(f"{where}: book {inv['book']!r} is not a work in sources.csv")
         y = parse_year(inv.get("year", ""), where)
         if y is None:
             continue
@@ -1690,7 +1836,7 @@ def main() -> int:
             inv["pictures"] = pictured["invention"][inv["id"]]
     city_docs = []
     for c in cities:
-        doc = {k: v for k, v in c.items() if k != "mid"}
+        doc = {k: v for k, v in c.items() if k not in ("mid", "knownSource")}
         picture_kind = c.get("kind") or "city"
         if c["id"] in pictured[picture_kind]:
             doc["pictures"] = pictured[picture_kind][c["id"]]
@@ -1767,9 +1913,11 @@ def main() -> int:
     sizes["living.json"] = write_json("living.json", living)
     sizes["beyond.json"] = write_json("beyond.json", beyond)
     sizes["sources.json"] = write_json("sources.json", sources)
+    books = load_books(sources, events, journeys, cities, inventions, living, viewpoints)
+    sizes["books.json"] = write_json("books.json", books)
     sizes["viewpoints.json"] = write_json("viewpoints.json", viewpoints)
     sizes["search.json"] = write_json("search.json", search)
-    zh = load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, {c["id"] for c in cities}, events, living)
+    zh = load_translations(journeys, regions_by_id, inventions, vp_ids, viewpoints, {c["id"] for c in cities}, events, living, books)
     if zh:
         sizes["i18n/zh.json"] = write_json("i18n/zh.json", zh)
 

@@ -5,11 +5,11 @@ import {ALL_VPS} from './types';
 export type Panel = 'none' | 'journeys' | 'discoveries' | 'about';
 
 /** Which list the left panel shows. */
-export type Shelf = 'journeys' | 'landmarks' | 'inventions' | 'living';
+export type Shelf = 'journeys' | 'landmarks' | 'inventions' | 'books' | 'living';
 
 /** The left panel's two faces and their lists: where people went and what they built, and what they came to
- * know of that travelled (instruments and ideas, plants and animals). */
-export const SHELVES = {journeys: ['journeys', 'landmarks'], discoveries: ['inventions', 'living']} as const satisfies Record<string, Shelf[]>;
+ * know of that travelled (instruments and ideas, the books that carried the news, plants and animals). */
+export const SHELVES = {journeys: ['journeys', 'landmarks'], discoveries: ['inventions', 'books', 'living']} as const satisfies Record<string, Shelf[]>;
 
 export type ListPanel = keyof typeof SHELVES;
 
@@ -39,6 +39,8 @@ export interface State {
   regionCell: number | null;
   city: string | null;
   invention: string | null;
+  /** A book on the Books shelf (one that is also an invention opens as that invention). */
+  book: string | null;
   /** A plant or animal whose spread is drawn on the map. */
   living: string | null;
   /** The place on its way picked on the card or the map (an index into its spread), named and pulsed there. */
@@ -104,6 +106,7 @@ export const DEFAULT_STATE: State = {
   regionCell: null,
   city: null,
   invention: null,
+  book: null,
   living: null,
   arrival: null,
   globe: false,
@@ -112,7 +115,7 @@ export const DEFAULT_STATE: State = {
   search: false,
 };
 
-/** ?vp=china&year=1420 · ?vp=europe,china&year=1420 · ?journey=zhenghe&stop=4 · ?region=…&vp=… · ?city=loulan · ?invention=compass&year=1100 · ?living=maize&year=1600 */
+/** ?vp=china&year=1420 · ?vp=europe,china&year=1420 · ?journey=zhenghe&stop=4 · ?region=…&vp=… · ?city=loulan · ?invention=compass&year=1100 · ?book=ma-huan · ?living=maize&year=1600 */
 export function readUrl(): Partial<State> & {stop?: number} {
   const q = new URLSearchParams(location.search);
   const out: Partial<State> & {stop?: number} = {};
@@ -132,6 +135,7 @@ export function readUrl(): Partial<State> & {stop?: number} {
   if (q.get('region')) out.region = q.get('region');
   if (q.get('city')) out.city = q.get('city');
   if (q.get('invention')) out.invention = q.get('invention');
+  if (q.get('book')) out.book = q.get('book');
   if (q.get('living')) out.living = q.get('living');
   if (q.get('globe') === '1') out.globe = true;
   if (q.get('view') === 'route') out.follow = false;
@@ -155,6 +159,7 @@ export function writeUrl(s: State, currentStop: number | null) {
   }
   if (s.city) q.set('city', s.city);
   if (s.invention) q.set('invention', s.invention);
+  if (s.book) q.set('book', s.book);
   if (s.living) q.set('living', s.living);
   if (s.globe) q.set('globe', '1');
   if (s.allJourneys && !s.journey) q.set('journeys', 'all');

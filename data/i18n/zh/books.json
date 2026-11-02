@@ -1,0 +1,912 @@
+{
+ "hecataeus": {
+  "author": "米利都的赫卡泰俄斯",
+  "title": "大地巡游记"
+ },
+ "herodotus": {
+  "author": "希罗多德",
+  "title": "历史"
+ },
+ "arrian": {
+  "author": "阿里安",
+  "title": "亚历山大远征记与印度志"
+ },
+ "pytheas-strabo": {
+  "author": "马萨利亚的皮西亚斯",
+  "title": "论海洋"
+ },
+ "strabo": {
+  "author": "斯特拉波",
+  "title": "地理学"
+ },
+ "pliny": {
+  "author": "老普林尼",
+  "title": "博物志"
+ },
+ "periplus": {
+  "title": "厄立特里亚海周航记"
+ },
+ "ptolemy": {
+  "author": "托勒密",
+  "title": "地理学指南"
+ },
+ "tacitus": {
+  "author": "塔西佗",
+  "title": "阿古利可拉传与日耳曼尼亚志"
+ },
+ "menander": {
+  "author": "护卫官米南德",
+  "title": "历史"
+ },
+ "cosmas": {
+  "author": "科斯马斯",
+  "title": "基督教风土志"
+ },
+ "dicuil": {
+  "author": "迪奎尔",
+  "title": "大地测量书"
+ },
+ "constantine-dai": {
+  "author": "君士坦丁七世",
+  "title": "论帝国治理"
+ },
+ "landnamabok": {
+  "title": "定居者之书"
+ },
+ "adam-bremen": {
+  "author": "不来梅的亚当",
+  "title": "汉堡大主教史"
+ },
+ "vinland-sagas": {
+  "title": "文兰萨迦"
+ },
+ "carpini-rubruck": {
+  "author": "柏朗嘉宾与鲁布鲁克",
+  "title": "蒙古行纪"
+ },
+ "polo": {
+  "author": "马可·波罗与鲁斯蒂谦",
+  "title": "马可·波罗行纪"
+ },
+ "zurara": {
+  "author": "祖拉拉",
+  "title": "几内亚发现与征服纪事"
+ },
+ "columbus": {
+  "author": "哥伦布",
+  "title": "航海日志与首航书信"
+ },
+ "velho-roteiro": {
+  "author": "阿尔瓦罗·韦柳",
+  "title": "达伽马首航日志"
+ },
+ "cortes-letters": {
+  "author": "科尔特斯",
+  "title": "致国王书信"
+ },
+ "pigafetta": {
+  "author": "皮加费塔",
+  "title": "首次环球航行记"
+ },
+ "tasman": {
+  "author": "塔斯曼",
+  "title": "1642—1643年航海日志"
+ },
+ "du-halde": {
+  "author": "杜赫德",
+  "title": "中华帝国全志"
+ },
+ "nansen": {
+  "author": "南森",
+  "title": "极北"
+ },
+ "shangshu-yugong": {
+  "title": "尚书·禹贡"
+ },
+ "shanhaijing": {
+  "title": "山海经"
+ },
+ "shiji": {
+  "author": "司马迁",
+  "title": "史记"
+ },
+ "hanshu": {
+  "author": "班固",
+  "title": "汉书"
+ },
+ "houhanshu": {
+  "author": "范晔",
+  "title": "后汉书"
+ },
+ "kang-tai": {
+  "author": "康泰",
+  "title": "吴时外国传"
+ },
+ "faxian": {
+  "author": "法显",
+  "title": "佛国记"
+ },
+ "xuanzang": {
+  "author": "玄奘、辩机",
+  "title": "大唐西域记"
+ },
+ "yijing": {
+  "author": "义净",
+  "title": "南海寄归内法传"
+ },
+ "du-huan": {
+  "author": "杜环",
+  "title": "经行记"
+ },
+ "jia-dan": {
+  "author": "贾耽",
+  "title": "皇华四达记"
+ },
+ "zhou-qufei": {
+  "author": "周去非",
+  "title": "岭外代答"
+ },
+ "zhao-rugua": {
+  "author": "赵汝适",
+  "title": "诸蕃志"
+ },
+ "zhou-daguan": {
+  "author": "周达观",
+  "title": "真腊风土记"
+ },
+ "wang-dayuan": {
+  "author": "汪大渊",
+  "title": "岛夷志略"
+ },
+ "fei-xin": {
+  "author": "费信",
+  "title": "星槎胜览"
+ },
+ "ma-huan": {
+  "author": "马欢",
+  "title": "瀛涯胜览"
+ },
+ "aleni": {
+  "author": "艾儒略",
+  "title": "职方外纪"
+ },
+ "haiguo-tuzhi": {
+  "author": "魏源",
+  "title": "海国图志"
+ },
+ "al-baladhuri": {
+  "author": "拜拉祖里",
+  "title": "诸国征服史"
+ },
+ "akhbar-sin": {
+  "title": "中国印度见闻录"
+ },
+ "ibn-khurradadhbih": {
+  "author": "伊本·胡尔达兹贝",
+  "title": "道里邦国志"
+ },
+ "ibn-fadlan": {
+  "author": "伊本·法德兰",
+  "title": "出使伏尔加记"
+ },
+ "al-masudi": {
+  "author": "马苏第",
+  "title": "黄金草原"
+ },
+ "al-biruni": {
+  "author": "比鲁尼",
+  "title": "印度志"
+ },
+ "al-bakri": {
+  "author": "白克里",
+  "title": "道里邦国志"
+ },
+ "al-idrisi": {
+  "author": "伊德里西",
+  "title": "罗杰之书"
+ },
+ "al-umari": {
+  "author": "欧麦里",
+  "title": "眼历诸国志"
+ },
+ "ibn-battuta": {
+  "author": "伊本·白图泰与伊本·朱扎伊",
+  "title": "伊本·白图泰游记"
+ },
+ "tarih-hind": {
+  "title": "西印度史"
+ },
+ "katip-celebi": {
+  "author": "卡蒂普·切莱比",
+  "title": "世界之镜"
+ },
+ "tahtawi": {
+  "author": "塔赫塔维",
+  "title": "巴黎纪要"
+ },
+ "pliny-letters": {
+  "author": "小普林尼",
+  "title": "书信集"
+ },
+ "mouhot": {
+  "author": "亨利·穆奥",
+  "title": "暹罗、柬埔寨、老挝诸王国旅行记"
+ },
+ "al-tabari": {
+  "author": "泰伯里",
+  "title": "历代先知与帝王史"
+ },
+ "appian": {
+  "author": "阿庇安",
+  "title": "布匿战争"
+ },
+ "hanno": {
+  "title": "汉诺周航记"
+ },
+ "cleomedes": {
+  "author": "克莱奥迈季斯",
+  "title": "论天体的圆周运动"
+ },
+ "pei-xiu": {
+  "title": "晋书·裴秀传"
+ },
+ "shen-kuo": {
+  "author": "沈括",
+  "title": "梦溪笔谈"
+ },
+ "stroganov-chronicle": {
+  "title": "斯特罗加诺夫与列梅佐夫编年史"
+ },
+ "description-egypte": {
+  "author": "法国科学与艺术委员会",
+  "title": "埃及记述"
+ },
+ "humboldt-narrative": {
+  "author": "洪堡与邦普兰",
+  "title": "新大陆赤道地区旅行记"
+ },
+ "darwin-voyage": {
+  "author": "达尔文",
+  "title": "小猎犬号航海记"
+ },
+ "livingstone-travels": {
+  "author": "利文斯通",
+  "title": "南非传教旅行与考察"
+ },
+ "challenger-report": {
+  "title": "挑战者号科学考察报告"
+ },
+ "notitia-urbis": {
+  "title": "君士坦丁堡城市概览"
+ },
+ "procopius": {
+  "author": "普罗科匹厄斯",
+  "title": "论建筑"
+ },
+ "jiu-tangshu": {
+  "author": "刘昫等",
+  "title": "旧唐书"
+ },
+ "villehardouin": {
+  "author": "维尔阿杜安",
+  "title": "征服君士坦丁堡"
+ },
+ "kritovoulos": {
+  "author": "克里托布洛斯",
+  "title": "征服者穆罕默德史"
+ },
+ "schedel": {
+  "author": "哈特曼·舍德尔",
+  "title": "纽伦堡编年史"
+ },
+ "evliya-celebi": {
+  "author": "爱维亚·切莱比",
+  "title": "游记"
+ },
+ "diodorus": {
+  "author": "西西里的狄奥多罗斯",
+  "title": "历史丛书"
+ },
+ "geminus": {
+  "author": "盖米诺斯",
+  "title": "天象导论"
+ },
+ "cabrillo-relacion": {
+  "author": "胡安·帕埃斯（传）",
+  "title": "卡布里略航行记"
+ },
+ "vizcaino-ascension": {
+  "author": "安东尼奥·德·拉·阿森西翁",
+  "title": "比斯凯诺航行简记"
+ },
+ "vancouver-voyage": {
+  "author": "温哥华",
+  "title": "北太平洋发现之旅"
+ },
+ "cabeza-de-vaca": {
+  "author": "卡韦萨·德·巴卡",
+  "title": "海难记"
+ },
+ "castaneda": {
+  "author": "卡斯塔涅达",
+  "title": "西沃拉远征记"
+ },
+ "villagra": {
+  "author": "比利亚格拉",
+  "title": "新墨西哥史"
+ },
+ "escalante-diario": {
+  "author": "埃斯卡兰特",
+  "title": "多明格斯—埃斯卡兰特远征日记"
+ },
+ "powell": {
+  "author": "鲍威尔",
+  "title": "西部科罗拉多河探险"
+ },
+ "xerez": {
+  "author": "赫雷斯",
+  "title": "秘鲁征服实录"
+ },
+ "oviedo": {
+  "author": "奥维多",
+  "title": "印度群岛通史与自然史"
+ },
+ "carvajal": {
+  "author": "卡瓦哈尔",
+  "title": "亚马孙河发现记"
+ },
+ "acuna": {
+  "author": "阿库尼亚",
+  "title": "亚马孙大河新发现"
+ },
+ "la-condamine": {
+  "author": "拉孔达明",
+  "title": "南美内陆旅行简记"
+ },
+ "colon-hernando": {
+  "author": "埃尔南多·科隆",
+  "title": "海军上将传"
+ },
+ "herrera": {
+  "author": "埃雷拉",
+  "title": "卡斯蒂利亚人事迹通史"
+ },
+ "bernal-diaz": {
+  "author": "贝尔纳尔·迪亚斯",
+  "title": "征服新西班牙信史"
+ },
+ "secret-history": {
+  "title": "蒙古秘史"
+ },
+ "juvaini": {
+  "author": "志费尼",
+  "title": "世界征服者史"
+ },
+ "rashid-al-din": {
+  "author": "拉施特",
+  "title": "史集"
+ },
+ "yuanshi": {
+  "author": "宋濂等",
+  "title": "元史"
+ },
+ "caesar-bg": {
+  "author": "恺撒",
+  "title": "高卢战记"
+ },
+ "cassius-dio": {
+  "author": "卡西乌斯·狄奥",
+  "title": "罗马史"
+ },
+ "seneca-nq": {
+  "author": "塞涅卡",
+  "title": "自然问题"
+ },
+ "hakluyt": {
+  "author": "哈克卢特",
+  "title": "英国主要航海志"
+ },
+ "purchas": {
+  "author": "珀切斯",
+  "title": "珀切斯朝圣记"
+ },
+ "steller": {
+  "author": "斯特勒",
+  "title": "随白令航行日志"
+ },
+ "de-veer": {
+  "author": "赫里特·德·费尔",
+  "title": "巴伦支三次航行纪实"
+ },
+ "vishnu-purana": {
+  "title": "毗湿奴往世书"
+ },
+ "ain-i-akbari": {
+  "author": "阿布勒·法兹勒",
+  "title": "阿克巴则例"
+ },
+ "nain-singh": {
+  "author": "蒙哥马利",
+  "title": "班智达尼泊尔至拉萨路线测量报告"
+ },
+ "kojiki": {
+  "title": "古事记与日本书纪"
+ },
+ "ennin": {
+  "author": "圆仁",
+  "title": "入唐求法巡礼行记"
+ },
+ "amati": {
+  "author": "西皮奥内·阿马蒂",
+  "title": "奥州王国史"
+ },
+ "hokusa-bunryaku": {
+  "author": "桂川甫周",
+  "title": "北槎闻略"
+ },
+ "mamiya": {
+  "author": "间宫林藏",
+  "title": "东鞑纪行与北夷分界余话"
+ },
+ "sairan-igen": {
+  "author": "新井白石",
+  "title": "采览异言"
+ },
+ "tarikh-al-sudan": {
+  "author": "萨迪",
+  "title": "苏丹史"
+ },
+ "tarikh-al-fattash": {
+  "title": "求知者史"
+ },
+ "sahagun": {
+  "author": "萨阿贡与纳瓦学者",
+  "title": "佛罗伦萨手抄本"
+ },
+ "codex-mendoza": {
+  "title": "门多萨手抄本"
+ },
+ "duran": {
+  "author": "杜兰",
+  "title": "新西班牙印度群岛史"
+ },
+ "chimalpahin": {
+  "author": "奇马尔帕因",
+  "title": "编年与日记"
+ },
+ "sarmiento": {
+  "author": "萨缅托·德·甘博亚",
+  "title": "印加史"
+ },
+ "cieza": {
+  "author": "谢萨·德·莱昂",
+  "title": "秘鲁纪事"
+ },
+ "guaman-poma": {
+  "author": "瓜曼·波马",
+  "title": "新编年史与善政"
+ },
+ "garcilaso": {
+  "author": "印加·加西拉索",
+  "title": "印加王室述评"
+ },
+ "hudud-al-alam": {
+  "title": "世界境域志"
+ },
+ "mirza-saleh": {
+  "author": "米尔扎·萨利赫",
+  "title": "游记"
+ },
+ "nasir-al-din-shah": {
+  "author": "纳赛尔丁沙",
+  "title": "欧洲之行日记"
+ },
+ "qalqashandi": {
+  "author": "盖勒盖山迪",
+  "title": "夜盲者的黎明"
+ },
+ "al-jabarti": {
+  "author": "贾巴尔提",
+  "title": "传记与史事奇闻"
+ },
+ "baker-ismailia": {
+  "author": "塞缪尔·贝克",
+  "title": "伊斯梅利亚"
+ },
+ "ibn-majid": {
+  "author": "伊本·马吉德",
+  "title": "航海原理与规则实用书"
+ },
+ "ibn-jubayr": {
+  "author": "伊本·朱拜尔",
+  "title": "游记"
+ },
+ "leo-africanus": {
+  "author": "瓦赞（非洲人利奥）",
+  "title": "非洲志"
+ },
+ "al-hajari": {
+  "author": "哈贾里",
+  "title": "护教者之书"
+ },
+ "amarna": {
+  "title": "阿马尔奈书信"
+ },
+ "wenamun": {
+  "title": "温阿蒙报告"
+ },
+ "zuozhuan": {
+  "title": "左传"
+ },
+ "homer": {
+  "author": "荷马",
+  "title": "伊利亚特与奥德赛"
+ },
+ "rigveda": {
+  "title": "梨俱吠陀"
+ },
+ "primary-chronicle": {
+  "title": "往年纪事"
+ },
+ "nikitin": {
+  "author": "阿法纳西·尼基京",
+  "title": "三海航行记"
+ },
+ "atlas-russicus": {
+  "author": "帝国科学院",
+  "title": "俄罗斯地图集"
+ },
+ "krusenstern": {
+  "author": "克鲁森施滕",
+  "title": "环球航行记"
+ },
+ "bellingshausen": {
+  "author": "别林斯高晋",
+  "title": "南冰洋两季考察"
+ },
+ "isidore": {
+  "author": "塞维利亚的伊西多尔",
+  "title": "词源"
+ },
+ "orosius-alfred": {
+  "title": "古英语奥罗修斯"
+ },
+ "russian-chronograph": {
+  "title": "俄罗斯纪年书"
+ },
+ "maxim-greek": {
+  "author": "希腊人马克西姆",
+  "title": "莫斯科著述"
+ },
+ "daniel-abbot": {
+  "author": "修道院长丹尼尔",
+  "title": "圣地朝圣记"
+ },
+ "itesamuddin": {
+  "author": "伊泰萨姆丁",
+  "title": "英伦奇观"
+ },
+ "abu-taleb": {
+  "author": "阿布·塔利布汗",
+  "title": "亚非欧游记"
+ },
+ "hendrik": {
+  "author": "汉斯·亨德里克",
+  "title": "北极旅人回忆录"
+ },
+ "kebra-nagast": {
+  "title": "诸王荣耀"
+ },
+ "ludolf": {
+  "author": "约布·卢多尔夫",
+  "title": "埃塞俄比亚史"
+ },
+ "kilwa-chronicle": {
+  "title": "基尔瓦编年史"
+ },
+ "nagarakretagama": {
+  "author": "普拉班扎",
+  "title": "爪哇史颂"
+ },
+ "sejarah-melayu": {
+  "title": "马来纪年"
+ },
+ "abdullah-munshi": {
+  "author": "文西阿都拉",
+  "title": "阿都拉传"
+ },
+ "aristotle": {
+  "author": "亚里士多德",
+  "title": "论天"
+ },
+ "ortelius": {
+  "author": "奥特柳斯",
+  "title": "寰宇大观"
+ },
+ "davis-seamans": {
+  "author": "约翰·戴维斯",
+  "title": "海员秘诀"
+ },
+ "analects": {
+  "author": "孔子（传）",
+  "title": "论语"
+ },
+ "xu-xiake-youji": {
+  "author": "徐霞客",
+  "title": "徐霞客游记"
+ },
+ "boas": {
+  "author": "弗朗茨·博厄斯",
+  "title": "中部爱斯基摩人"
+ },
+ "drake-world-encompassed": {
+  "author": "弗莱彻与德雷克",
+  "title": "环绕世界"
+ },
+ "ross-voyage": {
+  "author": "詹姆斯·克拉克·罗斯",
+  "title": "南方与南极地区考察航行"
+ },
+ "barros": {
+  "author": "若昂·德·巴罗斯",
+  "title": "亚洲旬年史"
+ },
+ "caminha": {
+  "author": "卡米尼亚",
+  "title": "发现巴西书"
+ },
+ "vespucci": {
+  "author": "韦斯普奇",
+  "title": "新世界"
+ },
+ "pero-lopes": {
+  "author": "佩罗·洛佩斯",
+  "title": "航海日记"
+ },
+ "ctesias": {
+  "author": "克尼多斯的克特西亚斯",
+  "title": "印度志"
+ },
+ "pelsaert": {
+  "author": "佩尔萨特",
+  "title": "巴达维亚号日志"
+ },
+ "kanpyo-gyoki": {
+  "author": "宇多天皇",
+  "title": "宽平御记"
+ },
+ "royal-frankish-annals": {
+  "title": "法兰克王国年代记"
+ },
+ "tulisen": {
+  "author": "图理琛",
+  "title": "异域录"
+ },
+ "nordenskiold": {
+  "author": "诺登舍尔德",
+  "title": "维加号环航亚欧"
+ },
+ "chekhov-sakhalin": {
+  "author": "契诃夫",
+  "title": "萨哈林岛"
+ },
+ "caillie": {
+  "author": "勒内·卡耶",
+  "title": "廷巴克图与杰内旅行记"
+ },
+ "barth": {
+  "author": "海因里希·巴特",
+  "title": "北非与中非旅行与发现"
+ },
+ "hearne": {
+  "author": "塞缪尔·赫恩",
+  "title": "从威尔士亲王堡到北冰洋"
+ },
+ "mackenzie": {
+  "author": "亚历山大·麦肯齐",
+  "title": "从蒙特利尔到北冰洋与太平洋"
+ },
+ "samguk-sagi": {
+  "author": "金富轼",
+  "title": "三国史记"
+ },
+ "goryeosa": {
+  "title": "高丽史"
+ },
+ "haedong-jegukgi": {
+  "author": "申叔舟",
+  "title": "海东诸国纪"
+ },
+ "choe-bu": {
+  "author": "崔溥",
+  "title": "漂海录"
+ },
+ "hamel": {
+  "author": "亨德里克·哈梅尔",
+  "title": "哈梅尔漂流记"
+ },
+ "yeolha-ilgi": {
+  "author": "朴趾源",
+  "title": "热河日记"
+ },
+ "yu-kilchun": {
+  "author": "俞吉濬",
+  "title": "西游见闻"
+ },
+ "landa": {
+  "author": "迪亚哥·德·兰达",
+  "title": "尤卡坦风物记"
+ },
+ "weiditz": {
+  "author": "克里斯托夫·魏迪茨",
+  "title": "服饰图册"
+ },
+ "cadiz-cortes": {
+  "title": "加的斯议会辩论日志"
+ },
+ "tongsinsa-1719": {
+  "author": "申维翰",
+  "title": "海游录"
+ },
+ "pyohae-simal": {
+  "author": "丁若铨",
+  "title": "漂海始末"
+ },
+ "song-yun": {
+  "author": "杨衒之",
+  "title": "洛阳伽蓝记"
+ },
+ "changchun": {
+  "author": "李志常",
+  "title": "长春真人西游记"
+ },
+ "chen-cheng": {
+  "author": "陈诚",
+  "title": "西域行程记与西域番国志"
+ },
+ "fan-shouyi": {
+  "author": "樊守义",
+  "title": "身见录"
+ },
+ "flinders": {
+  "author": "马修·弗林德斯",
+  "title": "南方大陆航行记"
+ },
+ "denon": {
+  "author": "维旺·德农",
+  "title": "上下埃及游记"
+ },
+ "zhishun-zhenjiang": {
+  "author": "俞希鲁",
+  "title": "至顺镇江志"
+ },
+ "pigafetta-lopes": {
+  "author": "菲利波·皮加费塔与杜阿尔特·洛佩斯",
+  "title": "刚果王国志"
+ },
+ "seydi-mirat": {
+  "author": "赛义迪·阿里·雷伊斯",
+  "title": "列国之镜"
+ },
+ "mehmed-sefaretname": {
+  "author": "伊尔米塞基兹·穆罕默德·切莱比",
+  "title": "出使法国记"
+ },
+ "stephens-yucatan": {
+  "author": "约翰·劳埃德·斯蒂芬斯",
+  "title": "尤卡坦旅行纪事"
+ },
+ "stephens-central-america": {
+  "author": "约翰·劳埃德·斯蒂芬斯",
+  "title": "中美洲、恰帕斯与尤卡坦旅行纪事"
+ },
+ "ruiz-tajin": {
+  "author": "何塞·安东尼奥·鲁伊斯",
+  "title": "埃尔塔欣报告"
+ },
+ "ciudad-real-1588": {
+  "author": "安东尼奥·德·休达德·雷亚尔",
+  "title": "新西班牙伟业论"
+ },
+ "hernandez-comentarios": {
+  "author": "佩罗·埃尔南德斯",
+  "title": "卡韦萨·德·巴卡评述"
+ },
+ "layard": {
+  "author": "莱亚德",
+  "title": "尼尼微及其遗迹"
+ },
+ "rich": {
+  "author": "克劳迪厄斯·里奇",
+  "title": "库尔德斯坦居留记"
+ },
+ "dupaix": {
+  "author": "吉列尔莫·杜派",
+  "title": "墨西哥古迹"
+ },
+ "wood-palmyra": {
+  "author": "罗伯特·伍德",
+  "title": "帕尔米拉遗迹"
+ },
+ "cook-journals": {
+  "author": "詹姆斯·库克",
+  "title": "航海日志"
+ },
+ "lewis-clark-journals": {
+  "author": "刘易斯与克拉克",
+  "title": "探险队日志"
+ },
+ "rabban-sauma": {
+  "title": "雅八阿罗诃与拉班·扫马传"
+ },
+ "kaqchikel-annals": {
+  "title": "卡克奇克尔编年史"
+ },
+ "chilam-balam": {
+  "title": "丘马耶尔的契兰·巴兰之书"
+ },
+ "tupac-amaru-memoir": {
+  "author": "胡安·包蒂斯塔·图帕克·阿马鲁",
+  "title": "漫长的囚禁"
+ },
+ "min-yeonghwan": {
+  "author": "闵泳焕",
+  "title": "海天秋帆"
+ },
+ "binchun": {
+  "author": "斌椿",
+  "title": "乘槎笔记"
+ },
+ "hajj-sayyah": {
+  "author": "哈只·赛亚赫",
+  "title": "旅行日记"
+ },
+ "tippu-tip": {
+  "author": "提普·提卜",
+  "title": "自传"
+ },
+ "amundsen": {
+  "author": "阿蒙森",
+  "title": "南极"
+ },
+ "hunt-everest": {
+  "author": "约翰·亨特",
+  "title": "攀登珠穆朗玛峰"
+ },
+ "hedin": {
+  "author": "斯文·赫定",
+  "title": "中亚与西藏"
+ },
+ "stein": {
+  "author": "斯坦因",
+  "title": "古代和田与西域考古图记"
+ },
+ "bingham": {
+  "author": "海勒姆·宾厄姆",
+  "title": "秘鲁奇境"
+ },
+ "rasmussen": {
+  "author": "克努兹·拉斯穆森",
+  "title": "横越北极美洲"
+ },
+ "andrews": {
+  "author": "罗伊·查普曼·安德鲁斯",
+  "title": "中亚新征服"
+ },
+ "piccard-dietz": {
+  "author": "皮卡德与迪茨",
+  "title": "深潜七英里"
+ },
+ "roosevelt-brazil": {
+  "author": "西奥多·罗斯福",
+  "title": "穿越巴西荒野"
+ },
+ "motorcycle-diaries": {
+  "author": "切·格瓦拉",
+  "title": "摩托日记"
+ },
+ "ptolemy-latin": {
+  "author": "雅各布·安杰利",
+  "title": "托勒密《地理学指南》拉丁文译本"
+ }
+}

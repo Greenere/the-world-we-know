@@ -1,5 +1,6 @@
 import type {
   Beyond,
+  Book,
   City,
   DepictionDoc,
   DepictionKind,
@@ -111,6 +112,46 @@ export function loadZh(data: AppData): Promise<ZhContent | null> {
     return null;
   });
   return zhDoc;
+}
+
+export interface Books {
+  list: Book[];
+  byId: Map<string, Book>;
+}
+
+let booksDoc: Promise<Books | null> | null = null;
+
+/** The Books shelf and what each book brought, fetched the first time a book is wanted. */
+export function loadBooks(data: AppData): Promise<Books | null> {
+  booksDoc ??= get<Book[]>('books.json', data.version).then(
+    list => ({list, byId: new Map(list.map(b => [b.id, b]))}),
+    err => {
+      console.warn(err);
+      booksDoc = null;
+      return null;
+    },
+  );
+  return booksDoc;
+}
+
+const shelves = new WeakMap<Books, Book[]>();
+
+/** The shelf's order: the works of their time by when they were written, then the modern studies by author. */
+export function bookShelf(books: Books): Book[] {
+  let list = shelves.get(books);
+  if (!list) {
+    const works = books.list.filter(b => b.kind === 'work').sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.title.localeCompare(b.title));
+    const studies = books.list.filter(b => b.kind === 'study').sort((a, b) => bookSurname(a).localeCompare(bookSurname(b)) || a.title.localeCompare(b.title));
+    list = [...works, ...studies];
+    shelves.set(books, list);
+  }
+  return list;
+}
+
+/** Where a modern study stands on the shelf: its first author's surname ("N. Levtzion and J. F. P. Hopkins
+ * (eds.)" → levtzion), or its title when it has no author. */
+export function bookSurname(b: Book): string {
+  return (b.author.split(/ and |, | et al\.| \(/)[0].trim().split(' ').pop() || b.title).normalize('NFD').replace(/[^a-zA-Z]/g, '').toLowerCase();
 }
 
 const pictureDocs = new Map<string, Promise<DepictionDoc | null>>();

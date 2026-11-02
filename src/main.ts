@@ -13,7 +13,7 @@ import './styles.css';
 import {MapboxOverlay} from '@deck.gl/mapbox';
 import {type IControl, type Map as MlMap, type MapLayerMouseEvent, Marker} from 'maplibre-gl';
 import type {AppData} from './data';
-import {homeAt, loadData, loadZh} from './data';
+import {bookShelf, homeAt, loadBooks, loadData, loadZh} from './data';
 import {getLang, initialLang, isZh, type Lang, rememberLang, setLang, t, tx} from './i18n';
 import {FogField} from './fog/field';
 import {buildGrid, cellAt, type Grid} from './fog/grid';
@@ -39,6 +39,8 @@ import {momentsFor, scaleFor, Timeline} from './ui/timeline';
 import {TopBar} from './ui/topbar';
 
 const PAPER_FOG = '#efe7d3';
+/** A year on the timeline's scale. */
+const clampYear = (y: number) => Math.max(START, Math.min(PRESENT, Math.round(y)));
 const PICKABLE = ['others', 'routes', 'living-points', 'inventions', 'inventions-globe', 'cities', 'cities-globe', 'journey-stops'];
 const EDGE = '#8a6a43';
 const HIGHLIGHT = '#9b2f20';
@@ -155,6 +157,8 @@ class App {
       openRegion: (id: string) => this.openRegion(id, true),
       openJourney: (id: string, at?: JourneyAt) => this.openJourneyAt(id, at),
       openInvention: (id: string) => this.openInvention(id),
+      openBook: (id: string) => void this.openBook(id),
+      showRegionAs: (vp: VpId | '*', region: string, year: number) => this.showRegionAs(vp, region, year),
       openLiving: (id: string, year?: number) => this.openLiving(id, year),
       pickArrival: (i: number) => this.pickArrival(i),
       openCity: (id: string) => this.openCity(id, false),
@@ -169,6 +173,7 @@ class App {
       journey: new JourneyPanel(data, this.store, this.field, {
         start: id => this.startJourney(id),
         openInvention: id => this.openInvention(id),
+        openBook: id => void this.openBook(id),
         openLiving: id => this.openLiving(id),
         openCity: id => this.openCity(id, true),
       }),
@@ -189,7 +194,7 @@ class App {
           unfold: () => ui.cards.close(),
           showSketch: i => {
             this.travelTarget = null;
-            this.store.set({progress: i, playing: false, details: false, city: null, region: null, regionCell: null, invention: null, living: null});
+            this.store.set({progress: i, playing: false, details: false, city: null, region: null, regionCell: null, invention: null, book: null, living: null});
           },
           jumpTo: year => {
             const g = this.geo(this.store.state.journey);
@@ -244,6 +249,10 @@ class App {
     if (s.region && !this.data.regionById.has(s.region)) s.region = null;
     if (s.invention && !this.data.inventionById.has(s.invention)) s.invention = null;
     if (s.invention && url.year === undefined && !s.journey) s.year = this.data.inventionById.get(s.invention)!.mid;
+    // A book is known from its source until the shelf loads; a work opens at the year it was written.
+    const book = s.book ? this.data.sources[s.book] : undefined;
+    if (s.book && book?.kind !== 'work' && book?.kind !== 'study') s.book = null;
+    if (s.book && book?.kind === 'work' && book.year !== undefined && url.year === undefined && !s.journey) s.year = clampYear(book.year);
     if (s.living && !this.data.livingById.has(s.living)) s.living = null;
     if (s.living && url.year === undefined && !s.journey) s.year = this.livingYear(this.data.livingById.get(s.living)!, s.vps[0]);
     if (s.journey) {
@@ -265,19 +274,28 @@ class App {
       if (!own.includes(n.shelf)) n.shelf = this.lastShelf[n.panel];
       this.lastShelf[n.panel] = n.shelf;
     }
-    // One card at a time: an invention, a plant or animal, a city or a region.
+    // One card at a time: an invention, a book, a plant or animal, a city or a region.
     if (n.invention && n.invention !== p.invention) {
       n.city = null;
       n.region = null;
       n.regionCell = null;
+      n.book = null;
+      n.living = null;
+    } else if (n.book && n.book !== p.book) {
+      n.city = null;
+      n.region = null;
+      n.regionCell = null;
+      n.invention = null;
       n.living = null;
     } else if (n.living && n.living !== p.living) {
       n.city = null;
       n.region = null;
       n.regionCell = null;
       n.invention = null;
+      n.book = null;
     } else if ((n.city && n.city !== p.city) || (n.region && n.region !== p.region)) {
       n.invention = null;
+      n.book = null;
       n.living = null;
     }
     // A place picked on one plant or animal's way means nothing for another.
@@ -316,7 +334,7 @@ class App {
     this.ui.top.update(s);
     this.ui.timeline.update(s, geo);
     // The journey card first: it measures itself to fold, before the card opening below takes room from it.
-    this.ui.journeyCard.update(s, geo, !!(s.city || s.region || s.invention || s.living));
+    this.ui.journeyCard.update(s, geo, !!(s.city || s.region || s.invention || s.book || s.living));
     this.ui.cards.update(s);
     this.ui.journey.update(s);
     this.ui.search.update(s);
@@ -550,7 +568,8 @@ class App {
         this.ui.timeline.showCaption(t('{thing} reaches {place}', {thing: tx.living(lv.id, 'name', lv.name), place: tx.arrival(lv.id, i, 'place', a.place)}), this.data.vp[a.vp].color);
     }
     for (const x of this.data.inventions) {
-      if (x.mid > from && x.mid <= to) this.ui.timeline.showCaption(isZh() ? `${t('Invented: ')}${tx.invention(x.id, 'name', x.name)}` : `Invented: ${x.name.charAt(0).toLowerCase()}${x.name.slice(1)}`, '#8a6628');
+      const said = x.book ? 'Published: ' : 'Invented: ';
+      if (x.mid > from && x.mid <= to) this.ui.timeline.showCaption(isZh() ? `${t(said)}${tx.invention(x.id, 'name', x.name)}` : `${said}${x.name.charAt(0).toLowerCase()}${x.name.slice(1)}`, '#8a6628');
     }
   }
 
@@ -590,6 +609,7 @@ class App {
       region: null,
       regionCell: null,
       invention: null,
+      book: null,
       living: null,
       globe: g.journey.globe ? true : this.store.state.globe,
     });
@@ -659,7 +679,7 @@ class App {
    * and the camera stay put, and closing that card carries on. Pressing play with the card open just plays.
    */
   private holdForReading(s: State, p: State) {
-    const card = (x: State) => !!(x.city || x.region || x.invention || x.living);
+    const card = (x: State) => !!(x.city || x.region || x.invention || x.book || x.living);
     if (!s.journey || s.journey !== p.journey || (s.playing && card(s))) this.heldForCard = false;
     if (!s.journey || s.journey !== p.journey) return;
     if (card(s) && !card(p) && s.playing) {
@@ -786,7 +806,7 @@ class App {
   openCity(id: string, fly: boolean) {
     const c = this.data.cityById.get(id);
     if (!c) return;
-    this.store.set({city: id, region: null, regionCell: null, invention: null, living: null});
+    this.store.set({city: id, region: null, regionCell: null, invention: null, book: null, living: null});
     if (fly) this.map.flyTo({center: [c.lon, c.lat], zoom: Math.max(this.map.getZoom(), 4.2), duration: 1400});
   }
 
@@ -805,6 +825,37 @@ class App {
       duration: 1200,
       essential: true,
     });
+  }
+
+  /** Open a book from the shelf: a bound book that is also an invention as that invention; a work of its time
+   * at the year it was written; a modern study at the year already shown. */
+  async openBook(id: string) {
+    const books = await loadBooks(this.data);
+    const b = books?.byId.get(id);
+    if (!b) return;
+    if (b.invention) return this.openInvention(b.invention);
+    if (this.store.state.journey) this.closeJourney();
+    const narrow = innerWidth < 760;
+    this.store.set({book: id, playing: false, ...(b.kind === 'work' && b.year !== undefined ? {year: clampYear(b.year)} : {}), ...(narrow ? {panel: 'none' as const} : {})});
+  }
+
+  /** The book before or after the open one on the shelf (a bound book open as its invention counts as itself). */
+  private async stepBook(dir: -1 | 1) {
+    const books = await loadBooks(this.data);
+    if (!books) return;
+    const s = this.store.state;
+    const id = s.book ?? (s.invention ? this.data.inventionById.get(s.invention)?.book : undefined);
+    const shelf = bookShelf(books);
+    const i = shelf.findIndex(b => b.id === id);
+    const next = i < 0 ? undefined : shelf[i + dir];
+    if (next) void this.openBook(next.id);
+  }
+
+  /** What a book made known: a region as one viewpoint knew it, in the year the book took it furthest. */
+  showRegionAs(vp: VpId | '*', region: string, year: number) {
+    if (this.store.state.journey) this.closeJourney();
+    this.store.set({...(vp === '*' ? {} : {vps: [vp], compare: false}), year: clampYear(year), playing: false});
+    this.openRegion(region, true);
   }
 
   /** When a viewpoint came to know a plant or animal, on the timeline's scale. */
@@ -958,7 +1009,7 @@ class App {
       const cell = cellAt(this.grid, e.lngLat.lat, e.lngLat.lng);
       const ri = cell >= 0 ? this.grid.region[cell] : 0xffff;
       if (ri === 0xffff) {
-        this.store.set({region: null, regionCell: null, city: null, invention: null, living: null});
+        this.store.set({region: null, regionCell: null, city: null, invention: null, book: null, living: null});
         return;
       }
       this.store.set({region: this.data.regions[ri].id, regionCell: cell, city: null});
@@ -1068,8 +1119,8 @@ class App {
       if (blocked(e) || e.shiftKey || overlayOpen() || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
       const s = this.store.state;
       const id = s.invention;
-      const landmarks = !id && !s.living && s.city ? this.ui.journey.landmarkNeighbors(s.city) : null;
-      if (!id && !landmarks) return;
+      const landmarks = !id && !s.living && !s.book && s.city ? this.ui.journey.landmarkNeighbors(s.city) : null;
+      if (!id && !s.book && !landmarks) return;
       e.preventDefault();
       e.stopPropagation();
       if (landmarks) {
@@ -1077,8 +1128,11 @@ class App {
         if (next) this.ui.journey.openLandmark(next.id);
         return;
       }
-      const i = this.data.inventions.findIndex(x => x.id === id);
-      const next = i < 0 ? undefined : this.data.inventions[i + (e.key === 'ArrowLeft' ? -1 : 1)];
+      // A book steps along the shelf, an invention along the inventions (the bound books are on the shelf).
+      if (s.book || this.data.inventionById.get(id!)?.book) return void this.stepBook(e.key === 'ArrowLeft' ? -1 : 1);
+      const list = this.data.inventions.filter(x => !x.book);
+      const i = list.findIndex(x => x.id === id);
+      const next = i < 0 ? undefined : list[i + (e.key === 'ArrowLeft' ? -1 : 1)];
       if (next) this.openInvention(next.id);
     }, true);
 
@@ -1103,7 +1157,7 @@ class App {
         if (s.search) this.store.set({search: false});
         else if (s.panel !== 'none') this.store.set({panel: 'none'});
         else if (s.details) this.store.set({details: false});
-        else if (s.city || s.region || s.invention || s.living) this.store.set({city: null, region: null, regionCell: null, invention: null, living: null});
+        else if (s.city || s.region || s.invention || s.book || s.living) this.store.set({city: null, region: null, regionCell: null, invention: null, book: null, living: null});
         else if (s.journey) this.closeJourney();
       }
     });

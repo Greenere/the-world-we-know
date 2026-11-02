@@ -1878,6 +1878,28 @@ kbd {
   background: color-mix(in srgb, var(--chip) 11%, transparent);
 }
 
+/* Books: a work of its time in its culture's colour, a modern study in the ink of the margins. */
+.book-item {
+  --chip: var(--brass);
+}
+
+.book-study {
+  --chip: var(--ink-3);
+}
+
+.book-item.current {
+  background: color-mix(in srgb, var(--chip) 11%, transparent);
+}
+
+/* The shelf's two halves, above their eras or runs of the alphabet. */
+.jp-shelf-h {
+  margin: 16px 0 2px;
+  font-family: var(--font-sc);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+
 /* A plant or animal's card: when this viewpoint knew it, and each place it reached, with the viewpoint
    that came to know it there in its colour; places not reached yet by the current year stay faint. */
 .living-known {
@@ -2058,6 +2080,114 @@ kbd {
 .jp-cross-follow svg {
   width: 17px;
   height: 17px;
+}
+
+/* Book card: the full citation, then what it brought, each kind under a small heading. */
+.book-citation {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.book-citation a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-underline-offset: 2px;
+}
+
+.book-sub {
+  margin: 14px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.book-vp + .book-vp {
+  margin-top: 10px;
+}
+
+.book-vp {
+  padding-left: 10px;
+  border-left: 2px solid var(--vp, var(--rule-2));
+}
+
+.book-vp-name {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--vp, var(--ink-2));
+  cursor: pointer;
+  list-style: none;
+}
+
+.book-vp-name::-webkit-details-marker {
+  display: none;
+}
+
+.book-vp[open] > .book-vp-name {
+  margin-bottom: 5px;
+}
+
+.book-vp-name .jp-era-n {
+  color: var(--ink-3);
+}
+
+.region-chip {
+  --chip: var(--ink-3);
+}
+
+/* How far the book took the region, as the fog's own shading: from a rumour's tint to a survey's full ink. */
+.chip-level {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--chip) calc(var(--lv) * 100%), transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--chip) 70%, transparent);
+}
+
+.book-moments {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.book-moments li + li {
+  margin-top: 3px;
+}
+
+.book-moments .linkish {
+  text-align: left;
+  text-decoration: none;
+}
+
+.book-moments .linkish:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+}
+
+.book-moment-year {
+  font-variant-numeric: tabular-nums;
+  color: var(--vp, var(--ink-3));
+}
+
+.book-moments .arrival-vp {
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+.book-sketches {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  color: var(--ink-3);
+  --chip: var(--ink-3);
 }
 
 /* Invention card */
@@ -2958,6 +3088,14 @@ kbd {
 
 .card-title .native {
   white-space: nowrap;
+}
+
+.card-title .book-original {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.66em;
+  line-height: 1.25;
+  white-space: normal;
 }
 
 /* Pictures: an imagined sketch for each era of a city */

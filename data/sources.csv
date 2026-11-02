@@ -1,597 +1,600 @@
-id,citation,url
-draft,"Approximate date from general knowledge, pending the phase-3 verification pass",
-draft-urban,"Approximate city dates pending verification against Chandler, Four Thousand Years of Urban Growth (1987) and Modelski, World Cities: –3000 to 2000 (2003)",
-hoc,"Harley, Woodward et al. (eds.), The History of Cartography, vols. 1–6, University of Chicago Press (1987–)",https://press.uchicago.edu/books/HOC/index.html
-fernandez-armesto,"Felipe Fernández-Armesto, Pathfinders: A Global History of Exploration (2006)",
-hecataeus,"Hecataeus of Miletus, Periodos Ges (fragments), c. 500 BCE",
-herodotus,"Herodotus, Histories, c. 430 BCE",
-arrian,"Arrian, Anabasis of Alexander and Indica, 2nd century CE",
-pytheas-strabo,"Pytheas of Massalia, On the Ocean (lost); fragments in Strabo, Geography, and Pliny, Natural History",
-strabo,"Strabo, Geography, c. 7 BCE – 23 CE",
-pliny,"Pliny the Elder, Natural History, 77 CE",
-periplus,"Periplus of the Erythraean Sea, mid-1st century CE (ed. and trans. Lionel Casson, 1989)",
-ptolemy,"Claudius Ptolemy, Geography, c. 150 CE",
-tacitus,"Tacitus, Agricola and Germania, 98 CE",
-menander,"Menander Protector, History (fragments), on the embassy of Zemarchus to the Turks, 568",
-cosmas,"Cosmas Indicopleustes, Christian Topography, c. 550",
-dicuil,"Dicuil, De mensura orbis terrae, 825",
-constantine-dai,"Constantine VII Porphyrogenitus, De administrando imperio, c. 950",
-landnamabok,"Landnámabók (The Book of Settlements), 12th–13th century",
-adam-bremen,"Adam of Bremen, Gesta Hammaburgensis ecclesiae pontificum, c. 1075",
-vinland-sagas,"Grœnlendinga saga and Eiríks saga rauða, 13th century",
-ingstad,"Helge Ingstad and Anne Stine Ingstad, The Viking Discovery of America (2001)",
-carpini-rubruck,"John of Plano Carpini, Ystoria Mongalorum (1247); William of Rubruck, Itinerarium (1255)",
-polo,"Marco Polo and Rustichello da Pisa, Le Devisement du monde, c. 1300",
-dulcert,"Angelino Dulcert, portolan chart, 1339",
-catalan-atlas,"Abraham Cresques (attrib.), Catalan Atlas, 1375",
-fra-mauro,"Fra Mauro, mappa mundi, c. 1450",
-zurara,"Gomes Eanes de Zurara, Crónica do descobrimento e conquista da Guiné, 1453",
-columbus,"Christopher Columbus, Diario (abstract by Las Casas) and the Letter on the first voyage, 1493",
-velho-roteiro,"Álvaro Velho (attrib.), Roteiro da primeira viagem de Vasco da Gama, 1497–1499",
-waldseemuller,"Martin Waldseemüller, Universalis cosmographia, 1507",
-cortes-letters,"Hernán Cortés, Cartas de relación, 1519–1526",
-pigafetta,"Antonio Pigafetta, Relazione del primo viaggio intorno al mondo, c. 1525",
-tasman,"Abel Tasman, Journal of the voyage of 1642–1643",
-du-halde,"Jean-Baptiste du Halde, Description de l'Empire de la Chine, 1735",
-cook-journals,"James Cook, The Journals of Captain James Cook (ed. J. C. Beaglehole, 1955–1967)",
-tupaia-chart,"Tupaia's chart of the islands around Tahiti, 1769–1770, British Library Add MS 21593.C",
-di-piazza-pearthree,"Anne Di Piazza and Erik Pearthree, 'A new reading of Tupaia's chart', Journal of the Polynesian Society 116 (2007)",
-national-surveys,"Cassini map of France (1756–1815); Ordnance Survey (from 1791); Great Trigonometrical Survey of India (1802–1871)",
-nansen,"Fridtjof Nansen, Farthest North (1897)",
-headland,"Robert K. Headland, A Chronology of Antarctic Exploration (2009)",
-amundsen,"Roald Amundsen, The South Pole (1912)",
-hunt-everest,"John Hunt, The Ascent of Everest (1953)",
-piccard-dietz,"Jacques Piccard and Robert S. Dietz, Seven Miles Down (1961)",
-heezen-tharp,"Bruce Heezen and Marie Tharp, World Ocean Floor panorama (1977)",
-sputnik,"TASS announcement of Sputnik 1, 4 October 1957",
-vostok1,"Asif Siddiqi, Challenge to Apollo: The Soviet Union and the Space Race, NASA SP-2000-4408 (2000)",
-luna-surveyor,"NASA Space Science Data Coordinated Archive records for Luna 2 (1959), Luna 9 and Surveyor 1 (1966)",
-nasa-apollo11,"NASA Manned Spacecraft Center, Apollo 11 Mission Report, MSC-00171 (1969)",
-shangshu-yugong,"'Yu Gong' (Tribute of Yu), chapter of the Shangshu, c. 5th century BCE",
-shanhaijing,"Shanhaijing (Classic of Mountains and Seas), 4th–1st century BCE",
-shiji,"Sima Qian, Shiji (Records of the Grand Historian), ch. 123 'Account of Dayuan', c. 94 BCE",
-hanshu,"Ban Gu, Hanshu (Book of Han), ch. 96 'Western Regions', 111 CE",
-houhanshu,"Fan Ye, Hou Hanshu (Book of the Later Han), ch. 88 'Western Regions', 5th century",
-kang-tai,"Kang Tai, Wushi waiguo zhuan (Accounts of Foreign Countries in the Time of Wu), c. 250 (fragments)",
-faxian,"Faxian, Foguo ji (A Record of Buddhist Kingdoms), 416",
-xuanzang,"Xuanzang and Bianji, Da Tang Xiyu ji (Great Tang Records on the Western Regions), 646",
-yijing,"Yijing, Nanhai jigui neifa zhuan (A Record of Buddhist Practices Sent Home from the Southern Sea), 691",
-du-huan,"Du Huan, Jingxing ji (Record of Travels), 762, preserved in Du You's Tongdian (801)",
-jia-dan,"Jia Dan's itineraries (c. 801), preserved in the geography treatise of the Xin Tang shu (1060)",
-zhou-qufei,"Zhou Qufei, Lingwai daida (Notes from Beyond the Passes), 1178",
-zhao-rugua,"Zhao Rugua, Zhufan zhi (A Description of Foreign Peoples), 1225",
-zhou-daguan,"Zhou Daguan, Zhenla fengtu ji (A Record of Cambodia), c. 1297",
-kangnido,"Li Zemin, Shengjiao guangbei tu (c. 1330, lost), known through the Korean Kangnido map of 1402",
-wang-dayuan,"Wang Dayuan, Daoyi zhilüe (A Brief Account of the Island Barbarians), 1349",
-ming-shilu,"Ming shilu (Veritable Records of the Ming)",
-fei-xin,"Fei Xin, Xingcha shenglan (Marvels Discovered by the Star Raft), 1436",
-ma-huan,"Ma Huan, Yingya shenglan (The Overall Survey of the Ocean's Shores), 1433–1451",
-liujiagang,"Zheng He's inscriptions at Liujiagang and Changle, 1431",
-ricci-map,"Matteo Ricci and Li Zhizao, Kunyu wanguo quantu (Map of the Myriad Countries of the World), 1602",
-aleni,"Giulio Aleni, Zhifang waiji (Record of Places outside the Imperial Geographer's Charge), 1623",
-kangxi-atlas,"Huangyu quanlan tu (the Kangxi atlas), Qing–Jesuit survey, 1708–1718",
-haiguo-tuzhi,"Wei Yuan, Haiguo tuzhi (Illustrated Treatise on the Sea Kingdoms), 1843–1852; Xu Jiyu, Yinghuan zhilüe (1848)",
-al-baladhuri,"al-Baladhuri, Futuh al-buldan (The Conquests of the Lands), 9th century",
-akhbar-sin,"Akhbar al-Sin wa'l-Hind (Accounts of China and India), 851",
-ibn-khurradadhbih,"Ibn Khurradadhbih, Kitab al-masalik wa'l-mamalik (Book of Roads and Kingdoms), c. 870",
-ibn-fadlan,"Ahmad ibn Fadlan, Risala, 922",
-al-masudi,"al-Mas'udi, Muruj al-dhahab (The Meadows of Gold), 947",
-al-biruni,"al-Biruni, Tahqiq ma li'l-Hind (India), c. 1030",
-al-bakri,"al-Bakri, Kitab al-masalik wa'l-mamalik, 1068",
-levtzion-hopkins,"N. Levtzion and J. F. P. Hopkins (eds.), Corpus of Early Arabic Sources for West African History (1981)",
-al-idrisi,"al-Idrisi, Nuzhat al-mushtaq (the Tabula Rogeriana), 1154",
-al-umari,"Ibn Fadl Allah al-Umari, Masalik al-absar fi mamalik al-amsar, c. 1338",
-ibn-battuta,"Ibn Battuta and Ibn Juzayy, Tuhfat al-nuzzar (the Rihla), 1355",https://sourcebooks.web.fordham.edu/source/1354-ibnbattuta.asp
-piri-reis,"Piri Reis, world map, 1513",
-tarih-hind,"Tarih-i Hind-i Garbi (History of the West Indies), Ottoman, c. 1580",
-katip-celebi,"Katip Çelebi, Cihannüma, printed by İbrahim Müteferrika, 1732",
-tahtawi,"Rifa'a al-Tahtawi, Takhlis al-ibriz fi talkhis Bariz, 1834",
-kirch,"Patrick V. Kirch, On the Road of the Winds: An Archaeological History of the Pacific Islands, 2nd ed. (2017)",
-wilmshurst-2011,"Janet Wilmshurst et al., 'High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia', PNAS 108 (2011)",
-ioannidis-2020,"Alexander Ioannidis et al., 'Native American gene flow into Polynesia predating Easter Island settlement', Nature 583 (2020)",
-finney,"Ben Finney, Voyage of Rediscovery: A Cultural Odyssey through Polynesia (1994)",
-bae-2017,"Christopher Bae, Katerina Douka and Michael Petraglia, 'On the origin of modern humans: Asian perspectives', Science 358 (2017)",
-clarkson-2017,"Chris Clarkson et al., 'Human occupation of northern Australia by 65,000 years ago', Nature 547 (2017)",
-hublin-2020,"Jean-Jacques Hublin et al., 'Initial Upper Palaeolithic Homo sapiens from Bacho Kiro Cave, Bulgaria', Nature 581 (2020)",
-fu-2014,"Qiaomei Fu et al., 'Genome sequence of a 45,000-year-old modern human from western Siberia', Nature 514 (2014)",
-pitulko-2016,"Vladimir Pitulko et al., 'Early human presence in the Arctic: evidence from 45,000-year-old mammoth remains', Science 351 (2016)",
-pitulko-2004,"Vladimir Pitulko et al., 'The Yana RHS site: humans in the Arctic before the Last Glacial Maximum', Science 303 (2004)",
-bennett-2021,"Matthew Bennett et al., 'Evidence of humans in North America during the Last Glacial Maximum', Science 373 (2021)",
-dillehay-2008,"Tom Dillehay et al., 'Monte Verde: seaweed, food, medicine, and the peopling of South America', Science 320 (2008)",
-raghavan-2014,"Maanasa Raghavan et al., 'The genetic prehistory of the New World Arctic', Science 345 (2014)",
-keegan-hofman,"William Keegan and Corinne Hofman, The Caribbean before Columbus (2017)",
-dewar-wright,"Robert Dewar and Henry Wright, 'The culture history of Madagascar', Journal of World Prehistory 7 (1993)",
-pliny-letters,"Pliny the Younger, Letters 6.16 and 6.20",
-hedin,"Sven Hedin, Central Asia and Tibet (1903)",
-stein,"Aurel Stein, Ancient Khotan (1907) and Serindia (1921)",
-mouhot,"Henri Mouhot, Travels in the Central Parts of Indo-China (Siam), Cambodia, and Laos (1864)",
-bingham,"Hiram Bingham, 'In the Wonderland of Peru', National Geographic Magazine (April 1913)",
-pikirayi,"Innocent Pikirayi, The Zimbabwe Culture: Origins and Decline of Southern Zambezian States (2001)",
-pauketat,"Timothy Pauketat, Cahokia: Ancient America's Great City on the Mississippi (2009)",
-al-tabari,"al-Tabari, Tarikh al-rusul wa'l-muluk (History of the Prophets and Kings), early 10th century",
-appian,"Appian, Punica (The Punic Wars), 2nd century CE",
-hanno,"The Periplus of Hanno (Greek translation of a Carthaginian report, c. 500 BCE; preserved in a 9th-century manuscript)",
-cleomedes,"Cleomedes, On the Circular Motions of the Celestial Bodies (1st–2nd century CE), reporting Eratosthenes",
-pei-xiu,"Jin shu (Book of Jin), ch. 35, biography of Pei Xiu, with his preface on map-making (c. 267)",
-shen-kuo,"Shen Kuo, Mengxi bitan (Dream Pool Essays), 1088",
-zhu-yu,"Zhu Yu, Pingzhou ketan (Pingzhou Table Talks), 1119",
-stroganov-chronicle,"The Stroganov and Remezov chronicles of the conquest of Sibir (17th century)",
-description-egypte,"Commission des sciences et des arts, Description de l'Égypte (1809–1829)",
-humboldt-narrative,"Alexander von Humboldt and Aimé Bonpland, Personal Narrative of Travels to the Equinoctial Regions of America (1814–1831)",
-lewis-clark-journals,"Meriwether Lewis and William Clark, journals of the Corps of Discovery (ed. Gary Moulton, 1983–2001)",
-darwin-voyage,"Charles Darwin, Journal of Researches (The Voyage of the Beagle), 1839",
-livingstone-travels,"David Livingstone, Missionary Travels and Researches in South Africa (1857)",
-challenger-report,"Report on the Scientific Results of the Voyage of HMS Challenger (50 volumes, 1880–1895)",
-libby,"Willard Libby, Radiocarbon Dating (1952)",
-landsat,"NASA, Landsat 1 (ERTS-1) mission records, 1972",
-notitia-urbis,"Notitia Urbis Constantinopolitanae (inventory of the city's fourteen regions), c. 425",
-procopius,"Procopius, De aedificiis (On Buildings), c. 554",
-jiu-tangshu,"Liu Xu et al., Jiu Tangshu (Old Book of Tang), 945, chapter on Fulin",
-villehardouin,"Geoffrey of Villehardouin, De la Conquête de Constantinople, c. 1210",
-kritovoulos,"Michael Kritovoulos, History of Mehmed the Conqueror, c. 1467",
-schedel,"Hartmann Schedel, Liber chronicarum (the Nuremberg Chronicle), 1493",
-evliya-celebi,"Evliya Çelebi, Seyahatname (Book of Travels), vol. 1 on Istanbul, c. 1640s",
-diodorus,"Diodorus Siculus, Bibliotheca historica, book 5 (c. 30 BCE), on the tin trade of Belerion, probably from Pytheas via Timaeus",
-geminus,"Geminus, Introduction to the Phenomena 6.9 (1st century BCE), quoting Pytheas",
-mills-polar,"William J. Mills, Exploring Polar Frontiers: A Historical Encyclopedia (2003)",
-cabrillo-relacion,"Relación del descubrimiento… (account of Cabrillo's voyage, attributed to Juan Páez), 1543; ed. Wagner, Spanish Voyages to the Northwest Coast (1929)",
-vizcaino-ascension,"Antonio de la Ascensión, Relación breve of Vizcaíno's voyage, 1602–1603",
-vancouver-voyage,"George Vancouver, A Voyage of Discovery to the North Pacific Ocean, 1798",
-cabeza-de-vaca,"Álvar Núñez Cabeza de Vaca, La relación (Naufragios), 1542",
-castaneda,"Pedro de Castañeda de Nájera, Relación de la jornada de Cíbola, c. 1560s",
-villagra,"Gaspar Pérez de Villagrá, Historia de la Nueva México, 1610",
-escalante-diario,"Silvestre Vélez de Escalante, Diario y derrotero (the Domínguez–Escalante journal), 1776",
-powell,"John Wesley Powell, Exploration of the Colorado River of the West and its Tributaries, 1875",
-xerez,"Francisco de Xerez, Verdadera relación de la conquista del Perú, 1534",
-oviedo,"Gonzalo Fernández de Oviedo, Historia general y natural de las Indias, 1535–1557",
-carvajal,"Gaspar de Carvajal, Relación del nuevo descubrimiento del famoso río Grande de las Amazonas, 1542",
-acuna,"Cristóbal de Acuña, Nuevo descubrimiento del gran río de las Amazonas, 1641",
-la-condamine,"Charles-Marie de La Condamine, Relation abrégée d'un voyage fait dans l'intérieur de l'Amérique méridionale, 1745",
-roosevelt-brazil,"Theodore Roosevelt, Through the Brazilian Wilderness, 1914",
-colon-hernando,"Hernando Colón, Historia del Almirante (Life of the Admiral Christopher Columbus), 1571",
-herrera,"Antonio de Herrera, Historia general de los hechos de los castellanos, 1601–1615",
-bernal-diaz,"Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España, c. 1568",
-secret-history,"The Secret History of the Mongols, 13th century",
-juvaini,"ʿAṭā-Malik Juvaynī, Tārīkh-i Jahāngushāy (History of the World Conqueror), c. 1260",
-rashid-al-din,"Rashīd al-Dīn, Jāmiʿ al-tawārīkh (Compendium of Chronicles), c. 1307",
-yuanshi,"Song Lian et al., Yuanshi (History of Yuan), 1370",
-caesar-bg,"Julius Caesar, Commentarii de Bello Gallico, c. 50 BCE",
-cassius-dio,"Cassius Dio, Roman History, c. 230 CE",
-seneca-nq,"Seneca, Naturales quaestiones 6.8, c. 62 CE",
-qing-shilu,"Qing shilu (Veritable Records of the Qing dynasty)",
-hakluyt,"Richard Hakluyt, The Principal Navigations, Voyages, Traffiques and Discoveries of the English Nation, 1598–1600",
-purchas,"Samuel Purchas, Purchas his Pilgrimes, 1625 (includes Juet's journal of Hudson's 1609 voyage)",
-steller,"Georg Wilhelm Steller, Journal of a Voyage with Bering, 1741–1742",
-de-veer,"Gerrit de Veer, Waerachtighe beschryvinghe van drie seylagien (Barentsz's three voyages), 1598",
-vishnu-purana,"Vishnu Purana (geography of Jambudvipa and the seven continents), c. 400 CE",
-ashoka-edicts,"Edicts of Ashoka (Rock Edict XIII names the Hellenistic kings), c. 260 BCE",
-chola-inscriptions,"Tanjore inscription of Rajendra Chola I (the Srivijaya campaign), c. 1030",
-atisha-bio,"Alaka Chattopadhyaya, Atiśa and Tibet (1967), from the Tibetan biographies of Atiśa",
-ain-i-akbari,"Abu'l-Fazl, Ain-i-Akbari, c. 1590",
-nain-singh,"T. G. Montgomerie, Report of a Route-Survey made by Pundit —, from Nepal to Lhasa, 1868",
-kojiki,"Kojiki (712) and Nihon shoki (720)",
-ennin,"Ennin, Nittō guhō junrei kōki (Record of a Pilgrimage to China in Search of the Law), c. 847",
-amati,"Scipione Amati, Historia del regno di Voxu (account of the Hasekura embassy), 1615",
-hokusa-bunryaku,"Katsuragawa Hoshū, Hokusa bunryaku (Daikokuya Kōdayū's account of Russia), 1794",
-mamiya,"Mamiya Rinzō, Tōdatsu kikō and Kita Ezo zusetsu, 1811",
-ino,"Inō Tadataka, Dai Nihon enkai yochi zenzu (map of Japan's coasts), 1821",
-sairan-igen,"Arai Hakuseki, Sairan igen (world geography from the questioning of Sidotti), 1713",
-tarikh-al-sudan,"ʿAbd al-Raḥmān al-Saʿdī, Tārīkh al-Sūdān, c. 1655",
-tarikh-al-fattash,"Tārīkh al-Fattāsh (chronicle of Songhay), 17th century",
-sundiata,"The Epic of Sundiata (oral tradition of the Mande griots; recorded by D. T. Niane, 1960)",
-mcintosh,"S. K. and R. J. McIntosh, excavations at Jenné-jeno (1981 onward)",
-sahagun,"Bernardino de Sahagún and Nahua scholars, Florentine Codex (Historia general de las cosas de Nueva España), c. 1577",
-codex-mendoza,"Codex Mendoza (tribute provinces of the Mexica), c. 1541",
-duran,"Diego Durán, Historia de las Indias de Nueva España, 1581",
-chimalpahin,"Domingo Francisco de San Antón Muñón Chimalpahin, Annals and Diary, c. 1610–1631",
-stuart-entrada,"David Stuart, 'The Arrival of Strangers' (Teotihuacan and the Maya, 378 CE), 2000",
-sarmiento,"Pedro Sarmiento de Gamboa, Historia de los Incas, 1572",
-cieza,"Pedro Cieza de León, Crónica del Perú, 1553",
-guaman-poma,"Felipe Guamán Poma de Ayala, El primer nueva corónica y buen gobierno, c. 1615",
-garcilaso,"Inca Garcilaso de la Vega, Comentarios Reales de los Incas, 1609",
-moseley,"Michael E. Moseley, The Incas and Their Ancestors (2001)",
-shen-du,"Shen Du, Ruiying qilin song (Ode to the Auspicious Qilin), 1414, with the painting of the Bengal giraffe after it (Philadelphia Museum of Art)",
-church-treasure-ships,"Sally K. Church, 'Zheng He: An Investigation into the Plausibility of 450-ft Treasure Ships', Monumenta Serica 53 (2005)",
-behistun,"Darius I, the Behistun inscription and the Persepolis tablets (Old Persian, Elamite and Babylonian), c. 520–490 BCE",
-daryaee,"Touraj Daryaee, Sasanian Persia: The Rise and Fall of an Empire (2009)",
-hoyland,"Robert G. Hoyland, Arabia and the Arabs: From the Bronze Age to the Coming of Islam (2001)",
-bagnall,"Roger S. Bagnall and Dominic W. Rathbone (eds.), Egypt from Alexander to the Copts (2004)",
-hudud-al-alam,"Ḥudūd al-ʿĀlam (The Regions of the World), written in Persian in Guzgan, 982; trans. V. Minorsky (1937)",
-matthee,"Rudi Matthee, The Politics of Trade in Safavid Iran: Silk for Silver, 1600–1730 (1999)",
-mirza-saleh,"Mīrzā Ṣāliḥ Shīrāzī, Safarnāma: the journal of the Persian student mission to England, 1815–1819",
-nasir-al-din-shah,"Nāṣir al-Dīn Shāh, The Diary of H.M. the Shah of Persia during his Tour through Europe in A.D. 1873 (trans. J. W. Redhouse, 1874)",
-hajj-sayyah,"Ḥājj Sayyāḥ, An Iranian in Nineteenth Century Europe: The Travel Diaries of Haj Sayyah, 1859–1877 (trans. M. Sayyah, 1998)",
-goitein-india,"S. D. Goitein and Mordechai A. Friedman, India Traders of the Middle Ages: Documents from the Cairo Geniza (2008)",
-qalqashandi,"al-Qalqashandī, Ṣubḥ al-aʿshā fī ṣināʿat al-inshāʾ (the Mamluk chancery manual), 1412",
-al-jabarti,"ʿAbd al-Raḥmān al-Jabartī, ʿAjāʾib al-āthār fī al-tarājim wa-al-akhbār (chronicle of Egypt, including the French occupation), c. 1805–1821",
-baker-ismailia,"Samuel W. Baker, Ismailia: A Narrative of the Expedition to Central Africa … Organized by Ismail, Khedive of Egypt (1874)",
-hill-hogg,"Richard Hill and Peter Hogg, A Black Corps d'Élite: An Egyptian Sudanese Conscript Battalion with the French Army in Mexico, 1863–1867 (1995)",
-rasulid-hexaglot,"Peter B. Golden (ed.), The King's Dictionary: The Rasūlid Hexaglot (2000)",
-ibn-majid,"Aḥmad ibn Mājid, Kitāb al-fawāʾid fī uṣūl ʿilm al-baḥr, c. 1490; trans. G. R. Tibbetts, Arab Navigation in the Indian Ocean before the Coming of the Portuguese (1971)",
-sheriff-zanzibar,"Abdul Sheriff, Slaves, Spices and Ivory in Zanzibar (1987)",
-lancel,"Serge Lancel, Carthage: A History (1995)",
-ibn-jubayr,"Ibn Jubayr, Riḥla (the travels of an Andalusi pilgrim), 1183–1185",
-leo-africanus,"al-Ḥasan al-Wazzān (Leo Africanus), Description of Africa, 1526 (printed by Ramusio, 1550)",
-matar,"Nabil Matar, Europe Through Arab Eyes, 1578–1727 (2009)",
-al-hajari,"Aḥmad ibn Qāsim al-Ḥajarī, Kitāb nāṣir al-dīn ʿalā al-qawm al-kāfirīn (1637); ed. and trans. P. S. van Koningsveld et al. (1997)",
-van-de-mieroop,"Marc Van De Mieroop, A History of the Ancient Near East, ca. 3000–323 BC (3rd ed., 2016)",
-potts-gulf,"D. T. Potts, The Arabian Gulf in Antiquity (1990)",
-amarna,"The Amarna Letters (c. 1360–1332 BCE), trans. William L. Moran (1992)",
-shaw-egypt,"Ian Shaw (ed.), The Oxford History of Ancient Egypt (2000)",
-hatshepsut-punt,"The Punt reliefs in Hatshepsut's temple at Deir el-Bahari, c. 1470 BCE",
-wenamun,"The Report of Wenamun (Papyrus Moscow 120), c. 1075 BCE",
-turin-map,"The Turin Papyrus Map, c. 1160 BCE (Museo Egizio, Turin)",
-babylonian-world-map,"The Babylonian Map of the World (British Museum 92687), c. 600 BCE",
-esarhaddon,"The royal inscriptions of Esarhaddon, king of Assyria (680–669 BCE); ed. Erle Leichty (2011)",
-liu-chen,"Li Liu and Xingcan Chen, The Archaeology of China: From the Late Paleolithic to the Early Bronze Age (2012)",
-keightley,"David N. Keightley, The Ancestral Landscape: Time, Space, and Community in Late Shang China (2000)",
-shaughnessy,"Edward L. Shaughnessy, 'Western Zhou History', in The Cambridge History of Ancient China (1999)",
-zuozhuan,"Zuozhuan (The Zuo Tradition), compiled c. 4th century BCE",
-cline-1177,"Eric H. Cline, 1177 B.C.: The Year Civilization Collapsed (2014)",
-homer,"Homer, Iliad and Odyssey, c. 750–700 BCE",
-boardman,"John Boardman, The Greeks Overseas: Their Early Colonies and Trade (4th ed., 1999)",
-possehl,"Gregory L. Possehl, The Indus Civilization: A Contemporary Perspective (2002)",
-rigveda,"The Rigveda, c. 1500–1200 BCE; trans. Stephanie W. Jamison and Joel P. Brereton (2014)",
-allchin,"F. R. Allchin, The Archaeology of Early Historic South Asia (1995)",
-aubet,"María Eugenia Aubet, The Phoenicians and the West (2nd ed., 2001)",
-habu,"Junko Habu, Ancient Jomon of Japan (2004)",
-pool-olmec,"Christopher A. Pool, Olmec Archaeology and Early Mesoamerica (2007)",
-burger-chavin,"Richard L. Burger, Chavín and the Origins of Andean Civilization (1992)",
-anthony,"David W. Anthony, The Horse, the Wheel, and Language (2007)",
-primary-chronicle,"The Tale of Bygone Years (the Russian Primary Chronicle), compiled in Kyiv c. 1113",
-nikitin,"Afanasy Nikitin, A Journey Beyond Three Seas (Khozhenie za tri morya), 1468–1475",
-atlas-russicus,"Atlas Russicus, published by the Imperial Academy of Sciences, St Petersburg, 1745",
-krusenstern,"Adam Johann von Krusenstern, Voyage Round the World in the Years 1803–1806 (1810–1814)",
-bellingshausen,"Fabian Gottlieb von Bellingshausen, Two Seasons of Exploration in the Southern Ice Ocean (1831)",
-isidore,"Isidore of Seville, Etymologiae, c. 630",
-orosius-alfred,"The Old English Orosius, with the voyages of Ohthere and Wulfstan told to King Alfred, c. 890",
-brink-price,"Stefan Brink and Neil Price (eds.), The Viking World (2008)",
-diller-ptolemy,"Aubrey Diller, 'The Oldest Manuscripts of Ptolemaic Maps', Transactions of the American Philological Association 71 (1940)",
-cunliffe,"Barry Cunliffe, Europe Between the Oceans: 9000 BC–AD 1000 (2008)",
-russian-chronograph,"The Russian Chronograph (Russkii khronograf), a world history compiled in Muscovy, 1512",
-maxim-greek,"Maxim the Greek, writings in Muscovy after 1518, including the first Russian mention of the New World",
-daniel-abbot,"The Pilgrimage of the Russian Abbot Daniel in the Holy Land, 1106–1108",
-itesamuddin,"Mirza Sheikh I'tesamuddin, Shigarf-nama-i Vilayet (The Wonders of Vilayet), on his journey to Britain in 1765–1766",
-abu-taleb,"Mirza Abu Taleb Khan, The Travels of Mirza Abu Taleb Khan in Asia, Africa and Europe, 1799–1803 (trans. 1810)",
-ibn-battuta-ships,"Ibn Battuta, Travels, trans. Samuel Lee (1829), The ships of Kalikut and the storm",https://franpritchett.com/00generallinks/ibnbatuta/07china2.html
-ibn-battuta-asia,"Ibn Battuta, Travels, trans. Samuel Lee (1829), Maabar and Bengal",https://franpritchett.com/00generallinks/ibnbatuta/10bengal.html
-ibn-battuta-orias,"UC Berkeley ORIAS, The Travels of Ibn Battuta, annotated itinerary based on Ross Dunn and H. A. R. Gibb",https://orias.berkeley.edu/resources-teachers/travels-ibn-battuta/journey
-ibn-battuta-lee,"Ibn Battuta, Travels, trans. Samuel Lee (1829), Samudra and China",https://archive.org/details/b28406084
-ibn-battuta-beckingham,"C. F. Beckingham, Ebn Battuta, Encyclopaedia Iranica",https://www.iranicaonline.org/articles/ebn-battuta/
-ibn-battuta-najaf,"Ibn Battuta, Rihla, Dar al-Turath edition, p. 172 (Najaf)",https://ablibrary.net/book_content/b/6802/172?lang=ar
-ibn-battuta-gibb,"Ibn Battuta, Travels in Asia and Africa 1325–1354, translated and selected by H. A. R. Gibb (1929)",https://www.heroesandlegends.com.au/wp-content/uploads/2022/08/2015.62617.Ibn-Battuta-Travels-In-Asia-And-Africa-1325-1354_text.pdf
-alhambra-setting,"Patronato de la Alhambra y Generalife, The Enclave; historical setting and topography",https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/the-enclave
-mcghee,"Robert McGhee, The Last Imaginary Place: A Human History of the Arctic World (2005)",
-friesen-mason,"T. Max Friesen and Owen K. Mason (eds.), The Oxford Handbook of the Prehistoric Arctic (2016)",
-rasmussen,"Knud Rasmussen, Across Arctic America: Narrative of the Fifth Thule Expedition (1927)",
-ammassalik-maps,"The Ammassalik wooden maps carved by Kunit, collected by Gustav Holm in 1885 (Greenland National Museum, Nuuk)",
-hendrik,"Hans Hendrik, Memoirs of Hans Hendrik, the Arctic Traveller (1878)",
-lewis-williams,"David Lewis-Williams, San Rock Art (2011)",
-huffman,"Thomas N. Huffman, Mapungubwe: Ancient African Civilisation on the Limpopo (2005)",
-beach,"D. N. Beach, The Shona and Zimbabwe, 900–1850 (1980)",
-parsons-kings,"Neil Parsons, King Khama, Emperor Joe, and the Great White Queen: Victorian Britain through African Eyes (1998)",
-munro-hay,"Stuart Munro-Hay, Aksum: An African Civilisation of Late Antiquity (1991)",
-kebra-nagast,"Kebra Nagast (The Glory of the Kings), compiled in Ge'ez c. 1320",
-tamrat,"Taddesse Tamrat, Church and State in Ethiopia, 1270–1527 (1972)",
-salvadore,"Matteo Salvadore, The African Prester John and the Birth of Ethiopian–European Relations, 1402–1555 (2017)",
-ludolf,"Hiob Ludolf, Historia Aethiopica (1681), written with the Ethiopian scholar Abba Gorgoryos",
-horton-middleton,"Mark Horton and John Middleton, The Swahili: The Social Landscape of a Mercantile Society (2000)",
-kilwa-chronicle,"The Kilwa Chronicle (Kitab al-Sulwa fi akhbar Kilwa), c. 1530",
-tippu-tip,"Hamed bin Muhammed el-Murjebi (Tippu Tip), Maisha ya Hamed bin Muhammed, his autobiography, c. 1902–1903",
-bellwood,"Peter Bellwood, First Islanders: Prehistory and Human Migration in Island Southeast Asia (2017)",
-adelaar,"Alexander Adelaar, 'The Indonesian Migrations to Madagascar', in Austronesian Diaspora and the Ethnogeneses of People in Indonesian Archipelago (2006)",
-hall-kr,"Kenneth R. Hall, A History of Early Southeast Asia: Maritime Trade and Societal Development, 100–1500 (2011)",
-nagarakretagama,"Mpu Prapanca, Desawarnana (Nagarakretagama), 1365",
-sejarah-melayu,"Sejarah Melayu (the Malay Annals), c. 1612",
-reid,"Anthony Reid, Southeast Asia in the Age of Commerce, 1450–1680 (1988–1993)",
-abdullah-munshi,"Abdullah bin Abdul Kadir (Munshi Abdullah), Hikayat Abdullah (1849)",
-aristotle,"Aristotle, On the Heavens (De caelo), c. 350 BCE",
-needham,"Joseph Needham, Science and Civilisation in China, vol. 3 (1959) and vol. 4, part 3 (1971)",
-talbert-peutinger,"Richard J. A. Talbert, Rome's World: The Peutinger Map Reconsidered (2010)",
-plofker,"Kim Plofker, Mathematics in India (2009)",
-urton-khipu,"Gary Urton, Signs of the Inka Khipu: Binary Coding in the Andean Knotted-String Records (2003)",
-hyslop,"John Hyslop, The Inka Road System (1984)",
-mundy,"Barbara E. Mundy, The Mapping of New Spain: Indigenous Cartography and the Maps of the Relaciones Geográficas (1996)",
-ortelius,"Abraham Ortelius, Theatrum Orbis Terrarum (Antwerp, 1570)",
-davis-seamans,"John Davis, The Seamans Secrets (1594)",
-headrick,"Daniel R. Headrick, The Tools of Empire: Technology and European Imperialism in the Nineteenth Century (1981)",
-analects,"Confucius (attrib.), Analects; Sima Qian, Shiji 47, Hereditary House of Confucius",
-xu-xiake-youji,"Xu Xiake, Travel Diaries of Xu Xiake (Xu Xiake youji), written 1607–1640, first printed 1776",
-boas,"Franz Boas, The Central Eskimo (1888) and Baffin-Land (1885)",
-andrews,"Roy Chapman Andrews, The New Conquest of Central Asia (1932)",
-drake-world-encompassed,"Francis Fletcher and Francis Drake (nephew), The World Encompassed by Sir Francis Drake (1628)",
-fidalgo,"Henry R. Wagner, Spanish Explorations in the Strait of Juan de Fuca (1933); W. L. Cook, Flood Tide of Empire (1973)",
-ross-voyage,"James Clark Ross, A Voyage of Discovery and Research in the Southern and Antarctic Regions (1847)",
-duyfken,"J. E. Heeres, The Part Borne by the Dutch in the Discovery of Australia 1606–1765 (1899)",
-barros,"João de Barros, Décadas da Ásia, Década I (1552)",
-caminha,"Pero Vaz de Caminha, Letter to King Manuel on the finding of Brazil (1 May 1500)",
-vespucci,"Amerigo Vespucci, Mundus Novus (1503); Martin Waldseemüller, Universalis Cosmographia (1507)",
-pero-lopes,"Pero Lopes de Sousa, Diário da navegação (1530–1532)",
-raposo-tavares,"Jaime Cortesão, Raposo Tavares e a formação territorial do Brasil (1958)",
-long-march,"Edgar Snow, Red Star Over China (1937); Harrison Salisbury, The Long March: The Untold Story (1985)",
-motorcycle-diaries,"Ernesto Guevara, Notas de viaje (written 1952, published 1993); Alberto Granado, Con el Che por Sudamérica (1978)",
-bennett-instruments,"J. A. Bennett, The Divided Circle: A History of Instruments for Astronomy, Navigation and Surveying (1987)",
-standage,"Tom Standage, The Victorian Internet: The Remarkable Story of the Telegraph and the Nineteenth Century's On-line Pioneers (1998)",
-fischer-telephone,"Claude S. Fischer, America Calling: A Social History of the Telephone to 1940 (1992)",
-brown-radar,"Louis Brown, A Radar History of World War II: Technical and Military Imperatives (1999)",
-crosby,"Alfred W. Crosby, The Columbian Exchange: Biological and Cultural Consequences of 1492 (1972)",
-piperno-2009,"Dolores Piperno et al., 'Starch grain and phytolith evidence for early ninth millennium B.P. maize from the Central Balsas River Valley, Mexico', PNAS 106 (2009)",
-ho-pingti,"Ping-ti Ho, 'The Introduction of American Food Plants into China', American Anthropologist 57 (1955)",
-hawkes-potato,"J. G. Hawkes and J. Francisco-Ortega, 'The early history of the potato in Europe', Euphytica 70 (1993)",
-roullier-2013,"Caroline Roullier et al., 'Historical collections reveal patterns of diffusion of sweet potato in Oceania obscured by modern plant movements and recombination', PNAS 110 (2013)",
-andrews-peppers,"Jean Andrews, Peppers: The Domesticated Capsicums (1984; new ed. 1995)",
-goodman-tobacco,"Jordan Goodman, Tobacco in History: The Cultures of Dependence (1993)",
-coe-chocolate,"Sophie D. Coe and Michael D. Coe, The True History of Chocolate (1996)",
-schorger,"A. W. Schorger, The Wild Turkey: Its History and Domestication (1966)",
-mair-hoh,"Victor H. Mair and Erling Hoh, The True History of Tea (2009)",
-hattox,"Ralph S. Hattox, Coffee and Coffeehouses: The Origins of a Social Beverage in the Medieval Near East (1985)",
-mintz,"Sidney W. Mintz, Sweetness and Power: The Place of Sugar in Modern History (1985)",
-librado-2021,"Pablo Librado et al., 'The origins and spread of domestic horses from the Western Eurasian steppes', Nature 598 (2021)",
-duyvendak,"J. J. L. Duyvendak, China's Discovery of Africa (1949)",
-clarke-rhinoceros,"T. H. Clarke, The Rhinoceros from Dürer to Stubbs, 1515–1799 (1986)",
-ctesias,"Ctesias of Cnidus, Indica, c. 400 BCE (fragments in Photius)",
-pelsaert,"Francisco Pelsaert, journal of the Batavia, 1629 (in Ongeluckige voyagie, 1647)",
-hume-dodo,"Julian P. Hume, 'The history of the Dodo Raphus cucullatus and the penguin of Mauritius', Historical Biology 18 (2006)",
-morris-pandas,"Ramona and Desmond Morris, Men and Pandas (1966)",
-smith-coelacanth,"J. L. B. Smith, Old Fourlegs: The Story of the Coelacanth (1956)",
-pavord,"Anna Pavord, The Tulip (1999)",
-fuller-2009,"Dorian Q. Fuller et al., 'The domestication process and domestication rate in rice: spikelet bases from the Lower Yangtze', Science 323 (2009)",
-zohary-hopf,"Daniel Zohary, Maria Hopf and Ehud Weiss, Domestication of Plants in the Old World, 4th ed. (2012)",
-perrier-2011,"Xavier Perrier et al., 'Multidisciplinary perspectives on banana (Musa spp.) domestication', PNAS 108 (2011)",
-wu-2018,"Guohong Albert Wu et al., 'Genomics of the origin and evolution of Citrus', Nature 554 (2018)",
-dean-rubber,"Warren Dean, Brazil and the Struggle for Rubber: A Study in Environmental History (1987)",
-honigsbaum,"Mark Honigsbaum, The Fever Trail: In Search of the Cure for Malaria (2001)",
-turner-spice,"Jack Turner, Spice: The History of a Temptation (2004)",
-jones-manioc,"William O. Jones, Manioc in Africa (1959)",
-smith-tomato,"Andrew F. Smith, The Tomato in America: Early History, Culture, and Cookery (1994)",
-driscoll-2007,"Carlos A. Driscoll et al., 'The Near Eastern origin of cat domestication', Science 317 (2007)",
-kanpyo-gyoki,"Emperor Uda, Kanpyō gyoki (diary), entry of 889",
-peters-2022,"Joris Peters et al., 'The biocultural origins and dispersal of domestic chickens', PNAS 119 (2022)",
-royal-frankish-annals,"Annales regni Francorum (Royal Frankish Annals), entries for 801–802",
-hahn-tower,"Daniel Hahn, The Tower Menagerie (2003)",
-bedini,"Silvio A. Bedini, The Pope's Elephant (1997)",
-holdaway-2014,"Richard N. Holdaway et al., 'An extremely low-density human population exterminated New Zealand moa', Nature Communications 5 (2014)",
-johnston-okapi,"Harry Johnston, 'Okapia, a new genus of Giraffidae from Central Africa', Proceedings of the Zoological Society of London (1901)",
-lantzeff-pierce,"George V. Lantzeff and Richard A. Pierce, Eastward to Empire: Exploration and Conquest on the Russian Open Frontier, to 1750 (1973)",
-fisher-dezhnev,"Raymond H. Fisher, The Voyage of Semen Dezhnev in 1648: Bering's Precursor (1981)",
-tulisen,"Tulišen, Yiyu lu (Record of Strange Regions), 1723; trans. George Staunton, Narrative of the Chinese Embassy to the Khan of the Tourgouth Tartars (1821)",
-nordenskiold,"A. E. Nordenskiöld, The Voyage of the Vega round Asia and Europe (1881)",
-chekhov-sakhalin,"Anton Chekhov, Sakhalin Island (1895)",
-caillie,"René Caillié, Journal d'un voyage à Temboctou et à Jenné (1830)",
-barth,"Heinrich Barth, Travels and Discoveries in North and Central Africa (1857–58)",
-hearne,"Samuel Hearne, A Journey from Prince of Wales's Fort in Hudson's Bay to the Northern Ocean (1795)",
-mackenzie,"Alexander Mackenzie, Voyages from Montreal through the Continent of North America to the Frozen and Pacific Oceans (1801)",
-beattie-geiger,"Owen Beattie and John Geiger, Frozen in Time: The Fate of the Franklin Expedition (1987); John Rae's report to the Admiralty (1854)",
-seth-korea,"Michael J. Seth, A History of Korea: From Antiquity to the Present (2010)",
-samguk-sagi,"Kim Busik, Samguk sagi (History of the Three Kingdoms, 1145)",
-goryeosa,"Goryeosa (History of Goryeo, 1451)",
-joseon-sillok,"Joseon wangjo sillok (Veritable Records of the Joseon Dynasty)",
-ledyard-korea,"Gari Ledyard, 'Cartography in Korea', in The History of Cartography, vol. 2, book 2 (1994)",
-haedong-jegukgi,"Sin Suk-ju, Haedong jegukgi (Records of the Countries across the Eastern Sea, 1471)",
-choe-bu,"Choe Bu, Pyohaerok (1488), trans. John Meskill, Ch'oe Pu's Diary: A Record of Drifting across the Sea (1965)",
-hamel,"Hendrick Hamel, Journael van de ongeluckige voyagie van 't jacht de Sperwer (1668)",
-yeolha-ilgi,"Pak Ji-won, Yeolha ilgi (The Jehol Diary, 1780)",
-yu-kilchun,"Yu Kil-chun, Seoyu gyeonmun (Observations on a Journey to the West, 1895)",
-honeychurch,"William Honeychurch, Inner Asia and the Spatial Politics of Empire (2015)",
-golden-turkic,"Peter B. Golden, An Introduction to the History of the Turkic Peoples (1992)",
-orkhon,"The Orkhon inscriptions of Kül Tegin and Bilge Khagan (732–735), trans. Talât Tekin, A Grammar of Orkhon Turkic (1968)",
-rabban-sauma,"The History of Mar Yahballaha and Rabban Sauma, trans. E. A. Wallis Budge, The Monks of Kûblâi Khân (1928)",
-atwood,"Christopher P. Atwood, Encyclopedia of Mongolia and the Mongol Empire (2004)",
-inomata-2013,"Takeshi Inomata et al., 'Early Ceremonial Constructions at Ceibal, Guatemala', Science 340 (2013)",https://doi.org/10.1126/science.1234493
-sharer,"Robert J. Sharer and Loa P. Traxler, The Ancient Maya, 6th ed. (2006)",
-martin-grube,"Simon Martin and Nikolai Grube, Chronicle of the Maya Kings and Queens, 2nd ed. (2008)",
-kaqchikel-annals,"The Annals of the Kaqchikels, trans. Judith Maxwell and Robert Hill, Kaqchikel Chronicles (2006)",
-landa,"Diego de Landa, Relación de las cosas de Yucatán (c. 1566)",
-jones-itza,"Grant D. Jones, The Conquest of the Last Maya Kingdom (1998)",
-reed-caste-war,"Nelson Reed, The Caste War of Yucatán (1964)",
-restall-maya,"Matthew Restall, The Maya World: Yucatec Culture and Society, 1550–1850 (1997)",
-chilam-balam,"The Book of Chilam Balam of Chumayel, trans. Ralph L. Roys (1933)",
-weiditz,"Christoph Weiditz, Trachtenbuch (1529), with drawings of the Nahua at Charles V's court",
-hamann-1529,"Byron Ellsworth Hamann, on the Nahua ambassadors received by Clement VII in Rome, 1529 (Villa I Tatti research project)",https://itatti.harvard.edu/node/8476
-flint-coronado,"Richard Flint and Shirley Cushing Flint, Documents of the Coronado Expedition, 1539–1542 (2005)",
-guardino-2017,"Peter Guardino, The Dead March: A History of the Mexican-American War (2017)",
-martinez-galicia,"Baruc Martínez Díaz, Faustino Chimalpopoca Galicia: un intelectual indígena en el México decimonónico (2024)",
-lovell-alvarado,"W. George Lovell, Christopher H. Lutz and Wendy Kramer, Death in the Snow: Pedro de Alvarado and the Illusive Conquest of Peru (2016)",
-macleod-1973,"Murdo J. MacLeod, Spanish Central America: A Socioeconomic History, 1520–1720 (1973)",
-alvarez-cuartero-2007,"Izaskun Álvarez Cuartero, 'De Tihosuco a La Habana: la venta de indios yucatecos a Cuba durante la Guerra de Castas', Studia Historica: Historia Contemporánea 25 (2007)",
-raimundez-2019,"Zoraida Raimúndez Ares, on the letters of the Yucatec Maya caciques to Philip II (1567), Estudios de Cultura Maya (2019)",
-restall-black-middle,"Matthew Restall, The Black Middle: Africans, Mayas, and Spaniards in Colonial Yucatan (2009)",
-hemming-inca,"John Hemming, The Conquest of the Incas (1970)",
-assadourian-1982,"Carlos Sempat Assadourian, El sistema de la economía colonial: mercado interno, regiones y espacio económico (1982)",
-bonialian-2015,"Mariano Bonialian, 'Asiáticos en Lima a principios del siglo XVII', Bulletin de l'Institut Français d'Études Andines 44 (2015)",https://doaj.org/article/6e4ada7fbab843abb5e0cbd2b3b4f57e
-tupac-amaru-memoir,"Juan Bautista Túpac Amaru, El dilatado cautiverio (Buenos Aires, c. 1825); Charles F. Walker and Liz Clarke, Witness to the Age of Revolution (2020)",
-cadiz-cortes,"Diario de las discusiones y actas de las Cortes (Cádiz, 1810–1813)",
-tongsinsa-1719,"Sin Yu-han, Haeyurok (1719); James Lewis, 'Beyond Sakoku: The Korean Envoy to Edo and the 1719 Diary of Shin Yu-han', Korea Journal 25:11 (1985)",
-pyohae-simal,"Jeong Yak-jeon, Pyohae simal (c. 1805), the account of Mun Sun-deuk's drift",
-min-yeonghwan,"Min Yeong-hwan, Haecheon chubeom (1896), trans. Michael Finch in Min Yŏng-hwan: A Political Biography (2002)",
-macknight-1976,"C. C. Macknight, The Voyage to Marege': Macassan Trepangers in Northern Australia (1976)",
-raden-saleh,"Werner Kraus, Raden Saleh: The Beginning of Modern Indonesian Painting (2012)",
-song-yun,"Yang Xuanzhi, Luoyang qielan ji (Record of the Buddhist Monasteries of Luoyang, 547), with the accounts of Song Yun and Huisheng; trans. Édouard Chavannes (1903)",
-changchun,"Li Zhichang, Changchun zhenren xiyou ji (1228), trans. Arthur Waley, The Travels of an Alchemist (1931)",
-chen-cheng,"Chen Cheng, Xiyu xingcheng ji and Xiyu fanguo zhi (1415); Morris Rossabi, 'Two Ming Envoys to Inner Asia', T'oung Pao 62 (1976)",
-fan-shouyi,"Fan Shouyi, Shenjianlu (c. 1721); Paul Rule, 'Louis Fan Shouyi and Macao', Review of Culture 21 (2002)",
-binchun,"Binchun, Chengcha biji and his travel poems (1866); Jenny Huangfu Day, Qing Travelers to the Far West (2018) and 'Qing Envoys and Ministers in Europe, 1866–1893' (2012)",https://escholarship.org/uc/item/7wt3n65p
-flinders,"Matthew Flinders, A Voyage to Terra Australis (1814)",
-jackson-mongols,"Peter Jackson, The Mongols and the West, 1221–1410 (2005)",
-denon,"Vivant Denon, Voyage dans la Basse et la Haute Égypte (1802)",
-zhishun-zhenjiang,"Yu Xilu 俞希鲁, Zhishun Zhenjiang zhi 至顺镇江志 (Gazetteer of Zhenjiang, c. 1333), on Mar Sargis 马薛里吉思; see Moule and Pelliot, Marco Polo: The Description of the World (1938)",https://dsr.nii.ac.jp/toyobunko/III-2-F-c-104/V-2/page/0178.html.en
-yang-zhijiu,"Yang Zhijiu 杨志玖, 'Guanyu Make Boluo li Hua de yiduan Hanwen jilu' 关于马可波罗离华的一段汉文记录, Wenshi zazhi 1:12 (1941), on the 1290 zhanchi document in the Yongle dadian",
-found-study-pompeii,"UNESCO World Heritage Centre, pompeii — archaeological site or collection record",https://whc.unesco.org/en/list/829/
-found-study-herculaneum,"UNESCO World Heritage Centre, herculaneum — archaeological site or collection record",https://whc.unesco.org/en/list/829/
-found-study-troy,"UNESCO World Heritage Centre, troy — archaeological site or collection record",https://whc.unesco.org/en/list/849/
-found-study-knossos,"UNESCO World Heritage Centre, knossos — archaeological site or collection record",https://whc.unesco.org/en/list/1733/
-found-study-delphi,"UNESCO World Heritage Centre, delphi — archaeological site or collection record",https://whc.unesco.org/en/list/393/
-found-study-petra,"UNESCO World Heritage Centre, petra — archaeological site or collection record",https://whc.unesco.org/en/list/326/
-found-study-birka,"UNESCO World Heritage Centre, birka — archaeological site or collection record",https://whc.unesco.org/en/list/555/
-found-study-hedeby,"UNESCO World Heritage Centre, hedeby — archaeological site or collection record",https://whc.unesco.org/en/list/1553/
-found-study-sarai,"State Historical Museum, sarai — archaeological site or collection record",https://shm.ru/archeology/povolzhskaya-arkheologicheskaya-ekspeditsiya/
-found-study-brattahlid,"UNESCO World Heritage Centre, brattahlid — archaeological site or collection record",https://whc.unesco.org/document/155724
-found-study-lanse-aux-meadows,"UNESCO World Heritage Centre, lanse aux meadows — archaeological site or collection record",https://whc.unesco.org/en/list/4/
-found-study-nineveh,"British Museum, nineveh — archaeological site or collection record",https://www.britishmuseum.org/collection/object/W_2010-6001-2
-found-study-meroe,"UNESCO World Heritage Centre, meroe — archaeological site or collection record",https://whc.unesco.org/en/list/1336/
-found-study-adulis,"Chiara Zazzaro, adulis — archaeological site or collection record",https://unora.unior.it/bitstream/11574/50291/1/Zazzaro2013.pdf
-found-study-leptis-magna,"UNESCO World Heritage Centre, leptis magna — archaeological site or collection record",https://whc.unesco.org/en/list/183/
-found-study-koumbi-saleh,"UNESCO World Heritage Centre, koumbi saleh — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/1546/
-found-study-mapungubwe,"UNESCO World Heritage Centre, mapungubwe — archaeological site or collection record",https://whc.unesco.org/en/list/1099/
-found-study-mohenjo-daro,"UNESCO World Heritage Centre, mohenjo daro — archaeological site or collection record",https://whc.unesco.org/en/list/138/
-found-study-harappa,"Pakistan Department of Archaeology and Museums, harappa — archaeological site or collection record",https://doam.gov.pk/public/sites/6579
-found-study-taxila,"UNESCO World Heritage Centre, taxila — archaeological site or collection record",https://whc.unesco.org/en/list/139/
-found-study-nalanda,"UNESCO World Heritage Centre, nalanda — archaeological site or collection record",https://whc.unesco.org/en/list/1502/
-found-study-muziris,"Muziris Heritage Project, muziris — archaeological site or collection record",https://www.keralatourism.org/muziris/historical-sites/pattanam
-found-study-arikamedu,"Puducherry Planning Authority, arikamedu — archaeological site or collection record",https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf
-found-study-anyang,"UNESCO World Heritage Centre, anyang — archaeological site or collection record",https://whc.unesco.org/en/list/1114/
-found-study-loulan,"International Dunhuang Programme, loulan — archaeological site or collection record",https://idp.bl.uk/collection/610103DC0D4C4D9EACB5E5962C7FBA6A/
-found-study-niya,"International Dunhuang Programme, niya — archaeological site or collection record",https://idp.bl.uk/discover/exhibitions/aurel-stein-a-hundred-years-on/settlements/
-found-study-karakorum,"University of Bonn, karakorum — archaeological site or collection record",https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum
-found-study-oc-eo,"UNESCO World Heritage Centre, oc eo — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/6572/
-found-study-trowulan,"UNESCO World Heritage Centre, trowulan — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/5466/
-found-study-caral,"UNESCO World Heritage Centre, caral — archaeological site or collection record",https://whc.unesco.org/en/list/1269/
-found-study-el-mirador,"Asociación Tikal, el mirador — archaeological site or collection record",https://www.asociaciontikal.com/simposio-21-ano-2007/33-suyuc-07-doc/
-found-study-tikal,"UNESCO World Heritage Centre, tikal — archaeological site or collection record",https://whc.unesco.org/en/list/64/
-found-study-calakmul,"UNESCO World Heritage Centre, calakmul — archaeological site or collection record",https://whc.unesco.org/en/list/1061/
-found-study-palenque,"UNESCO World Heritage Centre, palenque — archaeological site or collection record",https://whc.unesco.org/en/list/411/
-found-study-copan,"UNESCO World Heritage Centre, copan — archaeological site or collection record",https://whc.unesco.org/en/list/129/
-found-study-mesa-verde,"US National Park Service, mesa verde — archaeological site or collection record",https://www.nps.gov/meve/learn/historyculture/cliff_dwellings_home.htm
-found-study-machu-picchu,"UNEP-WCMC, machu picchu — archaeological site or collection record",https://world-heritage-datasheets.unep-wcmc.org/datasheet/output/site/historic-sanctuary-of-machu-picchu/
-found-study-ur,"UNESCO World Heritage Centre, ur — archaeological site or collection record",https://whc.unesco.org/en/list/1481/
-found-study-uruk,"UNESCO World Heritage Centre, uruk — archaeological site or collection record",https://whc.unesco.org/en/list/1481/
-found-study-hattusa,"UNESCO World Heritage Centre, hattusa — archaeological site or collection record",https://whc.unesco.org/en/list/377/
-found-study-ugarit,"French Ministry of Culture, ugarit — archaeological site or collection record",https://archeologie.culture.gouv.fr/proche-orient/en/ugarit-ras-shamra
-found-study-jerash,"Jordan Department of Antiquities, jerash — archaeological site or collection record",https://ticket.gov.jo/en/location/jerash
-found-study-ostia,"Ostia Forum Project, ostia — archaeological site or collection record",https://www.aarome.org/ostia-forum-project
-found-study-timgad,"UNESCO World Heritage Centre, timgad — archaeological site or collection record",https://whc.unesco.org/en/list/194/
-found-study-kerma,"Swiss Archaeological Mission at Kerma, kerma — archaeological site or collection record",https://kerma.ch/en/history/
-found-study-gedi,"UNESCO World Heritage Centre, gedi — archaeological site or collection record",https://whc.unesco.org/en/list/1720/
-found-study-erlitou,"Erlitou Site Museum, erlitou — archaeological site or collection record",https://www.eltxdmuseum.com/en/
-found-study-zhengzhou-shang,"Henan Provincial Government, zhengzhou shang — archaeological site or collection record",https://english.henan.gov.cn/2021/10-26/2335060.html
-found-study-sanxingdui,"Harvard University, sanxingdui — archaeological site or collection record",https://archaeology.harvard.edu/sites/g/files/omnuum7041/files/in_situ_fall_2024.pdf
-found-study-mari,"French Ministry of Culture, mari — archaeological site or collection record",https://archeologie.culture.gouv.fr/mari/en
-found-study-akhetaten,"Amarna Project, akhetaten — archaeological site or collection record",https://www.amarnaproject.com/our-work/
-found-study-pi-ramesses,"UCL Institute of Archaeology, pi ramesses — archaeological site or collection record",https://discovery.ucl.ac.uk/id/eprint/93697/
-found-study-lothal,"IIT Gandhinagar, lothal — archaeological site or collection record",https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2047689&lang=2&reg=48
-found-study-dholavira,"UNESCO World Heritage Centre, dholavira — archaeological site or collection record",https://whc.unesco.org/en/list/1645/
-found-study-pylos,"Ephorate of Antiquities of Messenia, pylos — archaeological site or collection record",https://www.efamess.gr/en/pois/anaktoro-nestoros-ston-ano-egkliano/
-found-study-la-venta,"INAH, la venta — archaeological site or collection record",https://inah.gob.mx/foto-del-dia/las-esculturas-olmecas-de-la-venta
-found-study-san-lorenzo,"INAH, san lorenzo — archaeological site or collection record",https://www.inah.gob.mx/zonas/186-zona-arqueologica-de-san-lorenzo-tenochtitlan
-found-study-poverty-point,"UNESCO World Heritage Centre, poverty point — archaeological site or collection record",https://whc.unesco.org/en/list/1435/
-found-study-dhar-tichitt,"African Archaeological Review, dhar tichitt — archaeological site or collection record",https://link.springer.com/article/10.1007/s10437-022-09479-5
-found-study-ebla,"US National Archives, ebla — archaeological site or collection record",https://text-message.blogs.archives.gov/2020/07/07/the-royal-archives-of-ebla-reference-and-processing-archivists-4000-years-ago/
-found-study-khara-khoto,"Shanghai Municipal Government, khara khoto — archaeological site or collection record",https://english.shanghai.gov.cn/en-ArtExhibitions/20260805/59f95db1163a44bca187c461f09d9d7b.html
-found-study-sippar,"British Museum, sippar — archaeological site or collection record",https://www.britishmuseum.org/collection/object/W_1891-0509-2377
-found-study-berenike,"Berenike Project, berenike — archaeological site or collection record",https://www.berenike.pcma.uw.edu.pl/
-ruin-study-carthage,"UNESCO World Heritage Centre, carthage — surviving fabric and site context",https://whc.unesco.org/en/list/37/
-ruin-study-carthago,"UNESCO World Heritage Centre, carthago — surviving fabric and site context",https://whc.unesco.org/en/list/37/
-ruin-study-ephesus,"UNESCO World Heritage Centre, ephesus — surviving fabric and site context",https://whc.unesco.org/en/list/1018/
-ruin-study-palmyra,"UNESCO World Heritage Centre, palmyra — surviving fabric and site context",https://whc.unesco.org/en/list/23/
-ruin-study-babylon,"UNESCO World Heritage Centre, babylon — surviving fabric and site context",https://whc.unesco.org/en/list/278/
-ruin-study-persepolis,"UNESCO World Heritage Centre, persepolis — surviving fabric and site context",https://whc.unesco.org/en/list/114/
-ruin-study-susa,"UNESCO World Heritage Centre, susa — surviving fabric and site context",https://whc.unesco.org/en/list/1455/
-ruin-study-ctesiphon,"Encyclopaedia Iranica, ctesiphon — surviving fabric and site context",https://www.iranicaonline.org/articles/ctesiphon/
-ruin-study-seleucia,"University of Turin, seleucia — surviving fabric and site context",https://iris.unito.it/retrieve/9c0e7c3f-262b-4d1f-9c37-127eb617bb26/Foietta-12icaane.pdf
-ruin-study-rayy,"Encyclopaedia Iranica, rayy — surviving fabric and site context",https://www.iranicaonline.org/articles/ray-i-archeo/
-ruin-study-merv,"UNESCO World Heritage Centre, merv — surviving fabric and site context",https://whc.unesco.org/en/list/886/
-ruin-study-siraf,"Encyclopaedia Iranica, siraf — surviving fabric and site context",https://www.iranicaonline.org/articles/great-britain/great-britain-xii-2/
-ruin-study-fustat,"Egyptian Ministry of Tourism and Antiquities, fustat — surviving fabric and site context",https://egymonuments.gov.eg/archaeological-sites/al-fustat-old-cairo/
-ruin-study-memphis,"Egyptian Ministry of Tourism and Antiquities, memphis — surviving fabric and site context",https://egymonuments.gov.eg/world-heritage/memphis-and-its-necropolis/
-ruin-study-thebes,"UNESCO World Heritage Centre, thebes — surviving fabric and site context",https://whc.unesco.org/en/list/87/
-ruin-study-sijilmasa,"French Ministry of Culture, sijilmasa — surviving fabric and site context",https://archeologie.culture.gouv.fr/fr/sijilmasa
-ruin-study-cyrene,"UNESCO World Heritage Centre, cyrene — surviving fabric and site context",https://whc.unesco.org/en/list/190/
-ruin-study-great-zimbabwe,"UNESCO World Heritage Centre, great-zimbabwe — surviving fabric and site context",https://whc.unesco.org/en/list/364/
-ruin-study-kilwa,"UNESCO World Heritage Centre, kilwa — surviving fabric and site context",https://whc.unesco.org/en/list/144/
-ruin-study-goa,"UNESCO World Heritage Centre, goa — surviving fabric and site context",https://whc.unesco.org/en/list/234/
-ruin-study-vijayanagara,"UNESCO World Heritage Centre, vijayanagara — surviving fabric and site context",https://whc.unesco.org/en/list/241/
-ruin-study-anuradhapura,"UNESCO World Heritage Centre, anuradhapura — surviving fabric and site context",https://whc.unesco.org/en/list/200/
-ruin-study-gaur,"MIT Aga Khan Visual Archive, gaur — surviving fabric and site context",https://dome.mit.edu/entities/picture/18b2fb09-1d20-434c-adfa-061f9fc4b15c
-ruin-study-xianyang,"China Culture, xianyang — surviving fabric and site context",https://en.chinaculture.org/library/2008-02/15/content_33579.htm
-ruin-study-gaochang,"CNR and Chinese Academy of Cultural Heritage, gaochang — surviving fabric and site context",https://www.ispc.cnr.it/wp-content/uploads/2021/10/Libro_CNR-CACH_Vol_4_2021_s.pdf
-ruin-study-shangdu,"UNESCO World Heritage Centre, shangdu — surviving fabric and site context",https://whc.unesco.org/en/list/1389/
-ruin-study-angkor,"UNESCO World Heritage Centre, angkor — surviving fabric and site context",https://whc.unesco.org/en/list/668/
-ruin-study-ayutthaya,"UNESCO World Heritage Centre, ayutthaya — surviving fabric and site context",https://whc.unesco.org/en/list/576/
-ruin-study-monte-alban,"UNESCO World Heritage Centre, monte-alban — surviving fabric and site context",https://whc.unesco.org/en/list/415/
-ruin-study-teotihuacan,"UNESCO World Heritage Centre, teotihuacan — surviving fabric and site context",https://whc.unesco.org/en/list/414/
-ruin-study-chichen-itza,"INAH, chichen-itza — surviving fabric and site context",https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza
-ruin-study-tula,"INAH, tula — surviving fabric and site context",https://www.inah.gob.mx/zonas/zona-arqueologica-y-museo-de-sitio-de-tula
-ruin-study-cahokia,"UNESCO World Heritage Centre, cahokia — surviving fabric and site context",https://whc.unesco.org/en/list/198/
-ruin-study-chan-chan,"UNESCO World Heritage Centre, chan-chan — surviving fabric and site context",https://whc.unesco.org/en/list/366/
-ruin-study-tiwanaku,"UNESCO World Heritage Centre, tiwanaku — surviving fabric and site context",https://whc.unesco.org/en/list/567/
-ruin-study-huari,"Peruvian Ministry of Foreign Trade and Tourism, huari — surviving fabric and site context",https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=1125
-ruin-study-nan-madol,"UNESCO World Heritage Centre, nan-madol — surviving fabric and site context",https://whc.unesco.org/en/list/1503/
-ruin-study-sardis,"Archaeological Exploration of Sardis, sardis — surviving fabric and site context",https://sardisexpedition.org/en/essays/about-artemis-temple
-ruin-study-pergamon,"UNESCO World Heritage Centre, pergamon — surviving fabric and site context",https://whc.unesco.org/en/list/1457/
-ruin-study-aquileia,"UNESCO World Heritage Centre, aquileia — surviving fabric and site context",https://whc.unesco.org/en/list/825/
-ruin-study-oyo,"UNESCO World Heritage Centre, oyo — surviving fabric and site context",https://whc.unesco.org/en/tentativelists/489/
-ruin-study-sukhothai,"UNESCO World Heritage Centre, sukhothai — surviving fabric and site context",https://whc.unesco.org/en/list/574/
-ruin-study-haojing,"Hebei Provincial Institute of Cultural Relics and Archaeology, haojing — surviving fabric and site context",https://www.hbswwkg.com/2021-11/18/content_8672065.html
-ruin-study-assur,"UNESCO World Heritage Centre, assur — surviving fabric and site context",https://whc.unesco.org/en/list/1130/
-vansina-paths,"Jan Vansina, Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa (1990)",
-thornton-wca,"John K. Thornton, A History of West Central Africa to 1850 (2020)",
-hilton-kongo,"Anne Hilton, The Kingdom of Kongo (1985)",
-brasio-mma,"António Brásio (ed.), Monumenta Missionaria Africana, vol. 1 (1952): the letters of Afonso I",
-pigafetta-lopes,"Filippo Pigafetta, Relatione del reame di Congo, from the account of Duarte Lopes (1591)",
-thornton-kimpa,"John K. Thornton, The Kongolese Saint Anthony: Dona Beatriz Kimpa Vita and the Antonian Movement (1998)",
-heywood-thornton,"Linda M. Heywood and John K. Thornton, Central Africans, Atlantic Creoles, and the Foundation of the Americas, 1585–1660 (2007)",
-nevunda-bust,"Basilica of Santa Maria Maggiore, Rome: funerary bust of Antonio Manuel ne Vunda (1608)",https://en.wikipedia.org/wiki/Emanuele_Ne_Vunda
-beckx-castro,"Jaspar Beckx, Portrait of Dom Miguel de Castro, Emissary of Kongo (1643), Statens Museum for Kunst","https://en.wikipedia.org/wiki/Portrait_of_Dom_Miguel_de_Castro,_Emissary_of_Congo"
-gibson-poverty,"Jon L. Gibson, The Ancient Mounds of Poverty Point: Place of Rings (2001)",
-carr-hopewell,"Christopher Carr and D. Troy Case (eds.), Gathering Hopewell: Society, Ritual, and Ritual Interaction (2005)",
-pauketat-cahokia,"Timothy R. Pauketat, Cahokia: Ancient America's Great City on the Mississippi (2009)",
-brown-spiro,"James A. Brown, The Spiro Ceremonial Center (1996)",
-knight-moundville,"Vernon James Knight Jr. and Vincas P. Steponaitis (eds.), Archaeology of the Moundville Chiefdom (1998)",
-hudson-desoto,"Charles Hudson, Knights of Spain, Warriors of the Sun: Hernando de Soto and the South's Ancient Chiefdoms (1997)",
-ethridge-creek,"Robbie Ethridge, Creek Country: The Creek Indians and Their World (2003)",
-gallay-slave,"Alan Gallay, The Indian Slave Trade: The Rise of the English Empire in the American South, 1670–1717 (2002)",
-sweet-georgia,"Julie Anne Sweet, Negotiating for Georgia: British-Creek Relations in the Trustee Era, 1733–1752 (2005)",
-green-removal,"Michael D. Green, The Politics of Indian Removal: Creek Government and Society in Crisis (1982)",
-snow-iroquois,"Dean R. Snow, The Iroquois (1994)",
-mann-fields,"Barbara A. Mann and Jerry L. Fields, 'A Sign in the Sky: Dating the League of the Haudenosaunee', American Indian Culture and Research Journal 21 (1997)",https://escholarship.org/uc/item/27g1b5px
-richter-ordeal,"Daniel K. Richter, The Ordeal of the Longhouse: The Peoples of the Iroquois League in the Era of European Colonization (1992)",
-havard-montreal,"Gilles Havard, The Great Peace of Montreal of 1701 (2001)",
-hinderaker-kings,"Eric Hinderaker, 'The ""Four Indian Kings"" and the Imaginative Construction of the First British Empire', William and Mary Quarterly 53 (1996)",
-kelsay-brant,"Isabel Thompson Kelsay, Joseph Brant, 1743–1807: Man of Two Worlds (1984)",
-peacock-seljuk,"A. C. S. Peacock, The Great Seljuk Empire (2015)",
-kafadar,"Cemal Kafadar, Between Two Worlds: The Construction of the Ottoman State (1995)",
-inalcik-classical,"Halil İnalcık, The Ottoman Empire: The Classical Age, 1300–1600 (1973)",
-mcintosh-piri,"Gregory C. McIntosh, The Piri Reis Map of 1513 (2000)",
-casale-ottoman,"Giancarlo Casale, The Ottoman Age of Exploration (2010)",
-goodrich-west-indies,"Thomas D. Goodrich, The Ottoman Turks and the New World: A Study of Tarih-i Hind-i Garbi and Sixteenth-Century Ottoman Americana (1990)",
-hagen-katib,"Gottfried Hagen, Ein osmanischer Geograph bei der Arbeit: Entstehung und Gedankenwelt von Katib Čelebis Ğihannüma (2003)",
-gocek-paris,"Fatma Müge Göçek, East Encounters West: France and the Ottoman Empire in the Eighteenth Century (1987)",
-esenbel-ertugrul,"Selçuk Esenbel, Japan, Turkey and the World of Islam (2011)",
-macedo-nevunda,"Rivair Macedo (ed.), letters of Antonio Manuel ne Vunda, Kongo ambassador in Rome (2022)",https://www.ufrgs.br/ifch/index.php/en/lancado-em-luanda-livro-organizado-pelo-professor-rivair-macedo-reune-correspondencia-inedita-do-embaixador-do-reino-do-kongo-em-roma
-bond-four-kings,"Richmond P. Bond, Queen Anne's American Kings (1952)",
-ghs-tomochichi,"Georgia Historical Society, Tomochichi: Travels to Great Britain",https://www.georgiahistory.com/resource/tomochichi/travels-to-great-britain/
-seydi-mirat,"Seydi Ali Reis, Mir'at ül-Memalik (1557), trans. A. Vambéry, The Travels and Adventures of the Turkish Admiral Sidi Ali Reis (1899)",https://sourcebooks.web.fordham.edu/source/16CSidi1.asp
-mehmed-sefaretname,"Yirmisekiz Mehmed Çelebi, Sefâretnâme (1721), trans. J.-C. Galland, Le paradis des infidèles (1981)",
-stephens-yucatan,"John Lloyd Stephens, Incidents of Travel in Yucatan (1843)",
-stephens-central-america,"John Lloyd Stephens, Incidents of Travel in Central America, Chiapas, and Yucatan (1841)",
-maudslay-yaxchilan,"Alfred P. Maudslay, Biologia Centrali-Americana: Archaeology (1889–1902)",
-maler-naranjo,"Teobert Maler, Explorations in the Department of Peten, Guatemala (1908)",
-ruiz-tajin,"José Antonio Ruiz, report of El Tajín in the Gaceta de México (1785)",
-dipeso-paquime,"Charles C. Di Peso, Casas Grandes: A Fallen Trading Center of the Gran Chichimeca (1974)",
-marcus-flannery,"Joyce Marcus and Kent V. Flannery, Zapotec Civilization (1996)",
-soto-teyuna,"Álvaro Soto Holguín, La Ciudad Perdida de los Tayrona (1988)",
-ciudad-real-1588,"Antonio de Ciudad Real, Tratado curioso y docto de las grandezas de la Nueva España (1588)",
-stephens-chaco,"James H. Simpson, Journal of a Military Reconnaissance from Santa Fe to the Navajo Country (1850)",
-hernandez-comentarios,"Pero Hernández, Comentarios de Álvar Núñez Cabeza de Vaca (1555): the voyage up the Paraguay to the Xarayes, 1543",
-lorandi-calchaqui,"Ana María Lorandi and Roxana Boixadós, 'Etnohistoria de los Valles Calchaquíes en los siglos XVI y XVII', Runa 17–18 (1987–88)",
-smithsonian-vinicunca,"Smithsonian Magazine, 'Peru's Rainbow Mountain Could Be in Danger Thanks to Its Recent Popularity' (2018)",https://www.smithsonianmag.com/smart-news/perus-rainbow-mountain-could-be-danger-thanks-recent-popularity-180968962/
-landmark-study-mayapan,"INAH, mayapan — site description",https://www.inah.gob.mx/zonas/zona-arqueologica-de-mayapan
-landmark-study-chaco,"US National Park Service, chaco — site description",https://www.nps.gov/chcu/planyourvisit/placestogo.htm
-landmark-study-uxmal,"INAH, uxmal — site description",https://lugares.inah.gob.mx/es/node/4482
-landmark-study-tulum,"INAH, tulum — site description",https://www.inah.gob.mx/zonas/99-zona-arqueologica-de-tulum
-landmark-study-mitla,"INAH, mitla — site description",https://lugares.inah.gob.mx/es/node/4350
-landmark-study-paquime,"UNESCO World Heritage Centre, paquime — site description",https://whc.unesco.org/en/list/560/
-landmark-study-yaxchilan,"INAH, yaxchilan — site description",https://lugares.inah.gob.mx/es/node/5662
-landmark-study-quirigua,"UNESCO World Heritage Centre, quirigua — site description",https://whc.unesco.org/en/list/149/
-landmark-study-naranjo,"UNESCO World Heritage Centre, naranjo — site description",https://whc.unesco.org/en/tentativelists/6623/
-landmark-study-edzna,"INAH, edzna — site description",https://lugares.inah.gob.mx/es/node/4339
-landmark-study-el-tajin,"UNESCO World Heritage Centre, el-tajin — site description",https://whc.unesco.org/en/list/631/
-landmark-study-ciudad-perdida,"ICANH, ciudad-perdida — site description",https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/como-llegar
-landmark-study-pantanal,"UNESCO World Heritage Centre, pantanal — site description",https://whc.unesco.org/en/list/999/
-landmark-study-vinicunca,"Peruvian Ministry of Foreign Trade and Tourism, vinicunca — site description",https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=13101
-grand-view-chaco,"US National Park Service, chaco — architecture and wider setting",https://home.nps.gov/chcu/learn/historyculture/upload/0028-chaco-center-historic-photograph-collection-2022-4.pdf
-grand-view-chichen-itza,"INAH, chichen-itza — architecture and wider setting",https://lugares.inah.gob.mx/es/node/4335
-layard,"Austen Henry Layard, Nineveh and Its Remains (1849)",
-rich,"Claudius James Rich, Narrative of a Residence in Koordistan (1836)",
-dupaix,"Guillermo Dupaix, Antiquités mexicaines (1834), from his expeditions of 1805–1807",
-wood-palmyra,"Robert Wood, The Ruins of Palmyra (1753)",
+id,citation,url,kind,year,viewpoint
+# kind: work (written in its own time: Herodotus, Ma Huan), study (modern scholarship) or record (a site, museum or
+# heritage record, or a placeholder). year: when a work was written or a study published. viewpoint: whose work it is.
+draft,"Approximate date from general knowledge, pending the phase-3 verification pass",,record,,
+draft-urban,"Approximate city dates pending verification against Chandler, Four Thousand Years of Urban Growth (1987) and Modelski, World Cities: –3000 to 2000 (2003)",,record,1987,
+hoc,"Harley, Woodward et al. (eds.), The History of Cartography, vols. 1–6, University of Chicago Press (1987–)",https://press.uchicago.edu/books/HOC/index.html,study,1987,
+fernandez-armesto,"Felipe Fernández-Armesto, Pathfinders: A Global History of Exploration (2006)",,study,2006,
+hecataeus,"Hecataeus of Miletus, Periodos Ges (fragments), c. 500 BCE",,work,-500,greece
+herodotus,"Herodotus, Histories, c. 430 BCE",,work,-430,greece
+arrian,"Arrian, Anabasis of Alexander and Indica, 2nd century CE",,work,150,greece
+pytheas-strabo,"Pytheas of Massalia, On the Ocean (lost); fragments in Strabo, Geography, and Pliny, Natural History",,work,-320,greece
+strabo,"Strabo, Geography, c. 7 BCE – 23 CE",,work,-7,greece
+pliny,"Pliny the Elder, Natural History, 77 CE",,work,77,rome
+periplus,"Periplus of the Erythraean Sea, mid-1st century CE (ed. and trans. Lionel Casson, 1989)",,work,50,greece
+ptolemy,"Claudius Ptolemy, Geography, c. 150 CE",,work,150,greece
+ptolemy-latin,"Jacopo Angeli da Scarperia, Latin translation of Ptolemy's Geography (Florence, 1406–1410)",,work,1406,europe
+tacitus,"Tacitus, Agricola and Germania, 98 CE",,work,98,rome
+menander,"Menander Protector, History (fragments), on the embassy of Zemarchus to the Turks, 568",,work,568,greece
+cosmas,"Cosmas Indicopleustes, Christian Topography, c. 550",,work,550,greece
+dicuil,"Dicuil, De mensura orbis terrae, 825",,work,825,britain
+constantine-dai,"Constantine VII Porphyrogenitus, De administrando imperio, c. 950",,work,950,greece
+landnamabok,"Landnámabók (The Book of Settlements), 12th–13th century",,work,1150,norse
+adam-bremen,"Adam of Bremen, Gesta Hammaburgensis ecclesiae pontificum, c. 1075",,work,1075,norse
+vinland-sagas,"Grœnlendinga saga and Eiríks saga rauða, 13th century",,work,1250,norse
+ingstad,"Helge Ingstad and Anne Stine Ingstad, The Viking Discovery of America (2001)",,study,2001,
+carpini-rubruck,"John of Plano Carpini, Ystoria Mongalorum (1247); William of Rubruck, Itinerarium (1255)",,work,1247,rome
+polo,"Marco Polo and Rustichello da Pisa, Le Devisement du monde, c. 1300",,work,1300,rome
+dulcert,"Angelino Dulcert, portolan chart, 1339",,work,1339,iberia
+catalan-atlas,"Abraham Cresques (attrib.), Catalan Atlas, 1375",,work,1375,iberia
+fra-mauro,"Fra Mauro, mappa mundi, c. 1450",,work,1450,rome
+zurara,"Gomes Eanes de Zurara, Crónica do descobrimento e conquista da Guiné, 1453",,work,1453,iberia
+columbus,"Christopher Columbus, Diario (abstract by Las Casas) and the Letter on the first voyage, 1493",,work,1493,iberia
+velho-roteiro,"Álvaro Velho (attrib.), Roteiro da primeira viagem de Vasco da Gama, 1497–1499",,work,1497,iberia
+waldseemuller,"Martin Waldseemüller, Universalis cosmographia, 1507",,work,1507,germany
+cortes-letters,"Hernán Cortés, Cartas de relación, 1519–1526",,work,1519,iberia
+pigafetta,"Antonio Pigafetta, Relazione del primo viaggio intorno al mondo, c. 1525",,work,1525,iberia
+tasman,"Abel Tasman, Journal of the voyage of 1642–1643",,work,1642,germany
+du-halde,"Jean-Baptiste du Halde, Description de l'Empire de la Chine, 1735",,work,1735,france
+cook-journals,"James Cook, The Journals of Captain James Cook (ed. J. C. Beaglehole, 1955–1967)",,work,1771,britain
+tupaia-chart,"Tupaia's chart of the islands around Tahiti, 1769–1770, British Library Add MS 21593.C",,work,1769,polynesia
+di-piazza-pearthree,"Anne Di Piazza and Erik Pearthree, 'A new reading of Tupaia's chart', Journal of the Polynesian Society 116 (2007)",,study,2007,
+national-surveys,Cassini map of France (1756–1815); Ordnance Survey (from 1791); Great Trigonometrical Survey of India (1802–1871),,work,1756,europe
+nansen,"Fridtjof Nansen, Farthest North (1897)",,work,1897,norse
+headland,"Robert K. Headland, A Chronology of Antarctic Exploration (2009)",,study,2009,
+amundsen,"Roald Amundsen, The South Pole (1912)",,work,1912,norse
+hunt-everest,"John Hunt, The Ascent of Everest (1953)",,work,1953,britain
+piccard-dietz,"Jacques Piccard and Robert S. Dietz, Seven Miles Down (1961)",,work,1961,
+heezen-tharp,"Bruce Heezen and Marie Tharp, World Ocean Floor panorama (1977)",,record,1977,
+sputnik,"TASS announcement of Sputnik 1, 4 October 1957",,record,1957,
+vostok1,"Asif Siddiqi, Challenge to Apollo: The Soviet Union and the Space Race, NASA SP-2000-4408 (2000)",,study,2000,
+luna-surveyor,"NASA Space Science Data Coordinated Archive records for Luna 2 (1959), Luna 9 and Surveyor 1 (1966)",,record,1959,
+nasa-apollo11,"NASA Manned Spacecraft Center, Apollo 11 Mission Report, MSC-00171 (1969)",,record,1969,
+shangshu-yugong,"'Yu Gong' (Tribute of Yu), chapter of the Shangshu, c. 5th century BCE",,work,-450,china
+shanhaijing,"Shanhaijing (Classic of Mountains and Seas), 4th–1st century BCE",,work,-350,china
+shiji,"Sima Qian, Shiji (Records of the Grand Historian), ch. 123 'Account of Dayuan', c. 94 BCE",,work,-94,china
+hanshu,"Ban Gu, Hanshu (Book of Han), ch. 96 'Western Regions', 111 CE",,work,111,china
+houhanshu,"Fan Ye, Hou Hanshu (Book of the Later Han), ch. 88 'Western Regions', 5th century",,work,450,china
+kang-tai,"Kang Tai, Wushi waiguo zhuan (Accounts of Foreign Countries in the Time of Wu), c. 250 (fragments)",,work,250,china
+faxian,"Faxian, Foguo ji (A Record of Buddhist Kingdoms), 416",,work,416,china
+xuanzang,"Xuanzang and Bianji, Da Tang Xiyu ji (Great Tang Records on the Western Regions), 646",,work,646,china
+yijing,"Yijing, Nanhai jigui neifa zhuan (A Record of Buddhist Practices Sent Home from the Southern Sea), 691",,work,691,china
+du-huan,"Du Huan, Jingxing ji (Record of Travels), 762, preserved in Du You's Tongdian (801)",,work,762,china
+jia-dan,"Jia Dan's itineraries (c. 801), preserved in the geography treatise of the Xin Tang shu (1060)",,work,801,china
+zhou-qufei,"Zhou Qufei, Lingwai daida (Notes from Beyond the Passes), 1178",,work,1178,china
+zhao-rugua,"Zhao Rugua, Zhufan zhi (A Description of Foreign Peoples), 1225",,work,1225,china
+zhou-daguan,"Zhou Daguan, Zhenla fengtu ji (A Record of Cambodia), c. 1297",,work,1297,china
+kangnido,"Li Zemin, Shengjiao guangbei tu (c. 1330, lost), known through the Korean Kangnido map of 1402",,work,1330,china
+wang-dayuan,"Wang Dayuan, Daoyi zhilüe (A Brief Account of the Island Barbarians), 1349",,work,1349,china
+ming-shilu,Ming shilu (Veritable Records of the Ming),,record,,
+fei-xin,"Fei Xin, Xingcha shenglan (Marvels Discovered by the Star Raft), 1436",,work,1436,china
+ma-huan,"Ma Huan, Yingya shenglan (The Overall Survey of the Ocean's Shores), 1433–1451",,work,1433,china
+liujiagang,"Zheng He's inscriptions at Liujiagang and Changle, 1431",,work,1431,china
+ricci-map,"Matteo Ricci and Li Zhizao, Kunyu wanguo quantu (Map of the Myriad Countries of the World), 1602",,work,1602,china
+aleni,"Giulio Aleni, Zhifang waiji (Record of Places outside the Imperial Geographer's Charge), 1623",,work,1623,china
+kangxi-atlas,"Huangyu quanlan tu (the Kangxi atlas), Qing–Jesuit survey, 1708–1718",,work,1708,china
+haiguo-tuzhi,"Wei Yuan, Haiguo tuzhi (Illustrated Treatise on the Sea Kingdoms), 1843–1852; Xu Jiyu, Yinghuan zhilüe (1848)",,work,1843,china
+al-baladhuri,"al-Baladhuri, Futuh al-buldan (The Conquests of the Lands), 9th century",,work,850,islam
+akhbar-sin,"Akhbar al-Sin wa'l-Hind (Accounts of China and India), 851",,work,851,persia
+ibn-khurradadhbih,"Ibn Khurradadhbih, Kitab al-masalik wa'l-mamalik (Book of Roads and Kingdoms), c. 870",,work,870,persia
+ibn-fadlan,"Ahmad ibn Fadlan, Risala, 922",,work,922,islam
+al-masudi,"al-Mas'udi, Muruj al-dhahab (The Meadows of Gold), 947",,work,947,islam
+al-biruni,"al-Biruni, Tahqiq ma li'l-Hind (India), c. 1030",,work,1030,persia
+al-bakri,"al-Bakri, Kitab al-masalik wa'l-mamalik, 1068",,work,1068,maghreb
+levtzion-hopkins,"N. Levtzion and J. F. P. Hopkins (eds.), Corpus of Early Arabic Sources for West African History (1981)",,study,1981,
+al-idrisi,"al-Idrisi, Nuzhat al-mushtaq (the Tabula Rogeriana), 1154",,work,1154,maghreb
+al-umari,"Ibn Fadl Allah al-Umari, Masalik al-absar fi mamalik al-amsar, c. 1338",,work,1338,egypt
+ibn-battuta,"Ibn Battuta and Ibn Juzayy, Tuhfat al-nuzzar (the Rihla), 1355",https://sourcebooks.web.fordham.edu/source/1354-ibnbattuta.asp,work,1355,maghreb
+piri-reis,"Piri Reis, world map, 1513",,work,1513,islam
+tarih-hind,"Tarih-i Hind-i Garbi (History of the West Indies), Ottoman, c. 1580",,work,1580,islam
+katip-celebi,"Katip Çelebi, Cihannüma, printed by İbrahim Müteferrika, 1732",,work,1732,islam
+tahtawi,"Rifa'a al-Tahtawi, Takhlis al-ibriz fi talkhis Bariz, 1834",,work,1834,egypt
+kirch,"Patrick V. Kirch, On the Road of the Winds: An Archaeological History of the Pacific Islands, 2nd ed. (2017)",,study,2017,
+wilmshurst-2011,"Janet Wilmshurst et al., 'High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia', PNAS 108 (2011)",,study,2011,
+ioannidis-2020,"Alexander Ioannidis et al., 'Native American gene flow into Polynesia predating Easter Island settlement', Nature 583 (2020)",,study,2020,
+finney,"Ben Finney, Voyage of Rediscovery: A Cultural Odyssey through Polynesia (1994)",,study,1994,
+bae-2017,"Christopher Bae, Katerina Douka and Michael Petraglia, 'On the origin of modern humans: Asian perspectives', Science 358 (2017)",,study,2017,
+clarkson-2017,"Chris Clarkson et al., 'Human occupation of northern Australia by 65,000 years ago', Nature 547 (2017)",,study,2017,
+hublin-2020,"Jean-Jacques Hublin et al., 'Initial Upper Palaeolithic Homo sapiens from Bacho Kiro Cave, Bulgaria', Nature 581 (2020)",,study,2020,
+fu-2014,"Qiaomei Fu et al., 'Genome sequence of a 45,000-year-old modern human from western Siberia', Nature 514 (2014)",,study,2014,
+pitulko-2016,"Vladimir Pitulko et al., 'Early human presence in the Arctic: evidence from 45,000-year-old mammoth remains', Science 351 (2016)",,study,2016,
+pitulko-2004,"Vladimir Pitulko et al., 'The Yana RHS site: humans in the Arctic before the Last Glacial Maximum', Science 303 (2004)",,study,2004,
+bennett-2021,"Matthew Bennett et al., 'Evidence of humans in North America during the Last Glacial Maximum', Science 373 (2021)",,study,2021,
+dillehay-2008,"Tom Dillehay et al., 'Monte Verde: seaweed, food, medicine, and the peopling of South America', Science 320 (2008)",,study,2008,
+raghavan-2014,"Maanasa Raghavan et al., 'The genetic prehistory of the New World Arctic', Science 345 (2014)",,study,2014,
+keegan-hofman,"William Keegan and Corinne Hofman, The Caribbean before Columbus (2017)",,study,2017,
+dewar-wright,"Robert Dewar and Henry Wright, 'The culture history of Madagascar', Journal of World Prehistory 7 (1993)",,study,1993,
+pliny-letters,"Pliny the Younger, Letters 6.16 and 6.20",,work,106,rome
+hedin,"Sven Hedin, Central Asia and Tibet (1903)",,work,1903,norse
+stein,"Aurel Stein, Ancient Khotan (1907) and Serindia (1921)",,work,1907,britain
+mouhot,"Henri Mouhot, Travels in the Central Parts of Indo-China (Siam), Cambodia, and Laos (1864)",,work,1864,france
+bingham,"Hiram Bingham, 'In the Wonderland of Peru', National Geographic Magazine (April 1913)",,work,1913,
+pikirayi,"Innocent Pikirayi, The Zimbabwe Culture: Origins and Decline of Southern Zambezian States (2001)",,study,2001,
+pauketat,"Timothy Pauketat, Cahokia: Ancient America's Great City on the Mississippi (2009)",,study,2009,
+al-tabari,"al-Tabari, Tarikh al-rusul wa'l-muluk (History of the Prophets and Kings), early 10th century",,work,950,arabia
+appian,"Appian, Punica (The Punic Wars), 2nd century CE",,work,150,rome
+hanno,"The Periplus of Hanno (Greek translation of a Carthaginian report, c. 500 BCE; preserved in a 9th-century manuscript)",,work,-500,maghreb
+cleomedes,"Cleomedes, On the Circular Motions of the Celestial Bodies (1st–2nd century CE), reporting Eratosthenes",,work,50,egypt
+pei-xiu,"Jin shu (Book of Jin), ch. 35, biography of Pei Xiu, with his preface on map-making (c. 267)",,work,648,china
+shen-kuo,"Shen Kuo, Mengxi bitan (Dream Pool Essays), 1088",,work,1088,china
+zhu-yu,"Zhu Yu, Pingzhou ketan (Pingzhou Table Talks), 1119",,work,1119,china
+stroganov-chronicle,The Stroganov and Remezov chronicles of the conquest of Sibir (17th century),,work,1650,russia
+description-egypte,"Commission des sciences et des arts, Description de l'Égypte (1809–1829)",,work,1809,france
+humboldt-narrative,"Alexander von Humboldt and Aimé Bonpland, Personal Narrative of Travels to the Equinoctial Regions of America (1814–1831)",,work,1814,germany
+lewis-clark-journals,"Meriwether Lewis and William Clark, journals of the Corps of Discovery (ed. Gary Moulton, 1983–2001)",,work,1806,
+darwin-voyage,"Charles Darwin, Journal of Researches (The Voyage of the Beagle), 1839",,work,1839,britain
+livingstone-travels,"David Livingstone, Missionary Travels and Researches in South Africa (1857)",,work,1857,britain
+challenger-report,"Report on the Scientific Results of the Voyage of HMS Challenger (50 volumes, 1880–1895)",,work,1880,britain
+libby,"Willard Libby, Radiocarbon Dating (1952)",,study,1952,
+landsat,"NASA, Landsat 1 (ERTS-1) mission records, 1972",,record,1972,
+notitia-urbis,"Notitia Urbis Constantinopolitanae (inventory of the city's fourteen regions), c. 425",,work,425,greece
+procopius,"Procopius, De aedificiis (On Buildings), c. 554",,work,554,greece
+jiu-tangshu,"Liu Xu et al., Jiu Tangshu (Old Book of Tang), 945, chapter on Fulin",,work,945,china
+villehardouin,"Geoffrey of Villehardouin, De la Conquête de Constantinople, c. 1210",,work,1210,france
+kritovoulos,"Michael Kritovoulos, History of Mehmed the Conqueror, c. 1467",,work,1467,greece
+schedel,"Hartmann Schedel, Liber chronicarum (the Nuremberg Chronicle), 1493",,work,1493,germany
+evliya-celebi,"Evliya Çelebi, Seyahatname (Book of Travels), vol. 1 on Istanbul, c. 1640s",,work,1640,turks
+diodorus,"Diodorus Siculus, Bibliotheca historica, book 5 (c. 30 BCE), on the tin trade of Belerion, probably from Pytheas via Timaeus",,work,-30,greece
+geminus,"Geminus, Introduction to the Phenomena 6.9 (1st century BCE), quoting Pytheas",,work,-50,greece
+mills-polar,"William J. Mills, Exploring Polar Frontiers: A Historical Encyclopedia (2003)",,record,2003,
+cabrillo-relacion,"Relación del descubrimiento… (account of Cabrillo's voyage, attributed to Juan Páez), 1543; ed. Wagner, Spanish Voyages to the Northwest Coast (1929)",,work,1543,iberia
+vizcaino-ascension,"Antonio de la Ascensión, Relación breve of Vizcaíno's voyage, 1602–1603",,work,1602,iberia
+vancouver-voyage,"George Vancouver, A Voyage of Discovery to the North Pacific Ocean, 1798",,work,1798,britain
+cabeza-de-vaca,"Álvar Núñez Cabeza de Vaca, La relación (Naufragios), 1542",,work,1542,iberia
+castaneda,"Pedro de Castañeda de Nájera, Relación de la jornada de Cíbola, c. 1560s",,work,1565,iberia
+villagra,"Gaspar Pérez de Villagrá, Historia de la Nueva México, 1610",,work,1610,iberia
+escalante-diario,"Silvestre Vélez de Escalante, Diario y derrotero (the Domínguez–Escalante journal), 1776",,work,1776,iberia
+powell,"John Wesley Powell, Exploration of the Colorado River of the West and its Tributaries, 1875",,work,1875,
+xerez,"Francisco de Xerez, Verdadera relación de la conquista del Perú, 1534",,work,1534,iberia
+oviedo,"Gonzalo Fernández de Oviedo, Historia general y natural de las Indias, 1535–1557",,work,1535,iberia
+carvajal,"Gaspar de Carvajal, Relación del nuevo descubrimiento del famoso río Grande de las Amazonas, 1542",,work,1542,iberia
+acuna,"Cristóbal de Acuña, Nuevo descubrimiento del gran río de las Amazonas, 1641",,work,1641,iberia
+la-condamine,"Charles-Marie de La Condamine, Relation abrégée d'un voyage fait dans l'intérieur de l'Amérique méridionale, 1745",,work,1745,france
+roosevelt-brazil,"Theodore Roosevelt, Through the Brazilian Wilderness, 1914",,work,1914,
+colon-hernando,"Hernando Colón, Historia del Almirante (Life of the Admiral Christopher Columbus), 1571",,work,1571,iberia
+herrera,"Antonio de Herrera, Historia general de los hechos de los castellanos, 1601–1615",,work,1601,iberia
+bernal-diaz,"Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España, c. 1568",,work,1568,iberia
+secret-history,"The Secret History of the Mongols, 13th century",,work,1250,steppe
+juvaini,"ʿAṭā-Malik Juvaynī, Tārīkh-i Jahāngushāy (History of the World Conqueror), c. 1260",,work,1260,steppe
+rashid-al-din,"Rashīd al-Dīn, Jāmiʿ al-tawārīkh (Compendium of Chronicles), c. 1307",,work,1307,persia
+yuanshi,"Song Lian et al., Yuanshi (History of Yuan), 1370",,work,1370,china
+caesar-bg,"Julius Caesar, Commentarii de Bello Gallico, c. 50 BCE",,work,-50,rome
+cassius-dio,"Cassius Dio, Roman History, c. 230 CE",,work,230,rome
+seneca-nq,"Seneca, Naturales quaestiones 6.8, c. 62 CE",,work,62,rome
+qing-shilu,Qing shilu (Veritable Records of the Qing dynasty),,record,,
+hakluyt,"Richard Hakluyt, The Principal Navigations, Voyages, Traffiques and Discoveries of the English Nation, 1598–1600",,work,1598,britain
+purchas,"Samuel Purchas, Purchas his Pilgrimes, 1625 (includes Juet's journal of Hudson's 1609 voyage)",,work,1625,britain
+steller,"Georg Wilhelm Steller, Journal of a Voyage with Bering, 1741–1742",,work,1741,russia
+de-veer,"Gerrit de Veer, Waerachtighe beschryvinghe van drie seylagien (Barentsz's three voyages), 1598",,work,1598,germany
+vishnu-purana,"Vishnu Purana (geography of Jambudvipa and the seven continents), c. 400 CE",,work,400,india
+ashoka-edicts,"Edicts of Ashoka (Rock Edict XIII names the Hellenistic kings), c. 260 BCE",,work,-260,india
+chola-inscriptions,"Tanjore inscription of Rajendra Chola I (the Srivijaya campaign), c. 1030",,work,1030,india
+atisha-bio,"Alaka Chattopadhyaya, Atiśa and Tibet (1967), from the Tibetan biographies of Atiśa",,study,1967,
+ain-i-akbari,"Abu'l-Fazl, Ain-i-Akbari, c. 1590",,work,1590,india
+nain-singh,"T. G. Montgomerie, Report of a Route-Survey made by Pundit —, from Nepal to Lhasa, 1868",,work,1868,india
+kojiki,Kojiki (712) and Nihon shoki (720),,work,712,japan
+ennin,"Ennin, Nittō guhō junrei kōki (Record of a Pilgrimage to China in Search of the Law), c. 847",,work,847,japan
+amati,"Scipione Amati, Historia del regno di Voxu (account of the Hasekura embassy), 1615",,work,1615,rome
+hokusa-bunryaku,"Katsuragawa Hoshū, Hokusa bunryaku (Daikokuya Kōdayū's account of Russia), 1794",,work,1794,japan
+mamiya,"Mamiya Rinzō, Tōdatsu kikō and Kita Ezo zusetsu, 1811",,work,1811,japan
+ino,"Inō Tadataka, Dai Nihon enkai yochi zenzu (map of Japan's coasts), 1821",,work,1821,japan
+sairan-igen,"Arai Hakuseki, Sairan igen (world geography from the questioning of Sidotti), 1713",,work,1713,japan
+tarikh-al-sudan,"ʿAbd al-Raḥmān al-Saʿdī, Tārīkh al-Sūdān, c. 1655",,work,1655,sahel
+tarikh-al-fattash,"Tārīkh al-Fattāsh (chronicle of Songhay), 17th century",,work,1650,sahel
+sundiata,"The Epic of Sundiata (oral tradition of the Mande griots; recorded by D. T. Niane, 1960)",,record,1960,
+mcintosh,"S. K. and R. J. McIntosh, excavations at Jenné-jeno (1981 onward)",,study,1981,
+sahagun,"Bernardino de Sahagún and Nahua scholars, Florentine Codex (Historia general de las cosas de Nueva España), c. 1577",,work,1577,iberia
+codex-mendoza,"Codex Mendoza (tribute provinces of the Mexica), c. 1541",,work,1541,mexica
+duran,"Diego Durán, Historia de las Indias de Nueva España, 1581",,work,1581,iberia
+chimalpahin,"Domingo Francisco de San Antón Muñón Chimalpahin, Annals and Diary, c. 1610–1631",,work,1610,mexica
+stuart-entrada,"David Stuart, 'The Arrival of Strangers' (Teotihuacan and the Maya, 378 CE), 2000",,study,2000,
+sarmiento,"Pedro Sarmiento de Gamboa, Historia de los Incas, 1572",,work,1572,iberia
+cieza,"Pedro Cieza de León, Crónica del Perú, 1553",,work,1553,iberia
+guaman-poma,"Felipe Guamán Poma de Ayala, El primer nueva corónica y buen gobierno, c. 1615",,work,1615,inca
+garcilaso,"Inca Garcilaso de la Vega, Comentarios Reales de los Incas, 1609",,work,1609,inca
+moseley,"Michael E. Moseley, The Incas and Their Ancestors (2001)",,study,2001,
+shen-du,"Shen Du, Ruiying qilin song (Ode to the Auspicious Qilin), 1414, with the painting of the Bengal giraffe after it (Philadelphia Museum of Art)",,work,1414,china
+church-treasure-ships,"Sally K. Church, 'Zheng He: An Investigation into the Plausibility of 450-ft Treasure Ships', Monumenta Serica 53 (2005)",,study,2005,
+behistun,"Darius I, the Behistun inscription and the Persepolis tablets (Old Persian, Elamite and Babylonian), c. 520–490 BCE",,work,-520,persia
+daryaee,"Touraj Daryaee, Sasanian Persia: The Rise and Fall of an Empire (2009)",,study,2009,
+hoyland,"Robert G. Hoyland, Arabia and the Arabs: From the Bronze Age to the Coming of Islam (2001)",,study,2001,
+bagnall,"Roger S. Bagnall and Dominic W. Rathbone (eds.), Egypt from Alexander to the Copts (2004)",,study,2004,
+hudud-al-alam,"Ḥudūd al-ʿĀlam (The Regions of the World), written in Persian in Guzgan, 982; trans. V. Minorsky (1937)",,work,982,persia
+matthee,"Rudi Matthee, The Politics of Trade in Safavid Iran: Silk for Silver, 1600–1730 (1999)",,study,1999,
+mirza-saleh,"Mīrzā Ṣāliḥ Shīrāzī, Safarnāma: the journal of the Persian student mission to England, 1815–1819",,work,1815,persia
+nasir-al-din-shah,"Nāṣir al-Dīn Shāh, The Diary of H.M. the Shah of Persia during his Tour through Europe in A.D. 1873 (trans. J. W. Redhouse, 1874)",,work,1873,persia
+hajj-sayyah,"Ḥājj Sayyāḥ, An Iranian in Nineteenth Century Europe: The Travel Diaries of Haj Sayyah, 1859–1877 (trans. M. Sayyah, 1998)",,work,1877,persia
+goitein-india,"S. D. Goitein and Mordechai A. Friedman, India Traders of the Middle Ages: Documents from the Cairo Geniza (2008)",,study,2008,
+qalqashandi,"al-Qalqashandī, Ṣubḥ al-aʿshā fī ṣināʿat al-inshāʾ (the Mamluk chancery manual), 1412",,work,1412,egypt
+al-jabarti,"ʿAbd al-Raḥmān al-Jabartī, ʿAjāʾib al-āthār fī al-tarājim wa-al-akhbār (chronicle of Egypt, including the French occupation), c. 1805–1821",,work,1805,egypt
+baker-ismailia,"Samuel W. Baker, Ismailia: A Narrative of the Expedition to Central Africa … Organized by Ismail, Khedive of Egypt (1874)",,work,1874,egypt
+hill-hogg,"Richard Hill and Peter Hogg, A Black Corps d'Élite: An Egyptian Sudanese Conscript Battalion with the French Army in Mexico, 1863–1867 (1995)",,study,1995,
+rasulid-hexaglot,"Peter B. Golden (ed.), The King's Dictionary: The Rasūlid Hexaglot (2000)",,study,2000,
+ibn-majid,"Aḥmad ibn Mājid, Kitāb al-fawāʾid fī uṣūl ʿilm al-baḥr, c. 1490; trans. G. R. Tibbetts, Arab Navigation in the Indian Ocean before the Coming of the Portuguese (1971)",,work,1490,arabia
+sheriff-zanzibar,"Abdul Sheriff, Slaves, Spices and Ivory in Zanzibar (1987)",,study,1987,
+lancel,"Serge Lancel, Carthage: A History (1995)",,study,1995,
+ibn-jubayr,"Ibn Jubayr, Riḥla (the travels of an Andalusi pilgrim), 1183–1185",,work,1183,maghreb
+leo-africanus,"al-Ḥasan al-Wazzān (Leo Africanus), Description of Africa, 1526 (printed by Ramusio, 1550)",,work,1526,maghreb
+matar,"Nabil Matar, Europe Through Arab Eyes, 1578–1727 (2009)",,study,2009,
+al-hajari,"Aḥmad ibn Qāsim al-Ḥajarī, Kitāb nāṣir al-dīn ʿalā al-qawm al-kāfirīn (1637); ed. and trans. P. S. van Koningsveld et al. (1997)",,work,1637,maghreb
+van-de-mieroop,"Marc Van De Mieroop, A History of the Ancient Near East, ca. 3000–323 BC (3rd ed., 2016)",,study,2016,
+potts-gulf,"D. T. Potts, The Arabian Gulf in Antiquity (1990)",,study,1990,
+amarna,"The Amarna Letters (c. 1360–1332 BCE), trans. William L. Moran (1992)",,work,-1350,egypt
+shaw-egypt,"Ian Shaw (ed.), The Oxford History of Ancient Egypt (2000)",,study,2000,
+hatshepsut-punt,"The Punt reliefs in Hatshepsut's temple at Deir el-Bahari, c. 1470 BCE",,work,-1470,egypt
+wenamun,"The Report of Wenamun (Papyrus Moscow 120), c. 1075 BCE",,work,-1075,egypt
+turin-map,"The Turin Papyrus Map, c. 1160 BCE (Museo Egizio, Turin)",,work,-1160,egypt
+babylonian-world-map,"The Babylonian Map of the World (British Museum 92687), c. 600 BCE",,work,-600,persia
+esarhaddon,"The royal inscriptions of Esarhaddon, king of Assyria (680–669 BCE); ed. Erle Leichty (2011)",,work,-675,persia
+liu-chen,"Li Liu and Xingcan Chen, The Archaeology of China: From the Late Paleolithic to the Early Bronze Age (2012)",,study,2012,
+keightley,"David N. Keightley, The Ancestral Landscape: Time, Space, and Community in Late Shang China (2000)",,study,2000,
+shaughnessy,"Edward L. Shaughnessy, 'Western Zhou History', in The Cambridge History of Ancient China (1999)",,study,1999,
+zuozhuan,"Zuozhuan (The Zuo Tradition), compiled c. 4th century BCE",,work,-350,china
+cline-1177,"Eric H. Cline, 1177 B.C.: The Year Civilization Collapsed (2014)",,study,2014,
+homer,"Homer, Iliad and Odyssey, c. 750–700 BCE",,work,-750,greece
+boardman,"John Boardman, The Greeks Overseas: Their Early Colonies and Trade (4th ed., 1999)",,study,1999,
+possehl,"Gregory L. Possehl, The Indus Civilization: A Contemporary Perspective (2002)",,study,2002,
+rigveda,"The Rigveda, c. 1500–1200 BCE; trans. Stephanie W. Jamison and Joel P. Brereton (2014)",,work,-1300,india
+allchin,"F. R. Allchin, The Archaeology of Early Historic South Asia (1995)",,study,1995,
+aubet,"María Eugenia Aubet, The Phoenicians and the West (2nd ed., 2001)",,study,2001,
+habu,"Junko Habu, Ancient Jomon of Japan (2004)",,study,2004,
+pool-olmec,"Christopher A. Pool, Olmec Archaeology and Early Mesoamerica (2007)",,study,2007,
+burger-chavin,"Richard L. Burger, Chavín and the Origins of Andean Civilization (1992)",,study,1992,
+anthony,"David W. Anthony, The Horse, the Wheel, and Language (2007)",,study,2007,
+primary-chronicle,"The Tale of Bygone Years (the Russian Primary Chronicle), compiled in Kyiv c. 1113",,work,1113,russia
+nikitin,"Afanasy Nikitin, A Journey Beyond Three Seas (Khozhenie za tri morya), 1468–1475",,work,1468,russia
+atlas-russicus,"Atlas Russicus, published by the Imperial Academy of Sciences, St Petersburg, 1745",,work,1745,russia
+krusenstern,"Adam Johann von Krusenstern, Voyage Round the World in the Years 1803–1806 (1810–1814)",,work,1803,russia
+bellingshausen,"Fabian Gottlieb von Bellingshausen, Two Seasons of Exploration in the Southern Ice Ocean (1831)",,work,1831,russia
+isidore,"Isidore of Seville, Etymologiae, c. 630",,work,630,iberia
+orosius-alfred,"The Old English Orosius, with the voyages of Ohthere and Wulfstan told to King Alfred, c. 890",,work,890,britain
+brink-price,"Stefan Brink and Neil Price (eds.), The Viking World (2008)",,study,2008,
+diller-ptolemy,"Aubrey Diller, 'The Oldest Manuscripts of Ptolemaic Maps', Transactions of the American Philological Association 71 (1940)",,study,1940,
+cunliffe,"Barry Cunliffe, Europe Between the Oceans: 9000 BC–AD 1000 (2008)",,study,2008,
+russian-chronograph,"The Russian Chronograph (Russkii khronograf), a world history compiled in Muscovy, 1512",,work,1512,russia
+maxim-greek,"Maxim the Greek, writings in Muscovy after 1518, including the first Russian mention of the New World",,work,1518,russia
+daniel-abbot,"The Pilgrimage of the Russian Abbot Daniel in the Holy Land, 1106–1108",,work,1106,russia
+itesamuddin,"Mirza Sheikh I'tesamuddin, Shigarf-nama-i Vilayet (The Wonders of Vilayet), on his journey to Britain in 1765–1766",,work,1765,india
+abu-taleb,"Mirza Abu Taleb Khan, The Travels of Mirza Abu Taleb Khan in Asia, Africa and Europe, 1799–1803 (trans. 1810)",,work,1799,india
+ibn-battuta-ships,"Ibn Battuta, Travels, trans. Samuel Lee (1829), The ships of Kalikut and the storm",https://franpritchett.com/00generallinks/ibnbatuta/07china2.html,work,1355,maghreb
+ibn-battuta-asia,"Ibn Battuta, Travels, trans. Samuel Lee (1829), Maabar and Bengal",https://franpritchett.com/00generallinks/ibnbatuta/10bengal.html,work,1355,maghreb
+ibn-battuta-orias,"UC Berkeley ORIAS, The Travels of Ibn Battuta, annotated itinerary based on Ross Dunn and H. A. R. Gibb",https://orias.berkeley.edu/resources-teachers/travels-ibn-battuta/journey,record,,
+ibn-battuta-lee,"Ibn Battuta, Travels, trans. Samuel Lee (1829), Samudra and China",https://archive.org/details/b28406084,work,1355,maghreb
+ibn-battuta-beckingham,"C. F. Beckingham, Ebn Battuta, Encyclopaedia Iranica",https://www.iranicaonline.org/articles/ebn-battuta/,record,,
+ibn-battuta-najaf,"Ibn Battuta, Rihla, Dar al-Turath edition, p. 172 (Najaf)",https://ablibrary.net/book_content/b/6802/172?lang=ar,work,1355,maghreb
+ibn-battuta-gibb,"Ibn Battuta, Travels in Asia and Africa 1325–1354, translated and selected by H. A. R. Gibb (1929)",https://www.heroesandlegends.com.au/wp-content/uploads/2022/08/2015.62617.Ibn-Battuta-Travels-In-Asia-And-Africa-1325-1354_text.pdf,work,1355,maghreb
+alhambra-setting,"Patronato de la Alhambra y Generalife, The Enclave; historical setting and topography",https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/the-enclave,record,,
+mcghee,"Robert McGhee, The Last Imaginary Place: A Human History of the Arctic World (2005)",,study,2005,
+friesen-mason,"T. Max Friesen and Owen K. Mason (eds.), The Oxford Handbook of the Prehistoric Arctic (2016)",,study,2016,
+rasmussen,"Knud Rasmussen, Across Arctic America: Narrative of the Fifth Thule Expedition (1927)",,work,1927,norse
+ammassalik-maps,"The Ammassalik wooden maps carved by Kunit, collected by Gustav Holm in 1885 (Greenland National Museum, Nuuk)",,work,1885,inuit
+hendrik,"Hans Hendrik, Memoirs of Hans Hendrik, the Arctic Traveller (1878)",,work,1878,inuit
+lewis-williams,"David Lewis-Williams, San Rock Art (2011)",,study,2011,
+huffman,"Thomas N. Huffman, Mapungubwe: Ancient African Civilisation on the Limpopo (2005)",,study,2005,
+beach,"D. N. Beach, The Shona and Zimbabwe, 900–1850 (1980)",,study,1980,
+parsons-kings,"Neil Parsons, King Khama, Emperor Joe, and the Great White Queen: Victorian Britain through African Eyes (1998)",,study,1998,
+munro-hay,"Stuart Munro-Hay, Aksum: An African Civilisation of Late Antiquity (1991)",,study,1991,
+kebra-nagast,"Kebra Nagast (The Glory of the Kings), compiled in Ge'ez c. 1320",,work,1320,ethiopia
+tamrat,"Taddesse Tamrat, Church and State in Ethiopia, 1270–1527 (1972)",,study,1972,
+salvadore,"Matteo Salvadore, The African Prester John and the Birth of Ethiopian–European Relations, 1402–1555 (2017)",,study,2017,
+ludolf,"Hiob Ludolf, Historia Aethiopica (1681), written with the Ethiopian scholar Abba Gorgoryos",,work,1681,germany
+horton-middleton,"Mark Horton and John Middleton, The Swahili: The Social Landscape of a Mercantile Society (2000)",,study,2000,
+kilwa-chronicle,"The Kilwa Chronicle (Kitab al-Sulwa fi akhbar Kilwa), c. 1530",,work,1530,swahili
+tippu-tip,"Hamed bin Muhammed el-Murjebi (Tippu Tip), Maisha ya Hamed bin Muhammed, his autobiography, c. 1902–1903",,work,1902,swahili
+bellwood,"Peter Bellwood, First Islanders: Prehistory and Human Migration in Island Southeast Asia (2017)",,study,2017,
+adelaar,"Alexander Adelaar, 'The Indonesian Migrations to Madagascar', in Austronesian Diaspora and the Ethnogeneses of People in Indonesian Archipelago (2006)",,study,2006,
+hall-kr,"Kenneth R. Hall, A History of Early Southeast Asia: Maritime Trade and Societal Development, 100–1500 (2011)",,study,2011,
+nagarakretagama,"Mpu Prapanca, Desawarnana (Nagarakretagama), 1365",,work,1365,nusantara
+sejarah-melayu,"Sejarah Melayu (the Malay Annals), c. 1612",,work,1612,nusantara
+reid,"Anthony Reid, Southeast Asia in the Age of Commerce, 1450–1680 (1988–1993)",,study,1988,
+abdullah-munshi,"Abdullah bin Abdul Kadir (Munshi Abdullah), Hikayat Abdullah (1849)",,work,1849,nusantara
+aristotle,"Aristotle, On the Heavens (De caelo), c. 350 BCE",,work,-350,greece
+needham,"Joseph Needham, Science and Civilisation in China, vol. 3 (1959) and vol. 4, part 3 (1971)",,study,1971,
+talbert-peutinger,"Richard J. A. Talbert, Rome's World: The Peutinger Map Reconsidered (2010)",,study,2010,
+plofker,"Kim Plofker, Mathematics in India (2009)",,study,2009,
+urton-khipu,"Gary Urton, Signs of the Inka Khipu: Binary Coding in the Andean Knotted-String Records (2003)",,record,2003,
+hyslop,"John Hyslop, The Inka Road System (1984)",,study,1984,
+mundy,"Barbara E. Mundy, The Mapping of New Spain: Indigenous Cartography and the Maps of the Relaciones Geográficas (1996)",,study,1996,
+ortelius,"Abraham Ortelius, Theatrum Orbis Terrarum (Antwerp, 1570)",,work,1570,germany
+davis-seamans,"John Davis, The Seamans Secrets (1594)",,work,1594,britain
+headrick,"Daniel R. Headrick, The Tools of Empire: Technology and European Imperialism in the Nineteenth Century (1981)",,study,1981,
+analects,"Confucius (attrib.), Analects; Sima Qian, Shiji 47, Hereditary House of Confucius",,work,-450,china
+xu-xiake-youji,"Xu Xiake, Travel Diaries of Xu Xiake (Xu Xiake youji), written 1607–1640, first printed 1776",,work,1607,china
+boas,"Franz Boas, The Central Eskimo (1888) and Baffin-Land (1885)",,work,1888,germany
+andrews,"Roy Chapman Andrews, The New Conquest of Central Asia (1932)",,work,1932,
+drake-world-encompassed,"Francis Fletcher and Francis Drake (nephew), The World Encompassed by Sir Francis Drake (1628)",,work,1628,britain
+fidalgo,"Henry R. Wagner, Spanish Explorations in the Strait of Juan de Fuca (1933); W. L. Cook, Flood Tide of Empire (1973)",,study,1973,
+ross-voyage,"James Clark Ross, A Voyage of Discovery and Research in the Southern and Antarctic Regions (1847)",,work,1847,britain
+duyfken,"J. E. Heeres, The Part Borne by the Dutch in the Discovery of Australia 1606–1765 (1899)",,study,1899,
+barros,"João de Barros, Décadas da Ásia, Década I (1552)",,work,1552,iberia
+caminha,"Pero Vaz de Caminha, Letter to King Manuel on the finding of Brazil (1 May 1500)",,work,1500,iberia
+vespucci,"Amerigo Vespucci, Mundus Novus (1503); Martin Waldseemüller, Universalis Cosmographia (1507)",,work,1503,iberia
+pero-lopes,"Pero Lopes de Sousa, Diário da navegação (1530–1532)",,work,1530,iberia
+raposo-tavares,"Jaime Cortesão, Raposo Tavares e a formação territorial do Brasil (1958)",,study,1958,
+long-march,"Edgar Snow, Red Star Over China (1937); Harrison Salisbury, The Long March: The Untold Story (1985)",,study,1985,
+motorcycle-diaries,"Ernesto Guevara, Notas de viaje (written 1952, published 1993); Alberto Granado, Con el Che por Sudamérica (1978)",,work,1952,
+bennett-instruments,"J. A. Bennett, The Divided Circle: A History of Instruments for Astronomy, Navigation and Surveying (1987)",,study,1987,
+standage,"Tom Standage, The Victorian Internet: The Remarkable Story of the Telegraph and the Nineteenth Century's On-line Pioneers (1998)",,study,1998,
+fischer-telephone,"Claude S. Fischer, America Calling: A Social History of the Telephone to 1940 (1992)",,study,1992,
+brown-radar,"Louis Brown, A Radar History of World War II: Technical and Military Imperatives (1999)",,study,1999,
+crosby,"Alfred W. Crosby, The Columbian Exchange: Biological and Cultural Consequences of 1492 (1972)",,study,1972,
+piperno-2009,"Dolores Piperno et al., 'Starch grain and phytolith evidence for early ninth millennium B.P. maize from the Central Balsas River Valley, Mexico', PNAS 106 (2009)",,study,2009,
+ho-pingti,"Ping-ti Ho, 'The Introduction of American Food Plants into China', American Anthropologist 57 (1955)",,study,1955,
+hawkes-potato,"J. G. Hawkes and J. Francisco-Ortega, 'The early history of the potato in Europe', Euphytica 70 (1993)",,study,1993,
+roullier-2013,"Caroline Roullier et al., 'Historical collections reveal patterns of diffusion of sweet potato in Oceania obscured by modern plant movements and recombination', PNAS 110 (2013)",,study,2013,
+andrews-peppers,"Jean Andrews, Peppers: The Domesticated Capsicums (1984; new ed. 1995)",,study,1995,
+goodman-tobacco,"Jordan Goodman, Tobacco in History: The Cultures of Dependence (1993)",,study,1993,
+coe-chocolate,"Sophie D. Coe and Michael D. Coe, The True History of Chocolate (1996)",,study,1996,
+schorger,"A. W. Schorger, The Wild Turkey: Its History and Domestication (1966)",,study,1966,
+mair-hoh,"Victor H. Mair and Erling Hoh, The True History of Tea (2009)",,study,2009,
+hattox,"Ralph S. Hattox, Coffee and Coffeehouses: The Origins of a Social Beverage in the Medieval Near East (1985)",,study,1985,
+mintz,"Sidney W. Mintz, Sweetness and Power: The Place of Sugar in Modern History (1985)",,study,1985,
+librado-2021,"Pablo Librado et al., 'The origins and spread of domestic horses from the Western Eurasian steppes', Nature 598 (2021)",,study,2021,
+duyvendak,"J. J. L. Duyvendak, China's Discovery of Africa (1949)",,study,1949,
+clarke-rhinoceros,"T. H. Clarke, The Rhinoceros from Dürer to Stubbs, 1515–1799 (1986)",,study,1986,
+ctesias,"Ctesias of Cnidus, Indica, c. 400 BCE (fragments in Photius)",,work,-400,greece
+pelsaert,"Francisco Pelsaert, journal of the Batavia, 1629 (in Ongeluckige voyagie, 1647)",,work,1629,germany
+hume-dodo,"Julian P. Hume, 'The history of the Dodo Raphus cucullatus and the penguin of Mauritius', Historical Biology 18 (2006)",,study,2006,
+morris-pandas,"Ramona and Desmond Morris, Men and Pandas (1966)",,study,1966,
+smith-coelacanth,"J. L. B. Smith, Old Fourlegs: The Story of the Coelacanth (1956)",,study,1956,
+pavord,"Anna Pavord, The Tulip (1999)",,study,1999,
+fuller-2009,"Dorian Q. Fuller et al., 'The domestication process and domestication rate in rice: spikelet bases from the Lower Yangtze', Science 323 (2009)",,study,2009,
+zohary-hopf,"Daniel Zohary, Maria Hopf and Ehud Weiss, Domestication of Plants in the Old World, 4th ed. (2012)",,study,2012,
+perrier-2011,"Xavier Perrier et al., 'Multidisciplinary perspectives on banana (Musa spp.) domestication', PNAS 108 (2011)",,study,2011,
+wu-2018,"Guohong Albert Wu et al., 'Genomics of the origin and evolution of Citrus', Nature 554 (2018)",,study,2018,
+dean-rubber,"Warren Dean, Brazil and the Struggle for Rubber: A Study in Environmental History (1987)",,study,1987,
+honigsbaum,"Mark Honigsbaum, The Fever Trail: In Search of the Cure for Malaria (2001)",,study,2001,
+turner-spice,"Jack Turner, Spice: The History of a Temptation (2004)",,study,2004,
+jones-manioc,"William O. Jones, Manioc in Africa (1959)",,study,1959,
+smith-tomato,"Andrew F. Smith, The Tomato in America: Early History, Culture, and Cookery (1994)",,study,1994,
+driscoll-2007,"Carlos A. Driscoll et al., 'The Near Eastern origin of cat domestication', Science 317 (2007)",,study,2007,
+kanpyo-gyoki,"Emperor Uda, Kanpyō gyoki (diary), entry of 889",,work,889,japan
+peters-2022,"Joris Peters et al., 'The biocultural origins and dispersal of domestic chickens', PNAS 119 (2022)",,study,2022,
+royal-frankish-annals,"Annales regni Francorum (Royal Frankish Annals), entries for 801–802",,work,801,france
+hahn-tower,"Daniel Hahn, The Tower Menagerie (2003)",,study,2003,
+bedini,"Silvio A. Bedini, The Pope's Elephant (1997)",,study,1997,
+holdaway-2014,"Richard N. Holdaway et al., 'An extremely low-density human population exterminated New Zealand moa', Nature Communications 5 (2014)",,study,2014,
+johnston-okapi,"Harry Johnston, 'Okapia, a new genus of Giraffidae from Central Africa', Proceedings of the Zoological Society of London (1901)",,study,1901,
+lantzeff-pierce,"George V. Lantzeff and Richard A. Pierce, Eastward to Empire: Exploration and Conquest on the Russian Open Frontier, to 1750 (1973)",,study,1973,
+fisher-dezhnev,"Raymond H. Fisher, The Voyage of Semen Dezhnev in 1648: Bering's Precursor (1981)",,study,1981,
+tulisen,"Tulišen, Yiyu lu (Record of Strange Regions), 1723; trans. George Staunton, Narrative of the Chinese Embassy to the Khan of the Tourgouth Tartars (1821)",,work,1723,china
+nordenskiold,"A. E. Nordenskiöld, The Voyage of the Vega round Asia and Europe (1881)",,work,1881,norse
+chekhov-sakhalin,"Anton Chekhov, Sakhalin Island (1895)",,work,1895,russia
+caillie,"René Caillié, Journal d'un voyage à Temboctou et à Jenné (1830)",,work,1830,france
+barth,"Heinrich Barth, Travels and Discoveries in North and Central Africa (1857–58)",,work,1857,britain
+hearne,"Samuel Hearne, A Journey from Prince of Wales's Fort in Hudson's Bay to the Northern Ocean (1795)",,work,1795,britain
+mackenzie,"Alexander Mackenzie, Voyages from Montreal through the Continent of North America to the Frozen and Pacific Oceans (1801)",,work,1801,britain
+beattie-geiger,"Owen Beattie and John Geiger, Frozen in Time: The Fate of the Franklin Expedition (1987); John Rae's report to the Admiralty (1854)",,study,1987,
+seth-korea,"Michael J. Seth, A History of Korea: From Antiquity to the Present (2010)",,study,2010,
+samguk-sagi,"Kim Busik, Samguk sagi (History of the Three Kingdoms, 1145)",,work,1145,korea
+goryeosa,"Goryeosa (History of Goryeo, 1451)",,work,1451,korea
+joseon-sillok,Joseon wangjo sillok (Veritable Records of the Joseon Dynasty),,record,,
+ledyard-korea,"Gari Ledyard, 'Cartography in Korea', in The History of Cartography, vol. 2, book 2 (1994)",,study,1994,
+haedong-jegukgi,"Sin Suk-ju, Haedong jegukgi (Records of the Countries across the Eastern Sea, 1471)",,work,1471,korea
+choe-bu,"Choe Bu, Pyohaerok (1488), trans. John Meskill, Ch'oe Pu's Diary: A Record of Drifting across the Sea (1965)",,work,1488,korea
+hamel,"Hendrick Hamel, Journael van de ongeluckige voyagie van 't jacht de Sperwer (1668)",,work,1668,germany
+yeolha-ilgi,"Pak Ji-won, Yeolha ilgi (The Jehol Diary, 1780)",,work,1780,korea
+yu-kilchun,"Yu Kil-chun, Seoyu gyeonmun (Observations on a Journey to the West, 1895)",,work,1895,korea
+honeychurch,"William Honeychurch, Inner Asia and the Spatial Politics of Empire (2015)",,study,2015,
+golden-turkic,"Peter B. Golden, An Introduction to the History of the Turkic Peoples (1992)",,study,1992,
+orkhon,"The Orkhon inscriptions of Kül Tegin and Bilge Khagan (732–735), trans. Talât Tekin, A Grammar of Orkhon Turkic (1968)",,work,732,steppe
+rabban-sauma,"The History of Mar Yahballaha and Rabban Sauma, trans. E. A. Wallis Budge, The Monks of Kûblâi Khân (1928)",,work,1300,china
+atwood,"Christopher P. Atwood, Encyclopedia of Mongolia and the Mongol Empire (2004)",,record,2004,
+inomata-2013,"Takeshi Inomata et al., 'Early Ceremonial Constructions at Ceibal, Guatemala', Science 340 (2013)",https://doi.org/10.1126/science.1234493,study,2013,
+sharer,"Robert J. Sharer and Loa P. Traxler, The Ancient Maya, 6th ed. (2006)",,study,2006,
+martin-grube,"Simon Martin and Nikolai Grube, Chronicle of the Maya Kings and Queens, 2nd ed. (2008)",,study,2008,
+kaqchikel-annals,"The Annals of the Kaqchikels, trans. Judith Maxwell and Robert Hill, Kaqchikel Chronicles (2006)",,work,1600,maya
+landa,"Diego de Landa, Relación de las cosas de Yucatán (c. 1566)",,work,1566,iberia
+jones-itza,"Grant D. Jones, The Conquest of the Last Maya Kingdom (1998)",,study,1998,
+reed-caste-war,"Nelson Reed, The Caste War of Yucatán (1964)",,study,1964,
+restall-maya,"Matthew Restall, The Maya World: Yucatec Culture and Society, 1550–1850 (1997)",,study,1997,
+chilam-balam,"The Book of Chilam Balam of Chumayel, trans. Ralph L. Roys (1933)",,work,1782,maya
+weiditz,"Christoph Weiditz, Trachtenbuch (1529), with drawings of the Nahua at Charles V's court",,work,1529,germany
+hamann-1529,"Byron Ellsworth Hamann, on the Nahua ambassadors received by Clement VII in Rome, 1529 (Villa I Tatti research project)",https://itatti.harvard.edu/node/8476,study,,
+flint-coronado,"Richard Flint and Shirley Cushing Flint, Documents of the Coronado Expedition, 1539–1542 (2005)",,study,2005,
+guardino-2017,"Peter Guardino, The Dead March: A History of the Mexican-American War (2017)",,study,2017,
+martinez-galicia,"Baruc Martínez Díaz, Faustino Chimalpopoca Galicia: un intelectual indígena en el México decimonónico (2024)",,study,2024,
+lovell-alvarado,"W. George Lovell, Christopher H. Lutz and Wendy Kramer, Death in the Snow: Pedro de Alvarado and the Illusive Conquest of Peru (2016)",,study,2016,
+macleod-1973,"Murdo J. MacLeod, Spanish Central America: A Socioeconomic History, 1520–1720 (1973)",,study,1973,
+alvarez-cuartero-2007,"Izaskun Álvarez Cuartero, 'De Tihosuco a La Habana: la venta de indios yucatecos a Cuba durante la Guerra de Castas', Studia Historica: Historia Contemporánea 25 (2007)",,study,2007,
+raimundez-2019,"Zoraida Raimúndez Ares, on the letters of the Yucatec Maya caciques to Philip II (1567), Estudios de Cultura Maya (2019)",,study,2019,
+restall-black-middle,"Matthew Restall, The Black Middle: Africans, Mayas, and Spaniards in Colonial Yucatan (2009)",,study,2009,
+hemming-inca,"John Hemming, The Conquest of the Incas (1970)",,study,1970,
+assadourian-1982,"Carlos Sempat Assadourian, El sistema de la economía colonial: mercado interno, regiones y espacio económico (1982)",,study,1982,
+bonialian-2015,"Mariano Bonialian, 'Asiáticos en Lima a principios del siglo XVII', Bulletin de l'Institut Français d'Études Andines 44 (2015)",https://doaj.org/article/6e4ada7fbab843abb5e0cbd2b3b4f57e,study,2015,
+tupac-amaru-memoir,"Juan Bautista Túpac Amaru, El dilatado cautiverio (Buenos Aires, c. 1825); Charles F. Walker and Liz Clarke, Witness to the Age of Revolution (2020)",,work,1825,inca
+cadiz-cortes,"Diario de las discusiones y actas de las Cortes (Cádiz, 1810–1813)",,work,1810,iberia
+tongsinsa-1719,"Sin Yu-han, Haeyurok (1719); James Lewis, 'Beyond Sakoku: The Korean Envoy to Edo and the 1719 Diary of Shin Yu-han', Korea Journal 25:11 (1985)",,work,1719,korea
+pyohae-simal,"Jeong Yak-jeon, Pyohae simal (c. 1805), the account of Mun Sun-deuk's drift",,work,1805,korea
+min-yeonghwan,"Min Yeong-hwan, Haecheon chubeom (1896), trans. Michael Finch in Min Yŏng-hwan: A Political Biography (2002)",,work,1896,korea
+macknight-1976,"C. C. Macknight, The Voyage to Marege': Macassan Trepangers in Northern Australia (1976)",,study,1976,
+raden-saleh,"Werner Kraus, Raden Saleh: The Beginning of Modern Indonesian Painting (2012)",,study,2012,
+song-yun,"Yang Xuanzhi, Luoyang qielan ji (Record of the Buddhist Monasteries of Luoyang, 547), with the accounts of Song Yun and Huisheng; trans. Édouard Chavannes (1903)",,work,547,china
+changchun,"Li Zhichang, Changchun zhenren xiyou ji (1228), trans. Arthur Waley, The Travels of an Alchemist (1931)",,work,1228,china
+chen-cheng,"Chen Cheng, Xiyu xingcheng ji and Xiyu fanguo zhi (1415); Morris Rossabi, 'Two Ming Envoys to Inner Asia', T'oung Pao 62 (1976)",,work,1415,china
+fan-shouyi,"Fan Shouyi, Shenjianlu (c. 1721); Paul Rule, 'Louis Fan Shouyi and Macao', Review of Culture 21 (2002)",,work,1721,china
+binchun,"Binchun, Chengcha biji and his travel poems (1866); Jenny Huangfu Day, Qing Travelers to the Far West (2018) and 'Qing Envoys and Ministers in Europe, 1866–1893' (2012)",https://escholarship.org/uc/item/7wt3n65p,work,1866,china
+flinders,"Matthew Flinders, A Voyage to Terra Australis (1814)",,work,1814,britain
+jackson-mongols,"Peter Jackson, The Mongols and the West, 1221–1410 (2005)",,study,2005,
+denon,"Vivant Denon, Voyage dans la Basse et la Haute Égypte (1802)",,work,1802,france
+zhishun-zhenjiang,"Yu Xilu 俞希鲁, Zhishun Zhenjiang zhi 至顺镇江志 (Gazetteer of Zhenjiang, c. 1333), on Mar Sargis 马薛里吉思; see Moule and Pelliot, Marco Polo: The Description of the World (1938)",https://dsr.nii.ac.jp/toyobunko/III-2-F-c-104/V-2/page/0178.html.en,work,1333,china
+yang-zhijiu,"Yang Zhijiu 杨志玖, 'Guanyu Make Boluo li Hua de yiduan Hanwen jilu' 关于马可波罗离华的一段汉文记录, Wenshi zazhi 1:12 (1941), on the 1290 zhanchi document in the Yongle dadian",,study,1941,
+found-study-pompeii,"UNESCO World Heritage Centre, pompeii — archaeological site or collection record",https://whc.unesco.org/en/list/829/,record,,
+found-study-herculaneum,"UNESCO World Heritage Centre, herculaneum — archaeological site or collection record",https://whc.unesco.org/en/list/829/,record,,
+found-study-troy,"UNESCO World Heritage Centre, troy — archaeological site or collection record",https://whc.unesco.org/en/list/849/,record,,
+found-study-knossos,"UNESCO World Heritage Centre, knossos — archaeological site or collection record",https://whc.unesco.org/en/list/1733/,record,,
+found-study-delphi,"UNESCO World Heritage Centre, delphi — archaeological site or collection record",https://whc.unesco.org/en/list/393/,record,,
+found-study-petra,"UNESCO World Heritage Centre, petra — archaeological site or collection record",https://whc.unesco.org/en/list/326/,record,,
+found-study-birka,"UNESCO World Heritage Centre, birka — archaeological site or collection record",https://whc.unesco.org/en/list/555/,record,,
+found-study-hedeby,"UNESCO World Heritage Centre, hedeby — archaeological site or collection record",https://whc.unesco.org/en/list/1553/,record,,
+found-study-sarai,"State Historical Museum, sarai — archaeological site or collection record",https://shm.ru/archeology/povolzhskaya-arkheologicheskaya-ekspeditsiya/,record,,
+found-study-brattahlid,"UNESCO World Heritage Centre, brattahlid — archaeological site or collection record",https://whc.unesco.org/document/155724,record,,
+found-study-lanse-aux-meadows,"UNESCO World Heritage Centre, lanse aux meadows — archaeological site or collection record",https://whc.unesco.org/en/list/4/,record,,
+found-study-nineveh,"British Museum, nineveh — archaeological site or collection record",https://www.britishmuseum.org/collection/object/W_2010-6001-2,record,,
+found-study-meroe,"UNESCO World Heritage Centre, meroe — archaeological site or collection record",https://whc.unesco.org/en/list/1336/,record,,
+found-study-adulis,"Chiara Zazzaro, adulis — archaeological site or collection record",https://unora.unior.it/bitstream/11574/50291/1/Zazzaro2013.pdf,record,,
+found-study-leptis-magna,"UNESCO World Heritage Centre, leptis magna — archaeological site or collection record",https://whc.unesco.org/en/list/183/,record,,
+found-study-koumbi-saleh,"UNESCO World Heritage Centre, koumbi saleh — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/1546/,record,,
+found-study-mapungubwe,"UNESCO World Heritage Centre, mapungubwe — archaeological site or collection record",https://whc.unesco.org/en/list/1099/,record,,
+found-study-mohenjo-daro,"UNESCO World Heritage Centre, mohenjo daro — archaeological site or collection record",https://whc.unesco.org/en/list/138/,record,,
+found-study-harappa,"Pakistan Department of Archaeology and Museums, harappa — archaeological site or collection record",https://doam.gov.pk/public/sites/6579,record,,
+found-study-taxila,"UNESCO World Heritage Centre, taxila — archaeological site or collection record",https://whc.unesco.org/en/list/139/,record,,
+found-study-nalanda,"UNESCO World Heritage Centre, nalanda — archaeological site or collection record",https://whc.unesco.org/en/list/1502/,record,,
+found-study-muziris,"Muziris Heritage Project, muziris — archaeological site or collection record",https://www.keralatourism.org/muziris/historical-sites/pattanam,record,,
+found-study-arikamedu,"Puducherry Planning Authority, arikamedu — archaeological site or collection record",https://ppa.py.gov.in/sites/default/files/draft-proposal-report-draft-cdp-puducherry.pdf,record,,
+found-study-anyang,"UNESCO World Heritage Centre, anyang — archaeological site or collection record",https://whc.unesco.org/en/list/1114/,record,,
+found-study-loulan,"International Dunhuang Programme, loulan — archaeological site or collection record",https://idp.bl.uk/collection/610103DC0D4C4D9EACB5E5962C7FBA6A/,record,,
+found-study-niya,"International Dunhuang Programme, niya — archaeological site or collection record",https://idp.bl.uk/discover/exhibitions/aurel-stein-a-hundred-years-on/settlements/,record,,
+found-study-karakorum,"University of Bonn, karakorum — archaeological site or collection record",https://www.iak.uni-bonn.de/de/institut/abteilungen/vor-und-fruehgeschichtliche-archaeologie/projekte-1/karakorum,record,,
+found-study-oc-eo,"UNESCO World Heritage Centre, oc eo — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/6572/,record,,
+found-study-trowulan,"UNESCO World Heritage Centre, trowulan — archaeological site or collection record",https://whc.unesco.org/en/tentativelists/5466/,record,,
+found-study-caral,"UNESCO World Heritage Centre, caral — archaeological site or collection record",https://whc.unesco.org/en/list/1269/,record,,
+found-study-el-mirador,"Asociación Tikal, el mirador — archaeological site or collection record",https://www.asociaciontikal.com/simposio-21-ano-2007/33-suyuc-07-doc/,record,,
+found-study-tikal,"UNESCO World Heritage Centre, tikal — archaeological site or collection record",https://whc.unesco.org/en/list/64/,record,,
+found-study-calakmul,"UNESCO World Heritage Centre, calakmul — archaeological site or collection record",https://whc.unesco.org/en/list/1061/,record,,
+found-study-palenque,"UNESCO World Heritage Centre, palenque — archaeological site or collection record",https://whc.unesco.org/en/list/411/,record,,
+found-study-copan,"UNESCO World Heritage Centre, copan — archaeological site or collection record",https://whc.unesco.org/en/list/129/,record,,
+found-study-mesa-verde,"US National Park Service, mesa verde — archaeological site or collection record",https://www.nps.gov/meve/learn/historyculture/cliff_dwellings_home.htm,record,,
+found-study-machu-picchu,"UNEP-WCMC, machu picchu — archaeological site or collection record",https://world-heritage-datasheets.unep-wcmc.org/datasheet/output/site/historic-sanctuary-of-machu-picchu/,record,,
+found-study-ur,"UNESCO World Heritage Centre, ur — archaeological site or collection record",https://whc.unesco.org/en/list/1481/,record,,
+found-study-uruk,"UNESCO World Heritage Centre, uruk — archaeological site or collection record",https://whc.unesco.org/en/list/1481/,record,,
+found-study-hattusa,"UNESCO World Heritage Centre, hattusa — archaeological site or collection record",https://whc.unesco.org/en/list/377/,record,,
+found-study-ugarit,"French Ministry of Culture, ugarit — archaeological site or collection record",https://archeologie.culture.gouv.fr/proche-orient/en/ugarit-ras-shamra,record,,
+found-study-jerash,"Jordan Department of Antiquities, jerash — archaeological site or collection record",https://ticket.gov.jo/en/location/jerash,record,,
+found-study-ostia,"Ostia Forum Project, ostia — archaeological site or collection record",https://www.aarome.org/ostia-forum-project,record,,
+found-study-timgad,"UNESCO World Heritage Centre, timgad — archaeological site or collection record",https://whc.unesco.org/en/list/194/,record,,
+found-study-kerma,"Swiss Archaeological Mission at Kerma, kerma — archaeological site or collection record",https://kerma.ch/en/history/,record,,
+found-study-gedi,"UNESCO World Heritage Centre, gedi — archaeological site or collection record",https://whc.unesco.org/en/list/1720/,record,,
+found-study-erlitou,"Erlitou Site Museum, erlitou — archaeological site or collection record",https://www.eltxdmuseum.com/en/,record,,
+found-study-zhengzhou-shang,"Henan Provincial Government, zhengzhou shang — archaeological site or collection record",https://english.henan.gov.cn/2021/10-26/2335060.html,record,,
+found-study-sanxingdui,"Harvard University, sanxingdui — archaeological site or collection record",https://archaeology.harvard.edu/sites/g/files/omnuum7041/files/in_situ_fall_2024.pdf,record,,
+found-study-mari,"French Ministry of Culture, mari — archaeological site or collection record",https://archeologie.culture.gouv.fr/mari/en,record,,
+found-study-akhetaten,"Amarna Project, akhetaten — archaeological site or collection record",https://www.amarnaproject.com/our-work/,record,,
+found-study-pi-ramesses,"UCL Institute of Archaeology, pi ramesses — archaeological site or collection record",https://discovery.ucl.ac.uk/id/eprint/93697/,record,,
+found-study-lothal,"IIT Gandhinagar, lothal — archaeological site or collection record",https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2047689&lang=2&reg=48,record,,
+found-study-dholavira,"UNESCO World Heritage Centre, dholavira — archaeological site or collection record",https://whc.unesco.org/en/list/1645/,record,,
+found-study-pylos,"Ephorate of Antiquities of Messenia, pylos — archaeological site or collection record",https://www.efamess.gr/en/pois/anaktoro-nestoros-ston-ano-egkliano/,record,,
+found-study-la-venta,"INAH, la venta — archaeological site or collection record",https://inah.gob.mx/foto-del-dia/las-esculturas-olmecas-de-la-venta,record,,
+found-study-san-lorenzo,"INAH, san lorenzo — archaeological site or collection record",https://www.inah.gob.mx/zonas/186-zona-arqueologica-de-san-lorenzo-tenochtitlan,record,,
+found-study-poverty-point,"UNESCO World Heritage Centre, poverty point — archaeological site or collection record",https://whc.unesco.org/en/list/1435/,record,,
+found-study-dhar-tichitt,"African Archaeological Review, dhar tichitt — archaeological site or collection record",https://link.springer.com/article/10.1007/s10437-022-09479-5,record,,
+found-study-ebla,"US National Archives, ebla — archaeological site or collection record",https://text-message.blogs.archives.gov/2020/07/07/the-royal-archives-of-ebla-reference-and-processing-archivists-4000-years-ago/,record,,
+found-study-khara-khoto,"Shanghai Municipal Government, khara khoto — archaeological site or collection record",https://english.shanghai.gov.cn/en-ArtExhibitions/20260805/59f95db1163a44bca187c461f09d9d7b.html,record,,
+found-study-sippar,"British Museum, sippar — archaeological site or collection record",https://www.britishmuseum.org/collection/object/W_1891-0509-2377,record,,
+found-study-berenike,"Berenike Project, berenike — archaeological site or collection record",https://www.berenike.pcma.uw.edu.pl/,record,,
+ruin-study-carthage,"UNESCO World Heritage Centre, carthage — surviving fabric and site context",https://whc.unesco.org/en/list/37/,record,,
+ruin-study-carthago,"UNESCO World Heritage Centre, carthago — surviving fabric and site context",https://whc.unesco.org/en/list/37/,record,,
+ruin-study-ephesus,"UNESCO World Heritage Centre, ephesus — surviving fabric and site context",https://whc.unesco.org/en/list/1018/,record,,
+ruin-study-palmyra,"UNESCO World Heritage Centre, palmyra — surviving fabric and site context",https://whc.unesco.org/en/list/23/,record,,
+ruin-study-babylon,"UNESCO World Heritage Centre, babylon — surviving fabric and site context",https://whc.unesco.org/en/list/278/,record,,
+ruin-study-persepolis,"UNESCO World Heritage Centre, persepolis — surviving fabric and site context",https://whc.unesco.org/en/list/114/,record,,
+ruin-study-susa,"UNESCO World Heritage Centre, susa — surviving fabric and site context",https://whc.unesco.org/en/list/1455/,record,,
+ruin-study-ctesiphon,"Encyclopaedia Iranica, ctesiphon — surviving fabric and site context",https://www.iranicaonline.org/articles/ctesiphon/,record,,
+ruin-study-seleucia,"University of Turin, seleucia — surviving fabric and site context",https://iris.unito.it/retrieve/9c0e7c3f-262b-4d1f-9c37-127eb617bb26/Foietta-12icaane.pdf,record,,
+ruin-study-rayy,"Encyclopaedia Iranica, rayy — surviving fabric and site context",https://www.iranicaonline.org/articles/ray-i-archeo/,record,,
+ruin-study-merv,"UNESCO World Heritage Centre, merv — surviving fabric and site context",https://whc.unesco.org/en/list/886/,record,,
+ruin-study-siraf,"Encyclopaedia Iranica, siraf — surviving fabric and site context",https://www.iranicaonline.org/articles/great-britain/great-britain-xii-2/,record,,
+ruin-study-fustat,"Egyptian Ministry of Tourism and Antiquities, fustat — surviving fabric and site context",https://egymonuments.gov.eg/archaeological-sites/al-fustat-old-cairo/,record,,
+ruin-study-memphis,"Egyptian Ministry of Tourism and Antiquities, memphis — surviving fabric and site context",https://egymonuments.gov.eg/world-heritage/memphis-and-its-necropolis/,record,,
+ruin-study-thebes,"UNESCO World Heritage Centre, thebes — surviving fabric and site context",https://whc.unesco.org/en/list/87/,record,,
+ruin-study-sijilmasa,"French Ministry of Culture, sijilmasa — surviving fabric and site context",https://archeologie.culture.gouv.fr/fr/sijilmasa,record,,
+ruin-study-cyrene,"UNESCO World Heritage Centre, cyrene — surviving fabric and site context",https://whc.unesco.org/en/list/190/,record,,
+ruin-study-great-zimbabwe,"UNESCO World Heritage Centre, great-zimbabwe — surviving fabric and site context",https://whc.unesco.org/en/list/364/,record,,
+ruin-study-kilwa,"UNESCO World Heritage Centre, kilwa — surviving fabric and site context",https://whc.unesco.org/en/list/144/,record,,
+ruin-study-goa,"UNESCO World Heritage Centre, goa — surviving fabric and site context",https://whc.unesco.org/en/list/234/,record,,
+ruin-study-vijayanagara,"UNESCO World Heritage Centre, vijayanagara — surviving fabric and site context",https://whc.unesco.org/en/list/241/,record,,
+ruin-study-anuradhapura,"UNESCO World Heritage Centre, anuradhapura — surviving fabric and site context",https://whc.unesco.org/en/list/200/,record,,
+ruin-study-gaur,"MIT Aga Khan Visual Archive, gaur — surviving fabric and site context",https://dome.mit.edu/entities/picture/18b2fb09-1d20-434c-adfa-061f9fc4b15c,record,,
+ruin-study-xianyang,"China Culture, xianyang — surviving fabric and site context",https://en.chinaculture.org/library/2008-02/15/content_33579.htm,record,,
+ruin-study-gaochang,"CNR and Chinese Academy of Cultural Heritage, gaochang — surviving fabric and site context",https://www.ispc.cnr.it/wp-content/uploads/2021/10/Libro_CNR-CACH_Vol_4_2021_s.pdf,record,,
+ruin-study-shangdu,"UNESCO World Heritage Centre, shangdu — surviving fabric and site context",https://whc.unesco.org/en/list/1389/,record,,
+ruin-study-angkor,"UNESCO World Heritage Centre, angkor — surviving fabric and site context",https://whc.unesco.org/en/list/668/,record,,
+ruin-study-ayutthaya,"UNESCO World Heritage Centre, ayutthaya — surviving fabric and site context",https://whc.unesco.org/en/list/576/,record,,
+ruin-study-monte-alban,"UNESCO World Heritage Centre, monte-alban — surviving fabric and site context",https://whc.unesco.org/en/list/415/,record,,
+ruin-study-teotihuacan,"UNESCO World Heritage Centre, teotihuacan — surviving fabric and site context",https://whc.unesco.org/en/list/414/,record,,
+ruin-study-chichen-itza,"INAH, chichen-itza — surviving fabric and site context",https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza,record,,
+ruin-study-tula,"INAH, tula — surviving fabric and site context",https://www.inah.gob.mx/zonas/zona-arqueologica-y-museo-de-sitio-de-tula,record,,
+ruin-study-cahokia,"UNESCO World Heritage Centre, cahokia — surviving fabric and site context",https://whc.unesco.org/en/list/198/,record,,
+ruin-study-chan-chan,"UNESCO World Heritage Centre, chan-chan — surviving fabric and site context",https://whc.unesco.org/en/list/366/,record,,
+ruin-study-tiwanaku,"UNESCO World Heritage Centre, tiwanaku — surviving fabric and site context",https://whc.unesco.org/en/list/567/,record,,
+ruin-study-huari,"Peruvian Ministry of Foreign Trade and Tourism, huari — surviving fabric and site context",https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=1125,record,,
+ruin-study-nan-madol,"UNESCO World Heritage Centre, nan-madol — surviving fabric and site context",https://whc.unesco.org/en/list/1503/,record,,
+ruin-study-sardis,"Archaeological Exploration of Sardis, sardis — surviving fabric and site context",https://sardisexpedition.org/en/essays/about-artemis-temple,record,,
+ruin-study-pergamon,"UNESCO World Heritage Centre, pergamon — surviving fabric and site context",https://whc.unesco.org/en/list/1457/,record,,
+ruin-study-aquileia,"UNESCO World Heritage Centre, aquileia — surviving fabric and site context",https://whc.unesco.org/en/list/825/,record,,
+ruin-study-oyo,"UNESCO World Heritage Centre, oyo — surviving fabric and site context",https://whc.unesco.org/en/tentativelists/489/,record,,
+ruin-study-sukhothai,"UNESCO World Heritage Centre, sukhothai — surviving fabric and site context",https://whc.unesco.org/en/list/574/,record,,
+ruin-study-haojing,"Hebei Provincial Institute of Cultural Relics and Archaeology, haojing — surviving fabric and site context",https://www.hbswwkg.com/2021-11/18/content_8672065.html,record,,
+ruin-study-assur,"UNESCO World Heritage Centre, assur — surviving fabric and site context",https://whc.unesco.org/en/list/1130/,record,,
+vansina-paths,"Jan Vansina, Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa (1990)",,study,1990,
+thornton-wca,"John K. Thornton, A History of West Central Africa to 1850 (2020)",,study,2020,
+hilton-kongo,"Anne Hilton, The Kingdom of Kongo (1985)",,study,1985,
+brasio-mma,"António Brásio (ed.), Monumenta Missionaria Africana, vol. 1 (1952): the letters of Afonso I",,study,1952,
+pigafetta-lopes,"Filippo Pigafetta, Relatione del reame di Congo, from the account of Duarte Lopes (1591)",,work,1591,iberia
+thornton-kimpa,"John K. Thornton, The Kongolese Saint Anthony: Dona Beatriz Kimpa Vita and the Antonian Movement (1998)",,study,1998,
+heywood-thornton,"Linda M. Heywood and John K. Thornton, Central Africans, Atlantic Creoles, and the Foundation of the Americas, 1585–1660 (2007)",,study,2007,
+nevunda-bust,"Basilica of Santa Maria Maggiore, Rome: funerary bust of Antonio Manuel ne Vunda (1608)",https://en.wikipedia.org/wiki/Emanuele_Ne_Vunda,work,1608,kongo
+beckx-castro,"Jaspar Beckx, Portrait of Dom Miguel de Castro, Emissary of Kongo (1643), Statens Museum for Kunst","https://en.wikipedia.org/wiki/Portrait_of_Dom_Miguel_de_Castro,_Emissary_of_Congo",work,1643,kongo
+gibson-poverty,"Jon L. Gibson, The Ancient Mounds of Poverty Point: Place of Rings (2001)",,study,2001,
+carr-hopewell,"Christopher Carr and D. Troy Case (eds.), Gathering Hopewell: Society, Ritual, and Ritual Interaction (2005)",,study,2005,
+pauketat-cahokia,"Timothy R. Pauketat, Cahokia: Ancient America's Great City on the Mississippi (2009)",,study,2009,
+brown-spiro,"James A. Brown, The Spiro Ceremonial Center (1996)",,study,1996,
+knight-moundville,"Vernon James Knight Jr. and Vincas P. Steponaitis (eds.), Archaeology of the Moundville Chiefdom (1998)",,study,1998,
+hudson-desoto,"Charles Hudson, Knights of Spain, Warriors of the Sun: Hernando de Soto and the South's Ancient Chiefdoms (1997)",,study,1997,
+ethridge-creek,"Robbie Ethridge, Creek Country: The Creek Indians and Their World (2003)",,study,2003,
+gallay-slave,"Alan Gallay, The Indian Slave Trade: The Rise of the English Empire in the American South, 1670–1717 (2002)",,study,2002,
+sweet-georgia,"Julie Anne Sweet, Negotiating for Georgia: British-Creek Relations in the Trustee Era, 1733–1752 (2005)",,study,2005,
+green-removal,"Michael D. Green, The Politics of Indian Removal: Creek Government and Society in Crisis (1982)",,record,1982,
+snow-iroquois,"Dean R. Snow, The Iroquois (1994)",,study,1994,
+mann-fields,"Barbara A. Mann and Jerry L. Fields, 'A Sign in the Sky: Dating the League of the Haudenosaunee', American Indian Culture and Research Journal 21 (1997)",https://escholarship.org/uc/item/27g1b5px,study,1997,
+richter-ordeal,"Daniel K. Richter, The Ordeal of the Longhouse: The Peoples of the Iroquois League in the Era of European Colonization (1992)",,study,1992,
+havard-montreal,"Gilles Havard, The Great Peace of Montreal of 1701 (2001)",,study,2001,
+hinderaker-kings,"Eric Hinderaker, 'The ""Four Indian Kings"" and the Imaginative Construction of the First British Empire', William and Mary Quarterly 53 (1996)",,study,1996,
+kelsay-brant,"Isabel Thompson Kelsay, Joseph Brant, 1743–1807: Man of Two Worlds (1984)",,study,1984,
+peacock-seljuk,"A. C. S. Peacock, The Great Seljuk Empire (2015)",,study,2015,
+kafadar,"Cemal Kafadar, Between Two Worlds: The Construction of the Ottoman State (1995)",,study,1995,
+inalcik-classical,"Halil İnalcık, The Ottoman Empire: The Classical Age, 1300–1600 (1973)",,study,1973,
+mcintosh-piri,"Gregory C. McIntosh, The Piri Reis Map of 1513 (2000)",,study,2000,
+casale-ottoman,"Giancarlo Casale, The Ottoman Age of Exploration (2010)",,study,2010,
+goodrich-west-indies,"Thomas D. Goodrich, The Ottoman Turks and the New World: A Study of Tarih-i Hind-i Garbi and Sixteenth-Century Ottoman Americana (1990)",,study,1990,
+hagen-katib,"Gottfried Hagen, Ein osmanischer Geograph bei der Arbeit: Entstehung und Gedankenwelt von Katib Čelebis Ğihannüma (2003)",,study,2003,
+gocek-paris,"Fatma Müge Göçek, East Encounters West: France and the Ottoman Empire in the Eighteenth Century (1987)",,study,1987,
+esenbel-ertugrul,"Selçuk Esenbel, Japan, Turkey and the World of Islam (2011)",,study,2011,
+macedo-nevunda,"Rivair Macedo (ed.), letters of Antonio Manuel ne Vunda, Kongo ambassador in Rome (2022)",https://www.ufrgs.br/ifch/index.php/en/lancado-em-luanda-livro-organizado-pelo-professor-rivair-macedo-reune-correspondencia-inedita-do-embaixador-do-reino-do-kongo-em-roma,study,2022,
+bond-four-kings,"Richmond P. Bond, Queen Anne's American Kings (1952)",,study,1952,
+ghs-tomochichi,"Georgia Historical Society, Tomochichi: Travels to Great Britain",https://www.georgiahistory.com/resource/tomochichi/travels-to-great-britain/,record,,
+seydi-mirat,"Seydi Ali Reis, Mir'at ül-Memalik (1557), trans. A. Vambéry, The Travels and Adventures of the Turkish Admiral Sidi Ali Reis (1899)",https://sourcebooks.web.fordham.edu/source/16CSidi1.asp,work,1557,turks
+mehmed-sefaretname,"Yirmisekiz Mehmed Çelebi, Sefâretnâme (1721), trans. J.-C. Galland, Le paradis des infidèles (1981)",,work,1721,turks
+stephens-yucatan,"John Lloyd Stephens, Incidents of Travel in Yucatan (1843)",,work,1843,
+stephens-central-america,"John Lloyd Stephens, Incidents of Travel in Central America, Chiapas, and Yucatan (1841)",,work,1841,
+maudslay-yaxchilan,"Alfred P. Maudslay, Biologia Centrali-Americana: Archaeology (1889–1902)",,study,1889,
+maler-naranjo,"Teobert Maler, Explorations in the Department of Peten, Guatemala (1908)",,study,1908,
+ruiz-tajin,"José Antonio Ruiz, report of El Tajín in the Gaceta de México (1785)",,work,1785,iberia
+dipeso-paquime,"Charles C. Di Peso, Casas Grandes: A Fallen Trading Center of the Gran Chichimeca (1974)",,study,1974,
+marcus-flannery,"Joyce Marcus and Kent V. Flannery, Zapotec Civilization (1996)",,study,1996,
+soto-teyuna,"Álvaro Soto Holguín, La Ciudad Perdida de los Tayrona (1988)",,study,1988,
+ciudad-real-1588,"Antonio de Ciudad Real, Tratado curioso y docto de las grandezas de la Nueva España (1588)",,work,1588,iberia
+stephens-chaco,"James H. Simpson, Journal of a Military Reconnaissance from Santa Fe to the Navajo Country (1850)",,work,1850,
+hernandez-comentarios,"Pero Hernández, Comentarios de Álvar Núñez Cabeza de Vaca (1555): the voyage up the Paraguay to the Xarayes, 1543",,work,1555,iberia
+lorandi-calchaqui,"Ana María Lorandi and Roxana Boixadós, 'Etnohistoria de los Valles Calchaquíes en los siglos XVI y XVII', Runa 17–18 (1987–88)",,study,1987,
+smithsonian-vinicunca,"Smithsonian Magazine, 'Peru's Rainbow Mountain Could Be in Danger Thanks to Its Recent Popularity' (2018)",https://www.smithsonianmag.com/smart-news/perus-rainbow-mountain-could-be-danger-thanks-recent-popularity-180968962/,record,2018,
+landmark-study-mayapan,"INAH, mayapan — site description",https://www.inah.gob.mx/zonas/zona-arqueologica-de-mayapan,record,,
+landmark-study-chaco,"US National Park Service, chaco — site description",https://www.nps.gov/chcu/planyourvisit/placestogo.htm,record,,
+landmark-study-uxmal,"INAH, uxmal — site description",https://lugares.inah.gob.mx/es/node/4482,record,,
+landmark-study-tulum,"INAH, tulum — site description",https://www.inah.gob.mx/zonas/99-zona-arqueologica-de-tulum,record,,
+landmark-study-mitla,"INAH, mitla — site description",https://lugares.inah.gob.mx/es/node/4350,record,,
+landmark-study-paquime,"UNESCO World Heritage Centre, paquime — site description",https://whc.unesco.org/en/list/560/,record,,
+landmark-study-yaxchilan,"INAH, yaxchilan — site description",https://lugares.inah.gob.mx/es/node/5662,record,,
+landmark-study-quirigua,"UNESCO World Heritage Centre, quirigua — site description",https://whc.unesco.org/en/list/149/,record,,
+landmark-study-naranjo,"UNESCO World Heritage Centre, naranjo — site description",https://whc.unesco.org/en/tentativelists/6623/,record,,
+landmark-study-edzna,"INAH, edzna — site description",https://lugares.inah.gob.mx/es/node/4339,record,,
+landmark-study-el-tajin,"UNESCO World Heritage Centre, el-tajin — site description",https://whc.unesco.org/en/list/631/,record,,
+landmark-study-ciudad-perdida,"ICANH, ciudad-perdida — site description",https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/como-llegar,record,,
+landmark-study-pantanal,"UNESCO World Heritage Centre, pantanal — site description",https://whc.unesco.org/en/list/999/,record,,
+landmark-study-vinicunca,"Peruvian Ministry of Foreign Trade and Tourism, vinicunca — site description",https://consultasenlinea.mincetur.gob.pe/fichaInventario/index.aspx?cod_Ficha=13101,record,,
+grand-view-chaco,"US National Park Service, chaco — architecture and wider setting",https://home.nps.gov/chcu/learn/historyculture/upload/0028-chaco-center-historic-photograph-collection-2022-4.pdf,record,,
+grand-view-chichen-itza,"INAH, chichen-itza — architecture and wider setting",https://lugares.inah.gob.mx/es/node/4335,record,,
+layard,"Austen Henry Layard, Nineveh and Its Remains (1849)",,work,1849,britain
+rich,"Claudius James Rich, Narrative of a Residence in Koordistan (1836)",,work,1836,britain
+dupaix,"Guillermo Dupaix, Antiquités mexicaines (1834), from his expeditions of 1805–1807",,work,1834,iberia
+wood-palmyra,"Robert Wood, The Ruins of Palmyra (1753)",,work,1753,britain

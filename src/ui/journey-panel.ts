@@ -1,9 +1,9 @@
 import type {AppData} from '../data';
-import {landmarkKnown, nameFor} from '../data';
+import {bookShelf, bookSurname, type Books, landmarkKnown, loadBooks, nameFor} from '../data';
 import type {FogField} from '../fog/field';
 import {isListPanel, type Shelf, type State, type Store} from '../state';
 import {ERAS, formatRange, formatYear, mainScale, PRESENT, START} from '../time';
-import type {City, Journey, VpId} from '../types';
+import type {Book, City, Journey, VpId} from '../types';
 import {t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './icons';
@@ -42,6 +42,13 @@ export class JourneyPanel {
   private haystack = new Map<string, string>();
   private listEl: HTMLElement | null = null;
   private invItems = new Map<string, HTMLElement>();
+  private bookItems = new Map<string, HTMLElement>();
+  private books: Books | null = null;
+  private bookQuery = '';
+  private bookKind: Book['kind'] | null = null;
+  private bookVp: VpId | null = null;
+  private bookEras = new Set<string>();
+  private bookResults: HTMLElement | null = null;
   /** The list on show, so a switch to the panel's other face rebuilds it. */
   private listShelf: Shelf | null = null;
   private livingItems = new Map<string, HTMLElement>();
@@ -67,6 +74,7 @@ export class JourneyPanel {
     private actions: {
       start(id: string): void;
       openInvention(id: string): void;
+      openBook(id: string): void;
       openLiving(id: string): void;
       openCity(id: string): void;
     },
@@ -101,6 +109,8 @@ export class JourneyPanel {
     if (mode === 'list') this.refreshNear(s.year);
     for (const [id, els] of this.landmarkItems) for (const el of els) el.classList.toggle('current', id === s.city);
     for (const [id, el] of this.invItems) el.classList.toggle('current', id === s.invention);
+    const book = s.book ?? (s.invention ? this.data.inventionById.get(s.invention)?.book : undefined);
+    for (const [id, el] of this.bookItems) el.classList.toggle('current', id === book);
     for (const [id, el] of this.livingItems) el.classList.toggle('current', id === s.living);
   }
 
@@ -159,16 +169,18 @@ export class JourneyPanel {
       );
     this.listEl = h('div.jp-list-body');
     this.invItems.clear();
+    this.bookItems.clear();
     this.livingItems.clear();
     this.landmarkItems.clear();
     if (shelf === 'journeys') this.listEl.append(...this.journeyList(returning));
     else if (shelf === 'inventions') this.listEl.append(...this.inventionList());
+    else if (shelf === 'books') this.listEl.append(...this.bookList());
     else if (shelf === 'living') this.listEl.append(...this.livingList(this.store.state));
     else this.listEl.append(...this.landmarkList(this.store.state));
     return [
       h(
         'div.jp-head',
-        h('div.jp-tabs', {role: 'tablist'}, ...(this.store.state.panel === 'discoveries' ? [tab('inventions', 'Inventions'), tab('living', 'Species')] : [tab('journeys', 'Journeys'), tab('landmarks', 'Landmarks')])),
+        h('div.jp-tabs', {role: 'tablist'}, ...(this.store.state.panel === 'discoveries' ? [tab('inventions', 'Inventions'), tab('books', 'Books'), tab('living', 'Species')] : [tab('journeys', 'Journeys'), tab('landmarks', 'Landmarks')])),
         h('button.card-close', {type: 'button', 'aria-label': t('Close'), onclick: () => this.store.set({panel: 'none'}), html: icons.close}),
       ),
       this.listEl,
@@ -620,7 +632,8 @@ export class JourneyPanel {
     return [
       h('p.jp-intro', t('Instruments and ideas that let people see, reach or record more of the world. Each marks its place of origin on the map for a century.')),
       ...ERAS.map(era => {
-        const list = this.data.inventions.filter(x => x.mid >= era.from && x.mid < era.to);
+        // The bound books (an atlas, a treatise) are on the Books shelf.
+        const list = this.data.inventions.filter(x => !x.book && x.mid >= era.from && x.mid < era.to);
         if (!list.length) return null;
         return h(
           'section.jp-group',
@@ -643,6 +656,134 @@ export class JourneyPanel {
         );
       }),
     ].filter(Boolean) as Node[];
+  }
+
+  /** The books the atlas stands on: the works of their time by era, then the modern studies by author. The
+   * shelf is fetched the first time it is opened. */
+  private bookList(): Node[] {
+    this.bookResults = h('div.jp-results', h('p.jp-empty', t('Loading…')));
+    const tools = h('div.jp-book-tools');
+    const fill = (books: Books) => {
+      this.books = books;
+      const all = books.list;
+      const vps = new Set(all.map(b => b.vp).filter(Boolean) as VpId[]);
+      const vpItems = (ids: VpId[]) =>
+        ids
+          .filter(v => vps.has(v))
+          .map(v => ({id: v as string | null, label: tx.viewpoint(v, 'name', this.data.vp[v].name), n: all.filter(b => b.vp === v).length, color: this.data.vp[v].color}));
+      const vpDrop = this.dropdown(
+        t('Whose'),
+        [{title: null, items: [{id: null, label: t('All'), n: all.length}]}, ...GROUPS.map(([title, ids]) => ({title: t(title), items: vpItems(ids)})).filter(g => g.items.length)],
+        () => this.bookVp,
+        id => (this.bookVp = id as VpId | null),
+        () => this.renderBooks(),
+      );
+      const kindDrop = this.dropdown(
+        t('Kind'),
+        [{title: null, items: [
+          {id: null, label: t('All'), n: all.length},
+          {id: 'work', label: t('Works of their time'), n: all.filter(b => b.kind === 'work').length},
+          {id: 'study', label: t('Modern studies'), n: all.filter(b => b.kind === 'study').length},
+        ]}],
+        () => this.bookKind,
+        id => (this.bookKind = id as Book['kind'] | null),
+        () => this.renderBooks(),
+      );
+      const search = h('input.jp-search', {
+        type: 'search',
+        placeholder: t('Find a book or an author…'),
+        'aria-label': t('Find a book'),
+        value: this.bookQuery,
+        autocomplete: 'off',
+        spellcheck: 'false',
+      });
+      search.addEventListener('input', () => {
+        this.bookQuery = search.value;
+        this.renderBooks();
+      });
+      search.addEventListener('keydown', e => e.stopPropagation());
+      tools.replaceChildren(h('div.jp-tools', h('div.jp-search-row', h('span.jp-search-icon', {html: icons.search}), search)), h('div.jp-filter-row', kindDrop, vpDrop));
+      this.renderBooks();
+    };
+    if (this.books) queueMicrotask(() => fill(this.books!));
+    else void loadBooks(this.data).then(b => (b ? fill(b) : this.bookResults?.replaceChildren(h('p.jp-empty', t('The books could not be loaded.')))));
+    return [
+      h('p.jp-intro', t('The books this atlas is drawn from: works written in their own time, by when they were written, and the modern studies behind them. Open one to see what it brought.')),
+      tools,
+      this.bookResults,
+    ];
+  }
+
+  private renderBooks() {
+    const el = this.bookResults;
+    if (!el || !this.books) return;
+    const fold = (x: string) => x.normalize('NFD').replace(/[\u0300-\u036f'ʻʼ’]/g, '').toLowerCase();
+    const q = fold(this.bookQuery.trim());
+    const shelf = bookShelf(this.books).filter(b =>
+      (!this.bookKind || b.kind === this.bookKind) && (!this.bookVp || b.vp === this.bookVp) &&
+      (!q || fold([b.author, b.title, b.citation, tx.book(b.id, 'author', ''), tx.book(b.id, 'title', '')].join(' ')).includes(q)));
+    this.bookItems.clear();
+    if (!shelf.length) {
+      el.replaceChildren(h('p.jp-empty', t('No book matches.')));
+      return;
+    }
+    const openAll = !!q || shelf.length <= 12;
+    const section = (id: string, title: string, list: Book[]) => {
+      const open = openAll || this.bookEras.has(id);
+      const body = h('ul.jp-list', {hidden: !open}, open ? list.map(b => this.bookRow(b)) : []);
+      const head = h(
+        'button.jp-era',
+        {
+          type: 'button',
+          'aria-expanded': String(open),
+          onclick: () => {
+            const now = body.hidden;
+            if (now && !body.childElementCount) body.append(...list.map(b => this.bookRow(b)));
+            body.hidden = !now;
+            head.setAttribute('aria-expanded', String(now));
+            if (now) this.bookEras.add(id);
+            else this.bookEras.delete(id);
+          },
+        },
+        h('span.jp-era-title', title),
+        h('span.jp-era-n', String(list.length)),
+        h('span.jp-era-caret', {html: icons.next}),
+      );
+      return h('section.jp-group', {'data-era': id}, head, body);
+    };
+    const works = shelf.filter(b => b.kind === 'work');
+    const studies = shelf.filter(b => b.kind === 'study');
+    const out: Node[] = [];
+    if (works.length) out.push(h('h3.card-h.jp-shelf-h', t('Works of their time')));
+    for (const era of ERAS) {
+      const list = works.filter(b => (b.year ?? 0) >= era.from && (b.year ?? 0) < era.to);
+      if (list.length) out.push(section(era.id, t(era.name), list));
+    }
+    if (studies.length) out.push(h('h3.card-h.jp-shelf-h', t('Modern studies')));
+    // By author, in runs of the alphabet.
+    const letter = (b: Book) => (bookSurname(b)[0] ?? '#').toUpperCase();
+    for (const [a, z] of [['A', 'C'], ['D', 'G'], ['H', 'K'], ['L', 'M'], ['N', 'R'], ['S', 'Z']]) {
+      const list = studies.filter(b => letter(b) >= a && letter(b) <= z);
+      if (list.length) out.push(section(`study-${a}`, `${a}–${z}`, list));
+    }
+    el.replaceChildren(...out);
+  }
+
+  private bookRow(b: Book): HTMLElement {
+    const vp = b.vp ? this.data.vp[b.vp] : null;
+    const inv = b.invention ? this.data.inventionById.get(b.invention) : undefined;
+    const author = tx.book(b.id, 'author', b.author);
+    const when = b.kind === 'work' ? (inv ? formatRange(inv.year) : b.year !== undefined ? formatYear(b.year) : '') : b.year !== undefined ? String(b.year) : '';
+    const btn = h(
+      'button.jp-item.book-item',
+      {type: 'button', class: `book-${b.kind}`, style: vp ? `--chip:${vp.color}` : '', onclick: () => this.actions.openBook(b.id)},
+      h('span.jp-item-icon', {html: b.kind === 'work' ? icons.book : icons.study}),
+      h('span.jp-item-text', h('span.jp-item-name', tx.book(b.id, 'title', b.title)), h('span.jp-item-meta', [when, author].filter(Boolean).join(' · '))),
+    );
+    const s = this.store.state;
+    btn.classList.toggle('current', b.id === (s.book ?? (s.invention ? this.data.inventionById.get(s.invention)?.book : undefined)));
+    this.bookItems.set(b.id, btn);
+    return h('li', btn);
   }
 
   /** Plants and animals, grouped into eras by when this viewpoint came to know each: maize for China in the
@@ -908,3 +1049,4 @@ interface LandmarkEntry {
   /** Every name it went by, for search. */
   hay: string;
 }
+

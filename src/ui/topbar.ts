@@ -151,7 +151,7 @@ export class TopBar {
     );
     this.discoveriesBtn = h(
       'button.tool.tool-wide',
-      {type: 'button', title: t('Inventions, plants and animals'), onclick: () => this.togglePanel('discoveries')},
+      {type: 'button', title: t('Inventions, books, plants and animals'), onclick: () => this.togglePanel('discoveries')},
       h('span.tool-icon', {html: livingIcons.plant}),
       h('span.tool-label', t('Discoveries')),
     );

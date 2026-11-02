@@ -278,9 +278,44 @@ export interface GridDoc {
 
 export type Beyond = Record<string, Record<VpId, [number, number, number][]>>;
 
+export type SourceKind = 'work' | 'study' | 'record';
+
 export interface Source {
   citation: string;
+  /** A work written in its own time (Herodotus, Ma Huan), a modern study, or a site or heritage record. */
+  kind: SourceKind;
   url?: string;
+  /** When a work was written or a study published. */
+  year?: number;
+  /** Whose work it is. */
+  vp?: VpId;
+}
+
+/** A book on the Books shelf (public/data/books.json): a work of its time or a modern study, and what it
+ * brought to the atlas. */
+export interface Book {
+  id: string;
+  kind: 'work' | 'study';
+  author: string;
+  title: string;
+  citation: string;
+  year?: number;
+  vp?: VpId;
+  url?: string;
+  /** A bound book that is also an invention (Ortelius's atlas): its card is that invention's. */
+  invention?: string;
+  /** Other sources that are parts or editions of it. */
+  also?: string[];
+  /** The regions it made known: [viewpoint, region, year, level], the furthest it took each. */
+  regions?: [VpId | '*', string, number, number][];
+  journeys?: string[];
+  places?: string[];
+  inventions?: string[];
+  living?: string[];
+  /** Timeline moments it is the source for: [viewpoint, year, label]. */
+  moments?: [VpId, number, string][];
+  /** Some imagined sketches are drawn after it. */
+  sketches?: boolean;
 }
 
 export type InventionCategory = 'navigation' | 'measurement' | 'mapping' | 'communication' | 'transport' | 'imaging';
@@ -297,6 +332,8 @@ export interface Invention {
   place: string;
   /** The city it was made in, when there is one (the printing press in Mainz). */
   city?: string;
+  /** A bound book (an atlas, a treatise): shelved with the books as this work. */
+  book?: string;
   lat: number;
   lon: number;
   /** The viewpoint it belongs to, when one fits; otherwise `culture` names who made it. */
