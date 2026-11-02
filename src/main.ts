@@ -1102,7 +1102,11 @@ class App {
       return;
     }
     this.tip.replaceChildren(text);
-    this.tip.style.transform = `translate(${e.point.x + 14}px, ${e.point.y + 14}px)`;
+    // Below and right of the pointer, or on its other side where that would run off the screen.
+    const {offsetWidth: w, offsetHeight: ht} = this.tip;
+    const x = e.point.x + 14 + w > innerWidth - 8 ? e.point.x - 14 - w : e.point.x + 14;
+    const y = e.point.y + 14 + ht > innerHeight - 8 ? e.point.y - 14 - ht : e.point.y + 14;
+    this.tip.style.transform = `translate(${Math.max(8, x)}px, ${Math.max(8, y)}px)`;
     this.tip.classList.add('show');
   }
 

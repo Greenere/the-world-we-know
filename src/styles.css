@@ -2772,7 +2772,8 @@ kbd {
   pointer-events: none !important;
   opacity: 0;
   transition: opacity 0.12s;
-  white-space: nowrap;
+  /* As wide as its words, up to the max-width, past which a long name wraps instead of spilling out. */
+  width: max-content;
 }
 
 .hover-tip.show {
