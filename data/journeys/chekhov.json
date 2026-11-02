@@ -39,6 +39,6 @@
     {"year": 1890, "place": "Moscow", "lat": 55.76, "lon": 37.62, "note": "Back after eight months.", "by": "land", "city": "moscow"}
   ],
   "informs": [
-    {"region": "siberia-east", "level": 4, "homeKnows": 1895, "confidence": "high", "note": "Chekhov's Sakhalin Island"}
+    {"region": "sakhalin", "level": 4, "homeKnows": 1895, "confidence": "high", "note": "Chekhov's Sakhalin Island"}
   ]
 }

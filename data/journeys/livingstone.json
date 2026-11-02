@@ -19,6 +19,6 @@
   ],
   "informs": [
     {"region": "zambezi", "level": 3, "homeKnows": 1857, "confidence": "high", "note": "Missionary Travels"},
-    {"region": "congo", "level": 2, "homeKnows": 1857, "confidence": "medium"}
+    {"region": "congo-west", "level": 2, "homeKnows": 1857, "confidence": "medium"}
   ]
 }

@@ -46,7 +46,7 @@
   "informs": [
     {"region": "central-sahel", "level": 4, "homeKnows": 1857, "confidence": "high", "note": "Barth's Travels and Discoveries"},
     {"region": "bilad-al-sudan", "level": 4, "homeKnows": 1857, "confidence": "high"},
-    {"region": "sahara", "level": 4, "homeKnows": 1857, "confidence": "high"},
+    {"region": "sahara-east", "level": 4, "homeKnows": 1857, "confidence": "high"},
     {"viewpoint": "germany", "region": "central-sahel", "level": 4, "homeKnows": 1857, "confidence": "high", "note": "Barth's Travels and Discoveries"}
   ]
 }

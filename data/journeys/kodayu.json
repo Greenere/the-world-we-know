@@ -19,7 +19,8 @@
     {"year": 1792, "place": "Nemuro, Ezo", "lat": 43.33, "lon": 145.58, "note": "Brought home by Adam Laxman's embassy.", "by": "sea", "date": "October 1792"}
   ],
   "informs": [
-    {"region": "siberia-east", "level": 3, "homeKnows": 1794, "confidence": "high"},
+    {"region": "siberia-lena", "level": 3, "homeKnows": 1794, "confidence": "high"},
+    {"region": "siberia-baikal", "level": 3, "homeKnows": 1794, "confidence": "high"},
     {"region": "kamchatka", "level": 3, "homeKnows": 1794, "confidence": "high"},
     {"region": "rus", "level": 3, "homeKnows": 1794, "confidence": "high"}
   ]

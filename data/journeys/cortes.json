@@ -25,6 +25,8 @@
   "informs": [
     {"region": "maya", "level": 3, "homeKnows": 1519, "confidence": "high"},
     {"region": "gulf-of-mexico", "level": 3, "homeKnows": 1519, "confidence": "high"},
-    {"region": "mexico", "level": 4, "homeKnows": 1521, "confidence": "high", "note": "Cortés's letters to Charles V, printed from 1522"}
+    {"region": "mexico-centre", "level": 4, "homeKnows": 1521, "confidence": "high", "note": "Cortés's letters to Charles V, printed from 1522"},
+    {"region": "mexico-south", "level": 3, "homeKnows": 1521, "confidence": "high", "note": "Cortés's letters to Charles V, printed from 1522"},
+    {"region": "mexico-west", "level": 3, "homeKnows": 1521, "confidence": "high", "note": "Cortés's letters to Charles V, printed from 1522"}
   ]
 }

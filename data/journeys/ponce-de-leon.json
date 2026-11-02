@@ -17,7 +17,7 @@
     {"year": 1513, "place": "San Germán, Puerto Rico", "lat": 18.08, "lon": -67.04, "note": "Home. In 1521 he returns to settle and is killed by a Calusa arrow.", "date": "October 1513"}
   ],
   "informs": [
-    {"region": "eastern-woodlands", "level": 2, "homeKnows": 1514, "confidence": "high", "note": "Ponce de León in Florida"},
+    {"region": "florida", "level": 2, "homeKnows": 1514, "confidence": "high", "note": "Ponce de León in Florida"},
     {"region": "gulf-of-mexico", "level": 2, "homeKnows": 1514, "confidence": "high"}
   ]
 }

@@ -17,7 +17,8 @@
     {"year": 1789, "place": "Fort Chipewyan", "lat": 58.71, "lon": -111.15, "note": "Back upstream against the current.", "by": "river", "date": "12 September 1789"}
   ],
   "informs": [
-    {"region": "canadian-shield", "level": 4, "homeKnows": 1790, "confidence": "high", "note": "Mackenzie's river"},
+    {"region": "shield-west", "level": 4, "homeKnows": 1790, "confidence": "high", "note": "Mackenzie's river"},
+    {"region": "barren-grounds", "level": 4, "homeKnows": 1790, "confidence": "high", "note": "Mackenzie's river"},
     {"region": "arctic-canada", "level": 3, "homeKnows": 1790, "confidence": "high"}
   ]
 }

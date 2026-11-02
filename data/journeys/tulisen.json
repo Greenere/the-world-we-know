@@ -22,8 +22,9 @@
     {"year": 1715, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Home by the same long road.", "by": "land", "city": "beijing", "date": "April 1715"}
   ],
   "informs": [
-    {"region": "siberia-east", "level": 3, "homeKnows": 1715, "confidence": "high", "note": "Tulišen's Record of Strange Regions"},
-    {"region": "siberia-west", "level": 3, "homeKnows": 1715, "confidence": "high"},
+    {"region": "siberia-baikal", "level": 3, "homeKnows": 1715, "confidence": "high", "note": "Tulišen's Record of Strange Regions"},
+    {"region": "ob-irtysh", "level": 3, "homeKnows": 1715, "confidence": "high"},
+    {"region": "yenisei", "level": 3, "homeKnows": 1715, "confidence": "high"},
     {"region": "lower-volga", "level": 3, "homeKnows": 1715, "confidence": "high"},
     {"region": "rus", "level": 2, "homeKnows": 1715, "confidence": "medium"}
   ]

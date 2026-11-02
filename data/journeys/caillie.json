@@ -21,6 +21,6 @@
   ],
   "informs": [
     {"region": "bilad-al-sudan", "level": 3, "homeKnows": 1828, "confidence": "high", "note": "Caillié returns from Timbuktu"},
-    {"region": "sahara", "level": 3, "homeKnows": 1828, "confidence": "high"}
+    {"region": "sahara-west", "level": 3, "homeKnows": 1828, "confidence": "high"}
   ]
 }

@@ -51,7 +51,7 @@ greece,north-atlantic-east,-500,1,low,hecataeus,The Ocean beyond the Pillars
 greece,egypt,-430,4,high,herodotus,Herodotus travels up the Nile
 europe,egypt,-430,4,high,herodotus,Herodotus travels up the Nile
 greece,upper-nile,-430,2,medium,herodotus,Meroë by report
-greece,sahara,-430,2,medium,herodotus,The Garamantes and the oases
+greece,sahara-east,-430,2,medium,herodotus,The Garamantes and the oases
 greece,pontic-steppe,-430,3,high,herodotus,Scythia described at length
 greece,kazakh-steppe,-430,1,low,herodotus,Issedones and Argippaei
 greece,caspian,-430,2,medium,herodotus,Correctly described as a closed sea
@@ -82,7 +82,7 @@ rome,madeira,-25,1,low,pliny,The Purple Islands may be Madeira
 europe,madeira,-25,1,low,pliny,The Purple Islands may be Madeira
 greece,arabia-hejaz,-25,2,medium,strabo,
 rome,arabia-hejaz,-25,2,medium,strabo,
-rome,sahara,-19,3,medium,pliny,Balbus campaigns against the Garamantes
+rome,sahara-east,-19,3,medium,pliny,Balbus campaigns against the Garamantes
 greece,alps-danube,-15,3,high,strabo,Raetia and Noricum
 rome,alps-danube,-15,3,high,strabo,Raetia and Noricum
 rome,germania,-12,2,medium,tacitus,Drusus reaches the Elbe
@@ -188,9 +188,12 @@ rome,great-lakes,150,1,low,ptolemy,The Mountains of the Moon and the Nile lakes
 europe,great-lakes,150,1,low,ptolemy,The Mountains of the Moon and the Nile lakes
 greece,ethiopia,150,3,medium,ptolemy,
 rome,ethiopia,150,3,medium,ptolemy,
-greece,sahara,150,3,medium,ptolemy,
-rome,sahara,150,3,medium,ptolemy,
-europe,sahara,150,3,medium,ptolemy,
+greece,sahara-east,150,3,medium,ptolemy,
+greece,sahara,150,2,medium,ptolemy,
+rome,sahara-east,150,3,medium,ptolemy,
+rome,sahara,150,2,medium,ptolemy,
+europe,sahara-east,150,3,medium,ptolemy,
+europe,sahara,150,2,medium,ptolemy,
 greece,bilad-al-sudan,150,1,low,ptolemy,The Nigeir
 rome,bilad-al-sudan,150,1,low,ptolemy,The Nigeir
 europe,bilad-al-sudan,150,1,low,ptolemy,The Nigeir
@@ -238,8 +241,11 @@ greece,bilad-al-sudan,450..650,0,low,hoc,
 rome,bilad-al-sudan,450..650,0,low,hoc,
 europe,bilad-al-sudan,450..650,0,low,hoc,
 greece,sahara,450..650,2,medium,hoc,
+greece,sahara-east,450..650,2,medium,hoc,
 rome,sahara,450..650,2,medium,hoc,
+rome,sahara-east,450..650,2,medium,hoc,
 europe,sahara,450..650,2,medium,hoc,
+europe,sahara-east,450..650,2,medium,hoc,
 greece,scandinavia,450..650,1,low,hoc,
 rome,scandinavia,450..650,1,low,hoc,
 europe,scandinavia,450..650,1,low,hoc,
@@ -364,8 +370,10 @@ rome,china-north,1370..1400,2,low,hoc,The Mongol roads close; Cathay becomes a l
 europe,china-north,1370..1400,2,low,hoc,The Mongol roads close; Cathay becomes a legend again
 rome,china-south,1370..1400,2,low,hoc,
 europe,china-south,1370..1400,2,low,hoc,
-iberia,sahara,1375,3,medium,catalan-atlas,
-europe,sahara,1375,3,medium,catalan-atlas,
+iberia,sahara-west,1375,3,medium,catalan-atlas,
+iberia,sahara,1375,2,medium,catalan-atlas,
+europe,sahara-west,1375,3,medium,catalan-atlas,
+europe,sahara,1375,2,medium,catalan-atlas,
 iberia,atlantic-sahara,1375,2,medium,catalan-atlas,
 greece,great-lakes,1410,1,low,ptolemy,Ptolemy's Geography returns to the Latin West
 rome,great-lakes,1410,1,low,ptolemy,Ptolemy's Geography returns to the Latin West
@@ -402,7 +410,7 @@ iberia,bilad-al-sudan,1460,2,medium,hoc,
 europe,bilad-al-sudan,1460,2,medium,hoc,
 iberia,guinea-coast,1471,3,high,hoc,The Gold Coast
 iberia,angola,1482..1486,3,high,hoc,Diogo Cão at the mouth of the Congo
-iberia,congo,1485,1,medium,hoc,
+iberia,congo-west,1485,1,medium,hoc,
 iberia,cape,1488,3,high,hoc,Bartolomeu Dias rounds the Cape
 iberia,south-atlantic,1488,2,high,hoc,
 iberia,africa,1500,1,high,hoc,The outline of Africa is known after Dias and da Gama
@@ -418,7 +426,9 @@ germany,pampas,1502,1,low,waldseemuller,
 germany,south-america,1507,2,high,waldseemuller,A new continent named America
 germany,north-america,1507,1,medium,waldseemuller,
 iberia,caribbean,1510,4,high,hoc,
-france,eastern-woodlands,1524,2,high,hoc,Verrazzano
+france,woodlands-southeast,1524,2,high,hoc,Verrazzano
+france,chesapeake,1524,2,high,hoc,Verrazzano
+france,woodlands-northeast,1524,2,high,hoc,Verrazzano
 iberia,peru,1532..1535,4,high,hoc,
 france,canada-east,1534..1535,3,high,hoc,Cartier on the St Lawrence
 iberia,atacama-chile,1536..1541,3,high,hoc,
@@ -483,16 +493,18 @@ europe,china-north,1600,3,high,hoc,Jesuits in Beijing
 iberia,new-guinea,1526..1545,2,high,hoc,
 iberia,philippines,1565,4,high,hoc,Legazpi
 iberia,micronesia,1565,3,high,hoc,
-iberia,pacific-north,1565,3,high,hoc,Urdaneta finds the way back east
+iberia,pacific-central,1565,3,high,hoc,Urdaneta finds the way back east
 iberia,near-oceania,1568,2,high,hoc,Mendaña in the Solomons
 iberia,marquesas,1595,2,high,hoc,
 iberia,pacific-south,1600,3,medium,hoc,
-iberia,pacific-north,1600,3,medium,hoc,
+iberia,pacific-central,1600,3,medium,hoc,
 iberia,tuamotu,1606,2,medium,hoc,
 iberia,remote-melanesia,1606,2,high,hoc,Quirós at Espiritu Santo
-germany,australia,1606,2,high,tasman,The Duyfken on Cape York
+germany,australia-north,1606,2,high,tasman,The Duyfken on Cape York
+nusantara,australia-north,1720,3,medium,macknight-1976,"Marege', the trepang coast"
 germany,magellan-strait,1616,4,high,hoc,Le Maire and Schouten round Cape Horn
-germany,australia,1616..1644,3,high,tasman,Dutch charts of New Holland
+germany,australia-north,1616..1644,3,high,tasman,Dutch charts of New Holland
+germany,australia-west,1616..1644,3,high,tasman,Dutch charts of New Holland
 germany,tonga,1616..1643,2,high,tasman,
 germany,aotearoa,1642,2,high,tasman,Staten Landt
 germany,tasman-sea,1642,2,high,tasman,
@@ -505,9 +517,10 @@ europe,greenland,1585,2,high,hoc,
 germany,barents-sea,1596,3,high,hoc,
 france,canada-east,1608,4,high,hoc,
 britain,baffin-bay,1616,2,high,hoc,
-russia,siberia-east,1648,2,medium,hoc,Dezhnev rounds the tip of Asia
+russia,chukotka,1648,2,medium,hoc,Dezhnev rounds the tip of Asia
+russia,siberia-baikal,1650,3,medium,lantzeff-pierce,Khabarov on the Amur
 rome,tibet,1661..1716,2,medium,hoc,Grueber and d'Orville; Desideri
-britain,canadian-shield,1670,2,medium,hoc,The Hudson's Bay Company
+britain,shield-east,1670,2,medium,hoc,The Hudson's Bay Company
 france,mississippi,1673..1682,3,high,hoc,Marquette and Jolliet; La Salle
 germany,siberia-east,1687..1701,3,medium,hoc,Witsen and Remezov
 russia,siberia-east,1687..1701,3,medium,hoc,Witsen and Remezov
@@ -518,7 +531,8 @@ norse,greenland,1721,3,high,hoc,Hans Egede
 europe,greenland,1721,3,high,hoc,Hans Egede
 britain,eastern-woodlands,1750,4,high,hoc,
 france,eastern-woodlands,1750,4,high,hoc,
-britain,canadian-shield,1770..1795,3,medium,hoc,Hearne and Mackenzie
+britain,barren-grounds,1770..1795,3,medium,hoc,Hearne and Mackenzie
+britain,shield-west,1770..1795,3,medium,hoc,Hearne and Mackenzie
 britain,arctic-canada,1789,2,medium,hoc,
 britain,arctic-ocean,1827,2,medium,hoc,Parry
 britain,arctic-canada,1850..1859,3,high,hoc,The search for Franklin
@@ -553,6 +567,22 @@ britain,bilad-al-sudan,1796,3,high,hoc,Mungo Park reaches the Niger
 europe,bilad-al-sudan,1796,3,high,hoc,Mungo Park reaches the Niger
 britain,australia-east,1800,5,medium,hoc,
 europe,north-america-west,1842..1846,4,high,hoc,Frémont's surveys of the West
+greece,columbia-plateau,-500,=0,high,lewis-clark-journals,
+greece,columbia-plateau,1806,0,high,lewis-clark-journals,
+rome,columbia-plateau,-500,=0,high,lewis-clark-journals,
+rome,columbia-plateau,1806,0,high,lewis-clark-journals,
+iberia,columbia-plateau,-500,=0,high,lewis-clark-journals,
+iberia,columbia-plateau,1806,0,high,lewis-clark-journals,
+france,columbia-plateau,-500,=0,high,lewis-clark-journals,
+france,columbia-plateau,1806,0,high,lewis-clark-journals,
+britain,columbia-plateau,-500,=0,high,lewis-clark-journals,
+britain,columbia-plateau,1806,0,high,lewis-clark-journals,
+germany,columbia-plateau,-500,=0,high,lewis-clark-journals,
+germany,columbia-plateau,1806,0,high,lewis-clark-journals,
+norse,columbia-plateau,-500,=0,high,lewis-clark-journals,
+norse,columbia-plateau,1806,0,high,lewis-clark-journals,
+europe,columbia-plateau,-500,=0,high,lewis-clark-journals,Unseen until Lewis and Clark cross it
+europe,columbia-plateau,1806,0,high,lewis-clark-journals,
 europe,mississippi,1820,4,high,hoc,
 europe,upper-nile,1821..1840,4,medium,hoc,
 britain,central-sahel,1823,3,high,hoc,Denham and Clapperton reach Lake Chad
@@ -560,9 +590,9 @@ europe,central-sahel,1823,3,high,hoc,Denham and Clapperton reach Lake Chad
 germany,japan,1832,4,high,hoc,Siebold's Nippon
 britain,southern-africa,1836,4,medium,hoc,
 britain,australia,1840..1862,4,high,hoc,"Eyre, Sturt and Stuart"
-germany,sahara,1850..1855,4,high,hoc,Heinrich Barth
-britain,sahara,1850..1855,4,high,hoc,Heinrich Barth
-europe,sahara,1850..1855,4,high,hoc,Heinrich Barth
+germany,sahara-east,1850..1855,4,high,hoc,Heinrich Barth
+britain,sahara-east,1850..1855,4,high,hoc,Heinrich Barth
+europe,sahara-east,1850..1855,4,high,hoc,Heinrich Barth
 britain,aotearoa,1850,5,medium,hoc,
 germany,new-guinea,1850,3,medium,hoc,
 britain,borneo,1850,3,medium,hoc,
@@ -714,7 +744,7 @@ china,persia,1260..1300,4,high,hoc,The Ilkhanate
 china,mesopotamia,1260..1300,3,high,hoc,
 china,anatolia,1270,2,medium,hoc,
 china,tibet,1270,4,high,hoc,
-china,siberia-east,1270,1,low,hoc,
+china,siberia-baikal,1270,1,low,hoc,
 china,japan,1281,4,high,hoc,
 china,burma,1287,3,high,hoc,
 china,java,1293,3,high,hoc,
@@ -777,7 +807,8 @@ china,pacific-south,1602,1,high,ricci-map,
 china,europe,1623,3,high,aleni,Aleni's Record of Places Outside the Imperial Geographer's Charge
 china,north-america,1623,2,high,aleni,
 china,ryukyu-taiwan,1683,4,high,hoc,Taiwan annexed
-china,siberia-east,1689,2,high,hoc,The Treaty of Nerchinsk
+china,siberia-baikal,1689,2,high,hoc,The Treaty of Nerchinsk
+china,sakhalin,1264..1308,2,medium,yuanshi,Yuan campaigns against the Ainu of Sakhalin
 china,china-north,1708..1718,5,high,kangxi-atlas,The Kangxi atlas surveys the empire
 china,china-south,1708..1718,5,high,kangxi-atlas,
 china,lingnan,1708..1718,5,high,kangxi-atlas,
@@ -927,7 +958,7 @@ maghreb,asia,1154,1,medium,al-idrisi,Asia's far north and east by report
 maghreb,africa,1154,1,medium,al-idrisi,Africa south of the Zanj coast by report
 # Mamluk Cairo, the Ottomans and after
 egypt,bilad-al-sudan,1338,4,high,al-umari,Al-Umari's account of Mali
-egypt,sahara,1338,4,high,al-umari,
+egypt,sahara-west,1338,4,high,al-umari,
 islam,caribbean,1513,1,high,piri-reis,From a copy of Columbus's map
 islam,brazil-coast,1513,2,high,piri-reis,
 islam,south-atlantic,1513,2,high,piri-reis,
@@ -1485,8 +1516,9 @@ japan,moluccas,1615,1,low,hoc,
 japan,iberia,1549,2,high,hoc,"Jesuits and Portuguese traders: the Nanban"
 japan,iberia,1590,3,high,hoc,The Tenshō embassy returns from Lisbon and Rome
 japan,italy,1590,2,high,hoc,
-japan,mexico,1610,2,medium,hoc,Tanaka Shōsuke crosses to New Spain
-japan,pacific-north,1610,2,medium,hoc,
+japan,mexico-centre,1610,2,medium,hoc,Tanaka Shōsuke crosses to New Spain
+japan,mexico-south,1610,2,medium,hoc,Tanaka Shōsuke crosses to New Spain
+japan,pacific-central,1610,2,medium,hoc,
 japan,europe,1720..1774,3,medium,sairan-igen,Dutch learning (Rangaku)
 japan,africa,1713,2,medium,sairan-igen,
 japan,south-america,1713,2,medium,sairan-igen,
@@ -1508,7 +1540,7 @@ sahel,guinea-coast,1000,2,medium,levtzion-hopkins,
 sahel,guinea-coast,1400,3,medium,hoc,The Akan gold fields of Bono
 sahel,sahara,-500,2,medium,mcintosh,
 sahel,sahara,800,3,high,levtzion-hopkins,Camel caravans
-sahel,sahara,1100,4,high,al-bakri,
+sahel,sahara-west,1100,4,high,al-bakri,
 sahel,atlantic-sahara,1050,3,medium,al-bakri,The Almoravids march from the desert
 sahel,maghreb,800,2,medium,levtzion-hopkins,Sijilmasa and the caravan road
 sahel,maghreb,1100,3,high,al-bakri,
@@ -1526,8 +1558,9 @@ sahel,europe,1500,2,medium,hoc,
 sahel,ethiopia,1400,1,low,hoc,
 sahel,anatolia,1590,1,low,tarikh-al-sudan,"Rum, the Ottoman sultan"
 # ════ Mexica ════
-mexica,mexico,-500,3,medium,hoc,Cuicuilco and the Valley of Mexico
-mexica,mexico,100,4,medium,hoc,Teotihuacan's reach
+mexica,mexico-centre,-500,3,medium,hoc,Cuicuilco and the Valley of Mexico
+mexica,mexico-centre,100,4,medium,hoc,Teotihuacan's reach
+mexica,mexico-south,100,3,medium,hoc,Teotihuacan's reach
 mexica,maya,-100,1,low,hoc,
 mexica,maya,650..750,2,low,hoc,Teotihuacan's fall cuts the link
 mexica,maya,1000,3,medium,hoc,Toltec styles at Chichén Itzá
@@ -1544,7 +1577,7 @@ mexica,europe,1600,3,medium,chimalpahin,Chimalpahin follows the news of Europe
 mexica,iberia,1600,3,medium,chimalpahin,
 mexica,peru,1533,2,medium,chimalpahin,News of the conquest of Peru
 mexica,philippines,1571,2,medium,chimalpahin,The Manila galleon
-mexica,pacific-north,1565,2,medium,hoc,The galleon road
+mexica,pacific-central,1565,2,medium,hoc,The galleon road
 mexica,china-south,1600,2,medium,chimalpahin,Chinese merchants in Mexico City
 mexica,japan,1610,2,high,chimalpahin,Japanese envoys arrive
 mexica,japan,1614,3,high,chimalpahin,Hasekura's embassy
@@ -1721,7 +1754,8 @@ persia,germania,1873,4,high,nasir-al-din-shah,
 persia,italy,1873,4,high,nasir-al-din-shah,
 persia,alps-danube,1873,4,high,nasir-al-din-shah,
 persia,north-america,1876,2,high,hajj-sayyah,"Hajj Sayyah, the first Iranian to live in America"
-persia,eastern-woodlands,1876,3,high,hajj-sayyah,
+persia,woodlands-northeast,1876,3,high,hajj-sayyah,
+persia,chesapeake,1876,3,high,hajj-sayyah,
 # ════ Egypt after it joins the Islamic world in 641 ════
 egypt,ifriqiya,969,4,high,hoc,The Fatimids come to Egypt from Ifriqiya
 egypt,maghreb,969,4,high,hoc,
@@ -1753,7 +1787,7 @@ egypt,balkans,1412,3,medium,qalqashandi,
 egypt,gaul,1798,3,high,al-jabarti,The French army arrives in Egypt
 egypt,europe,1798,3,high,al-jabarti,
 egypt,upper-nile,1821,4,high,hoc,Muhammad Ali's armies take the Sudan
-egypt,mexico,1867,3,high,hill-hogg,A Sudanese battalion from Egypt fights in Mexico
+egypt,mexico-centre,1867,3,high,hill-hogg,A Sudanese battalion from Egypt fights in Mexico
 egypt,gulf-of-mexico,1867,3,high,hill-hogg,
 egypt,caribbean,1867,2,medium,hill-hogg,
 egypt,great-lakes,1874,3,high,baker-ismailia,Equatoria: the Khedive's province reaches the great lakes
@@ -1784,7 +1818,7 @@ arabia,indian-ocean,1490,2,medium,ibn-majid,
 arabia,iberia,1507,2,high,hoc,The Portuguese seize Muscat
 arabia,east-africa-coast,1698,4,high,sheriff-zanzibar,Oman takes Mombasa and Zanzibar
 arabia,great-lakes,1845,3,high,sheriff-zanzibar,Caravans from Zanzibar reach Lake Tanganyika
-arabia,congo,1870,2,medium,sheriff-zanzibar,Tippu Tip's trading state on the upper Congo
+arabia,congo-east,1870,2,medium,sheriff-zanzibar,Tippu Tip's trading state on the upper Congo
 # ════ The Maghreb and al-Andalus: Carthage, Numidia and Roman Africa until 670, then in the Islamic world ════
 maghreb,ifriqiya,-500,4,high,lancel,Carthage and its hinterland
 maghreb,maghreb,-500,3,medium,lancel,
@@ -1822,14 +1856,14 @@ maghreb,north-atlantic-east,439,1,low,hoc,
 maghreb,iberia,711,4,high,al-baladhuri,Al-Andalus
 maghreb,senegambia,1054,4,high,levtzion-hopkins,The Almoravids rise among the desert Sanhaja
 maghreb,atlantic-sahara,1054,4,high,levtzion-hopkins,
-maghreb,sahara,1054,4,high,levtzion-hopkins,
+maghreb,sahara-west,1054,4,high,levtzion-hopkins,
 maghreb,sicily,1185,4,high,ibn-jubayr,Ibn Jubayr in Norman Palermo
 maghreb,arabia-hejaz,1185,4,high,ibn-jubayr,
 maghreb,levant,1185,4,high,ibn-jubayr,Crusader Acre
 maghreb,mesopotamia,1185,3,high,ibn-jubayr,
 maghreb,bilad-al-sudan,1526,4,high,leo-africanus,Timbuktu described by al-Wazzan
 maghreb,central-sahel,1526,3,medium,leo-africanus,
-maghreb,sahara,1526,4,high,leo-africanus,
+maghreb,sahara-west,1526,4,high,leo-africanus,
 maghreb,italy,1526,4,high,leo-africanus,Al-Wazzan writes in Rome
 maghreb,bilad-al-sudan,1591,4,high,tarikh-al-sudan,Morocco's army takes Timbuktu
 maghreb,britain,1600,3,high,matar,A Moroccan embassy in London
@@ -1953,6 +1987,7 @@ egypt,red-sea,-1950,3,medium,shaw-egypt,Ships sail for Punt from Mersa Gawasis
 egypt,horn,-1950,2,medium,shaw-egypt,"Punt, the land of incense"
 egypt,libya,-2000,2,medium,shaw-egypt,
 egypt,sahara,-2000,1,low,shaw-egypt,
+egypt,sahara-east,-2300,3,medium,shaw-egypt,The western oases under Old Kingdom governors
 egypt,crete,-2000,2,medium,shaw-egypt,Keftiu
 egypt,med-east,-2000,2,medium,shaw-egypt,
 egypt,levant,-1450,4,high,shaw-egypt,Thutmose III campaigns to the Euphrates
@@ -2054,12 +2089,17 @@ japan,sea-of-japan,-2000,1,low,habu,
 japan,korea,-2000,1,low,habu,
 japan,ryukyu-taiwan,-2000,1,low,habu,
 # ════ Before 500 BCE: the Sahel's Dhar Tichitt ════
-sahel,sahara,-2000,3,low,mcintosh,Dhar Tichitt's stone villages on the desert edge
+sahel,sahara-west,-2000,3,low,mcintosh,Dhar Tichitt's stone villages on the desert edge
 sahel,bilad-al-sudan,-2000,2,low,mcintosh,The inland delta of the Niger
 sahel,senegambia,-2000,1,low,mcintosh,
 # ════ Before 500 BCE: the Mexica view follows Tlatilco and the Olmec world ════
 mexica,mexico,-2000,2,low,pool-olmec,
-mexica,mexico,-1200,3,medium,pool-olmec,Tlatilco and the villages of the Basin of Mexico
+mexica,mexico-centre,-1200,3,medium,pool-olmec,Tlatilco and the villages of the Basin of Mexico
+mexica,mexico-west,1478,3,medium,duran,War with the Tarascans of Michoacán
+mexica,mexico-south,1500,4,medium,codex-mendoza,The tribute provinces of Oaxaca and the Pacific coast
+iberia,mexico-north,1540,3,medium,flint-coronado,Coronado marches up the Sonora valley
+iberia,mexico-west,1522..1531,3,medium,herrera,Olid in Michoacán and Guzmán in Nueva Galicia
+iberia,mexico-south,1522..1524,3,high,cortes-letters,Cortés's captains reach Oaxaca and the Pacific
 mexica,gulf-of-mexico,-1200,2,medium,pool-olmec,Olmec goods from the Gulf coast
 mexica,maya,-1200,1,low,pool-olmec,
 # ════ Before 500 BCE: the Inca view follows Caral and Chavín ════
@@ -2578,10 +2618,13 @@ russia,scandinavia,1500,3,high,hoc,
 russia,baltic,1500,4,high,hoc,
 russia,germania,1500,3,high,hoc,
 russia,italy,1475,3,high,hoc,Italian architects build the Kremlin
-russia,siberia-west,1500,2,medium,hoc,Yugra beyond the Urals
-russia,siberia-west,1620,4,high,hoc,"Mangazeya, the fur town of the Arctic"
+russia,ob-irtysh,1500,2,medium,hoc,Yugra beyond the Urals
+russia,ob-irtysh,1620,4,high,hoc,"Mangazeya, the fur town of the Arctic"
+russia,yenisei,1620,3,high,hoc,"Mangazeya, the fur town of the Arctic"
 russia,taymyr,1620,2,medium,hoc,Traders from Mangazeya reach the Taymyr by sea
-russia,siberia-east,1632,3,high,hoc,Yakutsk on the Lena
+russia,siberia-lena,1632,3,high,hoc,Yakutsk on the Lena
+russia,russian-north,1096,2,medium,primary-chronicle,Novgorod's men reach the Pechora and Yugra
+russia,russian-north,1499,3,medium,hoc,Pustozersk on the lower Pechora
 russia,sea-of-okhotsk,1639,3,high,hoc,Moskvitin reaches the Pacific
 russia,bering-sea,1648,2,medium,hoc,
 russia,manchuria,1652,3,high,hoc,Khabarov on the Amur
@@ -2733,7 +2776,7 @@ inuit,greenland-northwest,-500,3,medium,friesen-mason,
 inuit,canada-east,-500,2,medium,friesen-mason,The Labrador coast
 inuit,bering-sea,1,4,medium,friesen-mason,Old Bering Sea hunters on both sides of the strait
 inuit,alaska-arctic,1,4,medium,friesen-mason,
-inuit,siberia-east,1,2,medium,friesen-mason,Chukotka across the strait
+inuit,chukotka,1,2,medium,friesen-mason,Chukotka across the strait
 inuit,alaska,1,3,medium,friesen-mason,
 inuit,alaska-interior,1,1,low,friesen-mason,
 inuit,kamchatka,1,1,low,friesen-mason,
@@ -2752,7 +2795,7 @@ inuit,greenland-southeast,1884,4,high,ammassalik-maps,Kunit's wooden maps of the
 inuit,alaska-arctic,1924,5,high,rasmussen,Rasmussen's sledge journey from Greenland to Alaska
 inuit,arctic-canada,1924,5,high,rasmussen,
 inuit,hudson-bay,1924,5,high,rasmussen,
-inuit,siberia-east,1924,3,high,rasmussen,
+inuit,chukotka,1924,3,high,rasmussen,
 # ════ Southern Africa: the San, the Limpopo farmers, Mapungubwe, Great Zimbabwe, Mutapa and after ════
 zimbabwe,southern-africa,-2000,4,low,lewis-williams,The San: hunters who knew every waterhole
 zimbabwe,cape,-2000,3,low,lewis-williams,
@@ -2845,7 +2888,7 @@ swahili,great-lakes,1850,4,high,sheriff-zanzibar,Caravans to Lake Tanganyika
 swahili,west-india-coast,1850,4,high,sheriff-zanzibar,Gujarati merchants of Zanzibar
 swahili,north-america,1840,2,medium,sheriff-zanzibar,Salem ships trade for cloves and ivory
 swahili,britain,1850,2,medium,sheriff-zanzibar,
-swahili,congo,1880,3,high,tippu-tip,Tippu Tip's state on the upper Congo
+swahili,congo-east,1880,3,high,tippu-tip,Tippu Tip's state on the upper Congo
 swahili,germania,1885,2,high,tippu-tip,
 # ════ Nusantara: Austronesian seafarers, Srivijaya, Majapahit, Malacca and after ════
 nusantara,ryukyu-taiwan,-2000,3,low,bellwood,The homeland in Taiwan
@@ -2895,7 +2938,7 @@ nusantara,mesopotamia,1450,2,medium,reid,
 nusantara,iberia,1511,3,high,reid,The Portuguese take Malacca
 nusantara,germania,1596,3,high,reid,The Dutch at Banten
 nusantara,britain,1602,2,high,reid,
-nusantara,mexico,1600,2,medium,reid,The Manila galleon sails for Acapulco
+nusantara,mexico-south,1600,2,medium,reid,The Manila galleon sails for Acapulco
 nusantara,japan,1600,2,medium,reid,
 nusantara,britain,1849,3,high,abdullah-munshi,Abdullah Munshi on the English of Singapore
 ethiopia,greece,530,2,medium,munro-hay,Justinian's envoys to King Kaleb
@@ -2971,7 +3014,9 @@ korea,pacific-north,1603,1,high,ledyard-korea,
 korea,europe,1631,2,high,aleni,Jeong Du-won brings back Aleni's world geography and a telescope
 korea,germania,1627,2,high,hamel,Weltevree's ship is wrecked on the coast
 korea,germania,1653,2,high,hamel,Hamel's crew
-korea,siberia-east,1654,1,high,joseon-sillok,Joseon musketeers fight the Russians on the Amur
+korea,siberia-baikal,1654,1,high,joseon-sillok,Joseon musketeers fight the Russians on the Amur
+japan,sakhalin,1644,2,medium,hoc,The Shōhō map shows Karafuto beyond Ezo
+japan,sakhalin,1809,3,high,mamiya,Mamiya Rinzō finds Karafuto an island
 korea,rus,1658,1,medium,joseon-sillok,
 korea,tibet,1780,2,high,yeolha-ilgi,Pak Ji-won meets the Panchen Lama's court at Jehol
 korea,mongolia,1780,4,high,yeolha-ilgi,
@@ -2981,12 +3026,12 @@ korea,europe,1895,3,high,yu-kilchun,Yu Kil-chun's Observations on a Journey to t
 
 # ════ Steppe: the deer-stone herders, then the empires of the Orkhon ════
 steppe,mongolia,-2000,3,low,honeychurch,Herders of the Mongolian plateau
-steppe,siberia-east,-2000,1,low,honeychurch,
+steppe,siberia-baikal,-2000,1,low,honeychurch,
 steppe,manchuria,-2000,1,low,honeychurch,
 steppe,china-north,-2000,1,low,honeychurch,
 steppe,kazakh-steppe,-2000,1,low,anthony,
 steppe,mongolia,-1200,3,medium,honeychurch,Deer stones from the Altai to Lake Baikal
-steppe,siberia-east,-1200,1,low,honeychurch,
+steppe,siberia-baikal,-1200,1,low,honeychurch,
 steppe,zhetysu,-1200,1,low,honeychurch,
 steppe,china-north,-1250,2,medium,keightley,Raiders on the Shang frontier
 steppe,mongolia,-209,4,medium,shiji,The Xiongnu confederation under Modu
@@ -2995,7 +3040,7 @@ steppe,manchuria,-209,3,high,shiji,The Donghu defeated
 steppe,hexi,-176,3,high,shiji,The Yuezhi driven out
 steppe,tarim,-176,3,high,shiji,"Loulan, the Wusun and the twenty-six oasis states"
 steppe,siberia-west,-201,1,medium,shiji,The Dingling and Jiankun in the north
-steppe,siberia-east,-201,1,medium,shiji,
+steppe,siberia-baikal,-201,1,medium,shiji,
 steppe,kazakh-steppe,-176,2,medium,shiji,The Wusun and Kangju
 steppe,transoxiana,-160,1,low,shiji,The Yuezhi flee far to the west
 steppe,china-north,-51,4,high,hanshu,The chanyu Huhanye visits Chang'an
@@ -3017,13 +3062,13 @@ steppe,china-south,600,2,medium,golden-turkic,
 steppe,tibet,600,2,medium,orkhon,Tüpüt
 steppe,korea,732,2,high,orkhon,"Bükli, whose envoys mourn Kül Tegin"
 steppe,transoxiana,712,4,high,orkhon,"Tonyukuk's campaign to the Iron Gate"
-steppe,siberia-west,710,2,high,orkhon,The Kyrgyz on the Yenisei
-steppe,siberia-west,1207,2,high,secret-history,Jochi subdues the forest peoples
-steppe,siberia-east,1207,2,high,secret-history,
+steppe,yenisei,710,2,high,orkhon,The Kyrgyz on the Yenisei
+steppe,yenisei,1207,2,high,secret-history,Jochi subdues the forest peoples
+steppe,siberia-baikal,1207,2,high,secret-history,
 steppe,tarim,744,4,high,golden-turkic,The Uyghur khaganate
 steppe,china-north,757,4,high,golden-turkic,Uyghur horsemen retake the Tang capitals
 steppe,mesopotamia,762,1,low,golden-turkic,"Babylon, homeland of Mani, whose faith the khagan adopts"
-steppe,siberia-west,840,2,high,golden-turkic,The Kyrgyz sack Ordu-Baliq
+steppe,yenisei,840,2,high,golden-turkic,The Kyrgyz sack Ordu-Baliq
 steppe,hexi,1209,4,high,secret-history,The Tangut kingdom submits
 steppe,china-north,1215,5,high,secret-history,Zhongdu falls
 steppe,manchuria,1215,4,high,secret-history,
@@ -3061,13 +3106,13 @@ steppe,egypt,1400,1,low,atwood,
 steppe,levant,1400,1,low,atwood,
 steppe,java,1400,1,low,atwood,
 steppe,burma,1400,1,low,atwood,
-steppe,siberia-west,1616,3,high,atwood,Russian envoys to the Altan Khan of the Khalkha
+steppe,ob-irtysh,1616,3,high,atwood,Russian envoys to the Altan Khan of the Khalkha
 steppe,rus,1616,3,high,atwood,
 steppe,lower-volga,1630,4,high,atwood,"The Torghuts move to the Volga: the Kalmyks"
 steppe,caucasus,1640,3,medium,atwood,
 steppe,china-north,1691,5,high,qing-shilu,The Khalkha submit to the Qing at Dolon Nor
 steppe,manchuria,1691,4,high,qing-shilu,
-steppe,siberia-east,1727,3,high,atwood,The tea road through Kyakhta
+steppe,siberia-baikal,1727,3,high,atwood,The tea road through Kyakhta
 steppe,rus,1727,3,high,atwood,
 
 # ════ Maya: the lowland villages, the Classic cities, and Maya writers under Spain ════
@@ -3076,24 +3121,26 @@ maya,central-america,-2000,1,low,sharer,
 maya,gulf-of-mexico,-2000,1,low,pool-olmec,
 maya,mexico,-2000,1,low,pool-olmec,
 maya,maya,-1000,3,medium,inomata-2013,"Ceibal, Cuello and the first plazas"
-maya,mexico,-1000,2,medium,pool-olmec,The Olmec of the Gulf Coast
+maya,mexico-south,-1000,2,medium,pool-olmec,The Olmec of the Gulf Coast
 maya,gulf-of-mexico,-1000,2,medium,pool-olmec,
 maya,central-america,-1000,2,medium,sharer,Jade from the Motagua valley
 maya,caribbean,-500,1,low,sharer,
 maya,maya,-300,4,medium,sharer,"El Mirador, joined to its towns by causeways"
 maya,central-america,-300,3,medium,sharer,The highland cities of Kaminaljuyu and Chalchuapa
-maya,mexico,378,3,high,stuart-entrada,"Teotihuacan, the place of reeds to the west"
+maya,mexico-centre,378,3,high,stuart-entrada,"Teotihuacan, the place of reeds to the west"
 maya,gulf-of-mexico,600,3,medium,sharer,Canoe trade along the coast
 maya,caribbean,600,2,medium,sharer,
 maya,central-america,900,3,high,sharer,Gold from Panama and Costa Rica in the Sacred Cenote
 maya,andes-north,1000,1,low,sharer,Gold from as far as Colombia
 maya,rio-grande-pueblos,1000,1,low,sharer,Turquoise from the far north by way of Tula
 maya,caribbean,1200,3,medium,sharer,"Cozumel, Ix Chel's island, and the canoe trade to Honduras"
-maya,mexico,1450,3,high,landa,Aztec merchants at Xicalango
+maya,mexico-centre,1450,3,high,landa,Aztec merchants at Xicalango
+maya,mexico-south,1450,3,high,landa,Aztec merchants at Xicalango
 maya,iberia,1511,1,medium,bernal-diaz,Shipwrecked strangers from the east
 maya,iberia,1517,2,high,bernal-diaz,Hernández de Córdoba fights at Champotón
 maya,caribbean,1517,3,high,bernal-diaz,
-maya,mexico,1524,4,high,kaqchikel-annals,Alvarado's Nahua allies from Mexico
+maya,mexico-centre,1524,4,high,kaqchikel-annals,Alvarado's Nahua allies from Mexico
+maya,mexico-south,1524,4,high,kaqchikel-annals,Alvarado's Nahua allies from Mexico
 maya,iberia,1567,3,high,raimundez-2019,Maya nobles write to the king of Castile
 maya,italy,1550,1,medium,landa,"Rome, the seat of the pope"
 maya,levant,1550,2,medium,chilam-balam,Jerusalem in the friars' teaching
@@ -3137,10 +3184,10 @@ nusantara,arafura-timor,1720,3,medium,macknight-1976,"Marege', the trepang coast
 kongo,angola,-2000,2,low,vansina-paths,Foragers of the lower Congo savannas
 kongo,congo,-2000,1,low,vansina-paths,
 kongo,angola,-400,3,low,vansina-paths,Bantu-speaking farmers settle the lower Congo and work iron
-kongo,congo,-400,2,low,vansina-paths,The forest upriver from the Malebo Pool
+kongo,congo-west,-400,2,low,vansina-paths,The forest upriver from the Malebo Pool
 kongo,south-atlantic,-400,1,low,vansina-paths,
 kongo,angola,1390,4,medium,thornton-wca,"Mbanza Kongo and its provinces, from the river to the Loje"
-kongo,congo,1390,2,medium,thornton-wca,The Tio kingdom beyond the Malebo Pool
+kongo,congo-west,1390,2,medium,thornton-wca,The Tio kingdom beyond the Malebo Pool
 kongo,iberia,1483,1,high,thornton-wca,Strangers from the sea at the river's mouth
 kongo,iberia,1485,2,high,thornton-wca,Kongo nobles come home from Lisbon
 kongo,south-atlantic,1485,2,high,thornton-wca,The sea road to Portugal
@@ -3149,7 +3196,7 @@ kongo,guinea-coast,1500,2,high,hilton-kongo,São Tomé and its sugar planters
 kongo,iberia,1508,3,high,brasio-mma,Afonso's sons and nephews study in Lisbon
 kongo,italy,1513,2,medium,thornton-wca,Afonso's embassy to Pope Leo X
 kongo,levant,1520,1,medium,hilton-kongo,Jerusalem in the priests' teaching
-kongo,congo,1550,3,medium,thornton-wca,The great market at the Malebo Pool
+kongo,congo-west,1550,3,medium,thornton-wca,The great market at the Malebo Pool
 kongo,brazil-coast,1580,2,medium,heywood-thornton,Kongolese captives carried to Brazil
 kongo,caribbean,1600,1,medium,heywood-thornton,
 kongo,germania,1642,2,high,beckx-castro,Envoys to the Dutch Republic
@@ -3160,19 +3207,22 @@ kongo,gaul,1750,2,medium,thornton-wca,French slavers at Loango and Cabinda
 # ═══ Mississippian ═══
 mississippian,mississippi,-2000,3,low,gibson-poverty,Poverty Point's earthworks on the lower Mississippi
 mississippian,eastern-woodlands,-2000,2,low,gibson-poverty,
+iberia,florida,1565,3,high,hoc,St Augustine founded
+iberia,woodlands-southeast,1539..1543,3,high,hudson-desoto,De Soto's march through the Southeast
 mississippian,gulf-of-mexico,-2000,1,low,gibson-poverty,
-mississippian,eastern-woodlands,-1500,3,low,gibson-poverty,"Soapstone from the Appalachians, chert from the Ohio"
-mississippian,canadian-shield,-1500,1,low,gibson-poverty,Copper from the north
-mississippian,eastern-woodlands,-100,4,medium,carr-hopewell,Hopewell earthworks from the Ohio to the Illinois
-mississippian,canadian-shield,-100,1,medium,carr-hopewell,Copper from Lake Superior
+mississippian,ohio-valley,-1500,3,low,gibson-poverty,"Soapstone from the Appalachians, chert from the Ohio"
+mississippian,woodlands-southeast,-1500,3,low,gibson-poverty,"Soapstone from the Appalachians, chert from the Ohio"
+mississippian,shield-east,-1500,1,low,gibson-poverty,Copper from the north
+mississippian,ohio-valley,-100,4,medium,carr-hopewell,Hopewell earthworks from the Ohio to the Illinois
+mississippian,shield-east,-100,1,medium,carr-hopewell,Copper from Lake Superior
 mississippian,gulf-of-mexico,-100,2,medium,carr-hopewell,Shells and sharks' teeth from the Gulf
-mississippian,north-america-west,-100,1,medium,carr-hopewell,Obsidian from the Yellowstone country
+mississippian,columbia-plateau,-100,1,medium,carr-hopewell,Obsidian from the Yellowstone country
 mississippian,great-plains,-100,1,low,carr-hopewell,
 mississippian,mississippi,1050,4,high,pauketat-cahokia,Cahokia and the towns of the American Bottom
 mississippian,great-plains,1050,2,medium,pauketat-cahokia,Bison hides and Plains trade
 mississippian,gulf-of-mexico,1050,3,medium,pauketat-cahokia,Lightning whelks from the Gulf coast
-mississippian,canadian-shield,1050,1,medium,pauketat-cahokia,
-mississippian,mexico,1300,1,low,brown-spiro,Obsidian from the Valley of Mexico at Spiro
+mississippian,shield-east,1050,1,medium,pauketat-cahokia,
+mississippian,mexico-centre,1300,1,low,brown-spiro,Obsidian from the Valley of Mexico at Spiro
 mississippian,california,1300,1,low,brown-spiro,Shell beads from the Gulf of California
 mississippian,iberia,1540,1,high,hudson-desoto,"Strangers from beyond the sea, with horses and iron"
 mississippian,caribbean,1540,1,medium,hudson-desoto,"Cuba, where de Soto sailed from"
@@ -3182,21 +3232,26 @@ mississippian,gaul,1702,2,high,ethridge-creek,The French at Mobile and New Orlea
 mississippian,great-plains,1836,4,high,green-removal,Removal to Indian Territory
 
 # ═══ Haudenosaunee ═══
-haudenosaunee,eastern-woodlands,-2000,2,low,snow-iroquois,Hunters and fishers of the northern woods
+haudenosaunee,woodlands-northeast,-2000,2,low,snow-iroquois,Hunters and fishers of the northern woods
+haudenosaunee,ohio-valley,-2000,2,low,snow-iroquois,Hunters and fishers of the northern woods
+haudenosaunee,eastern-woodlands,-2000,1,low,snow-iroquois,Hunters and fishers of the northern woods
 haudenosaunee,canada-east,-2000,1,low,snow-iroquois,
-haudenosaunee,eastern-woodlands,1000,3,medium,snow-iroquois,"Iroquoian farmers: maize, beans and squash"
+haudenosaunee,woodlands-northeast,1000,3,medium,snow-iroquois,"Iroquoian farmers: maize, beans and squash"
+haudenosaunee,ohio-valley,1000,3,medium,snow-iroquois,"Iroquoian farmers: maize, beans and squash"
 haudenosaunee,canada-east,1000,2,medium,snow-iroquois,The St Lawrence Iroquoians downriver
-haudenosaunee,canadian-shield,1000,1,low,snow-iroquois,
-haudenosaunee,eastern-woodlands,1450,4,medium,snow-iroquois,"The League, from the Hudson to the Genesee"
+haudenosaunee,shield-east,1000,1,low,snow-iroquois,
+haudenosaunee,woodlands-northeast,1450,4,medium,snow-iroquois,"The League, from the Hudson to the Genesee"
+haudenosaunee,chesapeake,1450,3,medium,snow-iroquois,"The League, from the Hudson to the Genesee"
+haudenosaunee,ohio-valley,1450,3,medium,snow-iroquois,"The League, from the Hudson to the Genesee"
 haudenosaunee,canada-east,1450,3,medium,snow-iroquois,
 haudenosaunee,north-atlantic-west,1450,1,low,snow-iroquois,
 haudenosaunee,gaul,1609,2,high,richter-ordeal,Champlain's French at Lake Champlain
 haudenosaunee,germania,1614,2,high,richter-ordeal,Dutch traders at Fort Orange
-haudenosaunee,canadian-shield,1649,1,high,richter-ordeal,War parties north of the lakes
+haudenosaunee,shield-east,1649,1,high,richter-ordeal,War parties north of the lakes
 haudenosaunee,britain,1664,2,high,richter-ordeal,The English take New Netherland
 haudenosaunee,mississippi,1680,2,high,richter-ordeal,War parties reach the Illinois country
 haudenosaunee,gaul,1689,3,high,richter-ordeal,Captives sent to the French king's galleys come home
-haudenosaunee,eastern-woodlands,1722,4,high,richter-ordeal,The Tuscarora come north from Carolina
+haudenosaunee,woodlands-southeast,1722,4,high,richter-ordeal,The Tuscarora come north from Carolina
 haudenosaunee,great-plains,1800,1,low,kelsay-brant,
 
 # ═══ Turks ═══

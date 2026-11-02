@@ -64,7 +64,7 @@
   ],
   "informs": [
     {"region": "pacific-south", "level": 2, "homeKnows": 1522, "confidence": "high", "note": "The Pacific's true size"},
-    {"region": "pacific-north", "level": 2, "homeKnows": 1522, "confidence": "high"},
+    {"region": "pacific-central", "level": 2, "homeKnows": 1522, "confidence": "high"},
     {"region": "magellan-strait", "level": 3, "homeKnows": 1522, "confidence": "high"},
     {"region": "patagonia", "level": 2, "homeKnows": 1522, "confidence": "high"},
     {"region": "pampas", "level": 2, "homeKnows": 1522, "confidence": "medium"},

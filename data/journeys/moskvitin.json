@@ -19,6 +19,6 @@
   ],
   "informs": [
     {"region": "sea-of-okhotsk", "level": 3, "homeKnows": 1641, "confidence": "medium", "note": "The Sea of Okhotsk reached"},
-    {"region": "siberia-east", "level": 3, "homeKnows": 1641, "confidence": "medium"}
+    {"region": "siberia-lena", "level": 3, "homeKnows": 1641, "confidence": "medium"}
   ]
 }

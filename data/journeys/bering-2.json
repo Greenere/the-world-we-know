@@ -17,6 +17,6 @@
   ],
   "informs": [
     {"region": "alaska", "level": 2, "homeKnows": 1742, "confidence": "high", "note": "Bering and Chirikov reach Alaska"},
-    {"region": "pacific-north", "level": 3, "homeKnows": 1743, "confidence": "high"}
+    {"region": "pacific-far-north", "level": 3, "homeKnows": 1743, "confidence": "high"}
   ]
 }

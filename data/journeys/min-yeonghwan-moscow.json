@@ -27,7 +27,8 @@
     {"region": "britain", "level": 3, "homeKnows": 1896, "confidence": "medium"},
     {"region": "germania", "level": 3, "homeKnows": 1896, "confidence": "medium"},
     {"region": "rus", "level": 3, "homeKnows": 1896, "confidence": "high", "note": "Min Yeong-hwan at the coronation of Nicholas II"},
-    {"region": "siberia-west", "level": 3, "homeKnows": 1896, "confidence": "medium", "note": "He comes home across Siberia"},
-    {"region": "siberia-east", "level": 3, "homeKnows": 1896, "confidence": "medium"}
+    {"region": "ob-irtysh", "level": 3, "homeKnows": 1896, "confidence": "medium", "note": "He comes home across Siberia"},
+    {"region": "yenisei", "level": 3, "homeKnows": 1896, "confidence": "medium", "note": "He comes home across Siberia"},
+    {"region": "siberia-baikal", "level": 3, "homeKnows": 1896, "confidence": "medium"}
   ]
 }

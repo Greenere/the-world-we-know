@@ -18,6 +18,7 @@
     {"year": 1609, "place": "Dartmouth", "lat": 50.35, "lon": -3.58, "note": "Detained in England with his news.", "date": "November 1609"}
   ],
   "informs": [
-    {"region": "eastern-woodlands", "level": 3, "homeKnows": 1610, "confidence": "high", "note": "The Hudson River, with Jamestown's Virginia"}
+    {"region": "woodlands-northeast", "level": 3, "homeKnows": 1610, "confidence": "high", "note": "The Hudson River, with Jamestown's Virginia"},
+    {"region": "chesapeake", "level": 3, "homeKnows": 1610, "confidence": "high", "note": "The Hudson River, with Jamestown's Virginia"}
   ]
 }

@@ -17,7 +17,7 @@
     {"year": 1606, "place": "Banda", "lat": -4.52, "lon": 129.9, "note": "He reports the land barren and its people hostile.", "by": "sea"}
   ],
   "informs": [
-    {"region": "australia", "level": 2, "homeKnows": 1606, "confidence": "high", "note": "The Duyfken on Cape York"},
+    {"region": "australia-north", "level": 2, "homeKnows": 1606, "confidence": "high", "note": "The Duyfken on Cape York"},
     {"region": "arafura-timor", "level": 3, "homeKnows": 1606, "confidence": "high"}
   ]
 }

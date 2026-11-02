@@ -22,7 +22,7 @@
     {"year": 1649, "place": "The Anadyr", "lat": 64.7, "lon": 170.4, "note": "Ten weeks' march north to the Anadyr river, where the survivors build a winter camp.", "by": "land"}
   ],
   "informs": [
-    {"region": "siberia-east", "level": 3, "homeKnows": 1655, "confidence": "medium", "note": "Dezhnev's report reaches Yakutsk"},
+    {"region": "chukotka", "level": 3, "homeKnows": 1655, "confidence": "medium", "note": "Dezhnev's report reaches Yakutsk"},
     {"region": "bering-sea", "level": 2, "homeKnows": 1736, "confidence": "medium", "note": "Dezhnev's report found by Müller"}
   ]
 }

@@ -17,7 +17,7 @@
     {"year": 1772, "place": "Prince of Wales Fort", "lat": 58.79, "lon": -94.2, "note": "Back after eighteen months and some five thousand kilometres.", "by": "land", "date": "June 1772"}
   ],
   "informs": [
-    {"region": "canadian-shield", "level": 3, "homeKnows": 1772, "confidence": "high", "note": "Hearne's journey"},
+    {"region": "barren-grounds", "level": 3, "homeKnows": 1772, "confidence": "high", "note": "Hearne's journey"},
     {"region": "arctic-canada", "level": 2, "homeKnows": 1772, "confidence": "high"}
   ]
 }

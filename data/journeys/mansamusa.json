@@ -28,7 +28,8 @@
   ],
   "informs": [
     {"viewpoint": "egypt", "region": "bilad-al-sudan", "level": 4, "homeKnows": 1324, "confidence": "high", "note": "Mali described in Cairo"},
-    {"viewpoint": "egypt", "region": "sahara", "level": 4, "homeKnows": 1324, "confidence": "medium"},
+    {"viewpoint": "egypt", "region": "sahara-west", "level": 4, "homeKnows": 1324, "confidence": "medium"},
+    {"viewpoint": "egypt", "region": "sahara-central", "level": 4, "homeKnows": 1324, "confidence": "medium"},
     {"region": "egypt", "level": 4, "homeKnows": 1325, "confidence": "high", "note": "Cairo, as Mali's court came to know it"},
     {"region": "arabia-hejaz", "level": 4, "homeKnows": 1325, "confidence": "high"},
     {"viewpoint": "iberia", "region": "bilad-al-sudan", "level": 2, "homeKnows": 1339, "confidence": "medium", "source": "dulcert", "note": "'Rex Melly' appears on Dulcert's chart; the Catalan Atlas of 1375 shows Musa holding a gold nugget"},

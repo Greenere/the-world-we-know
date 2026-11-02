@@ -107,7 +107,7 @@ The map is drawn with [MapLibre GL](https://maplibre.org/) and [deck.gl](https:/
 | File | Holds |
 | --- | --- |
 | `viewpoints.json` | Each viewpoint's names, colours, homes over time, key moments and community memberships |
-| `regions.geojson` | About 220 named regions; coarse polygons are fine at this grid size |
+| `regions.geojson` | About 250 named regions; coarse polygons are fine at this grid size. A large region can hold smaller ones (the Sahara holds its west, centre and east): a row on the large one applies to all of it, a row on a part only there |
 | `knowledge.csv` | `viewpoint, region, year, level, confidence, source, note`; a year can be a range (`1000..1100`), and `=n` holds a level exactly |
 | `journeys/<id>.json` | Stops, how each leg was travelled, and what each viewpoint learned |
 | `cities.csv` | Founded, peak, abandoned, forgotten and rediscovered dates, with a story |

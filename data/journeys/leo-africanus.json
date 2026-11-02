@@ -19,6 +19,6 @@
   "informs": [
     {"region": "bilad-al-sudan", "level": 3, "homeKnows": 1513, "confidence": "medium"},
     {"viewpoint": "europe", "region": "bilad-al-sudan", "level": 3, "homeKnows": 1550, "confidence": "high", "note": "Leo Africanus printed by Ramusio"},
-    {"viewpoint": "europe", "region": "sahara", "level": 3, "homeKnows": 1550, "confidence": "high"}
+    {"viewpoint": "europe", "region": "sahara-west", "level": 3, "homeKnows": 1550, "confidence": "high"}
   ]
 }

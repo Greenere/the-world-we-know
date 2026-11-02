@@ -20,7 +20,7 @@
   ],
   "informs": [
     {"region": "angola", "level": 3, "homeKnows": "1482..1486", "confidence": "high", "note": "The coast of Kongo and Angola charted"},
-    {"region": "congo", "level": 1, "homeKnows": 1485, "confidence": "medium"},
+    {"region": "congo-west", "level": 1, "homeKnows": 1485, "confidence": "medium"},
     {"region": "southern-africa", "level": 2, "homeKnows": 1486, "confidence": "high", "note": "The desert coast to Cape Cross"}
   ]
 }

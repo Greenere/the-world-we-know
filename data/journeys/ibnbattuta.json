@@ -165,6 +165,7 @@
     {"region": "india-north", "level": 4, "homeKnows": 1355, "confidence": "high"},
     {"region": "east-africa-coast", "level": 4, "homeKnows": 1355, "confidence": "high"},
     {"region": "bilad-al-sudan", "level": 4, "homeKnows": 1355, "confidence": "high"},
-    {"region": "sahara", "level": 4, "homeKnows": 1355, "confidence": "high"}
+    {"region": "sahara-west", "level": 4, "homeKnows": 1355, "confidence": "high"},
+    {"region": "sahara-central", "level": 4, "homeKnows": 1355, "confidence": "high"}
   ]
 }

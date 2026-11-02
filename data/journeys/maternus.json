@@ -16,7 +16,7 @@
     {"year": 91, "place": "Leptis Magna", "lat": 32.64, "lon": 14.29, "note": "Home with the farthest report of Africa Rome ever had.", "by": "land", "city": "leptis-magna"}
   ],
   "informs": [
-    {"region": "sahara", "level": 2, "homeKnows": 91, "confidence": "low", "note": "Maternus's report"},
+    {"region": "sahara-east", "level": 2, "homeKnows": 91, "confidence": "low", "note": "Maternus's report"},
     {"region": "central-sahel", "level": 1, "homeKnows": 91, "confidence": "low"}
   ]
 }

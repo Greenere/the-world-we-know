@@ -37,7 +37,8 @@
     {"year": 1620, "place": "Sendai", "lat": 38.27, "lon": 140.87, "note": "Home, to a country that has banned Christianity.", "date": "September 1620"}
   ],
   "informs": [
-    {"region": "mexico", "level": 3, "homeKnows": 1620, "confidence": "high"},
+    {"region": "mexico-centre", "level": 3, "homeKnows": 1620, "confidence": "high"},
+    {"region": "mexico-south", "level": 3, "homeKnows": 1620, "confidence": "high"},
     {"region": "italy", "level": 3, "homeKnows": 1620, "confidence": "high"},
     {"region": "caribbean", "level": 2, "homeKnows": 1620, "confidence": "high"}
   ]

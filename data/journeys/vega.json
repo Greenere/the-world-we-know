@@ -67,7 +67,8 @@
   ],
   "informs": [
     {"region": "taymyr", "level": 3, "homeKnows": 1879, "confidence": "high", "note": "The Northeast Passage sailed"},
-    {"region": "siberia-east", "level": 3, "homeKnows": 1879, "confidence": "high"},
+    {"region": "siberia-lena", "level": 3, "homeKnows": 1879, "confidence": "high"},
+    {"region": "chukotka", "level": 3, "homeKnows": 1879, "confidence": "high"},
     {"viewpoint": "europe", "region": "taymyr", "level": 3, "homeKnows": 1879, "confidence": "high", "note": "The Northeast Passage sailed"}
   ]
 }
