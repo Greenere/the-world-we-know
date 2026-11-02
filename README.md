@@ -140,7 +140,7 @@ Please run `npm run data` and `npm run build` before opening a pull request; bot
 
 ## License
 
-- **Code:** [Apache License 2.0](LICENSE).
+- **Code:** [Mozilla Public License 2.0](LICENSE). You may use it in any project, open or closed; changes to these files themselves must stay open under the same license.
 - **The authored content of `data/`:** [CC BY 4.0](data/LICENSE.md). This covers the knowledge tables, journeys, landmarks, inventions, plants and animals, stories, translations and sketches. You may reuse it with attribution to "The World We Know".
 
 Third-party material keeps its own terms:

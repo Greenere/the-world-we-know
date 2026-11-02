@@ -14,4 +14,4 @@ The cited works listed in `sources.csv` belong to their authors; this project re
 them and the references themselves. Map data downloaded at build time (Natural Earth, ETOPO5) is in the
 public domain and is not part of this directory's license.
 
-The code of the project is licensed separately, under the Apache License 2.0 (see `LICENSE` at the root).
+The code of the project is licensed separately, under the Mozilla Public License 2.0 (see `LICENSE` at the root).

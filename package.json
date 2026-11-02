@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "A browser atlas of how much of the world each civilization knew, year by year.",
-  "license": "Apache-2.0",
+  "license": "MPL-2.0",
   "repository": "github:Greenere/the-world-we-know",
   "scripts": {
     "data": "uv run --project scripts python scripts/build_data.py",
