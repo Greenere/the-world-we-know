@@ -161,7 +161,7 @@ class App {
       showRegionAs: (vp: VpId | '*', region: string, year: number) => this.showRegionAs(vp, region, year),
       openLiving: (id: string, year?: number) => this.openLiving(id, year),
       pickArrival: (i: number) => this.pickArrival(i),
-      openCity: (id: string) => this.openCity(id, false),
+      openCity: (id: string, fly = false) => this.openCity(id, fly),
       landmarkNeighbors: (id: string) => this.ui.journey.landmarkNeighbors(id),
       openLandmark: (id: string) => this.ui.journey.openLandmark(id),
       flyTo: (lng: number, lat: number, zoom?: number) => this.map.flyTo({center: [lng, lat], zoom: zoom ?? this.map.getZoom()}),

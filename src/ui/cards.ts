@@ -86,7 +86,8 @@ export class Cards {
       showRegionAs(vp: VpId | '*', region: string, year: number): void;
       openLiving(id: string, year?: number): void;
       pickArrival(index: number): void;
-      openCity(id: string): void;
+      /** Open a place's card; `fly` also brings the map to it, for a place that may be anywhere. */
+      openCity(id: string, fly?: boolean): void;
       landmarkNeighbors(id: string): {previous?: LandmarkTarget; next?: LandmarkTarget} | null;
       openLandmark(id: string): void;
       flyTo(lng: number, lat: number, zoom?: number): void;
@@ -412,7 +413,7 @@ export class Cards {
         const icon = c.kind === 'natural' ? naturalIcons[c.subtype ?? ''] ?? icons.natural : c.kind === 'built' ? icons.built : c.dates.abandoned !== undefined ? icons.ruin : icons.city;
         return h(
           'button.chip.wonder-chip',
-          {type: 'button', onclick: () => this.actions.openCity(id)},
+          {type: 'button', onclick: () => this.actions.openCity(id, true)},
           h('span.chip-icon', {html: icon}),
           tx.name(nameFor(c.names, s.vps[0], s.year, c.id)?.name ?? c.id),
         );
