@@ -687,10 +687,6 @@ export class JourneyPanel {
 
   /** Keep the list's discovery order, but open ruins after the city fell out of use. */
   private openAt(c: City, year: number) {
-    if (!c.kind && c.dates.abandoned !== undefined && c.dates.forgotten === undefined && c.tier <= 2) {
-      const d = c.dates.abandoned;
-      year = Math.max(year, typeof d === 'number' ? d : (d[0] + d[1]) / 2);
-    }
     this.store.set({year: Math.max(START, Math.min(PRESENT, Math.round(year))), playing: false});
     this.actions.openCity(c.id);
   }
@@ -772,12 +768,15 @@ export class JourneyPanel {
         meta = t('Found again {year}', {year: formatYear(from)});
       } else if (c.dates.abandoned !== undefined && c.dates.forgotten === undefined && c.tier <= 2) {
         // Ruins that were never lost: those who lived near them always knew them (Teotihuacan, Great Zimbabwe).
-        // A viewpoint knows one from when the map first shows it the city, and no sooner than it was built.
+        // A viewpoint knows the place from when the map first shows it the city, no sooner than it was built; it
+        // is listed, and opens, as a ruin: from then, or from its abandonment if it was still lived in. One date
+        // for both, so stepping through the list never sends the year back.
         group = 'ruin';
         const seen = this.field.firstKnown(vp, c.cell, humanity ? 3 : 2);
-        from = Math.max(seen ?? PRESENT, c.dates.founded === undefined ? -Infinity : mid(c.dates.founded));
+        const known = Math.max(seen ?? PRESENT, c.dates.founded === undefined ? -Infinity : mid(c.dates.founded));
         const abandoned = mid(c.dates.abandoned);
-        meta = humanity || from <= abandoned
+        from = Math.max(known, abandoned);
+        meta = humanity || known <= abandoned
           ? t('Abandoned {year}', {year: formatRange(c.dates.abandoned)})
           : t('Abandoned {abandoned}, known from {year}', {abandoned: formatRange(c.dates.abandoned), year: formatYear(from)});
       } else continue;
