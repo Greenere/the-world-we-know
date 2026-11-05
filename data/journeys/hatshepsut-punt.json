@@ -14,7 +14,7 @@
     {"year": -1471, "place": "Mersa Gawasis", "lat": 26.55, "lon": 34.04, "note": "Across the Wadi Hammamat to the Red Sea, where ships are assembled from parts carried over the desert.", "by": "land"},
     {"waypoint": true, "lat": 22.0, "lon": 37.3},
     {"waypoint": true, "lat": 18.0, "lon": 38.9},
-    {"year": -1470, "place": "Punt", "lat": 15.4, "lon": 39.6, "note": "Houses on stilts, incense trees and a chief with his large wife. Punt was probably on the coast of Eritrea or Sudan.", "by": "sea"},
+    {"year": -1470, "place": "Punt", "lat": 15.4, "lon": 39.6, "note": "Houses on stilts, incense trees, and Punt's ruler Parahu with his wife Ati. Punt was probably on the coast of Eritrea or Sudan.", "by": "sea"},
     {"waypoint": true, "lat": 18.0, "lon": 38.9},
     {"waypoint": true, "lat": 22.0, "lon": 37.3},
     {"year": -1470, "place": "Mersa Gawasis", "lat": 26.55, "lon": 34.04, "note": "The ships return laden with thirty-one myrrh trees in baskets.", "by": "sea"},

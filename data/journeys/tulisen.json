@@ -5,7 +5,7 @@
   "years": "1712–1715",
   "kind": "envoy",
   "viewpoint": "china",
-  "summary": "The Kangxi emperor sends an embassy to Ayuki, khan of the Torghuts, a Mongol people who had left Dzungaria for the Volga. The envoys cross Mongolia and the whole of Siberia by Russian leave. Tulišen's Record of Strange Regions gave China its first account of Siberia and of Russia.",
+  "summary": "The Kangxi emperor sends an embassy to Ayuki, khan of the Torghuts, a Mongol people who had left Dzungaria for the Volga. The envoys cross Mongolia and the whole of Siberia by Russian leave. Tulišen's Record of Foreign Regions gave China its first account of Siberia and of Russia.",
   "source": "tulisen",
   "confidence": "high",
   "stops": [
@@ -22,7 +22,7 @@
     {"year": 1715, "place": "Beijing", "lat": 39.9, "lon": 116.4, "note": "Home by the same long road.", "by": "land", "city": "beijing", "date": "April 1715"}
   ],
   "informs": [
-    {"region": "siberia-baikal", "level": 3, "homeKnows": 1715, "confidence": "high", "note": "Tulišen's Record of Strange Regions"},
+    {"region": "siberia-baikal", "level": 3, "homeKnows": 1715, "confidence": "high", "note": "Tulišen's Record of Foreign Regions"},
     {"region": "ob-irtysh", "level": 3, "homeKnows": 1715, "confidence": "high"},
     {"region": "yenisei", "level": 3, "homeKnows": 1715, "confidence": "high"},
     {"region": "lower-volga", "level": 3, "homeKnows": 1715, "confidence": "high"},

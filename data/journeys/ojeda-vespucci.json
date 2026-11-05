@@ -19,7 +19,7 @@
     {"year": 1499, "date": "August 1499", "place": "Gulf of Venezuela", "lat": 11.4, "lon": -71.25, "note": "A village of houses on stilts over the water reminds them of Venice, and they call the place Venezuela, Little Venice.", "by": "sea"},
     {"year": 1499, "place": "Cabo de la Vela", "lat": 12.2, "lon": -72.17, "note": "The westernmost point they reach, on the Guajira peninsula.", "by": "sea"},
     {"year": 1499, "date": "September 1499", "place": "Yáquimo, Hispaniola", "lat": 18.2, "lon": -72.53, "note": "They put in on Hispaniola, to the anger of Columbus, who held the island's trade as his own.", "by": "sea"},
-    {"year": 1500, "date": "June 1500", "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Home with pearls and some two hundred captives, sold as slaves.", "by": "sea"}
+    {"year": 1500, "date": "June 1500", "place": "Cádiz", "lat": 36.53, "lon": -6.29, "note": "Home with pearls and some two hundred captives, sold into slavery.", "by": "sea"}
   ],
   "informs": [
     {"region": "spanish-main", "level": 3, "homeKnows": 1500, "confidence": "high", "note": "The coast of Venezuela charted"},

@@ -186,7 +186,7 @@ export const zhUi: Record<string, string> = {
   'Early kingdoms': '早期王国',
   'Classical empires': '古典帝国',
   'Caravans and monsoons': '商队与季风',
-  'Age of discovery': '大航海时代',
+  'Ocean crossings': '大航海时代',
   'Steam and telegraph': '蒸汽与电报',
   'One shared map': '同一张世界地图',
   'Show this era in the list': '在列表中查看这个时代',

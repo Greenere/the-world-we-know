@@ -16,7 +16,7 @@ export const ERAS: {id: string; name: string; from: number; to: number}[] = [
   {id: 'early', name: 'Early kingdoms', from: -3000, to: -500},
   {id: 'classical', name: 'Classical empires', from: -500, to: 500},
   {id: 'caravans', name: 'Caravans and monsoons', from: 500, to: 1400},
-  {id: 'discovery', name: 'Age of discovery', from: 1400, to: 1800},
+  {id: 'discovery', name: 'Ocean crossings', from: 1400, to: 1800},
   {id: 'steam', name: 'Steam and telegraph', from: 1800, to: 1900},
   // From 1900 every viewpoint shares one world map (knowledge.csv, world-land).
   {id: 'shared', name: 'One shared map', from: 1900, to: Infinity},

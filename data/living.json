@@ -61,7 +61,7 @@
       {"year": 1500, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "from": "Seville", "note": "Portuguese ships take it on to Africa and Asia.", "confidence": "medium"},
       {"year": "1540..1560", "place": "Goa", "lat": 15.5, "lon": 73.83, "vp": "india", "from": "Lisbon", "note": "Chilies reach the Portuguese at Goa. Within a century they are grown across India and are a staple of its cooking.", "confidence": "medium"},
       {"year": "1542..1552", "place": "Bungo, Kyushu", "lat": 33.24, "lon": 131.6, "vp": "japan", "from": "Lisbon", "note": "The Portuguese bring it to Kyushu, where it is called tōgarashi, 'Chinese mustard'.", "confidence": "low"},
-      {"year": 1591, "place": "Hangzhou", "lat": 30.25, "lon": 120.17, "vp": "china", "from": "Lisbon", "note": "Gao Lian's Eight Discourses mentions 'barbarian pepper', grown for its red fruit. Only in the eighteenth century does China cook with it, above all in Hunan and Sichuan.", "confidence": "medium"},
+      {"year": 1591, "place": "Hangzhou", "lat": 30.25, "lon": 120.17, "vp": "china", "from": "Lisbon", "note": "Gao Lian's Eight Discourses mentions 'foreign pepper', grown for its red fruit. Only in the eighteenth century does China cook with it, above all in Hunan and Sichuan.", "confidence": "medium"},
       {"year": 1614, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "vp": "korea", "from": "Bungo, Kyushu", "note": "Yi Su-gwang's encyclopedia calls it 'Japanese mustard', a poison brought from Japan. A century later it is in kimchi.", "source": "seth-korea", "confidence": "medium"}
     ]
   },
@@ -389,7 +389,7 @@
     "spread": [
       {"year": "-1213", "place": "Thebes", "lat": 25.72, "lon": 32.6, "vp": "egypt", "note": "Peppercorns are placed in the nostrils of the mummy of Ramesses II.", "confidence": "medium"},
       {"year": "1..100", "place": "Muziris", "lat": 10.15, "lon": 76.21, "vp": "rome", "via": "periplus", "note": "Roman ships load pepper at Muziris; Pliny complains that India drains the empire of fifty million sesterces a year.", "source": "periplus"},
-      {"year": "600..700", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Tang cooks use hujiao, the 'barbarian pepper', brought by sea from India.", "confidence": "medium"},
+      {"year": "600..700", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Tang cooks use hujiao, the 'foreign pepper', brought by sea from India.", "confidence": "medium"},
       {"year": 1389, "place": "Kaesong", "lat": 37.97, "lon": 126.55, "vp": "korea", "note": "Envoys from Chūzan bring pepper and sappanwood to the Goryeo court.", "source": "goryeosa", "confidence": "medium"},
       {"year": "1400..1500", "place": "Banten", "lat": -6.05, "lon": 106.15, "vp": "nusantara", "note": "Pepper is planted in Sumatra and western Java, and Banten becomes a great pepper port.", "confidence": "medium"},
       {"year": 1498, "place": "Calicut", "lat": 11.25, "lon": 75.78, "vp": "iberia", "via": "dagama", "note": "Vasco da Gama reaches the pepper coast by sea, and Lisbon breaks Venice's hold on the trade."}

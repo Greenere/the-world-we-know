@@ -12,7 +12,7 @@
     {"year": 1500, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "note": "Thirteen ships sail in March, the largest fleet yet."},
     {"year": 1500, "place": "Cape Verde Islands", "lat": 16.6, "lon": -24.3, "note": "South to the islands, then far out to the west.", "by": "sea"},
     {"year": 1500, "date": "22 April 1500", "place": "Porto Seguro", "lat": -16.9, "lon": -39.0, "note": "A mountain on the horizon, which he names Monte Pascoal; Tupinikin people meet them on the beach.", "by": "sea"},
-    {"year": 1500, "place": "Cape of Good Hope", "lat": -34.4, "lon": 18.5, "note": "A storm sinks four ships; Bartolomeu Dias drowns off the cape he discovered.", "by": "sea"},
+    {"year": 1500, "place": "Cape of Good Hope", "lat": -34.4, "lon": 18.5, "note": "A storm sinks four ships; Bartolomeu Dias drowns off the cape he had rounded.", "by": "sea"},
     {"year": 1500, "place": "Mozambique Island", "lat": -15.03, "lon": 40.73, "note": "Up the east coast of Africa.", "by": "sea"},
     {"year": 1500, "place": "Kilwa", "lat": -8.96, "lon": 39.51, "note": "The sultan refuses an alliance.", "by": "sea"},
     {"year": 1500, "place": "Malindi", "lat": -3.22, "lon": 40.12, "note": "Pilots for the crossing to India.", "by": "sea"},
