@@ -131,9 +131,9 @@ CSV 文件开头有注释说明各自的约定，构建会检查每一处交叉�
 
 ## 参与贡献
 
-欢迎指正、补充来源和新内容。适合入手的贡献：
+欢迎指正、补充来源和新内容，而且不必会写代码：图集中每张卡片末尾都有 **提出更正**，点开即是一份已填好当前内容的 GitHub 议题。详见 [CONTRIBUTING.zh.md](CONTRIBUTING.zh.md)。适合入手的贡献：
 
-- **补一条来源。** 在 `knowledge.csv`、`cities.csv` 或 `landmarks.csv` 中找一行 `draft`，把文献加入 `sources.csv`，再引用它的 id。
+- **补一条来源。** 仍引用 `draft` 占位来源的行，按地区列在标签为 [needs source](https://github.com/Greenere/the-world-we-know/issues?q=is%3Aopen+label%3A%22needs+source%22) 的议题中。核对几行后在议题下回复，或把文献加入 `sources.csv` 并引用它的 id。
 - **校正一个视角。** 如果你熟悉某种文化的历史，请对照地图集中它的时间线。每个视角都值得由熟悉它的人审阅，最好来自这一传统内部。
 - **添加旅程、地标、发明或动植物。** 复制一个现有条目作为模板，运行 `npm run data`，构建会告诉你缺了什么。
 - **翻译。** 中文已完整覆盖；`data/i18n/` 和 `src/i18n-zh.ts` 的结构可作为其他语言的模板。

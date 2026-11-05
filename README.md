@@ -131,9 +131,9 @@ The sketches of cities, journey scenes and inventions are **imagined illustratio
 
 ## Contributing
 
-Corrections, sources and new material are all welcome. Good first contributions:
+Corrections, sources and new material are all welcome, and you don't need to write code: every card in the atlas ends with **Suggest a correction**, which opens a GitHub issue already filled in with what you were looking at. [CONTRIBUTING.md](CONTRIBUTING.md) has the details. Good first contributions:
 
-- **Cite a source.** Find a `draft` row in `knowledge.csv`, `cities.csv` or `landmarks.csv`, add the work to `sources.csv`, and use its id.
+- **Cite a source.** The rows still citing a `draft` placeholder are listed by area in the issues labelled [needs source](https://github.com/Greenere/the-world-we-know/issues?q=is%3Aopen+label%3A%22needs+source%22). Check a few and reply there, or add the work to `sources.csv` and use its id.
 - **Correct a viewpoint.** If you know a culture's history well, check its timeline in the atlas against what you know. Every viewpoint would benefit from review by someone who knows it well, ideally from within that tradition.
 - **Add a journey, landmark, invention, plant or animal.** Copy an existing entry as a template, run `npm run data`, and the build will tell you what's missing.
 - **Translate.** Chinese coverage is complete; the structure in `data/i18n/` and `src/i18n-zh.ts` is the template for other languages.

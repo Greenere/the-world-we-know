@@ -3,7 +3,7 @@ import {bookShelf, dataUrl, landmarkKnown, loadBooks, loadPictures, nameFor, pha
 import type {FogField} from '../fog/field';
 import {cityStatus} from '../map/overlay';
 import type {State, Store} from '../state';
-import {formatRange, formatYear, mainScale, START} from '../time';
+import {formatRange, formatYear, mainScale, PRESENT, START} from '../time';
 import type {Book, City, Depiction, DepictionKind, Invention, Journey, Living, NameEntry, Region, RegionEvent, VpId} from '../types';
 import {ALL_VPS, CONFIDENCE_NAMES, HUMANITY_LEVEL_NAMES, LEVEL_NAMES} from '../types';
 import {isZh, t, tx} from '../i18n';
@@ -12,6 +12,7 @@ import {icons, inventionIcons, kindIcons, livingIcons, naturalIcons} from './ico
 import {JourneySketchPlayback, journeyPageStep, journeySceneAt} from '../journey-scenes';
 import {citySceneAt, citySketchPages} from '../city-sketches';
 import type {ScenePlate} from './journey-card';
+import {correctionLink, plainConfidence, plainLevel, plainYear, type Subject} from './correction';
 
 const LEVEL_ALPHA = [0, 0.16, 0.32, 0.52, 0.74, 0.94];
 
@@ -160,6 +161,9 @@ export class Cards {
         const r = this.data.regionById.get(s.region);
         if (r) nodes = this.region(r, s);
       }
+      // Every card ends with a way to say it is wrong.
+      const fix = this.subject(s);
+      if (fix && nodes.length) nodes.push(correctionLink(this.data, fix, () => this.store.state));
       const enter = () => {
         this.body.replaceChildren(...nodes);
         // A new subject starts at the top; a new viewpoint on the same one keeps the reader's place.
@@ -186,6 +190,117 @@ export class Cards {
       }
     }
     this.live?.(s);
+  }
+
+  /** What the card shows, named in English for a correction, with what it says at the moment of the click. */
+  private subject(s: State): Subject | null {
+    if (s.invention) {
+      const x = this.data.inventionById.get(s.invention);
+      return {kind: 'invention', id: s.invention, name: x?.name ?? s.invention, context: () => (x ? this.inventionContext(x) : [])};
+    }
+    if (s.book) {
+      const b = this.books?.byId.get(s.book);
+      return {kind: 'book', id: s.book, name: b?.title ?? s.book, context: () => (b ? this.bookContext(b) : [])};
+    }
+    if (s.living) {
+      const x = this.data.livingById.get(s.living);
+      return {kind: 'plant or animal', id: s.living, name: x?.name ?? s.living, context: st => (x ? this.livingContext(x, st) : [])};
+    }
+    if (s.city) {
+      const c = this.data.cityById.get(s.city);
+      return {kind: 'place', id: s.city, name: (c && nameFor(c.names, '*' as VpId, PRESENT, c.id)?.name) ?? s.city, context: st => (c ? this.placeContext(c, st) : [])};
+    }
+    if (s.region) {
+      const r = this.data.regionById.get(s.region);
+      return {kind: 'region', id: s.region, name: r?.name ?? s.region, context: st => (r ? this.regionContext(r, st) : [])};
+    }
+    return null;
+  }
+
+  /** The level shown, and every row that could decide it: the region's own and those of the regions holding it,
+   * the one in effect in the year marked. */
+  private regionContext(r: Region, s: State): string[] {
+    const vp = s.vps[0];
+    const vpN = this.data.vp[vp].name;
+    const out: string[] = [];
+    if (s.regionCell !== null) {
+      const st = this.field.cellState(vp, s.regionCell, s.year);
+      out.push(`Shows: ${plainLevel(vp, st.level)} to ${vpN} in ${plainYear(s.year)}${st.level ? `, ${plainConfidence(st.conf)} confidence` : ''}`);
+    }
+    if (r.within.length) out.push(`Held within: ${r.within.join(', ')}`);
+    if (this.data.vp[vp].community) out.push(`${vpN} is a knowledge community: it also knows what its members knew.`);
+    // A member also knows what its community knows, so a level can stand above its own latest row.
+    for (const c of this.data.viewpoints) {
+      const m = c.community?.members.find(m => m.viewpoint === vp && m.from <= s.year && (m.until === undefined || s.year <= m.until));
+      if (m) out.push(`${vpN} also knows what ${c.name} knows (a member from ${plainYear(m.from)}); its rows can decide the level too.`);
+    }
+    const mid = (y: number | [number, number]) => (typeof y === 'number' ? y : (y[0] + y[1]) / 2);
+    const rows: string[] = [];
+    for (const reg of [r, ...r.within.map(id => this.data.regionById.get(id)).filter(Boolean) as Region[]]) {
+      for (const key of [vp, '*'] as (VpId | '*')[]) {
+        const evs = reg.events[key] ?? [];
+        const live = evs.reduce((k, e, i) => (mid(e.y) <= s.year ? i : k), -1);
+        evs.forEach((e, i) =>
+          rows.push(
+            `  ${reg.id} · ${key === '*' ? 'everyone' : key} · ${plainYear(e.y)} · ${e.cap ? 'held at ' : ''}${plainLevel(key, e.level)} · ${plainConfidence(e.conf)} · ${e.source}` +
+              `${e.journey ? ` · journey ${e.journey}` : ''}${e.note ? ` · ${e.note}` : ''}${i === live ? '  ← latest by this year' : ''}`,
+          ),
+        );
+      }
+    }
+    out.push(rows.length ? `Rows for ${vpN} (region · viewpoint · year · level · confidence · source):` : `No rows for ${vpN} on this region or those holding it.`, ...rows);
+    return out;
+  }
+
+  private placeContext(c: City, s: State): string[] {
+    const vp = s.vps[0];
+    const vpN = this.data.vp[vp].name;
+    const dates = (['founded', 'peak', 'abandoned', 'forgotten', 'rediscovered'] as const)
+      .filter(k => c.dates[k] !== undefined)
+      .map(k => `${k} ${plainYear(c.dates[k]!)}`);
+    const land = this.field.cellState(vp, c.cell, s.year);
+    const out = [
+      `A ${c.kind ? `${c.kind} landmark${c.subtype ? ` (${c.subtype})` : ''}` : 'city'}, ${cityStatus(c, s.year)} in ${plainYear(s.year)} · tier ${c.tier}`,
+      `Dates: ${dates.join(' · ') || 'none'}`,
+      `Source: ${c.source}, ${c.confidence} confidence`,
+    ];
+    if (c.found) out.push(`Found: ${Object.entries(c.found).map(([v, y]) => `${v} ${plainYear(y!)}`).join(', ')}`);
+    if (c.widely !== undefined) out.push(`Widely known: ${plainYear(c.widely)}`);
+    if (c.kind || c.dates.abandoned !== undefined) {
+      const known = landmarkKnown(this.data, this.field, c, vp);
+      out.push(`Known to ${vpN} from: ${known === null ? 'never, on this map' : plainYear(known)}`);
+    }
+    out.push(`The land around it: ${plainLevel(vp, land.level)} to ${vpN} in ${plainYear(s.year)}${c.region !== null ? ` (region ${this.data.regions[c.region].id})` : ''}`);
+    if (c.host) out.push(`Stands in: ${c.host}`);
+    return out;
+  }
+
+  private inventionContext(x: Invention): string[] {
+    return [
+      `${plainYear(x.year)} · ${x.place}${x.city ? ` (city ${x.city})` : ''} · ${x.vp ?? x.culture ?? ''} · ${x.category}`,
+      `Source: ${x.source}, ${x.confidence} confidence`,
+      ...(x.book ? [`Shelved as the book ${x.book}`] : []),
+    ];
+  }
+
+  private bookContext(b: Book): string[] {
+    return [
+      `A ${b.kind === 'work' ? 'work of its time' : 'modern study'}${b.year !== undefined ? `, ${plainYear(b.year)}` : ''}${b.vp ? `, ${b.vp}` : ''}`,
+      `Citation: ${b.citation}`,
+      ...(b.also?.length ? [`Also cited as: ${b.also.join(', ')}`] : []),
+    ];
+  }
+
+  private livingContext(x: Living, s: State): string[] {
+    const vp = s.vps[0];
+    const out = [
+      `A ${x.kind} from ${x.origin.place}, ${plainYear(x.origin.year)}${x.origin.culture ? ` (${x.origin.culture})` : ''}`,
+      `Known to ${this.data.vp[vp].name} from: ${plainYear(x.known[vp] ?? x.origin.mid)}${x.home?.includes(vp) ? ' (from the start)' : ''}`,
+      `Source: ${x.source}, ${x.confidence} confidence`,
+    ];
+    const a = s.arrival !== null ? x.spread[s.arrival] : undefined;
+    if (a) out.push(`Picked on its way: ${a.place}, ${plainYear(a.year)}${a.vp ? `, ${a.vp}` : ''}${a.source ? ` · source ${a.source}` : ''} · ${a.note}`);
+    return out;
   }
 
   // ── Region ───────────────────────────────────────────────────────────────

@@ -2036,6 +2036,22 @@ kbd {
   height: 17px;
 }
 
+/* At the foot of every card: a quiet way to say it is wrong, opening a GitHub issue filled in for it. */
+.card-fix {
+  display: inline-block;
+  margin: 16px 0 2px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-3);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-underline-offset: 2px;
+}
+
+.card-fix:hover {
+  color: var(--rubric);
+}
+
 /* Book card: the full citation, then what it brought, each kind under a small heading. */
 .book-citation {
   margin: 6px 0 0;

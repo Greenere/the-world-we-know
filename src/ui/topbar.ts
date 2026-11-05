@@ -7,6 +7,7 @@ import type {VpId} from '../types';
 import {ALL_VPS} from '../types';
 import {h, setIcon} from './dom';
 import {icons, livingIcons, sealSvg} from './icons';
+import {REPO_URL} from './correction';
 
 /** The viewpoints always in the bar; the others are a tap away in the picker, and join the bar while chosen. */
 const FEATURED: VpId[] = ['europe', 'china', 'humanity'];
@@ -177,7 +178,7 @@ export class TopBar {
       // Star on GitHub: the source, in a new tab.
       h(
         'a.tool.tool-github',
-        {href: 'https://github.com/Greenere/the-world-we-know', target: '_blank', rel: 'noopener', title: t('Star on GitHub'), 'aria-label': t('Star on GitHub')},
+        {href: REPO_URL, target: '_blank', rel: 'noopener', title: t('Star on GitHub'), 'aria-label': t('Star on GitHub')},
         h('span.tool-icon', {html: icons.github}),
       ),
     );

@@ -1,0 +1,54 @@
+name: Suggest a correction
+description: Something on the map or a card is wrong, too early, too late, or missing. 地图或卡片上有误、偏早、偏晚或缺漏。
+title: "Correction: "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A correction needs only two things: what is wrong, and where you read otherwise. No need to edit any file; we will make the change and credit you.
+        谢谢！只需说明哪里有误，以及您依据的出处。无需修改文件，我们会更新数据并致谢。
+  - type: input
+    id: subject
+    attributes:
+      label: What is it about? · 关于什么
+      description: A region, place, journey, invention, book, or plant or animal. Filled in when you come from a card.
+      placeholder: "region: Sahara (sahara)"
+    validations:
+      required: true
+  - type: input
+    id: view
+    attributes:
+      label: Seen as · 视角与年份
+      description: The viewpoint and year you were looking at, if it matters.
+      placeholder: "Europe, 1500"
+  - type: input
+    id: link
+    attributes:
+      label: Link to the view · 链接
+      description: The map's address, so we can see what you saw.
+  - type: textarea
+    id: context
+    attributes:
+      label: What the atlas shows · 地图当前显示
+      description: Filled in when you come from a card, with what it said and the rows behind it. Leave it as it is.
+      render: text
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong? · 哪里有误
+      description: For example, "China knew this coast by 1100, not 1400", or "this city was founded around 300 BCE".
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Your source · 出处
+      description: A book, article or primary text, with a page or chapter if you have it. A link is welcome.
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: Credit · 署名
+      description: How you would like to be thanked, if at all.

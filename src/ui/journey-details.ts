@@ -8,6 +8,7 @@ import type {Journey} from '../types';
 import {t, tx} from '../i18n';
 import {h} from './dom';
 import {icons, kindIcons} from './icons';
+import {correctionLink, plainYear} from './correction';
 
 export interface JourneyDetailsActions {
   openRegion(id: string): void;
@@ -170,6 +171,15 @@ export class JourneyDetails {
       this.crossedPaths(j),
       (this.meanwhileEl = h('div.jp-meanwhile', {hidden: true})),
       stopsList,
+      correctionLink(this.data, {kind: 'journey', id: j.id, name: j.name, context: st => {
+        const i = currentStopIndex(geo, st.progress);
+        const at = geo.stops[i];
+        return [
+          `${j.viewpoint} · ${j.kind} · ${j.years} · source ${j.source}, ${j.confidence} confidence`,
+          at ? `At stop ${i + 1} of ${geo.stops.length}: ${at.stop.place ?? ''}, ${at.stop.date ?? plainYear(at.year)} · source ${at.stop.source ?? j.source}${at.stop.confidence ? `, ${at.stop.confidence} confidence` : ''}` : '',
+          ...(at?.stop.note ? [`Its note: ${at.stop.note}`] : []),
+        ].filter(Boolean);
+      }}, () => this.store.state),
     ];
     this.el.replaceChildren(...(nodes.filter(Boolean) as Node[]));
   }

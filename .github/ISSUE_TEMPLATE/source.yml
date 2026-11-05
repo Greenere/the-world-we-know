@@ -1,0 +1,30 @@
+name: Add a source
+description: Cite a source for rows that still have only a placeholder (draft). 为仍是草稿的数据补充出处。
+title: "Source: "
+labels: [needs source]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Many rows in `data/` still cite `draft` or `draft-urban`: dates from general knowledge, waiting for a citation. Pick a few, check them, and tell us what you found. The open lists are in the issues labelled **needs source**.
+        `data/` 中仍有许多行引用 `draft` 或 `draft-urban`，即尚待核实的年份。挑几行核对，告诉我们您的发现即可。
+  - type: textarea
+    id: rows
+    attributes:
+      label: Which rows · 哪些行
+      description: Their ids (a city, landmark, or region and viewpoint), or the issue they come from.
+      placeholder: "carthage, utica, gades (from #12)"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and what it says · 出处与内容
+      description: The source, with page or chapter, and the dates it gives. Say if it confirms the row as it is.
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: Credit · 署名
+      description: How you would like to be thanked, if at all.
