@@ -137,6 +137,7 @@ Corrections, sources and new material are all welcome, and you don't need to wri
 - **Correct a viewpoint.** If you know a culture's history well, check its timeline in the atlas against what you know. Every viewpoint would benefit from review by someone who knows it well, ideally from within that tradition.
 - **Add a journey, landmark, invention, plant or animal.** Copy an existing entry as a template, run `npm run data`, and the build will tell you what's missing.
 - **Translate.** Chinese coverage is complete; the structure in `data/i18n/` and `src/i18n-zh.ts` is the template for other languages.
+- **Beyond the data:** bug reports, code, design and accessibility, the sketches and the writing all welcome help; [CONTRIBUTING.md](CONTRIBUTING.md#beyond-the-data) says how.
 
 Please run `npm run data` and `npm run build` before opening a pull request; both must pass.
 

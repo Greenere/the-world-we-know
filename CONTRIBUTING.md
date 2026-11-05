@@ -39,6 +39,50 @@ If you are comfortable with git, you are welcome to open a pull request. Everyth
 
 Run `npm run data` (it checks every reference and will tell you what's wrong) and `npm run build` before opening the pull request; both must pass. See [Running it locally](README.md#running-it-locally).
 
+## Beyond the data
+
+The atlas is also a piece of software, a bilingual text and a set of pictures, and all of those can use help.
+
+### Report a bug or suggest an idea
+
+Something broken, slow or confusing? [Open an issue](https://github.com/Greenere/the-world-we-know/issues/new) with what you did, what you expected, your browser and device, and the map's address (it records the view). A screenshot helps. For an idea, or anything you are unsure of, start a [discussion](https://github.com/Greenere/the-world-we-know/discussions) first. Corrections to the content itself are quickest through the link on the card.
+
+### Code
+
+The site is plain TypeScript with no framework, drawing the map with [MapLibre GL](https://maplibre.org/) and [deck.gl](https://deck.gl/); the data is compiled by a Python script. [Running it locally](README.md#running-it-locally) takes three commands, and the [project layout](README.md#project-layout) shows where things live.
+
+- **Talk first about anything large.** A new feature, a new dependency or a change to how knowledge is modelled is best agreed in an issue or discussion before you build it. Small fixes can go straight to a pull request.
+- **Match the code around you:** its naming, its idioms, and its comments, which explain *why* in plain sentences.
+- **Every piece of interface text goes through `t()`**, with its Chinese in `src/i18n-zh.ts`. If you can't write the Chinese, say so in the pull request and someone will.
+- **Look at it, not just at the tests:** check the change in the running app, at phone width as well as on a wide screen, and in both languages.
+- **Before opening the pull request**, run `npm run typecheck`, `npm test`, `npm run data` and `npm run build`. The same checks run on every pull request.
+- Keep a pull request to one change, and say in it what you changed and how you checked it.
+
+### Translation
+
+- **Improve the Chinese.** Interface text is in [`src/i18n-zh.ts`](src/i18n-zh.ts); the data's Chinese (names, journeys, notes, books) is in [`data/i18n/zh/`](data/i18n/zh). Better wording and more natural names are always welcome.
+- **Add a language.** The data's translations follow one pattern any language can copy, but the interface currently switches between two languages only. Start a discussion first, so the switch can grow a third.
+
+### Design and accessibility
+
+The atlas aims to look like an old printed atlas and to be easy to read and use. If something is hard to see, to click or to understand, or can't be reached with the keyboard or a screen reader, please tell us; an issue with a screenshot is ideal. Design proposals are welcome as a discussion with a sketch or mock-up.
+
+### Sketches
+
+The pictures of cities, journey scenes, landmarks and inventions are **imagined illustrations made with an image model**, labelled as such on every card. Each records the prompt it was made from and the sources its details follow, in [`data/depictions/`](data/depictions); [docs/image-api-guide.md](docs/image-api-guide.md) explains how they are made.
+
+- **Spot an error in a picture**, such as the wrong buildings, dress or ships for the place and time: use the card's correction link and say what the sources show instead.
+- **Suggest a subject**, such as a city era or a journey scene that deserves a picture, in a discussion, with the sources a picture should follow.
+- **If you would like to contribute drawings of your own**, start a discussion first, so they can fit the set and be labelled for what they are.
+
+### Writing
+
+Cards carry short stories and notes. They are plain and specific, name their sources, and never say "discovered": a place is "first known to" a viewpoint, since someone was almost always there already. Proposals to sharpen a story, or to add one where there is none, are welcome as a correction or a pull request.
+
+### Spread the word
+
+Share the atlas with people who know a region or a period well, as they are the ones who can make it more right. If you use it in teaching or research, we would love to hear how in a [discussion](https://github.com/Greenere/the-world-we-know/discussions).
+
 ## Credit and license
 
 Contributors are thanked in the commit that uses their correction or source. The data is published under [CC BY 4.0](data/LICENSE.md) and the code under the [Mozilla Public License 2.0](LICENSE); by contributing you agree that your contribution is shared under the same terms.
