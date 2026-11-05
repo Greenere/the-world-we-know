@@ -1,0 +1,58 @@
+name: A sketch
+description: Fix a sketch, propose a new one, or send one you made. 修正、建议或提交一幅速写。
+title: "Sketch: "
+labels: [sketch]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The [sketch guide](https://github.com/Greenere/the-world-we-know/blob/main/docs/sketch-guide.md) explains how the sketches should look and how to get their history right. If you are fixing a sketch you saw on a card, its "Suggest a correction" link fills in the details for you.
+        [速写指南](https://github.com/Greenere/the-world-we-know/blob/main/docs/sketch-guide.zh.md)说明了速写应有的样子，以及如何把历史画对。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What would you like to do? · 您想做什么
+      options:
+        - Fix a sketch that is wrong · 修正有误的速写
+        - Propose a subject for a new sketch · 建议新的速写题材
+        - Send a sketch I made · 提交我画的速写
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: Which subject? · 哪个题材
+      description: The city, journey stop, landmark, natural wonder or invention, and the year it shows.
+      placeholder: "Constantinople in 1100; Zheng He's fourth voyage at Hormuz"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong, or what should it show? · 哪里有误，或应画什么
+      description: For a fix, what is wrong and what should be there instead. For a new sketch, what the page should show.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources · 出处
+      description: What the picture should follow (site reports, period descriptions, museum objects), with pages or links.
+    validations:
+      required: true
+  - type: textarea
+    id: picture
+    attributes:
+      label: Your picture, and how it was made · 您的画作及制作方法
+      description: If you are sending a sketch, drag the image here (at least 1536 px wide, 3:2), and say whether you drew it by hand or with an image model. For a model, paste the full prompt and name the model.
+  - type: input
+    id: credit
+    attributes:
+      label: Credit · 署名
+      description: The name to credit, for a drawing or for the research.
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights · 权利
+      options:
+        - label: If I am sending a picture, I made it or have the right to share it under CC BY 4.0, and it does not copy an existing artwork. 如提交画作，它是我自己画的或我有权以 CC BY 4.0 共享，且没有照搬现有作品。

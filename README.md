@@ -127,7 +127,7 @@ The CSV files open with comments explaining their conventions, and the build che
 
 This is a work of synthesis. Dates and extents are approximate, and many rows still cite `draft` or `draft-urban`: placeholders meaning "from general knowledge, awaiting a source". Replacing them with real citations is one of the most useful contributions anyone can make. Legendary journeys such as the Odyssey are labelled as illustrative.
 
-The sketches of cities, journey scenes and inventions are **imagined illustrations made with an image model.** They are not historical images, and each is labelled as an imagined sketch on the card. Each one records the prompt it was made from and the sources its details follow. See [docs/image-api-guide.md](docs/image-api-guide.md) for how they are made.
+The sketches of cities, journey scenes and inventions are **imagined illustrations made with an image model.** They are not historical images, and each is labelled as an imagined sketch on the card. Each one records the prompt it was made from and the sources its details follow. See the [sketch guide](docs/sketch-guide.md) for how they should look and how to fix or contribute one, and [docs/image-api-guide.md](docs/image-api-guide.md) for how they are generated.
 
 ## Contributing
 

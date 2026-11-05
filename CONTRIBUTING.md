@@ -69,11 +69,10 @@ The atlas aims to look like an old printed atlas and to be easy to read and use.
 
 ### Sketches
 
-The pictures of cities, journey scenes, landmarks and inventions are **imagined illustrations made with an image model**, labelled as such on every card. Each records the prompt it was made from and the sources its details follow, in [`data/depictions/`](data/depictions); [docs/image-api-guide.md](docs/image-api-guide.md) explains how they are made.
+The pictures of cities, journey scenes, landmarks and inventions are **imagined illustrations**, labelled as such on every card, and each records the prompt it was made from and the sources its details follow. They are one of the easiest places for an error to hide, and contributions to them are especially welcome. The [sketch guide](docs/sketch-guide.md) sets out how they should look, how to get their history right, a checklist every page must pass, and how to make one with an image model or by hand.
 
-- **Spot an error in a picture**, such as the wrong buildings, dress or ships for the place and time: use the card's correction link and say what the sources show instead.
-- **Suggest a subject**, such as a city era or a journey scene that deserves a picture, in a discussion, with the sources a picture should follow.
-- **If you would like to contribute drawings of your own**, start a discussion first, so they can fit the set and be labelled for what they are.
+- **Spot an error in a picture**, such as buildings, dress or ships wrong for the place and time: use the card's correction link, which names the sketch on show, and say what the sources show instead.
+- **Propose a subject or send a sketch** through the [sketch form](https://github.com/Greenere/the-world-we-know/issues/new?template=sketch.yml). Drawings by hand are credited to their artist on the card.
 
 ### Writing
 

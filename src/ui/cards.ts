@@ -70,6 +70,8 @@ export class Cards {
   /** The pending swap from one card's words to the next. */
   private leaving = 0;
   private lightbox: HTMLElement | null = null;
+  /** The sketch on the card now showing, if any, for a correction to name. */
+  private cardPlate: Plate | null = null;
   /** The Books shelf, once fetched. */
   private books: Books | null = null;
 
@@ -134,6 +136,7 @@ export class Cards {
       this.key = key;
       this.live = null;
       let nodes: Node[] = [];
+      this.cardPlate = null;
       if (s.invention) {
         const x = this.data.inventionById.get(s.invention);
         if (x) nodes = this.invention(x);
@@ -272,7 +275,15 @@ export class Cards {
     }
     out.push(`The land around it: ${plainLevel(vp, land.level)} to ${vpN} in ${plainYear(s.year)}${c.region !== null ? ` (region ${this.data.regions[c.region].id})` : ''}`);
     if (c.host) out.push(`Stands in: ${c.host}`);
-    return out;
+    return [...out, ...this.sketchContext()];
+  }
+
+  /** The sketch on the card, and where its prompt and sources are recorded. */
+  private sketchContext(): string[] {
+    const d = this.cardPlate?.showing;
+    if (!d) return [];
+    const folder = d.path.slice(0, d.path.lastIndexOf('/'));
+    return [`Sketch shown: "${d.title}" (data/depictions/${folder}/subject.json, entry ${d.path.slice(folder.length + 1)}; how it was made: data/depictions/${d.path}.json)`];
   }
 
   private inventionContext(x: Invention): string[] {
@@ -280,6 +291,7 @@ export class Cards {
       `${plainYear(x.year)} · ${x.place}${x.city ? ` (city ${x.city})` : ''} · ${x.vp ?? x.culture ?? ''} · ${x.category}`,
       `Source: ${x.source}, ${x.confidence} confidence`,
       ...(x.book ? [`Shelved as the book ${x.book}`] : []),
+      ...this.sketchContext(),
     ];
   }
 
@@ -584,6 +596,7 @@ export class Cards {
         )
       : null;
     if (neighbors) this.landmarkPlate = plate;
+    this.cardPlate = plate;
     if (plate) out.push(plate.el);
     if (c.story) out.push(h('p.card-story', tx.story(c.id, c.story)));
     const labels: Record<string, string> = {
@@ -837,6 +850,7 @@ export class Cards {
       jump: () => {},
     }, x.vp ?? this.store.state.vps[0], (d, title, caption, range) => this.openLightbox(d, title, caption, range), this.inventionPlate ?? undefined) : null;
     this.inventionPlate = plate;
+    this.cardPlate = plate;
     if (plate) {
       plate.el.classList.add('plate-invention');
       plate.show(x.mid);
@@ -1132,6 +1146,11 @@ class Plate {
     return `${this.order.kind}/${this.order.id}`;
   }
 
+  /** The sketch on show, as a correction names it: its folder and id, and its title. */
+  get showing(): {path: string; title: string} | null {
+    return this.shown ? {path: `${this.subject}/${this.shown.id}`, title: this.shown.title} : null;
+  }
+
   private title(d: Depiction) {
     return tx.depiction(this.subject, d.id, 'title', d.title);
   }
@@ -1203,7 +1222,7 @@ class Plate {
     swap(this.cap, d.id, () => [h('span.plate-era', this.title(d)), h('span.plate-range', range)]);
     swap(this.text, `${d.id}|${this.vp}`, () => [caption]);
     swap(this.src, d.id, () => [
-      `${t('Imagined sketch')}${d.made?.model ? ` (${d.made.model})` : ''} · ${t('after {sources}', {sources: d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')})}`,
+      `${d.made?.artist ? t('Imagined sketch by {artist}', {artist: d.made.artist}) : `${t('Imagined sketch')}${d.made?.model ? ` (${d.made.model})` : ''}`} · ${t('after {sources}', {sources: d.sources.map(id => shortCitation(this.data.sources, id)).join(', ')})}`,
     ]);
     this.src.title = d.sources.map(id => this.data.sources[id]?.citation ?? id).join('\n');
     for (const b of this.strip.querySelectorAll<HTMLElement>('.plate-era-btn')) {

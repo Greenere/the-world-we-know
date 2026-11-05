@@ -160,6 +160,7 @@ export const zhUi: Record<string, string> = {
   // Pictures
   'imagined sketch': '想象速写',
   'Imagined sketch': '想象速写',
+  'Imagined sketch by {artist}': '想象速写，{artist} 绘',
   'after {sources}': '据{sources}',
   Placeholder: '占位图',
   Enlarge: '放大',

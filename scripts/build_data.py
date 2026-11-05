@@ -1265,7 +1265,8 @@ def load_depictions(sources, vp_ids, subjects: dict) -> dict[str, dict[str, int]
             made = folder / f"{e['id']}.json"
             if made.exists() and not placeholder:
                 m = json.loads(made.read_text(encoding="utf-8"))
-                rec["made"] = {k: m[k] for k in ("provider", "model", "date") if k in m}
+                # An image model's provider and model, or the artist who drew it by hand.
+                rec["made"] = {k: m[k] for k in ("provider", "model", "date", "artist") if k in m}
             items.append(rec)
         if kind == "city":
             items.sort(key=lambda r: r["from"])

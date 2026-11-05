@@ -178,6 +178,7 @@ export class JourneyDetails {
           `${j.viewpoint} · ${j.kind} · ${j.years} · source ${j.source}, ${j.confidence} confidence`,
           at ? `At stop ${i + 1} of ${geo.stops.length}: ${at.stop.place ?? ''}, ${at.stop.date ?? plainYear(at.year)} · source ${at.stop.source ?? j.source}${at.stop.confidence ? `, ${at.stop.confidence} confidence` : ''}` : '',
           ...(at?.stop.note ? [`Its note: ${at.stop.note}`] : []),
+          ...(j.pictures ? [`Its sketches: data/depictions/journey/${j.id}/subject.json (scenes at stop index ${i})`] : []),
         ].filter(Boolean);
       }}, () => this.store.state),
     ];

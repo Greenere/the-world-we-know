@@ -94,7 +94,8 @@ export interface Depiction {
   confidence: string;
   img: {thumb: string; card: string; full: string};
   placeholder?: boolean;
-  made?: {provider?: string; model?: string; date?: string};
+  /** How it was made: by an image model, or drawn by hand by `artist`. */
+  made?: {provider?: string; model?: string; date?: string; artist?: string};
 }
 
 export type DepictionKind = 'city' | 'journey' | 'invention' | 'natural' | 'built';
