@@ -859,13 +859,17 @@ kbd {
   color: var(--ink-2);
 }
 
+/* One line, always held, so a caption never moves the year or overflows the bar; a long one shrinks a little
+   to fit (see showCaption), then ends in an ellipsis. */
 .tl-caption {
   margin-top: 2px;
   font-size: 12.5px;
   font-style: italic;
   line-height: 1.2;
-  max-height: 2.4em;
+  height: 1.2em;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   opacity: 0;
   transform: translateY(3px);
   transition: opacity 0.4s, transform 0.4s;

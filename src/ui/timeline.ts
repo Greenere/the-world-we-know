@@ -189,7 +189,11 @@ export class Timeline {
 
   showCaption(text: string, color: string) {
     this.caption.textContent = text;
+    this.caption.title = text;
     this.caption.style.color = color;
+    // Shrink a long caption to fit its one line, down to a size still easy to read.
+    this.caption.style.fontSize = '';
+    for (let px = 12; px >= 11 && this.caption.scrollWidth > this.caption.clientWidth; px -= 0.5) this.caption.style.fontSize = `${px}px`;
     this.caption.classList.add('show');
     clearTimeout(this.captionTimer);
     this.captionTimer = window.setTimeout(() => this.caption.classList.remove('show'), 3800);
