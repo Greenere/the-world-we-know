@@ -140,6 +140,8 @@
   "informs": [
     {"region": "china-north", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Cathay"},
     {"viewpoint": "europe", "region": "china-north", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Cathay"},
+    {"region": "ordos", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Egrigaia and Tenduc"},
+    {"viewpoint": "europe", "region": "ordos", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Egrigaia and Tenduc"},
     {"region": "china-south", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Mangi and Quinsay"},
     {"viewpoint": "europe", "region": "china-south", "level": 3, "homeKnows": 1300, "confidence": "medium", "note": "Mangi and Quinsay"},
     {"region": "hexi", "level": 3, "homeKnows": 1300, "confidence": "medium"},

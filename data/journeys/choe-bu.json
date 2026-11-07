@@ -20,6 +20,6 @@
     {"year": 1488, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "note": "He writes his diary for the king before going home to mourn.", "city": "seoul"}
   ],
   "informs": [
-    {"region": "china-south", "level": 4, "homeKnows": 1488, "confidence": "high", "note": "Jiangnan and the Grand Canal, in Choe Bu's diary"}
+    {"region": "jiangnan", "level": 4, "homeKnows": 1488, "confidence": "high", "note": "Jiangnan and the Grand Canal, in Choe Bu's diary"}
   ]
 }

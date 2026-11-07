@@ -70,7 +70,7 @@
 "china-north": "华北",
 "china-south": "华南",
 "lingnan": "岭南",
-"sichuan": "四川与云南",
+"sichuan": "西南（四川、云南与贵州）",
 "tibet": "青藏高原",
 "himalaya": "喜马拉雅",
 "everest": "珠穆朗玛峰顶",
@@ -252,5 +252,16 @@
 "columbia-plateau": "哥伦比亚高原与落基山北部",
 "ecuador": "厄瓜多尔与基多",
 "colombia-andes": "哥伦比亚安第斯（穆伊斯卡高地）",
-"spanish-main": "西班牙大陆沿岸（从达连到帕里亚）"
+"spanish-main": "西班牙大陆沿岸（从达连到帕里亚）",
+"ordos": "河套与鄂尔多斯",
+"guanzhong": "关中（渭河谷地）",
+"central-plain": "中原",
+"hebei": "河北（燕）",
+"shandong": "山东（齐鲁）",
+"shanxi": "山西（河东）",
+"jiangnan": "江南（长江下游）",
+"middle-yangzi": "长江中游（荆楚）",
+"fujian": "福建（闽）",
+"sichuan-basin": "四川（巴蜀）",
+"yunnan-guizhou": "云南与贵州"
 }

@@ -560,6 +560,8 @@ europe,china-south,1735,4,high,du-halde,
 france,manchuria,1735,3,high,du-halde,
 france,korea,1735,3,high,du-halde,
 france,mongolia,1735,3,high,du-halde,
+france,ordos,1735,3,high,du-halde,
+europe,ordos,1735,3,high,du-halde,
 france,tibet,1735,2,high,du-halde,
 norse,arabia-interior,1762,2,medium,hoc,Niebuhr's expedition
 iberia,california,1769..1850,4,high,hoc,
@@ -643,6 +645,7 @@ china,china-north,-500,4,high,shangshu-yugong,The Nine Provinces of the Tribute 
 china,china-south,-500,3,medium,shangshu-yugong,"Chu, Wu and Yue"
 china,sichuan,-500,2,medium,shangshu-yugong,Ba and Shu
 china,lingnan,-500,1,low,shanhaijing,The Hundred Yue
+china,ordos,-500,2,medium,shangshu-yugong,The Rong and Di peoples of the north
 china,korea,-500,1,low,shanhaijing,
 china,manchuria,-500,1,low,shanhaijing,
 china,mongolia,-500,2,medium,shangshu-yugong,The Rong and Di peoples of the north
@@ -651,14 +654,20 @@ china,tarim,-500,1,low,shanhaijing,Kunlun and the Queen Mother of the West
 china,tibet,-500,1,low,shanhaijing,
 china,east-china-sea,-500,2,medium,shangshu-yugong,
 china,sichuan,-316,4,high,shiji,Qin conquers Shu
+china,ordos,-300,3,high,shiji,Zhao founds Yunzhong commandery
+china,yunnan-guizhou,-279,=2,medium,shiji,Zhuang Qiao reaches Lake Dian
 china,china-south,-221,4,high,shiji,The Qin unification
+china,fujian,-221,=2,medium,shiji,Qin names a Minzhong commandery
 china,lingnan,-214,3,high,shiji,Qin armies reach the southern sea
+china,ordos,-214,4,high,shiji,Meng Tian takes the land south of the river
 china,annam,-214,1,medium,shiji,
 china,south-china-sea,-214,2,medium,shiji,
 china,mongolia,-209,3,high,shiji,The Xiongnu confederation under Modu
 # Han expansion
 china,hexi,-121,4,high,shiji,The Hexi corridor taken
 china,lingnan,-111,4,high,hanshu,Nanyue conquered
+china,fujian,-110,4,high,shiji,The Han conquer Minyue
+china,yunnan-guizhou,-109,=3,high,shiji,The king of Dian receives a Han seal
 china,annam,-111,3,high,hanshu,Jiaozhi commandery
 china,south-china-sea,-111,3,medium,hanshu,
 china,korea,-108,3,high,hanshu,Lelang commandery
@@ -734,6 +743,7 @@ china,japan,1225,3,high,zhao-rugua,
 china,ryukyu-taiwan,1225,2,high,zhao-rugua,
 # The Mongol world
 china,mongolia,1260,4,high,hoc,
+china,yunnan-guizhou,1274,4,high,yuanshi,The Yuan make Yunnan a province
 china,transoxiana,1260,4,high,hoc,
 china,bactria,1260,3,high,hoc,
 china,zhetysu,1260,4,high,hoc,
@@ -814,6 +824,7 @@ china,china-north,1708..1718,5,high,kangxi-atlas,The Kangxi atlas surveys the em
 china,china-south,1708..1718,5,high,kangxi-atlas,
 china,lingnan,1708..1718,5,high,kangxi-atlas,
 china,sichuan,1708..1718,5,high,kangxi-atlas,
+china,ordos,1708..1718,4,high,kangxi-atlas,
 china,hexi,1708..1718,5,high,kangxi-atlas,
 china,manchuria,1708..1718,4,high,kangxi-atlas,
 china,mongolia,1708..1718,4,high,kangxi-atlas,
@@ -1108,6 +1119,7 @@ humanity,ryukyu-taiwan,-35000..-30000,5,medium,bae-2017,
 humanity,mongolia,-45000..-40000,5,medium,bae-2017,
 humanity,manchuria,-40000..-35000,5,medium,bae-2017,
 humanity,hexi,-40000..-30000,5,low,bae-2017,
+humanity,ordos,-41000..-35000,5,medium,bae-2017,Shuidonggou on the Yellow River
 humanity,tarim,-40000..-30000,5,low,bae-2017,
 humanity,tibet,-40000..-30000,5,low,bae-2017,Nwya Devu on the high plateau
 humanity,himalaya,-40000..-30000,5,low,bae-2017,
@@ -1647,7 +1659,7 @@ persia,malabar,400,3,medium,cosmas,Persian Christian merchants on the Malabar co
 persia,west-india-coast,400,3,medium,cosmas,
 persia,sri-lanka,500,3,medium,cosmas,Persian ships at Taprobane
 persia,bay-of-bengal,500,1,low,cosmas,
-persia,china-south,600,1,low,hoc,Bosi merchants in Guangzhou
+persia,lingnan,600,1,low,hoc,Bosi merchants in Guangzhou
 persia,east-africa-coast,550,1,low,hoc,
 persia,horn,550,2,low,cosmas,
 persia,ethiopia,550,2,medium,cosmas,Aksum
@@ -1732,6 +1744,7 @@ persia,china-north,1310,4,high,rashid-al-din,"Khitay, described with Chinese hel
 persia,china-south,1310,4,high,rashid-al-din,Manzi
 persia,lingnan,1310,3,medium,rashid-al-din,
 persia,mongolia,1310,4,high,rashid-al-din,The homeland of the Mongols
+persia,ordos,1310,3,medium,rashid-al-din,
 persia,manchuria,1310,2,medium,rashid-al-din,
 persia,korea,1310,2,medium,rashid-al-din,Kawli
 persia,tibet,1310,3,high,rashid-al-din,
@@ -1937,15 +1950,22 @@ europe,med-west,-600,3,medium,boardman,
 greece,gaul,-600,2,medium,boardman,Massalia founded
 greece,pontic-steppe,-600,2,medium,boardman,
 # ════ Before 500 BCE: China (Erlitou, Shang and Zhou) ════
-china,china-north,-2000,3,low,liu-chen,The middle Yellow River: Erlitou and its neighbours
+china,china-north,-2000,2,low,liu-chen,
+china,central-plain,-2000,3,low,liu-chen,The middle Yellow River: Erlitou and its neighbours
 china,china-south,-2000,1,low,liu-chen,
 china,sichuan,-2000,1,low,liu-chen,
 china,mongolia,-2000,1,low,liu-chen,
-china,china-north,-1250,4,high,keightley,"Shang divinations name the lands all round, the fang"
+china,china-north,-1250,3,high,keightley,
+china,central-plain,-1250,4,high,keightley,"Shang divinations name the lands all round, the fang"
+china,middle-yangzi,-1500,3,medium,liu-chen,Panlongcheng: a Shang outpost on the Yangzi
+china,fujian,-1250,=1,low,keightley,
+china,yunnan-guizhou,-1250,=1,low,keightley,
 china,china-south,-1250,2,medium,keightley,Copper and tin from the Yangzi
 china,mongolia,-1250,1,medium,keightley,The Tufang and Guifang raiders
+china,ordos,-1250,1,medium,keightley,
 china,hexi,-1250,1,low,keightley,The Qiang to the west
 china,sichuan,-1046,2,medium,shaughnessy,Shu fights for the Zhou at Muye
+china,china-north,-1046,4,high,shaughnessy,"The Zhou found Qi, Lu, Yan and Jin"
 china,china-south,-1046,2,medium,shaughnessy,
 china,manchuria,-1046,1,low,shaughnessy,The Sushen bring arrows of hu wood
 china,mongolia,-771,2,medium,shaughnessy,The Quanrong sack the Zhou capital
@@ -2957,7 +2977,8 @@ korea,manchuria,-2000,2,low,seth-korea,
 korea,japan,-2000,1,low,habu,Jōmon and Chulmun fishers meet across the Tsushima strait
 korea,korea,-1500,3,medium,seth-korea,Mumun rice farmers
 korea,manchuria,-1000,3,low,seth-korea,The Liaoning bronze-dagger culture
-korea,china-north,-400,2,low,seth-korea,The knife money of Yan
+korea,china-north,-400,1,low,seth-korea,
+korea,hebei,-400,2,low,seth-korea,The knife money of Yan
 korea,japan,-400,2,medium,seth-korea,Mumun farmers carry rice to Kyushu
 korea,mongolia,-300,1,low,seth-korea,
 korea,korea,-194,4,medium,shiji,Wiman's kingdom at Wanggeom
@@ -3029,6 +3050,7 @@ korea,europe,1895,3,high,yu-kilchun,Yu Kil-chun's Observations on a Journey to t
 
 # ════ Steppe: the deer-stone herders, then the empires of the Orkhon ════
 steppe,mongolia,-2000,3,low,honeychurch,Herders of the Mongolian plateau
+steppe,ordos,-2000,2,low,honeychurch,
 steppe,siberia-baikal,-2000,1,low,honeychurch,
 steppe,manchuria,-2000,1,low,honeychurch,
 steppe,china-north,-2000,1,low,honeychurch,
@@ -3038,6 +3060,7 @@ steppe,siberia-baikal,-1200,1,low,honeychurch,
 steppe,zhetysu,-1200,1,low,honeychurch,
 steppe,china-north,-1250,2,medium,keightley,Raiders on the Shang frontier
 steppe,mongolia,-209,4,medium,shiji,The Xiongnu confederation under Modu
+steppe,ordos,-209,4,high,shiji,Modu retakes the land south of the river
 steppe,china-north,-200,3,high,shiji,Modu besieges the Han emperor at Baideng
 steppe,manchuria,-209,3,high,shiji,The Donghu defeated
 steppe,hexi,-176,3,high,shiji,The Yuezhi driven out
@@ -3073,6 +3096,7 @@ steppe,china-north,757,4,high,golden-turkic,Uyghur horsemen retake the Tang capi
 steppe,mesopotamia,762,1,low,golden-turkic,"Babylon, homeland of Mani, whose faith the khagan adopts"
 steppe,yenisei,840,2,high,golden-turkic,The Kyrgyz sack Ordu-Baliq
 steppe,hexi,1209,4,high,secret-history,The Tangut kingdom submits
+steppe,ordos,1227,5,high,secret-history,Genghis Khan dies besieging the Tangut capital
 steppe,china-north,1215,5,high,secret-history,Zhongdu falls
 steppe,manchuria,1215,4,high,secret-history,
 steppe,tarim,1218,4,high,secret-history,The Qara Khitai conquered
@@ -3091,6 +3115,7 @@ steppe,mesopotamia,1258,4,high,rashid-al-din,Baghdad falls to Hulagu
 steppe,levant,1260,3,high,rashid-al-din,
 steppe,egypt,1260,2,high,rashid-al-din,The Mamluks win at Ain Jalut
 steppe,china-south,1279,4,high,yuanshi,The Song conquered
+steppe,yunnan-guizhou,1253,4,high,yuanshi,Kublai takes Dali
 steppe,annam,1285,3,high,yuanshi,The campaigns against Đại Việt and Champa
 steppe,burma,1287,3,high,yuanshi,Pagan falls
 steppe,japan,1274,3,high,yuanshi,The invasions of Japan

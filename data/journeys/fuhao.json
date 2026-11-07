@@ -19,6 +19,6 @@
   ],
   "informs": [
     {"region": "mongolia", "level": 2, "homeKnows": -1197, "confidence": "medium", "note": "The Tufang lands of the north"},
-    {"region": "sichuan", "level": 2, "homeKnows": -1197, "confidence": "low", "note": "The Ba"}
+    {"region": "sichuan-basin", "level": 2, "homeKnows": -1197, "confidence": "low", "note": "The Ba"}
   ]
 }
