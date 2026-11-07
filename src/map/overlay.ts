@@ -646,8 +646,8 @@ export class OverlayModel {
         getColor: [...SEPIA, 215],
         fontFamily: FONT_SC,
         characterSet: this.charset,
-        fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-        outlineWidth: 3,
+        fontSettings: FONT,
+        outlineWidth: outline(3),
         outlineColor: [...PAPER, 170],
         sizeUnits: 'pixels',
       }),
@@ -755,8 +755,8 @@ export class OverlayModel {
         getPixelOffset: d => [d.city.kind ? 9 : d.status === 'living' ? 7 + (3 - d.tier) : 8, 0],
         fontFamily: FONT_TEXT,
         characterSet: this.charset,
-        fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-        outlineWidth: 4,
+        fontSettings: FONT,
+        outlineWidth: outline(4),
         outlineColor: [...PAPER, 215],
         sizeUnits: 'pixels',
       }),
@@ -773,8 +773,8 @@ export class OverlayModel {
         // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
         fontWeight: italic(),
         characterSet: this.charset,
-        fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-        outlineWidth: 3,
+        fontSettings: FONT,
+        outlineWidth: outline(3),
         outlineColor: [...PAPER, 170],
         sizeUnits: 'pixels',
         pickable: true,
@@ -1012,8 +1012,8 @@ export class OverlayModel {
           fontFamily: FONT_TEXT,
           fontWeight: italic(),
           characterSet: this.charset,
-          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-          outlineWidth: 4,
+          fontSettings: FONT,
+          outlineWidth: outline(4),
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
         }),
@@ -1115,8 +1115,8 @@ export class OverlayModel {
           fontFamily: FONT_TEXT,
           fontWeight: italic(),
           characterSet: this.charset,
-          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-          outlineWidth: 4,
+          fontSettings: FONT,
+          outlineWidth: outline(4),
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
           updateTriggers: {getText: key},
@@ -1137,8 +1137,8 @@ export class OverlayModel {
           fontFamily: FONT_NUM,
           // Only what dates are written with: a second face over every Chinese character would not fit its atlas.
           characterSet: 'auto',
-          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-          outlineWidth: 4,
+          fontSettings: FONT,
+          outlineWidth: outline(4),
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
           updateTriggers: {getText: key},
@@ -1243,8 +1243,8 @@ export class OverlayModel {
           // deck writes `${fontWeight} 64px ${fontFamily}`, so a style keyword here gives italics.
           fontWeight: italic(),
           characterSet: this.charset,
-          fontSettings: {sdf: true, fontSize: 64, buffer: 10, radius: 14},
-          outlineWidth: 4,
+          fontSettings: FONT,
+          outlineWidth: outline(4),
           outlineColor: [...PAPER, 225],
           sizeUnits: 'pixels',
           updateTriggers: {getColor: key, getPixelOffset: `${key}|${state.year}`},
@@ -1477,6 +1477,13 @@ function waterSize(v: CityView) {
 export function citySize(tier: number) {
   return tier === 1 ? 14 : tier === 2 ? 12.5 : 11.5;
 }
+
+/** The labels' font atlas. Chinese labels need well over a thousand glyphs, and the atlas is 1024 px wide and grows
+ * in powers of two; at 64 px it outgrew 8192 px, a texture many GPUs (and phones) refuse, and every label failed.
+ * 48 px glyphs keep it at 8192 with room for several hundred more. */
+const FONT = {sdf: true, fontSize: 48, buffer: 8, radius: 12};
+/** An outline drawn at the 64 px atlas the labels were tuned for: deck.gl draws it in atlas pixels. */
+const outline = (px: number) => (px * FONT.fontSize) / 64;
 
 export function clampLat(lat: number, globe: boolean) {
   return globe ? lat : Math.max(-84.6, Math.min(84.6, lat));
