@@ -371,7 +371,9 @@ export class OverlayModel {
       if (status === 'lost' && !humanity) continue;
       if (!humanity && !levels.some(l => l[c.cell] >= 2) && !(seen && seen[c.cell] >= 0.6)) continue;
       // A landmark stays off a viewpoint's map until that viewpoint knew the place itself, not just the land.
-      if (c.kind && !humanity && state.vps.every(vp => landmarkKnown(data, field, c, vp) > year)) continue;
+      // People see everything they built, but a mountain or a lake was there long before them: on their map it
+      // waits until they reached the land it stands in.
+      if (c.kind && (!humanity || c.kind === 'natural') && state.vps.every(vp => landmarkKnown(data, field, c, vp) > year)) continue;
       const name = nameFor(c.names, labelVp, year, c.id, sharedVp)!;
       const prev = this.appeared.get(c.id);
       let appearedAt = prev ?? (first ? -1e9 : now);
