@@ -361,6 +361,24 @@ def assign_cells(grid: Grid, regions: list[Region]):
                 member[c].append(r.idx)
                 r.cells = np.append(r.cells, c)
     fill_container_gaps(grid, regions, member)
+    # Land that joined a part above belongs to what holds that part too, so a row on North China reaches the
+    # stretch of coast that joined the Central Plain. Only regions within a continent: continents and oceans
+    # have rules of their own (below and in fill_container_gaps).
+    within = containment(regions)
+    nested = {k for k in range(len(regions)) if any(regions[j].surface != "sea" for j in within.get(k, []))}
+    joined = 0
+    for c in range(n):
+        vis = [i for i in member[c] if not regions[i].hidden and regions[i].body is None]
+        if not grid.land[c] or not vis:
+            continue
+        t = min(vis, key=lambda i: regions[i].area)
+        for k in within.get(t, []):
+            if k in nested and regions[k].surface != "sea" and k not in member[c]:
+                member[c].append(k)
+                regions[k].cells = np.append(regions[k].cells, c)
+                joined += 1
+    if joined:
+        print(f"    {joined} cells joined the regions that hold their own")
     primary = np.full(n, 0xFFFF, dtype=np.uint16)
     for c in range(n):
         vis = [i for i in member[c] if not regions[i].hidden]
