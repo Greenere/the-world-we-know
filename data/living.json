@@ -3,6 +3,7 @@
     "id": "maize", "kind": "plant", "name": "Maize", "native": "tlaolli",
     "origin": {"year": "-7000..-6000", "place": "The Balsas valley, Mexico", "lat": 18.4, "lon": -100.2, "culture": "Farmers of southern Mexico"},
     "home": ["mexica", "maya"],
+    "widely": 1650,
     "summary": "Farmers of southern Mexico breed a wild grass, teosinte, into maize, a plant that can no longer seed itself without people. It becomes the staple of the Americas from the St Lawrence to the Andes, and after 1492 one of the staples of the world.",
     "source": "piperno-2009", "confidence": "high",
     "spread": [
@@ -16,19 +17,26 @@
       {"year": "1700..1750", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "from": "Gong County, Henan", "note": "Maize spreads from China into the northern hills.", "source": "seth-korea", "confidence": "low"},
       {"year": "800..1000", "place": "The American Bottom", "lat": 38.66, "lon": -90.06, "vp": "mississippian", "note": "Maize becomes the staple that feeds Cahokia and the mound towns.", "source": "pauketat-cahokia", "confidence": "medium"},
       {"year": "900..1000", "place": "The Finger Lakes", "lat": 42.75, "lon": -76.8, "vp": "haudenosaunee", "note": "Maize is grown with beans and squash, the Three Sisters.", "source": "snow-iroquois", "confidence": "medium"},
-      {"year": "1550..1591", "place": "The kingdom of Kongo", "lat": -6.27, "lon": 14.24, "vp": "kongo", "note": "Lopes describes maize in Kongo as 'Mazza Manputo', the grain of Portugal.", "source": "pigafetta-lopes", "confidence": "medium"}
+      {"year": "1530..1570", "place": "Anatolia", "lat": 39.0, "lon": 32.0, "vp": "turks", "note": "Maize is grown across the Ottoman lands; much of Europe calls it 'Turkish corn'.", "source": "crosby", "confidence": "medium"},
+      {"year": "1550..1591", "place": "The kingdom of Kongo", "lat": -6.27, "lon": 14.24, "vp": "kongo", "note": "Lopes describes maize in Kongo as 'Mazza Manputo', the grain of Portugal.", "source": "pigafetta-lopes", "confidence": "medium"},
+      {"year": "1550..1600", "place": "The Moluccas", "lat": 0.8, "lon": 127.4, "vp": "nusantara", "note": "Portuguese and Spanish ships bring maize to the islands of the spice trade.", "source": "crosby", "confidence": "low"},
+      {"year": "1580..1620", "place": "The Deccan", "lat": 18.0, "lon": 76.0, "vp": "india", "note": "Maize is grown in India, brought by the Portuguese.", "source": "crosby", "confidence": "low"}
     ]
   },
   {
     "id": "potato", "kind": "plant", "name": "The potato", "native": "papa",
     "origin": {"year": "-8000..-5000", "place": "Lake Titicaca", "lat": -15.8, "lon": -69.4, "culture": "Farmers of the Andes"},
     "home": ["inca"],
+    "widely": 1750,
     "summary": "Farmers around Lake Titicaca domesticate a wild tuber that thrives at heights where maize fails, and learn to freeze-dry it into chuño, which keeps for years. Carried to Europe, it fed the growing cities of the eighteenth century; Ireland's dependence on it ended in the famine of 1845.",
     "source": "hawkes-potato", "confidence": "high",
     "spread": [
       {"year": 1570, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "note": "Potatoes reach Spain from Peru; Seville's Hospital de la Sangre is buying them in 1573."},
       {"year": 1597, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "John Gerard pictures the potato in his Herball, calling it, wrongly, the potato of Virginia."},
       {"year": 1600, "place": "Villeneuve-de-Berg", "lat": 44.55, "lon": 4.5, "vp": "france", "from": "Seville", "note": "Olivier de Serres describes the 'cartoufle' in his treatise on farming; France is slow to eat it until Parmentier's campaign of the 1770s.", "confidence": "medium"},
+      {"year": "1598..1610", "place": "Nagasaki", "lat": 32.75, "lon": 129.87, "vp": "japan", "note": "Dutch and Portuguese ships bring the potato to Nagasaki; it is named jagaimo, the Jakarta tuber.", "source": "draft", "confidence": "low"},
+      {"year": "1610..1620", "place": "Ajmer", "lat": 26.45, "lon": 74.64, "vp": "india", "note": "Potatoes are served at a feast for the English ambassador at the Mughal court.", "source": "draft", "confidence": "low"},
+      {"year": "1650..1700", "place": "Fujian", "lat": 26.08, "lon": 119.3, "vp": "china", "note": "Potatoes reach China by sea and are grown in the hills of the south-east.", "source": "ho-pingti", "confidence": "low"},
       {"year": 1765, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "vp": "russia", "from": "London", "note": "Catherine the Great's Senate orders instructions on growing potatoes sent across the empire.", "confidence": "medium"},
       {"year": "1824..1825", "place": "Hamgyong", "lat": 41.5, "lon": 129.5, "vp": "korea", "note": "Potatoes come across the Tumen from Manchuria.", "source": "seth-korea", "confidence": "medium"}
     ]
@@ -37,12 +45,14 @@
     "id": "sweet-potato", "kind": "plant", "name": "The sweet potato", "native": "kumara",
     "origin": {"year": "-6000..-4000", "place": "Northwest South America", "lat": 2.0, "lon": -77.0, "culture": "Farmers of tropical America"},
     "home": ["inca", "mexica", "maya"],
+    "widely": 1650,
     "summary": "A tropical American root that crossed the Pacific twice: once in Polynesian canoes centuries before Columbus, and again in the Manila galleons, to become the food that kept south China alive through famine.",
     "source": "roullier-2013", "confidence": "high",
     "spread": [
       {"year": "1000..1100", "place": "Mangaia, Cook Islands", "lat": -21.92, "lon": -157.93, "vp": "polynesia", "note": "Charred sweet potato in a Mangaia rock shelter shows it reached Polynesia long before Europeans, carried back, most likely, by Polynesian voyagers who reached South America. Its name, kumara, echoes the Quechua cumal.", "confidence": "medium"},
       {"year": "1250..1350", "place": "Aotearoa", "lat": -37.0, "lon": 175.0, "from": "Mangaia, Cook Islands", "note": "The first settlers of New Zealand bring kumara, and learn to store it through a winter the tropics never had.", "confidence": "medium"},
       {"year": 1493, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "via": "columbus", "note": "Columbus finds the batata in the Caribbean. Its Taíno name, carried to Europe, became the English 'potato'."},
+      {"year": "1550..1600", "place": "The Moluccas", "lat": 0.8, "lon": 127.4, "vp": "nusantara", "note": "Portuguese and Spanish ships bring the sweet potato to the Moluccas.", "source": "crosby", "confidence": "low"},
       {"year": "1570..1590", "place": "Manila", "lat": 14.6, "lon": 120.98, "note": "The Manila galleons bring it across the Pacific from Mexico to the Spanish Philippines.", "source": "ho-pingti", "confidence": "medium"},
       {"year": 1593, "place": "Fuzhou", "lat": 26.07, "lon": 119.3, "vp": "china", "from": "Manila", "note": "Chen Zhenlong smuggles vines from Luzon wound into a ship's rope. When famine strikes Fujian the next year, the governor has them planted.", "source": "ho-pingti"},
       {"year": 1605, "place": "Ryukyu", "lat": 26.21, "lon": 127.68, "from": "Fuzhou", "note": "Noguni Sōkan brings it home to Okinawa from Fujian.", "confidence": "medium"},
@@ -54,13 +64,16 @@
     "id": "chili", "kind": "plant", "name": "The chili pepper", "native": "chīlli",
     "origin": {"year": "-6000..-4000", "place": "East-central Mexico", "lat": 19.5, "lon": -97.5, "culture": "Farmers of Mexico"},
     "home": ["mexica", "inca", "maya"],
+    "widely": 1600,
     "summary": "Domesticated in Mexico and eaten across the Americas, the chili took less than a century after 1492 to become part of the cooking of India, Southeast Asia and much of Africa, and later of Sichuan and Hunan.",
     "source": "andrews-peppers", "confidence": "high",
     "spread": [
       {"year": 1493, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "via": "columbus", "note": "Columbus calls it pimiento, taking it for a kind of black pepper, the spice he had sailed to find."},
       {"year": 1500, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "from": "Seville", "note": "Portuguese ships take it on to Africa and Asia.", "confidence": "medium"},
+      {"year": "1530..1560", "place": "Anatolia", "lat": 39.0, "lon": 32.0, "vp": "turks", "note": "Chilies spread through the Ottoman lands, and from there to Hungary.", "source": "crosby", "confidence": "medium"},
       {"year": "1540..1560", "place": "Goa", "lat": 15.5, "lon": 73.83, "vp": "india", "from": "Lisbon", "note": "Chilies reach the Portuguese at Goa. Within a century they are grown across India and are a staple of its cooking.", "confidence": "medium"},
       {"year": "1542..1552", "place": "Bungo, Kyushu", "lat": 33.24, "lon": 131.6, "vp": "japan", "from": "Lisbon", "note": "The Portuguese bring it to Kyushu, where it is called tōgarashi, 'Chinese mustard'.", "confidence": "low"},
+      {"year": "1550..1600", "place": "The Moluccas", "lat": 0.8, "lon": 127.4, "vp": "nusantara", "note": "Portuguese ships bring chilies to the islands of the spice trade.", "source": "crosby", "confidence": "low"},
       {"year": 1591, "place": "Hangzhou", "lat": 30.25, "lon": 120.17, "vp": "china", "from": "Lisbon", "note": "Gao Lian's Eight Discourses mentions 'foreign pepper', grown for its red fruit. Only in the eighteenth century does China cook with it, above all in Hunan and Sichuan.", "confidence": "medium"},
       {"year": 1614, "place": "Hanseong", "lat": 37.57, "lon": 126.98, "vp": "korea", "from": "Bungo, Kyushu", "note": "Yi Su-gwang's encyclopedia calls it 'Japanese mustard', a poison brought from Japan. A century later it is in kimchi.", "source": "seth-korea", "confidence": "medium"}
     ]
@@ -69,6 +82,7 @@
     "id": "tobacco", "kind": "plant", "name": "Tobacco",
     "origin": {"year": "-1000..1", "place": "South America", "lat": -15.0, "lon": -63.0, "culture": "Peoples of the Americas"},
     "home": ["mexica", "inca", "maya"],
+    "widely": 1650,
     "summary": "Across the Americas tobacco is smoked, chewed and snuffed: in prayer, in healing and to seal agreements. Within a century of Columbus it is smoked from London to Beijing, and rulers from the Ottoman sultan to the Chinese emperor try and fail to ban it.",
     "source": "goodman-tobacco", "confidence": "high",
     "spread": [
@@ -83,13 +97,16 @@
       {"year": "1616..1618", "place": "Dongnae", "lat": 35.2, "lon": 129.08, "vp": "korea", "from": "Nagasaki", "note": "Tobacco comes from Japan through the trading post at Busan, and within years everyone smokes.", "source": "seth-korea", "confidence": "medium"},
       {"year": "1640..1660", "place": "Khalkha", "lat": 47.9, "lon": 106.9, "vp": "steppe", "note": "Tobacco reaches the Mongols through Chinese and Russian traders.", "source": "atwood", "confidence": "low"},
       {"year": "-300..0", "place": "The Ohio valley", "lat": 39.37, "lon": -83.0, "vp": "mississippian", "note": "Hopewell pipes carved in stone, for tobacco smoked in ceremony.", "source": "carr-hopewell", "confidence": "low"},
-      {"year": "1000..1300", "place": "Iroquoia", "lat": 42.9, "lon": -76.3, "vp": "haudenosaunee", "note": "Tobacco, burned to carry words to the Creator.", "source": "snow-iroquois", "confidence": "medium"}
+      {"year": "1000..1300", "place": "Iroquoia", "lat": 42.9, "lon": -76.3, "vp": "haudenosaunee", "note": "Tobacco, burned to carry words to the Creator.", "source": "snow-iroquois", "confidence": "medium"},
+      {"year": 1604, "place": "Agra", "lat": 27.18, "lon": 78.01, "vp": "india", "note": "Asad Beg presents tobacco and a jewelled pipe to Akbar, who tries it despite his physicians.", "source": "gokhale-1974", "confidence": "high"},
+      {"year": "1600..1620", "place": "Java", "lat": -7.0, "lon": 110.0, "vp": "nusantara", "note": "Tobacco is grown and smoked in Java.", "source": "draft", "confidence": "low"}
     ]
   },
   {
     "id": "cacao", "kind": "plant", "name": "Cacao", "native": "cacahuatl",
     "origin": {"year": "-3300", "place": "Santa Ana–La Florida, Ecuador", "lat": -4.89, "lon": -79.07, "culture": "The Mayo-Chinchipe people"},
     "home": ["mexica"],
+    "widely": 1800,
     "summary": "Cacao is first used in the upper Amazon, but it is in Mesoamerica that it becomes the frothy drink of kings and gods, and its beans serve as small change in Aztec markets. Europe sweetens it with sugar; Africa now grows most of it.",
     "source": "coe-chocolate", "confidence": "high",
     "spread": [
@@ -106,6 +123,7 @@
     "id": "turkey", "kind": "animal", "name": "The turkey", "native": "huexolotl",
     "origin": {"year": "-300..100", "place": "Southern Mexico", "lat": 17.5, "lon": -97.0, "culture": "Farmers of Mesoamerica"},
     "home": ["mexica", "mississippian", "haudenosaunee"],
+    "widely": 1750,
     "summary": "Domesticated in Mexico for its meat and feathers. In Europe and Asia nobody knew where it came from: the English named it after Turkey, the French called it the bird of the Indies, and the Turks the bird of India.",
     "source": "schorger", "confidence": "medium",
     "spread": [
@@ -113,13 +131,15 @@
       {"year": 1511, "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "note": "King Ferdinand orders every ship from the Indies to bring ten turkeys."},
       {"year": "1524..1541", "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "Turkeys reach England, named for the Turkish merchants who were thought to have brought them."},
       {"year": "1534..1549", "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Seville", "note": "The French call it the dinde, the bird d'Inde, of the Indies.", "confidence": "low"},
-      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Seville", "note": "The Ottomans call it hindi, the Indian bird.", "confidence": "low"}
+      {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Seville", "note": "The Ottomans call it hindi, the Indian bird.", "confidence": "low"},
+      {"year": 1612, "place": "Agra", "lat": 27.18, "lon": 78.01, "vp": "india", "note": "Ustad Mansur paints a turkey brought to Jahangir from Goa.", "source": "das-2012", "confidence": "high"}
     ]
   },
   {
     "id": "tea", "kind": "plant", "name": "Tea", "native": "茶",
     "origin": {"year": "-141", "place": "Yunnan and Sichuan", "lat": 25.0, "lon": 101.0, "culture": "Peoples of China's southwest"},
     "home": ["china"],
+    "widely": 1750,
     "summary": "Tea leaves found in the tomb of the Han emperor Jing, who died in 141 BCE, are the oldest known. By the Tang it is China's national drink. It reached the rest of the world by three roads: to Japan with monks, across the steppe by caravan, and to Europe by sea.",
     "source": "mair-hoh", "confidence": "high",
     "spread": [
@@ -132,6 +152,7 @@
       {"year": 1610, "place": "Amsterdam", "lat": 52.37, "lon": 4.9, "vp": "germany", "note": "The Dutch East India Company lands the first shipment of tea in Europe.", "confidence": "medium"},
       {"year": 1638, "place": "Moscow", "lat": 55.75, "lon": 37.62, "vp": "russia", "note": "The tsar's envoy Vasily Starkov brings back tea as a gift from the Mongol Altan Khan. Tea comes to Russia by caravan for the next two centuries."},
       {"year": 1658, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Amsterdam", "note": "The first advertisement for tea in London; Catherine of Braganza makes it the drink of the court."},
+      {"year": "1650..1690", "place": "Batavia", "lat": -6.13, "lon": 106.81, "vp": "nusantara", "note": "Chinese junks bring tea to Batavia, where the Dutch buy it for Europe.", "source": "draft", "confidence": "low"},
       {"year": 1823, "place": "Sadiya, Assam", "lat": 27.83, "lon": 95.67, "vp": "india", "from": "London", "note": "The Singpho chief Bessa Gam shows Robert Bruce the wild tea of Assam. Tea gardens soon cover the hills of India.", "confidence": "medium"}
     ]
   },
@@ -139,6 +160,7 @@
     "id": "coffee", "kind": "plant", "name": "Coffee", "native": "qahwa",
     "origin": {"year": "1000..1400", "place": "The forests of Kaffa", "lat": 7.3, "lon": 36.2, "culture": "People of the Ethiopian highlands"},
     "home": ["ethiopia"],
+    "widely": 1750,
     "summary": "Coffee grows wild in the forests of southwest Ethiopia. Sufis in Yemen are the first known to roast and brew it, to stay awake through their night prayers; from Mocha it spread through the Islamic world and then to Europe's coffeehouses.",
     "source": "hattox", "confidence": "high",
     "spread": [
@@ -157,7 +179,8 @@
   {
     "id": "sugar", "kind": "plant", "name": "Sugar cane",
     "origin": {"year": "-8000..-6000", "place": "New Guinea", "lat": -6.0, "lon": 145.0, "culture": "Farmers of New Guinea"},
-    "home": [],
+    "home": ["nusantara", "polynesia"],
+    "widely": 1550,
     "summary": "First grown in New Guinea, sugar cane spread to India, where people learned to boil its juice into crystals; the Sanskrit khanda gave the world 'candy'. The Atlantic plantations that grew it were worked by enslaved Africans.",
     "source": "mintz", "confidence": "high",
     "spread": [
@@ -166,9 +189,15 @@
       {"year": "500..600", "place": "Gundeshapur", "lat": 32.28, "lon": 48.52, "vp": "persia", "from": "The Ganges plain", "note": "Cane is grown and refined in Khuzistan.", "confidence": "medium"},
       {"year": 647, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "from": "The Ganges plain", "note": "The Tang emperor Taizong sends to Magadha to learn how Indians boil cane into sugar.", "source": "jiu-tangshu"},
       {"year": "700..750", "place": "Fustat", "lat": 30.0, "lon": 31.23, "vp": "egypt", "from": "Gundeshapur", "note": "The Arab conquests carry cane to Egypt, and on to Sicily and al-Andalus.", "confidence": "medium"},
+      {"year": 754, "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "The monk Ganjin is said to have brought cane sugar to Japan among his medicines.", "source": "draft", "confidence": "low"},
       {"year": "900..1000", "place": "Motril", "lat": 36.75, "lon": -3.52, "vp": "iberia", "from": "Fustat", "note": "Cane grows on the coast of al-Andalus.", "confidence": "medium"},
+      {"year": "900..1100", "place": "Gaegyeong", "lat": 37.97, "lon": 126.55, "vp": "korea", "note": "Sugar comes to Korea from China, a rare medicine and luxury.", "source": "draft", "confidence": "low"},
+      {"year": "1050..1100", "place": "Koumbi Saleh", "lat": 15.77, "lon": -8.0, "vp": "sahel", "note": "Sugar and other luxuries cross the Sahara with the caravans.", "source": "levtzion-hopkins", "confidence": "low"},
+      {"year": "1000..1200", "place": "Kilwa", "lat": -8.96, "lon": 39.51, "vp": "swahili", "note": "Sugar cane is grown in the towns of the Swahili coast.", "source": "draft", "confidence": "low"},
+      {"year": "1260..1280", "place": "Khanbaliq", "lat": 39.9, "lon": 116.4, "vp": "steppe", "note": "Sugar is made and taxed across Mongol-ruled China.", "source": "polo", "confidence": "medium"},
       {"year": "1450..1470", "place": "Madeira", "lat": 32.65, "lon": -16.9, "from": "Motril", "note": "Portuguese planters on Madeira set up the first Atlantic sugar plantations."},
       {"year": 1493, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "Madeira", "via": "columbus-2", "note": "Columbus brings cane to Hispaniola on his second voyage."},
+      {"year": 1524, "place": "Veracruz", "lat": 19.2, "lon": -96.13, "vp": "mexica", "note": "The first sugar mills are built near Veracruz.", "source": "draft", "confidence": "medium"},
       {"year": "1530..1580", "place": "Pernambuco", "lat": -8.05, "lon": -34.9, "from": "Madeira", "note": "Brazil becomes the world's largest producer of sugar, on the labour of enslaved Africans."}
     ]
   },
@@ -176,13 +205,20 @@
     "id": "silkworm", "kind": "animal", "name": "The silkworm", "native": "蚕",
     "origin": {"year": "-3000..-2500", "place": "The Yellow River valley", "lat": 35.0, "lon": 111.0, "culture": "Farmers of ancient China"},
     "home": ["china"],
+    "widely": 1500,
     "summary": "Chinese farmers domesticate the silk moth, which can no longer fly, and learn to unwind its cocoon as a single thread. For centuries Rome bought silk without knowing what made it; Virgil thought it was combed from leaves.",
     "source": "needham", "confidence": "medium",
     "spread": [
+      {"year": "-300..-200", "place": "Pataliputra", "lat": 25.6, "lon": 85.1, "vp": "india", "note": "Indian texts name cīnapaṭṭa, cloth of silk from China.", "source": "draft", "confidence": "low"},
+      {"year": -198, "place": "The Mongolian steppe", "lat": 47.0, "lon": 103.0, "vp": "steppe", "note": "The Han send the Xiongnu silk each year under the heqin treaties.", "source": "shiji", "confidence": "high"},
       {"year": "1..300", "place": "Mahan", "lat": 36.0, "lon": 127.0, "vp": "korea", "note": "The Mahan raise silkworms and weave silk, say the Chinese histories.", "source": "houhanshu", "confidence": "medium"},
       {"year": "200..300", "place": "Kyushu", "lat": 33.5, "lon": 130.5, "vp": "japan", "note": "The Wei chronicle records that the people of Wa raise silkworms.", "confidence": "medium"},
       {"year": "400..450", "place": "Khotan", "lat": 37.11, "lon": 79.93, "note": "By legend a Chinese princess, married to the king of Khotan, smuggles silkworm eggs out in her headdress.", "source": "xuanzang", "confidence": "low"},
+      {"year": "400..550", "place": "Ctesiphon", "lat": 33.09, "lon": 44.58, "vp": "persia", "note": "Persia weaves silk and controls its trade between China and Rome.", "source": "draft", "confidence": "low"},
       {"year": 552, "place": "Constantinople", "lat": 41.01, "lon": 28.98, "vp": "rome", "from": "Khotan", "note": "Two monks smuggle silkworm eggs to Justinian in hollow canes, ending Persia's hold on the silk trade.", "source": "procopius"},
+      {"year": 568, "place": "Constantinople", "lat": 41.01, "lon": 28.98, "vp": "turks", "note": "The Türk khagan sends Maniakh to Constantinople to sell silk directly to the Romans.", "source": "menander", "confidence": "high"},
+      {"year": "600..800", "place": "Palembang", "lat": -2.99, "lon": 104.76, "vp": "nusantara", "note": "Chinese silk is traded at the ports of Srivijaya.", "source": "draft", "confidence": "low"},
+      {"year": 944, "place": "Kiev", "lat": 50.45, "lon": 30.52, "vp": "russia", "note": "The Rus treaty with Constantinople limits how much silk Rus merchants may buy.", "source": "primary-chronicle", "confidence": "high"},
       {"year": "900..1000", "place": "Almería", "lat": 36.84, "lon": -2.46, "vp": "iberia", "from": "Constantinople", "note": "Al-Andalus raises silkworms on mulberry, and Almería's silks are famous across the Mediterranean.", "confidence": "medium"},
       {"year": 1536, "place": "Lyon", "lat": 45.76, "lon": 4.84, "vp": "france", "from": "Constantinople", "note": "Francis I grants Lyon the privileges that make it Europe's silk city.", "confidence": "medium"}
     ]
@@ -191,6 +227,7 @@
     "id": "horse", "kind": "animal", "name": "The horse",
     "origin": {"year": "-2200..-2000", "place": "The Volga–Don steppe", "lat": 48.5, "lon": 44.5, "culture": "Herders of the western steppe"},
     "home": ["russia", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "arabia", "maghreb", "sahel", "ethiopia", "turks"],
+    "widely": 1600,
     "summary": "Herders of the western steppe breed the horse that every domestic horse descends from. Within a few centuries it spreads across Eurasia, pulling chariots and later carrying riders. In the Americas, where horses had died out ten thousand years before, Europeans brought them back.",
     "source": "librado-2021", "confidence": "high",
     "spread": [
@@ -214,11 +251,12 @@
     "id": "giraffe", "kind": "animal", "name": "The giraffe",
     "origin": {"year": "-3200", "place": "The savannas of Africa", "lat": 2.0, "lon": 37.0, "culture": "Peoples of Africa"},
     "home": ["egypt", "swahili", "ethiopia", "sahel", "zimbabwe"],
-    "widely": 1850,
+    "widely": 1800,
     "summary": "The tallest animal on earth. For peoples far from Africa it was a creature of report, gift and legend: a camel spotted like a leopard to the Romans, an auspicious qilin to the Ming court.",
     "source": "duyvendak", "confidence": "high",
     "spread": [
       {"year": "-46", "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "note": "Julius Caesar shows a giraffe at his games, the first seen in Europe. The Romans call it camelopardalis.", "source": "cassius-dio"},
+      {"year": "1410..1414", "place": "Pandua, Bengal", "lat": 25.13, "lon": 88.15, "vp": "india", "note": "A giraffe from Malindi reaches the sultan of Bengal, who sends it on to the Yongle emperor.", "source": "duyvendak", "confidence": "medium"},
       {"year": 1414, "place": "Nanjing", "lat": 32.06, "lon": 118.78, "vp": "china", "via": "malindi-china", "note": "A giraffe from Malindi, by way of Bengal, is presented to the Yongle emperor and greeted as a qilin."},
       {"year": 1486, "place": "Florence", "lat": 43.77, "lon": 11.25, "vp": "europe", "note": "The Mamluk sultan sends a giraffe to Lorenzo de' Medici; it becomes the pride of Florence.", "confidence": "medium"},
       {"year": 1827, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "note": "Zarafa, a gift from Muhammad Ali of Egypt to Charles X, walks from Marseille to Paris; crowds come to see her.", "confidence": "medium"},
@@ -229,11 +267,15 @@
     "id": "rhinoceros", "kind": "animal", "name": "The rhinoceros",
     "origin": {"year": "-2500", "place": "The plains of northern India", "lat": 26.6, "lon": 93.0, "culture": "Peoples of South Asia"},
     "home": ["india", "china", "nusantara", "swahili", "ethiopia", "sahel", "zimbabwe"],
+    "widely": 1600,
     "summary": "Rhinoceroses lived across Africa and South and Southeast Asia, and in south China into historic times. Europe's picture of one for two centuries came from a woodcut by an artist who never saw it.",
     "source": "clarke-rhinoceros", "confidence": "high",
     "spread": [
       {"year": "-400", "place": "Persepolis", "lat": 29.93, "lon": 52.89, "vp": "greece", "note": "Ctesias, a Greek doctor at the Persian court, describes a one-horned 'Indian wild ass', one root of the unicorn.", "source": "ctesias", "confidence": "medium"},
       {"year": "-55", "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "note": "Pompey shows a rhinoceros at his games.", "source": "pliny"},
+      {"year": "500..700", "place": "Gyeongju", "lat": 35.84, "lon": 129.21, "vp": "korea", "note": "Rhinoceros horn comes to Korea from China as medicine and ornament.", "source": "draft", "confidence": "low"},
+      {"year": 756, "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "Rhinoceros horn is among the medicines dedicated to Tōdai-ji and kept in the Shōsōin.", "source": "shosoin", "confidence": "high"},
+      {"year": 1030, "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "persia", "note": "Al-Biruni describes the Indian rhinoceros and its single horn.", "source": "al-biruni", "confidence": "high"},
       {"year": 1515, "place": "Lisbon", "lat": 38.7, "lon": -9.14, "vp": "iberia", "note": "Ganda, a gift from the sultan of Gujarat, lands in Lisbon, the first rhinoceros in Europe since Roman times."},
       {"year": 1515, "place": "Nuremberg", "lat": 49.45, "lon": 11.08, "vp": "germany", "from": "Lisbon", "note": "From a letter and a sketch, Dürer cuts his woodcut of a rhinoceros in armour plate."},
       {"year": 1684, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "note": "The first rhinoceros in England is shown in London.", "confidence": "medium"}
@@ -243,10 +285,12 @@
     "id": "kangaroo", "kind": "animal", "name": "The kangaroo", "native": "gangurru",
     "origin": {"year": "-50000", "place": "Australia", "lat": -25.0, "lon": 134.0, "culture": "The First Australians"},
     "home": [],
+    "widely": 1800,
     "summary": "Hunted and honoured by Australia's first peoples for tens of thousands of years. To Europeans it looked like nothing made anywhere else: an animal the size of a deer that went about on two legs and carried its young in a pouch.",
     "source": "cook-journals", "confidence": "high",
     "spread": [
       {"year": 1629, "place": "Houtman Abrolhos", "lat": -28.7, "lon": 113.8, "vp": "germany", "note": "Shipwrecked on the Abrolhos, the Batavia's commander Francisco Pelsaert describes a tammar wallaby, the first written account of a kangaroo.", "source": "pelsaert"},
+      {"year": "1720..1780", "place": "Arnhem Land", "lat": -12.2, "lon": 136.0, "vp": "nusantara", "note": "Macassan trepangers working the coast of northern Australia meet its people and animals.", "source": "macknight-1976", "confidence": "medium"},
       {"year": 1770, "place": "Endeavour River", "lat": -15.46, "lon": 145.25, "vp": "britain", "via": "cook", "note": "Cook's men shoot one and learn its name, gangurru, from the Guugu Yimithirr people."},
       {"year": 1804, "place": "Paris", "lat": 48.86, "lon": 2.35, "vp": "france", "from": "Endeavour River", "note": "Baudin's expedition brings live kangaroos home for Joséphine's gardens at Malmaison.", "confidence": "medium"}
     ]
@@ -256,11 +300,14 @@
     "origin": {"year": 1598, "place": "Mauritius", "lat": -20.3, "lon": 57.6},
     "home": [],
     "extinct": {"year": 1662, "note": "Last seen in 1662, by castaways from the Dutch ship Arnhem."},
+    "widely": 1850,
     "summary": "A flightless pigeon larger than a turkey, which lived only on Mauritius and had never met a predator. Within seventy years of the first sailors it was gone: the first extinction people later recognised they had caused.",
     "source": "hume-dodo", "confidence": "high",
     "spread": [
       {"year": 1598, "place": "Mauritius", "lat": -20.3, "lon": 57.6, "vp": "germany", "note": "Wybrand van Warwijck's Dutch fleet lands on Mauritius; the sailors call the bird walghvogel, 'loathsome bird', for its tough meat."},
-      {"year": 1638, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Mauritius", "note": "Hamon L'Estrange sees a live dodo shown in a London house."}
+      {"year": "1625..1627", "place": "Agra", "lat": 27.18, "lon": 78.01, "vp": "india", "note": "A dodo at the Mughal court is painted, probably by Ustad Mansur.", "source": "das-2012", "confidence": "medium"},
+      {"year": 1638, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Mauritius", "note": "Hamon L'Estrange sees a live dodo shown in a London house."},
+      {"year": 1647, "place": "Nagasaki", "lat": 32.75, "lon": 129.87, "vp": "japan", "note": "A Dutch ship brings a live dodo to Dejima at Nagasaki.", "source": "winters-hume-2015", "confidence": "high"}
     ]
   },
   {
@@ -279,6 +326,7 @@
     "id": "coelacanth", "kind": "animal", "name": "The coelacanth", "native": "gombessa",
     "origin": {"year": "-2000", "place": "The Comoro Islands", "lat": -11.7, "lon": 43.3, "culture": "Comorian fishermen"},
     "home": ["swahili"],
+    "widely": 1940,
     "summary": "A lobe-finned fish known from fossils four hundred million years old, and thought to have died out with the dinosaurs, until a living one was caught off South Africa in 1938. Comorian fishermen had been catching it all along.",
     "source": "smith-coelacanth", "confidence": "high",
     "spread": [
@@ -290,10 +338,12 @@
     "id": "tulip", "kind": "plant", "name": "The tulip", "native": "lâle",
     "origin": {"year": "1050..1200", "place": "The Tian Shan", "lat": 42.5, "lon": 76.0, "culture": "Gardeners of Persia"},
     "home": ["persia"],
+    "widely": 1700,
     "summary": "Wild tulips grow in the mountains of Central Asia. Persian poets and Ottoman gardeners made it the flower of paradise, and in Holland in 1637 a single bulb could cost as much as a house.",
     "source": "pavord", "confidence": "medium",
     "spread": [
       {"year": "1450..1500", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "note": "The gardens of the Ottoman sultans fill with tulips."},
+      {"year": "1504..1529", "place": "Kabul", "lat": 34.53, "lon": 69.17, "vp": "india", "note": "Babur counts the kinds of tulip on the hills around Kabul.", "source": "draft", "confidence": "medium"},
       {"year": 1554, "place": "Edirne", "lat": 41.68, "lon": 26.56, "vp": "germany", "from": "Istanbul", "note": "Ogier Ghiselin de Busbecq, the Habsburg envoy, sees tulips in Turkish gardens and sends bulbs home."},
       {"year": 1593, "place": "Leiden", "lat": 52.16, "lon": 4.49, "from": "Edirne", "note": "Carolus Clusius plants tulips in Leiden's botanical garden."},
       {"year": 1637, "place": "Haarlem", "lat": 52.38, "lon": 4.64, "from": "Leiden", "note": "Tulip mania peaks and crashes."}
@@ -303,20 +353,26 @@
     "id": "rice", "kind": "plant", "name": "Rice", "native": "稻",
     "origin": {"year": "-7000..-5000", "place": "The lower Yangtze", "lat": 30.0, "lon": 121.0, "culture": "Farmers of the lower Yangtze"},
     "home": ["china", "india", "nusantara"],
+    "widely": 1600,
     "summary": "Farmers of the lower Yangtze tame a wild marsh grass into rice, grown in flooded fields. It came to feed more people than any other crop.",
     "source": "fuller-2009", "confidence": "high",
     "spread": [
       {"year": "-1500..-1000", "place": "Songguk-ri", "lat": 36.27, "lon": 126.88, "vp": "korea", "note": "Mumun farmers grow rice in paddy fields in the southwest of the peninsula.", "source": "seth-korea", "confidence": "medium"},
       {"year": "-1000..-800", "place": "Northern Kyushu", "lat": 33.6, "lon": 130.4, "vp": "japan", "note": "Wet-field rice comes to Kyushu from Korea, and with it the Yayoi age.", "confidence": "medium"},
+      {"year": "-600..-400", "place": "Babylonia", "lat": 32.5, "lon": 44.4, "vp": "persia", "note": "Rice is grown in Mesopotamia and Persia under the Achaemenids.", "source": "zohary-hopf", "confidence": "low"},
       {"year": "-326", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "greece", "via": "alexander", "note": "Alexander's officer Aristobulus describes rice growing in water in India.", "source": "strabo"},
+      {"year": "-300..300", "place": "Jenne-jeno", "lat": 13.89, "lon": -4.54, "vp": "sahel", "note": "Farmers of the inland Niger delta grow African rice, a cousin of Asian rice tamed on the Niger.", "source": "mcintosh", "confidence": "medium"},
+      {"year": "700..900", "place": "The Swahili coast", "lat": -6.2, "lon": 39.3, "vp": "swahili", "note": "Asian rice is grown on the Swahili coast and in Madagascar.", "source": "draft", "confidence": "low"},
       {"year": "900..1000", "place": "Valencia", "lat": 39.47, "lon": -0.38, "vp": "iberia", "note": "Rice is grown in the irrigated huertas of al-Andalus; Spanish arroz comes from the Arabic al-ruzz.", "confidence": "medium"},
+      {"year": 1215, "place": "Zhongdu", "lat": 39.88, "lon": 116.35, "vp": "steppe", "note": "With the fall of Zhongdu the Mongols hold the rice-eating lands of northern China.", "source": "secret-history", "confidence": "medium"},
       {"year": "1690..1700", "place": "Charleston", "lat": 32.78, "lon": -79.93, "from": "Valencia", "note": "Rice becomes the crop of the Carolina low country, grown on the knowledge and labour of enslaved West Africans.", "confidence": "medium"}
     ]
   },
   {
     "id": "wheat", "kind": "plant", "name": "Wheat",
     "origin": {"year": "-9500..-8500", "place": "The Fertile Crescent", "lat": 37.5, "lon": 39.5, "culture": "Farmers of the Fertile Crescent"},
-    "home": ["egypt", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "india", "arabia", "maghreb", "ethiopia", "turks"],
+    "home": ["egypt", "persia", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "india", "arabia", "maghreb", "ethiopia", "turks", "steppe"],
+    "widely": 1600,
     "summary": "Einkorn and emmer, the first wheats, are domesticated in the hills of the Fertile Crescent, and bread wheat follows. Wheat travels with the first farmers into Europe, North Africa and India, and east along the steppe to China.",
     "source": "zohary-hopf", "confidence": "high",
     "spread": [
@@ -330,25 +386,34 @@
   {
     "id": "banana", "kind": "plant", "name": "The banana",
     "origin": {"year": "-5000..-4500", "place": "Kuk Swamp, New Guinea", "lat": -5.8, "lon": 144.3, "culture": "Farmers of the New Guinea highlands"},
-    "home": ["nusantara", "china", "polynesia"],
+    "home": ["nusantara"],
+    "widely": 1600,
     "summary": "Bananas were first cultivated in New Guinea, and carried by Austronesian voyagers from Island Southeast Asia west to Africa and east across the Pacific. From the Canaries, Spain took them to the Americas.",
     "source": "perrier-2011", "confidence": "medium",
     "spread": [
       {"year": "-2500..-1500", "place": "The Ganges plain", "lat": 25.5, "lon": 83.0, "vp": "india", "note": "Bananas are grown in India, where the Buddhist texts later use the plantain's stem, layer upon layer with no core, as an image of the self.", "confidence": "low"},
+      {"year": "-1000..-800", "place": "Teouma, Vanuatu", "lat": -17.8, "lon": 168.4, "vp": "polynesia", "note": "Lapita voyagers carry bananas into the Pacific.", "source": "kirch", "confidence": "medium"},
       {"year": "-326", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "greece", "from": "The Ganges plain", "via": "alexander", "note": "Alexander's men see a tree whose fruit the Indian sages live on; Pliny calls it pala.", "source": "pliny"},
+      {"year": "100..300", "place": "Guangzhou", "lat": 23.13, "lon": 113.26, "vp": "china", "note": "Chinese writers describe the banana, bajiao, of the far south.", "source": "draft", "confidence": "medium"},
       {"year": "500..1000", "place": "The Swahili coast", "lat": -6.0, "lon": 39.3, "vp": "swahili", "note": "Bananas reach East Africa, probably with the Austronesian sailors who settled Madagascar, and become a staple of the great lakes.", "confidence": "low"},
       {"year": "1450..1500", "place": "The Canary Islands", "lat": 28.1, "lon": -15.42, "vp": "iberia", "from": "The Swahili coast", "note": "Portuguese and Spanish settlers bring bananas from West Africa to the Canaries.", "confidence": "medium"},
       {"year": 1516, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "The Canary Islands", "note": "The friar Tomás de Berlanga brings banana roots from Gran Canaria to Santo Domingo.", "confidence": "medium"},
-      {"year": "0..500", "place": "The lower Congo", "lat": -5.6, "lon": 14.2, "vp": "kongo", "note": "Bananas, carried across Africa from the Indian Ocean, become a staple of the forest edge.", "source": "vansina-paths", "confidence": "low"}
+      {"year": "0..500", "place": "The lower Congo", "lat": -5.6, "lon": 14.2, "vp": "kongo", "note": "Bananas, carried across Africa from the Indian Ocean, become a staple of the forest edge.", "source": "vansina-paths", "confidence": "low"},
+      {"year": "700..900", "place": "Oman", "lat": 23.6, "lon": 58.5, "vp": "arabia", "note": "Arab growers carry the banana, mawz, from India to Oman, Egypt and later Spain.", "source": "watson-1983", "confidence": "medium"}
     ]
   },
   {
     "id": "orange", "kind": "plant", "name": "The sweet orange", "native": "橙",
     "origin": {"year": "-2000..-1000", "place": "Southern China", "lat": 24.5, "lon": 105.0, "culture": "Farmers of southern China"},
     "home": ["china"],
+    "widely": 1650,
     "summary": "A cross of the pomelo and the mandarin, bred in southern China. Sour oranges and lemons came west with the Arabs; the sweet orange came by sea with the Portuguese, and across the Mediterranean it is still named after Portugal.",
     "source": "wu-2018", "confidence": "medium",
     "spread": [
+      {"year": "-500..-200", "place": "Assam", "lat": 26.2, "lon": 92.9, "vp": "india", "note": "Citrus fruits grow in the hills of north-eastern India, near their home.", "source": "draft", "confidence": "low"},
+      {"year": "700..800", "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "Citrus trees are planted at the Japanese court.", "source": "draft", "confidence": "low"},
+      {"year": "1000..1100", "place": "Jeju", "lat": 33.5, "lon": 126.53, "vp": "korea", "note": "Jeju sends citrus fruit to the Goryeo court as tribute.", "source": "goryeosa", "confidence": "medium"},
+      {"year": "1000..1200", "place": "Java", "lat": -7.0, "lon": 110.0, "vp": "nusantara", "note": "Citrus fruits are grown in Java.", "source": "draft", "confidence": "low"},
       {"year": "1520..1550", "place": "Lisbon", "lat": 38.7, "lon": -9.14, "vp": "iberia", "note": "Portuguese ships bring sweet oranges from China. In Greek the fruit becomes portokali, in Turkish portakal, in Arabic burtuqal.", "confidence": "medium"},
       {"year": "1550..1600", "place": "Istanbul", "lat": 41.01, "lon": 28.98, "vp": "turks", "from": "Lisbon", "note": "The Ottomans call the sweet orange portakal, the Portuguese fruit.", "confidence": "low"},
       {"year": 1565, "place": "St Augustine", "lat": 29.9, "lon": -81.31, "from": "Lisbon", "note": "Spanish settlers plant oranges in Florida.", "confidence": "medium"},
@@ -358,10 +423,12 @@
   {
     "id": "cassava", "kind": "plant", "name": "Cassava", "native": "mandioca",
     "origin": {"year": "-8000..-7000", "place": "The southern Amazon", "lat": -11.0, "lon": -62.0, "culture": "Farmers of the southern Amazon"},
-    "home": [],
+    "home": ["mexica"],
+    "widely": 1800,
     "summary": "A root that is poisonous until it is grated, soaked and cooked, domesticated on the southern edge of the Amazon. Carried from Brazil to Africa by Portuguese ships, it became the staple of central Africa.",
     "source": "jones-manioc", "confidence": "medium",
     "spread": [
+      {"year": "550..600", "place": "Cerén", "lat": 13.82, "lon": -89.36, "vp": "maya", "note": "Manioc grows in the fields of Cerén, buried by a volcano about 600 CE.", "source": "sheets-2012", "confidence": "high"},
       {"year": 1500, "place": "Porto Seguro", "lat": -16.45, "lon": -39.07, "vp": "iberia", "via": "cabral", "note": "Pero Vaz de Caminha writes of the root the Tupi make their bread from.", "source": "caminha"},
       {"year": "1550..1600", "place": "The kingdom of Kongo", "lat": -6.0, "lon": 14.5, "vp": "kongo", "from": "Porto Seguro", "note": "Portuguese ships bring cassava from Brazil to the Kongo coast, where it becomes the staple of central Africa."},
       {"year": "1750..1800", "place": "Zanzibar", "lat": -6.16, "lon": 39.19, "vp": "swahili", "from": "The kingdom of Kongo", "note": "Cassava is grown on the Swahili coast.", "confidence": "low"}
@@ -370,7 +437,8 @@
   {
     "id": "tomato", "kind": "plant", "name": "The tomato", "native": "xitomatl",
     "origin": {"year": "-3000..-1000", "place": "Southern Mexico", "lat": 18.0, "lon": -97.5, "culture": "Farmers of Mesoamerica"},
-    "home": ["mexica", "inca"],
+    "home": ["mexica", "inca", "maya"],
+    "widely": 1750,
     "summary": "A wild Andean berry, domesticated in Mexico. Europe grew it for two centuries as a curiosity, half suspected of being poisonous, before Naples made it a sauce.",
     "source": "smith-tomato", "confidence": "medium",
     "spread": [
@@ -384,12 +452,18 @@
     "id": "pepper", "kind": "plant", "name": "Black pepper", "native": "pippali",
     "origin": {"year": "-2000", "place": "The Malabar coast", "lat": 11.5, "lon": 75.8, "culture": "Peoples of Kerala"},
     "home": ["india"],
+    "widely": 1500,
     "summary": "The berry of a vine of the Malabar coast, and for two thousand years the most valuable spice in the world's trade. Rome, Venice and Lisbon each grew rich on it in turn.",
     "source": "turner-spice", "confidence": "high",
     "spread": [
       {"year": "-1213", "place": "Thebes", "lat": 25.72, "lon": 32.6, "vp": "egypt", "note": "Peppercorns are placed in the nostrils of the mummy of Ramesses II.", "confidence": "medium"},
       {"year": "1..100", "place": "Muziris", "lat": 10.15, "lon": 76.21, "vp": "rome", "via": "periplus", "note": "Roman ships load pepper at Muziris; Pliny complains that India drains the empire of fifty million sesterces a year.", "source": "periplus"},
+      {"year": "300..600", "place": "Aksum", "lat": 14.13, "lon": 38.72, "vp": "ethiopia", "note": "Aksum's port of Adulis trades with India, pepper among the goods.", "source": "munro-hay", "confidence": "low"},
       {"year": "600..700", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Tang cooks use hujiao, the 'foreign pepper', brought by sea from India.", "confidence": "medium"},
+      {"year": 756, "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "Pepper is among the medicines dedicated to Tōdai-ji and kept in the Shōsōin.", "source": "shosoin", "confidence": "high"},
+      {"year": "800..1000", "place": "The Swahili coast", "lat": -6.2, "lon": 39.3, "vp": "swahili", "note": "Pepper from Malabar is traded along the Swahili coast.", "source": "draft", "confidence": "low"},
+      {"year": "1000..1100", "place": "Kiev", "lat": 50.45, "lon": 30.52, "vp": "russia", "note": "Pepper comes to Rus by the river roads from the Black Sea and the Caspian.", "source": "draft", "confidence": "low"},
+      {"year": "1260..1280", "place": "Khanbaliq", "lat": 39.9, "lon": 116.4, "vp": "steppe", "note": "Pepper reaches the Mongol court in great quantity by sea.", "source": "polo", "confidence": "medium"},
       {"year": 1389, "place": "Kaesong", "lat": 37.97, "lon": 126.55, "vp": "korea", "note": "Envoys from Chūzan bring pepper and sappanwood to the Goryeo court.", "source": "goryeosa", "confidence": "medium"},
       {"year": "1400..1500", "place": "Banten", "lat": -6.05, "lon": 106.15, "vp": "nusantara", "note": "Pepper is planted in Sumatra and western Java, and Banten becomes a great pepper port.", "confidence": "medium"},
       {"year": 1498, "place": "Calicut", "lat": 11.25, "lon": 75.78, "vp": "iberia", "via": "dagama", "note": "Vasco da Gama reaches the pepper coast by sea, and Lisbon breaks Venice's hold on the trade."}
@@ -399,13 +473,16 @@
     "id": "cloves", "kind": "plant", "name": "Cloves and nutmeg",
     "origin": {"year": "-2000", "place": "The Moluccas", "lat": 0.8, "lon": 127.4, "culture": "Peoples of the Spice Islands"},
     "home": ["nusantara"],
+    "widely": 1500,
     "summary": "Cloves grew only on a few islands of the northern Moluccas, and nutmeg only in the tiny Banda Islands. Wars were fought across the world for them.",
     "source": "turner-spice", "confidence": "high",
     "spread": [
       {"year": "-200..1", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Han courtiers chew cloves to sweeten their breath before they speak to the emperor.", "confidence": "medium"},
       {"year": 77, "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "note": "Pliny describes caryophyllon, an Indian spice like a peppercorn.", "source": "pliny"},
       {"year": "1..200", "place": "The Malabar coast", "lat": 11.5, "lon": 75.8, "vp": "india", "note": "Cloves come by sea to the ports of India, where Sanskrit calls them lavanga.", "confidence": "low"},
+      {"year": 756, "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "Cloves are among the medicines dedicated to Tōdai-ji and kept in the Shōsōin.", "source": "shosoin", "confidence": "high"},
       {"year": 851, "place": "Siraf", "lat": 27.67, "lon": 52.34, "vp": "islam", "note": "Gulf merchants trading to China list cloves among the goods of the eastern islands.", "source": "akhbar-sin", "confidence": "medium"},
+      {"year": "1000..1100", "place": "Gaegyeong", "lat": 37.97, "lon": 126.55, "vp": "korea", "note": "Cloves reach Goryeo with Chinese and Arab merchants.", "source": "draft", "confidence": "low"},
       {"year": 1521, "place": "Tidore", "lat": 0.68, "lon": 127.4, "vp": "iberia", "via": "magellan", "note": "Magellan's surviving ships load cloves at Tidore; the cargo of the Victoria pays for the whole voyage."},
       {"year": 1616, "place": "Run", "lat": -4.55, "lon": 129.67, "vp": "britain", "note": "English traders hold the tiny nutmeg island of Run. In 1667 England gives it up to the Dutch and keeps Manhattan.", "confidence": "medium"},
       {"year": 1621, "place": "The Banda Islands", "lat": -4.53, "lon": 129.9, "vp": "germany", "note": "The Dutch seize Banda for its nutmeg, killing or enslaving most of its people."},
@@ -416,6 +493,7 @@
     "id": "rubber", "kind": "plant", "name": "Rubber", "native": "cahuchu",
     "origin": {"year": "-1600", "place": "El Manatí, Veracruz", "lat": 17.95, "lon": -94.75, "culture": "The Olmec"},
     "home": ["mexica", "maya"],
+    "widely": 1870,
     "summary": "Mesoamericans made balls of rubber three and a half thousand years ago. The Amazon's rubber tree made fortunes after 1850, until seeds taken to Asia ended Brazil's hold on the trade.",
     "source": "dean-rubber", "confidence": "high",
     "spread": [
@@ -430,6 +508,7 @@
     "id": "cinchona", "kind": "plant", "name": "Cinchona and quinine",
     "origin": {"year": "1600..1630", "place": "Loja, in the Andes", "lat": -4.0, "lon": -79.2, "culture": "Healers of the Andes"},
     "home": [],
+    "widely": 1880,
     "summary": "The bark of a tree of the eastern Andes, the first effective remedy for malaria. Quinine, drawn from it in 1820, let Europeans live, trade and conquer in the tropics.",
     "source": "honigsbaum", "confidence": "high",
     "spread": [
@@ -444,12 +523,16 @@
     "id": "cat", "kind": "animal", "name": "The cat",
     "origin": {"year": "-7500", "place": "The Near East", "lat": 35.0, "lon": 37.5, "culture": "The first farmers"},
     "home": ["egypt", "persia", "arabia", "maghreb", "india"],
+    "widely": 1600,
     "summary": "Wildcats move into the grain stores of the first farmers and stay. Egypt made the cat sacred, and ships carried cats round the world to keep down the rats.",
     "source": "driscoll-2007", "confidence": "high",
     "spread": [
       {"year": "-500", "place": "Athens", "lat": 37.97, "lon": 23.73, "vp": "greece", "note": "Cats appear on Greek vases and reliefs, still a rare and foreign pet.", "confidence": "medium"},
       {"year": "100..300", "place": "Luoyang", "lat": 34.62, "lon": 112.45, "vp": "china", "note": "Domestic cats from the west reach China, replacing the leopard cats Chinese farmers had once kept.", "confidence": "low"},
+      {"year": "500..700", "place": "Gyeongju", "lat": 35.84, "lon": 129.21, "vp": "korea", "note": "Cats come to Korea from China.", "source": "draft", "confidence": "low"},
       {"year": 889, "place": "Kyoto", "lat": 35.01, "lon": 135.77, "vp": "japan", "from": "Luoyang", "note": "Emperor Uda writes in his diary of his black cat, brought from China: the first Japanese account of a pet cat.", "source": "kanpyo-gyoki"},
+      {"year": "800..1000", "place": "Java", "lat": -7.0, "lon": 110.0, "vp": "nusantara", "note": "Cats are kept in Java.", "source": "draft", "confidence": "low"},
+      {"year": "1000..1200", "place": "Novgorod", "lat": 58.52, "lon": 31.27, "vp": "russia", "note": "Cats are kept in the towns of Rus.", "source": "draft", "confidence": "low"},
       {"year": 1493, "place": "Hispaniola", "lat": 19.5, "lon": -70.7, "from": "Athens", "via": "columbus-2", "note": "Ships' cats come ashore in the Americas.", "confidence": "medium"}
     ]
   },
@@ -457,6 +540,7 @@
     "id": "chicken", "kind": "animal", "name": "The chicken",
     "origin": {"year": "-1650..-1250", "place": "Central Thailand", "lat": 15.3, "lon": 102.3, "culture": "Rice farmers of mainland Southeast Asia"},
     "home": ["nusantara"],
+    "widely": 1600,
     "summary": "The red junglefowl, drawn to the rice fields of Southeast Asia, becomes the chicken. It spread west across Asia to the Mediterranean and east in Polynesian canoes across the Pacific, perhaps as far as South America.",
     "source": "peters-2022", "confidence": "high",
     "spread": [
@@ -464,9 +548,13 @@
       {"year": "-1300..-1000", "place": "The Yellow River valley", "lat": 35.0, "lon": 112.0, "vp": "china", "note": "Chickens are kept in Shang and Zhou China.", "confidence": "medium"},
       {"year": "-1450", "place": "Thebes", "lat": 25.72, "lon": 32.6, "vp": "egypt", "from": "The Ganges plain", "note": "The annals of Thutmose III record a bird 'that gives birth every day' sent as tribute.", "confidence": "medium"},
       {"year": "-700..-600", "place": "Corinth", "lat": 37.91, "lon": 22.88, "vp": "greece", "from": "The Ganges plain", "note": "The Greeks call it the Persian bird.", "confidence": "medium"},
+      {"year": "-800..-400", "place": "Aksum", "lat": 14.13, "lon": 38.72, "vp": "ethiopia", "note": "Chickens are kept in the Horn of Africa.", "source": "draft", "confidence": "low"},
       {"year": "-300..1", "place": "Northern Kyushu", "lat": 33.6, "lon": 130.4, "vp": "japan", "from": "The Yellow River valley", "note": "Chickens reach Japan, kept for their crowing at dawn as much as for food.", "confidence": "low"},
       {"year": "1..300", "place": "Mahan", "lat": 36.0, "lon": 127.0, "vp": "korea", "from": "The Yellow River valley", "note": "The Chinese histories describe the long-tailed chickens of the Mahan in the southwest.", "source": "houhanshu", "confidence": "medium"},
+      {"year": "500..800", "place": "Jenne-jeno", "lat": 13.89, "lon": -4.54, "vp": "sahel", "note": "Chickens are kept in the villages of the Niger bend.", "source": "draft", "confidence": "low"},
+      {"year": "700..800", "place": "The Swahili coast", "lat": -6.2, "lon": 39.3, "vp": "swahili", "note": "Chickens are kept in the towns of the Swahili coast.", "source": "draft", "confidence": "low"},
       {"year": "900..1100", "place": "Samoa", "lat": -13.8, "lon": -172.1, "vp": "polynesia", "note": "Chickens travel across the Pacific in the voyaging canoes.", "confidence": "medium"},
+      {"year": "800..1200", "place": "Mbanza Kongo", "lat": -6.27, "lon": 14.25, "vp": "kongo", "note": "Chickens are kept in the villages of west-central Africa.", "source": "draft", "confidence": "low"},
       {"year": "1300..1420", "place": "El Arenal, Chile", "lat": -37.2, "lon": -73.6, "from": "Samoa", "note": "Chicken bones on the coast of Chile may predate Columbus, brought by Polynesian voyagers; the dating is disputed.", "confidence": "low"},
       {"year": "1520..1550", "place": "Yucatán", "lat": 20.6, "lon": -89.0, "vp": "maya", "note": "Spanish chickens join the Maya's own turkeys in village yards.", "source": "restall-maya", "confidence": "low"}
     ]
@@ -475,6 +563,7 @@
     "id": "elephant", "kind": "animal", "name": "The elephant",
     "origin": {"year": "-2500", "place": "India", "lat": 22.5, "lon": 79.0, "culture": "Peoples of South Asia"},
     "home": ["india", "nusantara", "china", "swahili", "ethiopia", "sahel", "zimbabwe", "persia", "kongo"],
+    "widely": 1800,
     "summary": "Tamed in India for work and war, and hunted in Africa for ivory. Far from home, a single elephant could be a king's most famous gift.",
     "source": "bedini", "confidence": "high",
     "spread": [
@@ -515,11 +604,287 @@
     "id": "okapi", "kind": "animal", "name": "The okapi",
     "origin": {"year": "-2000", "place": "The Ituri forest", "lat": 1.5, "lon": 28.5, "culture": "The Mbuti and Efe of the Ituri"},
     "home": [],
+    "widely": 1901,
     "summary": "A shy forest relative of the giraffe, striped like a zebra on its legs. Known to the forest peoples of the Ituri, it was one of the last large mammals the outside world learned of.",
     "source": "johnston-okapi", "confidence": "high",
     "spread": [
       {"year": 1890, "place": "The Ituri forest", "lat": 1.5, "lon": 28.5, "vp": "britain", "note": "Henry Morton Stanley hears of a forest animal like a donkey that the Mbuti catch in pits.", "confidence": "medium"},
       {"year": 1901, "place": "London", "lat": 51.51, "lon": -0.12, "from": "The Ituri forest", "note": "Harry Johnston sends a skin and two skulls to London, and the okapi is named."}
+    ]
+  },
+  {
+    "id": "peanut", "kind": "plant", "name": "The peanut", "native": "maní",
+    "origin": {"year": "-6000..-5500", "place": "The Ñanchoc valley, Peru", "lat": -6.9, "lon": -79.2, "culture": "Farmers of the western Andean foothills"},
+    "home": ["inca"],
+    "widely": 1700,
+    "summary": "A legume that flowers above ground and ripens its pods below it. Bred from wild peanuts of the eastern Andean foothills, it is grown in northern Peru by about 6000 BCE. After 1500 Portuguese ships carry it to Africa and Asia, where it becomes a staple and a source of oil.",
+    "source": "dillehay-2007", "confidence": "medium",
+    "spread": [
+      {"year": "250..300", "place": "Sipán", "lat": -6.8, "lon": -79.6, "note": "The lord of Sipán, a Moche ruler, is buried with a necklace of gold and silver peanuts.", "source": "alva-donnan-1993", "confidence": "high"},
+      {"year": "1450..1519", "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "vp": "mexica", "note": "Peanuts, tlalcacahuatl, 'earth cacao', are sold in the markets of Tenochtitlan.", "source": "sahagun", "confidence": "medium"},
+      {"year": 1535, "place": "Santo Domingo", "lat": 18.47, "lon": -69.9, "vp": "iberia", "note": "Oviedo describes maní, grown by the Taíno of Hispaniola.", "source": "oviedo", "confidence": "high"},
+      {"year": "1530..1540", "place": "The lower Yangzi", "lat": 31.65, "lon": 120.75, "vp": "china", "note": "Peanuts appear in the local gazetteers of the lower Yangzi, brought by sea.", "source": "ho-pingti", "confidence": "medium"},
+      {"year": "1550..1600", "place": "Senegambia", "lat": 13.5, "lon": -15.5, "vp": "sahel", "note": "Portuguese ships bring peanuts from Brazil to West Africa, where they become a field crop.", "source": "crosby", "confidence": "medium"},
+      {"year": "1550..1600", "place": "Goa", "lat": 15.5, "lon": 73.83, "vp": "india", "note": "The Portuguese bring peanuts to India.", "source": "crosby", "confidence": "low"},
+      {"year": "1600..1650", "place": "Kongo", "lat": -6.27, "lon": 14.25, "vp": "kongo", "note": "Peanuts, nguba, are grown in Kongo and Angola.", "source": "crosby", "confidence": "low"},
+      {"year": "1700..1750", "place": "Virginia", "lat": 37.5, "lon": -77.4, "from": "Kongo", "note": "Peanuts reach North America from Africa with enslaved Africans; nguba becomes 'goober'.", "source": "crosby", "confidence": "medium"}
+    ]
+  },
+  {
+    "id": "soybean", "kind": "plant", "name": "The soybean", "native": "菽",
+    "origin": {"year": "-3000..-1000", "place": "Northern China", "lat": 35.0, "lon": 114.0, "culture": "Farmers of northern China"},
+    "home": ["china"],
+    "summary": "Farmers in northern China, Korea and Japan each select larger beans from a wild vine, and the soybean becomes one of East Asia's staple foods, eaten as soy sauce, tofu, miso and tempeh. It reaches Europe and the Americas only in the eighteenth century.",
+    "source": "lee-2011", "confidence": "medium",
+    "spread": [
+      {"year": "-3000..-2500", "place": "Central Japan", "lat": 35.66, "lon": 138.57, "vp": "japan", "note": "Jōmon villagers in the mountains of central Japan grow soybeans larger than wild ones."},
+      {"year": "-1500..-1000", "place": "Central Korea", "lat": 36.5, "lon": 127.5, "vp": "korea", "note": "Farmers of the Mumun period in Korea grow soybeans and azuki beans."},
+      {"year": 1712, "place": "Lemgo", "lat": 52.03, "lon": 8.9, "vp": "germany", "note": "Engelbert Kaempfer, back from Japan, describes the soybean and how miso and soy sauce are made.", "source": "kaempfer-1712", "confidence": "high"},
+      {"year": 1765, "place": "Savannah", "lat": 32.08, "lon": -81.09, "vp": "britain", "note": "Samuel Bowen, a sailor who had been to China, plants soybeans near Savannah to make soy sauce and noodles.", "source": "hymowitz-harlan-1983", "confidence": "high"},
+      {"year": 1815, "place": "Central Java", "lat": -7.15, "lon": 110.4, "vp": "nusantara", "note": "The Serat Centhini mentions tempe, a cake of fermented soybeans.", "source": "shurtleff-tempeh", "confidence": "medium"}
+    ]
+  },
+  {
+    "id": "coconut", "kind": "plant", "name": "The coconut", "native": "niu",
+    "origin": {"year": "-3000..-1500", "place": "Island Southeast Asia", "lat": 6.0, "lon": 121.0, "culture": "Islanders of Southeast Asia"},
+    "home": ["nusantara", "polynesia"],
+    "widely": 1600,
+    "summary": "A palm whose seed floats and keeps its water for months at sea. People took it up twice, in Island Southeast Asia and around southern India; Austronesian voyagers carried it across the Pacific and the Indian Ocean, and it gave food, drink, oil, rope and timber to every tropical coast.",
+    "source": "gunn-2011", "confidence": "medium",
+    "spread": [
+      {"year": "-1000..-500", "place": "The Malabar coast", "lat": 10.5, "lon": 76.0, "vp": "india", "note": "Coconuts of the Indian Ocean kind are grown on the Malabar coast.", "confidence": "low"},
+      {"year": "250..350", "place": "Hainan", "lat": 19.2, "lon": 109.7, "vp": "china", "note": "Chinese writers describe the coconut palm, yezi, of Hainan and the far south.", "source": "draft", "confidence": "medium"},
+      {"year": "500..1000", "place": "The Swahili coast", "lat": -6.2, "lon": 39.3, "vp": "swahili", "note": "Coconuts of the Pacific kind reach the Swahili coast and Madagascar with Austronesian voyagers."},
+      {"year": 851, "place": "The Laccadives", "lat": 10.57, "lon": 72.64, "vp": "islam", "note": "The Account of China and India describes the coconut palms of the islands on the way to China.", "source": "akhbar-sin", "confidence": "medium"},
+      {"year": 1292, "place": "Samudra, Sumatra", "lat": 5.2, "lon": 97.1, "vp": "europe", "via": "polo", "note": "Marco Polo describes the 'Indian nuts', as big as a man's head, full of sweet liquor.", "source": "polo", "confidence": "medium"},
+      {"year": 1343, "place": "The Maldives", "lat": 4.17, "lon": 73.5, "vp": "islam", "note": "Ibn Battuta describes the Maldivian coconut palm: its fruit, its milk and the coir that sews the islanders' ships together.", "source": "ibn-battuta", "confidence": "high"},
+      {"year": 1526, "place": "The Pacific coast of Panama", "lat": 8.0, "lon": -79.5, "vp": "iberia", "note": "Oviedo finds coconut palms already growing on the Pacific coast of Panama, perhaps carried there by the sea.", "source": "oviedo", "confidence": "medium"}
+    ]
+  },
+  {
+    "id": "sorghum", "kind": "plant", "name": "Sorghum",
+    "origin": {"year": "-3500..-3000", "place": "The Butana, eastern Sudan", "lat": 15.5, "lon": 36.4, "culture": "Herders and farmers of eastern Sudan"},
+    "home": [],
+    "widely": 1600,
+    "summary": "A grass of the African savanna that thrives where it is too hot and dry for wheat or rice. People in eastern Sudan began to cultivate it about 3500 BCE; it crossed to India by 2000 BCE and became a staple from the Sahel to northern China.",
+    "source": "winchell-2017", "confidence": "medium",
+    "spread": [
+      {"year": "-2000..-1500", "place": "Saurashtra", "lat": 22.0, "lon": 70.8, "vp": "india", "note": "Sorghum crosses the Arabian Sea to western India, where it becomes jowar.", "source": "fuller-2003"},
+      {"year": "-300..300", "place": "Jenne-jeno", "lat": 13.89, "lon": -4.54, "vp": "sahel", "note": "At Jenne-jeno, farmers grow sorghum alongside African rice and pearl millet.", "source": "mcintosh"},
+      {"year": 70, "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "note": "Pliny writes of a millet brought from India within the last ten years, dark and large-grained: probably sorghum.", "source": "pliny", "confidence": "low"},
+      {"year": "1..500", "place": "Aksum", "lat": 14.13, "lon": 38.72, "vp": "ethiopia", "note": "Sorghum is a staple of the highlands around Aksum.", "source": "munro-hay"},
+      {"year": "1..500", "place": "Yemen", "lat": 15.35, "lon": 44.2, "vp": "arabia", "note": "Sorghum, dhurra, is grown in the highlands of Yemen.", "source": "draft", "confidence": "low"},
+      {"year": "1200..1300", "place": "Northern China", "lat": 37.0, "lon": 115.0, "vp": "china", "from": "Saurashtra", "note": "Sorghum, gaoliang, spreads in northern China.", "source": "draft", "confidence": "low"},
+      {"year": "1700..1760", "place": "South Carolina", "lat": 32.8, "lon": -79.9, "from": "Jenne-jeno", "note": "Sorghum, 'guinea corn', reaches the Americas with the Atlantic slave trade.", "source": "draft", "confidence": "low"}
+    ]
+  },
+  {
+    "id": "breadfruit", "kind": "plant", "name": "Breadfruit", "native": "ʻulu",
+    "origin": {"year": "-1500..-1000", "place": "New Guinea and the Bismarck Archipelago", "lat": -4.0, "lon": 150.0, "culture": "Islanders of western Melanesia"},
+    "home": ["polynesia", "nusantara"],
+    "widely": 1800,
+    "summary": "A tree whose large starchy fruit is roasted, baked or fermented. Islanders of western Melanesia bred it, and Pacific voyagers carried seedless kinds, which grow only from cuttings, from island to island. Europeans saw it as cheap food; Britain sent the Bounty to fetch it.",
+    "source": "zerega-2004", "confidence": "medium",
+    "spread": [
+      {"year": "1000..1100", "place": "Tahiti", "lat": -17.6, "lon": -149.4, "via": "east-polynesia", "note": "Voyagers carry breadfruit east across the Pacific to Tahiti and beyond.", "source": "kirch"},
+      {"year": 1686, "place": "Guam", "lat": 13.44, "lon": 144.79, "vp": "britain", "note": "William Dampier describes breadfruit on Guam: 'as big as a penny loaf'.", "source": "dampier-1697", "confidence": "high"},
+      {"year": 1793, "place": "St Vincent", "lat": 13.16, "lon": -61.22, "from": "Tahiti", "note": "After the mutiny on the Bounty ended his first attempt, William Bligh brings breadfruit from Tahiti to St Vincent and Jamaica as cheap food for enslaved people.", "source": "draft", "confidence": "high"}
+    ]
+  },
+  {
+    "id": "grape", "kind": "plant", "name": "The grapevine",
+    "origin": {"year": "-6000..-5800", "place": "Gadachrili Gora, Georgia", "lat": 41.4, "lon": 44.9, "culture": "Farmers of the South Caucasus"},
+    "home": [],
+    "widely": 1700,
+    "summary": "Farmers of the South Caucasus were making wine by 6000 BCE. The cultivated vine spread through the Near East and around the Mediterranean, where wine became part of feasts and worship; Han envoys took it to China, and Spanish and Dutch settlers to the Americas and southern Africa.",
+    "source": "mcgovern-2017", "confidence": "high",
+    "spread": [
+      {"year": "-5400..-5000", "place": "Hajji Firuz Tepe", "lat": 36.99, "lon": 45.47, "vp": "persia", "note": "Jars at Hajji Firuz Tepe in the Zagros hold the residue of wine flavoured with resin.", "source": "mcgovern-2003", "confidence": "medium"},
+      {"year": -3150, "place": "Abydos", "lat": 26.18, "lon": 31.92, "vp": "egypt", "note": "A king of Egypt is buried at Abydos with some seven hundred jars of wine from the Levant.", "source": "mcgovern-2003"},
+      {"year": "-1450..-1200", "place": "Pylos", "lat": 37.03, "lon": 21.7, "vp": "greece", "note": "Linear B tablets at Knossos and Pylos record wine, wo-no.", "source": "mcgovern-2003", "confidence": "medium"},
+      {"year": -600, "place": "Massalia", "lat": 43.3, "lon": 5.37, "vp": "france", "from": "Pylos", "note": "Greek settlers at Massalia plant vines, and Gaul takes to wine.", "source": "draft", "confidence": "medium"},
+      {"year": "-300..-100", "place": "Taxila", "lat": 33.75, "lon": 72.8, "vp": "india", "note": "Grapes and wine reach north-western India with Persian and Greek rule.", "source": "draft", "confidence": "low"},
+      {"year": "-126..-100", "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "via": "zhangqian", "note": "Zhang Qian brings word of grape wine in Dayuan; Han envoys bring back vines and plant them beside the palaces.", "source": "shiji", "confidence": "high"},
+      {"year": "700..800", "place": "Nara", "lat": 34.69, "lon": 135.8, "vp": "japan", "note": "Grapes and grapevine patterns reach Japan from Tang China.", "source": "draft", "confidence": "low"},
+      {"year": "700..800", "place": "Gyeongju", "lat": 35.84, "lon": 129.21, "vp": "korea", "note": "Grapevine patterns come to Silla from Tang China.", "source": "draft", "confidence": "low"},
+      {"year": "800..900", "place": "Turfan", "lat": 42.95, "lon": 89.18, "vp": "steppe", "note": "The Uyghurs of Turfan grow grapes and make wine.", "source": "draft", "confidence": "low"},
+      {"year": 1524, "place": "Mexico City", "lat": 19.43, "lon": -99.13, "vp": "mexica", "note": "Cortés orders Spanish settlers who hold Native labourers in encomienda to plant vines.", "source": "draft", "confidence": "medium"},
+      {"year": 1555, "place": "Cuzco", "lat": -13.53, "lon": -71.97, "vp": "inca", "note": "Garcilaso remembers the first grapes ripening in Cuzco.", "source": "garcilaso", "confidence": "medium"},
+      {"year": 1659, "place": "Cape Town", "lat": -33.92, "lon": 18.42, "note": "Jan van Riebeeck records the first wine pressed from Cape grapes.", "source": "draft", "confidence": "high"}
+    ]
+  },
+  {
+    "id": "olive", "kind": "plant", "name": "The olive",
+    "origin": {"year": "-4500..-4000", "place": "The southern Levant", "lat": 32.0, "lon": 35.5, "culture": "Farmers of the Chalcolithic Levant"},
+    "home": [],
+    "widely": 1800,
+    "summary": "A slow-growing tree of the dry Mediterranean hills, cultivated in the Levant by about 4500 BCE for its oil, which lit lamps, anointed bodies and cooked food. It spread with Phoenician and Greek settlers around the Mediterranean, and with the Spanish to the Americas.",
+    "source": "zohary-hopf", "confidence": "medium",
+    "spread": [
+      {"year": "-2000..-1500", "place": "Knossos", "lat": 35.3, "lon": 25.16, "vp": "greece", "note": "Minoan palaces store olive oil in great jars."},
+      {"year": -1330, "place": "Thebes", "lat": 25.73, "lon": 32.6, "vp": "egypt", "note": "Tutankhamun is buried with wreaths of olive leaves; Egypt imports most of its oil.", "source": "draft", "confidence": "high"},
+      {"year": "-800..-600", "place": "Gadir", "lat": 36.53, "lon": -6.29, "vp": "iberia", "note": "Phoenician settlers plant olives in southern Iberia.", "source": "draft"},
+      {"year": -580, "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "from": "Knossos", "note": "Pliny writes that there were no olives in Italy in the time of Tarquinius Priscus, about 580 BCE; Greek settlers bring them.", "source": "pliny"},
+      {"year": 860, "place": "Chang'an", "lat": 34.26, "lon": 108.94, "vp": "china", "note": "Duan Chengshi describes the qitun tree of Persia and Fulin, whose fruit is pressed for oil.", "source": "duan-chengshi"},
+      {"year": 1560, "place": "Lima", "lat": -12.05, "lon": -77.04, "vp": "inca", "from": "Gadir", "note": "Antonio de Ribera brings olive saplings from Seville to Lima; Garcilaso tells how only three of a hundred survived the voyage.", "source": "garcilaso"}
+    ]
+  },
+  {
+    "id": "peach", "kind": "plant", "name": "The peach",
+    "origin": {"year": "-6000..-5000", "place": "The lower Yangzi", "lat": 30.15, "lon": 120.25, "culture": "Farmers of the lower Yangzi"},
+    "home": ["china"],
+    "widely": 1750,
+    "summary": "Farmers of the lower Yangzi chose larger and sweeter peaches over thousands of years, and the peach became China's fruit of long life. It travelled west along the routes to Persia, which the Romans thought was its home, and on with the Spanish to the Americas.",
+    "source": "zheng-2014", "confidence": "medium",
+    "spread": [
+      {"year": "200..250", "place": "Makimuku", "lat": 34.55, "lon": 135.84, "vp": "japan", "note": "More than two thousand peach stones are buried at Makimuku, perhaps offerings at an early royal court.", "source": "draft"},
+      {"year": "-300..-100", "place": "Persia", "lat": 32.4, "lon": 53.7, "vp": "persia", "note": "Peaches reach Persia along the routes from China; the Greeks will call them 'Persian apples'.", "source": "draft", "confidence": "low"},
+      {"year": "-100..100", "place": "Gyeongju", "lat": 35.84, "lon": 129.21, "vp": "korea", "note": "Peaches are grown in Korea.", "source": "draft", "confidence": "low"},
+      {"year": "1..50", "place": "Rome", "lat": 41.89, "lon": 12.49, "vp": "rome", "from": "Persia", "note": "Pliny writes of the persica, a fruit lately come to Italy, which travels badly.", "source": "pliny"},
+      {"year": "100..400", "place": "Kashmir", "lat": 34.08, "lon": 74.8, "vp": "india", "note": "Peaches come to Kashmir and the north-west along the routes from China.", "source": "draft", "confidence": "low"},
+      {"year": 1215, "place": "Zhongdu", "lat": 39.88, "lon": 116.35, "vp": "steppe", "note": "The Mongols take the orchards of northern China with Zhongdu.", "source": "secret-history", "confidence": "medium"},
+      {"year": "1600..1700", "place": "The Southeast", "lat": 33.0, "lon": -85.0, "vp": "mississippian", "note": "Peaches spread from Spanish Florida faster than the settlers, and Native towns of the Southeast grow them in orchards.", "source": "draft"}
+    ]
+  },
+  {
+    "id": "vanilla", "kind": "plant", "name": "Vanilla", "native": "tlilxochitl",
+    "origin": {"year": "1300..1450", "place": "Papantla, Veracruz", "lat": 20.45, "lon": -97.32, "culture": "The Totonac of the Gulf coast"},
+    "home": [],
+    "widely": 1850,
+    "summary": "The cured pod of a climbing orchid of the Gulf coast forests, grown by the Totonac. The Mexica flavoured chocolate with it, and Europe took it with chocolate. Outside Mexico the flowers would not set fruit until 1841, when an enslaved boy on Réunion found how to pollinate them by hand.",
+    "source": "ecott-2004", "confidence": "medium",
+    "spread": [
+      {"year": "1450..1480", "place": "Tenochtitlan", "lat": 19.43, "lon": -99.13, "vp": "mexica", "note": "The Mexica conquer the Totonac coast and take vanilla, tlilxochitl, 'black flower', as tribute to flavour chocolate.", "source": "coe-chocolate"},
+      {"year": "1520..1530", "place": "Seville", "lat": 37.39, "lon": -5.98, "vp": "iberia", "from": "Tenochtitlan", "note": "Vanilla comes to Spain with cacao, to flavour chocolate as the Mexica did.", "source": "coe-chocolate"},
+      {"year": 1602, "place": "London", "lat": 51.51, "lon": -0.12, "vp": "britain", "from": "Seville", "note": "Hugh Morgan, apothecary to Elizabeth I, suggests vanilla as a flavouring on its own."},
+      {"year": 1841, "place": "Sainte-Suzanne, Réunion", "lat": -20.9, "lon": 55.6, "vp": "france", "note": "Edmond Albius, a twelve-year-old enslaved boy on Réunion, finds how to pollinate vanilla flowers by hand; it can now bear fruit far from the Mexican bees that do the work.", "source": "ecott-2004", "confidence": "high"},
+      {"year": "1870..1900", "place": "Sava, Madagascar", "lat": -14.3, "lon": 50.0, "from": "Sainte-Suzanne, Réunion", "note": "Planters carry vanilla from Réunion to Madagascar, which becomes its largest grower."}
+    ]
+  },
+  {
+    "id": "dromedary", "kind": "animal", "name": "The dromedary",
+    "origin": {"year": "-1200..-1000", "place": "South-east Arabia", "lat": 23.5, "lon": 56.5, "culture": "Herders of south-east Arabia"},
+    "home": ["arabia"],
+    "widely": 1700,
+    "summary": "The one-humped camel, tamed in south-east Arabia around 1100 BCE, can go days without water and carry heavy loads across sand. It carried the incense trade of Arabia, then the caravans of the Sahara, and in the nineteenth century it was taken to Australia to open the interior.",
+    "source": "almathen-2016", "confidence": "medium",
+    "spread": [
+      {"year": "-1200..-1000", "place": "The Punjab", "lat": 31.5, "lon": 74.3, "vp": "india", "note": "The Rigveda names the camel, uṣṭra.", "source": "rigveda", "confidence": "medium"},
+      {"year": -853, "place": "Qarqar", "lat": 35.8, "lon": 36.3, "note": "Gindibu the Arab brings a thousand camels to the battle of Qarqar, says an Assyrian inscription.", "source": "bulliet-1975", "confidence": "high"},
+      {"year": -547, "place": "Sardis", "lat": 38.48, "lon": 28.04, "vp": "persia", "note": "Cyrus sets camels against Croesus's cavalry at Sardis; the horses bolt at their smell, says Herodotus.", "source": "herodotus"},
+      {"year": "-500..-300", "place": "Memphis", "lat": 29.85, "lon": 31.25, "vp": "egypt", "note": "Camels come into common use in Egypt in Persian and Ptolemaic times.", "source": "bulliet-1975"},
+      {"year": "200..400", "place": "Leptis Magna", "lat": 32.64, "lon": 14.29, "vp": "maghreb", "note": "Camels spread across Roman North Africa; in the 360s Leptis Magna is asked for four thousand.", "source": "bulliet-1975"},
+      {"year": "700..800", "place": "Koumbi Saleh", "lat": 15.77, "lon": -8.0, "vp": "sahel", "from": "Leptis Magna", "note": "Camel caravans cross the Sahara to Ghana, carrying salt south and gold north.", "source": "levtzion-hopkins"},
+      {"year": 1860, "place": "Melbourne", "lat": -37.81, "lon": 144.96, "vp": "britain", "note": "Camels and cameleers from Afghanistan and British India come to Australia; the Burke and Wills expedition sets out with two dozen.", "source": "draft", "confidence": "high"}
+    ]
+  },
+  {
+    "id": "llama", "kind": "animal", "name": "The llama",
+    "origin": {"year": "-4500..-3500", "place": "The puna of central Peru", "lat": -11.2, "lon": -75.9, "culture": "Herders of the high puna"},
+    "home": ["inca"],
+    "widely": 1800,
+    "summary": "Herders of the high Andean grasslands tamed the wild guanaco into the llama, and the vicuña into the alpaca. Llamas carried the loads of the Andes, from the Inca roads to the silver of Potosí; their wool, meat and dung kept highland life going where few crops would grow.",
+    "source": "wheeler-1995", "confidence": "medium",
+    "spread": [
+      {"year": 1528, "place": "Toledo", "lat": 39.86, "lon": -4.02, "vp": "iberia", "note": "Francisco Pizarro brings llamas from Tumbes to show Charles V in Toledo.", "source": "draft", "confidence": "medium"},
+      {"year": 1551, "place": "Zurich", "lat": 47.37, "lon": 8.54, "vp": "germany", "from": "Toledo", "note": "Conrad Gessner prints a picture of the 'allocamelus', from a sketch of a llama.", "source": "draft", "confidence": "low"},
+      {"year": "1545..1600", "place": "Potosí", "lat": -19.58, "lon": -65.75, "note": "Trains of llamas carry the silver ore of Potosí and the goods of its markets.", "source": "cieza"}
+    ]
+  },
+  {
+    "id": "dog", "kind": "animal", "name": "The dog",
+    "origin": {"year": "-14000..-12300", "place": "Bonn-Oberkassel", "lat": 50.72, "lon": 7.18, "culture": "Hunter-gatherers of Ice Age Eurasia"},
+    "home": ["europe", "china", "islam", "india", "japan", "sahel", "mexica", "inca", "persia", "egypt", "arabia", "maghreb", "greece", "rome", "iberia", "france", "britain", "germany", "norse", "russia", "inuit", "zimbabwe", "ethiopia", "swahili", "nusantara", "korea", "steppe", "maya", "kongo", "mississippian", "haudenosaunee", "turks", "polynesia"],
+    "summary": "The first animal people tamed, from wolves, in Ice Age Eurasia; where exactly is still argued, but a dog was buried with two people at Bonn-Oberkassel some fourteen thousand years ago. Dogs went with the first people into the Americas, and later with voyagers to Australia and across the Pacific.",
+    "source": "perri-2021", "confidence": "medium",
+    "spread": [
+      {"year": "-8500..-8000", "place": "Koster, Illinois", "lat": 39.2, "lon": -90.5, "note": "Dogs are buried with care at Koster in the Illinois valley, among the oldest dog graves in the Americas; dogs had come with the first people."},
+      {"year": "-1400..-1100", "place": "Madura Cave", "lat": -31.9, "lon": 127.0, "note": "The dingo reaches Australia by sea, perhaps with voyagers from Island Southeast Asia; the oldest dingo bones are at Madura Cave.", "source": "balme-2018"},
+      {"year": "1200..1300", "place": "Northwest Greenland", "lat": 77.47, "lon": -69.23, "via": "thule-migration", "note": "Thule people cross the Arctic to Greenland with dog sleds.", "source": "friesen-mason"},
+      {"year": "1250..1300", "place": "Aotearoa", "lat": -41.0, "lon": 174.0, "note": "Voyagers bring the kurī, a Polynesian dog, to Aotearoa.", "source": "kirch"}
+    ]
+  },
+  {
+    "id": "pig", "kind": "animal", "name": "The pig",
+    "origin": {"year": "-8500..-8000", "place": "Çayönü, eastern Anatolia", "lat": 38.22, "lon": 39.73, "culture": "Farmers of the upper Tigris"},
+    "home": ["greece", "rome", "egypt", "persia", "europe", "france", "britain", "germany", "iberia", "norse", "russia", "india", "islam", "arabia", "maghreb", "turks", "steppe", "japan", "nusantara"],
+    "widely": 1550,
+    "summary": "Wild boar were tamed at least twice, in eastern Anatolia and in China, and pigs became the meat of farming villages across Eurasia. Lapita voyagers carried them into the Pacific; Columbus and de Soto brought them to the Americas, where escaped herds ran wild.",
+    "source": "larson-2005", "confidence": "medium",
+    "spread": [
+      {"year": "-6600..-6000", "place": "Jiahu", "lat": 33.6, "lon": 113.67, "vp": "china", "note": "Farmers at Jiahu keep pigs tamed separately from the boars of the Near East."},
+      {"year": "-3000..-2000", "place": "Central Korea", "lat": 36.5, "lon": 127.5, "vp": "korea", "from": "Jiahu", "note": "Pigs reach Korea from China.", "source": "draft", "confidence": "low"},
+      {"year": "-1000..-800", "place": "Teouma, Vanuatu", "lat": -17.8, "lon": 168.4, "vp": "polynesia", "note": "Lapita voyagers carry pigs, dogs and chickens into the Pacific.", "source": "larson-2007"},
+      {"year": 1493, "place": "Hispaniola", "lat": 19.0, "lon": -70.7, "via": "columbus-2", "note": "Columbus brings eight pigs from the Canary Islands to Hispaniola.", "source": "crosby", "confidence": "high"},
+      {"year": 1539, "place": "Tampa Bay", "lat": 27.9, "lon": -82.6, "vp": "mississippian", "from": "Hispaniola", "note": "Hernando de Soto lands in Florida with thirteen sows; by his death the herd numbers some seven hundred.", "source": "hudson-desoto"}
+    ]
+  },
+  {
+    "id": "rabbit", "kind": "animal", "name": "The European rabbit",
+    "origin": {"year": "-1100..-900", "place": "The Iberian Peninsula", "lat": 39.5, "lon": -4.0, "culture": "Phoenician sailors"},
+    "home": ["iberia"],
+    "widely": 1800,
+    "summary": "The European rabbit lived wild only in Iberia and southern France; Phoenician sailors may have named Spain for it, taking it for the hyrax of home. Romans kept it in walled warrens, monks and lords bred it, and in 1859 two dozen rabbits let loose in Australia became hundreds of millions.",
+    "source": "irving-pease-2018", "confidence": "low",
+    "spread": [
+      {"year": 77, "place": "The Balearic Islands", "lat": 39.6, "lon": 2.9, "vp": "rome", "note": "Pliny tells of rabbits so many on the Balearic Islands that the islanders asked Augustus for soldiers to fight them.", "source": "pliny", "confidence": "high"},
+      {"year": "1100..1200", "place": "The Isles of Scilly", "lat": 49.93, "lon": -6.3, "vp": "britain", "note": "The Normans bring rabbits to Britain and keep them in warrens; the first records are from the Isles of Scilly.", "source": "draft", "confidence": "medium"},
+      {"year": "1500..1600", "place": "Champagne", "lat": 49.0, "lon": 4.0, "vp": "france", "note": "Rabbits are bred in hutches in France, and the tame rabbit takes shape.", "source": "irving-pease-2018", "confidence": "medium"},
+      {"year": 1859, "place": "Barwon Park, Victoria", "lat": -38.1, "lon": 144.2, "from": "The Isles of Scilly", "note": "Thomas Austin releases twenty-four rabbits for hunting; within fifty years there are hundreds of millions across Australia.", "source": "draft", "confidence": "high"}
+    ]
+  },
+  {
+    "id": "stellers-sea-cow", "kind": "animal", "name": "Steller's sea cow",
+    "origin": {"year": 1741, "place": "The Commander Islands", "lat": 55.0, "lon": 166.3},
+    "home": [],
+    "extinct": {"year": 1768, "note": "The last sea cows are killed on Bering Island, twenty-seven years after Steller described them."},
+    "widely": 1751,
+    "summary": "A giant relative of the manatee, up to eight metres long, which grazed on kelp in the cold shallows of the Commander Islands. Georg Steller described it after Bering's shipwreck in 1741; hunters of sea otters killed the last of them twenty-seven years later.",
+    "source": "steller", "confidence": "high",
+    "spread": [
+      {"year": 1741, "place": "Bering Island", "lat": 55.0, "lon": 166.2, "vp": "russia", "via": "bering-2", "note": "Shipwrecked with Bering's crew, Georg Steller describes a sea cow up to eight metres long; the crew eat it to survive."},
+      {"year": 1751, "place": "St Petersburg", "lat": 59.94, "lon": 30.31, "from": "Bering Island", "note": "Steller's description, De bestiis marinis, is published in St Petersburg: nearly all that will ever be known of the living animal."}
+    ]
+  },
+  {
+    "id": "great-auk", "kind": "animal", "name": "The great auk",
+    "origin": {"year": "-2500..-1500", "place": "Port au Choix, Newfoundland", "lat": 50.7, "lon": -57.35, "culture": "The Maritime Archaic people"},
+    "home": [],
+    "extinct": {"year": 1844, "note": "The last known pair is killed on Eldey, off Iceland, for a collector."},
+    "summary": "A flightless seabird of the North Atlantic, nearly a metre tall, that came ashore only to breed. Maritime Archaic people were buried with its beaks; sailors filled their boats with it on Funk Island. Collectors paid for the last skins, and the last known pair was killed in 1844.",
+    "source": "fuller-auk", "confidence": "medium",
+    "spread": [
+      {"year": "870..900", "place": "Iceland", "lat": 64.1, "lon": -21.9, "vp": "norse", "note": "Norse settlers in Iceland call it geirfugl.", "source": "draft"},
+      {"year": "1200..1300", "place": "Northwest Greenland", "lat": 77.47, "lon": -69.23, "vp": "inuit", "via": "thule-migration", "note": "Thule hunters reaching Greenland take great auks along its coasts.", "source": "friesen-mason", "confidence": "low"},
+      {"year": 1534, "place": "Funk Island", "lat": 49.75, "lon": -53.18, "vp": "france", "note": "Jacques Cartier's men fill two boats with great auks on the Isle of Birds in less than half an hour.", "source": "hakluyt", "confidence": "high"},
+      {"year": 1655, "place": "Copenhagen", "lat": 55.68, "lon": 12.57, "from": "Iceland", "note": "Ole Worm keeps a tame great auk from the Faroes and publishes its picture.", "source": "fuller-auk", "confidence": "high"}
+    ]
+  },
+  {
+    "id": "passenger-pigeon", "kind": "animal", "name": "The passenger pigeon", "native": "omiimii",
+    "origin": {"year": -2000, "place": "The forests of eastern North America", "lat": 40.0, "lon": -83.0},
+    "home": ["haudenosaunee", "mississippian"],
+    "extinct": {"year": 1914, "note": "Martha, the last passenger pigeon, dies at the Cincinnati Zoo."},
+    "summary": "Perhaps the most numerous bird on Earth, flying in flocks that darkened the sky for days over the forests of eastern North America. Netted and shot by the million and sent to city markets by rail, it was gone from the wild by 1900; the last one died in a zoo in 1914.",
+    "source": "schorger-1955", "confidence": "high",
+    "spread": [
+      {"year": 1534, "place": "Prince Edward Island", "lat": 46.4, "lon": -63.2, "vp": "france", "note": "Jacques Cartier sees wood pigeons beyond number on Prince Edward Island.", "source": "hakluyt", "confidence": "medium"},
+      {"year": 1813, "place": "Henderson, Kentucky", "lat": 37.84, "lon": -87.59, "note": "Audubon watches a flock pass overhead for three days, darkening the sun.", "source": "audubon-1831"},
+      {"year": 1878, "place": "Petoskey, Michigan", "lat": 45.37, "lon": -84.95, "note": "Hunters ship birds by the trainload from a great nesting near Petoskey, one of the last."}
+    ]
+  },
+  {
+    "id": "thylacine", "kind": "animal", "name": "The thylacine",
+    "origin": {"year": -2000, "place": "Tasmania", "lat": -42.0, "lon": 146.5, "culture": "The Palawa of Tasmania"},
+    "home": [],
+    "extinct": {"year": 1936, "note": "Benjamin, the last known thylacine, dies at Hobart's Beaumaris Zoo."},
+    "summary": "A striped, dog-like marsupial hunter, the \"Tasmanian tiger\". It vanished from mainland Australia about 3,200 years ago, after the dingo came, and lived on in Tasmania until settlers and a government bounty killed thousands; the last known one died in Hobart in 1936.",
+    "source": "paddle-2000", "confidence": "high",
+    "spread": [
+      {"year": "-3000..-1200", "place": "Arnhem Land", "lat": -12.5, "lon": 133.5, "note": "Thylacines are painted on the rocks of Arnhem Land; on the mainland they die out about 3,200 years ago.", "confidence": "medium"},
+      {"year": 1642, "place": "Marion Bay, Tasmania", "lat": -42.8, "lon": 147.9, "vp": "germany", "via": "tasman", "note": "Tasman's men see tracks with 'claws like a tiger' on Tasmania.", "source": "tasman", "confidence": "low"},
+      {"year": 1808, "place": "Hobart", "lat": -42.88, "lon": 147.33, "vp": "britain", "note": "George Harris describes the thylacine for the Linnean Society of London."},
+      {"year": "1888..1909", "place": "Tasmania", "lat": -42.0, "lon": 146.5, "from": "Hobart", "note": "A Tasmanian government bounty pays for 2,184 dead thylacines."}
     ]
   }
 ]

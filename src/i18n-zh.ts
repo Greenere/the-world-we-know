@@ -110,6 +110,8 @@ export const zhUi: Record<string, string> = {
   Animal: '动物',
   Extinct: '已灭绝',
   'How it spread': '传播经过',
+  'Origin': '起源',
+  'Known from the start to {vps}': '{vps}自始知晓',
   'Known to people from {year}': '{year}起为人所知',
   'Known from {year}': '{year}起知晓',
   'Known before {year}': '{year}之前已知',

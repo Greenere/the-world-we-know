@@ -784,6 +784,19 @@ export class Cards {
           : null,
       );
     });
+    // Where it began heads the list: who first grew or knew it, and the viewpoints that knew it from the start.
+    const homes = (x.home ?? []).filter(v => this.data.vp[v]).map(v => vpName(this.data, v));
+    const originNote = [culture, homes.length ? t('Known from the start to {vps}', {vps: homes.join(', ')}) : ''].filter(Boolean).join(isZh() ? '。' : '. ');
+    const originRow = h(
+      'li',
+      h(
+        'button.age.arrival.origin',
+        {type: 'button', title: t('Show on the map'), onclick: () => this.actions.flyTo(x.origin.lon, x.origin.lat, 3)},
+        h('span.age-name', tx.living(x.id, 'place', x.origin.place), h('span.arrival-vp', ` · ${t('Origin')}`)),
+        h('span.age-years', x.origin.mid <= START && typeof x.origin.year === 'number' ? t('by {year}', {year: formatYear(x.origin.year)}) : formatRange(x.origin.year)),
+        originNote ? h('span.age-note', originNote) : null,
+      ),
+    );
     const out: Node[] = [
       kicker,
       h('h2.card-title', name, x.native && x.native !== name ? h('span.native', ` ${x.native}`) : null),
@@ -804,7 +817,7 @@ export class Cards {
       ),
     ];
     if (x.extinct) out.push(h('p.living-extinct', `${t('Extinct')} · ${tx.living(x.id, 'extinct', x.extinct.note)}`));
-    if (rows.length) out.push(h('h3.card-h', t('How it spread')), h('ol.ages.arrivals', rows));
+    out.push(h('h3.card-h', t('How it spread')), h('ol.ages.arrivals', originRow, rows));
     out.push(h('p.card-src', {title: this.data.sources[x.source]?.citation ?? x.source}, `${t('Source:')} ${shortCitation(this.data.sources, x.source)} · ${t('{level} confidence', {level: t(x.confidence)})}`));
     let shownArrival: number | null = null;
     this.live = st => {
@@ -815,6 +828,9 @@ export class Cards {
       order.forEach(({a}, k) => {
         if (a.mid <= st.year) latest = k;
       });
+      const originBtn = originRow.firstElementChild!;
+      originBtn.classList.toggle('later', x.origin.mid > st.year);
+      originBtn.classList.toggle('current', latest === -1 && x.origin.mid <= st.year);
       rows.forEach((li, k) => {
         const btn = li.firstElementChild!;
         btn.classList.toggle('later', order[k].a.mid > st.year);

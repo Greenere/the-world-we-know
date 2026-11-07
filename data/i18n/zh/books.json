@@ -908,5 +908,21 @@
  "ptolemy-latin": {
   "author": "雅各布·安杰利",
   "title": "托勒密《地理学指南》拉丁文译本"
+ },
+ "kaempfer-1712": {
+  "author": "恩格尔贝特·肯普弗",
+  "title": "异域采风录"
+ },
+ "dampier-1697": {
+  "author": "威廉·丹皮尔",
+  "title": "新环球航行记"
+ },
+ "duan-chengshi": {
+  "author": "段成式",
+  "title": "酉阳杂俎"
+ },
+ "audubon-1831": {
+  "author": "约翰·詹姆斯·奥杜邦",
+  "title": "鸟类传记"
  }
 }
