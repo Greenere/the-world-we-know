@@ -398,6 +398,7 @@ export const zhUi: Record<string, string> = {
   Pause: '暂停',
   'Playback speed': '播放速度',
   'Show every journey as the timeline plays': '播放时间轴时显示所有旅程',
+  'Auto camera: frame the known world and widen with it. Moving the map turns it off': '自动镜头：框住已知的世界，并随之扩展视野。移动地图即关闭',
   Year: '年份',
   'Previous key moment': '上一个关键时刻',
   'Previous  ←': '上一个  ←',

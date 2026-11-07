@@ -43,6 +43,7 @@ export class Timeline {
   private handle: HTMLElement;
   private playBtn: HTMLButtonElement;
   private speedBtn: HTMLButtonElement;
+  private cameraBtn: HTMLButtonElement;
   private allBtn: HTMLButtonElement;
   /** Set by the app each frame: playback is at journey pace because a journey is under way. */
   journeyPace = false;
@@ -95,6 +96,13 @@ export class Timeline {
       html: icons.route,
       onclick: () => store.set({allJourneys: !store.state.allJourneys}),
     });
+    this.cameraBtn = h('button.tl-all.tl-camera', {
+      type: 'button',
+      title: t('Auto camera: frame the known world and widen with it. Moving the map turns it off'),
+      'aria-label': t('Auto camera: frame the known world and widen with it. Moving the map turns it off'),
+      html: icons.frame,
+      onclick: () => store.set({autoCamera: !store.state.autoCamera}),
+    });
     this.svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.svgEl.classList.add('tl-svg');
     this.handle = h('div.tl-handle', h('div.tl-handle-knob'));
@@ -112,6 +120,7 @@ export class Timeline {
         h('button.tl-step', {type: 'button', 'aria-label': t('Next key moment'), title: t('Next  →'), onclick: () => onStep(1), html: icons.next}),
         this.speedBtn,
         this.allBtn,
+        this.cameraBtn,
       ),
       this.track,
       h('div.tl-year', h('div.tl-year-line', this.yearNum, this.yearEra), this.caption),
@@ -221,6 +230,9 @@ export class Timeline {
     this.allBtn.hidden = !!s.journey;
     this.allBtn.classList.toggle('active', s.allJourneys);
     this.allBtn.setAttribute('aria-pressed', String(s.allJourneys));
+    this.cameraBtn.hidden = !!s.journey;
+    this.cameraBtn.classList.toggle('active', s.autoCamera);
+    this.cameraBtn.setAttribute('aria-pressed', String(s.autoCamera));
     const era = this.geo ? '' : (ERAS.find(e => s.year >= e.from && s.year < e.to)?.id ?? '');
     if (era !== this.eraKey) {
       this.eraKey = era;

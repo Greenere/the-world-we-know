@@ -24,6 +24,8 @@ export interface State {
   speed: number;
   /** Timeline playback: show every journey under way, slowing to `journeySpeed` while one is. */
   allJourneys: boolean;
+  /** Timeline camera: frame what the viewpoint knows and widen with it. Any touch on the map turns it off. */
+  autoCamera: boolean;
   /** The journey list's "show on map": every route the list's filters match, drawn whole; null when off. */
   routes: string[] | null;
   journeySpeed: number;
@@ -95,6 +97,7 @@ export const DEFAULT_STATE: State = {
   playing: false,
   speed: 1,
   allJourneys: false,
+  autoCamera: false,
   routes: null,
   journeySpeed: 0.05,
   scrubbing: false,
@@ -115,7 +118,7 @@ export const DEFAULT_STATE: State = {
   search: false,
 };
 
-/** ?vp=china&year=1420 · ?vp=europe,china&year=1420 · ?journey=zhenghe&stop=4 · ?region=…&vp=… · ?city=loulan · ?invention=compass&year=1100 · ?book=ma-huan · ?living=maize&year=1600 */
+/** ?vp=china&year=1420 · ?vp=europe,china&year=1420 · ?journey=zhenghe&stop=4 · ?region=…&vp=… · ?city=loulan · ?invention=compass&year=1100 · ?book=ma-huan · ?living=maize&year=1600 · &camera=auto */
 export function readUrl(): Partial<State> & {stop?: number} {
   const q = new URLSearchParams(location.search);
   const out: Partial<State> & {stop?: number} = {};
@@ -140,6 +143,7 @@ export function readUrl(): Partial<State> & {stop?: number} {
   if (q.get('globe') === '1') out.globe = true;
   if (q.get('view') === 'route') out.follow = false;
   if (q.get('journeys') === 'all') out.allJourneys = true;
+  if (q.get('camera') === 'auto') out.autoCamera = true;
   return out;
 }
 
@@ -163,6 +167,7 @@ export function writeUrl(s: State, currentStop: number | null) {
   if (s.living) q.set('living', s.living);
   if (s.globe) q.set('globe', '1');
   if (s.allJourneys && !s.journey) q.set('journeys', 'all');
+  if (s.autoCamera && !s.journey) q.set('camera', 'auto');
   if (getLang() === 'zh') q.set('lang', 'zh');
   const url = `${location.pathname}?${q.toString().replace(/%2C/g, ',')}`;
   if (url !== location.pathname + location.search) history.replaceState(null, '', url);

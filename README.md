@@ -33,7 +33,7 @@
 - **420 books** the atlas is drawn from: 236 works written in their own time, from Herodotus and the Shiji to Ma Huan, Ibn Battuta and Darwin, and 184 modern studies. Each book's card shows what it brought: the regions it made known to each viewpoint, and the journeys, places, inventions, plants and animals it tells of. The bound books among the inventions, such as Ortelius's atlas, are shelved here too.
 - **505 cities** that rise, fall to ruin, are forgotten and are found again, named as each viewpoint named them.
 - **Two panels.** Journeys holds the journeys and landmarks; Discoveries holds the inventions, the books, and the plants and animals.
-- **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map. While you follow a journey, the timeline becomes the journey's own: land and sea legs, long stays folded with their length, and the news reaching home.
+- **Compare mode** for two viewpoints, a globe as well as the flat map, and a timeline marked with shared eras: from Out of Africa to One shared map. While you follow a journey, the timeline becomes the journey's own: land and sea legs, long stays folded with their length, and the news reaching home. The auto camera beside the play button frames what a viewpoint knows and widens with it as the timeline plays; touching the map hands the camera back to you.
 
 Every view is a link: `?vp=china&year=1420`, `?vp=europe,china&year=1420`, `?journey=zhenghe&stop=4`, `?city=loulan`, `?invention=magnetic-compass`, `?living=maize&vp=china`, `&globe=1`, `&lang=zh`.
 

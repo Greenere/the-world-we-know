@@ -24,6 +24,8 @@ export const icons = {
   ),
   speed: wrap('<path d="M4 14a6 6 0 1 1 12 0"/><path d="M10 14l3-4"/>'),
   arrow: wrap('<path d="M4 10h11M11 6l4 4-4 4"/>'),
+  /** The auto camera: a frame whose corners open outward. */
+  frame: wrap('<path d="M3.5 7.5v-4h4M12.5 3.5h4v4M16.5 12.5v4h-4M7.5 16.5h-4v-4"/><path d="M7.2 10h5.6M10 7.2v5.6" stroke-width="1.2"/>'),
   follow: wrap('<circle cx="10" cy="10" r="5.2"/><circle cx="10" cy="10" r="1.6" fill="currentColor" stroke="none"/><path d="M10 2.5v2.6M10 14.9v2.6M2.5 10h2.6M14.9 10h2.6"/>'),
   route: wrap('<circle cx="4.5" cy="14.5" r="1.8"/><circle cx="15.5" cy="5.5" r="1.8"/><path d="M6.2 13.6c3-1 1.6-4.6 4.6-5.4 1.4-.4 2.4-1 3.2-1.6" stroke-dasharray="1.6 2"/>'),
   sketch: wrap('<rect x="3" y="4.5" width="14" height="11" rx=".8"/><path d="M3.6 13.6l3.8-3.6 2.8 2.6 2.2-1.9 3.9 3.1"/><circle cx="12.9" cy="8" r="1.1"/>'),

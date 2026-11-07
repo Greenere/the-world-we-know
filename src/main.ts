@@ -22,6 +22,7 @@ import type {JourneyGeo} from './journey-geo';
 import {atYear, buildJourneyGeo, km, legDuration, placeAt, progressForYear, span, stepCount, travelled, yearAt} from './journey-geo';
 import {createMap} from './map/basemap';
 import {type CityView, cityStatus, clampLat, type InventionView, type LivingPoint, OverlayModel, type RouteView, type Traveller} from './map/overlay';
+import {WideningFrame} from './map/widen';
 import {Sight} from './sight';
 import {DEFAULT_STATE, isListPanel, type ListPanel, readUrl, type Shelf, SHELVES, type State, Store, writeUrl} from './state';
 import {formatRange, formatYear, PRESENT, START} from './time';
@@ -112,6 +113,8 @@ class App {
   private uiNodes: HTMLElement[] = [];
   private highlightFor: number | null = null;
   private highlightMask: Uint8Array | null = null;
+  /** The auto camera on the timeline: frames what the viewpoint knows and widens with it. */
+  private widen: WideningFrame;
 
   /** A region and every region inside it, by index: so Africa outlines the whole continent. */
   private regionMask(id: string): Uint8Array {
@@ -134,6 +137,7 @@ class App {
     this.overlay = new MapboxOverlay({interleaved: false, layers: []});
     this.map.addControl(this.overlay as unknown as IControl);
     this.model = new OverlayModel({data, grid, field: this.field, map: this.map});
+    this.widen = new WideningFrame(grid, this.field, this.map);
 
     this.ui = this.buildUi();
     this.tip = h('div.hover-tip');
@@ -365,6 +369,12 @@ class App {
       if (s.follow) this.followCamera(s, g, true);
       else this.fitJourney(g);
     }
+    // The auto camera frames afresh (closing in if need be) when turned on, on play, on a new viewpoint and
+    // when the reader moves the year; while playing it only widens.
+    const jumped = !s.playing && !s.scrubbing && s.year !== p.year;
+    if (s.autoCamera && (!p.autoCamera || (s.playing && !p.playing) || s.vps.join() !== p.vps.join() || jumped || (p.scrubbing && !s.scrubbing))) {
+      this.widen.reset();
+    }
     if (s.playing && !p.playing) {
       this.dwell = 0;
       if (s.journey) {
@@ -431,6 +441,10 @@ class App {
     }
     if (geo || st.year >= 1957) this.ui.inset.update(st, geo, now);
     if (geo && st.follow) this.followCamera(st, geo, false);
+    const card = !!(st.city || st.region || st.invention || st.book || st.living);
+    if (st.autoCamera && !geo && !st.scrubbing && !card) {
+      this.widen.update(st.vps, st.year, homeAt(this.data.vp[st.vps[0]], st.year).lon, this.widenPadding(), st.globe, now);
+    }
     requestAnimationFrame(t => this.frame(t));
   }
 
@@ -672,6 +686,13 @@ class App {
     return narrow
       ? {top: 120, bottom: Math.round(innerHeight * 0.56), left: 0, right: 0}
       : {top: 90, bottom: 110, left: isListPanel(s.panel) ? 400 : 20, right: (document.querySelector<HTMLElement>('.card-stack')?.offsetWidth ?? 392) + 28};
+  }
+
+  /** The widening frame runs with no card or journey open: only the top bar and the timeline cover the map. */
+  private widenPadding() {
+    const s = this.store.state;
+    const narrow = innerWidth < 760;
+    return narrow ? {top: 110, bottom: 150, left: 16, right: 16} : {top: 90, bottom: 130, left: isListPanel(s.panel) ? 400 : 40, right: 40};
   }
 
   /**
@@ -1023,6 +1044,15 @@ class App {
       this.tip.classList.remove('show');
     });
     map.on('movestart', () => this.tip.classList.remove('show'));
+    // Touching the map hands the camera back to the reader; the timeline's camera button turns it on again.
+    // Listened for on the map itself, since a move already under way (our own easing) starts no new one.
+    const handBack = () => {
+      if (this.store.state.autoCamera) this.store.set({autoCamera: false});
+    };
+    for (const type of ['pointerdown', 'wheel'] as const) map.getCanvasContainer().addEventListener(type, handBack, {passive: true});
+    map.on('movestart', e => {
+      if (e.originalEvent) handBack();
+    });
     map.on('dragstart', () => {
       if (this.store.state.journey && this.store.state.follow) this.followPaused = true;
     });
