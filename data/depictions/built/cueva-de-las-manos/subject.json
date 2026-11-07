@@ -1,0 +1,20 @@
+{
+  "studies": [
+    {
+      "id": "sketch",
+      "from": -5000,
+      "title": "Cueva de las Manos — c. 5000 BCE",
+      "caption": "About 5000 BCE. Stencilled hands crowd the overhang above the Pinturas canyon, beside a guanaco hunt in red.",
+      "sources": [
+        "gradin-1976",
+        "landmark-study-cueva-de-las-manos"
+      ],
+      "confidence": "medium",
+      "prompt": "Shallow rock-shelter overhang high on a pale volcanic cliff above the dry Pinturas river canyon in Patagonian steppe, its wall crowded with overlapping negative hand stencils in red, ochre, black and white, mostly left hands, with small red guanacos and tiny stick-figure hunters closing round them with spears and bolas (no bows) beside them; tufts of grey-green steppe grass below, the canyon floor far beneath; no modern walkways, railings, signs or fences.",
+      "evidence": {
+        "url": "https://whc.unesco.org/en/list/936/",
+        "basis": "The stencilled hands, their colours, the guanaco hunting scenes and the canyon setting follow the heritage description and Gradin, Aschero and Aguerre's survey."
+      }
+    }
+  ]
+}
